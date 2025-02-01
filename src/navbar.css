@@ -1,0 +1,38 @@
+/* Navbar Container */
+.navbar {
+  background: linear-gradient(135deg, #e0f7fa, #c8e6c9); /* Light green gradient */
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Links */
+.navbar-link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #4caf50; /* Bright green */
+  text-shadow: 0 0 10px rgba(76, 175, 80, 0.8); /* Glow effect */
+}
+
+/* Tree Sprinkles Effect */
+.tree-sprinkle {
+  position: absolute;
+  top: -20px;
+  font-size: 1.5rem;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}

@@ -1,0 +1,64 @@
+/* Custom Cursor */
+.custom-cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out, opacity 0.2s ease-out;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor-icon {
+  font-size: 24px;
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
+}
+
+.cursor-hover-icon {
+  font-size: 24px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.2s ease-out;
+}
+
+.cursor-hover .cursor-icon {
+  opacity: 0;
+}
+
+.cursor-hover .cursor-hover-icon {
+  opacity: 1;
+}
+
+/* Cursor Trail Effect */
+.custom-cursor::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(72, 187, 120, 0.5);
+  border-radius: 50%;
+  animation: cursorTrail 1s infinite;
+}
+
+@keyframes cursorTrail {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Hover Effects */
+.hover-effect:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-out;
+}
