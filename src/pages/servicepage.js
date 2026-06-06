@@ -1,0 +1,185 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import Ourservices from "../images/oursevices.jpg"
+import {
+  Building,
+  Shield,
+  Sparkles,
+  Bug,
+  Users,
+  Wrench,
+  CheckCircle,
+  ArrowRight,
+} from "lucide-react";
+
+const Services = () => {
+  const services = [
+    {
+      title: "Facility Management",
+      description: "Comprehensive management of your commercial or residential property, including maintenance, cleaning, and operations.",
+      icon: Building,
+      color: "blue",
+      link: "/services/facility-management",
+    },
+    {
+      title: "Security Services",
+      description: "Trained security personnel, CCTV surveillance, access control, and 24/7 emergency response.",
+      icon: Shield,
+      color: "red",
+      link: "/services/security",
+    },
+    {
+      title: "Housekeeping Services",
+      description: "Professional cleaning, sanitization, and upkeep for offices, hotels, hospitals, and residential complexes.",
+      icon: Sparkles,
+      color: "green",
+      link: "/services/housekeeping",
+    },
+    {
+      title: "Pest Management",
+      description: "Eco‑friendly pest control solutions for termites, rodents, cockroaches, and other pests.",
+      icon: Bug,
+      color: "orange",
+      link: "/services/pest-control",
+    },
+    {
+      title: "Manpower Outsourcing",
+      description: "Skilled and unskilled workforce solutions for staffing, temporary roles, and project‑based needs.",
+      icon: Users,
+      color: "purple",
+      link: "/services/manpower",
+    },
+    {
+      title: "Preventive Maintenance",
+      description: "Scheduled inspections and repairs to keep your equipment and infrastructure running smoothly.",
+      icon: Wrench,
+      color: "teal",
+      link: "/services/maintenance",
+    },
+  ];
+
+  const colorMap = {
+    blue: "bg-blue-50 text-blue-600 group-hover:bg-blue-600",
+    red: "bg-red-50 text-red-600 group-hover:bg-red-600",
+    green: "bg-green-50 text-green-600 group-hover:bg-green-600",
+    orange: "bg-orange-50 text-orange-600 group-hover:bg-orange-600",
+    purple: "bg-purple-50 text-purple-600 group-hover:bg-purple-600",
+    teal: "bg-teal-50 text-teal-600 group-hover:bg-teal-600",
+  };
+
+  return (
+    <div className="bg-gradient-to-br from-gray-50 to-white">
+      {/* Hero Section with Image Banner */}
+      <section className="relative h-[500px] md:h-[900px] overflow-hidden">
+        {/* Replace the src with your own image path */}
+        <img
+          src={Ourservices}
+          alt="Modern office building with professional facility management"
+          className="absolute inset-0 w-full h-full object-cover"
+          loading="eager"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"></div>
+        <div className="relative h-full flex flex-col items-center justify-center text-center text-white px-4">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold max-w-4xl leading-tight drop-shadow-lg">
+            Our Services
+          </h1>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-100 mt-4">
+            We provide end‑to‑end facility management and support services tailored to your business needs.
+          </p>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold tracking-wide mb-4">
+              WHAT WE OFFER
+            </span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+              Comprehensive Solutions for Your Facility
+            </h2>
+            <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, idx) => (
+              <div
+                key={idx}
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 overflow-hidden border border-gray-100"
+              >
+                <div className="p-6">
+                  <div
+                    className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-5 transition-all duration-300 ${colorMap[service.color]} group-hover:text-white`}
+                  >
+                    <service.icon className="w-8 h-8" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    {service.description}
+                  </p>
+                  <Link
+                    to={service.link}
+                    className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all"
+                  >
+                    Learn More <ArrowRight size={16} />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="bg-gray-100 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl font-bold text-gray-800">
+              Why Choose Acuity Groups?
+            </h2>
+            <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mt-2"></div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              "19+ Years Experience",
+              "Trained Professionals",
+              "24/7 Support",
+              "Customized Solutions",
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="flex items-center gap-3 bg-white p-4 rounded-xl shadow-md"
+              >
+                <CheckCircle className="text-green-500 w-6 h-6 flex-shrink-0" />
+                <span className="text-gray-700 font-medium">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Banner */}
+      <section className="bg-blue-700 text-white py-16 text-center">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Optimize Your Facility?
+          </h2>
+          <p className="text-blue-100 text-lg mb-8">
+            Contact us today for a free consultation and customized service plan.
+          </p>
+          <Link
+            to="/contactus"
+            className="inline-flex items-center gap-2 bg-white text-blue-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
+          >
+            Get a Free Quote <ArrowRight size={18} />
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Services;
