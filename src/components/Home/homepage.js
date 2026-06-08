@@ -27,7 +27,6 @@ import Banner1 from "../../images/banner3.jpg";
 import Banner2 from "../../images/banner2.jpg";
 import Banner3 from "../../images/banner1.jpg";
 
-
 export default function Homepage() {
   const banners = [Banner1, Banner2, Banner3];
   const videoRef = useRef(null);
@@ -352,7 +351,10 @@ export default function Homepage() {
       </section>
 
       {/* STATS SECTION */}
-      <section ref={statsRef} className="relative z-40 px-6 md:px-12 md:py-20 lg:py-20">
+      <section
+        ref={statsRef}
+        className="relative z-40 px-6 md:px-12 md:py-20 lg:py-20"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="group bg-white border border-gray-200 rounded-3xl md:p-8 text-center hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 transition-all duration-500 hover:-translate-y-2">
@@ -382,7 +384,9 @@ export default function Homepage() {
             </div>
             <div className="group bg-white border border-gray-200 rounded-3xl md:p-8 text-center hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 transition-all duration-500 hover:-translate-y-2">
               <Clock className="w-12 h-12 text-blue-900 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-              <h2 className="text-3xl md:text-5xl lg:text-5xl font-black text-black mb-3">24/7</h2>
+              <h2 className="text-3xl md:text-5xl lg:text-5xl font-black text-black mb-3">
+                24/7
+              </h2>
               <p className="text-gray-600 text-lg font-medium">
                 Support Service
               </p>
