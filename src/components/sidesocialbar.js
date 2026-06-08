@@ -4,14 +4,13 @@ import {
   FaFacebookF,
   FaInstagram,
   FaYoutube,
-  FaPinterestP,
-  FaLinkedinIn,
+
 } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+
 
 const SocialSidebar = () => {
   return (
-    <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 group">
+    <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 group hidden md:block lg:block">
       <div className="bg-gray-100/90 backdrop-blur-sm py-6 px-3 rounded-l-xl shadow-lg transform translate-x-8 group-hover:translate-x-0 transition-all duration-500">
         <div className="flex flex-col gap-4">
           <Link

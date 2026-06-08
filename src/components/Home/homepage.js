@@ -243,7 +243,7 @@ export default function Homepage() {
               <img
                 src={banner}
                 alt={`Banner ${index + 1}`}
-                className={`w-full h-full object-cover transition-transform duration-[10000ms] ease-out ${
+                className={`md:w-full md:h-full object-cover transition-transform duration-[10000ms] ease-out ${
                   currentSlide === index ? "scale-100" : "scale-100"
                 }`}
               />
@@ -257,18 +257,18 @@ export default function Homepage() {
           <div className="max-w-7xl mx-auto px-6 w-full">
             <div className="max-w-4xl">
               <div className="transform transition-all duration-700 delay-300">
-                <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-2 rounded-full text-blue-900 tracking-[5px] text-sm font-thin mb-6 shadow-sm">
+                <div className="hidden md:inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-2 rounded-full text-blue-900 tracking-[5px] text-sm font-thin mb-6 shadow-sm">
                   <Shield size={14} />
                   <span>ACUITY GROUPS</span>
                 </div>
               </div>
 
               <div key={currentSlide} className="transition-all duration-700">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-6">
+                <h1 className="hidden lg:block text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-6 ">
                   <span className="text-gray-900">
                     {slideContent[currentSlide].title}
                   </span>
-                  <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text text-transparent ">
                     {slideContent[currentSlide].highlight}
                   </span>
                   {slideContent[currentSlide].location && (
@@ -277,14 +277,14 @@ export default function Homepage() {
                     </span>
                   )}
                 </h1>
-                <p className="text-lg md:text-xl text-black leading-relaxed mb-10 max-w-2xl">
+                <p className="text-lg md:text-xl text-black leading-relaxed mb-10 max-w-2xl pt-40 md:pt-0 lg:pt-0">
                   {slideContent[currentSlide].desc}
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-5">
+              <div className="flex md:flex-wrap gap-5">
                 <Link
-                  to="/softservices"
+                  to="/pages/servicepage"
                   className="group relative overflow-hidden bg-gradient-to-r from-blue-900 to-blue-700 text-white px-8 py-4 rounded-full font-thin shadow-md hover:shadow-blue-200 transition-all duration-300 hover:scale-105"
                 >
                   <span className="relative z-10 flex items-center gap-2">
@@ -297,7 +297,7 @@ export default function Homepage() {
                   <span className="absolute inset-0 w-0 bg-gradient-to-r from-blue-700 to-blue-900 group-hover:w-full transition-all duration-500" />
                 </Link>
                 <Link
-                  to="//contactus"
+                  to="/contactus"
                   className="relative border border-gray-300 text-gray-800 px-8 py-4 rounded-full font-medium backdrop-blur-sm hover:bg-gray-100 hover:border-gray-400 transition-all duration-300 hover:scale-105"
                 >
                   Contact Us
@@ -352,7 +352,7 @@ export default function Homepage() {
       </section>
 
       {/* STATS SECTION */}
-      <section ref={statsRef} className="relative z-40 px-6 md:px-12 py-20">
+      <section ref={statsRef} className="relative z-40 px-6 md:px-12 py-10 md:py-20 lg:py-20">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="group bg-white border border-gray-200 rounded-3xl p-8 text-center hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 transition-all duration-500 hover:-translate-y-2">
@@ -392,7 +392,7 @@ export default function Homepage() {
       </section>
 
       {/* ABOUT US SECTION */}
-      <section className="bg-gray-50 py-24 px-6 md:px-12 overflow-hidden">
+      <section className="bg-gray-50 py:12 md:py-24 px-6 md:px-12 overflow-hidden">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <img
@@ -410,7 +410,7 @@ export default function Homepage() {
             <p className="text-black uppercase tracking-[5px] mb-5 font-thin">
               About Acuity Groups
             </p>
-            <h2 className="text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-8">
+            <h2 className="text-4xl md:text-6xl font-black text-gray-900 leading-tight mb-8">
               Trusted
               <span className="text-blue-900"> Facility Management </span>&
               Security Services Company
@@ -467,7 +467,7 @@ export default function Homepage() {
             </div>
 
             <Link to="/aboutus">
-              <button className="bg-blue-900 hover:bg-blue-700 text-white hover:text-white px-10 py-4 rounded-full font-thin text-lg transition duration-300 hover:scale-105 shadow-md">
+              <button className="bg-blue-900 hover:bg-blue-700 text-white hover:text-white px-10 py-4 rounded-full font-thin text-lg transition duration-300 hover:scale-105 shadow-md mb-10 md:mb-10 lg:mb-10">
                 Explore More
               </button>
             </Link>
@@ -490,7 +490,7 @@ export default function Homepage() {
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                className=" w-full h-56 object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
               />
               {/* Decorative overlay on image */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -531,7 +531,7 @@ export default function Homepage() {
       </div>
       {/* Why choose us  */}
 
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-10 md:py-20 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="text-center mb-12">
@@ -541,8 +541,8 @@ export default function Homepage() {
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
               Why Choose Acuity Groups?
             </h2>
-            <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full mb-6 "></div>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto sm:text-start ">
               We provide reliable facility management, security, housekeeping,
               pest management and manpower outsourcing services with a
               commitment to quality and customer satisfaction.
@@ -643,7 +643,7 @@ export default function Homepage() {
       </section>
 
       {/* INDUSTRIES WE SERVE - Animated Marquee */}
-      <section className="py-20 px-6 md:px-12 bg-gray-50">
+      <section className="py-10 md:py-20 lg:py-20 px-6 md:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-2 rounded-full text-blue-900 tracking-[5px] text-sm font-thin mb-5">
@@ -675,19 +675,19 @@ export default function Homepage() {
       </section>
 
       {/* TESTIMONIALS SECTION */}
-      <section className="py-24 bg-white px-6 md:px-12">
+      <section className="py-10 md:py-24 bg-white px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <p className="text-blue-900 uppercase tracking-[5px] mb-4 font-thin">
               TESTIMONIALS
             </p>
-            <h2 className="text-5xl font-black text-gray-900">
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900">
               What Our Clients Say
             </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 md:p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
                 Acuity Groups provides excellent security and facility
                 management services. Their staff is professional and reliable.
@@ -696,7 +696,7 @@ export default function Homepage() {
                 Corporate Client
               </h3>
             </div>
-            <div className="bg-gray-50 p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 md:p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
                 Their housekeeping and maintenance services helped our business
                 operations run smoothly and efficiently.
@@ -705,7 +705,7 @@ export default function Homepage() {
                 Facility Manager
               </h3>
             </div>
-            <div className="bg-gray-50 p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            <div className="bg-gray-50 md:p-10 rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
               <p className="text-gray-700 leading-relaxed mb-8 text-lg">
                 Highly trained security personnel and quick support. Strongly
                 recommended for commercial properties.
@@ -720,7 +720,7 @@ export default function Homepage() {
 
       {/* FAQ */}
 
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-10 md:py-20 lg:py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-1.5 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold tracking-wide mb-4">
@@ -790,9 +790,9 @@ export default function Homepage() {
         </div>
       </section>
       {/* VIDEO SECTION (YOUTUBE) */}
-      <section ref={videoRef} className="py-20 px-6 md:px-12 bg-white">
+      <section ref={videoRef} className="py-10 md:py-20 px-6 md:px-12 bg-white">
         <div className="max-w-6xl mx-auto text-center mb-10">
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900">
+          <h2 className="text-3xl md:text-5xl font-black text-gray-900">
             Our Company <span className="text-blue-900">Overview</span>
           </h2>
         </div>

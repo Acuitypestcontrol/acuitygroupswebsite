@@ -397,7 +397,7 @@ const Navbar = () => {
       </header>
 
       {/* Spacer */}
-      <div className="h-[calc(40px+112px)] lg:h-[calc(40px+128px)]" />
+      <div className="h-[calc(40px+60px)] lg:h-[calc(40px+128px)]" />
     </>
   );
 };
