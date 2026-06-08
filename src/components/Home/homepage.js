@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, videoRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import AboutImage from "../../images/AboutImage.avif";
 import SecurityImage from "../../images/security123.avif";
 import SoftServices1 from "../../images/softservices.jpg";
@@ -9,13 +9,9 @@ import MAnpowerout from "../../images/manpowerout.webp";
 import { Link } from "react-router-dom";
 import {
   Shield,
-  Sparkles,
   Zap,
-  Wrench,
-  Bug,
   Users,
   Building,
-  Briefcase,
   ChevronRight,
   Award,
   Clock,
@@ -30,9 +26,7 @@ import {
 import Banner1 from "../../images/banner3.jpg";
 import Banner2 from "../../images/banner2.jpg";
 import Banner3 from "../../images/banner1.jpg";
-import SoftServices from "../../pages/softservices";
-import Housekeeping from "../../pages/housekeeping";
-import FacilityManagement from "../../pages/facilitymanagment1";
+
 
 export default function Homepage() {
   const banners = [Banner1, Banner2, Banner3];
