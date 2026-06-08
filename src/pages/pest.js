@@ -9,8 +9,6 @@ import {
   Mouse,
   Droplets,
   CheckCircle,
-  Mail,
-  MapPin,
   Shield,
 } from "lucide-react";
 
