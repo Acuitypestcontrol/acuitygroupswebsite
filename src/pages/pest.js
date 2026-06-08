@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Pest from "../images/pest.webp";
 import {
   Bug,
   Home,
@@ -8,7 +9,6 @@ import {
   Mouse,
   Droplets,
   CheckCircle,
-  Phone,
   Mail,
   MapPin,
   Shield,
@@ -113,26 +113,37 @@ const PestManagement = () => {
   return (
     <div className="bg-white text-gray-800 overflow-hidden font-['Poppins',system-ui,sans-serif]">
       {/* HERO SECTION with gradient background */}
-      <section className="relative bg-gradient-to-br from-blue-900 to-blue-700 text-white py-24 md:py-32 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-700 text-white py-24 md:py-32 overflow-hidden h-[500px]">
+        {/* BACKGROUND IMAGE (pest control real-life feel) */}
+        <div className="absolute inset-0">
+          <img
+            src={Pest}
+            alt="Pest Management Services"
+            className="w-full h-[500px] object-cover opacity-50"
+          />
+        </div>
+
         {/* Animated Spray Can Character */}
-        <div className="absolute bottom-10 right-10 md:bottom-20 md:right-20 z-10 animate-bounce-slow">
+        <div className="absolute bottom-10 right-10 md:bottom-20 md:right-20 z-10 animate-bounce-slow opacity-90">
           <div className="relative">
-            {/* Spray Can Body */}
+            {/* Can */}
             <div className="w-16 h-24 bg-gradient-to-b from-gray-300 to-gray-500 rounded-lg shadow-lg relative">
               <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gray-600 rounded-full"></div>
               <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-10 h-3 bg-gray-700 rounded"></div>
-              {/* Spray nozzle */}
+
+              {/* nozzle */}
               <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-3 h-4 bg-gray-500 rounded-t-md"></div>
             </div>
+
             {/* Spray particles */}
             <div className="absolute -right-8 top-8">
               <div className="spray-particle particle1"></div>
               <div className="spray-particle particle2"></div>
               <div className="spray-particle particle3"></div>
               <div className="spray-particle particle4"></div>
-              <div className="spray-particle particle5"></div>
             </div>
-            {/* Face on can */}
+
+            {/* Face */}
             <div className="absolute top-8 left-1/2 transform -translate-x-1/2 flex gap-1">
               <div className="w-2 h-2 bg-black rounded-full"></div>
               <div className="w-2 h-2 bg-black rounded-full"></div>
@@ -141,34 +152,40 @@ const PestManagement = () => {
           </div>
         </div>
 
+        {/* Glow effects */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
+          <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 rounded-full text-blue-100 tracking-[5px] text-sm font-thin mb-6">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 rounded-full text-blue-100 tracking-[4px] text-sm mb-6">
             <Bug size={14} />
             <span>PEST MANAGEMENT</span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6">
-            Pest{" "}
-            <span className="bg-gradient-to-r from-blue-300 to-blue-100 bg-clip-text text-transparent">
-              Management Services
-            </span>
+
+          {/* Heading */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 uppercase tracking-wide">
+            Pest <span className="text-white">Management Services</span>
           </h1>
+
+          {/* Subtitle */}
           <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
             Safe and effective pest control solutions for homes, offices, and
             commercial spaces. Eco-friendly treatments for a healthy
             environment.
           </p>
+
+          {/* Buttons */}
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
             <Link
               to="/contactus"
-              className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg hover:shadow-xl"
+              className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
             >
               Book Service
             </Link>
+
             <Link
               to="/services"
               className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition"
@@ -219,7 +236,7 @@ const PestManagement = () => {
                 <div className="flex justify-between items-center pb-3 border-b border-gray-200">
                   <span className="text-gray-600">Years Experience</span>
                   <span className="text-2xl font-semibold text-blue-900">
-                    10+
+                    19+
                   </span>
                 </div>
                 <div className="flex justify-between items-center pb-3 border-b border-gray-200">

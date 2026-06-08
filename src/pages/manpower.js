@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import MAn from "../images/manpowerout.webp"
 import {
   Users,
   Factory,
@@ -112,35 +113,51 @@ const ManpowerOutsourcing = () => {
   return (
     <div className="bg-white text-gray-800 overflow-hidden font-['Poppins',system-ui,sans-serif]">
       {/* HERO SECTION with gradient background */}
-      <section className="relative bg-gradient-to-br from-blue-900 to-blue-700 text-white py-24 md:py-32">
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-700 text-white py-24 md:py-32 overflow-hidden h-[550px]">
+        {/* BACKGROUND IMAGE (real workforce feel) */}
+        <div className="absolute inset-0">
+          <img
+            src={MAn}
+            alt="Manpower Outsourcing Services"
+            className="w-full object-cover opacity-50 h-[550px]"
+          />
+        </div>
+
+        {/* Glow effects */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
+          <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 rounded-full text-blue-100 tracking-[5px] text-sm font-thin mb-6">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 rounded-full text-blue-100 tracking-[4px] text-sm mb-6">
             <Briefcase size={14} />
             <span>MANPOWER OUTSOURCING</span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6">
+
+          {/* Heading */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 uppercase tracking-wide">
             Manpower{" "}
-            <span className="bg-gradient-to-r from-blue-300 to-blue-100 bg-clip-text text-transparent">
-              Outsourcing Services
-            </span>
+            <span className="text-white">Outsourcing Services</span>
           </h1>
+
+          {/* Description */}
           <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
             Skilled, semi-skilled, and unskilled workforce solutions for
             industries, offices, and construction projects. Reliable staffing
             tailored to your business needs.
           </p>
+
+          {/* CTA BUTTONS */}
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
             <Link
               to="/contactus"
-              className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg hover:shadow-xl"
+              className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
             >
               Hire Manpower
             </Link>
+
             <Link
               to="/services"
               className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition"
@@ -150,7 +167,6 @@ const ManpowerOutsourcing = () => {
           </div>
         </div>
       </section>
-
       {/* INTRODUCTION SECTION */}
       <section className="py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">

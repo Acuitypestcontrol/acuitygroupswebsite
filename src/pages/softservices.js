@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Ss from "../images/softservices.jpg"
 import {
   Sparkles,
   Building,
@@ -60,38 +61,58 @@ const SoftServices = () => {
   return (
     <div className="bg-white text-gray-800 overflow-hidden font-['Poppins',system-ui,sans-serif]">
       {/* HERO SECTION */}
-      <section className="relative bg-gradient-to-br from-blue-900 to-blue-700 text-white py-24 md:py-32">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
+      <section className="relative h-[500px] flex items-center justify-center text-white overflow-hidden">
+        {/* BACKGROUND IMAGE */}
+        <div className="absolute inset-0">
+          <img
+            src= {Ss}
+            alt="Soft Services Banner"
+            className="w-full h-full object-cover"
+          />
+          {/* DARK OVERLAY */}
+          <div className="absolute inset-0 bg-blue-950/40"></div>
         </div>
 
+        {/* SOFT GLOW EFFECT (optional decorative) */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        </div>
+
+        {/* CONTENT */}
         <div className="relative max-w-7xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 rounded-full text-blue-100 tracking-[5px] text-sm font-thin mb-6">
-            <Sparkles size={14} />
+          {/* TAG */}
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 rounded-full text-white  tracking-[4px] text-sm mb-6">
             <span>SOFT SERVICES</span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6">
+
+          {/* TITLE */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-6 leading-tight">
             Professional{" "}
-            <span className="bg-gradient-to-r from-blue-300 to-blue-100 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white to-white bg-clip-text text-transparent">
               Soft Services
             </span>
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+
+          {/* DESCRIPTION */}
+          <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
             Comprehensive housekeeping, corporate cleaning, and hygiene
-            solutions for corporate offices, residential properties, industrial
+            solutions for offices, residential properties, industrial
             facilities, and institutions.
           </p>
+
+          {/* BUTTONS */}
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
             <Link
               to="/contactus"
-              className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg hover:shadow-xl"
+              className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
             >
               Get a Quote
             </Link>
+
             <Link
-              to="/pest"
-              className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:text-blue-900 transition"
+              to="/services"
+              className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition"
             >
               All Services
             </Link>

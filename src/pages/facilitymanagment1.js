@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Facility from "../images/facility.jpg";
 import {
   Building,
   Wrench,
@@ -94,38 +95,58 @@ const FacilityManagement = () => {
   return (
     <div className="bg-white text-gray-800 overflow-hidden font-['Poppins',system-ui,sans-serif]">
       {/* HERO SECTION with gradient background */}
-      <section className="relative bg-gradient-to-br from-blue-900 to-blue-700 text-white py-24 md:py-32">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
+      <section className="relative h-[500px] flex items-center justify-center text-white overflow-hidden">
+        {/* BACKGROUND IMAGE */}
+        <div className="absolute inset-0">
+          <img
+            src={Facility}
+            alt="Facility Management"
+            className="w-full h-[500px] object-cover"
+          />
+          <div className="absolute inset-0 bg-blue-950/50" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 rounded-full text-blue-100 tracking-[5px] text-sm font-thin mb-6">
+        {/* SOFT GLOW */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 left-0 w-80 h-80 bg-white rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />
+        </div>
+
+        {/* CONTENT */}
+        <div className="relative max-w-6xl mx-auto px-6 text-center">
+          {/* TAG */}
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 rounded-full text-blue-100 tracking-[4px] text-sm mb-6">
             <Building size={14} />
-            <span>FACILITY MANAGEMENT</span>
+            FACILITY MANAGEMENT
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6">
+
+          {/* TITLE */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-6">
             Integrated{" "}
-            <span className="bg-gradient-to-r from-blue-300 to-blue-100 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white to-white bg-clip-text text-transparent">
               Facility Management
             </span>
           </h1>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+
+          {/* DESCRIPTION */}
+          <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
             Complete facility management solutions for commercial, residential,
             industrial, and corporate properties with professional operational
             support.
           </p>
+
+          {/* BUTTONS */}
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
             <Link
               to="/contactus"
-              className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg hover:shadow-xl"
+              className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:scale-105 transition"
             >
               Get a Quote
             </Link>
+
             <Link
               to="/services"
-              className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold  hover:text-blue-900 transition"
+              className="border border-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition"
             >
               All Services
             </Link>
@@ -171,7 +192,7 @@ const FacilityManagement = () => {
                 <div className="flex justify-between items-center pb-3 border-b border-gray-200">
                   <span className="text-gray-600">Years of Experience</span>
                   <span className="text-2xl font-semibold text-blue-900">
-                    10+
+                    19+
                   </span>
                 </div>
                 <div className="flex justify-between items-center pb-3 border-b border-gray-200">

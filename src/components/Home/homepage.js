@@ -1,5 +1,11 @@
 import React, { useEffect, useState, useRef, videoRef } from "react";
 import AboutImage from "../../images/AboutImage.avif";
+import SecurityImage from "../../images/security123.avif";
+import SoftServices1 from "../../images/softservices.jpg";
+import Housekeeping1 from "../../images/housekeeping.jpg";
+import FacilityManagement1 from "../../images/facilitymangmentjpg.jpg";
+import Pestcontrol from "../../images/pestcontrol.jpg";
+import MAnpowerout from "../../images/manpowerout.webp";
 import { Link } from "react-router-dom";
 import {
   Shield,
@@ -24,6 +30,9 @@ import {
 import Banner1 from "../../images/banner3.jpg";
 import Banner2 from "../../images/banner2.jpg";
 import Banner3 from "../../images/banner1.jpg";
+import SoftServices from "../../pages/softservices";
+import Housekeeping from "../../pages/housekeeping";
+import FacilityManagement from "../../pages/facilitymanagment1";
 
 export default function Homepage() {
   const banners = [Banner1, Banner2, Banner3];
@@ -156,44 +165,44 @@ export default function Homepage() {
   }, []);
 
   // Services with individual paths
- const services = [
-  {
-    title: "Security Services",
-    desc: "Professional security guard services for apartments, offices, industries, hospitals and commercial establishments.",
-    icon: Shield,
-    path: "/securityservice",
-  },
-  {
-    title: "Soft Services",
-    desc: "Comprehensive housekeeping, cleaning and facility support services for commercial and residential properties.",
-    icon: Sparkles,
-    path: "/softservices",
-  },
-  {
-    title: "Housekeeping",
-    desc: "Professional housekeeping services in Bangalore for offices, apartments, hospitals and industrial facilities.",
-    icon: Zap,
-    path: "/housekeeping",
-  },
-  {
-    title: "Facility Management",
-    desc: "Integrated facility management services including maintenance, operations, support staff and building management solutions.",
-    icon: Wrench,
-    path: "/facilitymanagment1",
-  },
-  {
-    title: "Pest Management",
-    desc: "Safe and effective pest control services including termite, rodent and cockroach management.",
-    icon: Bug,
-    path: "/pest",
-  },
-  {
-    title: "Manpower Outsourcing",
-    desc: "Skilled and unskilled manpower outsourcing solutions for businesses across multiple industries.",
-    icon: Users,
-    path: "/corporate-staffing",
-  },
-];
+  const services = [
+    {
+      title: "Security Services",
+      desc: "Professional security guard services for apartments, offices, industries, hospitals and commercial establishments.",
+      image: SecurityImage,
+      path: "/securityservice",
+    },
+    {
+      title: "Soft Services",
+      desc: "Comprehensive housekeeping, cleaning and facility support services for commercial and residential properties.",
+      image: SoftServices1,
+      path: "/softservices",
+    },
+    {
+      title: "Housekeeping",
+      desc: "Professional housekeeping services in Bangalore for offices, apartments, hospitals and industrial facilities.",
+      image: Housekeeping1,
+      path: "/housekeeping",
+    },
+    {
+      title: "Facility Management",
+      desc: "Integrated facility management services including maintenance, operations, support staff and building management solutions.",
+      image: FacilityManagement1,
+      path: "/facilitymanagment1",
+    },
+    {
+      title: "Pest Management",
+      desc: "Safe and effective pest control services including termite, rodent and cockroach management.",
+      image: Pestcontrol,
+      path: "/pest",
+    },
+    {
+      title: "Manpower Outsourcing",
+      desc: "Skilled and unskilled manpower outsourcing solutions for businesses across multiple industries.",
+      image: MAnpowerout,
+      path: "/corporate-staffing",
+    },
+  ];
 
   const industries = [
     "Corporate Offices",
@@ -207,22 +216,22 @@ export default function Homepage() {
   ];
 
   const slideContent = [
-  {
-    title: "Security",
-    highlight: " Management Services",
-    desc: "Professional security guard services and surveillance solutions for residential, commercial and industrial properties across Bangalore.",
-  },
-  {
-    title: "Facility",
-    highlight: " Management Services In Bangalore",
-    desc: "Integrated facility management services including housekeeping, maintenance, security support and manpower solutions for commercial, residential and industrial properties.",
-  },
-  {
-    title: "Pest",
-    highlight: " Service In Bangalore",
-    desc: "Professional pest control services for homes, offices, apartments and industries. Safe, eco-friendly and effective solutions for termite, rodent, cockroach and general pest management.",
-  },
-];
+    {
+      title: "Security",
+      highlight: " Management Services",
+      desc: "Professional security guard services and surveillance solutions for residential, commercial and industrial properties across Bangalore.",
+    },
+    {
+      title: "Facility",
+      highlight: " Management Services In Bangalore",
+      desc: "Integrated facility management services including housekeeping, maintenance, security support and manpower solutions for commercial, residential and industrial properties.",
+    },
+    {
+      title: "Pest",
+      highlight: " Service In Bangalore",
+      desc: "Professional pest control services for homes, offices, apartments and industries. Safe, eco-friendly and effective solutions for termite, rodent, cockroach and general pest management.",
+    },
+  ];
   return (
     <div className="bg-white text-black overflow-hidden font-['Poppins',system-ui,sans-serif]">
       {/* HERO SECTION */}
@@ -233,7 +242,7 @@ export default function Homepage() {
             className={`absolute inset-0 transition-all duration-[1200ms] ease-out ${
               currentSlide === index
                 ? "opacity-100 scale-100 z-20"
-                : "opacity-0 scale-110 z-10"
+                : "opacity-50 scale-110 z-10"
             }`}
           >
             <div className="relative w-full h-full">
@@ -241,10 +250,10 @@ export default function Homepage() {
                 src={banner}
                 alt={`Banner ${index + 1}`}
                 className={`w-full h-full object-cover transition-transform duration-[10000ms] ease-out ${
-                  currentSlide === index ? "scale-110" : "scale-100"
+                  currentSlide === index ? "scale-100" : "scale-100"
                 }`}
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-white/10 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-white/20" />
             </div>
           </div>
@@ -274,7 +283,7 @@ export default function Homepage() {
                     </span>
                   )}
                 </h1>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-10 max-w-2xl">
+                <p className="text-lg md:text-xl text-black leading-relaxed mb-10 max-w-2xl">
                   {slideContent[currentSlide].desc}
                 </p>
               </div>
@@ -398,7 +407,7 @@ export default function Homepage() {
               className="rounded-3xl shadow-xl w-full object-cover"
             />
             <div className="absolute -bottom-8 -right-8 bg-blue-900 text-white px-8 py-6 rounded-3xl shadow-2xl">
-              <h2 className="text-5xl text-white">10+</h2>
+              <h2 className="text-5xl text-white">19+</h2>
               <p className="font-thin text-lg text-white">Years Experience</p>
             </div>
           </div>
@@ -473,51 +482,59 @@ export default function Homepage() {
       </section>
 
       {/* SERVICES SECTION with proper links */}
-      <section className="py-24 px-6 md:px-12 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-2 rounded-full text-blue-900 tracking-[5px] text-sm font-thin mb-5">
-              <Briefcase size={14} />
-              <span>OUR SERVICES</span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-black text-gray-900">
-              Professional{" "}
-              <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text text-transparent">
-                Services
-              </span>
-            </h2>
-            <p className="text-gray-500 max-w-2xl mx-auto mt-4">
-              Comprehensive facility and security solutions tailored to your
-              business needs.
-            </p>
-          </div>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:mx-28">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="group relative bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-transparent hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out"
+          >
+            {/* Gradient overlay on hover */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-50/0 to-blue-50/0 group-hover:from-blue-50/40 group-hover:to-indigo-50/30 transition-all duration-500 z-0 rounded-2xl" />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="group bg-gray-50 rounded-3xl p-8 border border-gray-100 hover:border-blue-300 hover:-translate-y-3 transition-all duration-500 hover:shadow-xl hover:shadow-blue-100"
-              >
-                <div className="w-16 h-16 rounded-2xl  flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <service.icon size={32} className="text-blue-900" />
-                </div>
-                <h3 className="text-2xl font-thin mb-4 text-gray-800 group-hover:text-blue-900 transition-colors">
+            {/* Image container with rounded top corners */}
+            <div className="relative overflow-hidden">
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+              />
+              {/* Decorative overlay on image */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            </div>
+
+            <div className="relative z-10 p-6">
+              {/* Title with accent bar */}
+              <div className="flex items-start gap-2 mb-4">
+                <div className="w-1 h-7 bg-blue-500 rounded-full group-hover:h-9 transition-all duration-300" />
+                <h3 className="text-2xl font-bold text-gray-800 group-hover:text-blue-800 transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">{service.desc}</p>
-                <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <Link
-                    to={service.path}
-                    className="text-blue-900 flex items-center gap-1 text-sm font-medium"
-                  >
-                    Learn More <ChevronRight size={16} />
-                  </Link>
-                </div>
               </div>
-            ))}
+
+              <p className="text-gray-600 leading-relaxed mb-6 line-clamp-3">
+                {service.desc}
+              </p>
+
+              {/* Enhanced "Learn More" button */}
+              <Link
+                to={service.path}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-blue-50 text-blue-800 text-sm font-semibold border border-blue-100 group-hover:bg-blue-600 group-hover:text-white group-hover:border-blue-600 transition-all duration-300 shadow-sm hover:shadow-md"
+              >
+                Learn More
+                <ChevronRight
+                  size={16}
+                  className="group-hover:translate-x-1 transition-transform duration-300"
+                />
+              </Link>
+            </div>
+
+            {/* Subtle border glow on hover */}
+            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+              <div className="absolute inset-0 rounded-2xl shadow-[0_0_0_2px_rgba(59,130,246,0.2)]" />
+            </div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
       {/* Why choose us  */}
 
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
@@ -542,7 +559,7 @@ export default function Homepage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "10+ Years of Industry Experience",
+                title: "19+ Years of Industry Experience",
                 Icon: TrendingUp,
                 color: "blue",
               },
@@ -799,7 +816,109 @@ export default function Homepage() {
           )}
         </div>
       </section>
+      <section className="py-10 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Heading */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-blue-900 mb-4">
+              Facility Management Services Across Bangalore
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              We provide professional facility management solutions across all
+              major areas of Bangalore.
+            </p>
+          </div>
 
+          {/* Service Cards (optional – adds more visuals) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {[
+              {
+                title: "Commercial Cleaning",
+                icon: "🧹",
+                desc: "Office, mall, bank cleaning",
+              },
+              {
+                title: "Home Services",
+                icon: "🏠",
+                desc: "Deep cleaning, mopping, sweeping",
+              },
+              {
+                title: "Hotel Housekeeping",
+                icon: "🏨",
+                desc: "Room & lobby maintenance",
+              },
+              {
+                title: "Facility Maintenance",
+                icon: "🔧",
+                desc: "Electrical, plumbing, repairs",
+              },
+            ].map((service, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center"
+              >
+                <div className="text-5xl mb-3">{service.icon}</div>
+                <h3 className="text-xl font-bold text-blue-900 mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 text-sm">{service.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Bangalore Areas Grid */}
+          <div className="bg-white rounded-2xl p-8 shadow-md">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
+              📍 Service Areas in Bangalore
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {[
+                "Whitefield",
+                "Electronic City",
+                "Marathahalli",
+                "HSR Layout",
+                "Koramangala",
+                "Indiranagar",
+                "Jayanagar",
+                "JP Nagar",
+                "BTM Layout",
+                "Bannerghatta Road",
+                "Yelahanka",
+                "Hebbal",
+                "Rajajinagar",
+                "Malleshwaram",
+                "KR Puram",
+                "Bellandur",
+                "Sarjapur Road",
+                "Banashankari",
+                "Nagarbhavi",
+                "RT Nagar",
+              ].map((area, index) => (
+                <a
+                  key={index}
+                  href={`/facility-management-${area.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="flex items-center gap-2 text-gray-700 hover:text-blue-700 hover:bg-blue-50 p-2 rounded-lg transition-all group"
+                >
+                  <span className="text-yellow-500 group-hover:translate-x-1 transition">
+                    📍
+                  </span>
+                  {area}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center mt-14">
+            <a
+              href="/pages/servicepage"
+              className="inline-flex items-center gap-3 bg-blue-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl"
+            >
+              View All Services in Bangalore →
+            </a>
+          </div>
+        </div>
+      </section>
       {/* Custom CSS for marquee animation */}
       <style>
         {`

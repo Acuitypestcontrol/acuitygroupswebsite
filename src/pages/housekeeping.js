@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Housekeeping1 from "../images/housekeeping.jpg"
 import {
   Home,
   Building,
@@ -82,34 +83,52 @@ const Housekeeping = () => {
   return (
     <div className="bg-white text-gray-800 overflow-hidden font-['Poppins',system-ui,sans-serif]">
       {/* HERO SECTION with gradient background */}
-      <section className="relative bg-gradient-to-br from-blue-900 to-blue-700 text-white py-24 md:py-32">
+      <section className="relative bg-gradient-to-br from-blue-900 to-blue-700 text-white py-24 md:py-32 overflow-hidden h-[550px]">
+        {/* REAL-LIFE BACKGROUND IMAGE LAYER */}
+        <div className="absolute inset-0">
+          <img
+            src={Housekeeping1}
+            alt="Housekeeping Services"
+            className="w-full object-cover opacity-80 h-[550px]"
+          />
+        </div>
+
+        {/* Glow effects */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
+          <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 rounded-full text-blue-100 tracking-[5px] text-sm font-thin mb-6">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 rounded-full text-blue-100 tracking-[4px] text-sm mb-6">
             <Sparkles size={14} />
             <span>HOUSEKEEPING SERVICES</span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6">
+
+          {/* Heading (banner style upgrade) */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 uppercase tracking-wide">
             Professional{" "}
-            <span className="bg-gradient-to-r from-blue-300 to-blue-100 bg-clip-text text-transparent">
-              Housekeeping Services
-            </span>
+            <span className="text-white">Housekeeping Services</span>
           </h1>
+
+          {/* Subtitle */}
           <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
             Reliable home, office, and commercial cleaning services for a clean,
             hygienic, and healthy environment.
           </p>
+
+          {/* SERVICE ICON STRIP (IMPORTANT FOR REAL BANNER FEEL) */}
+
+          {/* BUTTONS */}
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
             <Link
               to="/contactus"
-              className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg hover:shadow-xl"
+              className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
             >
               Book Now
             </Link>
+
             <Link
               to="/services"
               className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition"

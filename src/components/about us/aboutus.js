@@ -93,7 +93,7 @@ export default function About() {
   return (
     <div className="bg-white text-black overflow-hidden font-['Poppins',system-ui,sans-serif]">
       {/* HERO SECTION - BANNER RETAINED */}
-      <section className="relative w-full h-[50vh] md:h-[60vh] min-h-[400px] overflow-hidden">
+      <section className="relative w-full h-[50vh] md:h-[60vh] min-h-[550px] overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <img
             src={AboutBanner}
@@ -506,6 +506,110 @@ export default function About() {
               className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-full font-semibold transition-all duration-300"
             >
               Call Now
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-10 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Heading */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-blue-900 mb-4">
+              Facility Management Services Across Bangalore
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              We provide professional facility management solutions across all
+              major areas of Bangalore.
+            </p>
+          </div>
+
+          {/* Service Cards (optional – adds more visuals) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {[
+              {
+                title: "Commercial Cleaning",
+                icon: "🧹",
+                desc: "Office, mall, bank cleaning",
+              },
+              {
+                title: "Home Services",
+                icon: "🏠",
+                desc: "Deep cleaning, mopping, sweeping",
+              },
+              {
+                title: "Hotel Housekeeping",
+                icon: "🏨",
+                desc: "Room & lobby maintenance",
+              },
+              {
+                title: "Facility Maintenance",
+                icon: "🔧",
+                desc: "Electrical, plumbing, repairs",
+              },
+            ].map((service, idx) => (
+              <div
+                key={idx}
+                className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center"
+              >
+                <div className="text-5xl mb-3">{service.icon}</div>
+                <h3 className="text-xl font-bold text-blue-900 mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 text-sm">{service.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Bangalore Areas Grid */}
+          <div className="bg-white rounded-2xl p-8 shadow-md">
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
+              📍 Service Areas in Bangalore
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {[
+                "Whitefield",
+                "Electronic City",
+                "Marathahalli",
+                "HSR Layout",
+                "Koramangala",
+                "Indiranagar",
+                "Jayanagar",
+                "JP Nagar",
+                "BTM Layout",
+                "Bannerghatta Road",
+                "Yelahanka",
+                "Hebbal",
+                "Rajajinagar",
+                "Malleshwaram",
+                "KR Puram",
+                "Bellandur",
+                "Sarjapur Road",
+                "Banashankari",
+                "Nagarbhavi",
+                "RT Nagar",
+              ].map((area, index) => (
+                <a
+                  key={index}
+                  href={`/facility-management-${area.toLowerCase().replace(/\s+/g, "-")}`}
+                  className="flex items-center gap-2 text-gray-700 hover:text-blue-700 hover:bg-blue-50 p-2 rounded-lg transition-all group"
+                >
+                  <span className="text-yellow-500 group-hover:translate-x-1 transition">
+                    📍
+                  </span>
+                  {area}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center mt-14">
+            <a
+              href="/pages/servicepage"
+              className="inline-flex items-center gap-3 bg-blue-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl"
+            >
+              View All Services in Bangalore →
             </a>
           </div>
         </div>

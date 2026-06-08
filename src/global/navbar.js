@@ -56,7 +56,7 @@ const Navbar = () => {
     <>
       <header className="fixed top-0 left-0 w-full z-[9999] font-['Inter',system-ui,sans-serif]">
         {/* Top bar - hidden on mobile */}
-        <div className="hidden lg:block bg-white/90 backdrop-blur-md border-b border-gray-200">
+        <div className="hidden lg:block bg-white/40 backdrop-blur-md border-b border-gray-400 ">
           <div className="max-w-7xl mx-auto px-6 h-10 flex items-center justify-between text-sm">
             <div className="flex items-center gap-6 text-gray-600">
               <a
@@ -88,7 +88,7 @@ const Navbar = () => {
         <div
           className={`transition-all duration-500 ${
             scrolled
-              ? "bg-white/95 backdrop-blur-md shadow-md border-b border-gray-200"
+              ? "hidden lg:block bg-white/40 backdrop-blur-md border-b border-gray-400 "
               : "bg-transparent"
           }`}
         >
@@ -99,7 +99,7 @@ const Navbar = () => {
                 <img
                   src={Logo}
                   alt="Acuity Groups Logo"
-                  className="h-24 w-auto object-contain lg:h-44"
+                  className="h-24 w-auto object-contain lg:h-40"
                 />
               </Link>
 
