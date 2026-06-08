@@ -277,7 +277,7 @@ export default function Homepage() {
                     </span>
                   )}
                 </h1>
-                <p className="text-lg md:text-xl text-black leading-relaxed mb-10 max-w-2xl pt-40 md:pt-0 lg:pt-0">
+                <p className="text-lg md:text-xl text-black leading-relaxed mb-10 max-w-2xl pt-20 md:pt-0 lg:pt-0">
                   {slideContent[currentSlide].desc}
                 </p>
               </div>
@@ -285,7 +285,7 @@ export default function Homepage() {
               <div className="flex md:flex-wrap gap-5">
                 <Link
                   to="/pages/servicepage"
-                  className="group relative overflow-hidden bg-gradient-to-r from-blue-900 to-blue-700 text-white px-8 py-4 rounded-full font-thin shadow-md hover:shadow-blue-200 transition-all duration-300 hover:scale-105"
+                  className="group relative overflow-hidden bg-gradient-to-r from-blue-900 to-blue-700 text-white px-8 py-4 md:rounded-full font-thin shadow-md hover:shadow-blue-200 transition-all duration-300 hover:scale-105"
                 >
                   <span className="relative z-10 flex items-center gap-2">
                     Explore Services
@@ -352,37 +352,37 @@ export default function Homepage() {
       </section>
 
       {/* STATS SECTION */}
-      <section ref={statsRef} className="relative z-40 px-6 md:px-12 py-10 md:py-20 lg:py-20">
+      <section ref={statsRef} className="relative z-40 px-6 md:px-12 md:py-20 lg:py-20">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="group bg-white border border-gray-200 rounded-3xl p-8 text-center hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 transition-all duration-500 hover:-translate-y-2">
+            <div className="group bg-white border border-gray-200 rounded-3xl md:p-8 text-center hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 transition-all duration-500 hover:-translate-y-2">
               <Award className="w-12 h-12 text-blue-900 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-              <h2 className="text-5xl font-black text-black mb-3">
+              <h2 className="text-3xl md:text-5xl font-black text-black mb-3">
                 {counters.years}+
               </h2>
               <p className="text-gray-600 text-lg font-medium">
                 Years Experience
               </p>
             </div>
-            <div className="group bg-white border border-gray-200 rounded-3xl p-8 text-center hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 transition-all duration-500 hover:-translate-y-2">
+            <div className="group bg-white border border-gray-200 rounded-3xl md:p-8 text-center hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 transition-all duration-500 hover:-translate-y-2">
               <Star className="w-12 h-12 text-blue-900 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-              <h2 className="text-5xl font-black text-black mb-3">
+              <h2 className="text-3xl md:text-5xl lg:text-5xl font-black text-black mb-3">
                 {counters.clients}+
               </h2>
               <p className="text-gray-600 text-lg font-medium">Happy Clients</p>
             </div>
-            <div className="group bg-white border border-gray-200 rounded-3xl p-8 text-center hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 transition-all duration-500 hover:-translate-y-2">
+            <div className="group bg-white border border-gray-200 rounded-3xl md:p-8 text-center hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 transition-all duration-500 hover:-translate-y-2">
               <Users className="w-12 h-12 text-blue-900 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-              <h2 className="text-5xl font-black text-black mb-3">
+              <h2 className="text-3xl md:text-5xl lg:text-5xl font-black text-black mb-3">
                 {counters.employees}+
               </h2>
               <p className="text-gray-600 text-lg font-medium">
                 Skilled Employees
               </p>
             </div>
-            <div className="group bg-white border border-gray-200 rounded-3xl p-8 text-center hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 transition-all duration-500 hover:-translate-y-2">
+            <div className="group bg-white border border-gray-200 rounded-3xl md:p-8 text-center hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 transition-all duration-500 hover:-translate-y-2">
               <Clock className="w-12 h-12 text-blue-900 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-              <h2 className="text-5xl font-black text-black mb-3">24/7</h2>
+              <h2 className="text-3xl md:text-5xl lg:text-5xl font-black text-black mb-3">24/7</h2>
               <p className="text-gray-600 text-lg font-medium">
                 Support Service
               </p>
@@ -400,7 +400,7 @@ export default function Homepage() {
               alt="Acuity Groups Facility Management Services"
               className="rounded-3xl shadow-xl w-full object-cover"
             />
-            <div className="absolute -bottom-8 -right-8 bg-blue-900 text-white px-8 py-6 rounded-3xl shadow-2xl">
+            <div className="absolute -bottom-8 md:-right-8  bg-blue-900 text-white px-4 md:px-8 py-6 rounded-3xl shadow-2xl">
               <h2 className="text-5xl text-white">19+</h2>
               <p className="font-thin text-lg text-white">Years Experience</p>
             </div>
