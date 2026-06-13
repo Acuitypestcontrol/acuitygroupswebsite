@@ -82,7 +82,7 @@ const ProfessionalHousekeepingBlog = () => {
     );
     updateMeta(
       "og:url",
-      "https://acuitygroups.com/blogs/professional-housekeeping",
+      "https://acuitygroups.in/blogs/professional-housekeeping",
       true,
     );
     updateMeta("og:type", "article", true);
@@ -107,7 +107,7 @@ const ProfessionalHousekeepingBlog = () => {
       canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://acuitygroups.com/blogs/professional-housekeeping";
+    canonical.href = "https://acuitygroups.in/blogs/professional-housekeeping";
 
     // Structured Data: Article + FAQ + Breadcrumb
     const articleData = {
@@ -130,7 +130,7 @@ const ProfessionalHousekeepingBlog = () => {
       },
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": "https://acuitygroups.com/blogs/professional-housekeeping",
+        "@id": "https://acuitygroups.in/blogs/professional-housekeeping",
       },
     };
 
@@ -179,13 +179,13 @@ const ProfessionalHousekeepingBlog = () => {
           "@type": "ListItem",
           position: 2,
           name: "Blogs",
-          item: "https://acuitygroups.com/blogs/allblogs",
+          item: "https://acuitygroups.in/blogs/allblogs",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Professional Housekeeping",
-          item: "https://acuitygroups.com/blogs/professional-housekeeping",
+          item: "https://acuitygroups.in/blogs/professional-housekeeping",
         },
       ],
     };
@@ -219,7 +219,7 @@ const ProfessionalHousekeepingBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.com/blogs/professional-housekeeping",
+    "https://acuitygroups.in/blogs/professional-housekeeping",
   );
   const shareTitle = encodeURIComponent(
     "Professional Housekeeping Services in Commercial Spaces | Acuity Groups",
@@ -741,7 +741,6 @@ const ProfessionalHousekeepingBlog = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-               
                 </li>
               </ul>
             </div>

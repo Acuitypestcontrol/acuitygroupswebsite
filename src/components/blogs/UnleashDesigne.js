@@ -64,7 +64,7 @@ const InteriorDesignTrends2024 = () => {
     updateMeta("description", metaDescription);
     updateMeta(
       "keywords",
-      "interior design trends 2024, home decor, biophilic design, sustainable interior, Japandi, grandmillennial, DIY home decor, Acuity Groups"
+      "interior design trends 2024, home decor, biophilic design, sustainable interior, Japandi, grandmillennial, DIY home decor, Acuity Groups",
     );
     updateMeta("robots", "index, follow");
     updateMeta("author", "Acuity Groups");
@@ -73,18 +73,18 @@ const InteriorDesignTrends2024 = () => {
     updateMeta(
       "og:title",
       "Unleash Your Inner Designer: Top Tips & Trends for 2024 | Acuity Groups",
-      true
+      true,
     );
     updateMeta("og:description", metaDescription, true);
     updateMeta(
       "og:image",
       "https://acuitygroups.com/static/media/UnleashDesigne.jpg",
-      true
+      true,
     );
     updateMeta(
       "og:url",
-      "https://acuitygroups.com/blogs/interior-design-trends-2024",
-      true
+      "https://acuitygroups.in/blogs/interior-design-trends-2024",
+      true,
     );
     updateMeta("og:type", "article", true);
     updateMeta("og:site_name", "Acuity Groups", true);
@@ -93,12 +93,12 @@ const InteriorDesignTrends2024 = () => {
     updateMeta("twitter:card", "summary_large_image");
     updateMeta(
       "twitter:title",
-      "Unleash Your Inner Designer: Top Tips & Trends for 2024"
+      "Unleash Your Inner Designer: Top Tips & Trends for 2024",
     );
     updateMeta("twitter:description", metaDescription);
     updateMeta(
       "twitter:image",
-      "https://acuitygroups.com/static/media/UnleashDesigne.jpg"
+      "https://acuitygroups.com/static/media/UnleashDesigne.jpg",
     );
 
     // Canonical URL
@@ -108,7 +108,8 @@ const InteriorDesignTrends2024 = () => {
       canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://acuitygroups.com/blogs/interior-design-trends-2024";
+    canonical.href =
+      "https://acuitygroups.in/blogs/interior-design-trends-2024";
 
     // Structured Data: Article + FAQ + Breadcrumb
     const articleData = {
@@ -123,11 +124,14 @@ const InteriorDesignTrends2024 = () => {
       publisher: {
         "@type": "Organization",
         name: "Acuity Groups",
-        logo: { "@type": "ImageObject", url: "https://acuitygroups.com/logo.png" },
+        logo: {
+          "@type": "ImageObject",
+          url: "https://acuitygroups.com/logo.png",
+        },
       },
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": "https://acuitygroups.com/blogs/interior-design-trends-2024",
+        "@id": "https://acuitygroups.in/blogs/interior-design-trends-2024",
       },
     };
 
@@ -166,9 +170,24 @@ const InteriorDesignTrends2024 = () => {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://acuitygroups.com/" },
-        { "@type": "ListItem", position: 2, name: "Blogs", item: "https://acuitygroups.com/blogs/allblogs" },
-        { "@type": "ListItem", position: 3, name: "Interior Design Trends 2024", item: "https://acuitygroups.com/blogs/interior-design-trends-2024" },
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://acuitygroups.com/",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Blogs",
+          item: "https://acuitygroups.in/blogs/allblogs",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Interior Design Trends 2024",
+          item: "https://acuitygroups.in/blogs/interior-design-trends-2024",
+        },
       ],
     };
 
@@ -200,9 +219,11 @@ const InteriorDesignTrends2024 = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const shareUrl = encodeURIComponent("https://acuitygroups.com/blogs/interior-design-trends-2024");
+  const shareUrl = encodeURIComponent(
+    "https://acuitygroups.in/blogs/interior-design-trends-2024",
+  );
   const shareTitle = encodeURIComponent(
-    "Unleash Your Inner Designer: Top Tips & Trends for 2024 | Acuity Groups"
+    "Unleash Your Inner Designer: Top Tips & Trends for 2024 | Acuity Groups",
   );
 
   const tocSections = [
@@ -214,10 +235,26 @@ const InteriorDesignTrends2024 = () => {
   ];
 
   const stats = [
-    { value: "300+", label: "Homes Transformed", icon: <Home className="text-orange-600 w-6 h-6" /> },
-    { value: "98%", label: "Client Satisfaction", icon: <Award className="text-orange-600 w-6 h-6" /> },
-    { value: "50+", label: "Design Projects", icon: <Palette className="text-orange-600 w-6 h-6" /> },
-    { value: "15+", label: "Years Experience", icon: <Calendar className="text-orange-600 w-6 h-6" /> },
+    {
+      value: "300+",
+      label: "Homes Transformed",
+      icon: <Home className="text-orange-600 w-6 h-6" />,
+    },
+    {
+      value: "98%",
+      label: "Client Satisfaction",
+      icon: <Award className="text-orange-600 w-6 h-6" />,
+    },
+    {
+      value: "50+",
+      label: "Design Projects",
+      icon: <Palette className="text-orange-600 w-6 h-6" />,
+    },
+    {
+      value: "15+",
+      label: "Years Experience",
+      icon: <Calendar className="text-orange-600 w-6 h-6" />,
+    },
   ];
 
   return (
@@ -263,8 +300,15 @@ const InteriorDesignTrends2024 = () => {
           </div>
         </div>
         <div className="absolute bottom-0 w-full">
-          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-12 md:h-16">
-            <path d="M0,0 L1200,0 L1200,120 C1050,80 750,120 600,120 C450,120 150,80 0,120 Z" fill="#f9fafb"></path>
+          <svg
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+            className="w-full h-12 md:h-16"
+          >
+            <path
+              d="M0,0 L1200,0 L1200,120 C1050,80 750,120 600,120 C450,120 150,80 0,120 Z"
+              fill="#f9fafb"
+            ></path>
           </svg>
         </div>
       </div>
@@ -274,9 +318,20 @@ const InteriorDesignTrends2024 = () => {
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
           <ol className="flex flex-wrap items-center gap-2">
-            <li><Link to="/" className="hover:text-orange-600 transition">Home</Link></li>
+            <li>
+              <Link to="/" className="hover:text-orange-600 transition">
+                Home
+              </Link>
+            </li>
             <li className="text-gray-400">/</li>
-            <li><Link to="/blogs/allblogs" className="hover:text-orange-600 transition">Blogs</Link></li>
+            <li>
+              <Link
+                to="/blogs/allblogs"
+                className="hover:text-orange-600 transition"
+              >
+                Blogs
+              </Link>
+            </li>
             <li className="text-gray-400">/</li>
             <li className="text-gray-700 font-medium">Interior Design 2024</li>
           </ol>
@@ -285,9 +340,14 @@ const InteriorDesignTrends2024 = () => {
         {/* Stats bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           {stats.map((stat, idx) => (
-            <div key={idx} className="bg-white rounded-xl shadow-md p-4 text-center border border-gray-100">
+            <div
+              key={idx}
+              className="bg-white rounded-xl shadow-md p-4 text-center border border-gray-100"
+            >
               <div className="flex justify-center mb-2">{stat.icon}</div>
-              <div className="text-2xl font-bold text-gray-800">{stat.value}</div>
+              <div className="text-2xl font-bold text-gray-800">
+                {stat.value}
+              </div>
               <div className="text-sm text-gray-500">{stat.label}</div>
             </div>
           ))}
@@ -299,7 +359,9 @@ const InteriorDesignTrends2024 = () => {
             <div className="sticky top-24 bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-gray-100">
               <div className="flex items-center gap-2 mb-4 pb-2 border-b border-gray-200">
                 <BookOpen size={20} className="text-orange-600" />
-                <h3 className="font-bold text-gray-800 text-lg">On this page</h3>
+                <h3 className="font-bold text-gray-800 text-lg">
+                  On this page
+                </h3>
               </div>
               <ul className="space-y-2 text-sm">
                 {tocSections.map((section) => (
@@ -309,7 +371,9 @@ const InteriorDesignTrends2024 = () => {
                       className="text-gray-600 hover:text-orange-600 transition flex items-center gap-2 group"
                       onClick={(e) => {
                         e.preventDefault();
-                        document.getElementById(section.id)?.scrollIntoView({ behavior: "smooth" });
+                        document
+                          .getElementById(section.id)
+                          ?.scrollIntoView({ behavior: "smooth" });
                       }}
                     >
                       <span className="w-1.5 h-1.5 bg-gray-300 rounded-full group-hover:bg-orange-600"></span>
@@ -320,9 +384,39 @@ const InteriorDesignTrends2024 = () => {
               </ul>
               <div className="mt-6 pt-4 border-t border-gray-100">
                 <div className="flex justify-around">
-                  <button onClick={() => window.open(`https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`, "_blank")} className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-500"><Twitter size={18} /></button>
-                  <button onClick={() => window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareTitle}`, "_blank")} className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-700"><Linkedin size={18} /></button>
-                  <button onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank")} className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-600"><Facebook size={18} /></button>
+                  <button
+                    onClick={() =>
+                      window.open(
+                        `https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`,
+                        "_blank",
+                      )
+                    }
+                    className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-500"
+                  >
+                    <Twitter size={18} />
+                  </button>
+                  <button
+                    onClick={() =>
+                      window.open(
+                        `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareTitle}`,
+                        "_blank",
+                      )
+                    }
+                    className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-700"
+                  >
+                    <Linkedin size={18} />
+                  </button>
+                  <button
+                    onClick={() =>
+                      window.open(
+                        `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`,
+                        "_blank",
+                      )
+                    }
+                    className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-600"
+                  >
+                    <Facebook size={18} />
+                  </button>
                 </div>
               </div>
             </div>
@@ -333,7 +427,12 @@ const InteriorDesignTrends2024 = () => {
             {/* Introduction */}
             <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
               <p className="text-xl text-gray-700 leading-relaxed border-l-4 border-orange-500 pl-5 italic">
-                Ready to transform your home into a stylish and comfortable sanctuary? Interior design trends in 2024 focus on balancing beauty, functionality, and sustainability. Whether you're planning a complete makeover or a simple refresh, these ideas can help you create a space that reflects your personality and lifestyle.
+                Ready to transform your home into a stylish and comfortable
+                sanctuary? Interior design trends in 2024 focus on balancing
+                beauty, functionality, and sustainability. Whether you're
+                planning a complete makeover or a simple refresh, these ideas
+                can help you create a space that reflects your personality and
+                lifestyle.
               </p>
             </div>
 
@@ -347,29 +446,51 @@ const InteriorDesignTrends2024 = () => {
               />
               <div className="flex justify-between items-center mt-2 text-sm text-gray-500">
                 <span>🏠 Cozy living space with layered textures</span>
-                <span className="bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full">Trending</span>
+                <span className="bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full">
+                  Trending
+                </span>
               </div>
             </div>
 
             {/* Comfort & Functionality */}
             <div id="comfort" className="scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <Home size={28} className="text-orange-500" /> Embrace Comfort & Functionality
+                <Home size={28} className="text-orange-500" /> Embrace Comfort &
+                Functionality
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Modern interiors are designed to be both practical and inviting. The goal is to create spaces that support everyday living while maintaining a stylish appearance.
+                Modern interiors are designed to be both practical and inviting.
+                The goal is to create spaces that support everyday living while
+                maintaining a stylish appearance.
               </p>
               <div className="grid md:grid-cols-3 gap-6">
                 {[
-                  { title: "Biophilic Design", desc: "Bring nature indoors with plants, natural textures, and plenty of sunlight.", icon: Leaf },
-                  { title: "Multifunctional Furniture", desc: "Smart furniture helps maximize space while improving functionality.", icon: Brush },
-                  { title: "Cozy Accents", desc: "Layer soft textiles, cushions, and lighting for warmth and comfort.", icon: Home },
+                  {
+                    title: "Biophilic Design",
+                    desc: "Bring nature indoors with plants, natural textures, and plenty of sunlight.",
+                    icon: Leaf,
+                  },
+                  {
+                    title: "Multifunctional Furniture",
+                    desc: "Smart furniture helps maximize space while improving functionality.",
+                    icon: Brush,
+                  },
+                  {
+                    title: "Cozy Accents",
+                    desc: "Layer soft textiles, cushions, and lighting for warmth and comfort.",
+                    icon: Home,
+                  },
                 ].map((item, idx) => (
-                  <div key={idx} className="group bg-white rounded-xl shadow-md p-5 border-l-4 border-orange-500 hover:shadow-lg transition">
+                  <div
+                    key={idx}
+                    className="group bg-white rounded-xl shadow-md p-5 border-l-4 border-orange-500 hover:shadow-lg transition"
+                  >
                     <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mb-3 group-hover:bg-orange-600 transition-colors">
                       <item.icon className="text-orange-600 group-hover:text-white w-5 h-5" />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-800 mb-1">{item.title}</h3>
+                    <h3 className="text-lg font-bold text-gray-800 mb-1">
+                      {item.title}
+                    </h3>
                     <p className="text-gray-600 text-sm">{item.desc}</p>
                   </div>
                 ))}
@@ -392,10 +513,13 @@ const InteriorDesignTrends2024 = () => {
             {/* Bold Colors & Patterns */}
             <div id="bold-colors" className="scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <Palette size={28} className="text-orange-500" /> Play with Bold Colors & Patterns
+                <Palette size={28} className="text-orange-500" /> Play with Bold
+                Colors & Patterns
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Bold design choices can instantly transform a room and make it more expressive. Use colors and patterns strategically to create visual interest.
+                Bold design choices can instantly transform a room and make it
+                more expressive. Use colors and patterns strategically to create
+                visual interest.
               </p>
               <div className="grid sm:grid-cols-2 gap-3">
                 {[
@@ -404,8 +528,14 @@ const InteriorDesignTrends2024 = () => {
                   "Add pops of color through artwork and accessories.",
                   "Experiment with geometric and textured patterns.",
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2 bg-white p-3 rounded-xl shadow-sm">
-                    <CheckCircle size={18} className="text-orange-500 shrink-0" />
+                  <div
+                    key={i}
+                    className="flex items-center gap-2 bg-white p-3 rounded-xl shadow-sm"
+                  >
+                    <CheckCircle
+                      size={18}
+                      className="text-orange-500 shrink-0"
+                    />
                     <span className="text-gray-700 text-sm">{item}</span>
                   </div>
                 ))}
@@ -428,20 +558,40 @@ const InteriorDesignTrends2024 = () => {
             {/* Sustainable Design */}
             <div id="sustainable" className="scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <Leaf size={28} className="text-orange-500" /> Sustainable Design Choices
+                <Leaf size={28} className="text-orange-500" /> Sustainable
+                Design Choices
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Sustainability continues to shape interior design trends. Eco-conscious choices help reduce environmental impact while creating healthier living spaces.
+                Sustainability continues to shape interior design trends.
+                Eco-conscious choices help reduce environmental impact while
+                creating healthier living spaces.
               </p>
               <div className="grid md:grid-cols-2 gap-5">
                 {[
-                  { title: "Upcycled Furniture", desc: "Give old furniture a fresh look through restoration and creative redesign." },
-                  { title: "Eco-Friendly Materials", desc: "Choose sustainable materials such as bamboo, reclaimed wood, and recycled products." },
-                  { title: "LED Lighting", desc: "Reduce energy consumption with efficient lighting solutions." },
-                  { title: "Natural Ventilation", desc: "Improve indoor air quality and reduce energy usage naturally." },
+                  {
+                    title: "Upcycled Furniture",
+                    desc: "Give old furniture a fresh look through restoration and creative redesign.",
+                  },
+                  {
+                    title: "Eco-Friendly Materials",
+                    desc: "Choose sustainable materials such as bamboo, reclaimed wood, and recycled products.",
+                  },
+                  {
+                    title: "LED Lighting",
+                    desc: "Reduce energy consumption with efficient lighting solutions.",
+                  },
+                  {
+                    title: "Natural Ventilation",
+                    desc: "Improve indoor air quality and reduce energy usage naturally.",
+                  },
                 ].map((item, idx) => (
-                  <div key={idx} className="bg-green-50 p-4 rounded-xl border-l-4 border-green-500">
-                    <h3 className="font-bold text-lg text-green-800 mb-1">{item.title}</h3>
+                  <div
+                    key={idx}
+                    className="bg-green-50 p-4 rounded-xl border-l-4 border-green-500"
+                  >
+                    <h3 className="font-bold text-lg text-green-800 mb-1">
+                      {item.title}
+                    </h3>
                     <p className="text-gray-700 text-sm">{item.desc}</p>
                   </div>
                 ))}
@@ -464,10 +614,12 @@ const InteriorDesignTrends2024 = () => {
             {/* DIY Projects */}
             <div id="diy" className="scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <Brush size={28} className="text-orange-500" /> DIY Projects for a Personal Touch
+                <Brush size={28} className="text-orange-500" /> DIY Projects for
+                a Personal Touch
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Personal touches make a home truly unique. DIY projects can add character and creativity without a large budget.
+                Personal touches make a home truly unique. DIY projects can add
+                character and creativity without a large budget.
               </p>
               <div className="grid sm:grid-cols-2 gap-3">
                 {[
@@ -476,8 +628,14 @@ const InteriorDesignTrends2024 = () => {
                   "Repurpose everyday objects into décor pieces.",
                   "Build custom shelving and storage solutions.",
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2 bg-white p-3 rounded-xl shadow-sm">
-                    <CheckCircle size={18} className="text-orange-500 shrink-0" />
+                  <div
+                    key={i}
+                    className="flex items-center gap-2 bg-white p-3 rounded-xl shadow-sm"
+                  >
+                    <CheckCircle
+                      size={18}
+                      className="text-orange-500 shrink-0"
+                    />
                     <span className="text-gray-700 text-sm">{item}</span>
                   </div>
                 ))}
@@ -500,16 +658,31 @@ const InteriorDesignTrends2024 = () => {
             {/* Trending Styles */}
             <div id="trending-styles" className="scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-                <Sparkles size={28} className="text-orange-500" /> Trending Styles for 2024
+                <Sparkles size={28} className="text-orange-500" /> Trending
+                Styles for 2024
               </h2>
               <div className="space-y-4">
                 {[
-                  { title: "Japandi Fusion", desc: "A combination of Japanese minimalism and Scandinavian functionality." },
-                  { title: "Grandmillennial Style", desc: "Traditional and vintage-inspired interiors with a modern touch." },
-                  { title: "Curated Chaos", desc: "Bold colors, layered textures, and eclectic décor that celebrates individuality." },
+                  {
+                    title: "Japandi Fusion",
+                    desc: "A combination of Japanese minimalism and Scandinavian functionality.",
+                  },
+                  {
+                    title: "Grandmillennial Style",
+                    desc: "Traditional and vintage-inspired interiors with a modern touch.",
+                  },
+                  {
+                    title: "Curated Chaos",
+                    desc: "Bold colors, layered textures, and eclectic décor that celebrates individuality.",
+                  },
                 ].map((style, idx) => (
-                  <div key={idx} className="border-l-4 border-orange-500 bg-white p-5 rounded-r-xl shadow-sm">
-                    <h3 className="font-bold text-xl text-gray-800 mb-1">{style.title}</h3>
+                  <div
+                    key={idx}
+                    className="border-l-4 border-orange-500 bg-white p-5 rounded-r-xl shadow-sm"
+                  >
+                    <h3 className="font-bold text-xl text-gray-800 mb-1">
+                      {style.title}
+                    </h3>
                     <p className="text-gray-600">{style.desc}</p>
                   </div>
                 ))}
@@ -518,9 +691,14 @@ const InteriorDesignTrends2024 = () => {
 
             {/* Did You Know? */}
             <div className="bg-gradient-to-r from-orange-50 to-amber-50 rounded-2xl p-6 border border-orange-100">
-              <h3 className="text-xl font-bold text-orange-800 mb-2 flex items-center gap-2">💡 Did You Know?</h3>
+              <h3 className="text-xl font-bold text-orange-800 mb-2 flex items-center gap-2">
+                💡 Did You Know?
+              </h3>
               <p className="text-gray-700">
-                Homes with biophilic design elements (plants, natural light, organic materials) have been shown to reduce stress by up to 40% and improve creativity by 25%. Nature-inspired interiors aren't just beautiful—they're good for your health.
+                Homes with biophilic design elements (plants, natural light,
+                organic materials) have been shown to reduce stress by up to 40%
+                and improve creativity by 25%. Nature-inspired interiors aren't
+                just beautiful—they're good for your health.
               </p>
             </div>
 
@@ -528,13 +706,24 @@ const InteriorDesignTrends2024 = () => {
             <div className="bg-gradient-to-br from-orange-600 to-amber-700 text-white p-8 rounded-2xl shadow-xl">
               <h2 className="text-3xl font-bold mb-4">Conclusion 🎨</h2>
               <p className="text-orange-100 text-lg leading-relaxed">
-                Your home should reflect your personality, lifestyle, and creativity. By combining comfort, functionality, sustainability, and modern design trends, you can create a beautiful space that feels uniquely yours. At Acuity Groups, we help bring your vision to life with affordable and professional interior design solutions.
+                Your home should reflect your personality, lifestyle, and
+                creativity. By combining comfort, functionality, sustainability,
+                and modern design trends, you can create a beautiful space that
+                feels uniquely yours. At Acuity Groups, we help bring your
+                vision to life with affordable and professional interior design
+                solutions.
               </p>
               <div className="mt-6 flex flex-wrap gap-4">
-                <Link to="/contactus" className="inline-flex items-center gap-2 bg-white text-orange-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg">
+                <Link
+                  to="/contactus"
+                  className="inline-flex items-center gap-2 bg-white text-orange-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
+                >
                   Get a Free Design Consultation <ArrowRight size={18} />
                 </Link>
-                <Link to="/services" className="inline-flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition">
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition"
+                >
                   Explore Services
                 </Link>
               </div>
@@ -542,7 +731,10 @@ const InteriorDesignTrends2024 = () => {
 
             {/* Back to blogs */}
             <div className="pt-4 border-t border-gray-200">
-              <Link to="/blogs/allblogs" className="text-orange-600 hover:text-orange-700 font-medium inline-flex items-center gap-1">
+              <Link
+                to="/blogs/allblogs"
+                className="text-orange-600 hover:text-orange-700 font-medium inline-flex items-center gap-1"
+              >
                 ← Back to all blogs
               </Link>
             </div>
@@ -553,11 +745,19 @@ const InteriorDesignTrends2024 = () => {
             {/* Expert Card */}
             <div className="bg-white rounded-2xl shadow-lg p-6 text-center border border-gray-100">
               <div className="w-24 h-24 mx-auto rounded-full overflow-hidden bg-gray-200 mb-4">
-                <img src={UnleashDesigne1} alt="Design Expert" className="w-full h-full object-cover" />
+                <img
+                  src={UnleashDesigne1}
+                  alt="Design Expert"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-bold text-xl">Acuity Design Team</h3>
-              <p className="text-gray-500 text-sm mt-1">Interior Design Specialists</p>
-              <p className="text-gray-600 text-sm mt-3">15+ years in residential and commercial interior design.</p>
+              <p className="text-gray-500 text-sm mt-1">
+                Interior Design Specialists
+              </p>
+              <p className="text-gray-600 text-sm mt-3">
+                15+ years in residential and commercial interior design.
+              </p>
               <div className="mt-4 flex justify-center gap-2">
                 <Phone size={18} className="text-orange-600" />
                 <span className="text-sm text-gray-600">Free Consultation</span>
@@ -566,29 +766,52 @@ const InteriorDesignTrends2024 = () => {
 
             {/* Related Articles with thumbnails */}
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">📚 Related Articles</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                📚 Related Articles
+              </h3>
               <ul className="space-y-4">
                 <li className="flex gap-3 items-center group">
                   <div className="w-12 h-12 rounded-md overflow-hidden bg-gray-200 flex-shrink-0">
-                    <img src={UnleashDesigne2} alt="thumb" className="w-full h-full object-cover" />
+                    <img
+                      src={UnleashDesigne2}
+                      alt="thumb"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <Link to="/blogs/FromFunction" className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1">
+                  <Link
+                    to="/blogs/FromFunction"
+                    className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1"
+                  >
                     Integrated Design: From Function to Feeling
                   </Link>
                 </li>
                 <li className="flex gap-3 items-center group">
                   <div className="w-12 h-12 rounded-md overflow-hidden bg-gray-200 flex-shrink-0">
-                    <img src={UnleashDesigne3} alt="thumb" className="w-full h-full object-cover" />
+                    <img
+                      src={UnleashDesigne3}
+                      alt="thumb"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <Link to="/blogs/sustainable-home-tips" className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1">
+                  <Link
+                    to="/blogs/sustainable-home-tips"
+                    className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1"
+                  >
                     Sustainable Home Improvement Tips
                   </Link>
                 </li>
                 <li className="flex gap-3 items-center group">
                   <div className="w-12 h-12 rounded-md overflow-hidden bg-gray-200 flex-shrink-0">
-                    <img src={UnleashDesigne4} alt="thumb" className="w-full h-full object-cover" />
+                    <img
+                      src={UnleashDesigne4}
+                      alt="thumb"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <Link to="/blogs/diy-home-decor" className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1">
+                  <Link
+                    to="/blogs/diy-home-decor"
+                    className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1"
+                  >
                     Easy DIY Home Decor Ideas
                   </Link>
                 </li>
@@ -598,21 +821,38 @@ const InteriorDesignTrends2024 = () => {
             {/* Quick CTA Card */}
             <div className="bg-gradient-to-br from-orange-50 to-amber-100 rounded-2xl p-6 shadow-md border border-orange-100 text-center">
               <div className="text-5xl mb-3">🎨</div>
-              <h3 className="font-bold text-orange-900 text-lg mb-2">Design Your Dream Space</h3>
-              <p className="text-gray-700 text-sm mb-4">Get a free consultation with our interior design experts.</p>
-              <Link to="/contactus" className="block text-center bg-orange-600 text-white py-2.5 rounded-full hover:bg-orange-700 transition shadow">
+              <h3 className="font-bold text-orange-900 text-lg mb-2">
+                Design Your Dream Space
+              </h3>
+              <p className="text-gray-700 text-sm mb-4">
+                Get a free consultation with our interior design experts.
+              </p>
+              <Link
+                to="/contactus"
+                className="block text-center bg-orange-600 text-white py-2.5 rounded-full hover:bg-orange-700 transition shadow"
+              >
                 Request a Quote
               </Link>
               <div className="mt-4 rounded-lg overflow-hidden">
-                <img src={UnleashDesigne5} alt="Design" className="w-full h-20 object-cover" />
+                <img
+                  src={UnleashDesigne5}
+                  alt="Design"
+                  className="w-full h-20 object-cover"
+                />
               </div>
             </div>
 
             {/* Trust Badge */}
             <div className="bg-white rounded-2xl p-5 text-center shadow-lg border">
-              <div className="flex justify-center gap-0.5 text-yellow-400 text-2xl mb-2">★★★★★</div>
-              <p className="font-semibold text-gray-800">Trusted by 300+ Homeowners</p>
-              <p className="text-xs text-gray-500 mt-1">Creative | Affordable | Sustainable</p>
+              <div className="flex justify-center gap-0.5 text-yellow-400 text-2xl mb-2">
+                ★★★★★
+              </div>
+              <p className="font-semibold text-gray-800">
+                Trusted by 300+ Homeowners
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                Creative | Affordable | Sustainable
+              </p>
               <div className="flex justify-center gap-4 mt-3">
                 <Thermometer size={20} className="text-gray-400" />
                 <BarChart size={20} className="text-gray-400" />
@@ -626,22 +866,38 @@ const InteriorDesignTrends2024 = () => {
       {/* FAQ Section with Accordion */}
       <section className="max-w-5xl mx-auto px-6 py-16 border-t border-gray-200">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">Frequently Asked Questions</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+            Frequently Asked Questions
+          </h2>
           <div className="w-20 h-1 bg-orange-600 mx-auto rounded-full"></div>
         </div>
         <div className="space-y-4">
           {[
-            { q: "What is the biggest interior design trend for 2024?", a: "Biophilic design – bringing nature indoors through plants, natural materials, and abundant natural light – is a major trend." },
-            { q: "How can I make my home more sustainable?", a: "Use upcycled furniture, choose eco-friendly materials (bamboo, reclaimed wood), install LED lighting, and improve natural ventilation." },
-            { q: "What is Japandi fusion style?", a: "Japandi combines Japanese minimalism with Scandinavian functionality, creating warm, uncluttered, and timeless interiors." },
+            {
+              q: "What is the biggest interior design trend for 2024?",
+              a: "Biophilic design – bringing nature indoors through plants, natural materials, and abundant natural light – is a major trend.",
+            },
+            {
+              q: "How can I make my home more sustainable?",
+              a: "Use upcycled furniture, choose eco-friendly materials (bamboo, reclaimed wood), install LED lighting, and improve natural ventilation.",
+            },
+            {
+              q: "What is Japandi fusion style?",
+              a: "Japandi combines Japanese minimalism with Scandinavian functionality, creating warm, uncluttered, and timeless interiors.",
+            },
           ].map((faq, idx) => (
-            <div key={idx} className="bg-white rounded-xl shadow-md overflow-hidden">
+            <div
+              key={idx}
+              className="bg-white rounded-xl shadow-md overflow-hidden"
+            >
               <button
                 onClick={() => toggleFaq(idx)}
                 className="w-full text-left p-5 font-semibold text-gray-800 flex justify-between items-center hover:bg-gray-50 transition"
               >
                 {faq.q}
-                <span className="text-orange-600 text-2xl">{activeFaq === idx ? "−" : "+"}</span>
+                <span className="text-orange-600 text-2xl">
+                  {activeFaq === idx ? "−" : "+"}
+                </span>
               </button>
               {activeFaq === idx && (
                 <div className="p-5 pt-0 text-gray-600 border-t border-gray-100">
@@ -656,16 +912,31 @@ const InteriorDesignTrends2024 = () => {
       {/* Bottom CTA Banner with image overlay */}
       <section className="relative bg-gradient-to-r from-orange-800 via-amber-800 to-orange-900 text-white py-16 text-center overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img src={UnleashDesigne} alt="background pattern" className="w-full h-full object-cover" />
+          <img
+            src={UnleashDesigne}
+            alt="background pattern"
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="relative max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Home?</h2>
-          <p className="text-orange-100 text-lg mb-8">Let Acuity Groups help you create a beautiful, functional, and sustainable space.</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Transform Your Home?
+          </h2>
+          <p className="text-orange-100 text-lg mb-8">
+            Let Acuity Groups help you create a beautiful, functional, and
+            sustainable space.
+          </p>
           <div className="flex flex-wrap justify-center gap-5">
-            <Link to="/contactus" className="inline-flex items-center gap-2 bg-white text-orange-800 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg">
+            <Link
+              to="/contactus"
+              className="inline-flex items-center gap-2 bg-white text-orange-800 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg"
+            >
               Contact Our Experts <ArrowRight size={18} />
             </Link>
-            <Link to="/blogs/allblogs" className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition">
+            <Link
+              to="/blogs/allblogs"
+              className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition"
+            >
               Browse All Blogs
             </Link>
           </div>

@@ -180,14 +180,14 @@ export default function Blog() {
   useEffect(() => {
     // Title
     document.title =
-      "Facility Management & Integrated Services Blogs | Acuity Groups Bangalore | Security, Housekeeping, Maintenance, Manpower";
+      "Facility Management Blogs | Acuity Groups Bangalore"
 
     // Meta description
     let metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) {
       metaDesc.setAttribute(
         "content",
-        "Explore expert blogs on Facility Management, Security Services, Housekeeping, Pest Control, Manpower Outsourcing, Maintenance, and Workplace Productivity. Insights from Acuity Groups, Bangalore.",
+        "Expert blogs on Facility Management, Security, Housekeeping, Pest Control, Manpower, Maintenance & Productivity. Insights from Acuity Groups, Bangalore.",
       );
     } else {
       metaDesc = document.createElement("meta");
@@ -214,7 +214,7 @@ export default function Blog() {
       canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://acuitygroups.com/blogs";
+    canonical.href = "https://acuitygroups.in/blogs";
 
     // Robots
     let robots = document.querySelector('meta[name="robots"]');
@@ -254,7 +254,7 @@ export default function Blog() {
       ogUrl.setAttribute("property", "og:url");
       document.head.appendChild(ogUrl);
     }
-    ogUrl.setAttribute("content", "https://acuitygroups.com/blogs");
+    ogUrl.setAttribute("content", "https://acuitygroups.in/blogs");
 
     let ogType = document.querySelector('meta[property="og:type"]');
     if (!ogType) {
@@ -308,7 +308,7 @@ export default function Blog() {
       name: "Acuity Groups Blog - Facility Management Insights",
       description:
         "Comprehensive blog posts covering facility management, security, housekeeping, maintenance, pest control, and manpower outsourcing.",
-      url: "https://acuitygroups.com/blogs",
+      url: "https://acuitygroups.in/blogs",
       numberOfItems: blogs.length,
       itemListElement: blogs.map((blog, idx) => ({
         "@type": "ListItem",

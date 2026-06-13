@@ -62,7 +62,7 @@ const ManufacturingFacilityManagementBlog = () => {
     updateMeta("description", metaDescription);
     updateMeta(
       "keywords",
-      "manufacturing facility management, industrial maintenance, preventive maintenance, factory housekeeping, industrial security, manufacturing compliance, Acuity Groups"
+      "manufacturing facility management, industrial maintenance, preventive maintenance, factory housekeeping, industrial security, manufacturing compliance, Acuity Groups",
     );
     updateMeta("robots", "index, follow");
     updateMeta("author", "Acuity Groups");
@@ -71,18 +71,18 @@ const ManufacturingFacilityManagementBlog = () => {
     updateMeta(
       "og:title",
       "The Role of Facility Management in Manufacturing Excellence | Acuity Groups",
-      true
+      true,
     );
     updateMeta("og:description", metaDescription, true);
     updateMeta(
       "og:image",
       "https://acuitygroups.com/static/media/IndustrialFacility.jpg",
-      true
+      true,
     );
     updateMeta(
       "og:url",
-      "https://acuitygroups.com/blogs/manufacturing-facility-management",
-      true
+      "https://acuitygroups.in/blogs/manufacturing-facility-management",
+      true,
     );
     updateMeta("og:type", "article", true);
     updateMeta("og:site_name", "Acuity Groups", true);
@@ -91,12 +91,12 @@ const ManufacturingFacilityManagementBlog = () => {
     updateMeta("twitter:card", "summary_large_image");
     updateMeta(
       "twitter:title",
-      "The Role of Facility Management in Manufacturing Excellence"
+      "The Role of Facility Management in Manufacturing Excellence",
     );
     updateMeta("twitter:description", metaDescription);
     updateMeta(
       "twitter:image",
-      "https://acuitygroups.com/static/media/IndustrialFacility.jpg"
+      "https://acuitygroups.com/static/media/IndustrialFacility.jpg",
     );
 
     // Canonical URL
@@ -106,7 +106,8 @@ const ManufacturingFacilityManagementBlog = () => {
       canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://acuitygroups.com/blogs/manufacturing-facility-management";
+    canonical.href =
+      "https://acuitygroups.in/blogs/manufacturing-facility-management";
 
     // Structured Data: Article + FAQ + Breadcrumb
     const articleData = {
@@ -121,11 +122,15 @@ const ManufacturingFacilityManagementBlog = () => {
       publisher: {
         "@type": "Organization",
         name: "Acuity Groups",
-        logo: { "@type": "ImageObject", url: "https://acuitygroups.com/logo.png" },
+        logo: {
+          "@type": "ImageObject",
+          url: "https://acuitygroups.com/logo.png",
+        },
       },
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": "https://acuitygroups.com/blogs/manufacturing-facility-management",
+        "@id":
+          "https://acuitygroups.in/blogs/manufacturing-facility-management",
       },
     };
 
@@ -174,13 +179,13 @@ const ManufacturingFacilityManagementBlog = () => {
           "@type": "ListItem",
           position: 2,
           name: "Blogs",
-          item: "https://acuitygroups.com/blogs/allblogs",
+          item: "https://acuitygroups.in/blogs/allblogs",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Manufacturing Facility Management",
-          item: "https://acuitygroups.com/blogs/manufacturing-facility-management",
+          item: "https://acuitygroups.in/blogs/manufacturing-facility-management",
         },
       ],
     };
@@ -214,10 +219,10 @@ const ManufacturingFacilityManagementBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.com/blogs/manufacturing-facility-management"
+    "https://acuitygroups.in/blogs/manufacturing-facility-management",
   );
   const shareTitle = encodeURIComponent(
-    "The Role of Facility Management in Manufacturing Excellence | Acuity Groups"
+    "The Role of Facility Management in Manufacturing Excellence | Acuity Groups",
   );
 
   const tocSections = [
@@ -228,10 +233,26 @@ const ManufacturingFacilityManagementBlog = () => {
   ];
 
   const stats = [
-    { value: "80+", label: "Manufacturers Served", icon: <Factory className="text-orange-600 w-6 h-6" /> },
-    { value: "35%", label: "Downtime Reduction", icon: <TrendingUp className="text-orange-600 w-6 h-6" /> },
-    { value: "24/7", label: "Support", icon: <Clock className="text-orange-600 w-6 h-6" /> },
-    { value: "15+", label: "Years Experience", icon: <Calendar className="text-orange-600 w-6 h-6" /> },
+    {
+      value: "80+",
+      label: "Manufacturers Served",
+      icon: <Factory className="text-orange-600 w-6 h-6" />,
+    },
+    {
+      value: "35%",
+      label: "Downtime Reduction",
+      icon: <TrendingUp className="text-orange-600 w-6 h-6" />,
+    },
+    {
+      value: "24/7",
+      label: "Support",
+      icon: <Clock className="text-orange-600 w-6 h-6" />,
+    },
+    {
+      value: "15+",
+      label: "Years Experience",
+      icon: <Calendar className="text-orange-600 w-6 h-6" />,
+    },
   ];
 
   return (
@@ -277,8 +298,15 @@ const ManufacturingFacilityManagementBlog = () => {
           </div>
         </div>
         <div className="absolute bottom-0 w-full">
-          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-12 md:h-16">
-            <path d="M0,0 L1200,0 L1200,120 C1050,80 750,120 600,120 C450,120 150,80 0,120 Z" fill="#f9fafb"></path>
+          <svg
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+            className="w-full h-12 md:h-16"
+          >
+            <path
+              d="M0,0 L1200,0 L1200,120 C1050,80 750,120 600,120 C450,120 150,80 0,120 Z"
+              fill="#f9fafb"
+            ></path>
           </svg>
         </div>
       </div>
@@ -288,9 +316,20 @@ const ManufacturingFacilityManagementBlog = () => {
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
           <ol className="flex flex-wrap items-center gap-2">
-            <li><Link to="/" className="hover:text-orange-600 transition">Home</Link></li>
+            <li>
+              <Link to="/" className="hover:text-orange-600 transition">
+                Home
+              </Link>
+            </li>
             <li className="text-gray-400">/</li>
-            <li><Link to="/blogs/allblogs" className="hover:text-orange-600 transition">Blogs</Link></li>
+            <li>
+              <Link
+                to="/blogs/allblogs"
+                className="hover:text-orange-600 transition"
+              >
+                Blogs
+              </Link>
+            </li>
             <li className="text-gray-400">/</li>
             <li className="text-gray-700 font-medium">Manufacturing FM</li>
           </ol>
@@ -299,9 +338,14 @@ const ManufacturingFacilityManagementBlog = () => {
         {/* Stats bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           {stats.map((stat, idx) => (
-            <div key={idx} className="bg-white rounded-xl shadow-md p-4 text-center border border-gray-100">
+            <div
+              key={idx}
+              className="bg-white rounded-xl shadow-md p-4 text-center border border-gray-100"
+            >
               <div className="flex justify-center mb-2">{stat.icon}</div>
-              <div className="text-2xl font-bold text-gray-800">{stat.value}</div>
+              <div className="text-2xl font-bold text-gray-800">
+                {stat.value}
+              </div>
               <div className="text-sm text-gray-500">{stat.label}</div>
             </div>
           ))}
@@ -313,7 +357,9 @@ const ManufacturingFacilityManagementBlog = () => {
             <div className="sticky top-24 bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-gray-100">
               <div className="flex items-center gap-2 mb-4 pb-2 border-b border-gray-200">
                 <BookOpen size={20} className="text-orange-600" />
-                <h3 className="font-bold text-gray-800 text-lg">On this page</h3>
+                <h3 className="font-bold text-gray-800 text-lg">
+                  On this page
+                </h3>
               </div>
               <ul className="space-y-2 text-sm">
                 {tocSections.map((section) => (
@@ -323,7 +369,9 @@ const ManufacturingFacilityManagementBlog = () => {
                       className="text-gray-600 hover:text-orange-600 transition flex items-center gap-2 group"
                       onClick={(e) => {
                         e.preventDefault();
-                        document.getElementById(section.id)?.scrollIntoView({ behavior: "smooth" });
+                        document
+                          .getElementById(section.id)
+                          ?.scrollIntoView({ behavior: "smooth" });
                       }}
                     >
                       <span className="w-1.5 h-1.5 bg-gray-300 rounded-full group-hover:bg-orange-600"></span>
@@ -334,9 +382,39 @@ const ManufacturingFacilityManagementBlog = () => {
               </ul>
               <div className="mt-6 pt-4 border-t border-gray-100">
                 <div className="flex justify-around">
-                  <button onClick={() => window.open(`https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`, "_blank")} className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-500"><Twitter size={18} /></button>
-                  <button onClick={() => window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareTitle}`, "_blank")} className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-700"><Linkedin size={18} /></button>
-                  <button onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank")} className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-600"><Facebook size={18} /></button>
+                  <button
+                    onClick={() =>
+                      window.open(
+                        `https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`,
+                        "_blank",
+                      )
+                    }
+                    className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-500"
+                  >
+                    <Twitter size={18} />
+                  </button>
+                  <button
+                    onClick={() =>
+                      window.open(
+                        `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareTitle}`,
+                        "_blank",
+                      )
+                    }
+                    className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-700"
+                  >
+                    <Linkedin size={18} />
+                  </button>
+                  <button
+                    onClick={() =>
+                      window.open(
+                        `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`,
+                        "_blank",
+                      )
+                    }
+                    className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-600"
+                  >
+                    <Facebook size={18} />
+                  </button>
                 </div>
               </div>
             </div>
@@ -347,7 +425,11 @@ const ManufacturingFacilityManagementBlog = () => {
             {/* Introduction */}
             <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
               <p className="text-xl text-gray-700 leading-relaxed border-l-4 border-orange-500 pl-5 italic">
-                Manufacturing facilities operate in highly demanding environments where equipment reliability, employee safety, and operational efficiency are critical. Professional facility management helps industries maintain productivity while minimizing risks and costs.
+                Manufacturing facilities operate in highly demanding
+                environments where equipment reliability, employee safety, and
+                operational efficiency are critical. Professional facility
+                management helps industries maintain productivity while
+                minimizing risks and costs.
               </p>
             </div>
 
@@ -361,35 +443,64 @@ const ManufacturingFacilityManagementBlog = () => {
               />
               <div className="flex justify-between items-center mt-2 text-sm text-gray-500">
                 <span>🏭 Modern manufacturing facility</span>
-                <span className="bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full">Core Operations</span>
+                <span className="bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full">
+                  Core Operations
+                </span>
               </div>
             </div>
 
             {/* Supporting Efficient Operations */}
             <div id="efficient-operations" className="scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <Factory size={28} className="text-orange-500" /> Supporting Efficient Operations
+                <Factory size={28} className="text-orange-500" /> Supporting
+                Efficient Operations
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                Every minute of downtime can affect production targets and profitability. Facility management ensures machinery, infrastructure, and support services operate efficiently through proactive monitoring and rapid response.
+                Every minute of downtime can affect production targets and
+                profitability. Facility management ensures machinery,
+                infrastructure, and support services operate efficiently through
+                proactive monitoring and rapid response.
               </p>
             </div>
 
             {/* Service Cards */}
             <div>
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">🔧 Core Manufacturing FM Services</h2>
+              <h2 className="text-2xl font-bold text-gray-800 mb-6">
+                🔧 Core Manufacturing FM Services
+              </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {[
-                  { title: "Preventive Maintenance", desc: "Reduce breakdowns and improve equipment lifespan with scheduled inspections.", icon: Wrench },
-                  { title: "Industrial Housekeeping", desc: "Maintain clean and organized production environments to enhance safety and efficiency.", icon: Sparkles },
-                  { title: "Security Services", desc: "Protect assets, inventory, and employees with 24/7 surveillance and access control.", icon: Shield },
-                  { title: "Skilled Manpower", desc: "Ensure availability of trained workforce resources for critical operations.", icon: HardHat },
+                  {
+                    title: "Preventive Maintenance",
+                    desc: "Reduce breakdowns and improve equipment lifespan with scheduled inspections.",
+                    icon: Wrench,
+                  },
+                  {
+                    title: "Industrial Housekeeping",
+                    desc: "Maintain clean and organized production environments to enhance safety and efficiency.",
+                    icon: Sparkles,
+                  },
+                  {
+                    title: "Security Services",
+                    desc: "Protect assets, inventory, and employees with 24/7 surveillance and access control.",
+                    icon: Shield,
+                  },
+                  {
+                    title: "Skilled Manpower",
+                    desc: "Ensure availability of trained workforce resources for critical operations.",
+                    icon: HardHat,
+                  },
                 ].map((service, idx) => (
-                  <div key={idx} className="group bg-white rounded-xl shadow-md p-6 border-l-4 border-orange-500 hover:shadow-lg transition">
+                  <div
+                    key={idx}
+                    className="group bg-white rounded-xl shadow-md p-6 border-l-4 border-orange-500 hover:shadow-lg transition"
+                  >
                     <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-orange-600 transition-colors">
                       <service.icon className="text-orange-600 group-hover:text-white w-6 h-6" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">{service.title}</h3>
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">
+                      {service.title}
+                    </h3>
                     <p className="text-gray-600">{service.desc}</p>
                   </div>
                 ))}
@@ -412,10 +523,15 @@ const ManufacturingFacilityManagementBlog = () => {
             {/* Workplace Safety & Compliance */}
             <div id="safety-compliance" className="scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <Shield size={28} className="text-orange-500" /> Workplace Safety & Compliance
+                <Shield size={28} className="text-orange-500" /> Workplace
+                Safety & Compliance
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                Manufacturing industries must comply with safety regulations (OSHA, ISO, local codes) and operational standards. Facility management helps reduce workplace hazards, conduct regular safety audits, and ensure compliance with industry norms, protecting both workers and the bottom line.
+                Manufacturing industries must comply with safety regulations
+                (OSHA, ISO, local codes) and operational standards. Facility
+                management helps reduce workplace hazards, conduct regular
+                safety audits, and ensure compliance with industry norms,
+                protecting both workers and the bottom line.
               </p>
             </div>
 
@@ -435,7 +551,8 @@ const ManufacturingFacilityManagementBlog = () => {
             {/* Benefits Section */}
             <div id="benefits" className="scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-                <TrendingUp size={28} className="text-orange-500" /> Benefits for Manufacturers
+                <TrendingUp size={28} className="text-orange-500" /> Benefits
+                for Manufacturers
               </h2>
               <div className="grid sm:grid-cols-2 gap-3">
                 {[
@@ -446,8 +563,14 @@ const ManufacturingFacilityManagementBlog = () => {
                   "Regulatory compliance (OSHA, ISO)",
                   "Lower operational and maintenance costs",
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2 bg-white p-3 rounded-xl shadow-sm">
-                    <CheckCircle size={18} className="text-orange-500 shrink-0" />
+                  <div
+                    key={i}
+                    className="flex items-center gap-2 bg-white p-3 rounded-xl shadow-sm"
+                  >
+                    <CheckCircle
+                      size={18}
+                      className="text-orange-500 shrink-0"
+                    />
                     <span className="text-gray-700">{item}</span>
                   </div>
                 ))}
@@ -456,23 +579,43 @@ const ManufacturingFacilityManagementBlog = () => {
 
             {/* Did You Know? */}
             <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-2xl p-6 border border-orange-100">
-              <h3 className="text-xl font-bold text-orange-800 mb-2 flex items-center gap-2">💡 Did You Know?</h3>
+              <h3 className="text-xl font-bold text-orange-800 mb-2 flex items-center gap-2">
+                💡 Did You Know?
+              </h3>
               <p className="text-gray-700">
-                Manufacturing facilities with proactive facility management experience up to 40% less unplanned downtime and 25% lower maintenance costs. Strategic FM isn't an expense—it's a competitive advantage.
+                Manufacturing facilities with proactive facility management
+                experience up to 40% less unplanned downtime and 25% lower
+                maintenance costs. Strategic FM isn't an expense—it's a
+                competitive advantage.
               </p>
             </div>
 
             {/* Why Acuity Groups */}
-            <div id="why-acuity" className="bg-gradient-to-br from-orange-600 to-red-700 text-white p-8 rounded-2xl shadow-xl scroll-mt-24">
-              <h2 className="text-3xl font-bold mb-4">Why Choose Acuity Groups for Manufacturing FM? 🏭</h2>
+            <div
+              id="why-acuity"
+              className="bg-gradient-to-br from-orange-600 to-red-700 text-white p-8 rounded-2xl shadow-xl scroll-mt-24"
+            >
+              <h2 className="text-3xl font-bold mb-4">
+                Why Choose Acuity Groups for Manufacturing FM? 🏭
+              </h2>
               <p className="text-orange-100 leading-relaxed text-lg">
-                Acuity Groups delivers specialized facility management solutions for manufacturing plants, warehouses, and industrial complexes. From preventive maintenance and industrial housekeeping to security and skilled manpower, we ensure your production runs smoothly, safely, and cost-effectively.
+                Acuity Groups delivers specialized facility management solutions
+                for manufacturing plants, warehouses, and industrial complexes.
+                From preventive maintenance and industrial housekeeping to
+                security and skilled manpower, we ensure your production runs
+                smoothly, safely, and cost-effectively.
               </p>
               <div className="mt-6 flex flex-wrap gap-4">
-                <Link to="/contactus" className="inline-flex items-center gap-2 bg-white text-orange-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg">
+                <Link
+                  to="/contactus"
+                  className="inline-flex items-center gap-2 bg-white text-orange-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
+                >
                   Optimize Your Facility <ArrowRight size={18} />
                 </Link>
-                <Link to="/services" className="inline-flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition">
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition"
+                >
                   Explore Services
                 </Link>
               </div>
@@ -480,15 +623,25 @@ const ManufacturingFacilityManagementBlog = () => {
 
             {/* Conclusion */}
             <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white p-8 rounded-2xl shadow-xl">
-              <h2 className="text-3xl font-bold mb-4 flex items-center gap-2">🎯 Conclusion</h2>
+              <h2 className="text-3xl font-bold mb-4 flex items-center gap-2">
+                🎯 Conclusion
+              </h2>
               <p className="text-gray-200 text-lg leading-relaxed">
-                Facility management is a key driver of manufacturing success. By integrating maintenance, housekeeping, security, and manpower solutions, businesses can improve efficiency, safety, and long-term operational performance. Partner with Acuity Groups to transform your manufacturing facility into a benchmark of excellence.
+                Facility management is a key driver of manufacturing success. By
+                integrating maintenance, housekeeping, security, and manpower
+                solutions, businesses can improve efficiency, safety, and
+                long-term operational performance. Partner with Acuity Groups to
+                transform your manufacturing facility into a benchmark of
+                excellence.
               </p>
             </div>
 
             {/* Back to blogs */}
             <div className="pt-4 border-t border-gray-200">
-              <Link to="/blogs/allblogs" className="text-orange-600 hover:text-orange-700 font-medium inline-flex items-center gap-1">
+              <Link
+                to="/blogs/allblogs"
+                className="text-orange-600 hover:text-orange-700 font-medium inline-flex items-center gap-1"
+              >
                 ← Back to all blogs
               </Link>
             </div>
@@ -499,42 +652,75 @@ const ManufacturingFacilityManagementBlog = () => {
             {/* Expert Card */}
             <div className="bg-white rounded-2xl shadow-lg p-6 text-center border border-gray-100">
               <div className="w-24 h-24 mx-auto rounded-full overflow-hidden bg-gray-200 mb-4">
-                <img src={Industries1} alt="Manufacturing FM Expert" className="w-full h-full object-cover" />
+                <img
+                  src={Industries1}
+                  alt="Manufacturing FM Expert"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-bold text-xl">Acuity Industrial Team</h3>
-              <p className="text-gray-500 text-sm mt-1">Manufacturing FM Specialists</p>
-              <p className="text-gray-600 text-sm mt-3">15+ years in industrial facility management.</p>
+              <p className="text-gray-500 text-sm mt-1">
+                Manufacturing FM Specialists
+              </p>
+              <p className="text-gray-600 text-sm mt-3">
+                15+ years in industrial facility management.
+              </p>
               <div className="mt-4 flex justify-center gap-2">
                 <Phone size={18} className="text-orange-600" />
-                <span className="text-sm text-gray-600">24/7 Emergency Support</span>
+                <span className="text-sm text-gray-600">
+                  24/7 Emergency Support
+                </span>
               </div>
             </div>
 
             {/* Related Articles with thumbnails */}
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">📚 Related Articles</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                📚 Related Articles
+              </h3>
               <ul className="space-y-4">
                 <li className="flex gap-3 items-center group">
                   <div className="w-12 h-12 rounded-md overflow-hidden bg-gray-200 flex-shrink-0">
-                    <img src={Industries2} alt="thumb" className="w-full h-full object-cover" />
+                    <img
+                      src={Industries2}
+                      alt="thumb"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <Link to="/blogs/TheImportanceFacilities" className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1">
+                  <Link
+                    to="/blogs/TheImportanceFacilities"
+                    className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1"
+                  >
                     The Importance of Facilities Management
                   </Link>
                 </li>
                 <li className="flex gap-3 items-center group">
                   <div className="w-12 h-12 rounded-md overflow-hidden bg-gray-200 flex-shrink-0">
-                    <img src={Industries3} alt="thumb" className="w-full h-full object-cover" />
+                    <img
+                      src={Industries3}
+                      alt="thumb"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <Link to="/blogs/manpower-outsourcing" className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1">
+                  <Link
+                    to="/blogs/manpower-outsourcing"
+                    className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1"
+                  >
                     Benefits of Manpower Outsourcing
                   </Link>
                 </li>
                 <li className="flex gap-3 items-center group">
                   <div className="w-12 h-12 rounded-md overflow-hidden bg-gray-200 flex-shrink-0">
-                    <img src={Industries} alt="thumb" className="w-full h-full object-cover" />
+                    <img
+                      src={Industries}
+                      alt="thumb"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <Link to="/blogs/HousekeepingServices" className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1">
+                  <Link
+                    to="/blogs/HousekeepingServices"
+                    className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1"
+                  >
                     Professional Housekeeping Services
                   </Link>
                 </li>
@@ -544,21 +730,38 @@ const ManufacturingFacilityManagementBlog = () => {
             {/* Quick CTA Card */}
             <div className="bg-gradient-to-br from-orange-50 to-red-100 rounded-2xl p-6 shadow-md border border-orange-100 text-center">
               <div className="text-5xl mb-3">🏭</div>
-              <h3 className="font-bold text-orange-900 text-lg mb-2">Industrial FM Solutions</h3>
-              <p className="text-gray-700 text-sm mb-4">Get a free consultation for your manufacturing facility.</p>
-              <Link to="/contactus" className="block text-center bg-orange-600 text-white py-2.5 rounded-full hover:bg-orange-700 transition shadow">
+              <h3 className="font-bold text-orange-900 text-lg mb-2">
+                Industrial FM Solutions
+              </h3>
+              <p className="text-gray-700 text-sm mb-4">
+                Get a free consultation for your manufacturing facility.
+              </p>
+              <Link
+                to="/contactus"
+                className="block text-center bg-orange-600 text-white py-2.5 rounded-full hover:bg-orange-700 transition shadow"
+              >
                 Request a Quote
               </Link>
               <div className="mt-4 rounded-lg overflow-hidden">
-                <img src={Industries2} alt="Industrial" className="w-full h-20 object-cover" />
+                <img
+                  src={Industries2}
+                  alt="Industrial"
+                  className="w-full h-20 object-cover"
+                />
               </div>
             </div>
 
             {/* Trust Badge */}
             <div className="bg-white rounded-2xl p-5 text-center shadow-lg border">
-              <div className="flex justify-center gap-0.5 text-yellow-400 text-2xl mb-2">★★★★★</div>
-              <p className="font-semibold text-gray-800">Trusted by 80+ Manufacturers</p>
-              <p className="text-xs text-gray-500 mt-1">Reliable | Safe | Efficient</p>
+              <div className="flex justify-center gap-0.5 text-yellow-400 text-2xl mb-2">
+                ★★★★★
+              </div>
+              <p className="font-semibold text-gray-800">
+                Trusted by 80+ Manufacturers
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                Reliable | Safe | Efficient
+              </p>
               <div className="flex justify-center gap-4 mt-3">
                 <Thermometer size={20} className="text-gray-400" />
                 <BarChart size={20} className="text-gray-400" />
@@ -572,22 +775,38 @@ const ManufacturingFacilityManagementBlog = () => {
       {/* FAQ Section with Accordion */}
       <section className="max-w-5xl mx-auto px-6 py-16 border-t border-gray-200">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">Frequently Asked Questions</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+            Frequently Asked Questions
+          </h2>
           <div className="w-20 h-1 bg-orange-600 mx-auto rounded-full"></div>
         </div>
         <div className="space-y-4">
           {[
-            { q: "Why is facility management important in manufacturing?", a: "It ensures equipment reliability, workplace safety, regulatory compliance, and operational efficiency, reducing downtime and costs." },
-            { q: "What services does Acuity Groups offer for manufacturing facilities?", a: "Acuity Groups provides preventive maintenance, industrial housekeeping, security, skilled manpower, and integrated facility management tailored to manufacturing environments." },
-            { q: "How does facility management reduce downtime?", a: "Through preventive maintenance, real-time monitoring, and rapid response teams, facility management minimizes unexpected breakdowns and production losses." },
+            {
+              q: "Why is facility management important in manufacturing?",
+              a: "It ensures equipment reliability, workplace safety, regulatory compliance, and operational efficiency, reducing downtime and costs.",
+            },
+            {
+              q: "What services does Acuity Groups offer for manufacturing facilities?",
+              a: "Acuity Groups provides preventive maintenance, industrial housekeeping, security, skilled manpower, and integrated facility management tailored to manufacturing environments.",
+            },
+            {
+              q: "How does facility management reduce downtime?",
+              a: "Through preventive maintenance, real-time monitoring, and rapid response teams, facility management minimizes unexpected breakdowns and production losses.",
+            },
           ].map((faq, idx) => (
-            <div key={idx} className="bg-white rounded-xl shadow-md overflow-hidden">
+            <div
+              key={idx}
+              className="bg-white rounded-xl shadow-md overflow-hidden"
+            >
               <button
                 onClick={() => toggleFaq(idx)}
                 className="w-full text-left p-5 font-semibold text-gray-800 flex justify-between items-center hover:bg-gray-50 transition"
               >
                 {faq.q}
-                <span className="text-orange-600 text-2xl">{activeFaq === idx ? "−" : "+"}</span>
+                <span className="text-orange-600 text-2xl">
+                  {activeFaq === idx ? "−" : "+"}
+                </span>
               </button>
               {activeFaq === idx && (
                 <div className="p-5 pt-0 text-gray-600 border-t border-gray-100">
@@ -602,16 +821,30 @@ const ManufacturingFacilityManagementBlog = () => {
       {/* Bottom CTA Banner with image overlay */}
       <section className="relative bg-gradient-to-r from-orange-800 via-red-800 to-orange-900 text-white py-16 text-center overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img src={Industries} alt="background pattern" className="w-full h-full object-cover" />
+          <img
+            src={Industries}
+            alt="background pattern"
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="relative max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Boost Your Manufacturing Efficiency?</h2>
-          <p className="text-orange-100 text-lg mb-8">Let Acuity Groups optimize your facility for peak performance.</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Boost Your Manufacturing Efficiency?
+          </h2>
+          <p className="text-orange-100 text-lg mb-8">
+            Let Acuity Groups optimize your facility for peak performance.
+          </p>
           <div className="flex flex-wrap justify-center gap-5">
-            <Link to="/contactus" className="inline-flex items-center gap-2 bg-white text-orange-800 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg">
+            <Link
+              to="/contactus"
+              className="inline-flex items-center gap-2 bg-white text-orange-800 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg"
+            >
               Contact Our Experts <ArrowRight size={18} />
             </Link>
-            <Link to="/blogs/allblogs" className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition">
+            <Link
+              to="/blogs/allblogs"
+              className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition"
+            >
               Browse All Blogs
             </Link>
           </div>

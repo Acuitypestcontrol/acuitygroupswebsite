@@ -79,7 +79,7 @@ const PreventiveMaintenanceBlog = () => {
     );
     updateMeta(
       "og:url",
-      "https://acuitygroups.com/blogs/preventive-maintenance",
+      "https://acuitygroups.in/blogs/preventive-maintenance",
       true,
     );
     updateMeta("og:type", "article", true);
@@ -104,7 +104,7 @@ const PreventiveMaintenanceBlog = () => {
       canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://acuitygroups.com/blogs/preventive-maintenance";
+    canonical.href = "https://acuitygroups.in/blogs/preventive-maintenance";
 
     // Structured Data: Article + FAQ + Breadcrumb
     const articleData = {
@@ -127,7 +127,7 @@ const PreventiveMaintenanceBlog = () => {
       },
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": "https://acuitygroups.com/blogs/preventive-maintenance",
+        "@id": "https://acuitygroups.in/blogs/preventive-maintenance",
       },
     };
 
@@ -176,13 +176,13 @@ const PreventiveMaintenanceBlog = () => {
           "@type": "ListItem",
           position: 2,
           name: "Blogs",
-          item: "https://acuitygroups.com/blogs/allblogs",
+          item: "https://acuitygroups.in/blogs/allblogs",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Preventive Maintenance",
-          item: "https://acuitygroups.com/blogs/preventive-maintenance",
+          item: "https://acuitygroups.in/blogs/preventive-maintenance",
         },
       ],
     };
@@ -216,7 +216,7 @@ const PreventiveMaintenanceBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.com/blogs/preventive-maintenance",
+    "https://acuitygroups.in/blogs/preventive-maintenance",
   );
   const shareTitle = encodeURIComponent(
     "Preventive Maintenance: The Key to Long-Term Asset Performance | Acuity Groups",
@@ -230,10 +230,26 @@ const PreventiveMaintenanceBlog = () => {
   ];
 
   const stats = [
-    { value: "150+", label: "Businesses Served", icon: <Building className="text-blue-600 w-6 h-6" /> },
-    { value: "40%", label: "Downtime Reduction", icon: <TrendingUp className="text-blue-600 w-6 h-6" /> },
-    { value: "24/7", label: "Support", icon: <Clock className="text-blue-600 w-6 h-6" /> },
-    { value: "15+", label: "Years Experience", icon: <Calendar className="text-blue-600 w-6 h-6" /> },
+    {
+      value: "150+",
+      label: "Businesses Served",
+      icon: <Building className="text-blue-600 w-6 h-6" />,
+    },
+    {
+      value: "40%",
+      label: "Downtime Reduction",
+      icon: <TrendingUp className="text-blue-600 w-6 h-6" />,
+    },
+    {
+      value: "24/7",
+      label: "Support",
+      icon: <Clock className="text-blue-600 w-6 h-6" />,
+    },
+    {
+      value: "15+",
+      label: "Years Experience",
+      icon: <Calendar className="text-blue-600 w-6 h-6" />,
+    },
   ];
 
   return (
@@ -279,8 +295,15 @@ const PreventiveMaintenanceBlog = () => {
           </div>
         </div>
         <div className="absolute bottom-0 w-full">
-          <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-12 md:h-16">
-            <path d="M0,0 L1200,0 L1200,120 C1050,80 750,120 600,120 C450,120 150,80 0,120 Z" fill="#f9fafb"></path>
+          <svg
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+            className="w-full h-12 md:h-16"
+          >
+            <path
+              d="M0,0 L1200,0 L1200,120 C1050,80 750,120 600,120 C450,120 150,80 0,120 Z"
+              fill="#f9fafb"
+            ></path>
           </svg>
         </div>
       </div>
@@ -290,20 +313,38 @@ const PreventiveMaintenanceBlog = () => {
         {/* Breadcrumb */}
         <nav className="text-sm text-gray-500 mb-8" aria-label="Breadcrumb">
           <ol className="flex flex-wrap items-center gap-2">
-            <li><Link to="/" className="hover:text-blue-600 transition">Home</Link></li>
+            <li>
+              <Link to="/" className="hover:text-blue-600 transition">
+                Home
+              </Link>
+            </li>
             <li className="text-gray-400">/</li>
-            <li><Link to="/blogs/allblogs" className="hover:text-blue-600 transition">Blogs</Link></li>
+            <li>
+              <Link
+                to="/blogs/allblogs"
+                className="hover:text-blue-600 transition"
+              >
+                Blogs
+              </Link>
+            </li>
             <li className="text-gray-400">/</li>
-            <li className="text-gray-700 font-medium">Preventive Maintenance</li>
+            <li className="text-gray-700 font-medium">
+              Preventive Maintenance
+            </li>
           </ol>
         </nav>
 
         {/* Stats bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           {stats.map((stat, idx) => (
-            <div key={idx} className="bg-white rounded-xl shadow-md p-4 text-center border border-gray-100">
+            <div
+              key={idx}
+              className="bg-white rounded-xl shadow-md p-4 text-center border border-gray-100"
+            >
               <div className="flex justify-center mb-2">{stat.icon}</div>
-              <div className="text-2xl font-bold text-gray-800">{stat.value}</div>
+              <div className="text-2xl font-bold text-gray-800">
+                {stat.value}
+              </div>
               <div className="text-sm text-gray-500">{stat.label}</div>
             </div>
           ))}
@@ -315,7 +356,9 @@ const PreventiveMaintenanceBlog = () => {
             <div className="sticky top-24 bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-gray-100">
               <div className="flex items-center gap-2 mb-4 pb-2 border-b border-gray-200">
                 <BookOpen size={20} className="text-blue-600" />
-                <h3 className="font-bold text-gray-800 text-lg">On this page</h3>
+                <h3 className="font-bold text-gray-800 text-lg">
+                  On this page
+                </h3>
               </div>
               <ul className="space-y-2 text-sm">
                 {tocSections.map((section) => (
@@ -325,7 +368,9 @@ const PreventiveMaintenanceBlog = () => {
                       className="text-gray-600 hover:text-blue-600 transition flex items-center gap-2 group"
                       onClick={(e) => {
                         e.preventDefault();
-                        document.getElementById(section.id)?.scrollIntoView({ behavior: "smooth" });
+                        document
+                          .getElementById(section.id)
+                          ?.scrollIntoView({ behavior: "smooth" });
                       }}
                     >
                       <span className="w-1.5 h-1.5 bg-gray-300 rounded-full group-hover:bg-blue-600"></span>
@@ -336,9 +381,39 @@ const PreventiveMaintenanceBlog = () => {
               </ul>
               <div className="mt-6 pt-4 border-t border-gray-100">
                 <div className="flex justify-around">
-                  <button onClick={() => window.open(`https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`, "_blank")} className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-500"><Twitter size={18} /></button>
-                  <button onClick={() => window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareTitle}`, "_blank")} className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-700"><Linkedin size={18} /></button>
-                  <button onClick={() => window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank")} className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-600"><Facebook size={18} /></button>
+                  <button
+                    onClick={() =>
+                      window.open(
+                        `https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`,
+                        "_blank",
+                      )
+                    }
+                    className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-500"
+                  >
+                    <Twitter size={18} />
+                  </button>
+                  <button
+                    onClick={() =>
+                      window.open(
+                        `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareTitle}`,
+                        "_blank",
+                      )
+                    }
+                    className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-700"
+                  >
+                    <Linkedin size={18} />
+                  </button>
+                  <button
+                    onClick={() =>
+                      window.open(
+                        `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`,
+                        "_blank",
+                      )
+                    }
+                    className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-600"
+                  >
+                    <Facebook size={18} />
+                  </button>
                 </div>
               </div>
             </div>
@@ -349,7 +424,10 @@ const PreventiveMaintenanceBlog = () => {
             {/* Introduction */}
             <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
               <p className="text-xl text-gray-700 leading-relaxed border-l-4 border-blue-500 pl-5 italic">
-                Every business depends on equipment, systems, and infrastructure to operate efficiently. Preventive maintenance ensures these assets remain in optimal condition, reducing unexpected failures and costly repairs.
+                Every business depends on equipment, systems, and infrastructure
+                to operate efficiently. Preventive maintenance ensures these
+                assets remain in optimal condition, reducing unexpected failures
+                and costly repairs.
               </p>
             </div>
 
@@ -363,37 +441,65 @@ const PreventiveMaintenanceBlog = () => {
               />
               <div className="flex justify-between items-center mt-2 text-sm text-gray-500">
                 <span>🔧 Scheduled equipment inspection</span>
-                <span className="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">Preventive Care</span>
+                <span className="bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">
+                  Preventive Care
+                </span>
               </div>
             </div>
 
             {/* What Is Preventive Maintenance */}
             <div id="what-is" className="scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <Wrench size={28} className="text-blue-500" /> What Is Preventive Maintenance?
+                <Wrench size={28} className="text-blue-500" /> What Is
+                Preventive Maintenance?
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                Preventive maintenance involves scheduled inspections, servicing, and repairs designed to identify issues before they become major problems. It helps businesses maintain continuous operations and avoid unexpected disruptions.
+                Preventive maintenance involves scheduled inspections,
+                servicing, and repairs designed to identify issues before they
+                become major problems. It helps businesses maintain continuous
+                operations and avoid unexpected disruptions.
               </p>
             </div>
 
             {/* Benefits Section */}
             <div id="benefits" className="scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-                <Sparkles size={28} className="text-blue-500" /> Benefits of Preventive Maintenance
+                <Sparkles size={28} className="text-blue-500" /> Benefits of
+                Preventive Maintenance
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {[
-                  { title: "Reduced Downtime", desc: "Prevent unexpected equipment failures and business disruptions.", icon: Wrench },
-                  { title: "Lower Repair Costs", desc: "Identify small issues before they become expensive repairs.", icon: DollarSign },
-                  { title: "Extended Asset Life", desc: "Increase the lifespan of valuable equipment and infrastructure.", icon: TrendingUp },
-                  { title: "Improved Safety", desc: "Ensure equipment operates safely and complies with standards.", icon: Shield },
+                  {
+                    title: "Reduced Downtime",
+                    desc: "Prevent unexpected equipment failures and business disruptions.",
+                    icon: Wrench,
+                  },
+                  {
+                    title: "Lower Repair Costs",
+                    desc: "Identify small issues before they become expensive repairs.",
+                    icon: DollarSign,
+                  },
+                  {
+                    title: "Extended Asset Life",
+                    desc: "Increase the lifespan of valuable equipment and infrastructure.",
+                    icon: TrendingUp,
+                  },
+                  {
+                    title: "Improved Safety",
+                    desc: "Ensure equipment operates safely and complies with standards.",
+                    icon: Shield,
+                  },
                 ].map((item, idx) => (
-                  <div key={idx} className="group bg-white rounded-xl shadow-md p-6 border-l-4 border-blue-500 hover:shadow-lg transition">
+                  <div
+                    key={idx}
+                    className="group bg-white rounded-xl shadow-md p-6 border-l-4 border-blue-500 hover:shadow-lg transition"
+                  >
                     <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
                       <item.icon className="text-blue-600 group-hover:text-white w-6 h-6" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">
+                      {item.title}
+                    </h3>
                     <p className="text-gray-600">{item.desc}</p>
                   </div>
                 ))}
@@ -403,7 +509,8 @@ const PreventiveMaintenanceBlog = () => {
             {/* Industries That Benefit */}
             <div id="industries" className="scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
-                <Building size={28} className="text-blue-500" /> Industries That Benefit
+                <Building size={28} className="text-blue-500" /> Industries That
+                Benefit
               </h2>
               <div className="grid sm:grid-cols-2 gap-3">
                 {[
@@ -414,7 +521,10 @@ const PreventiveMaintenanceBlog = () => {
                   "Manufacturing Units",
                   "Commercial Buildings",
                 ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-2 bg-white p-3 rounded-xl shadow-sm">
+                  <div
+                    key={i}
+                    className="flex items-center gap-2 bg-white p-3 rounded-xl shadow-sm"
+                  >
                     <CheckCircle size={18} className="text-blue-500 shrink-0" />
                     <span className="text-gray-700">{item}</span>
                   </div>
@@ -437,23 +547,43 @@ const PreventiveMaintenanceBlog = () => {
 
             {/* Did You Know? */}
             <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-100">
-              <h3 className="text-xl font-bold text-blue-800 mb-2 flex items-center gap-2">💡 Did You Know?</h3>
+              <h3 className="text-xl font-bold text-blue-800 mb-2 flex items-center gap-2">
+                💡 Did You Know?
+              </h3>
               <p className="text-gray-700">
-                Organizations that implement preventive maintenance programs reduce equipment downtime by up to 40% and extend asset lifespan by 20-30%. The cost of preventive maintenance is typically 3-5 times lower than reactive repairs.
+                Organizations that implement preventive maintenance programs
+                reduce equipment downtime by up to 40% and extend asset lifespan
+                by 20-30%. The cost of preventive maintenance is typically 3-5
+                times lower than reactive repairs.
               </p>
             </div>
 
             {/* Why Choose Acuity Groups */}
-            <div id="why-acuity" className="bg-gradient-to-br from-blue-600 to-cyan-700 text-white p-8 rounded-2xl shadow-xl scroll-mt-24">
-              <h2 className="text-3xl font-bold mb-4">Why Choose Acuity Groups? 🔧</h2>
+            <div
+              id="why-acuity"
+              className="bg-gradient-to-br from-blue-600 to-cyan-700 text-white p-8 rounded-2xl shadow-xl scroll-mt-24"
+            >
+              <h2 className="text-3xl font-bold mb-4">
+                Why Choose Acuity Groups? 🔧
+              </h2>
               <p className="text-blue-100 leading-relaxed text-lg">
-                Acuity Groups provides comprehensive maintenance solutions including electrical, plumbing, HVAC, building maintenance, equipment servicing, and facility support services. Our preventive maintenance programs help businesses improve reliability, safety, and operational efficiency.
+                Acuity Groups provides comprehensive maintenance solutions
+                including electrical, plumbing, HVAC, building maintenance,
+                equipment servicing, and facility support services. Our
+                preventive maintenance programs help businesses improve
+                reliability, safety, and operational efficiency.
               </p>
               <div className="mt-6 flex flex-wrap gap-4">
-                <Link to="/contactus" className="inline-flex items-center gap-2 bg-white text-blue-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg">
+                <Link
+                  to="/contactus"
+                  className="inline-flex items-center gap-2 bg-white text-blue-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
+                >
                   Schedule Maintenance <ArrowRight size={18} />
                 </Link>
-                <Link to="/services" className="inline-flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition">
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition"
+                >
                   Explore Services
                 </Link>
               </div>
@@ -461,15 +591,24 @@ const PreventiveMaintenanceBlog = () => {
 
             {/* Conclusion */}
             <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white p-8 rounded-2xl shadow-xl">
-              <h2 className="text-3xl font-bold mb-4 flex items-center gap-2">🎯 Conclusion</h2>
+              <h2 className="text-3xl font-bold mb-4 flex items-center gap-2">
+                🎯 Conclusion
+              </h2>
               <p className="text-gray-200 text-lg leading-relaxed">
-                Preventive maintenance is a smart investment that helps businesses reduce costs, improve performance, and protect valuable assets. A proactive approach today can prevent major problems tomorrow. Partner with Acuity Groups to implement a robust preventive maintenance program tailored to your facility.
+                Preventive maintenance is a smart investment that helps
+                businesses reduce costs, improve performance, and protect
+                valuable assets. A proactive approach today can prevent major
+                problems tomorrow. Partner with Acuity Groups to implement a
+                robust preventive maintenance program tailored to your facility.
               </p>
             </div>
 
             {/* Back to blogs */}
             <div className="pt-4 border-t border-gray-200">
-              <Link to="/blogs/allblogs" className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center gap-1">
+              <Link
+                to="/blogs/allblogs"
+                className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center gap-1"
+              >
                 ← Back to all blogs
               </Link>
             </div>
@@ -480,42 +619,75 @@ const PreventiveMaintenanceBlog = () => {
             {/* Expert Card */}
             <div className="bg-white rounded-2xl shadow-lg p-6 text-center border border-gray-100">
               <div className="w-24 h-24 mx-auto rounded-full overflow-hidden bg-gray-200 mb-4">
-                <img src={RepairingMaintenance2} alt="Maintenance Expert" className="w-full h-full object-cover" />
+                <img
+                  src={RepairingMaintenance2}
+                  alt="Maintenance Expert"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <h3 className="font-bold text-xl">Acuity Maintenance Team</h3>
-              <p className="text-gray-500 text-sm mt-1">Preventive Maintenance Specialists</p>
-              <p className="text-gray-600 text-sm mt-3">15+ years in facility maintenance and asset management.</p>
+              <p className="text-gray-500 text-sm mt-1">
+                Preventive Maintenance Specialists
+              </p>
+              <p className="text-gray-600 text-sm mt-3">
+                15+ years in facility maintenance and asset management.
+              </p>
               <div className="mt-4 flex justify-center gap-2">
                 <Phone size={18} className="text-blue-600" />
-                <span className="text-sm text-gray-600">24/7 Support Available</span>
+                <span className="text-sm text-gray-600">
+                  24/7 Support Available
+                </span>
               </div>
             </div>
 
             {/* Related Articles with thumbnails */}
             <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-              <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">📚 Related Articles</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                📚 Related Articles
+              </h3>
               <ul className="space-y-4">
                 <li className="flex gap-3 items-center group">
                   <div className="w-12 h-12 rounded-md overflow-hidden bg-gray-200 flex-shrink-0">
-                    <img src={RepairingMaintenance3} alt="thumb" className="w-full h-full object-cover" />
+                    <img
+                      src={RepairingMaintenance3}
+                      alt="thumb"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <Link to="/blogs/TheImportanceFacilities" className="text-blue-600 group-hover:text-blue-700 group-hover:underline transition text-sm font-medium flex-1">
+                  <Link
+                    to="/blogs/TheImportanceFacilities"
+                    className="text-blue-600 group-hover:text-blue-700 group-hover:underline transition text-sm font-medium flex-1"
+                  >
                     The Importance of Facilities Management
                   </Link>
                 </li>
                 <li className="flex gap-3 items-center group">
                   <div className="w-12 h-12 rounded-md overflow-hidden bg-gray-200 flex-shrink-0">
-                    <img src={RepairingMaintenance1} alt="thumb" className="w-full h-full object-cover" />
+                    <img
+                      src={RepairingMaintenance1}
+                      alt="thumb"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <Link to="/blogs/manufacturing-facility-management" className="text-blue-600 group-hover:text-blue-700 group-hover:underline transition text-sm font-medium flex-1">
+                  <Link
+                    to="/blogs/manufacturing-facility-management"
+                    className="text-blue-600 group-hover:text-blue-700 group-hover:underline transition text-sm font-medium flex-1"
+                  >
                     Manufacturing Facility Management
                   </Link>
                 </li>
                 <li className="flex gap-3 items-center group">
                   <div className="w-12 h-12 rounded-md overflow-hidden bg-gray-200 flex-shrink-0">
-                    <img src={RepairingMaintenance2} alt="thumb" className="w-full h-full object-cover" />
+                    <img
+                      src={RepairingMaintenance2}
+                      alt="thumb"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <Link to="/blogs/HousekeepingServices" className="text-blue-600 group-hover:text-blue-700 group-hover:underline transition text-sm font-medium flex-1">
+                  <Link
+                    to="/blogs/HousekeepingServices"
+                    className="text-blue-600 group-hover:text-blue-700 group-hover:underline transition text-sm font-medium flex-1"
+                  >
                     Professional Housekeeping Services
                   </Link>
                 </li>
@@ -525,21 +697,38 @@ const PreventiveMaintenanceBlog = () => {
             {/* Quick CTA Card */}
             <div className="bg-gradient-to-br from-blue-50 to-cyan-100 rounded-2xl p-6 shadow-md border border-blue-100 text-center">
               <div className="text-5xl mb-3">🔧</div>
-              <h3 className="font-bold text-blue-900 text-lg mb-2">Maintenance Solutions</h3>
-              <p className="text-gray-700 text-sm mb-4">Get a free consultation for your preventive maintenance needs.</p>
-              <Link to="/contactus" className="block text-center bg-blue-600 text-white py-2.5 rounded-full hover:bg-blue-700 transition shadow">
+              <h3 className="font-bold text-blue-900 text-lg mb-2">
+                Maintenance Solutions
+              </h3>
+              <p className="text-gray-700 text-sm mb-4">
+                Get a free consultation for your preventive maintenance needs.
+              </p>
+              <Link
+                to="/contactus"
+                className="block text-center bg-blue-600 text-white py-2.5 rounded-full hover:bg-blue-700 transition shadow"
+              >
                 Request a Quote
               </Link>
               <div className="mt-4 rounded-lg overflow-hidden">
-                <img src={RepairingMaintenance3} alt="Maintenance" className="w-full h-20 object-cover" />
+                <img
+                  src={RepairingMaintenance3}
+                  alt="Maintenance"
+                  className="w-full h-20 object-cover"
+                />
               </div>
             </div>
 
             {/* Trust Badge */}
             <div className="bg-white rounded-2xl p-5 text-center shadow-lg border">
-              <div className="flex justify-center gap-0.5 text-yellow-400 text-2xl mb-2">★★★★★</div>
-              <p className="font-semibold text-gray-800">Trusted by 150+ Businesses</p>
-              <p className="text-xs text-gray-500 mt-1">Reliable | Proactive | Affordable</p>
+              <div className="flex justify-center gap-0.5 text-yellow-400 text-2xl mb-2">
+                ★★★★★
+              </div>
+              <p className="font-semibold text-gray-800">
+                Trusted by 150+ Businesses
+              </p>
+              <p className="text-xs text-gray-500 mt-1">
+                Reliable | Proactive | Affordable
+              </p>
               <div className="flex justify-center gap-4 mt-3">
                 <Thermometer size={20} className="text-gray-400" />
                 <BarChart size={20} className="text-gray-400" />
@@ -553,22 +742,38 @@ const PreventiveMaintenanceBlog = () => {
       {/* FAQ Section with Accordion */}
       <section className="max-w-5xl mx-auto px-6 py-16 border-t border-gray-200">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">Frequently Asked Questions</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
+            Frequently Asked Questions
+          </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full"></div>
         </div>
         <div className="space-y-4">
           {[
-            { q: "What is preventive maintenance?", a: "Preventive maintenance involves scheduled inspections, servicing, and repairs designed to identify issues before they become major problems." },
-            { q: "What are the benefits of preventive maintenance?", a: "Reduced downtime, lower repair costs, extended asset life, improved safety, and enhanced operational efficiency." },
-            { q: "What industries benefit from preventive maintenance?", a: "Corporate offices, hotels, hospitals, educational institutions, manufacturing units, and commercial buildings." },
+            {
+              q: "What is preventive maintenance?",
+              a: "Preventive maintenance involves scheduled inspections, servicing, and repairs designed to identify issues before they become major problems.",
+            },
+            {
+              q: "What are the benefits of preventive maintenance?",
+              a: "Reduced downtime, lower repair costs, extended asset life, improved safety, and enhanced operational efficiency.",
+            },
+            {
+              q: "What industries benefit from preventive maintenance?",
+              a: "Corporate offices, hotels, hospitals, educational institutions, manufacturing units, and commercial buildings.",
+            },
           ].map((faq, idx) => (
-            <div key={idx} className="bg-white rounded-xl shadow-md overflow-hidden">
+            <div
+              key={idx}
+              className="bg-white rounded-xl shadow-md overflow-hidden"
+            >
               <button
                 onClick={() => toggleFaq(idx)}
                 className="w-full text-left p-5 font-semibold text-gray-800 flex justify-between items-center hover:bg-gray-50 transition"
               >
                 {faq.q}
-                <span className="text-blue-600 text-2xl">{activeFaq === idx ? "−" : "+"}</span>
+                <span className="text-blue-600 text-2xl">
+                  {activeFaq === idx ? "−" : "+"}
+                </span>
               </button>
               {activeFaq === idx && (
                 <div className="p-5 pt-0 text-gray-600 border-t border-gray-100">
@@ -583,16 +788,30 @@ const PreventiveMaintenanceBlog = () => {
       {/* Bottom CTA Banner with image overlay */}
       <section className="relative bg-gradient-to-r from-blue-800 via-cyan-800 to-blue-900 text-white py-16 text-center overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <img src={RepairingMaintenance1} alt="background pattern" className="w-full h-full object-cover" />
+          <img
+            src={RepairingMaintenance1}
+            alt="background pattern"
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="relative max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Protect Your Assets?</h2>
-          <p className="text-blue-100 text-lg mb-8">Implement a preventive maintenance plan with Acuity Groups today.</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Protect Your Assets?
+          </h2>
+          <p className="text-blue-100 text-lg mb-8">
+            Implement a preventive maintenance plan with Acuity Groups today.
+          </p>
           <div className="flex flex-wrap justify-center gap-5">
-            <Link to="/contactus" className="inline-flex items-center gap-2 bg-white text-blue-800 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg">
+            <Link
+              to="/contactus"
+              className="inline-flex items-center gap-2 bg-white text-blue-800 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg"
+            >
               Contact Our Experts <ArrowRight size={18} />
             </Link>
-            <Link to="/blogs/allblogs" className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition">
+            <Link
+              to="/blogs/allblogs"
+              className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition"
+            >
               Browse All Blogs
             </Link>
           </div>

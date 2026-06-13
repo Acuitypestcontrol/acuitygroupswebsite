@@ -64,7 +64,7 @@ const FacilityManagementBlog = () => {
       canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://acuitygroups.com/blogs/facilityManagements";
+    canonical.href = "https://acuitygroups.in/blogs/facilityManagements";
 
     // Robots
     let robots = document.querySelector('meta[name="robots"]');
@@ -114,7 +114,7 @@ const FacilityManagementBlog = () => {
     }
     ogUrl.setAttribute(
       "content",
-      "https://acuitygroups.com/blogs/facilityManagements",
+      "https://acuitygroups.in/blogs/facilityManagements",
     );
 
     // Twitter Card
@@ -167,7 +167,7 @@ const FacilityManagementBlog = () => {
       },
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": "https://acuitygroups.com/blogs/facilityManagements",
+        "@id": "https://acuitygroups.in/blogs/facilityManagements",
       },
     };
 

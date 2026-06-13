@@ -77,11 +77,7 @@ const PestManagementBlog = () => {
       "https://acuitygroups.com/static/media/ppp.jpg",
       true,
     );
-    updateMeta(
-      "og:url",
-      "https://acuitygroups.com/blogs/pest-management",
-      true,
-    );
+    updateMeta("og:url", "https://acuitygroups.in/blogs/pest-management", true);
     updateMeta("og:type", "article", true);
     updateMeta("og:site_name", "Acuity Groups", true);
 
@@ -104,7 +100,7 @@ const PestManagementBlog = () => {
       canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://acuitygroups.com/blogs/pest-management";
+    canonical.href = "https://acuitygroups.in/blogs/pest-management";
 
     // Structured Data: Article + FAQ + Breadcrumb
     const articleData = {
@@ -126,7 +122,7 @@ const PestManagementBlog = () => {
       },
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": "https://acuitygroups.com/blogs/pest-management",
+        "@id": "https://acuitygroups.in/blogs/pest-management",
       },
     };
 
@@ -175,13 +171,13 @@ const PestManagementBlog = () => {
           "@type": "ListItem",
           position: 2,
           name: "Blogs",
-          item: "https://acuitygroups.com/blogs/allblogs",
+          item: "https://acuitygroups.in/blogs/allblogs",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Pest Management",
-          item: "https://acuitygroups.com/blogs/pest-management",
+          item: "https://acuitygroups.in/blogs/pest-management",
         },
       ],
     };
@@ -215,7 +211,7 @@ const PestManagementBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.com/blogs/pest-management",
+    "https://acuitygroups.in/blogs/pest-management",
   );
   const shareTitle = encodeURIComponent(
     "Why Regular Pest Control Is Essential for Businesses | Acuity Groups",
@@ -643,8 +639,7 @@ const PestManagementBlog = () => {
                 📚 Related Articles
               </h3>
               <ul className="space-y-4">
-                <li className="flex gap-3 items-center group">
-                </li>
+                <li className="flex gap-3 items-center group"></li>
                 <li className="flex gap-3 items-center group">
                   <div className="w-12 h-12 rounded-md overflow-hidden bg-gray-200 flex-shrink-0">
                     <img

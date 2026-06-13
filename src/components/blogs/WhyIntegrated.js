@@ -78,7 +78,7 @@ const SecurityServicesBlog = () => {
     );
     updateMeta(
       "og:url",
-      "https://acuitygroups.com/blogs/security-services",
+      "https://acuitygroups.in/blogs/security-services",
       true,
     );
     updateMeta("og:type", "article", true);
@@ -103,7 +103,7 @@ const SecurityServicesBlog = () => {
       canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://acuitygroups.com/blogs/security-services";
+    canonical.href = "https://acuitygroups.in/blogs/security-services";
 
     // Structured Data: Article + FAQ + Breadcrumb
     const articleData = {
@@ -125,7 +125,7 @@ const SecurityServicesBlog = () => {
       },
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": "https://acuitygroups.com/blogs/security-services",
+        "@id": "https://acuitygroups.in/blogs/security-services",
       },
     };
 
@@ -174,13 +174,13 @@ const SecurityServicesBlog = () => {
           "@type": "ListItem",
           position: 2,
           name: "Blogs",
-          item: "https://acuitygroups.com/blogs/allblogs",
+          item: "https://acuitygroups.in/blogs/allblogs",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Security Services",
-          item: "https://acuitygroups.com/blogs/security-services",
+          item: "https://acuitygroups.in/blogs/security-services",
         },
       ],
     };
@@ -214,7 +214,7 @@ const SecurityServicesBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.com/blogs/security-services",
+    "https://acuitygroups.in/blogs/security-services",
   );
   const shareTitle = encodeURIComponent(
     "Why Every Business Needs Professional Security Services | Acuity Groups",

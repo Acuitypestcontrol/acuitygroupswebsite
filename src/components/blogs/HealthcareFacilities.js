@@ -83,7 +83,7 @@ const HealthcareFacilityManagementBlog = () => {
     );
     updateMeta(
       "og:url",
-      "https://acuitygroups.com/blogs/healthcare-facility-management",
+      "https://acuitygroups.in/blogs/healthcare-facility-management",
       true,
     );
     updateMeta("og:type", "article", true);
@@ -109,7 +109,7 @@ const HealthcareFacilityManagementBlog = () => {
       document.head.appendChild(canonical);
     }
     canonical.href =
-      "https://acuitygroups.com/blogs/healthcare-facility-management";
+      "https://acuitygroups.in/blogs/healthcare-facility-management";
 
     // Structured Data: Article + FAQ + Breadcrumb
     const articleData = {
@@ -133,7 +133,7 @@ const HealthcareFacilityManagementBlog = () => {
       },
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": "https://acuitygroups.com/blogs/healthcare-facility-management",
+        "@id": "https://acuitygroups.in/blogs/healthcare-facility-management",
       },
     };
 
@@ -182,13 +182,13 @@ const HealthcareFacilityManagementBlog = () => {
           "@type": "ListItem",
           position: 2,
           name: "Blogs",
-          item: "https://acuitygroups.com/blogs/allblogs",
+          item: "https://acuitygroups.in/blogs/allblogs",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Healthcare Facility Management",
-          item: "https://acuitygroups.com/blogs/healthcare-facility-management",
+          item: "https://acuitygroups.in/blogs/healthcare-facility-management",
         },
       ],
     };
@@ -222,7 +222,7 @@ const HealthcareFacilityManagementBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.com/blogs/healthcare-facility-management",
+    "https://acuitygroups.in/blogs/healthcare-facility-management",
   );
   const shareTitle = encodeURIComponent(
     "The Importance of Facility Management in Healthcare Facilities | Acuity Groups",

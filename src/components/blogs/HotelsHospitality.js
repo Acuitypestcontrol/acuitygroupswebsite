@@ -79,7 +79,7 @@ const HotelFacilityManagementBlog = () => {
     );
     updateMeta(
       "og:url",
-      "https://acuitygroups.com/blogs/hotel-facility-management",
+      "https://acuitygroups.in/blogs/hotel-facility-management",
       true,
     );
     updateMeta("og:type", "article", true);
@@ -104,7 +104,7 @@ const HotelFacilityManagementBlog = () => {
       canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
-    canonical.href = "https://acuitygroups.com/blogs/hotel-facility-management";
+    canonical.href = "https://acuitygroups.in/blogs/hotel-facility-management";
 
     // Structured Data: Article + FAQ + Breadcrumb
     const articleData = {
@@ -126,7 +126,7 @@ const HotelFacilityManagementBlog = () => {
       },
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": "https://acuitygroups.com/blogs/hotel-facility-management",
+        "@id": "https://acuitygroups.in/blogs/hotel-facility-management",
       },
     };
 
@@ -175,13 +175,13 @@ const HotelFacilityManagementBlog = () => {
           "@type": "ListItem",
           position: 2,
           name: "Blogs",
-          item: "https://acuitygroups.com/blogs/allblogs",
+          item: "https://acuitygroups.in/blogs/allblogs",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Hotel Facility Management",
-          item: "https://acuitygroups.com/blogs/hotel-facility-management",
+          item: "https://acuitygroups.in/blogs/hotel-facility-management",
         },
       ],
     };
@@ -215,7 +215,7 @@ const HotelFacilityManagementBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.com/blogs/hotel-facility-management",
+    "https://acuitygroups.in/blogs/hotel-facility-management",
   );
   const shareTitle = encodeURIComponent(
     "Why Hotels Need Professional Facility Management Services | Acuity Groups",
