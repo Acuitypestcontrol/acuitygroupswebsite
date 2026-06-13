@@ -7,6 +7,7 @@ import FacilityManagement1 from "../../images/facilitymangmentjpg.jpg";
 import Pestcontrol from "../../images/pestcontrol.jpg";
 import MAnpowerout from "../../images/manpowerout.webp";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
   Shield,
   Zap,
@@ -227,6 +228,16 @@ export default function Homepage() {
   ];
   return (
     <div className="bg-white text-black overflow-hidden font-['Poppins',system-ui,sans-serif]">
+      <Helmet>
+        <link rel="canonical" href="https://acuitygroups.in/" />
+        <title>
+          Acuity Groups | Facility Management & Security Services in Bangalore
+        </title>
+        <meta
+          name="description"
+          content="Acuity Groups Bangalore: Security, housekeeping, pest control, manpower, electrical maintenance for residential, commercial & industrial properties."
+        />
+      </Helmet>
       {/* HERO SECTION */}
       <section className="relative w-full h-screen overflow-hidden">
         {banners.map((banner, index) => (

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Ourservices from "../images/oursevices.jpg";
+import { Helmet } from "react-helmet-async";
 import {
   Building,
   Shield,
@@ -75,6 +76,19 @@ const Services = () => {
 
   return (
     <div className="bg-gradient-to-br from-gray-50 to-white">
+      <Helmet>
+        <title>Our Services in Bangalore| Acuity Groups</title>
+        <meta
+          name="description"
+          content="Elevate your property operations with Acuity Groups. Premium facility management, security, pest control, housekeeping, and staffing solutions in Bangalore."
+        />
+        <meta
+          name="keywords"
+          content="facility management, security services, housekeeping, pest control, manpower outsourcing, Bangalore services"
+        />
+        <link rel="canonical" href="https://acuitygroups.in/services" />
+      </Helmet>
+
       {/* Hero Section with Image Banner */}
       <section className="relative h-[500px] md:h-[900px] overflow-hidden">
         {/* Replace the src with your own image path */}

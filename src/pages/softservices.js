@@ -1,17 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Ss from "../images/softservices.jpg"
-import {
-  Sparkles,
-  Building,
-  Users,
-  Droplets,
-  Wrench,
-  CheckCircle,
-  Phone,
-  Mail,
-  MapPin,
-} from "lucide-react";
+import Ss from "../images/softservices.jpg";
+import { Sparkles, Building, Droplets, CheckCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const SoftServices = () => {
   const services = [
@@ -60,12 +51,27 @@ const SoftServices = () => {
 
   return (
     <div className="bg-white text-gray-800 overflow-hidden font-['Poppins',system-ui,sans-serif]">
+      {/* SEO META TAGS */}
+      <Helmet>
+        <title>
+          Soft Services | Housekeeping & Cleaning Solutions | Acuity Groups
+        </title>
+        <meta
+          name="description"
+          content="Ensure a pristine workspace with Acuity Groups. Premium housekeeping, commercial deep cleaning, and certified washroom hygiene services across India."
+        />
+        <meta
+          name="keywords"
+          content="soft services, housekeeping services, corporate cleaning, deep cleaning, washroom hygiene, facility management Bangalore"
+        />
+        <link rel="canonical" href="https://acuitygroups.in/soft-services" />
+      </Helmet>
       {/* HERO SECTION */}
       <section className="relative h-[500px] flex items-center justify-center text-white overflow-hidden">
         {/* BACKGROUND IMAGE */}
         <div className="absolute inset-0">
           <img
-            src= {Ss}
+            src={Ss}
             alt="Soft Services Banner"
             className="w-full h-full object-cover"
           />
