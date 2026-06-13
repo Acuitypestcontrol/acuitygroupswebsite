@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Ourservices from "../images/oursevices.jpg"
+import Ourservices from "../images/oursevices.jpg";
 import {
   Building,
   Shield,
@@ -16,45 +16,51 @@ const Services = () => {
   const services = [
     {
       title: "Facility Management",
-      description: "Comprehensive management of your commercial or residential property, including maintenance, cleaning, and operations.",
+      description:
+        "Comprehensive management of your commercial or residential property, including maintenance, cleaning, and operations.",
       icon: Building,
       color: "blue",
-      link: "/services/facility-management",
+      link: "/facilitymanagment1",
     },
     {
       title: "Security Services",
-      description: "Trained security personnel, CCTV surveillance, access control, and 24/7 emergency response.",
+      description:
+        "Trained security personnel, CCTV surveillance, access control, and 24/7 emergency response.",
       icon: Shield,
       color: "red",
-      link: "/services/security",
+      link: "/securityservice",
     },
     {
       title: "Housekeeping Services",
-      description: "Professional cleaning, sanitization, and upkeep for offices, hotels, hospitals, and residential complexes.",
+      description:
+        "Professional cleaning, sanitization, and upkeep for offices, hotels, hospitals, and residential complexes.",
       icon: Sparkles,
       color: "green",
-      link: "/services/housekeeping",
+      link: "/housekeeping",
     },
     {
       title: "Pest Management",
-      description: "Eco‑friendly pest control solutions for termites, rodents, cockroaches, and other pests.",
+      description:
+        "Eco‑friendly pest control solutions for termites, rodents, cockroaches, and other pests.",
       icon: Bug,
       color: "orange",
-      link: "/services/pest-control",
+      link: "/pest",
     },
     {
       title: "Manpower Outsourcing",
-      description: "Skilled and unskilled workforce solutions for staffing, temporary roles, and project‑based needs.",
+      description:
+        "Skilled and unskilled workforce solutions for staffing, temporary roles, and project‑based needs.",
       icon: Users,
       color: "purple",
-      link: "/services/manpower",
+      link: "/manpower",
     },
     {
       title: "Preventive Maintenance",
-      description: "Scheduled inspections and repairs to keep your equipment and infrastructure running smoothly.",
+      description:
+        "Scheduled inspections and repairs to keep your equipment and infrastructure running smoothly.",
       icon: Wrench,
       color: "teal",
-      link: "/services/maintenance",
+      link: "/repair",
     },
   ];
 
@@ -84,7 +90,8 @@ const Services = () => {
             Our Services
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-100 mt-4">
-            We provide end‑to‑end facility management and support services tailored to your business needs.
+            We provide end‑to‑end facility management and support services
+            tailored to your business needs.
           </p>
         </div>
       </section>
@@ -168,7 +175,8 @@ const Services = () => {
             Ready to Optimize Your Facility?
           </h2>
           <p className="text-blue-100 text-lg mb-8">
-            Contact us today for a free consultation and customized service plan.
+            Contact us today for a free consultation and customized service
+            plan.
           </p>
           <Link
             to="/contactus"
