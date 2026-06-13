@@ -10,7 +10,6 @@ import FromFunctiontoFeeling from "../../images/fff1.jpg";
 import TheImportanceFacilities from "../../images/The Importance of Facilities1.jpg";
 import Learnhow from "../../images/Learnhow.png";
 import UnleashDesigne from "../../images/UnleashDesigne.jpg";
-import Discover from "../../images/Discover1.jpg";
 import Security from "../../images/security.png";
 import Security1 from "../../images/home1.jpg";
 import RepairingMaintenance from "../../images/RepairingMaintenance.jpg";
@@ -163,11 +162,6 @@ const popularTopics = [
     name: "Healthcare Facility Management",
     link: "/blogs/ImportanceofFacility",
   },
-  { name: "Hotel Facility Management", link: "/blogs/HotelsHospitality" },
-  {
-    name: "School & College Facility Management",
-    link: "/blogs/EducationIndustry",
-  },
   {
     name: "Professional Housekeeping Services",
     link: "/blogs/HousekeepingServices",
@@ -178,7 +172,7 @@ const popularTopics = [
   { name: "Preventive Maintenance", link: "/blogs/RepairingMaintenance" },
   {
     name: "Integrated Facility Management",
-    link: "/blogs/facilityManagements",
+    link: "/blogs/facilitymanagment",
   },
 ];
 

@@ -534,7 +534,7 @@ const ManufacturingFacilityManagementBlog = () => {
                   <div className="w-12 h-12 rounded-md overflow-hidden bg-gray-200 flex-shrink-0">
                     <img src={Industries} alt="thumb" className="w-full h-full object-cover" />
                   </div>
-                  <Link to="/blogs/professional-housekeeping" className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1">
+                  <Link to="/blogs/HousekeepingServices" className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1">
                     Professional Housekeeping Services
                   </Link>
                 </li>

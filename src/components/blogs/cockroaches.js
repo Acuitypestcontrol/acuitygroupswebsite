@@ -206,7 +206,7 @@ const CockroachInfestation = () => {
 
   // Related blogs for internal linking (SEO)
   const relatedBlogs = [
-    { title: "Complete Termite Control Guide for Homes", link: "/blogs/termite" },
+    
     { title: "Mosquito Prevention Tips for Healthy Living", link: "/blogs/mosquito" },
     { title: "Why Regular Pest Control Is Essential for Businesses", link: "/blogs/WhyRegularPest" },
   ];

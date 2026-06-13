@@ -192,7 +192,7 @@ const EducationFacilityManagementBlog = () => {
   const relatedBlogs = [
     { title: "Facility Management in Manufacturing Excellence", link: "/blogs/ManufacturingIndustry" },
     { title: "Importance of Facility Management in Healthcare", link: "/blogs/ImportanceofFacility" },
-    { title: "Why Hotels Need Professional Facility Management", link: "/blogs/HotelsHospitality" },
+    
   ];
 
   // Key statistics
