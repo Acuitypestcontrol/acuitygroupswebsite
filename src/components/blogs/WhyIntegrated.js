@@ -170,8 +170,14 @@ const SecurityServicesBlog = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://acuitygroups.in/blogs/security-services" />
-        <title>Why Every Business Needs Professional Security Services | Acuity Groups</title>
+        <link
+          rel="canonical"
+          href="https://acuitygroups.in/blogs/security-services"
+        />
+        <title>
+          Why Every Business Needs Professional Security Services | Acuity
+          Groups
+        </title>
         <meta
           name="description"
           content="Boost customer confidence and workplace safety. Learn how professional business security services and smart access control solutions from Acuity Groups mitigate risk."
@@ -185,7 +191,10 @@ const SecurityServicesBlog = () => {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://acuitygroups.in/blogs/security-services" />
+        <meta
+          property="og:url"
+          content="https://acuitygroups.in/blogs/security-services"
+        />
         <meta
           property="og:title"
           content="Why Every Business Needs Professional Security Services | Acuity Groups"
@@ -217,9 +226,18 @@ const SecurityServicesBlog = () => {
       </Helmet>
 
       {/* Structured Data (JSON-LD) */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+      />
 
       <div className="bg-gradient-to-br from-red-50 via-white to-gray-50 text-gray-800 font-sans relative">
         {/* Scroll to top button */}
@@ -391,17 +409,17 @@ const SecurityServicesBlog = () => {
               <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
                 <p className="text-xl text-gray-700 leading-relaxed border-l-4 border-red-500 pl-5 italic">
                   Security is one of the most important aspects of any business.
-                  Whether you operate an office, retail store, hotel, hospital, or
-                  industrial facility, professional security services help protect
-                  people, assets, and operations from potential risks.
+                  Whether you operate an office, retail store, hotel, hospital,
+                  or industrial facility, professional security services help
+                  protect people, assets, and operations from potential risks.
                 </p>
               </div>
 
               {/* Protecting People and Property */}
               <div id="protecting" className="scroll-mt-24">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-                  <Shield size={28} className="text-red-500" /> Protecting People
-                  and Property
+                  <Shield size={28} className="text-red-500" /> Protecting
+                  People and Property
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
                   Trained security personnel provide a visible deterrent against
@@ -493,9 +511,9 @@ const SecurityServicesBlog = () => {
                 </h2>
                 <p className="text-gray-700 leading-relaxed">
                   Modern security services include surveillance monitoring,
-                  visitor management, emergency preparedness, incident reporting,
-                  and access control systems. These solutions work together to
-                  provide complete protection for businesses.
+                  visitor management, emergency preparedness, incident
+                  reporting, and access control systems. These solutions work
+                  together to provide complete protection for businesses.
                 </p>
               </div>
 
@@ -518,10 +536,10 @@ const SecurityServicesBlog = () => {
                   💡 Did You Know?
                 </h3>
                 <p className="text-gray-700">
-                  Businesses with visible security personnel experience up to 60%
-                  fewer theft incidents and 40% faster emergency response times.
-                  Professional security isn't just protection—it's a business
-                  asset.
+                  Businesses with visible security personnel experience up to
+                  60% fewer theft incidents and 40% faster emergency response
+                  times. Professional security isn't just protection—it's a
+                  business asset.
                 </p>
               </div>
 
@@ -531,8 +549,8 @@ const SecurityServicesBlog = () => {
                 className="bg-gradient-to-br from-red-600 to-red-800 text-white p-8 rounded-2xl shadow-xl scroll-mt-24"
               >
                 <h2 className="text-3xl font-bold mb-4 flex items-center gap-2">
-                  <Sparkles size={28} className="text-white" /> Why Choose Acuity
-                  Groups?
+                  <Sparkles size={28} className="text-white" /> Why Choose
+                  Acuity Groups?
                 </h2>
                 <p className="text-red-100 leading-relaxed text-lg mb-6">
                   Acuity Groups provides trained and professional security
@@ -566,8 +584,9 @@ const SecurityServicesBlog = () => {
                   Professional security services are essential for protecting
                   businesses, employees, customers, and assets. Investing in
                   reliable security solutions helps create a safe environment,
-                  reduces risks, and supports long-term business success. Partner
-                  with Acuity Groups to build a robust security framework.
+                  reduces risks, and supports long-term business success.
+                  Partner with Acuity Groups to build a robust security
+                  framework.
                 </p>
               </div>
 
@@ -594,7 +613,9 @@ const SecurityServicesBlog = () => {
                   />
                 </div>
                 <h3 className="font-bold text-xl">Acuity Security Team</h3>
-                <p className="text-gray-500 text-sm mt-1">Security Specialists</p>
+                <p className="text-gray-500 text-sm mt-1">
+                  Security Specialists
+                </p>
                 <p className="text-gray-600 text-sm mt-3">
                   15+ years in corporate and industrial security.
                 </p>

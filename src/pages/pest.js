@@ -129,9 +129,7 @@ const PestManagement = () => {
     <>
       <Helmet>
         <link rel="canonical" href="https://acuitygroups.in/pest" />
-        <title>
-         Commercial & Home Pest Control | Acuity Groups Bangalore
-        </title>
+        <title>Commercial & Home Pest Control | Acuity Groups Bangalore</title>
         <meta
           name="description"
           content="Struggling with pests? We offer professional, safe treatments for cockroaches, bed bugs, termites, and rodents. Secure your inspection now."

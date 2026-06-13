@@ -111,8 +111,13 @@ const CockroachInfestation = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://acuitygroups.in/blogs/cockroachinfestation" />
-        <title>How to Identify Cockroach Infestation at Home | Acuity Groups</title>
+        <link
+          rel="canonical"
+          href="https://acuitygroups.in/blogs/cockroachinfestation"
+        />
+        <title>
+          How to Identify Cockroach Infestation at Home | Acuity Groups
+        </title>
         <meta
           name="description"
           content="Spot the early signs of cockroaches & protect your health. Learn easy DIY prevention tips or get expert pest control in Bangalore from Acuity Groups."
@@ -125,29 +130,53 @@ const CockroachInfestation = () => {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://acuitygroups.in/blogs/cockroach-infestation" />
-        <meta property="og:title" content="How to Identify Cockroach Infestation at Home | Acuity Groups" />
+        <meta
+          property="og:url"
+          content="https://acuitygroups.in/blogs/cockroach-infestation"
+        />
+        <meta
+          property="og:title"
+          content="How to Identify Cockroach Infestation at Home | Acuity Groups"
+        />
         <meta
           property="og:description"
           content="Learn early signs of cockroach infestation (droppings, egg casings, odour, live roaches) and prevent health risks. Effective DIY tips and professional pest control solutions from Acuity Groups."
         />
-        <meta property="og:image" content="https://acuitygroups.in/static/media/cockroach.jpg" />
+        <meta
+          property="og:image"
+          content="https://acuitygroups.in/static/media/cockroach.jpg"
+        />
         <meta property="og:site_name" content="Acuity Groups" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://acuitygroups.in/blogs/cockroach-infestation" />
-        <meta name="twitter:title" content="How to Identify Cockroach Infestation at Home | Acuity Groups" />
+        <meta
+          name="twitter:url"
+          content="https://acuitygroups.in/blogs/cockroach-infestation"
+        />
+        <meta
+          name="twitter:title"
+          content="How to Identify Cockroach Infestation at Home | Acuity Groups"
+        />
         <meta
           name="twitter:description"
           content="Learn early signs of cockroach infestation (droppings, egg casings, odour, live roaches) and prevent health risks. Effective DIY tips and professional pest control solutions from Acuity Groups."
         />
-        <meta name="twitter:image" content="https://acuitygroups.in/static/media/cockroach.jpg" />
+        <meta
+          name="twitter:image"
+          content="https://acuitygroups.in/static/media/cockroach.jpg"
+        />
       </Helmet>
 
       {/* Structured Data (JSON-LD) – injected once via script tags */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
+      />
 
       <div className="bg-gradient-to-br from-gray-50 to-white text-gray-800 font-sans">
         {/* Hero Section with Parallax Effect */}
@@ -215,7 +244,9 @@ const CockroachInfestation = () => {
                 </Link>
               </li>
               <li className="text-gray-400">/</li>
-              <li className="text-gray-700 font-medium">Cockroach Infestation</li>
+              <li className="text-gray-700 font-medium">
+                Cockroach Infestation
+              </li>
             </ol>
           </nav>
 
@@ -227,8 +258,8 @@ const CockroachInfestation = () => {
                 <p className="text-xl text-gray-700 leading-relaxed">
                   Cockroaches are one of the most common household pests. They
                   carry bacteria and allergens that can trigger asthma and other
-                  health issues. Identifying an infestation early is key to quick
-                  elimination. Here's what you need to know.
+                  health issues. Identifying an infestation early is key to
+                  quick elimination. Here's what you need to know.
                 </p>
               </div>
 
@@ -271,7 +302,9 @@ const CockroachInfestation = () => {
                     >
                       <div className="text-3xl">{sign.icon}</div>
                       <div>
-                        <h3 className="font-bold text-gray-800">{sign.title}</h3>
+                        <h3 className="font-bold text-gray-800">
+                          {sign.title}
+                        </h3>
                         <p className="text-gray-600 text-sm">{sign.desc}</p>
                       </div>
                     </div>
@@ -286,10 +319,12 @@ const CockroachInfestation = () => {
                 </h2>
                 <ul className="grid md:grid-cols-2 gap-3 list-disc pl-5 text-gray-700">
                   <li>
-                    Spread bacteria like Salmonella and E. coli (food poisoning).
+                    Spread bacteria like Salmonella and E. coli (food
+                    poisoning).
                   </li>
                   <li>
-                    Trigger allergies and asthma (droppings, saliva, shed skins).
+                    Trigger allergies and asthma (droppings, saliva, shed
+                    skins).
                   </li>
                   <li>Contaminate food and kitchen surfaces.</li>
                   <li>Can cause skin rashes and respiratory infections.</li>

@@ -128,9 +128,7 @@ const ManpowerOutsourcing = () => {
     <>
       <Helmet>
         <link rel="canonical" href="https://acuitygroups.in/manpower" />
-        <title>
-       Staffing & Manpower Solutions | Acuity Groups Bangalore
-        </title>
+        <title>Staffing & Manpower Solutions | Acuity Groups Bangalore</title>
         <meta
           name="description"
           content="Access a trained, verified workforce in Bangalore. Reliable manpower outsourcing for industrial, security, construction, and staffing needs with flexible plans."

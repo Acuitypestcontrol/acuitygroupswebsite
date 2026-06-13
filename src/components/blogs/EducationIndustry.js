@@ -124,8 +124,14 @@ const EducationFacilityManagementBlog = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://acuitygroups.in/blogs/EducationIndustry" />
-        <title>Why Schools & Colleges Need Professional Facility Management | Acuity Groups</title>
+        <link
+          rel="canonical"
+          href="https://acuitygroups.in/blogs/EducationIndustry"
+        />
+        <title>
+          Why Schools & Colleges Need Professional Facility Management | Acuity
+          Groups
+        </title>
         <meta
           name="description"
           content="Elevate your school or college with professional facility management. Discover trusted campus security, housekeeping, and maintenance by Acuity Groups."
@@ -138,7 +144,10 @@ const EducationFacilityManagementBlog = () => {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://acuitygroups.in/blogs/EducationIndustry" />
+        <meta
+          property="og:url"
+          content="https://acuitygroups.in/blogs/EducationIndustry"
+        />
         <meta
           property="og:title"
           content="Why Schools & Colleges Need Professional Facility Management | Acuity Groups"
@@ -147,12 +156,18 @@ const EducationFacilityManagementBlog = () => {
           property="og:description"
           content="Discover how professional facility management helps schools & colleges create safe, clean, and productive learning environments. Campus security, housekeeping, maintenance & more from Acuity Groups."
         />
-        <meta property="og:image" content="https://acuitygroups.in/static/media/school1.jpg" />
+        <meta
+          property="og:image"
+          content="https://acuitygroups.in/static/media/school1.jpg"
+        />
         <meta property="og:site_name" content="Acuity Groups" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://acuitygroups.in/blogs/EducationIndustry" />
+        <meta
+          name="twitter:url"
+          content="https://acuitygroups.in/blogs/EducationIndustry"
+        />
         <meta
           name="twitter:title"
           content="Why Schools & Colleges Need Professional Facility Management | Acuity Groups"
@@ -161,12 +176,21 @@ const EducationFacilityManagementBlog = () => {
           name="twitter:description"
           content="Discover how professional facility management helps schools & colleges create safe, clean, and productive learning environments. Campus security, housekeeping, maintenance & more from Acuity Groups."
         />
-        <meta name="twitter:image" content="https://acuitygroups.in/static/media/school1.jpg" />
+        <meta
+          name="twitter:image"
+          content="https://acuitygroups.in/static/media/school1.jpg"
+        />
       </Helmet>
 
       {/* Structured Data (JSON-LD) */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
+      />
 
       <div className="bg-gradient-to-br from-gray-50 to-white text-gray-800 font-sans">
         {/* Hero Section with School1 image */}
@@ -258,8 +282,8 @@ const EducationFacilityManagementBlog = () => {
               <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
                 <p className="text-xl text-gray-700 leading-relaxed">
                   Educational institutions are responsible for providing a safe,
-                  healthy, and productive environment for students, teachers, and
-                  staff. Professional facility management helps schools and
+                  healthy, and productive environment for students, teachers,
+                  and staff. Professional facility management helps schools and
                   colleges maintain high standards while focusing on education.
                 </p>
               </div>
@@ -329,10 +353,10 @@ const EducationFacilityManagementBlog = () => {
                   🎯 Supporting Student Success
                 </h2>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Students learn better in environments that are clean, organized,
-                  and comfortable. Facility management contributes to improved
-                  concentration, reduced absenteeism, and better academic
-                  outcomes.
+                  Students learn better in environments that are clean,
+                  organized, and comfortable. Facility management contributes to
+                  improved concentration, reduced absenteeism, and better
+                  academic outcomes.
                 </p>
                 <div className="grid grid-cols-2 gap-3">
                   <div className="flex items-center gap-2">
@@ -490,7 +514,8 @@ const EducationFacilityManagementBlog = () => {
                   Need Facility Management?
                 </h3>
                 <p className="text-gray-600 text-sm mb-4">
-                  Customized plans for security, housekeeping, maintenance & more.
+                  Customized plans for security, housekeeping, maintenance &
+                  more.
                 </p>
                 <Link
                   to="/contactus"

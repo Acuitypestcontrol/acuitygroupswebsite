@@ -179,9 +179,7 @@ const ProfessionalHousekeepingBlog = () => {
           rel="canonical"
           href="https://acuitygroups.in/blogs/professional-housekeeping"
         />
-        <title>
-        Why Commercial Housekeeping Matters | Acuity Groups
-        </title>
+        <title>Why Commercial Housekeeping Matters | Acuity Groups</title>
         <meta
           name="description"
           content="Discover how professional housekeeping services enhance hygiene, safety, productivity, and customer experience in offices, hotels, hospitals, and more. Expert insights from Acuity Groups."
