@@ -90,13 +90,13 @@ const RepairMaintenance = () => {
     name: "Repairing & Maintenance Services | Electrical & Plumbing Solutions",
     description:
       "Professional repair and maintenance services including electrical, plumbing, carpentry, and building maintenance for residential and commercial properties.",
-    url: "https://acuitygroups.in/repair",
+    url: "https://www.acuitygroups.in/repair",
     publisher: {
       "@type": "Organization",
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
   };
@@ -104,7 +104,7 @@ const RepairMaintenance = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://acuitygroups.in/repair" />
+        <link rel="canonical" href="https://www.acuitygroups.in/repair" />
         <title>Property Repair & Maintenance | Acuity Groups Bangalore</title>
         <meta
           name="description"
@@ -119,7 +119,7 @@ const RepairMaintenance = () => {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://acuitygroups.in/repair" />
+        <meta property="og:url" content="https://www.acuitygroups.in/repair" />
         <meta
           property="og:title"
           content="Repairing & Maintenance Services | Electrical & Plumbing Solutions | Acuity Groups"
@@ -130,7 +130,7 @@ const RepairMaintenance = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/RepairingMaintenance.jpg"
+          content="https://www.acuitygroups.in/static/media/RepairingMaintenance.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -146,7 +146,7 @@ const RepairMaintenance = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/RepairingMaintenance.jpg"
+          content="https://www.acuitygroups.in/static/media/RepairingMaintenance.jpg"
         />
       </Helmet>
 

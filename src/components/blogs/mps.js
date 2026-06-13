@@ -51,7 +51,7 @@ const ManpowerOutsourcingBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.in/blogs/manpower-outsourcing",
+    "https://www.acuitygroups.in/blogs/manpower-outsourcing",
   );
   const shareTitle = encodeURIComponent(
     "Benefits of Manpower Outsourcing for Growing Businesses | Acuity Groups",
@@ -71,7 +71,7 @@ const ManpowerOutsourcingBlog = () => {
     headline: "Benefits of Manpower Outsourcing for Growing Businesses",
     description:
       "Scale your workforce seamlessly while managing compliance and reducing costs. Explore expert manpower outsourcing and staffing insights from Acuity Groups.",
-    image: "https://acuitygroups.in/static/media/manpower%20(3).jpg",
+    image: "https://www.acuitygroups.in/static/media/manpower%20(3).jpg",
     datePublished: "2025-06-01",
     dateModified: "2025-06-01",
     author: { "@type": "Organization", name: "Acuity Groups" },
@@ -80,12 +80,12 @@ const ManpowerOutsourcingBlog = () => {
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://acuitygroups.in/blogs/manpower-outsourcing",
+      "@id": "https://www.acuitygroups.in/blogs/manpower-outsourcing",
     },
   };
 
@@ -128,19 +128,19 @@ const ManpowerOutsourcingBlog = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://acuitygroups.in/",
+        item: "https://www.acuitygroups.in/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs/allblogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Manpower Outsourcing",
-        item: "https://acuitygroups.in/blogs/manpower-outsourcing",
+        item: "https://www.acuitygroups.in/blogs/manpower-outsourcing",
       },
     ],
   };
@@ -173,7 +173,7 @@ const ManpowerOutsourcingBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://acuitygroups.in/blogs/manpower-outsourcing"
+          href="https://www.acuitygroups.in/blogs/manpower-outsourcing"
         />
         <title>
           Benefits of Manpower Outsourcing for Growing Businesses | Acuity
@@ -194,7 +194,7 @@ const ManpowerOutsourcingBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/blogs/manpower-outsourcing"
+          content="https://www.acuitygroups.in/blogs/manpower-outsourcing"
         />
         <meta
           property="og:title"
@@ -206,7 +206,7 @@ const ManpowerOutsourcingBlog = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/manpower%20(3).jpg"
+          content="https://www.acuitygroups.in/static/media/manpower%20(3).jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -222,7 +222,7 @@ const ManpowerOutsourcingBlog = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/manpower%20(3).jpg"
+          content="https://www.acuitygroups.in/static/media/manpower%20(3).jpg"
         />
       </Helmet>
 

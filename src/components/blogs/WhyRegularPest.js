@@ -51,7 +51,7 @@ const PestManagementBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.in/blogs/pest-management",
+    "https://www.acuitygroups.in/blogs/pest-management",
   );
   const shareTitle = encodeURIComponent(
     "Why Regular Pest Control Is Essential for Businesses | Acuity Groups",
@@ -71,7 +71,7 @@ const PestManagementBlog = () => {
     headline: "Why Regular Pest Control Is Essential for Businesses",
     description:
       "Protect your business from rodents, termites, and other pests. Learn why regular pest management is vital for health, property, compliance, and brand reputation.",
-    image: "https://acuitygroups.in/static/media/ppp.jpg",
+    image: "https://www.acuitygroups.in/static/media/ppp.jpg",
     datePublished: "2025-06-01",
     dateModified: "2025-06-01",
     author: { "@type": "Organization", name: "Acuity Groups" },
@@ -80,12 +80,12 @@ const PestManagementBlog = () => {
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://acuitygroups.in/blogs/pest-management",
+      "@id": "https://www.acuitygroups.in/blogs/pest-management",
     },
   };
 
@@ -128,19 +128,19 @@ const PestManagementBlog = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://acuitygroups.in/",
+        item: "https://www.acuitygroups.in/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs/allblogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Pest Management",
-        item: "https://acuitygroups.in/blogs/pest-management",
+        item: "https://www.acuitygroups.in/blogs/pest-management",
       },
     ],
   };
@@ -173,7 +173,7 @@ const PestManagementBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://acuitygroups.in/blogs/pest-management"
+          href="https://www.acuitygroups.in/blogs/pest-management"
         />
         <title>
           Why Regular Pest Control Is Essential for Businesses | Acuity Groups
@@ -193,7 +193,7 @@ const PestManagementBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/blogs/pest-management"
+          content="https://www.acuitygroups.in/blogs/pest-management"
         />
         <meta
           property="og:title"
@@ -205,7 +205,7 @@ const PestManagementBlog = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/ppp.jpg"
+          content="https://www.acuitygroups.in/static/media/ppp.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -221,7 +221,7 @@ const PestManagementBlog = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/ppp.jpg"
+          content="https://www.acuitygroups.in/static/media/ppp.jpg"
         />
       </Helmet>
 

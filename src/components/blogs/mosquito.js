@@ -48,7 +48,7 @@ const MosquitoPrevention = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.in/blogs/mosquito-prevention",
+    "https://www.acuitygroups.in/blogs/mosquito-prevention",
   );
   const shareTitle = encodeURIComponent(
     "Mosquito Prevention Tips for a Healthier Home | Acuity Groups",
@@ -70,7 +70,7 @@ const MosquitoPrevention = () => {
     headline: "Mosquito Prevention Tips for a Healthier Home",
     description:
       "Keep mosquitoes away! Discover easy ways to destroy breeding sites, use effective repellents, and know when to call professional pest control services.",
-    image: "https://acuitygroups.in/static/media/mosquito.jpg",
+    image: "https://www.acuitygroups.in/static/media/mosquito.jpg",
     datePublished: "2025-03-05",
     dateModified: "2025-06-01",
     author: { "@type": "Organization", name: "Acuity Groups" },
@@ -79,12 +79,12 @@ const MosquitoPrevention = () => {
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://acuitygroups.in/blogs/mosquito-prevention",
+      "@id": "https://www.acuitygroups.in/blogs/mosquito-prevention",
     },
   };
 
@@ -127,19 +127,19 @@ const MosquitoPrevention = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://acuitygroups.in/",
+        item: "https://www.acuitygroups.in/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs/allblogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Mosquito Prevention",
-        item: "https://acuitygroups.in/blogs/mosquito-prevention",
+        item: "https://www.acuitygroups.in/blogs/mosquito-prevention",
       },
     ],
   };
@@ -172,7 +172,7 @@ const MosquitoPrevention = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://acuitygroups.in/blogs/mosquito-prevention"
+          href="https://www.acuitygroups.in/blogs/mosquito-prevention"
         />
         <title>
           Mosquito Prevention Tips for a Healthier Home | Acuity Groups
@@ -192,7 +192,7 @@ const MosquitoPrevention = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/blogs/mosquito-prevention"
+          content="https://www.acuitygroups.in/blogs/mosquito-prevention"
         />
         <meta
           property="og:title"
@@ -204,7 +204,7 @@ const MosquitoPrevention = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/mosquito.jpg"
+          content="https://www.acuitygroups.in/static/media/mosquito.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -220,7 +220,7 @@ const MosquitoPrevention = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/mosquito.jpg"
+          content="https://www.acuitygroups.in/static/media/mosquito.jpg"
         />
       </Helmet>
 

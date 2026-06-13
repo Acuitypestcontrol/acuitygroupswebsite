@@ -52,7 +52,7 @@ const ManufacturingFacilityManagementBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.in/blogs/manufacturing-facility-management",
+    "https://www.acuitygroups.in/blogs/manufacturing-facility-management",
   );
   const shareTitle = encodeURIComponent(
     "The Role of Facility Management in Manufacturing Excellence | Acuity Groups",
@@ -72,7 +72,7 @@ const ManufacturingFacilityManagementBlog = () => {
     headline: "The Role of Facility Management in Manufacturing Excellence",
     description:
       "Enhance equipment reliability, safety, and compliance in your factory. Explore expert manufacturing facility management solutions from Acuity Groups.",
-    image: "https://acuitygroups.in/static/media/IndustrialFacility.jpg",
+    image: "https://www.acuitygroups.in/static/media/IndustrialFacility.jpg",
     datePublished: "2025-06-01",
     dateModified: "2025-06-01",
     author: { "@type": "Organization", name: "Acuity Groups" },
@@ -81,12 +81,13 @@ const ManufacturingFacilityManagementBlog = () => {
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://acuitygroups.in/blogs/manufacturing-facility-management",
+      "@id":
+        "https://www.acuitygroups.in/blogs/manufacturing-facility-management",
     },
   };
 
@@ -129,19 +130,19 @@ const ManufacturingFacilityManagementBlog = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://acuitygroups.in/",
+        item: "https://www.acuitygroups.in/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs/allblogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Manufacturing Facility Management",
-        item: "https://acuitygroups.in/blogs/manufacturing-facility-management",
+        item: "https://www.acuitygroups.in/blogs/manufacturing-facility-management",
       },
     ],
   };
@@ -174,7 +175,7 @@ const ManufacturingFacilityManagementBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://acuitygroups.in/blogs/manufacturing-facility-management"
+          href="https://www.acuitygroups.in/blogs/manufacturing-facility-management"
         />
         <title>
           The Role of Facility Management in Manufacturing Excellence | Acuity
@@ -195,7 +196,7 @@ const ManufacturingFacilityManagementBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/blogs/manufacturing-facility-management"
+          content="https://www.acuitygroups.in/blogs/manufacturing-facility-management"
         />
         <meta
           property="og:title"
@@ -207,7 +208,7 @@ const ManufacturingFacilityManagementBlog = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/IndustrialFacility.jpg"
+          content="https://www.acuitygroups.in/static/media/IndustrialFacility.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -223,7 +224,7 @@ const ManufacturingFacilityManagementBlog = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/IndustrialFacility.jpg"
+          content="https://www.acuitygroups.in/static/media/IndustrialFacility.jpg"
         />
       </Helmet>
 

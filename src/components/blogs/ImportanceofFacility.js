@@ -51,7 +51,7 @@ const HealthcareFacilityManagementBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.in/blogs/healthcare-facility-management",
+    "https://www.acuitygroups.in/blogs/healthcare-facility-management",
   );
   const shareTitle = encodeURIComponent(
     "The Importance of Facility Management in Healthcare Facilities | Acuity Groups",
@@ -71,7 +71,7 @@ const HealthcareFacilityManagementBlog = () => {
     headline: "The Importance of Facility Management in Healthcare Facilities",
     description:
       "Discover how professional facility management enhances patient safety, infection control, compliance, and operational efficiency in healthcare facilities. Expert insights from Acuity Groups.",
-    image: "https://acuitygroups.in/static/media/hospital1.webp",
+    image: "https://www.acuitygroups.in/static/media/hospital1.webp",
     datePublished: "2025-06-01",
     dateModified: "2025-06-01",
     author: { "@type": "Organization", name: "Acuity Groups" },
@@ -80,12 +80,12 @@ const HealthcareFacilityManagementBlog = () => {
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://acuitygroups.in/blogs/healthcare-facility-management",
+      "@id": "https://www.acuitygroups.in/blogs/healthcare-facility-management",
     },
   };
 
@@ -128,19 +128,19 @@ const HealthcareFacilityManagementBlog = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://acuitygroups.in/",
+        item: "https://www.acuitygroups.in/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs/allblogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Healthcare Facility Management",
-        item: "https://acuitygroups.in/blogs/healthcare-facility-management",
+        item: "https://www.acuitygroups.in/blogs/healthcare-facility-management",
       },
     ],
   };
@@ -173,7 +173,7 @@ const HealthcareFacilityManagementBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://acuitygroups.in/blogs/healthcare-facility-management"
+          href="https://www.acuitygroups.in/blogs/healthcare-facility-management"
         />
         <title>
           The Importance of Facility Management in Healthcare Facilities |
@@ -194,7 +194,7 @@ const HealthcareFacilityManagementBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/blogs/healthcare-facility-management"
+          content="https://www.acuitygroups.in/blogs/healthcare-facility-management"
         />
         <meta
           property="og:title"
@@ -206,7 +206,7 @@ const HealthcareFacilityManagementBlog = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/hospital1.webp"
+          content="https://www.acuitygroups.in/static/media/hospital1.webp"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -222,7 +222,7 @@ const HealthcareFacilityManagementBlog = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/hospital1.webp"
+          content="https://www.acuitygroups.in/static/media/hospital1.webp"
         />
       </Helmet>
 

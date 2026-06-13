@@ -49,7 +49,7 @@ const TheUnsungHeroesBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.in/blogs/the-unsung-heroes",
+    "https://www.acuitygroups.in/blogs/the-unsung-heroes",
   );
   const shareTitle = encodeURIComponent(
     "The Unsung Heroes: Facilities and the Power of Good Management | Acuity Groups",
@@ -70,7 +70,7 @@ const TheUnsungHeroesBlog = () => {
     description:
       "Discover how professional facility management boosts productivity, reduces costs, enhances safety, and builds a strong brand image. Expert insights from Acuity Groups.",
     image:
-      "https://acuitygroups.in/static/media/The%20Importance%20of%20Facilities1.jpg",
+      "https://www.acuitygroups.in/static/media/The%20Importance%20of%20Facilities1.jpg",
     datePublished: "2024-03-04",
     dateModified: "2025-06-01",
     author: { "@type": "Organization", name: "Acuity Groups" },
@@ -79,12 +79,12 @@ const TheUnsungHeroesBlog = () => {
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://acuitygroups.in/blogs/the-unsung-heroes",
+      "@id": "https://www.acuitygroups.in/blogs/the-unsung-heroes",
     },
   };
 
@@ -127,19 +127,19 @@ const TheUnsungHeroesBlog = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://acuitygroups.in/",
+        item: "https://www.acuitygroups.in/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs/allblogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Unsung Heroes",
-        item: "https://acuitygroups.in/blogs/the-unsung-heroes",
+        item: "https://www.acuitygroups.in/blogs/the-unsung-heroes",
       },
     ],
   };
@@ -172,7 +172,7 @@ const TheUnsungHeroesBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://acuitygroups.in/blogs/the-unsung-heroes"
+          href="https://www.acuitygroups.in/blogs/the-unsung-heroes"
         />
         <title>
           The Unsung Heroes: Facilities and the Power of Good Management |
@@ -193,7 +193,7 @@ const TheUnsungHeroesBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/blogs/the-unsung-heroes"
+          content="https://www.acuitygroups.in/blogs/the-unsung-heroes"
         />
         <meta
           property="og:title"
@@ -205,7 +205,7 @@ const TheUnsungHeroesBlog = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/The%20Importance%20of%20Facilities1.jpg"
+          content="https://www.acuitygroups.in/static/media/The%20Importance%20of%20Facilities1.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -221,7 +221,7 @@ const TheUnsungHeroesBlog = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/The%20Importance%20of%20Facilities1.jpg"
+          content="https://www.acuitygroups.in/static/media/The%20Importance%20of%20Facilities1.jpg"
         />
       </Helmet>
 

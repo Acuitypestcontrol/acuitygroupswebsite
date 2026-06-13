@@ -64,7 +64,7 @@ const SoftServices = () => {
           name="keywords"
           content="soft services, housekeeping services, corporate cleaning, deep cleaning, washroom hygiene, facility management Bangalore"
         />
-        <link rel="canonical" href="https://acuitygroups.in/soft-services" />
+        <link rel="canonical" href="https://www.acuitygroups.in/soft-services" />
       </Helmet>
       {/* HERO SECTION */}
       <section className="relative h-[500px] flex items-center justify-center text-white overflow-hidden">

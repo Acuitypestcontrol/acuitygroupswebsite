@@ -79,13 +79,13 @@ const Housekeeping = () => {
     name: "Professional Housekeeping Services | Acuity Groups Bangalore",
     description:
       "Professional housekeeping services for homes, offices, and commercial spaces. Trained staff, eco-friendly products, and flexible scheduling.",
-    url: "https://acuitygroups.in/housekeeping",
+    url: "https://www.acuitygroups.in/housekeeping",
     publisher: {
       "@type": "Organization",
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
   };
@@ -93,7 +93,7 @@ const Housekeeping = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://acuitygroups.in/housekeeping" />
+        <link rel="canonical" href="https://www.acuitygroups.in/housekeeping" />
         <title>
           Professional Housekeeping Services | Acuity Groups Bangalore
         </title>
@@ -112,7 +112,7 @@ const Housekeeping = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/housekeeping"
+          content="https://www.acuitygroups.in/housekeeping"
         />
         <meta
           property="og:title"
@@ -124,7 +124,7 @@ const Housekeeping = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/housekeeping.jpg"
+          content="https://www.acuitygroups.in/static/media/housekeeping.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -140,7 +140,7 @@ const Housekeeping = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/housekeeping.jpg"
+          content="https://www.acuitygroups.in/static/media/housekeeping.jpg"
         />
       </Helmet>
 

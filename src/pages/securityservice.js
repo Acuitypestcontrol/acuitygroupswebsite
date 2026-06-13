@@ -92,13 +92,13 @@ const SecurityServices = () => {
     name: "Professional Security Services | Manned Guarding & Corporate Security",
     description:
       "Professional security services for commercial, residential, industrial, and corporate facilities with trained security personnel and reliable safety management solutions.",
-    url: "https://acuitygroups.in/securityservice",
+    url: "https://www.acuitygroups.in/securityservice",
     publisher: {
       "@type": "Organization",
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
   };
@@ -106,7 +106,10 @@ const SecurityServices = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://acuitygroups.in/securityservice" />
+        <link
+          rel="canonical"
+          href="https://www.acuitygroups.in/securityservice"
+        />
         <title>
           Professional Security Services in Bangalore | Acuity Groups
         </title>
@@ -125,7 +128,7 @@ const SecurityServices = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/securityservice"
+          content="https://www.acuitygroups.in/securityservice"
         />
         <meta
           property="og:title"
@@ -137,7 +140,7 @@ const SecurityServices = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/security12.jpg"
+          content="https://www.acuitygroups.in/static/media/security12.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -153,7 +156,7 @@ const SecurityServices = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/security12.jpg"
+          content="https://www.acuitygroups.in/static/media/security12.jpg"
         />
       </Helmet>
 

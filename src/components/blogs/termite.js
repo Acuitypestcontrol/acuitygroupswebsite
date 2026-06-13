@@ -46,7 +46,7 @@ const TermiteControlGuide = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.in/blogs/termite-control-guide",
+    "https://www.acuitygroups.in/blogs/termite-control-guide",
   );
   const shareTitle = encodeURIComponent(
     "Termite Control: Complete Home Protection Guide | Acuity Groups",
@@ -67,7 +67,7 @@ const TermiteControlGuide = () => {
     headline: "Termite Control: Complete Home Protection Guide",
     description:
       "Protect your wooden furniture and home structure from damaging termites. Learn prevention tips, signs of infestation, DIY methods, and when to call professionals.",
-    image: "https://acuitygroups.in/static/media/termite.jpg",
+    image: "https://www.acuitygroups.in/static/media/termite.jpg",
     datePublished: "2025-03-10",
     dateModified: "2025-06-01",
     author: { "@type": "Organization", name: "Acuity Groups" },
@@ -76,12 +76,12 @@ const TermiteControlGuide = () => {
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://acuitygroups.in/blogs/termite-control-guide",
+      "@id": "https://www.acuitygroups.in/blogs/termite-control-guide",
     },
   };
 
@@ -124,19 +124,19 @@ const TermiteControlGuide = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://acuitygroups.in/",
+        item: "https://www.acuitygroups.in/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs/allblogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Termite Control Guide",
-        item: "https://acuitygroups.in/blogs/termite-control-guide",
+        item: "https://www.acuitygroups.in/blogs/termite-control-guide",
       },
     ],
   };
@@ -169,7 +169,7 @@ const TermiteControlGuide = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://acuitygroups.in/blogs/termite-control-guide"
+          href="https://www.acuitygroups.in/blogs/termite-control-guide"
         />
         <title>
           Termite Control: Complete Home Protection Guide | Acuity Groups
@@ -189,7 +189,7 @@ const TermiteControlGuide = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/blogs/termite-control-guide"
+          content="https://www.acuitygroups.in/blogs/termite-control-guide"
         />
         <meta
           property="og:title"
@@ -201,7 +201,7 @@ const TermiteControlGuide = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/termite.jpg"
+          content="https://www.acuitygroups.in/static/media/termite.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -217,7 +217,7 @@ const TermiteControlGuide = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/termite.jpg"
+          content="https://www.acuitygroups.in/static/media/termite.jpg"
         />
       </Helmet>
 

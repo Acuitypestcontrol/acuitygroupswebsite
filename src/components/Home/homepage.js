@@ -229,7 +229,7 @@ export default function Homepage() {
   return (
     <div className="bg-white text-black overflow-hidden font-['Poppins',system-ui,sans-serif]">
       <Helmet>
-        <link rel="canonical" href="https://acuitygroups.in/" />
+        <link rel="canonical" href="https://www.acuitygroups.in/" />
         <title>
           Acuity Groups | Facility Management & Security Services in Bangalore
         </title>

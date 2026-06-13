@@ -37,7 +37,7 @@ const FacilityManagementBlog = () => {
     headline: "Facility Management: A Cornerstone of Property Optimization",
     description:
       "Maximize property value and cut operational costs. Discover how professional facility management and asset preservation from Acuity Groups elevate ROI.",
-    image: "https://acuitygroups.in/static/media/bannerforfm.jpg",
+    image: "https://www.acuitygroups.in/static/media/bannerforfm.jpg",
     datePublished: "2024-09-30",
     dateModified: "2024-09-30",
     author: { "@type": "Organization", name: "Acuity Groups" },
@@ -46,12 +46,12 @@ const FacilityManagementBlog = () => {
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://acuitygroups.in/blogs/facilityManagements",
+      "@id": "https://www.acuitygroups.in/blogs/facilityManagements",
     },
   };
 
@@ -131,7 +131,7 @@ const FacilityManagementBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://acuitygroups.in/blogs/facilityManagements"
+          href="https://www.acuitygroups.in/blogs/facilityManagements"
         />
         <title>
           Facility Management: A Cornerstone of Property Optimization | Acuity
@@ -151,7 +151,7 @@ const FacilityManagementBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/blogs/facilityManagements"
+          content="https://www.acuitygroups.in/blogs/facilityManagements"
         />
         <meta
           property="og:title"
@@ -163,7 +163,7 @@ const FacilityManagementBlog = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/bannerforfm.jpg"
+          content="https://www.acuitygroups.in/static/media/bannerforfm.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -171,7 +171,7 @@ const FacilityManagementBlog = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:url"
-          content="https://acuitygroups.in/blogs/facilityManagements"
+          content="https://www.acuitygroups.in/blogs/facilityManagements"
         />
         <meta
           name="twitter:title"
@@ -183,7 +183,7 @@ const FacilityManagementBlog = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/bannerforfm.jpg"
+          content="https://www.acuitygroups.in/static/media/bannerforfm.jpg"
         />
       </Helmet>
 

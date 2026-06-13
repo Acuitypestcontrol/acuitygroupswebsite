@@ -113,13 +113,13 @@ const ManpowerOutsourcing = () => {
     name: "Manpower Outsourcing Services | Skilled & Unskilled Staffing Solutions",
     description:
       "Professional manpower outsourcing services for industrial, facility management, security, construction, and staffing needs. Trained and verified workforce with flexible contracts.",
-    url: "https://acuitygroups.in/manpower",
+    url: "https://www.acuitygroups.in/manpower",
     publisher: {
       "@type": "Organization",
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
   };
@@ -127,7 +127,7 @@ const ManpowerOutsourcing = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://acuitygroups.in/manpower" />
+        <link rel="canonical" href="https://www.acuitygroups.in/manpower" />
         <title>Staffing & Manpower Solutions | Acuity Groups Bangalore</title>
         <meta
           name="description"
@@ -142,7 +142,10 @@ const ManpowerOutsourcing = () => {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://acuitygroups.in/manpower" />
+        <meta
+          property="og:url"
+          content="https://www.acuitygroups.in/manpower"
+        />
         <meta
           property="og:title"
           content="Manpower Outsourcing Services | Skilled & Unskilled Staffing Solutions | Acuity Groups"
@@ -153,7 +156,7 @@ const ManpowerOutsourcing = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/manpowerout.webp"
+          content="https://www.acuitygroups.in/static/media/manpowerout.webp"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -169,7 +172,7 @@ const ManpowerOutsourcing = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/manpowerout.webp"
+          content="https://www.acuitygroups.in/static/media/manpowerout.webp"
         />
       </Helmet>
 

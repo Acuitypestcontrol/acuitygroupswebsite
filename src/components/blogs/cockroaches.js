@@ -17,7 +17,7 @@ const CockroachInfestation = () => {
     headline: "How to Identify Cockroach Infestation at Home",
     description:
       "Learn early signs of cockroach infestation (droppings, egg casings, odour, live roaches) and prevent health risks. Effective DIY tips and professional pest control solutions from Acuity Groups.",
-    image: "https://acuitygroups.in/static/media/cockroach.jpg",
+    image: "https://www.acuitygroups.in/static/media/cockroach.jpg",
     datePublished: "2025-03-15",
     dateModified: "2025-03-15",
     author: { "@type": "Organization", name: "Acuity Groups" },
@@ -26,12 +26,12 @@ const CockroachInfestation = () => {
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://acuitygroups.in/blogs/cockroach-infestation",
+      "@id": "https://www.acuitygroups.in/blogs/cockroach-infestation",
     },
   };
 
@@ -113,7 +113,7 @@ const CockroachInfestation = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://acuitygroups.in/blogs/cockroachinfestation"
+          href="https://www.acuitygroups.in/blogs/cockroachinfestation"
         />
         <title>
           How to Identify Cockroach Infestation at Home | Acuity Groups
@@ -132,7 +132,7 @@ const CockroachInfestation = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/blogs/cockroach-infestation"
+          content="https://www.acuitygroups.in/blogs/cockroach-infestation"
         />
         <meta
           property="og:title"
@@ -144,7 +144,7 @@ const CockroachInfestation = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/cockroach.jpg"
+          content="https://www.acuitygroups.in/static/media/cockroach.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -152,7 +152,7 @@ const CockroachInfestation = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:url"
-          content="https://acuitygroups.in/blogs/cockroach-infestation"
+          content="https://www.acuitygroups.in/blogs/cockroach-infestation"
         />
         <meta
           name="twitter:title"
@@ -164,7 +164,7 @@ const CockroachInfestation = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/cockroach.jpg"
+          content="https://www.acuitygroups.in/static/media/cockroach.jpg"
         />
       </Helmet>
 

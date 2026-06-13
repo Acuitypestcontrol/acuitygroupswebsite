@@ -136,7 +136,7 @@ const Career = () => {
         hiringOrganization: {
           "@type": "Organization",
           name: "Acuity Groups",
-          sameAs: "https://acuitygroups.in",
+          sameAs: "https://www.acuitygroups.in",
         },
       },
     })),
@@ -145,7 +145,7 @@ const Career = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://acuitygroups.in/career" />
+        <link rel="canonical" href="https://www.acuitygroups.in/career" />
         <title>
           Careers | Join Acuity Groups – Facility Management Jobs in Bangalore
         </title>
@@ -162,7 +162,7 @@ const Career = () => {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://acuitygroups.in/career" />
+        <meta property="og:url" content="https://www.acuitygroups.in/career" />
         <meta
           property="og:title"
           content="Careers | Join Acuity Groups – Facility Management Jobs"
@@ -173,7 +173,7 @@ const Career = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/careers-og.jpg"
+          content="https://www.acuitygroups.in/static/media/careers-og.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -189,7 +189,7 @@ const Career = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/careers-og.jpg"
+          content="https://www.acuitygroups.in/static/media/careers-og.jpg"
         />
       </Helmet>
 

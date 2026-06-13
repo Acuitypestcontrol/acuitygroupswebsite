@@ -114,13 +114,13 @@ const PestManagement = () => {
     name: "Pest Management Services | Termite, Rodent & Mosquito Control",
     description:
       "Safe and effective pest control solutions for homes, offices, and commercial spaces. Eco-friendly treatments for termites, rodents, mosquitoes, and more.",
-    url: "https://acuitygroups.in/pest",
+    url: "https://www.acuitygroups.in/pest",
     publisher: {
       "@type": "Organization",
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
   };
@@ -128,7 +128,7 @@ const PestManagement = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://acuitygroups.in/pest" />
+        <link rel="canonical" href="https://www.acuitygroups.in/pest" />
         <title>Commercial & Home Pest Control | Acuity Groups Bangalore</title>
         <meta
           name="description"
@@ -143,7 +143,7 @@ const PestManagement = () => {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://acuitygroups.in/pest" />
+        <meta property="og:url" content="https://www.acuitygroups.in/pest" />
         <meta
           property="og:title"
           content="Pest Management Services | Termite, Rodent & Mosquito Control | Acuity Groups"
@@ -154,7 +154,7 @@ const PestManagement = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/pest.webp"
+          content="https://www.acuitygroups.in/static/media/pest.webp"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -170,7 +170,7 @@ const PestManagement = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/pest.webp"
+          content="https://www.acuitygroups.in/static/media/pest.webp"
         />
       </Helmet>
 

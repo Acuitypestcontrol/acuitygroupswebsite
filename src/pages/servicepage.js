@@ -86,7 +86,7 @@ const Services = () => {
           name="keywords"
           content="facility management, security services, housekeeping, pest control, manpower outsourcing, Bangalore services"
         />
-        <link rel="canonical" href="https://acuitygroups.in/services" />
+        <link rel="canonical" href="https://www.acuitygroups.in/services" />
       </Helmet>
 
       {/* Hero Section with Image Banner */}

@@ -50,7 +50,7 @@ const HotelFacilityManagementBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.in/blogs/hotel-facility-management",
+    "https://www.acuitygroups.in/blogs/hotel-facility-management",
   );
   const shareTitle = encodeURIComponent(
     "Why Hotels Need Professional Facility Management Services | Acuity Groups",
@@ -70,7 +70,7 @@ const HotelFacilityManagementBlog = () => {
     headline: "Why Hotels Need Professional Facility Management Services",
     description:
       "Discover how professional facility management enhances guest satisfaction, operational efficiency, and safety in hotels. Expert insights from Acuity Groups.",
-    image: "https://acuitygroups.in/static/media/house1%20(1).jpg",
+    image: "https://www.acuitygroups.in/static/media/house1%20(1).jpg",
     datePublished: "2025-06-01",
     dateModified: "2025-06-01",
     author: { "@type": "Organization", name: "Acuity Groups" },
@@ -79,12 +79,12 @@ const HotelFacilityManagementBlog = () => {
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://acuitygroups.in/blogs/hotel-facility-management",
+      "@id": "https://www.acuitygroups.in/blogs/hotel-facility-management",
     },
   };
 
@@ -127,19 +127,19 @@ const HotelFacilityManagementBlog = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://acuitygroups.in/",
+        item: "https://www.acuitygroups.in/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs/allblogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Hotel Facility Management",
-        item: "https://acuitygroups.in/blogs/hotel-facility-management",
+        item: "https://www.acuitygroups.in/blogs/hotel-facility-management",
       },
     ],
   };
@@ -172,7 +172,7 @@ const HotelFacilityManagementBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://acuitygroups.in/blogs/hotel-facility-management"
+          href="https://www.acuitygroups.in/blogs/hotel-facility-management"
         />
         <title>
           Why Hotels Need Professional Facility Management Services | Acuity
@@ -193,7 +193,7 @@ const HotelFacilityManagementBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/blogs/hotel-facility-management"
+          content="https://www.acuitygroups.in/blogs/hotel-facility-management"
         />
         <meta
           property="og:title"
@@ -205,7 +205,7 @@ const HotelFacilityManagementBlog = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/house1%20(1).jpg"
+          content="https://www.acuitygroups.in/static/media/house1%20(1).jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -221,7 +221,7 @@ const HotelFacilityManagementBlog = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/house1%20(1).jpg"
+          content="https://www.acuitygroups.in/static/media/house1%20(1).jpg"
         />
       </Helmet>
 

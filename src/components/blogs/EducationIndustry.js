@@ -36,7 +36,7 @@ const EducationFacilityManagementBlog = () => {
     headline: "Why Schools and Colleges Need Professional Facility Management",
     description:
       "Discover how professional facility management helps schools & colleges create safe, clean, and productive learning environments. Campus security, housekeeping, maintenance & more from Acuity Groups.",
-    image: "https://acuitygroups.in/static/media/school1.jpg",
+    image: "https://www.acuitygroups.in/static/media/school1.jpg",
     datePublished: "2026-06-01",
     dateModified: "2026-06-01",
     author: { "@type": "Organization", name: "Acuity Groups" },
@@ -45,12 +45,12 @@ const EducationFacilityManagementBlog = () => {
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://acuitygroups.in/blogs/EducationIndustry",
+      "@id": "https://www.acuitygroups.in/blogs/EducationIndustry",
     },
   };
 
@@ -126,7 +126,7 @@ const EducationFacilityManagementBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://acuitygroups.in/blogs/EducationIndustry"
+          href="https://www.acuitygroups.in/blogs/EducationIndustry"
         />
         <title>
           Why Schools & Colleges Need Professional Facility Management | Acuity
@@ -146,7 +146,7 @@ const EducationFacilityManagementBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/blogs/EducationIndustry"
+          content="https://www.acuitygroups.in/blogs/EducationIndustry"
         />
         <meta
           property="og:title"
@@ -158,7 +158,7 @@ const EducationFacilityManagementBlog = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/school1.jpg"
+          content="https://www.acuitygroups.in/static/media/school1.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -166,7 +166,7 @@ const EducationFacilityManagementBlog = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:url"
-          content="https://acuitygroups.in/blogs/EducationIndustry"
+          content="https://www.acuitygroups.in/blogs/EducationIndustry"
         />
         <meta
           name="twitter:title"
@@ -178,7 +178,7 @@ const EducationFacilityManagementBlog = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/school1.jpg"
+          content="https://www.acuitygroups.in/static/media/school1.jpg"
         />
       </Helmet>
 

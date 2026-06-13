@@ -96,13 +96,13 @@ const FacilityManagement = () => {
     name: "Integrated Facility Management Services | Acuity Groups",
     description:
       "Maximize your asset value. Discover professional facility management for commercial, residential, & industrial properties from Acuity Groups. Apply today.",
-    url: "https://acuitygroups.in/facilitymanagment1",
+    url: "https://www.acuitygroups.in/facilitymanagment1",
     publisher: {
       "@type": "Organization",
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
   };
@@ -112,7 +112,7 @@ const FacilityManagement = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://acuitygroups.in/facilitymanagment1"
+          href="https://www.acuitygroups.in/facilitymanagment1"
         />
         <title>
           Integrated Facility Management Services | Acuity Groups Bangalore
@@ -132,7 +132,7 @@ const FacilityManagement = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/facilitymanagment1"
+          content="https://www.acuitygroups.in/facilitymanagment1"
         />
         <meta
           property="og:title"
@@ -144,7 +144,7 @@ const FacilityManagement = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/facility.jpg"
+          content="https://www.acuitygroups.in/static/media/facility.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -160,7 +160,7 @@ const FacilityManagement = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/facility.jpg"
+          content="https://www.acuitygroups.in/static/media/facility.jpg"
         />
       </Helmet>
 

@@ -1,3 +1,6 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+
+# Tell search engines where your sitemap is located
+Sitemap: https://www.acuitygroups.in/sitemap.xml

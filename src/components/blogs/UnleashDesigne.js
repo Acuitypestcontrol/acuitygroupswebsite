@@ -55,7 +55,7 @@ const InteriorDesignTrends2024 = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.in/blogs/interior-design-trends-2024",
+    "https://www.acuitygroups.in/blogs/interior-design-trends-2024",
   );
   const shareTitle = encodeURIComponent(
     "Unleash Your Inner Designer: Top Tips & Trends for 2024 | Acuity Groups",
@@ -76,7 +76,7 @@ const InteriorDesignTrends2024 = () => {
     headline: "Unleash Your Inner Designer: Top Tips & Trends for 2024",
     description:
       "Transform your home with the latest interior design trends for 2024: biophilic design, bold colors, sustainable choices, DIY projects, and trending styles like Japandi fusion.",
-    image: "https://acuitygroups.in/static/media/UnleashDesigne.jpg",
+    image: "https://www.acuitygroups.in/static/media/UnleashDesigne.jpg",
     datePublished: "2024-02-13",
     dateModified: "2025-06-01",
     author: { "@type": "Organization", name: "Acuity Groups" },
@@ -85,12 +85,12 @@ const InteriorDesignTrends2024 = () => {
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://acuitygroups.in/blogs/interior-design-trends-2024",
+      "@id": "https://www.acuitygroups.in/blogs/interior-design-trends-2024",
     },
   };
 
@@ -133,19 +133,19 @@ const InteriorDesignTrends2024 = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://acuitygroups.in/",
+        item: "https://www.acuitygroups.in/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs/allblogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Interior Design Trends 2024",
-        item: "https://acuitygroups.in/blogs/interior-design-trends-2024",
+        item: "https://www.acuitygroups.in/blogs/interior-design-trends-2024",
       },
     ],
   };
@@ -178,7 +178,7 @@ const InteriorDesignTrends2024 = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://acuitygroups.in/blogs/interior-design-trends-2024"
+          href="https://www.acuitygroups.in/blogs/interior-design-trends-2024"
         />
         <title>
           Unleash Your Inner Designer: Top Tips & Trends for 2024 | Acuity
@@ -199,7 +199,7 @@ const InteriorDesignTrends2024 = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/blogs/interior-design-trends-2024"
+          content="https://www.acuitygroups.in/blogs/interior-design-trends-2024"
         />
         <meta
           property="og:title"
@@ -211,7 +211,7 @@ const InteriorDesignTrends2024 = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/UnleashDesigne.jpg"
+          content="https://www.acuitygroups.in/static/media/UnleashDesigne.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -227,7 +227,7 @@ const InteriorDesignTrends2024 = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/UnleashDesigne.jpg"
+          content="https://www.acuitygroups.in/static/media/UnleashDesigne.jpg"
         />
       </Helmet>
 

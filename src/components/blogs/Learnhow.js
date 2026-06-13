@@ -51,7 +51,7 @@ const DemystifyingFacilityManagementBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.in/blogs/demystifying-facility-management",
+    "https://www.acuitygroups.in/blogs/demystifying-facility-management",
   );
   const shareTitle = encodeURIComponent(
     "Demystifying Facility Management: From Buzzwords to Bottom Line | Acuity Groups",
@@ -72,7 +72,7 @@ const DemystifyingFacilityManagementBlog = () => {
     headline: "Demystifying Facility Management: From Buzzwords to Bottom Line",
     description:
       "Discover the truth about facility management: strategic approach balancing cost, comfort, productivity, and efficiency. Expert insights from Acuity Groups.",
-    image: "https://acuitygroups.in/static/media/Demystifying1.jpg",
+    image: "https://www.acuitygroups.in/static/media/Demystifying1.jpg",
     datePublished: "2024-02-22",
     dateModified: "2025-06-01",
     author: { "@type": "Organization", name: "Acuity Groups" },
@@ -81,12 +81,13 @@ const DemystifyingFacilityManagementBlog = () => {
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://acuitygroups.in/blogs/demystifying-facility-management",
+      "@id":
+        "https://www.acuitygroups.in/blogs/demystifying-facility-management",
     },
   };
 
@@ -129,19 +130,19 @@ const DemystifyingFacilityManagementBlog = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://acuitygroups.in/",
+        item: "https://www.acuitygroups.in/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs/allblogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Demystifying Facility Management",
-        item: "https://acuitygroups.in/blogs/demystifying-facility-management",
+        item: "https://www.acuitygroups.in/blogs/demystifying-facility-management",
       },
     ],
   };
@@ -174,7 +175,7 @@ const DemystifyingFacilityManagementBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://acuitygroups.in/blogs/demystifying-facility-management"
+          href="https://www.acuitygroups.in/blogs/demystifying-facility-management"
         />
         <title>
           Demystifying Facility Management: From Buzzwords to Bottom Line |
@@ -195,7 +196,7 @@ const DemystifyingFacilityManagementBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/blogs/demystifying-facility-management"
+          content="https://www.acuitygroups.in/blogs/demystifying-facility-management"
         />
         <meta
           property="og:title"
@@ -207,7 +208,7 @@ const DemystifyingFacilityManagementBlog = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/Demystifying1.jpg"
+          content="https://www.acuitygroups.in/static/media/Demystifying1.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -223,7 +224,7 @@ const DemystifyingFacilityManagementBlog = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/Demystifying1.jpg"
+          content="https://www.acuitygroups.in/static/media/Demystifying1.jpg"
         />
       </Helmet>
 

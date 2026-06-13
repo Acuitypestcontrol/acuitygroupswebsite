@@ -37,7 +37,7 @@ const IntegratedDesignBlog = () => {
       "From Function to Feeling: Unleashing the Magic of Integrated Design",
     description:
       "Blend aesthetics with utility. Learn how combining facility management and interior design creates highly functional, sustainable spaces with Acuity Groups.",
-    image: "https://acuitygroups.in/static/media/fff1.jpg",
+    image: "https://www.acuitygroups.in/static/media/fff1.jpg",
     datePublished: "2024-03-05",
     dateModified: "2024-03-05",
     author: { "@type": "Organization", name: "Acuity Groups" },
@@ -46,12 +46,12 @@ const IntegratedDesignBlog = () => {
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://acuitygroups.in/blogs/FromFunction",
+      "@id": "https://www.acuitygroups.in/blogs/FromFunction",
     },
   };
 
@@ -128,7 +128,7 @@ const IntegratedDesignBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://acuitygroups.in/blogs/FromFunction"
+          href="https://www.acuitygroups.in/blogs/FromFunction"
         />
         <title>Integrated Design & Facility Management | Acuity Groups</title>
         <meta
@@ -145,7 +145,7 @@ const IntegratedDesignBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/blogs/FromFunction"
+          content="https://www.acuitygroups.in/blogs/FromFunction"
         />
         <meta
           property="og:title"
@@ -157,7 +157,7 @@ const IntegratedDesignBlog = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/fff1.jpg"
+          content="https://www.acuitygroups.in/static/media/fff1.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -165,7 +165,7 @@ const IntegratedDesignBlog = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:url"
-          content="https://acuitygroups.in/blogs/FromFunction"
+          content="https://www.acuitygroups.in/blogs/FromFunction"
         />
         <meta
           name="twitter:title"
@@ -177,7 +177,7 @@ const IntegratedDesignBlog = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/fff1.jpg"
+          content="https://www.acuitygroups.in/static/media/fff1.jpg"
         />
       </Helmet>
 

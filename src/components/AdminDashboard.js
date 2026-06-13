@@ -23,7 +23,7 @@ const AdminDashboard = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://acuitygroups.in/admindashboard" />
+        <link rel="canonical" href="https://www.acuitygroups.in/admindashboard" />
         <title>Admin Dashboard | Acuity Groups</title>
         <meta
           name="description"
@@ -36,7 +36,7 @@ const AdminDashboard = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/admindashboard"
+          content="https://www.acuitygroups.in/admindashboard"
         />
         <meta property="og:title" content="Admin Dashboard | Acuity Groups" />
         <meta

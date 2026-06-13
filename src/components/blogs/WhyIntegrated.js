@@ -50,7 +50,7 @@ const SecurityServicesBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.in/blogs/security-services",
+    "https://www.acuitygroups.in/blogs/security-services",
   );
   const shareTitle = encodeURIComponent(
     "Why Every Business Needs Professional Security Services | Acuity Groups",
@@ -70,7 +70,7 @@ const SecurityServicesBlog = () => {
     headline: "Why Every Business Needs Professional Security Services",
     description:
       "Protect your business with professional security services: crime prevention, emergency response, access control, and enhanced customer confidence. Expert insights from Acuity Groups.",
-    image: "https://acuitygroups.in/static/media/why5.jpg",
+    image: "https://www.acuitygroups.in/static/media/why5.jpg",
     datePublished: "2025-06-01",
     dateModified: "2025-06-01",
     author: { "@type": "Organization", name: "Acuity Groups" },
@@ -79,12 +79,12 @@ const SecurityServicesBlog = () => {
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://acuitygroups.in/blogs/security-services",
+      "@id": "https://www.acuitygroups.in/blogs/security-services",
     },
   };
 
@@ -127,19 +127,19 @@ const SecurityServicesBlog = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://acuitygroups.in/",
+        item: "https://www.acuitygroups.in/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs/allblogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Security Services",
-        item: "https://acuitygroups.in/blogs/security-services",
+        item: "https://www.acuitygroups.in/blogs/security-services",
       },
     ],
   };
@@ -172,7 +172,7 @@ const SecurityServicesBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://acuitygroups.in/blogs/security-services"
+          href="https://www.acuitygroups.in/blogs/security-services"
         />
         <title>
           Why Every Business Needs Professional Security Services | Acuity
@@ -193,7 +193,7 @@ const SecurityServicesBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/blogs/security-services"
+          content="https://www.acuitygroups.in/blogs/security-services"
         />
         <meta
           property="og:title"
@@ -205,7 +205,7 @@ const SecurityServicesBlog = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/why5.jpg"
+          content="https://www.acuitygroups.in/static/media/why5.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -221,7 +221,7 @@ const SecurityServicesBlog = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/why5.jpg"
+          content="https://www.acuitygroups.in/static/media/why5.jpg"
         />
       </Helmet>
 

@@ -95,7 +95,7 @@ const ContactUs = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Acuity Groups",
-    image: "https://acuitygroups.in/logo.png",
+    image: "https://www.acuitygroups.in/logo.png",
     telephone: "+919941229005",
     email: "info@acuitygroups.in",
     address: {
@@ -113,7 +113,7 @@ const ContactUs = () => {
       longitude: "77.5722624",
     },
     openingHours: "Mo-Sa 09:00-18:00",
-    url: "https://acuitygroups.in",
+    url: "https://www.acuitygroups.in",
     sameAs: [
       "https://facebook.com/acuitygroups",
       "https://twitter.com/acuitygroups",
@@ -125,7 +125,7 @@ const ContactUs = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://acuitygroups.in/contactus" />
+        <link rel="canonical" href="https://www.acuitygroups.in/contactus" />
         <title>
           Contact Us | Acuity Groups – Facility Management Services in Bangalore
         </title>
@@ -142,7 +142,10 @@ const ContactUs = () => {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://acuitygroups.in/contactus" />
+        <meta
+          property="og:url"
+          content="https://www.acuitygroups.in/contactus"
+        />
         <meta
           property="og:title"
           content="Contact Us | Acuity Groups – Facility Management Services"
@@ -153,7 +156,7 @@ const ContactUs = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/contact-og.jpg"
+          content="https://www.acuitygroups.in/static/media/contact-og.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -169,7 +172,7 @@ const ContactUs = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/contact-og.jpg"
+          content="https://www.acuitygroups.in/static/media/contact-og.jpg"
         />
       </Helmet>
 

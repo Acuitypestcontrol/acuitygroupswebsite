@@ -192,21 +192,21 @@ export default function Blog() {
       name: "Acuity Groups Blog - Facility Management Insights",
       description:
         "Comprehensive blog posts covering facility management, security, housekeeping, maintenance, pest control, and manpower outsourcing.",
-      url: "https://acuitygroups.in/blogs",
+      url: "https://www.acuitygroups.in/blogs",
       numberOfItems: blogs.length,
       itemListElement: blogs.map((blog, idx) => ({
         "@type": "ListItem",
         position: idx + 1,
-        url: `https://acuitygroups.in${blog.link}`,
+        url: `https://www.acuitygroups.in${blog.link}`,
         name: blog.title,
         description: blog.description,
-        image: `https://acuitygroups.in/static/media/${blog.image.split("/").pop()}`,
+        image: `https://www.acuitygroups.in/static/media/${blog.image.split("/").pop()}`,
       })),
       publisher: {
         "@type": "Organization",
         name: "Acuity Groups",
-        url: "https://acuitygroups.in",
-        logo: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in",
+        logo: "https://www.acuitygroups.in/logo.png",
       },
     });
     document.head.appendChild(schemaScript);
@@ -220,7 +220,7 @@ export default function Blog() {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://acuitygroups.in/blogs" />
+        <link rel="canonical" href="https://www.acuitygroups.in/blogs" />
         <title>
           Facility Management & Integrated Services Blogs | Acuity Groups
           Bangalore
@@ -237,7 +237,7 @@ export default function Blog() {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://acuitygroups.in/blogs" />
+        <meta property="og:url" content="https://www.acuitygroups.in/blogs" />
         <meta
           property="og:title"
           content="Facility Management & Integrated Services Blogs | Acuity Groups"
@@ -248,13 +248,13 @@ export default function Blog() {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/fmimage2.jpg"
+          content="https://www.acuitygroups.in/static/media/fmimage2.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://acuitygroups.in/blogs" />
+        <meta name="twitter:url" content="https://www.acuitygroups.in/blogs" />
         <meta
           name="twitter:title"
           content="Facility Management & Integrated Services Blogs | Acuity Groups"
@@ -265,7 +265,7 @@ export default function Blog() {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/fmimage2.jpg"
+          content="https://www.acuitygroups.in/static/media/fmimage2.jpg"
         />
       </Helmet>
 

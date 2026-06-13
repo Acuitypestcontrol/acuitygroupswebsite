@@ -138,7 +138,7 @@ const Careers = () => {
         hiringOrganization: {
           "@type": "Organization",
           name: "Acuity Integrated Facility Management",
-          sameAs: "https://acuitygroups.in",
+          sameAs: "https://www.acuitygroups.in",
         },
       },
     })),
@@ -147,7 +147,7 @@ const Careers = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://acuitygroups.in/careers" />
+        <link rel="canonical" href="https://www.acuitygroups.in/careers" />
         <title>Careers | Join Acuity Integrated Facility Management Team</title>
         <meta
           name="description"
@@ -162,7 +162,7 @@ const Careers = () => {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://acuitygroups.in/careers" />
+        <meta property="og:url" content="https://www.acuitygroups.in/careers" />
         <meta
           property="og:title"
           content="Careers | Join Acuity Integrated Facility Management Team"
@@ -173,7 +173,7 @@ const Careers = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/careers-og.jpg"
+          content="https://www.acuitygroups.in/static/media/careers-og.jpg"
         />
         <meta
           property="og:site_name"
@@ -192,7 +192,7 @@ const Careers = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/careers-og.jpg"
+          content="https://www.acuitygroups.in/static/media/careers-og.jpg"
         />
       </Helmet>
 

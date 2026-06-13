@@ -53,7 +53,7 @@ const ProfessionalHousekeepingBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://acuitygroups.in/blogs/professional-housekeeping",
+    "https://www.acuitygroups.in/blogs/professional-housekeeping",
   );
   const shareTitle = encodeURIComponent(
     "Professional Housekeeping Services in Commercial Spaces | Acuity Groups",
@@ -75,7 +75,7 @@ const ProfessionalHousekeepingBlog = () => {
       "The Importance of Professional Housekeeping Services in Commercial Spaces",
     description:
       "Ensure flawless hygiene and customer experiences. Learn how professional housekeeping by Acuity Groups transforms offices, hotels, & clinics.",
-    image: "https://acuitygroups.in/static/media/home1.jpg",
+    image: "https://www.acuitygroups.in/static/media/home1.jpg",
     datePublished: "2025-06-01",
     dateModified: "2025-06-01",
     author: { "@type": "Organization", name: "Acuity Groups" },
@@ -84,12 +84,12 @@ const ProfessionalHousekeepingBlog = () => {
       name: "Acuity Groups",
       logo: {
         "@type": "ImageObject",
-        url: "https://acuitygroups.in/logo.png",
+        url: "https://www.acuitygroups.in/logo.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://acuitygroups.in/blogs/professional-housekeeping",
+      "@id": "https://www.acuitygroups.in/blogs/professional-housekeeping",
     },
   };
 
@@ -132,19 +132,19 @@ const ProfessionalHousekeepingBlog = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://acuitygroups.in/",
+        item: "https://www.acuitygroups.in/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs/allblogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Professional Housekeeping",
-        item: "https://acuitygroups.in/blogs/professional-housekeeping",
+        item: "https://www.acuitygroups.in/blogs/professional-housekeeping",
       },
     ],
   };
@@ -177,7 +177,7 @@ const ProfessionalHousekeepingBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://acuitygroups.in/blogs/professional-housekeeping"
+          href="https://www.acuitygroups.in/blogs/professional-housekeeping"
         />
         <title>Why Commercial Housekeeping Matters | Acuity Groups</title>
         <meta
@@ -195,7 +195,7 @@ const ProfessionalHousekeepingBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://acuitygroups.in/blogs/professional-housekeeping"
+          content="https://www.acuitygroups.in/blogs/professional-housekeeping"
         />
         <meta
           property="og:title"
@@ -207,7 +207,7 @@ const ProfessionalHousekeepingBlog = () => {
         />
         <meta
           property="og:image"
-          content="https://acuitygroups.in/static/media/home1.jpg"
+          content="https://www.acuitygroups.in/static/media/home1.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -223,7 +223,7 @@ const ProfessionalHousekeepingBlog = () => {
         />
         <meta
           name="twitter:image"
-          content="https://acuitygroups.in/static/media/home1.jpg"
+          content="https://www.acuitygroups.in/static/media/home1.jpg"
         />
       </Helmet>
 
