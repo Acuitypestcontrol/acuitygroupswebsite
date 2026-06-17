@@ -1,25 +1,32 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import MAn from "../images/manpowerout.webp";
 import {
   Users,
   Factory,
-  Building,
+  Building2,
   Shield,
   Hammer,
   CheckCircle,
   Briefcase,
+  Clock,
+  Award,
+  PhoneCall,
+  ArrowRight,
+  Sparkles,
 } from "lucide-react";
 
-const ManpowerOutsourcing = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+import ManpowerHero from "../images/manpowerout.webp";
+import IndustrialManpower from "../images/industrrialmanpower.png";
+import FacilityStaff from "../images/integratedcom.jpg";
+import SecurityManpower from "../images/securityacuity.jpg";
+import ConstructionLabour from "../images/labours.jpg";
+import StaffingSolutions from "../images/staffing.jpg";
+import PayrollSupport from "../images/now.jpg";
 
+const ManpowerOutsourcing = () => {
   const services = [
     {
-      icon: Factory,
+      image: IndustrialManpower,
       title: "Industrial Manpower",
       desc: "Skilled and semi-skilled workers for manufacturing, production, and industrial operations.",
       features: [
@@ -30,7 +37,7 @@ const ManpowerOutsourcing = () => {
       ],
     },
     {
-      icon: Building,
+      image: FacilityStaff,
       title: "Facility Management Staff",
       desc: "Trained workforce for housekeeping, cleaning, maintenance, and facility support services.",
       features: [
@@ -41,7 +48,7 @@ const ManpowerOutsourcing = () => {
       ],
     },
     {
-      icon: Shield,
+      image: SecurityManpower,
       title: "Security Manpower",
       desc: "Professional security guards, CCTV operators, and gate supervisors for comprehensive safety.",
       features: [
@@ -52,7 +59,7 @@ const ManpowerOutsourcing = () => {
       ],
     },
     {
-      icon: Hammer,
+      image: ConstructionLabour,
       title: "Construction Labour",
       desc: "Experienced workers for construction projects including masons, electricians, plumbers, and helpers.",
       features: [
@@ -63,7 +70,7 @@ const ManpowerOutsourcing = () => {
       ],
     },
     {
-      icon: Users,
+      image: StaffingSolutions,
       title: "Staffing Solutions",
       desc: "Temporary and permanent staffing for offices, retail, hospitality, and events.",
       features: [
@@ -74,7 +81,7 @@ const ManpowerOutsourcing = () => {
       ],
     },
     {
-      icon: Briefcase,
+      image: PayrollSupport,
       title: "HR & Payroll Support",
       desc: "Complete HR management, payroll processing, and compliance support for outsourced workforce.",
       features: [
@@ -87,12 +94,28 @@ const ManpowerOutsourcing = () => {
   ];
 
   const benefits = [
-    "Trained & Verified Staff",
-    "Quick Replacement Policy",
-    "Flexible Contract Terms",
-    "PAN India Service Network",
-    "Compliance & PF Support",
-    "24/7 Deployment Support",
+    { text: "Trained & Verified Staff", icon: Users },
+    { text: "Quick Replacement Policy", icon: Clock },
+    { text: "Flexible Contract Terms", icon: Briefcase },
+    { text: "PAN India Service Network", icon: Building2 },
+    { text: "Compliance & PF Support", icon: Shield },
+    { text: "24/7 Deployment Support", icon: Award },
+  ];
+
+  const stats = [
+    { label: "Staff Deployed", value: "2000+", icon: Users },
+    { label: "Active Clients", value: "150+", icon: Award },
+    { label: "Industries Served", value: "15+", icon: Factory },
+    { label: "Replacement Guarantee", value: "24 Hrs", icon: Clock },
+  ];
+
+  const whyChoose = [
+    "Trained & verified workforce",
+    "Quick replacement policy",
+    "Flexible contract options",
+    "PAN India deployment support",
+    "PF, ESI & compliance management",
+    "24/7 workforce assistance",
   ];
 
   const industries = [
@@ -106,352 +129,286 @@ const ManpowerOutsourcing = () => {
     "Construction Sites",
   ];
 
-  // JSON-LD for WebPage
-  const webpageSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: "Manpower Outsourcing Services | Skilled & Unskilled Staffing Solutions",
-    description:
-      "Professional manpower outsourcing services for industrial, facility management, security, construction, and staffing needs. Trained and verified workforce with flexible contracts.",
-    url: "https://www.acuitygroups.in/manpower",
-    publisher: {
-      "@type": "Organization",
-      name: "Acuity Groups",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.acuitygroups.in/logo.png",
-      },
-    },
-  };
-
   return (
-    <>
-      <Helmet>
-        <link rel="canonical" href="https://www.acuitygroups.in/manpower" />
-        <title>Staffing & Manpower Solutions | Acuity Groups Bangalore</title>
-        <meta
-          name="description"
-          content="Access a trained, verified workforce in Bangalore. Reliable manpower outsourcing for industrial, security, construction, and staffing needs with flexible plans."
-        />
-        <meta
-          name="keywords"
-          content="manpower outsourcing, staffing solutions, industrial manpower, facility management staff, security guards, construction labour, HR payroll, Bangalore, Acuity Groups"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Acuity Groups" />
+    <div className="bg-white text-gray-800 font-sans overflow-hidden">
+      {/* HERO */}
+      <section className="relative min-h-screen flex items-center">
+        <div className="absolute inset-0">
+          <img
+            src={ManpowerHero}
+            alt="Manpower Outsourcing Services"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-950/85 to-blue-900/40"></div>
+        </div>
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://www.acuitygroups.in/manpower"
-        />
-        <meta
-          property="og:title"
-          content="Manpower Outsourcing Services | Skilled & Unskilled Staffing Solutions | Acuity Groups"
-        />
-        <meta
-          property="og:description"
-          content="Professional manpower outsourcing services for industrial, facility management, security, construction, and staffing needs. Trained and verified workforce."
-        />
-        <meta
-          property="og:image"
-          content="https://www.acuitygroups.in/static/media/manpowerout.webp"
-        />
-        <meta property="og:site_name" content="Acuity Groups" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Manpower Outsourcing Services | Acuity Groups"
-        />
-        <meta
-          name="twitter:description"
-          content="Professional manpower outsourcing services – trained and verified workforce for multiple industries."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.acuitygroups.in/static/media/manpowerout.webp"
-        />
-      </Helmet>
-
-      {/* JSON-LD for WebPage */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }}
-      />
-
-      <div className="bg-white text-gray-800 overflow-hidden font-['Poppins',system-ui,sans-serif]">
-        {/* HERO SECTION with gradient background */}
-        <section className="relative bg-gradient-to-br from-blue-900 to-blue-700 text-white py-24 md:py-32 overflow-hidden h-[550px]">
-          {/* BACKGROUND IMAGE (real workforce feel) */}
-          <div className="absolute inset-0">
-            <img
-              src={MAn}
-              alt="Manpower Outsourcing Services"
-              className="w-full object-cover opacity-50 h-[550px]"
-            />
-          </div>
-
-          {/* Glow effects */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-          </div>
-
-          <div className="relative max-w-7xl mx-auto px-6 text-center">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 rounded-full text-blue-100 tracking-[4px] text-sm mb-6">
-              <Briefcase size={14} />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full">
+          <div className="max-w-3xl text-white">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold mb-6">
+              <Briefcase size={16} className="text-yellow-300" />
               <span>MANPOWER OUTSOURCING</span>
             </div>
 
-            {/* Heading */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 uppercase tracking-wide">
-              Manpower <span className="text-white">Outsourcing Services</span>
+            <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+              Professional Manpower Outsourcing Services
             </h1>
 
-            {/* Description */}
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-10">
               Skilled, semi-skilled, and unskilled workforce solutions for
-              industries, offices, and construction projects. Reliable staffing
-              tailored to your business needs.
+              industries, offices, construction projects, and facility
+              operations.
             </p>
 
-            {/* CTA BUTTONS */}
-            <div className="mt-10 flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-4">
               <Link
                 to="/contactus"
-                className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
+                className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition flex items-center gap-2"
               >
-                Hire Manpower
+                Hire Manpower <ArrowRight size={18} />
               </Link>
 
               <Link
                 to="/services"
-                className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition"
+                className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-blue-900 transition"
               >
-                All Services
+                View Services
               </Link>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* INTRODUCTION SECTION */}
-        <section className="py-20 px-6 md:px-12">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <p className="text-blue-900 uppercase tracking-[5px] mb-4 font-thin">
-                  Reliable Workforce Solutions
-                </p>
-                <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-                  Professional Staffing for Every Need
-                </h2>
-                <p className="text-gray-600 text-lg leading-relaxed mb-4">
-                  We provide trained manpower to support businesses in
-                  operations, maintenance, security, and industrial work. Our
-                  rigorous screening and training process ensures you get
-                  reliable, skilled professionals.
-                </p>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  From temporary staff for seasonal peaks to permanent workforce
-                  for long-term projects, we offer flexible outsourcing
-                  solutions that reduce your HR burden and improve operational
-                  efficiency.
-                </p>
-                <div className="mt-8 grid grid-cols-2 gap-4">
-                  {benefits.slice(0, 4).map((benefit, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <CheckCircle size={18} className="text-blue-900" />
-                      <span className="text-gray-700 text-sm">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
+      {/* STATS */}
+      <section className="-mt-20 relative z-20 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl shadow-xl p-6 text-center border border-gray-100"
+            >
+              <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-blue-50 text-blue-900 flex items-center justify-center">
+                <stat.icon size={26} />
               </div>
-              <div className="bg-gray-50 rounded-3xl p-8 border border-gray-100">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Our Impact
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                    <span className="text-gray-600">Staff Deployed</span>
-                    <span className="text-2xl font-semibold text-blue-900">
-                      2000+
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                    <span className="text-gray-600">Active Clients</span>
-                    <span className="text-2xl font-semibold text-blue-900">
-                      150+
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                    <span className="text-gray-600">Industries Served</span>
-                    <span className="text-2xl font-semibold text-blue-900">
-                      15+
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Replacement Guarantee</span>
-                    <span className="text-2xl font-semibold text-blue-900">
-                      24 Hrs
-                    </span>
-                  </div>
-                </div>
-              </div>
+              <h3 className="text-3xl font-black text-gray-900">
+                {stat.value}
+              </h3>
+              <p className="text-gray-500 text-sm mt-1">{stat.label}</p>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* INTRO */}
+      <section className="py-24 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-blue-50 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
+              <Sparkles size={15} />
+              <span>RELIABLE WORKFORCE SOLUTIONS</span>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+              Professional Staffing for Every Need
+            </h2>
+
+            <p className="text-gray-600 text-lg leading-relaxed mb-5">
+              We provide trained manpower to support businesses in operations,
+              maintenance, security, facility support, construction, and
+              industrial work.
+            </p>
+
+            <p className="text-gray-600 text-lg leading-relaxed">
+              From temporary staff for seasonal requirements to permanent
+              workforce for long-term projects, we offer flexible outsourcing
+              solutions that reduce HR burden and improve operational
+              efficiency.
+            </p>
           </div>
-        </section>
 
-        {/* SERVICES GRID */}
-        <section className="py-20 px-6 md:px-12 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-2 rounded-full text-black tracking-[5px] text-sm font-thin mb-5">
-                <Briefcase size={14} />
-                <span>WHAT WE OFFER</span>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition"
+              >
+                <div className="w-12 h-12 bg-blue-900 text-white rounded-xl flex items-center justify-center mb-4">
+                  <benefit.icon size={24} />
+                </div>
+                <h3 className="font-bold text-gray-900">{benefit.text}</h3>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900">
-                Our Manpower{" "}
-                <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text text-transparent">
-                  Solutions
-                </span>
-              </h2>
-              <p className="text-gray-500 max-w-2xl mx-auto mt-4">
-                Comprehensive staffing solutions across industries
-              </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section className="py-24 px-6 md:px-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 bg-white border border-blue-100 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
+              <Briefcase size={15} />
+              <span>WHAT WE OFFER</span>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-blue-200 hover:-translate-y-2 transition-all duration-500 hover:shadow-xl hover:shadow-blue-100"
-                >
-                  <div className="w-14 h-14 rounded-xl  flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    <service.icon size={28} className="text-blue-900" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-900 transition-colors">
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+              Our Manpower Solutions
+            </h2>
+
+            <p className="text-gray-500 text-lg">
+              Comprehensive staffing solutions for industries, offices,
+              security, facility support, and construction needs.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition group"
+              >
+                <div className="h-56 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                  />
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-xl font-black text-gray-900 mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed mb-4">
+
+                  <p className="text-gray-600 text-sm leading-relaxed mb-5">
                     {service.desc}
                   </p>
-                  <div className="flex flex-wrap gap-2 mt-2">
+
+                  <div className="space-y-2 mb-5">
                     {service.features.map((feature, idx) => (
-                      <span
+                      <div
                         key={idx}
-                        className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
+                        className="flex items-center gap-2 text-sm text-gray-700"
                       >
-                        {feature}
-                      </span>
+                        <CheckCircle size={15} className="text-blue-900" />
+                        <span>{feature}</span>
+                      </div>
                     ))}
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* BENEFITS SECTION */}
-        <section className="py-20 px-6 md:px-12">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-black text-gray-900">
-                Why Choose{" "}
-                <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text text-transparent">
-                  Acuity Groups
-                </span>
-              </h2>
-              <p className="text-gray-500 max-w-2xl mx-auto mt-4">
-                We deliver excellence through quality, reliability, and
-                professionalism
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center gap-3 bg-gray-50 p-5 rounded-xl border border-gray-100 hover:border-blue-200 transition-all hover:shadow-sm"
-                >
-                  <CheckCircle className="text-blue-900 w-5 h-5 flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">{benefit}</span>
+                  <Link
+                    to="/contactus"
+                    className="text-blue-900 font-bold inline-flex items-center gap-2"
+                  >
+                    Enquire Now <ArrowRight size={16} />
+                  </Link>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* INDUSTRIES WE SERVE */}
-        <section className="py-20 px-6 md:px-12 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-2 rounded-full text-blue-900 tracking-[5px] text-sm font-thin mb-5">
-                <Building size={14} />
-                <span>INDUSTRIES WE SERVE</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900">
-                Trusted Across{" "}
-                <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text text-transparent">
-                  Sectors
-                </span>
-              </h2>
-              <p className="text-gray-500 max-w-2xl mx-auto mt-4">
-                We provide manpower solutions for a wide range of industries
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-4 gap-6">
-              {industries.map((industry, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white border border-gray-200 p-4 rounded-xl text-center hover:border-blue-300 hover:shadow-md transition-all hover:-translate-y-1"
-                >
-                  <span className="text-gray-800 font-medium text-sm">
-                    {industry}
-                  </span>
-                </div>
-              ))}
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA SECTION */}
-        <section className="py-20 px-6 md:px-12 bg-gradient-to-r from-blue-900 to-blue-700">
-          <div className="max-w-5xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-5xl font-black mb-4">
-              Need Reliable Manpower?
+      {/* WHY CHOOSE */}
+      <section className="py-24 px-6 md:px-12 bg-white">
+        <div className="max-w-7xl mx-auto bg-blue-950 rounded-[40px] p-8 md:p-14 text-white grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-black mb-6">
+              Why Choose Acuity Groups?
             </h2>
-            <p className="text-blue-100 text-lg mb-8">
-              Let us handle your staffing needs with trained, verified
-              professionals.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link
-                to="/contactus"
-                className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
-              >
-                Hire Manpower
-              </Link>
-              <Link
-                to="/services"
-                className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition"
-              >
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
 
-        <style>
-          {`
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-          `}
-        </style>
-      </div>
-    </>
+            <p className="text-blue-100 text-lg leading-relaxed mb-8">
+              We help businesses reduce hiring challenges with trained,
+              verified, compliant, and professionally managed manpower
+              solutions.
+            </p>
+
+            <Link
+              to="/contactus"
+              className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold inline-flex items-center gap-2"
+            >
+              Contact Us <ArrowRight size={18} />
+            </Link>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            {whyChoose.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white/10 border border-white/10 rounded-2xl p-5"
+              >
+                <CheckCircle className="text-yellow-300 mb-3" size={24} />
+                <h3 className="font-bold">{item}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* INDUSTRIES */}
+      <section className="py-24 px-6 md:px-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 bg-white border border-blue-100 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
+              <Building2 size={15} />
+              <span>INDUSTRIES WE SERVE</span>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+              Trusted Across Sectors
+            </h2>
+
+            <p className="text-gray-500 text-lg">
+              We provide manpower outsourcing solutions for a wide range of
+              business sectors.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {industries.map((industry, index) => (
+              <div
+                key={index}
+                className="bg-white border border-gray-100 rounded-2xl p-5 text-center hover:shadow-lg transition"
+              >
+                <span className="font-bold text-gray-800 text-sm">
+                  {industry}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 px-6 md:px-12 bg-white">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
+            Need Reliable Manpower?
+          </h2>
+
+          <p className="text-gray-600 text-lg mb-10">
+            Let us handle your staffing needs with trained, verified, and
+            professionally managed workforce solutions.
+          </p>
+
+          <div className="flex flex-wrap gap-5 justify-center">
+            <Link
+              to="/contactus"
+              className="bg-blue-900 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-800 transition inline-flex items-center gap-2"
+            >
+              Hire Manpower <ArrowRight size={18} />
+            </Link>
+
+            <a
+              href="tel:9941229005"
+              className="border-2 border-blue-900 text-blue-900 px-10 py-4 rounded-full font-bold hover:bg-blue-900 hover:text-white transition inline-flex items-center gap-2"
+            >
+              <PhoneCall size={18} />
+              +91 99412 29005
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 

@@ -88,7 +88,7 @@ const Navbar = () => {
         <div
           className={`transition-all duration-500 ${
             scrolled
-              ? "hidden lg:block bg-white/40 backdrop-blur-md border-b border-gray-400 "
+              ? "hidden lg:block bg-white/10 backdrop-blur-sm "
               : "bg-transparent"
           }`}
         >
@@ -99,7 +99,7 @@ const Navbar = () => {
                 <img
                   src={Logo}
                   alt="Acuity Groups Logo"
-                  className="h-24 w-auto object-contain lg:h-40"
+                  className="h-24 w-auto object-contain lg:h-40 "
                 />
               </Link>
 

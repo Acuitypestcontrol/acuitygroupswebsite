@@ -1,26 +1,33 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import Maintenance from "../images/RepairingMaintenance.jpg";
 import {
   Zap,
   Droplets,
   Hammer,
-  Building,
+  Building2,
   CheckCircle,
   Wrench,
+  Users,
+  Clock,
+  Award,
+  PhoneCall,
+  ArrowRight,
+  Sparkles,
+  ShieldCheck,
 } from "lucide-react";
 
-const RepairMaintenance = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+import MaintenanceHero from "../images/RepairingMaintenance.jpg";
+import ElectricalService from "../images/electricalservicepng.jpg";
+import PlumbingService from "../images/plumbing.jpg";
+import CarpentryService from "../images/carpentry.jpg";
+import BuildingMaintenance from "../images/buildingmain.jpg";
 
+const RepairMaintenance = () => {
   const services = [
     {
-      icon: Zap,
+      image: ElectricalService,
       title: "Electrical Services",
-      desc: "Wiring & rewiring, lighting installation, switchboard maintenance, and power troubleshooting.",
+      desc: "Wiring and rewiring, lighting installation, switchboard maintenance, and power troubleshooting.",
       features: [
         "Wiring & Rewiring",
         "Lighting Installation",
@@ -29,7 +36,7 @@ const RepairMaintenance = () => {
       ],
     },
     {
-      icon: Droplets,
+      image: PlumbingService,
       title: "Plumbing Services",
       desc: "Pipe leakage repair, drain cleaning, bathroom fittings, and water system maintenance.",
       features: [
@@ -40,9 +47,9 @@ const RepairMaintenance = () => {
       ],
     },
     {
-      icon: Hammer,
+      image: CarpentryService,
       title: "Carpentry Services",
-      desc: "Furniture repair, door & window fixing, cabinet installation, and wood polishing.",
+      desc: "Furniture repair, door and window fixing, cabinet installation, and wood polishing.",
       features: [
         "Furniture Repair",
         "Door/Window Fixing",
@@ -51,9 +58,9 @@ const RepairMaintenance = () => {
       ],
     },
     {
-      icon: Building,
+      image: BuildingMaintenance,
       title: "Building Maintenance",
-      desc: "Wall & floor repairs, painting & finishing, and structural maintenance.",
+      desc: "Wall and floor repairs, painting, finishing, structural maintenance, and waterproofing support.",
       features: [
         "Wall & Floor Repairs",
         "Painting & Finishing",
@@ -64,12 +71,28 @@ const RepairMaintenance = () => {
   ];
 
   const benefits = [
-    "Experienced & Certified Technicians",
-    "Same-Day Service Available",
-    "Quality Spare Parts Used",
-    "Transparent Pricing",
-    "Emergency Support",
-    "Warranty on Repairs",
+    { text: "Experienced & Certified Technicians", icon: Users },
+    { text: "Same-Day Service Available", icon: Clock },
+    { text: "Quality Spare Parts Used", icon: ShieldCheck },
+    { text: "Transparent Pricing", icon: CheckCircle },
+    { text: "Emergency Support", icon: Wrench },
+    { text: "Warranty on Repairs", icon: Award },
+  ];
+
+  const stats = [
+    { label: "Years Experience", value: "19+", icon: Award },
+    { label: "Technicians", value: "50+", icon: Users },
+    { label: "Service Calls / Month", value: "1000+", icon: Building2 },
+    { label: "Response Time", value: "< 2 Hrs", icon: Clock },
+  ];
+
+  const whyChoose = [
+    "Experienced certified technicians",
+    "Same-day service support",
+    "Quality spare parts used",
+    "Transparent service pricing",
+    "Emergency repair assistance",
+    "Warranty on repair work",
   ];
 
   const industries = [
@@ -83,349 +106,282 @@ const RepairMaintenance = () => {
     "Warehouses",
   ];
 
-  // JSON-LD for WebPage
-  const webpageSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: "Repairing & Maintenance Services | Electrical & Plumbing Solutions",
-    description:
-      "Professional repair and maintenance services including electrical, plumbing, carpentry, and building maintenance for residential and commercial properties.",
-    url: "https://www.acuitygroups.in/repair",
-    publisher: {
-      "@type": "Organization",
-      name: "Acuity Groups",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.acuitygroups.in/logo.png",
-      },
-    },
-  };
-
   return (
-    <>
-      <Helmet>
-        <link rel="canonical" href="https://www.acuitygroups.in/repair" />
-        <title>Property Repair & Maintenance | Acuity Groups Bangalore</title>
-        <meta
-          name="description"
-          content="Need fast property repairs? Get professional plumbing, electrical, and carpentry maintenance for Bangalore homes and commercial spaces. Book today!"
-        />
-        <meta
-          name="keywords"
-          content="repair services, maintenance services, electrical repair, plumbing services, carpentry, building maintenance, Bangalore, Acuity Groups"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Acuity Groups" />
+    <div className="bg-white text-gray-800 font-sans overflow-hidden">
+      {/* HERO */}
+      <section className="relative min-h-screen flex items-center">
+        <div className="absolute inset-0">
+          <img
+            src={MaintenanceHero}
+            alt="Repair and Maintenance Services"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-950/85 to-blue-900/40"></div>
+        </div>
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.acuitygroups.in/repair" />
-        <meta
-          property="og:title"
-          content="Repairing & Maintenance Services | Electrical & Plumbing Solutions | Acuity Groups"
-        />
-        <meta
-          property="og:description"
-          content="Professional repair and maintenance services including electrical, plumbing, carpentry, and building maintenance for residential and commercial properties."
-        />
-        <meta
-          property="og:image"
-          content="https://www.acuitygroups.in/static/media/RepairingMaintenance.jpg"
-        />
-        <meta property="og:site_name" content="Acuity Groups" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Repairing & Maintenance Services | Acuity Groups"
-        />
-        <meta
-          name="twitter:description"
-          content="Fast and reliable repair and maintenance services – electrical, plumbing, carpentry, and building maintenance."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.acuitygroups.in/static/media/RepairingMaintenance.jpg"
-        />
-      </Helmet>
-
-      {/* JSON-LD for WebPage */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }}
-      />
-
-      <div className="bg-white text-gray-800 overflow-hidden font-['Poppins',system-ui,sans-serif]">
-        {/* HERO SECTION with gradient background */}
-        <section className="relative bg-gradient-to-br from-blue-900 to-blue-700 text-white py-24 md:py-32 overflow-hidden h-[550px]">
-          {/* BACKGROUND IMAGE LAYER (makes it look like real service banner) */}
-          <div className="absolute inset-0">
-            <img
-              src={Maintenance}
-              alt="Repair and Maintenance Services"
-              className="w-full h-[550px] object-cover opacity-40"
-            />
-          </div>
-
-          {/* Glow effects */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-          </div>
-
-          <div className="relative max-w-7xl mx-auto px-6 text-center">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 rounded-full text-blue-100 tracking-[4px] text-sm mb-6">
-              <Wrench size={14} />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full">
+          <div className="max-w-3xl text-white">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold mb-6">
+              <Wrench size={16} className="text-yellow-300" />
               <span>REPAIR & MAINTENANCE</span>
             </div>
 
-            {/* Heading (banner style) */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 uppercase tracking-wide">
-              Repairing &{" "}
-              <span className="text-white">Maintenance Services</span>
+            <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+              Repairing & Maintenance Services
             </h1>
 
-            {/* Description */}
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-10">
               Reliable electrical, plumbing, carpentry, and building maintenance
               services for residential and commercial properties.
             </p>
 
-            {/* BUTTONS */}
-            <div className="mt-10 flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-4">
               <Link
                 to="/contactus"
-                className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
+                className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition flex items-center gap-2"
               >
-                Book Service
+                Book Service <ArrowRight size={18} />
               </Link>
 
               <Link
                 to="/services"
-                className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition"
+                className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-blue-900 transition"
               >
-                All Services
+                View Services
               </Link>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* INTRODUCTION SECTION */}
-        <section className="py-20 px-6 md:px-12">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <p className="text-blue-900 uppercase tracking-[5px] mb-4 font-thin">
-                  Complete Maintenance Solutions
-                </p>
-                <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-                  Professional Repair & Maintenance
-                </h2>
-                <p className="text-gray-600 text-lg leading-relaxed mb-4">
-                  We provide complete repair and maintenance support to ensure
-                  smooth functioning of your property and infrastructure. Our
-                  experienced technicians handle everything from minor fixes to
-                  major repairs.
-                </p>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  From electrical faults and plumbing leaks to carpentry work
-                  and building upkeep, we deliver fast, reliable, and affordable
-                  solutions for homes and businesses.
-                </p>
-                <div className="mt-8 grid grid-cols-2 gap-4">
-                  {benefits.slice(0, 4).map((benefit, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <CheckCircle size={18} className="text-blue-900" />
-                      <span className="text-gray-700 text-sm">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
+      {/* STATS */}
+      <section className="-mt-20 relative z-20 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl shadow-xl p-6 text-center border border-gray-100"
+            >
+              <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-blue-50 text-blue-900 flex items-center justify-center">
+                <stat.icon size={26} />
               </div>
-              <div className="bg-gray-50 rounded-3xl p-8 border border-gray-100">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Why Choose Us
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                    <span className="text-gray-600">Years Experience</span>
-                    <span className="text-2xl font-semibold text-blue-900">
-                      19+
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                    <span className="text-gray-600">Technicians</span>
-                    <span className="text-2xl font-semibold text-blue-900">
-                      50+
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                    <span className="text-gray-600">Service Calls / Month</span>
-                    <span className="text-2xl font-semibold text-blue-900">
-                      1000+
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Response Time</span>
-                    <span className="text-2xl font-semibold text-blue-900">
-                      &lt; 2 Hrs
-                    </span>
-                  </div>
-                </div>
-              </div>
+              <h3 className="text-3xl font-black text-gray-900">
+                {stat.value}
+              </h3>
+              <p className="text-gray-500 text-sm mt-1">{stat.label}</p>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* INTRO */}
+      <section className="py-24 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-blue-50 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
+              <Sparkles size={15} />
+              <span>COMPLETE MAINTENANCE SOLUTIONS</span>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+              Professional Repair & Maintenance
+            </h2>
+
+            <p className="text-gray-600 text-lg leading-relaxed mb-5">
+              We provide complete repair and maintenance support to ensure
+              smooth functioning of your property and infrastructure.
+            </p>
+
+            <p className="text-gray-600 text-lg leading-relaxed">
+              From electrical faults and plumbing leaks to carpentry work and
+              building upkeep, we deliver fast, reliable, and affordable
+              solutions for homes and businesses.
+            </p>
           </div>
-        </section>
 
-        {/* SERVICES GRID */}
-        <section className="py-20 px-6 md:px-12 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-2 rounded-full text-black tracking-[5px] text-sm font-thin mb-5">
-                <Wrench size={14} />
-                <span>WHAT WE OFFER</span>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition"
+              >
+                <div className="w-12 h-12 bg-blue-900 text-white rounded-xl flex items-center justify-center mb-4">
+                  <benefit.icon size={24} />
+                </div>
+                <h3 className="font-bold text-gray-900">{benefit.text}</h3>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900">
-                Our Repair &{" "}
-                <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text text-transparent">
-                  Maintenance Services
-                </span>
-              </h2>
-              <p className="text-gray-500 max-w-2xl mx-auto mt-4">
-                Comprehensive solutions to keep your property in perfect
-                condition
-              </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section className="py-24 px-6 md:px-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 bg-white border border-blue-100 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
+              <Wrench size={15} />
+              <span>WHAT WE OFFER</span>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-blue-200 hover:-translate-y-2 transition-all duration-500 hover:shadow-xl hover:shadow-blue-100"
-                >
-                  <div className="w-14 h-14 rounded-xl  flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    <service.icon size={28} className="text-blue-900" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-900 transition-colors">
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+              Our Repair & Maintenance Services
+            </h2>
+
+            <p className="text-gray-500 text-lg">
+              Comprehensive solutions to keep your property in perfect
+              condition.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition group"
+              >
+                <div className="h-56 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                  />
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-xl font-black text-gray-900 mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed mb-4">
+
+                  <p className="text-gray-600 text-sm leading-relaxed mb-5">
                     {service.desc}
                   </p>
-                  <div className="flex flex-wrap gap-2 mt-2">
+
+                  <div className="space-y-2 mb-5">
                     {service.features.map((feature, idx) => (
-                      <span
+                      <div
                         key={idx}
-                        className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
+                        className="flex items-center gap-2 text-sm text-gray-700"
                       >
-                        {feature}
-                      </span>
+                        <CheckCircle size={15} className="text-blue-900" />
+                        <span>{feature}</span>
+                      </div>
                     ))}
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* BENEFITS SECTION */}
-        <section className="py-20 px-6 md:px-12">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-black text-gray-900">
-                Why Choose{" "}
-                <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text text-transparent">
-                  Acuity Groups
-                </span>
-              </h2>
-              <p className="text-gray-500 max-w-2xl mx-auto mt-4">
-                We deliver excellence through quality, reliability, and
-                professionalism
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center gap-3 bg-gray-50 p-5 rounded-xl border border-gray-100 hover:border-blue-200 transition-all hover:shadow-sm"
-                >
-                  <CheckCircle className="text-blue-900 w-5 h-5 flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">{benefit}</span>
+                  <Link
+                    to="/contactus"
+                    className="text-blue-900 font-bold inline-flex items-center gap-2"
+                  >
+                    Enquire Now <ArrowRight size={16} />
+                  </Link>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* INDUSTRIES WE SERVE */}
-        <section className="py-20 px-6 md:px-12 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-2 rounded-full text-black tracking-[5px] text-sm font-thin mb-5">
-                <Building size={14} />
-                <span>INDUSTRIES WE SERVE</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900">
-                Trusted Across{" "}
-                <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text text-transparent">
-                  Sectors
-                </span>
-              </h2>
-              <p className="text-gray-500 max-w-2xl mx-auto mt-4">
-                We provide repair & maintenance solutions for a wide range of
-                industries
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-4 gap-6">
-              {industries.map((industry, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white border border-gray-200 p-4 rounded-xl text-center hover:border-blue-300 hover:shadow-md transition-all hover:-translate-y-1"
-                >
-                  <span className="text-gray-800 font-medium text-sm">
-                    {industry}
-                  </span>
-                </div>
-              ))}
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA SECTION */}
-        <section className="py-20 px-6 md:px-12 bg-gradient-to-r from-blue-900 to-blue-700">
-          <div className="max-w-5xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-5xl font-black mb-4">
-              Need Repair or Maintenance?
+      {/* WHY CHOOSE */}
+      <section className="py-24 px-6 md:px-12 bg-white">
+        <div className="max-w-7xl mx-auto bg-blue-950 rounded-[40px] p-8 md:p-14 text-white grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-black mb-6">
+              Why Choose Acuity Groups?
             </h2>
-            <p className="text-blue-100 text-lg mb-8">
-              Get fast, reliable service from our expert technicians today.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link
-                to="/contactus"
-                className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
-              >
-                Book Service
-              </Link>
-              <Link
-                to="/services"
-                className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition"
-              >
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
 
-        <style>
-          {`
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-          `}
-        </style>
-      </div>
-    </>
+            <p className="text-blue-100 text-lg leading-relaxed mb-8">
+              We deliver fast, reliable, and professional maintenance services
+              with experienced technicians, transparent pricing, and quality
+              repair support.
+            </p>
+
+            <Link
+              to="/contactus"
+              className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold inline-flex items-center gap-2"
+            >
+              Contact Us <ArrowRight size={18} />
+            </Link>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            {whyChoose.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white/10 border border-white/10 rounded-2xl p-5"
+              >
+                <CheckCircle className="text-yellow-300 mb-3" size={24} />
+                <h3 className="font-bold">{item}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* INDUSTRIES */}
+      <section className="py-24 px-6 md:px-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 bg-white border border-blue-100 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
+              <Building2 size={15} />
+              <span>INDUSTRIES WE SERVE</span>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+              Trusted Across Sectors
+            </h2>
+
+            <p className="text-gray-500 text-lg">
+              We provide repair and maintenance solutions for a wide range of
+              industries and properties.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {industries.map((industry, index) => (
+              <div
+                key={index}
+                className="bg-white border border-gray-100 rounded-2xl p-5 text-center hover:shadow-lg transition"
+              >
+                <span className="font-bold text-gray-800 text-sm">
+                  {industry}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 px-6 md:px-12 bg-white">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
+            Need Repair or Maintenance?
+          </h2>
+
+          <p className="text-gray-600 text-lg mb-10">
+            Get fast, reliable service from our expert technicians today.
+          </p>
+
+          <div className="flex flex-wrap gap-5 justify-center">
+            <Link
+              to="/contactus"
+              className="bg-blue-900 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-800 transition inline-flex items-center gap-2"
+            >
+              Book Service <ArrowRight size={18} />
+            </Link>
+
+            <a
+              href="tel:9941229005"
+              className="border-2 border-blue-900 text-blue-900 px-10 py-4 rounded-full font-bold hover:bg-blue-900 hover:text-white transition inline-flex items-center gap-2"
+            >
+              <PhoneCall size={18} />
+              +91 99412 29005
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 

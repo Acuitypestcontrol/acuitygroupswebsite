@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import AboutImage from "../../images/AboutImage.avif";
 import SecurityImage from "../../images/security123.avif";
 import SoftServices1 from "../../images/softservices.jpg";
-import Housekeeping1 from "../../images/housekeeping.jpg";
+import Housekeeping1 from "../../images/home.png";
 import FacilityManagement1 from "../../images/facilitymangmentjpg.jpg";
 import Pestcontrol from "../../images/pestcontrol.jpg";
 import MAnpowerout from "../../images/manpowerout.webp";
@@ -25,7 +25,7 @@ import {
 } from "lucide-react";
 
 import Banner1 from "../../images/banner3.jpg";
-import Banner2 from "../../images/banner2.jpg";
+import Banner2 from "../../images/banner2.png";
 import Banner3 from "../../images/banner1.jpg";
 
 export default function Homepage() {
@@ -67,6 +67,16 @@ export default function Homepage() {
       q: "Do you provide manpower outsourcing services?",
       a: "Yes, we offer skilled and unskilled manpower outsourcing solutions for various industries.",
     },
+
+    {
+      q: "Do you offer cost-effective facility management packages?",
+      a: "Yes, we offer flexible service packages suitable for different budgets.",
+    },
+
+    {
+      q: "Are there any hidden charges in your pricing?",
+      a: "No, our pricing is transparent with no hidden costs.",
+    },
   ];
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -102,8 +112,8 @@ export default function Homepage() {
       (entries) => {
         if (entries[0].isIntersecting) {
           const targetYears = 19;
-          const targetClients = 500;
-          const targetEmployees = 100;
+          const targetClients = 10000;
+          const targetEmployees = 500;
           const duration = 2000;
           const stepTime = 20;
           const stepsYears = targetYears / (duration / stepTime);
@@ -173,10 +183,10 @@ export default function Homepage() {
       path: "/softservices",
     },
     {
-      title: "Housekeeping",
-      desc: "Professional housekeeping services in Bangalore for offices, apartments, hospitals and industrial facilities.",
+      title: "Repair and Maintance",
+      desc: "Professional repair and maintenance services in Bangalore for offices, residential buildings, hospitals, and industrial facilities, ensuring smooth operations, safety, and long-lasting infrastructure performance.",
       image: Housekeeping1,
-      path: "/housekeeping",
+      path: "/repair",
     },
     {
       title: "Facility Management",
@@ -209,23 +219,6 @@ export default function Homepage() {
     "IT Companies",
   ];
 
-  const slideContent = [
-    {
-      title: "Security",
-      highlight: " Management Services",
-      desc: "Professional security guard services and surveillance solutions for residential, commercial and industrial properties across Bangalore.",
-    },
-    {
-      title: "Facility",
-      highlight: " Management Services In Bangalore",
-      desc: "Integrated facility management services including housekeeping, maintenance, security support and manpower solutions for commercial, residential and industrial properties.",
-    },
-    {
-      title: "Pest",
-      highlight: " Service In Bangalore",
-      desc: "Professional pest control services for homes, offices, apartments and industries. Safe, eco-friendly and effective solutions for termite, rodent, cockroach and general pest management.",
-    },
-  ];
   return (
     <div className="bg-white text-black overflow-hidden font-['Poppins',system-ui,sans-serif]">
       <Helmet>
@@ -239,83 +232,26 @@ export default function Homepage() {
         />
       </Helmet>
       {/* HERO SECTION */}
-      <section className="relative w-full h-screen overflow-hidden">
+      {/* HERO SECTION */}
+      <section className="relative w-90 h-48 md:w-full md:h-screen overflow-hidden bg-black">
         {banners.map((banner, index) => (
           <div
             key={index}
             className={`absolute inset-0 transition-all duration-[1200ms] ease-out ${
               currentSlide === index
                 ? "opacity-100 scale-100 z-20"
-                : "opacity-50 scale-110 z-10"
+                : "opacity-0 scale-105 z-10"
             }`}
           >
-            <div className="relative w-full h-full">
-              <img
-                src={banner}
-                alt={`Banner ${index + 1}`}
-                className={`md:w-full md:h-full object-cover transition-transform duration-[10000ms] ease-out ${
-                  currentSlide === index ? "scale-100" : "scale-100"
-                }`}
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-white/40 via-white/10 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-white/20" />
-            </div>
+            <img
+              src={banner}
+              alt={`Banner ${index + 1}`}
+              className="w-full h-full"
+            />
           </div>
         ))}
 
-        <div className="absolute inset-0 z-30 flex items-center">
-          <div className="max-w-7xl mx-auto px-6 w-full">
-            <div className="max-w-4xl">
-              <div className="transform transition-all duration-700 delay-300">
-                <div className="hidden md:inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-2 rounded-full text-blue-900 tracking-[5px] text-sm font-thin mb-6 shadow-sm">
-                  <Shield size={14} />
-                  <span>ACUITY GROUPS</span>
-                </div>
-              </div>
-
-              <div key={currentSlide} className="transition-all duration-700">
-                <h1 className="hidden lg:block text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-6 ">
-                  <span className="text-gray-900">
-                    {slideContent[currentSlide].title}
-                  </span>
-                  <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text text-transparent ">
-                    {slideContent[currentSlide].highlight}
-                  </span>
-                  {slideContent[currentSlide].location && (
-                    <span className="text-black">
-                      {slideContent[currentSlide].location}
-                    </span>
-                  )}
-                </h1>
-                <p className="text-lg md:text-xl text-black leading-relaxed mb-10 max-w-2xl pt-20 md:pt-0 lg:pt-0">
-                  {slideContent[currentSlide].desc}
-                </p>
-              </div>
-
-              <div className="flex md:flex-wrap gap-5">
-                <Link
-                  to="/pages/servicepage"
-                  className="group relative overflow-hidden bg-gradient-to-r from-blue-900 to-blue-700 text-white px-8 py-4 md:rounded-full font-thin shadow-md hover:shadow-blue-200 transition-all duration-300 hover:scale-105"
-                >
-                  <span className="relative z-10 flex items-center gap-2">
-                    Explore Services
-                    <ChevronRight
-                      size={18}
-                      className="group-hover:translate-x-1 transition-transform"
-                    />
-                  </span>
-                  <span className="absolute inset-0 w-0 bg-gradient-to-r from-blue-700 to-blue-900 group-hover:w-full transition-all duration-500" />
-                </Link>
-                <Link
-                  to="/contactus"
-                  className="relative border border-gray-300 text-gray-800 px-8 py-4 rounded-full font-medium backdrop-blur-sm hover:bg-gray-100 hover:border-gray-400 transition-all duration-300 hover:scale-105"
-                >
-                  Contact Us
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Buttons Only */}
 
         {/* Dots */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-40 flex gap-3">
@@ -329,76 +265,72 @@ export default function Homepage() {
                   setTimeout(() => setIsTransitioning(false), 1200);
                 }
               }}
-              className="group relative"
               aria-label={`Go to slide ${index + 1}`}
             >
               <div
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  currentSlide === index
-                    ? "bg-blue-900 w-8"
-                    : "bg-gray-400 w-2 hover:bg-gray-500"
+                  currentSlide === index ? "bg-lime-400 w-8" : "bg-white/60 w-2"
                 }`}
               />
-              {currentSlide === index && (
-                <div className="absolute -top-5 left-1/2 -translate-x-1/2">
-                  <div className="w-5 h-5 rounded-full border-2 border-blue-600/60 animate-ping" />
-                </div>
-              )}
             </button>
           ))}
         </div>
-
-        <div className="absolute bottom-8 right-8 z-40 hidden md:block">
-          <div className="bg-white/80 backdrop-blur-md rounded-full px-4 py-2 text-sm font-poppins shadow-md">
-            <span className="text-blue-900 font-thin">
-              {String(currentSlide + 1).padStart(2, "0")}
-            </span>
-            <span className="text-gray-500">
-              {" "}
-              / {String(banners.length).padStart(2, "0")}
-            </span>
-          </div>
-        </div>
       </section>
+
+      {/* <div className="">
+        <Link
+          to="/pages/servicepage"
+          className="bg-blue-900 text-white px-8 py-4 rounded-full font-semibold shadow-xl hover:bg-blue-800 transition-all"
+        >
+          Explore Services
+        </Link>
+
+        <Link
+          to="/contactus"
+          className="bg-white text-blue-900 px-8 py-4 rounded-full font-semibold shadow-xl hover:bg-gray-100 transition-all"
+        >
+          Contact Us
+        </Link>
+      </div> */}
 
       {/* STATS SECTION */}
       <section
         ref={statsRef}
-        className="relative z-40 px-6 md:px-12 md:py-20 lg:py-20"
+        className="relative z-40 px-6 md:px-12 md:py-20 lg:py-20 hidden lg:block md:block"
       >
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="md:max-w-7xl mx-auto">
+          <div className="grid grid-cols-4 lg:grid-cols-4 lg:gap-6 gap-10">
             <div className="group bg-white border border-gray-200 rounded-3xl md:p-8 text-center hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 transition-all duration-500 hover:-translate-y-2">
               <Award className="w-12 h-12 text-blue-900 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-              <h2 className="text-3xl md:text-5xl font-black text-black mb-3">
+              <h2 className="text-2xl md:text-5xl font-black text-black mb-3">
                 {counters.years}+
               </h2>
-              <p className="text-gray-600 text-lg font-medium">
+              <p className="text-gray-600 md:text-lg font-medium">
                 Years Experience
               </p>
             </div>
             <div className="group bg-white border border-gray-200 rounded-3xl md:p-8 text-center hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 transition-all duration-500 hover:-translate-y-2">
               <Star className="w-12 h-12 text-blue-900 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-              <h2 className="text-3xl md:text-5xl lg:text-5xl font-black text-black mb-3">
+              <h2 className="text-2xl md:text-5xl lg:text-5xl font-black text-black mb-3">
                 {counters.clients}+
               </h2>
-              <p className="text-gray-600 text-lg font-medium">Happy Clients</p>
+              <p className="text-gray-600 md:text-lg font-medium">Happy Clients</p>
             </div>
             <div className="group bg-white border border-gray-200 rounded-3xl md:p-8 text-center hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 transition-all duration-500 hover:-translate-y-2">
               <Users className="w-12 h-12 text-blue-900 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-              <h2 className="text-3xl md:text-5xl lg:text-5xl font-black text-black mb-3">
+              <h2 className="text-2xl md:text-5xl lg:text-5xl font-black text-black mb-3">
                 {counters.employees}+
               </h2>
-              <p className="text-gray-600 text-lg font-medium">
+              <p className="text-gray-600 md:text-lg font-medium">
                 Skilled Employees
               </p>
             </div>
             <div className="group bg-white border border-gray-200 rounded-3xl md:p-8 text-center hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 transition-all duration-500 hover:-translate-y-2">
               <Clock className="w-12 h-12 text-blue-900 mx-auto mb-4 group-hover:scale-110 transition-transform" />
-              <h2 className="text-3xl md:text-5xl lg:text-5xl font-black text-black mb-3">
+              <h2 className="text-2xl md:text-5xl lg:text-5xl font-black text-black mb-3">
                 24/7
               </h2>
-              <p className="text-gray-600 text-lg font-medium">
+              <p className="text-gray-600 md:text-lg font-medium">
                 Support Service
               </p>
             </div>
@@ -407,9 +339,9 @@ export default function Homepage() {
       </section>
 
       {/* ABOUT US SECTION */}
-      <section className="bg-gray-50 py:12 md:py-24 px-6 md:px-12 overflow-hidden">
+      <section className="bg-gray-50 py:12 md:py-24 px-6 md:px-12 overflow-hidden pt-10 md:pt-0 lg:pt-0">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <div className="relative">
+          <div className="relative hidden md:block lg:block">
             <img
               src={AboutImage}
               alt="Acuity Groups Facility Management Services"

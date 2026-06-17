@@ -28,7 +28,7 @@ const SocialSidebar = () => {
           </Link>
 
           <Link
-            to="https://www.youtube.com/@acuitypestcontrolservices4522"
+            to="https://www.youtube.com/@acuityGROUPS"
             className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center hover:scale-110 transition-all duration-300"
           >
             <FaYoutube className="text-[#FF0000] text-xl" />

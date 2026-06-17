@@ -1,13 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import Housekeeping1 from "../images/housekeeping.jpg";
-import { Home, Building, Droplets, Sparkles, CheckCircle } from "lucide-react";
+import {
+  Sparkles,
+  Building2,
+  Users,
+  Clock,
+  Award,
+  PhoneCall,
+  ArrowRight,
+  CheckCircle,
+  Home,
+  ShieldCheck,
+} from "lucide-react";
+
+import HousekeepingHero from "../images/housekeeping.jpg";
+import HomeHousekeeping from "../images/maidhouse.jpg";
+import OfficeHousekeeping from "../images/office.jpg";
+import DeepCleaning from "../images/deepcleaning.jpg";
+import CommercialCleaning from "../images/commercial.jpg";
 
 const Housekeeping = () => {
   const services = [
     {
-      icon: Home,
+      image: HomeHousekeeping,
       title: "Home Housekeeping",
       desc: "Daily home cleaning, kitchen degreasing, bathroom sanitization, dusting, mopping, and floor polishing.",
       features: [
@@ -18,9 +33,9 @@ const Housekeeping = () => {
       ],
     },
     {
-      icon: Building,
+      image: OfficeHousekeeping,
       title: "Office Housekeeping",
-      desc: "Workstation cleaning, pantry & restroom maintenance, floor & carpet cleaning, waste management.",
+      desc: "Workstation cleaning, pantry and restroom maintenance, floor cleaning, carpet cleaning, and waste management.",
       features: [
         "Workstation Cleaning",
         "Restroom Maintenance",
@@ -29,9 +44,9 @@ const Housekeeping = () => {
       ],
     },
     {
-      icon: Droplets,
+      image: DeepCleaning,
       title: "Deep Cleaning Services",
-      desc: "Sofa & carpet cleaning, kitchen deep cleaning, bathroom scrubbing, tile & stain removal.",
+      desc: "Professional sofa cleaning, carpet shampooing, kitchen deep cleaning, bathroom scrubbing, and tile stain removal.",
       features: [
         "Sofa Cleaning",
         "Carpet Shampooing",
@@ -40,9 +55,9 @@ const Housekeeping = () => {
       ],
     },
     {
-      icon: Sparkles,
+      image: CommercialCleaning,
       title: "Commercial Cleaning",
-      desc: "Professional cleaning for retail stores, showrooms, restaurants, and commercial establishments.",
+      desc: "Professional cleaning services for retail stores, showrooms, restaurants, commercial spaces, and high-traffic areas.",
       features: [
         "Retail Cleaning",
         "Restaurant Sanitization",
@@ -53,12 +68,28 @@ const Housekeeping = () => {
   ];
 
   const benefits = [
-    "Trained & Professional Staff",
-    "Eco-friendly Cleaning Products",
-    "Modern Equipment & Techniques",
-    "Flexible Scheduling",
-    "Quality Assurance Checks",
-    "24/7 Customer Support",
+    { text: "Trained & Professional Staff", icon: Users },
+    { text: "Eco-friendly Cleaning Products", icon: Sparkles },
+    { text: "Modern Equipment & Techniques", icon: ShieldCheck },
+    { text: "Flexible Scheduling", icon: Clock },
+    { text: "Quality Assurance Checks", icon: Award },
+    { text: "24/7 Customer Support", icon: CheckCircle },
+  ];
+
+  const stats = [
+    { label: "Satisfied Clients", value: "500+", icon: Users },
+    { label: "Cleaning Professionals", value: "150+", icon: Award },
+    { label: "Service Calls / Month", value: "2000+", icon: Building2 },
+    { label: "Satisfaction Rate", value: "98%", icon: Clock },
+  ];
+
+  const whyChoose = [
+    "Trained housekeeping professionals",
+    "Eco-friendly cleaning products",
+    "Modern cleaning equipment",
+    "Flexible service schedules",
+    "Quality inspection process",
+    "24/7 customer assistance",
   ];
 
   const industries = [
@@ -72,355 +103,285 @@ const Housekeeping = () => {
     "Restaurants & Cafes",
   ];
 
-  // JSON-LD for WebPage
-  const webpageSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    name: "Professional Housekeeping Services | Acuity Groups Bangalore",
-    description:
-      "Professional housekeeping services for homes, offices, and commercial spaces. Trained staff, eco-friendly products, and flexible scheduling.",
-    url: "https://www.acuitygroups.in/housekeeping",
-    publisher: {
-      "@type": "Organization",
-      name: "Acuity Groups",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.acuitygroups.in/logo.png",
-      },
-    },
-  };
-
   return (
-    <>
-      <Helmet>
-        <link rel="canonical" href="https://www.acuitygroups.in/housekeeping" />
-        <title>
-          Professional Housekeeping Services | Acuity Groups Bangalore
-        </title>
-        <meta
-          name="description"
-          content="Spotless homes and offices made simple. Get reliable, eco-friendly housekeeping services with trained staff and flexible scheduling."
-        />
-        <meta
-          name="keywords"
-          content="housekeeping services, home cleaning, office cleaning, deep cleaning, commercial cleaning, Bangalore, Acuity Groups"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Acuity Groups" />
+    <div className="bg-white text-gray-800 font-sans overflow-hidden">
+      {/* HERO */}
+      <section className="relative min-h-screen flex items-center">
+        <div className="absolute inset-0">
+          <img
+            src={HousekeepingHero}
+            alt="Housekeeping Services"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-950/85 to-blue-900/40"></div>
+        </div>
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://www.acuitygroups.in/housekeeping"
-        />
-        <meta
-          property="og:title"
-          content="Professional Housekeeping Services | Acuity Groups Bangalore"
-        />
-        <meta
-          property="og:description"
-          content="Professional housekeeping services for homes, offices, and commercial spaces. Trained staff, eco-friendly products, and flexible scheduling."
-        />
-        <meta
-          property="og:image"
-          content="https://www.acuitygroups.in/static/media/housekeeping.jpg"
-        />
-        <meta property="og:site_name" content="Acuity Groups" />
-
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Professional Housekeeping Services | Acuity Groups Bangalore"
-        />
-        <meta
-          name="twitter:description"
-          content="Professional housekeeping services for homes, offices, and commercial spaces. Book now for a spotless environment."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.acuitygroups.in/static/media/housekeeping.jpg"
-        />
-      </Helmet>
-
-      {/* JSON-LD for WebPage */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }}
-      />
-
-      <div className="bg-white text-gray-800 overflow-hidden font-['Poppins',system-ui,sans-serif]">
-        {/* HERO SECTION with gradient background */}
-        <section className="relative bg-gradient-to-br from-blue-900 to-blue-700 text-white py-24 md:py-32 overflow-hidden h-[550px]">
-          {/* REAL-LIFE BACKGROUND IMAGE LAYER */}
-          <div className="absolute inset-0">
-            <img
-              src={Housekeeping1}
-              alt="Housekeeping Services"
-              className="w-full object-cover opacity-80 h-[550px]"
-            />
-          </div>
-
-          {/* Glow effects */}
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-          </div>
-
-          <div className="relative max-w-7xl mx-auto px-6 text-center">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 rounded-full text-blue-100 tracking-[4px] text-sm mb-6">
-              <Sparkles size={14} />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full">
+          <div className="max-w-3xl text-white">
+            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold mb-6">
+              <Sparkles size={16} className="text-yellow-300" />
               <span>HOUSEKEEPING SERVICES</span>
             </div>
 
-            {/* Heading (banner style upgrade) */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 uppercase tracking-wide">
-              Professional{" "}
-              <span className="text-white">Housekeeping Services</span>
+            <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+              Professional Housekeeping Services
             </h1>
 
-            {/* Subtitle */}
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-10">
               Reliable home, office, and commercial cleaning services for a
               clean, hygienic, and healthy environment.
             </p>
 
-            {/* BUTTONS */}
-            <div className="mt-10 flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-4">
               <Link
                 to="/contactus"
-                className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
+                className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition flex items-center gap-2"
               >
-                Book Now
+                Book Now <ArrowRight size={18} />
               </Link>
 
               <Link
                 to="/services"
-                className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition"
+                className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-blue-900 transition"
               >
-                All Services
+                View Services
               </Link>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* INTRODUCTION SECTION */}
-        <section className="py-20 px-6 md:px-12">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <p className="text-blue-900 uppercase tracking-[5px] mb-4 font-thin">
-                  Clean & Hygienic Environments
-                </p>
-                <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-                  Trusted Housekeeping Solutions
-                </h2>
-                <p className="text-gray-600 text-lg leading-relaxed mb-4">
-                  We provide professional housekeeping services to maintain
-                  cleanliness, hygiene, and comfort in every type of property –
-                  from homes and offices to commercial complexes and industrial
-                  facilities.
-                </p>
-                <p className="text-gray-600 text-lg leading-relaxed">
-                  Our trained staff uses eco-friendly products and modern
-                  equipment to deliver spotless results while ensuring safety
-                  and environmental care.
-                </p>
-                <div className="mt-8 grid grid-cols-2 gap-4">
-                  {benefits.slice(0, 4).map((benefit, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <CheckCircle size={18} className="text-blue-900" />
-                      <span className="text-gray-700 text-sm">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
+      {/* STATS */}
+      <section className="-mt-20 relative z-20 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5">
+          {stats.map((stat, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-2xl shadow-xl p-6 text-center border border-gray-100"
+            >
+              <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-blue-50 text-blue-900 flex items-center justify-center">
+                <stat.icon size={26} />
               </div>
-              <div className="bg-gray-50 rounded-3xl p-8 border border-gray-100">
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                  Why Choose Us
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                    <span className="text-gray-600">Satisfied Clients</span>
-                    <span className="text-2xl font-semibold text-blue-900">
-                      500+
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                    <span className="text-gray-600">
-                      Cleaning Professionals
-                    </span>
-                    <span className="text-2xl font-semibold text-blue-900">
-                      150+
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center pb-3 border-b border-gray-200">
-                    <span className="text-gray-600">Service Calls / Month</span>
-                    <span className="text-2xl font-semibold text-blue-900">
-                      2000+
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-600">Satisfaction Rate</span>
-                    <span className="text-2xl font-semibold text-blue-900">
-                      98%
-                    </span>
-                  </div>
-                </div>
-              </div>
+              <h3 className="text-3xl font-black text-gray-900">
+                {stat.value}
+              </h3>
+              <p className="text-gray-500 text-sm mt-1">{stat.label}</p>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* INTRO */}
+      <section className="py-24 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-blue-50 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
+              <Home size={15} />
+              <span>CLEAN & HYGIENIC ENVIRONMENTS</span>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+              Trusted Housekeeping Solutions
+            </h2>
+
+            <p className="text-gray-600 text-lg leading-relaxed mb-5">
+              We provide professional housekeeping services to maintain
+              cleanliness, hygiene, and comfort in every type of property — from
+              homes and offices to commercial complexes and industrial
+              facilities.
+            </p>
+
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Our trained staff uses eco-friendly products and modern equipment
+              to deliver spotless results while ensuring safety and
+              environmental care.
+            </p>
           </div>
-        </section>
 
-        {/* SERVICES GRID */}
-        <section className="py-20 px-6 md:px-12 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-2 rounded-full text-black tracking-[5px] text-sm font-thin mb-5">
-                <Sparkles size={14} />
-                <span>WHAT WE OFFER</span>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition"
+              >
+                <div className="w-12 h-12 bg-blue-900 text-white rounded-xl flex items-center justify-center mb-4">
+                  <benefit.icon size={24} />
+                </div>
+                <h3 className="font-bold text-gray-900">{benefit.text}</h3>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900">
-                Our Housekeeping{" "}
-                <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text text-transparent">
-                  Services
-                </span>
-              </h2>
-              <p className="text-gray-500 max-w-2xl mx-auto mt-4">
-                Comprehensive cleaning solutions tailored to your needs
-              </p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section className="py-24 px-6 md:px-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 bg-white border border-blue-100 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
+              <Sparkles size={15} />
+              <span>WHAT WE OFFER</span>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-blue-200 hover:-translate-y-2 transition-all duration-500 hover:shadow-xl hover:shadow-blue-100"
-                >
-                  <div className="w-14 h-14 rounded-xl  flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                    <service.icon size={28} className="text-blue-900" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-900 transition-colors">
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+              Our Housekeeping Services
+            </h2>
+
+            <p className="text-gray-500 text-lg">
+              Comprehensive cleaning solutions tailored for homes, offices, and
+              commercial spaces.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition group"
+              >
+                <div className="h-56 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                  />
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-xl font-black text-gray-900 mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed mb-4">
+
+                  <p className="text-gray-600 text-sm leading-relaxed mb-5">
                     {service.desc}
                   </p>
-                  <div className="flex flex-wrap gap-2 mt-2">
+
+                  <div className="space-y-2 mb-5">
                     {service.features.map((feature, idx) => (
-                      <span
+                      <div
                         key={idx}
-                        className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full"
+                        className="flex items-center gap-2 text-sm text-gray-700"
                       >
-                        {feature}
-                      </span>
+                        <CheckCircle size={15} className="text-blue-900" />
+                        <span>{feature}</span>
+                      </div>
                     ))}
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* BENEFITS SECTION */}
-        <section className="py-20 px-6 md:px-12">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-black text-gray-900">
-                Why Choose{" "}
-                <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text text-transparent">
-                  Acuity Groups
-                </span>
-              </h2>
-              <p className="text-gray-500 max-w-2xl mx-auto mt-4">
-                We deliver excellence through quality, reliability, and
-                professionalism
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center gap-3 bg-gray-50 p-5 rounded-xl border border-gray-100 hover:border-blue-200 transition-all hover:shadow-sm"
-                >
-                  <CheckCircle className="text-blue-900 w-5 h-5 flex-shrink-0" />
-                  <span className="text-gray-700 font-medium">{benefit}</span>
+                  <Link
+                    to="/contactus"
+                    className="text-blue-900 font-bold inline-flex items-center gap-2"
+                  >
+                    Enquire Now <ArrowRight size={16} />
+                  </Link>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* INDUSTRIES WE SERVE */}
-        <section className="py-20 px-6 md:px-12 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-2 rounded-full text-black tracking-[5px] text-sm font-thin mb-5">
-                <Building size={14} />
-                <span>INDUSTRIES WE SERVE</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900">
-                Trusted Across{" "}
-                <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text text-transparent">
-                  Sectors
-                </span>
-              </h2>
-              <p className="text-gray-500 max-w-2xl mx-auto mt-4">
-                We provide housekeeping solutions for a wide range of industries
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-4 gap-6">
-              {industries.map((industry, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white border border-gray-200 p-4 rounded-xl text-center hover:border-blue-300 hover:shadow-md transition-all hover:-translate-y-1"
-                >
-                  <span className="text-gray-800 font-medium text-sm">
-                    {industry}
-                  </span>
-                </div>
-              ))}
-            </div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA SECTION */}
-        <section className="py-20 px-6 md:px-12 bg-gradient-to-r from-blue-800 to-blue-700">
-          <div className="max-w-5xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-5xl font-black mb-4">
-              Need Professional Cleaning?
+      {/* WHY CHOOSE */}
+      <section className="py-24 px-6 md:px-12 bg-white">
+        <div className="max-w-7xl mx-auto bg-blue-950 rounded-[40px] p-8 md:p-14 text-white grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 className="text-4xl md:text-5xl font-black mb-6">
+              Why Choose Acuity Groups?
             </h2>
-            <p className="text-blue-100 text-lg mb-8">
-              Book our housekeeping services today for a spotless and hygienic
-              environment.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Link
-                to="/contactus"
-                className="bg-white text-blue-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
-              >
-                Book Now
-              </Link>
-              <Link
-                to="/services"
-                className="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-900 transition"
-              >
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
 
-        <style>
-          {`
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-          `}
-        </style>
-      </div>
-    </>
+            <p className="text-blue-100 text-lg leading-relaxed mb-8">
+              We deliver reliable housekeeping with trained staff, safe cleaning
+              materials, professional supervision, and consistent service
+              quality.
+            </p>
+
+            <Link
+              to="/contactus"
+              className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold inline-flex items-center gap-2"
+            >
+              Contact Us <ArrowRight size={18} />
+            </Link>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            {whyChoose.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white/10 border border-white/10 rounded-2xl p-5"
+              >
+                <CheckCircle className="text-yellow-300 mb-3" size={24} />
+                <h3 className="font-bold">{item}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* INDUSTRIES */}
+      <section className="py-24 px-6 md:px-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 bg-white border border-blue-100 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
+              <Building2 size={15} />
+              <span>INDUSTRIES WE SERVE</span>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+              Trusted Across Sectors
+            </h2>
+
+            <p className="text-gray-500 text-lg">
+              We provide housekeeping solutions for a wide range of industries
+              and property types.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {industries.map((industry, index) => (
+              <div
+                key={index}
+                className="bg-white border border-gray-100 rounded-2xl p-5 text-center hover:shadow-lg transition"
+              >
+                <span className="font-bold text-gray-800 text-sm">
+                  {industry}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 px-6 md:px-12 bg-white">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
+            Need Professional Cleaning?
+          </h2>
+
+          <p className="text-gray-600 text-lg mb-10">
+            Book our housekeeping services today for a spotless, safe, and
+            hygienic environment.
+          </p>
+
+          <div className="flex flex-wrap gap-5 justify-center">
+            <Link
+              to="/contactus"
+              className="bg-blue-900 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-800 transition inline-flex items-center gap-2"
+            >
+              Book Now <ArrowRight size={18} />
+            </Link>
+
+            <a
+              href="tel:9941229005"
+              className="border-2 border-blue-900 text-blue-900 px-10 py-4 rounded-full font-bold hover:bg-blue-900 hover:text-white transition inline-flex items-center gap-2"
+            >
+              <PhoneCall size={18} />
+              +91 99412 29005
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 };
 
