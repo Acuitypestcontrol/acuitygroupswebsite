@@ -48,6 +48,11 @@ export default function Homepage() {
 
   const faqs = [
     {
+      q: "Do you offer cost-effective facility management packages?",
+      a: "Yes, we offer flexible service packages suitable for different budgets.",
+    },
+
+    {
       q: "Do you provide facility management services in Bangalore?",
       a: "Yes, Acuity Groups provides professional facility management services for residential, commercial and industrial properties across Bangalore.",
     },
@@ -67,16 +72,6 @@ export default function Homepage() {
       q: "Do you provide manpower outsourcing services?",
       a: "Yes, we offer skilled and unskilled manpower outsourcing solutions for various industries.",
     },
-
-    {
-      q: "Do you offer cost-effective facility management packages?",
-      a: "Yes, we offer flexible service packages suitable for different budgets.",
-    },
-
-    {
-      q: "Are there any hidden charges in your pricing?",
-      a: "No, our pricing is transparent with no hidden costs.",
-    },
   ];
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -94,7 +89,7 @@ export default function Homepage() {
   }, []);
 
   const statsRef = useRef(null);
-  // Auto slide with Ken Burns sync
+  // Auto slide with Ken Burns syncyt
   useEffect(() => {
     const interval = setInterval(() => {
       if (!isTransitioning) {
@@ -314,7 +309,9 @@ export default function Homepage() {
               <h2 className="text-2xl md:text-5xl lg:text-5xl font-black text-black mb-3">
                 {counters.clients}+
               </h2>
-              <p className="text-gray-600 md:text-lg font-medium">Happy Clients</p>
+              <p className="text-gray-600 md:text-lg font-medium">
+                Happy Clients
+              </p>
             </div>
             <div className="group bg-white border border-gray-200 rounded-3xl md:p-8 text-center hover:border-blue-300 hover:shadow-xl hover:shadow-blue-100 transition-all duration-500 hover:-translate-y-2">
               <Users className="w-12 h-12 text-blue-900 mx-auto mb-4 group-hover:scale-110 transition-transform" />
@@ -816,35 +813,34 @@ export default function Homepage() {
               {[
                 "Whitefield",
                 "Electronic City",
-                "Marathahalli",
-                "HSR Layout",
                 "Koramangala",
-                "Indiranagar",
-                "Jayanagar",
-                "JP Nagar",
-                "BTM Layout",
-                "Bannerghatta Road",
-                "Yelahanka",
-                "Hebbal",
-                "Rajajinagar",
-                "Malleshwaram",
-                "KR Puram",
+                "HSR Layout",
                 "Bellandur",
                 "Sarjapur Road",
+                "Marathahalli",
+                "Hebbal",
+                "JP Nagar",
+                "Dabaspet",
+                "Indiranagar",
+                "MG Road",
+                "Rajajinagar",
                 "Banashankari",
-                "Nagarbhavi",
-                "RT Nagar",
+                "Peenya",
+                "Manyata Tech Park",
+                "Outer Ring Road (ORR)",
+                "ITPL",
+                "Devanahalli",
+                "Bommanahalli",
               ].map((area, index) => (
-                <a
+                <div
                   key={index}
-                  href={`/facility-management-${area.toLowerCase().replace(/\s+/g, "-")}`}
                   className="flex items-center gap-2 text-gray-700 hover:text-blue-700 hover:bg-blue-50 p-2 rounded-lg transition-all group"
                 >
                   <span className="text-yellow-500 group-hover:translate-x-1 transition">
                     📍
                   </span>
                   {area}
-                </a>
+                </div>
               ))}
             </div>
           </div>
