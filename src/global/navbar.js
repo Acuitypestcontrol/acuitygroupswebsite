@@ -56,7 +56,7 @@ const Navbar = () => {
     <>
       <header className="fixed top-0 left-0 w-full z-[9999] font-['Inter',system-ui,sans-serif]">
         {/* Top bar - hidden on mobile */}
-        <div className="hidden lg:block bg-white/40 backdrop-blur-md border-b border-gray-400 ">
+        <div className="hidden lg:block bg-white/30 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-6 h-10 flex items-center justify-between text-sm">
             <div className="flex items-center gap-6 text-gray-600">
               <a

@@ -37,11 +37,13 @@ import EducationIndustry from "./components/blogs/EducationIndustry";
 import ManufacturingIndustry from "./components/blogs/ManufacturingIndustry";
 import Facilitymanagment from "./pages/facilitymanagment1";
 import Services from "./pages/servicepage";
-import HotelsHospitality from "./components/blogs/HotelsHospitality"
+import HotelsHospitality from "./components/blogs/HotelsHospitality";
+import LeadPopup from "./components/popup";
 
 export default function App() {
   return (
     <Router>
+
       <WhatsAppButton />
       <SocialSidebar />
       <ScrollToTop />
@@ -66,7 +68,10 @@ export default function App() {
         <Route path="/blogs/cockroaches" element={<Cockroaches />} />
         <Route path="/blogs/termite" element={<TermiteControlGuide />} />
         <Route path="/blogs/mosquito" element={<MosquitoPrevention />} />
-        <Route path="/blogs/HotelsHospitality" element={<HotelsHospitality />} />
+        <Route
+          path="/blogs/HotelsHospitality"
+          element={<HotelsHospitality />}
+        />
 
         <Route
           path="/blogs/ImportanceofFacility"
