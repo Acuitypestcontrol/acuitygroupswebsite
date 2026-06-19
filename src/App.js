@@ -53,12 +53,6 @@ import Doddaballapur from "./components/seofolder/doddaballapur";
 import Attibele from "./components/seofolder/attibele";
 import Kumabalagodu from "./components/seofolder/kubalagodu";
 
-
-
-
-
-
-
 export default function App() {
   return (
     <Router>
@@ -130,34 +124,61 @@ export default function App() {
         />
         <Route path="/pages/servicepage" element={<Services />} />
         <Route
-          path="/seofolder/PestControlBangalore"
-          element={<PestControlBangalore />}
+          path="/integrated-facility-management-whitefield"
+          element={<Whitefield />}
         />
+
         <Route
-          path="/seofolder/PestControlElectronicCity"
+          path="/integrated-facility-management-electronic-city"
           element={<PestControlElectronicCity />}
         />
+
         <Route
-          path="/seofolder/PestControlK"
+          path="/integrated-facility-management-koramangala"
           element={<PestControlKoramangala />}
         />
+
         <Route
-          path="/seofolder/PestControlHSRLayout"
+          path="/integrated-facility-management-hsr-layout"
           element={<PestControlHSRLayout />}
         />
+
         <Route
-          path="/seofolder/Jpnagr"
+          path="/integrated-facility-management-jp-nagar"
           element={<IntegratedFacilityManagementJPNagar />}
         />
-        <Route path="/seofolder/Dabaspet" element={<Dabaspet />} />
-        <Route path="/seofolder/Peenya" element={<Peenya />} />
-        <Route path="/seofolder/Hebbal" element={<PestControlHebbal />} />
-        <Route path="/seofolder/Doddaballapur" element={<Doddaballapur />} />
-        <Route path="/seofolder/Attibele" element={<Attibele />} />
-        <Route path="/seofolder/kubalagodu" element={<Kumabalagodu />} />
 
+        <Route
+          path="/integrated-facility-management-dabaspet"
+          element={<Dabaspet />}
+        />
 
+        <Route
+          path="/integrated-facility-management-peenya"
+          element={<Peenya />}
+        />
 
+        <Route
+          path="/integrated-facility-management-hebbal"
+          element={<PestControlHebbal />}
+        />
+
+        <Route path="/integrated-facility-management-beml" element={<Beml />} />
+
+        <Route
+          path="/integrated-facility-management-doddaballapur"
+          element={<Doddaballapur />}
+        />
+
+        <Route
+          path="/integrated-facility-management-attibele"
+          element={<Attibele />}
+        />
+
+        <Route
+          path="/integrated-facility-management-kumbalgodu"
+          element={<Kumabalagodu />}
+        />
       </Routes>
       <Footer />
     </Router>
