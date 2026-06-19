@@ -40,7 +40,7 @@ const LeadPopup = () => {
   if (!showPopup) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] bg-slate-950/70 backdrop-blur-md flex items-center justify-center p-4">
+    <div className="fixed inset-0 z-[9999] bg-blue-950/70 backdrop-blur-md flex items-center justify-center p-4">
       <div className="relative max-w-lg w-full overflow-hidden rounded-3xl bg-white/10 backdrop-blur-2xl border border-white/20 shadow-[0_25px_80px_rgba(0,0,0,0.45)]">
         <div className="absolute -top-20 -left-20 w-48 h-48 bg-cyan-400/30 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-20 -right-20 w-48 h-48 bg-blue-600/40 rounded-full blur-3xl"></div>
