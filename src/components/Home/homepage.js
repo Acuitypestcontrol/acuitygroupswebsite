@@ -49,53 +49,52 @@ export default function Homepage() {
 
   const areas = [
     {
-      name: "Integrated Facility Services in Whitefiled",
-      path: "/seofolder/PestControlBangalore",
+      name: "Integrated Facility Services in Whitefield",
+      path: "/integrated-facility-management-whitefield",
     },
     {
       name: "Integrated Facility Services in Electronic City",
-      path: "/seofolder/PestControlElectronicCity",
+      path: "/integrated-facility-management-electronic-city",
     },
     {
       name: "Integrated Facility Services in Koramangala",
-      path: "/seofolder/PestControlK",
+      path: "/integrated-facility-management-koramangala",
     },
     {
       name: "Integrated Facility Services in HSR Layout",
-      path: "/seofolder/PestControlHSRLayout",
+      path: "/integrated-facility-management-hsr-layout",
     },
     {
       name: "Integrated Facility Services in JP Nagar",
-      path: "/seofolder/Jpnagr",
+      path: "/integrated-facility-management-jp-nagar",
     },
     {
       name: "Integrated Facility Services in Dabaspet",
-      path: "/seofolder/dabaspet",
+      path: "/integrated-facility-management-dabaspet",
     },
     {
       name: "Integrated Facility Services in Peenya",
-      path: "/seofolder/Peenya",
+      path: "/integrated-facility-management-peenya",
     },
     {
       name: "Integrated Facility Services in Hebbal",
-      path: "/seofolder/Hebbal",
+      path: "/integrated-facility-management-hebbal",
     },
-
     {
       name: "Integrated Facility Services in BEML Layout",
-      path: "/seofolder/beml",
+      path: "/integrated-facility-management-beml",
     },
     {
       name: "Integrated Facility Services in Doddaballapur",
-      path: "/seofolder/doddaballapur",
+      path: "/integrated-facility-management-doddaballapur",
     },
     {
       name: "Integrated Facility Services in Attibele",
-      path: "/seofolder/attibele",
+      path: "/integrated-facility-management-attibele",
     },
     {
       name: "Integrated Facility Services in Kumbalagodu",
-      path: "/seofolder/kubalagodu",
+      path: "/integrated-facility-management-kumbalgodu",
     },
   ];
   const faqs = [
