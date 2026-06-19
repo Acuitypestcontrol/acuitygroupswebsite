@@ -39,11 +39,29 @@ import Facilitymanagment from "./pages/facilitymanagment1";
 import Services from "./pages/servicepage";
 import HotelsHospitality from "./components/blogs/HotelsHospitality";
 import LeadPopup from "./components/popup";
+import PestControlBangalore from "./components/seofolder/PestControlWhitefiled";
+import Whitefield from "./components/seofolder/PestControlWhitefiled";
+import PestControlElectronicCity from "./components/seofolder/PestControlElectronicCity";
+import PestControlKoramangala from "./components/seofolder/PestControlK";
+import PestControlHSRLayout from "./components/seofolder/PestControlHSRLayout";
+import IntegratedFacilityManagementJPNagar from "./components/seofolder/Jpnagr";
+import Dabaspet from "./components/seofolder/dabaspet";
+import Peenya from "./components/seofolder/Peenya";
+import PestControlHebbal from "./components/seofolder/hebbal";
+import Beml from "./components/seofolder/beml";
+import Doddaballapur from "./components/seofolder/doddaballapur";
+import Attibele from "./components/seofolder/attibele";
+import Kumabalagodu from "./components/seofolder/kubalagodu";
+
+
+
+
+
+
 
 export default function App() {
   return (
     <Router>
-
       <WhatsAppButton />
       <SocialSidebar />
       <ScrollToTop />
@@ -68,6 +86,7 @@ export default function App() {
         <Route path="/blogs/cockroaches" element={<Cockroaches />} />
         <Route path="/blogs/termite" element={<TermiteControlGuide />} />
         <Route path="/blogs/mosquito" element={<MosquitoPrevention />} />
+
         <Route
           path="/blogs/HotelsHospitality"
           element={<HotelsHospitality />}
@@ -110,6 +129,35 @@ export default function App() {
           element={<ManufacturingIndustry />}
         />
         <Route path="/pages/servicepage" element={<Services />} />
+        <Route
+          path="/seofolder/PestControlBangalore"
+          element={<PestControlBangalore />}
+        />
+        <Route
+          path="/seofolder/PestControlElectronicCity"
+          element={<PestControlElectronicCity />}
+        />
+        <Route
+          path="/seofolder/PestControlK"
+          element={<PestControlKoramangala />}
+        />
+        <Route
+          path="/seofolder/PestControlHSRLayout"
+          element={<PestControlHSRLayout />}
+        />
+        <Route
+          path="/seofolder/Jpnagr"
+          element={<IntegratedFacilityManagementJPNagar />}
+        />
+        <Route path="/seofolder/Dabaspet" element={<Dabaspet />} />
+        <Route path="/seofolder/Peenya" element={<Peenya />} />
+        <Route path="/seofolder/Hebbal" element={<PestControlHebbal />} />
+        <Route path="/seofolder/Doddaballapur" element={<Doddaballapur />} />
+        <Route path="/seofolder/Attibele" element={<Attibele />} />
+        <Route path="/seofolder/kubalagodu" element={<Kumabalagodu />} />
+
+
+
       </Routes>
       <Footer />
     </Router>

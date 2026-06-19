@@ -47,6 +47,57 @@ export default function Homepage() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const areas = [
+    {
+      name: "Integrated Facility Services in Whitefiled",
+      path: "/seofolder/PestControlBangalore",
+    },
+    {
+      name: "Integrated Facility Services in Electronic City",
+      path: "/seofolder/PestControlElectronicCity",
+    },
+    {
+      name: "Integrated Facility Services in Koramangala",
+      path: "/seofolder/PestControlK",
+    },
+    {
+      name: "Integrated Facility Services in HSR Layout",
+      path: "/seofolder/PestControlHSRLayout",
+    },
+    {
+      name: "Integrated Facility Services in JP Nagar",
+      path: "/seofolder/Jpnagr",
+    },
+    {
+      name: "Integrated Facility Services in Dabaspet",
+      path: "/seofolder/dabaspet",
+    },
+    {
+      name: "Integrated Facility Services in Peenya",
+      path: "/seofolder/Peenya",
+    },
+    {
+      name: "Integrated Facility Services in Hebbal",
+      path: "/seofolder/Hebbal",
+    },
+
+    {
+      name: "Integrated Facility Services in BEML Layout",
+      path: "/seofolder/beml",
+    },
+    {
+      name: "Integrated Facility Services in Doddaballapur",
+      path: "/seofolder/doddaballapur",
+    },
+    {
+      name: "Integrated Facility Services in Attibele",
+      path: "/seofolder/attibele",
+    },
+    {
+      name: "Integrated Facility Services in Kumbalagodu",
+      path: "/seofolder/kubalagodu",
+    },
+  ];
   const faqs = [
     {
       q: "Do you offer cost-effective facility management packages?",
@@ -218,6 +269,28 @@ export default function Homepage() {
   return (
     <>
       <LeadPopup />
+
+      {/* Bangalore Areas Grid */}
+      {/* <div className="bg-white rounded-2xl p-8 shadow-md">
+        <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
+          📍 Service Areas in Bangalore
+        </h3>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+          {areas.map((area, index) => (
+            <Link
+              key={index}
+              to={area.path}
+              className="flex items-center gap-2 text-gray-700 hover:text-blue-700 hover:bg-blue-50 p-2 rounded-lg transition-all group"
+            >
+              <span className="text-yellow-500 group-hover:translate-x-1 transition">
+                📍
+              </span>
+              {area.name}
+            </Link>
+          ))}
+        </div>
+      </div> */}
       <div className="bg-white text-black overflow-hidden font-['Poppins',system-ui,sans-serif]">
         <Helmet>
           <link rel="canonical" href="https://www.acuitygroups.in/" />
@@ -229,8 +302,6 @@ export default function Homepage() {
             content="Acuity Groups Bangalore: Security, housekeeping, pest control, manpower, electrical maintenance for residential, commercial & industrial properties."
           />
         </Helmet>
-        {/* HERO SECTION */}
-        {/* HERO SECTION */}
         <section className="relative w-90 h-48 md:w-full md:h-screen overflow-hidden bg-black">
           {banners.map((banner, index) => (
             <div
@@ -823,40 +894,19 @@ export default function Homepage() {
             {/* Bangalore Areas Grid */}
             <div className="bg-white rounded-2xl p-8 shadow-md">
               <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
-                📍 Service Areas in Bangalore
+                Service Areas in Bangalore
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                {[
-                  "Whitefield",
-                  "Electronic City",
-                  "Koramangala",
-                  "HSR Layout",
-                  "Bellandur",
-                  "Sarjapur Road",
-                  "Marathahalli",
-                  "Hebbal",
-                  "JP Nagar",
-                  "Dabaspet",
-                  "Indiranagar",
-                  "MG Road",
-                  "Rajajinagar",
-                  "Banashankari",
-                  "Peenya",
-                  "Manyata Tech Park",
-                  "Outer Ring Road (ORR)",
-                  "ITPL",
-                  "Devanahalli",
-                  "Bommanahalli",
-                ].map((area, index) => (
-                  <div
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {areas.map((area, index) => (
+                  <Link
                     key={index}
-                    className="flex items-center gap-2 text-gray-700 hover:text-blue-700 hover:bg-blue-50 p-2 rounded-lg transition-all group"
+                    to={area.path}
+                    className="flex items-center gap-2 text-gray-700 hover:text-blue-700 hover:bg-blue-50 p-4 rounded-lg border border-gray-100 transition-all group"
                   >
-                    <span className="text-yellow-500 group-hover:translate-x-1 transition">
-                      📍
-                    </span>
-                    {area}
-                  </div>
+                    <span className="text-yellow-500">📍</span>
+                    {area.name}
+                  </Link>
                 ))}
               </div>
             </div>
