@@ -58,7 +58,7 @@ const LeadPopup = () => {
           </div>
 
           <h2 className="text-3xl font-extrabold text-white mb-2">
-            Get a Free Quote Today!
+            Get a Free Auditing and Site Servey!
           </h2>
 
           <p className="text-white/80 text-sm leading-relaxed">
