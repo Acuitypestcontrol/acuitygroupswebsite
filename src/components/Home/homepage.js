@@ -2,9 +2,9 @@ import React, { useEffect, useState, useRef } from "react";
 import AboutImage from "../../images/AboutImage.avif";
 import SecurityImage from "../../images/security123.avif";
 import SoftServices1 from "../../images/softservices.jpg";
-import Housekeeping1 from "../../images/home.png";
-import FacilityManagement1 from "../../images/facilitymangmentjpg.jpg";
-import Pestcontrol from "../../images/pestcontrol.jpg";
+import Housekeeping1 from "../../images/Housekeeping1.jpg";
+import FacilityManagement1 from "../../images/facilitym.jpg";
+import Pestcontrol from "../../images/sspestcontrol.jpg";
 import MAnpowerout from "../../images/manpowerout.webp";
 import LeadPopup from "../../components/popup";
 import { Link } from "react-router-dom";
@@ -513,7 +513,7 @@ export default function Homepage() {
                 <img
                   src={service.image}
                   alt={service.title}
-                  className=" w-full h-56 object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                  className=" w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                 />
                 {/* Decorative overlay on image */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

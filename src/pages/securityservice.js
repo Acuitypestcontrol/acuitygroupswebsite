@@ -15,7 +15,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-import SecurityHero from "../images/security12.jpg";
+import SecurityHero from "../images/securityty (1).jpg";
 import MannedGuarding from "../images/security iamge1.jpg";
 import CorporateSecurity from "../images/corporate.png";
 import ResidentialSecurity from "../images/homesecurity.jpg";
