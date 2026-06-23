@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa6";
 
 const SocialSidebar = () => {
   return (
@@ -8,14 +9,14 @@ const SocialSidebar = () => {
       <div className="bg-gray-100/90 backdrop-blur-sm py-6 px-3 rounded-l-xl shadow-lg transform translate-x-8 group-hover:translate-x-0 transition-all duration-500">
         <div className="flex flex-col gap-4">
           <Link
-            to="https://www.facebook.com/acuity.pest.9"
+            to="https://www.facebook.com/profile.php?id=61561147334765"
             className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center hover:scale-110 transition-all duration-300"
           >
             <FaFacebookF className="text-[#1877F2] text-xl" />
           </Link>
 
           <Link
-            to="https://www.instagram.com/acuity_pest_control/"
+            to="https://www.instagram.com/acuity_groups/"
             className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center hover:scale-110 transition-all duration-300"
           >
             <FaInstagram className="text-[#E1306C] text-xl" />
@@ -26,6 +27,15 @@ const SocialSidebar = () => {
             className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center hover:scale-110 transition-all duration-300"
           >
             <FaYoutube className="text-[#FF0000] text-xl" />
+          </Link>
+
+          <Link
+            to="https://www.linkedin.com/in/aifm-acuity-groups-b996a7406/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-12 h-12 rounded-full bg-white shadow-md flex items-center justify-center hover:scale-110 transition-all duration-300"
+          >
+            <FaLinkedinIn className="text-[#0077B5] text-xl" />
           </Link>
         </div>
       </div>
