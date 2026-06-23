@@ -250,7 +250,7 @@ export default function Homepage() {
       title: "Manpower Outsourcing",
       desc: "Skilled and unskilled manpower outsourcing solutions for businesses across multiple industries.",
       image: MAnpowerout,
-      path: "/corporate-staffing",
+      path: "/manpower",
     },
   ];
 

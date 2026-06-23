@@ -10,26 +10,32 @@ const PestControlBEML = () => {
     {
       title: "Integrated Facility Management in BEML Layout",
       desc: "Complete integrated facility management services in BEML Layout for apartments, villas, offices and commercial properties.",
+      link: "/facilitymanagment1",
     },
     {
       title: "Security Services in BEML Layout",
       desc: "Trained security guards, gate security, visitor management and 24/7 security support for properties in BEML Layout.",
+      link: "/securityservice",
     },
     {
       title: "Housekeeping Services in BEML Layout",
       desc: "Professional housekeeping services in BEML Layout for apartments, offices, villas and commercial spaces.",
+      link: "/housekeeping",
     },
     {
       title: "Pest Control Services in BEML Layout",
       desc: "Reliable pest control services in BEML Layout including termite, cockroach, rodent and mosquito control.",
+      link: "/pest",
     },
     {
       title: "Manpower Outsourcing in BEML Layout",
       desc: "Skilled and trained manpower outsourcing services in BEML Layout for facility support requirements.",
+      link: "/manpower",
     },
     {
       title: "Repair & Maintenance in BEML Layout",
       desc: "Complete repair and maintenance services in BEML Layout including plumbing, electrical, carpentry and civil repairs.",
+      link: "/repair",
     },
   ];
 
@@ -84,7 +90,6 @@ const PestControlBEML = () => {
       {/* Hero Section */}
       <section className="py-8 md:py-12 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          {/* Left Content */}
           <div>
             <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               Integrated Facility Management Services
@@ -124,7 +129,6 @@ const PestControlBEML = () => {
             </div>
           </div>
 
-          {/* Right Banner */}
           <div className="flex justify-center">
             <img
               src={bannerImage}
@@ -135,6 +139,7 @@ const PestControlBEML = () => {
         </div>
       </section>
 
+      {/* Services */}
       <section className="py-16 bg-gray-50 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-blue-900 mb-4">
@@ -149,9 +154,10 @@ const PestControlBEML = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-blue-600"
+                to={service.link}
+                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition border-t-4 border-blue-600 block"
               >
                 <div className="text-4xl font-bold text-blue-100 mb-4">
                   0{index + 1}
@@ -162,12 +168,17 @@ const PestControlBEML = () => {
                 </h3>
 
                 <p className="text-gray-600 leading-7">{service.desc}</p>
-              </div>
+
+                <p className="text-blue-600 font-semibold mt-4">
+                  View Service →
+                </p>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
+      {/* SEO Content */}
       <section className="py-16 px-6 max-w-7xl mx-auto">
         <div className="bg-blue-50 rounded-3xl p-8 md:p-12">
           <h2 className="text-4xl font-bold text-blue-900 mb-6">
@@ -182,13 +193,36 @@ const PestControlBEML = () => {
           </p>
 
           <p className="text-lg text-gray-700 leading-8">
-            Whether you need housekeeping staff, security guards, pest control,
-            maintenance technicians or manpower support, our team delivers
-            reliable facility management services in BEML Layout Bangalore.
+            Whether you need{" "}
+            <Link to="/housekeeping" className="text-blue-600 font-semibold">
+              housekeeping services
+            </Link>
+            ,{" "}
+            <Link
+              to="/securityservice"
+              className="text-blue-600 font-semibold"
+            >
+              security guards
+            </Link>
+            ,{" "}
+            <Link to="/pest" className="text-blue-600 font-semibold">
+              pest control services
+            </Link>
+            ,{" "}
+            <Link to="/repair" className="text-blue-600 font-semibold">
+              maintenance technicians
+            </Link>{" "}
+            or{" "}
+            <Link to="/manpower" className="text-blue-600 font-semibold">
+              manpower support
+            </Link>
+            , our team delivers reliable facility management services in BEML
+            Layout Bangalore.
           </p>
         </div>
       </section>
 
+      {/* Why Choose */}
       <section className="py-16 px-6 max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-blue-900 mb-10">
           Why Choose Acuity Groups in BEML Layout?
@@ -209,6 +243,7 @@ const PestControlBEML = () => {
         </div>
       </section>
 
+      {/* Areas */}
       <section className="py-16 bg-blue-900 text-white px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">
@@ -223,6 +258,7 @@ const PestControlBEML = () => {
         </div>
       </section>
 
+      {/* FAQ */}
       <section className="py-16 px-6 max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-blue-900 mb-10">
           Frequently Asked Questions
@@ -240,11 +276,13 @@ const PestControlBEML = () => {
         </div>
       </section>
 
+      {/* Map */}
       <section
         className="relative h-[70vh] bg-cover bg-center"
         style={{ backgroundImage: `url(${bannerImage1})` }}
       ></section>
 
+      {/* CTA */}
       <section className="py-16 bg-gray-100 text-center px-6">
         <h2 className="text-4xl font-bold text-blue-900 mb-4">
           Need Facility Management Services in BEML Layout?

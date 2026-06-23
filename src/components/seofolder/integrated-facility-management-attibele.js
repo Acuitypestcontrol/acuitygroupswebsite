@@ -5,33 +5,37 @@ import { Helmet } from "react-helmet-async";
 import bannerImage from "../../images/attibelemimage.jpg";
 import bannerImage1 from "../../images/attibelemap.jpg";
 
-import serviceImage from "../../images/industrial1.jpg";
-
 const IntegratedFacilityManagementAttibele = () => {
   const services = [
     {
       title: "Industrial Housekeeping in Attibele",
       desc: "Professional industrial housekeeping services in Attibele for factories, warehouses, manufacturing units and industrial facilities.",
+      link: "/housekeeping",
     },
     {
       title: "Security Services in Attibele",
       desc: "Trained security guards, gate security, visitor management and 24/7 protection for industries and commercial buildings in Attibele.",
+      link: "/securityservice",
     },
     {
       title: "Pest Management in Attibele",
       desc: "Complete pest control solutions in Attibele including termite control, cockroach control, rodent control and mosquito treatment.",
+      link: "/pest",
     },
     {
       title: "Repair & Maintenance in Attibele",
       desc: "Reliable building repair and maintenance services in Attibele including plumbing, carpentry, civil work and facility upkeep.",
+      link: "/repair",
     },
     {
       title: "Electrical Maintenance in Attibele",
       desc: "Preventive electrical maintenance, wiring inspection, panel servicing and electrical troubleshooting for facilities in Attibele.",
+      link: "/repair",
     },
     {
       title: "Manpower Outsourcing in Attibele",
       desc: "Skilled, semi-skilled and unskilled manpower outsourcing services in Attibele for industries, warehouses and offices.",
+      link: "/manpower",
     },
   ];
 
@@ -84,65 +88,58 @@ const IntegratedFacilityManagementAttibele = () => {
         />
       </Helmet>
 
-      {/* Hero */}
       {/* Hero Section */}
- <section className="py-8 md:py-12 px-6 bg-gray-50">
-  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <section className="py-8 md:py-12 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              Integrated Facility Management Services
+            </span>
 
-    {/* Left Content */}
-    <div>
-      <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-        Integrated Facility Management Services
-      </span>
+            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
+              Facility Management Services in Attibele Bangalore
+            </h1>
 
-      <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-        Facility Management Services in Attibele Bangalore
-      </h1>
+            <p className="text-lg text-gray-700 leading-8 mb-6">
+              Acuity Groups provides professional Integrated Facility Management
+              Services in Attibele Bangalore for industrial units, factories,
+              warehouses, logistics parks, apartment communities and commercial
+              establishments.
+            </p>
 
-      <p className="text-lg text-gray-700 leading-8 mb-6">
-        Acuity Groups provides professional Integrated Facility Management
-        Services in Attibele Bangalore for industrial units, factories,
-        warehouses, logistics parks, apartment communities and commercial
-        establishments.
-      </p>
+            <p className="text-lg text-gray-700 leading-8 mb-8">
+              Our experienced workforce delivers housekeeping services, security
+              services, pest management, electrical maintenance, repair &
+              maintenance and manpower outsourcing solutions to ensure smooth
+              day-to-day facility operations.
+            </p>
 
-      <p className="text-lg text-gray-700 leading-8 mb-8">
-        Our experienced workforce delivers housekeeping services, security
-        services, pest management, electrical maintenance, repair &
-        maintenance and manpower outsourcing solutions to ensure smooth
-        day-to-day facility operations.
-      </p>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                to="/contactus"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold"
+              >
+                Get Free Quote
+              </Link>
 
-      <div className="flex flex-wrap gap-4">
-        <Link
-          to="/contactus"
-          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold"
-        >
-          Get Free Quote
-        </Link>
+              <a
+                href="tel:+919941229005"
+                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full font-semibold"
+              >
+                Call Now
+              </a>
+            </div>
+          </div>
 
-        <a
-          href="tel:+919941229005"
-          className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full font-semibold"
-        >
-          Call Now
-        </a>
-      </div>
-    </div>
-
-    {/* Right Banner */}
-    <div className="flex justify-center">
-      <img
-        src={bannerImage}
-        alt="Facility Management Services in Attibele Bangalore"
-        className="w-full max-w-[700px] rounded-3xl shadow-2xl"
-      />
-    </div>
-
-  </div>
-</section>
-
-      {/* Service Image */}
+          <div className="flex justify-center">
+            <img
+              src={bannerImage}
+              alt="Facility Management Services in Attibele Bangalore"
+              className="w-full max-w-[700px] rounded-3xl shadow-2xl"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Services */}
       <section className="py-16 bg-gray-50 px-6">
@@ -159,9 +156,10 @@ const IntegratedFacilityManagementAttibele = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-blue-600"
+                to={service.link}
+                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition border-t-4 border-blue-600 block"
               >
                 <div className="text-4xl font-bold text-blue-100 mb-4">
                   0{index + 1}
@@ -172,7 +170,11 @@ const IntegratedFacilityManagementAttibele = () => {
                 </h3>
 
                 <p className="text-gray-600 leading-7">{service.desc}</p>
-              </div>
+
+                <p className="text-blue-600 font-semibold mt-4">
+                  View Service →
+                </p>
+              </Link>
             ))}
           </div>
         </div>
@@ -193,10 +195,28 @@ const IntegratedFacilityManagementAttibele = () => {
           </p>
 
           <p className="text-lg text-gray-700 leading-8">
-            Whether you need housekeeping staff, security guards, pest control,
-            electricians, maintenance technicians or manpower support, our team
-            delivers reliable facility management services in Attibele
-            Bangalore.
+            Whether you need{" "}
+            <Link to="/housekeeping" className="text-blue-600 font-semibold">
+              housekeeping services
+            </Link>
+            ,{" "}
+            <Link to="/securityservice" className="text-blue-600 font-semibold">
+              security guards
+            </Link>
+            ,{" "}
+            <Link to="/pest" className="text-blue-600 font-semibold">
+              pest control services
+            </Link>
+            ,{" "}
+            <Link to="/repair" className="text-blue-600 font-semibold">
+              maintenance technicians
+            </Link>{" "}
+            or{" "}
+            <Link to="/manpower" className="text-blue-600 font-semibold">
+              manpower support
+            </Link>
+            , our team delivers reliable facility management services in
+            Attibele Bangalore.
           </p>
         </div>
       </section>

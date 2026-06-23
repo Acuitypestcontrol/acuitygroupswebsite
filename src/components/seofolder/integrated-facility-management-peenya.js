@@ -10,26 +10,32 @@ const PestControlPeenya = () => {
     {
       title: "Industrial Housekeeping in Peenya",
       desc: "Professional industrial housekeeping services in Peenya for factories, production floors, warehouses, manufacturing units and industrial workspaces.",
+      link: "/housekeeping",
     },
     {
       title: "Industrial Security Services in Peenya",
       desc: "Trained industrial security guards in Peenya for factory gates, warehouse security, visitor management, access control and night patrol support.",
+      link: "/securityservice",
     },
     {
       title: "Pest Management in Peenya",
       desc: "Complete pest management services in Peenya for factories, warehouses, offices and commercial spaces including termite, rodent and cockroach control.",
+      link: "/pest",
     },
     {
       title: "Factory Repair & Maintenance in Peenya",
       desc: "Reliable repair and maintenance services in Peenya for factory buildings, warehouses, plumbing, carpentry and civil maintenance requirements.",
+      link: "/repair",
     },
     {
       title: "Electrical Maintenance in Peenya",
       desc: "Preventive electrical maintenance in Peenya for factories, industrial panels, wiring systems, commercial buildings and warehouse facilities.",
+      link: "/repair",
     },
     {
       title: "Industrial Manpower Outsourcing in Peenya",
       desc: "Skilled, semi-skilled and unskilled manpower outsourcing services in Peenya for manufacturing units, warehouses and industrial operations.",
+      link: "/manpower",
     },
   ];
 
@@ -154,9 +160,10 @@ const PestControlPeenya = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-blue-600"
+                to={service.link}
+                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition border-t-4 border-blue-600 block"
               >
                 <div className="text-4xl font-bold text-blue-100 mb-4">
                   0{index + 1}
@@ -167,7 +174,11 @@ const PestControlPeenya = () => {
                 </h3>
 
                 <p className="text-gray-600 leading-7">{service.desc}</p>
-              </div>
+
+                <p className="text-blue-600 font-semibold mt-4">
+                  View Service →
+                </p>
+              </Link>
             ))}
           </div>
         </div>
@@ -179,7 +190,6 @@ const PestControlPeenya = () => {
           <h2 className="text-4xl font-bold text-blue-900 mb-6">
             Facility Management Solutions for Peenya Industrial Area
           </h2>
-
           <p className="text-lg text-gray-700 leading-8 mb-5">
             Peenya is one of Bangalore’s largest industrial locations, with
             factories, manufacturing units, warehouses, engineering companies
@@ -187,13 +197,28 @@ const PestControlPeenya = () => {
             Peenya with professional facility management services focused on
             safety, cleanliness, maintenance and smooth daily operations.
           </p>
-
-          <p className="text-lg text-gray-700 leading-8">
-            Whether you need industrial housekeeping staff, factory security
-            guards, pest control technicians, electricians, maintenance workers
-            or manpower support, our team delivers reliable facility management
-            services in Peenya Bangalore.
-          </p>
+          Whether you need{" "}
+          <Link to="/housekeeping" className="text-blue-600 font-semibold">
+            industrial housekeeping services
+          </Link>
+          ,{" "}
+          <Link to="/securityservice" className="text-blue-600 font-semibold">
+            factory security guards
+          </Link>
+          ,{" "}
+          <Link to="/pest" className="text-blue-600 font-semibold">
+            pest control technicians
+          </Link>
+          ,{" "}
+          <Link to="/repair" className="text-blue-600 font-semibold">
+            maintenance workers
+          </Link>{" "}
+          or{" "}
+          <Link to="/manpower" className="text-blue-600 font-semibold">
+            manpower support
+          </Link>
+          , our team delivers reliable facility management services in Peenya
+          Bangalore.
         </div>
       </section>
 

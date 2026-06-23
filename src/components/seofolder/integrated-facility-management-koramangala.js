@@ -10,26 +10,32 @@ const PestControlKoramangala = () => {
     {
       title: "Apartment Pest Control in Koramangala",
       desc: "Professional pest control services in Koramangala for apartments, villas, PGs, homes and residential communities.",
+      link: "/pest",
     },
     {
       title: "Restaurant Pest Control in Koramangala",
       desc: "Safe pest management services in Koramangala for restaurants, cafes, cloud kitchens, hotels and food businesses.",
+      link: "/pest",
     },
     {
       title: "Cockroach Control in Koramangala",
       desc: "Effective cockroach control treatment in Koramangala for kitchens, bathrooms, restaurants, offices and commercial properties.",
+      link: "/pest",
     },
     {
       title: "Termite Control in Koramangala",
       desc: "Professional termite inspection and termite treatment in Koramangala for homes, apartments, offices and wooden structures.",
+      link: "/pest",
     },
     {
       title: "Rodent Control in Koramangala",
       desc: "Reliable rat and rodent control services in Koramangala for homes, restaurants, offices, storage areas and commercial buildings.",
+      link: "/pest",
     },
     {
       title: "Mosquito & Bed Bug Control in Koramangala",
       desc: "Complete mosquito control and bed bug treatment in Koramangala for homes, apartments, PGs and residential properties.",
+      link: "/pest",
     },
   ];
 
@@ -84,7 +90,6 @@ const PestControlKoramangala = () => {
       {/* Hero Section */}
       <section className="py-8 md:py-12 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          {/* Left Content */}
           <div>
             <span className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               Professional Pest Control Services
@@ -123,7 +128,6 @@ const PestControlKoramangala = () => {
             </div>
           </div>
 
-          {/* Right Banner */}
           <div className="flex justify-center">
             <img
               src={bannerImage}
@@ -133,8 +137,6 @@ const PestControlKoramangala = () => {
           </div>
         </div>
       </section>
-
-      {/* Service Image */}
 
       {/* Services */}
       <section className="py-16 bg-gray-50 px-6">
@@ -151,9 +153,10 @@ const PestControlKoramangala = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-green-600"
+                to={service.link}
+                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition border-t-4 border-green-600 block"
               >
                 <div className="text-4xl font-bold text-green-100 mb-4">
                   0{index + 1}
@@ -164,7 +167,11 @@ const PestControlKoramangala = () => {
                 </h3>
 
                 <p className="text-gray-600 leading-7">{service.desc}</p>
-              </div>
+
+                <p className="text-green-600 font-semibold mt-4">
+                  View Service →
+                </p>
+              </Link>
             ))}
           </div>
         </div>
@@ -186,10 +193,28 @@ const PestControlKoramangala = () => {
           </p>
 
           <p className="text-lg text-gray-700 leading-8">
-            Whether you need cockroach control for your kitchen, termite
-            treatment for your property, rodent control for a restaurant or bed
-            bug treatment for a home or PG, our team delivers reliable pest
-            control services in Koramangala Bangalore.
+            Whether you need{" "}
+            <Link to="/pest" className="text-green-600 font-semibold">
+              cockroach control
+            </Link>
+            ,{" "}
+            <Link to="/pest" className="text-green-600 font-semibold">
+              termite treatment
+            </Link>
+            ,{" "}
+            <Link to="/pest" className="text-green-600 font-semibold">
+              rodent control
+            </Link>
+            ,{" "}
+            <Link to="/pest" className="text-green-600 font-semibold">
+              mosquito control
+            </Link>
+            , or{" "}
+            <Link to="/pest" className="text-green-600 font-semibold">
+              bed bug treatment
+            </Link>
+            , our team delivers reliable pest control services in Koramangala
+            Bangalore.
           </p>
         </div>
       </section>

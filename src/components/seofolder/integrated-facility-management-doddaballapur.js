@@ -10,26 +10,32 @@ const PestControlDoddaballapur = () => {
     {
       title: "Factory Housekeeping in Doddaballapur",
       desc: "Professional factory housekeeping services in Doddaballapur for production units, warehouses, industrial floors and manufacturing facilities.",
+      link: "/housekeeping",
     },
     {
       title: "Industrial Security Services in Doddaballapur",
       desc: "Trained industrial security guards in Doddaballapur for factory gates, warehouse security, visitor management and night patrol support.",
+      link: "/securityservice",
     },
     {
       title: "Pest Control for Industries in Doddaballapur",
       desc: "Complete pest control services in Doddaballapur for factories, warehouses, offices and commercial spaces including termite, rodent and cockroach control.",
+      link: "/pest",
     },
     {
       title: "Factory Repair & Maintenance in Doddaballapur",
       desc: "Reliable repair and maintenance services in Doddaballapur for factory buildings, warehouses, plumbing, carpentry and civil maintenance needs.",
+      link: "/repair",
     },
     {
       title: "Electrical Maintenance in Doddaballapur",
       desc: "Preventive electrical maintenance in Doddaballapur for factories, commercial buildings, panels, wiring systems and industrial facilities.",
+      link: "/repair",
     },
     {
       title: "Industrial Manpower Outsourcing in Doddaballapur",
       desc: "Skilled, semi-skilled and unskilled manpower outsourcing services in Doddaballapur for industries, warehouses and manufacturing operations.",
+      link: "/manpower",
     },
   ];
 
@@ -82,11 +88,9 @@ const PestControlDoddaballapur = () => {
         />
       </Helmet>
 
-      {/* Hero */}
       {/* Hero Section */}
       <section className="py-8 md:py-12 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          {/* Left Content */}
           <div>
             <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               Integrated Facility Management Services
@@ -126,7 +130,6 @@ const PestControlDoddaballapur = () => {
             </div>
           </div>
 
-          {/* Right Banner */}
           <div className="flex justify-center">
             <img
               src={bannerImage}
@@ -136,8 +139,6 @@ const PestControlDoddaballapur = () => {
           </div>
         </div>
       </section>
-
-      {/* Service Image */}
 
       {/* Services */}
       <section className="py-16 bg-gray-50 px-6">
@@ -154,9 +155,10 @@ const PestControlDoddaballapur = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-blue-600"
+                to={service.link}
+                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition border-t-4 border-blue-600 block"
               >
                 <div className="text-4xl font-bold text-blue-100 mb-4">
                   0{index + 1}
@@ -167,7 +169,11 @@ const PestControlDoddaballapur = () => {
                 </h3>
 
                 <p className="text-gray-600 leading-7">{service.desc}</p>
-              </div>
+
+                <p className="text-blue-600 font-semibold mt-4">
+                  View Service →
+                </p>
+              </Link>
             ))}
           </div>
         </div>
@@ -189,10 +195,28 @@ const PestControlDoddaballapur = () => {
           </p>
 
           <p className="text-lg text-gray-700 leading-8">
-            Whether you need factory housekeeping staff, industrial security
-            guards, pest control technicians, electricians, maintenance workers
-            or manpower support, our team delivers reliable facility management
-            services in Doddaballapur Bangalore.
+            Whether you need{" "}
+            <Link to="/housekeeping" className="text-blue-600 font-semibold">
+              factory housekeeping services
+            </Link>
+            ,{" "}
+            <Link to="/securityservice" className="text-blue-600 font-semibold">
+              industrial security guards
+            </Link>
+            ,{" "}
+            <Link to="/pest" className="text-blue-600 font-semibold">
+              pest control technicians
+            </Link>
+            ,{" "}
+            <Link to="/repair" className="text-blue-600 font-semibold">
+              maintenance workers
+            </Link>{" "}
+            or{" "}
+            <Link to="/manpower" className="text-blue-600 font-semibold">
+              manpower support
+            </Link>
+            , our team delivers reliable facility management services in
+            Doddaballapur Bangalore.
           </p>
         </div>
       </section>

@@ -10,26 +10,32 @@ const IntegratedFacilityManagementWhitefield = () => {
     {
       title: "IT Park Housekeeping in Whitefield",
       desc: "Professional housekeeping services in Whitefield for IT parks, corporate offices, commercial complexes, apartments and healthcare facilities.",
+      link: "/housekeeping",
     },
     {
       title: "Security Services in Whitefield",
       desc: "Trained security guards in Whitefield for IT parks, apartments, offices, hospitals, commercial buildings and gated communities.",
+      link: "/securityservice",
     },
     {
       title: "Pest Management in Whitefield",
       desc: "Complete pest management services in Whitefield including termite control, cockroach control, rodent control and mosquito treatment.",
+      link: "/pest",
     },
     {
       title: "Repair & Maintenance in Whitefield",
       desc: "Reliable repair and maintenance services in Whitefield for IT parks, apartments, offices, hospitals, plumbing, carpentry and civil upkeep.",
+      link: "/repair",
     },
     {
       title: "Electrical Maintenance in Whitefield",
       desc: "Preventive electrical maintenance in Whitefield for IT parks, commercial buildings, apartments, panels, wiring and facility systems.",
+      link: "/repair",
     },
     {
       title: "Facility Manpower Outsourcing in Whitefield",
       desc: "Trained manpower outsourcing services in Whitefield for housekeeping, security, maintenance and daily facility support operations.",
+      link: "/corporate-staffing",
     },
   ];
 
@@ -85,7 +91,6 @@ const IntegratedFacilityManagementWhitefield = () => {
       {/* Hero Section */}
       <section className="py-8 md:py-12 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          {/* Left Content */}
           <div>
             <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               Integrated Facility Management Services
@@ -126,7 +131,6 @@ const IntegratedFacilityManagementWhitefield = () => {
             </div>
           </div>
 
-          {/* Right Banner */}
           <div className="flex justify-center">
             <img
               src={bannerImage}
@@ -152,9 +156,10 @@ const IntegratedFacilityManagementWhitefield = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-blue-600"
+                to={service.link}
+                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition border-t-4 border-blue-600 block"
               >
                 <div className="text-4xl font-bold text-blue-100 mb-4">
                   0{index + 1}
@@ -165,7 +170,11 @@ const IntegratedFacilityManagementWhitefield = () => {
                 </h3>
 
                 <p className="text-gray-600 leading-7">{service.desc}</p>
-              </div>
+
+                <p className="text-blue-600 font-semibold mt-4">
+                  View Service →
+                </p>
+              </Link>
             ))}
           </div>
         </div>
@@ -188,10 +197,34 @@ const IntegratedFacilityManagementWhitefield = () => {
           </p>
 
           <p className="text-lg text-gray-700 leading-8">
-            Whether you need office housekeeping staff, trained security guards,
-            pest control technicians, electricians, maintenance workers or
-            facility manpower support, our team delivers reliable facility
-            management services in Whitefield Bangalore.
+            Whether you need{" "}
+            <Link to="/housekeeping" className="text-blue-600 font-semibold">
+              office housekeeping services
+            </Link>
+            ,{" "}
+            <Link
+              to="/securityservice"
+              className="text-blue-600 font-semibold"
+            >
+              trained security guards
+            </Link>
+            ,{" "}
+            <Link to="/pest" className="text-blue-600 font-semibold">
+              pest control technicians
+            </Link>
+            ,{" "}
+            <Link to="/repair" className="text-blue-600 font-semibold">
+              maintenance workers
+            </Link>{" "}
+            or{" "}
+            <Link
+              to="/corporate-staffing"
+              className="text-blue-600 font-semibold"
+            >
+              facility manpower support
+            </Link>
+            , our team delivers reliable facility management services in
+            Whitefield Bangalore.
           </p>
         </div>
       </section>

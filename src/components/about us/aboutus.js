@@ -54,7 +54,7 @@ export default function About() {
       icon: Users,
       title: "Manpower Management",
       desc: "Skilled workforce deployment & HR support.",
-      path: "/corporate-staffing",
+      path: "/manpower",
     },
   ];
 

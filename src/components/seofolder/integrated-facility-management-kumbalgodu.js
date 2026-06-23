@@ -10,26 +10,32 @@ const IntegratedFacilityManagementKumbalgodu = () => {
     {
       title: "Industrial Housekeeping in Kumbalgodu",
       desc: "Professional industrial housekeeping services in Kumbalgodu for factories, warehouses, industrial parks, institutions and commercial facilities.",
+      link: "/housekeeping",
     },
     {
       title: "Industrial Security Services in Kumbalgodu",
       desc: "Trained security guards in Kumbalgodu for factory gates, warehouse security, visitor management, apartment security and commercial properties.",
+      link: "/securityservice",
     },
     {
       title: "Pest Management in Kumbalgodu",
       desc: "Complete pest management services in Kumbalgodu including termite control, cockroach control, rodent control and mosquito treatment.",
+      link: "/pest",
     },
     {
       title: "Repair & Maintenance in Kumbalgodu",
       desc: "Reliable repair and maintenance services in Kumbalgodu for factories, warehouses, institutions, apartments, plumbing, carpentry and civil upkeep.",
+      link: "/repair",
     },
     {
       title: "Electrical Maintenance in Kumbalgodu",
       desc: "Preventive electrical maintenance in Kumbalgodu for industrial units, warehouses, institutions, commercial buildings, panels and wiring systems.",
+      link: "/repair",
     },
     {
       title: "Manpower Outsourcing in Kumbalgodu",
       desc: "Skilled, semi-skilled and unskilled manpower outsourcing services in Kumbalgodu for industries, warehouses, institutions and commercial operations.",
+      link: "/manpower",
     },
   ];
 
@@ -82,11 +88,9 @@ const IntegratedFacilityManagementKumbalgodu = () => {
         />
       </Helmet>
 
-      {/* Hero */}
       {/* Hero Section */}
       <section className="py-8 md:py-12 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          {/* Left Content */}
           <div>
             <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               Integrated Facility Management Services
@@ -127,7 +131,6 @@ const IntegratedFacilityManagementKumbalgodu = () => {
             </div>
           </div>
 
-          {/* Right Banner */}
           <div className="flex justify-center">
             <img
               src={bannerImage}
@@ -137,7 +140,6 @@ const IntegratedFacilityManagementKumbalgodu = () => {
           </div>
         </div>
       </section>
-      {/* Service Image */}
 
       {/* Services */}
       <section className="py-16 bg-gray-50 px-6">
@@ -154,9 +156,10 @@ const IntegratedFacilityManagementKumbalgodu = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-blue-600"
+                to={service.link}
+                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition border-t-4 border-blue-600 block"
               >
                 <div className="text-4xl font-bold text-blue-100 mb-4">
                   0{index + 1}
@@ -167,7 +170,11 @@ const IntegratedFacilityManagementKumbalgodu = () => {
                 </h3>
 
                 <p className="text-gray-600 leading-7">{service.desc}</p>
-              </div>
+
+                <p className="text-blue-600 font-semibold mt-4">
+                  View Service →
+                </p>
+              </Link>
             ))}
           </div>
         </div>
@@ -190,10 +197,31 @@ const IntegratedFacilityManagementKumbalgodu = () => {
           </p>
 
           <p className="text-lg text-gray-700 leading-8">
-            Whether you need industrial housekeeping staff, security guards,
-            pest control technicians, electricians, maintenance workers or
-            manpower support, our team delivers reliable facility management
-            services in Kumbalgodu Bangalore.
+            Whether you need{" "}
+            <Link to="/housekeeping" className="text-blue-600 font-semibold">
+              industrial housekeeping services
+            </Link>
+            ,{" "}
+            <Link
+              to="/securityservice"
+              className="text-blue-600 font-semibold"
+            >
+              security guards
+            </Link>
+            ,{" "}
+            <Link to="/pest" className="text-blue-600 font-semibold">
+              pest control technicians
+            </Link>
+            ,{" "}
+            <Link to="/repair" className="text-blue-600 font-semibold">
+              maintenance workers
+            </Link>{" "}
+            or{" "}
+            <Link to="/manpower" className="text-blue-600 font-semibold">
+              manpower support
+            </Link>
+            , our team delivers reliable facility management services in
+            Kumbalgodu Bangalore.
           </p>
         </div>
       </section>

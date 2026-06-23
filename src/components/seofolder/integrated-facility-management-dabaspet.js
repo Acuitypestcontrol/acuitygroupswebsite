@@ -10,26 +10,32 @@ const IntegratedFacilityManagementDabaspet = () => {
     {
       title: "Factory Housekeeping in Dabaspet",
       desc: "Specialized factory housekeeping services in Dabaspet for production floors, warehouses, loading areas and industrial workspaces.",
+      link: "/housekeeping",
     },
     {
       title: "Industrial Security Services in Dabaspet",
       desc: "Trained industrial security guards in Dabaspet for factory gates, warehouses, logistics hubs, visitor entry and night security.",
+      link: "/securityservice",
     },
     {
       title: "Warehouse Pest Management in Dabaspet",
       desc: "Professional pest management services in Dabaspet for warehouses, factories, storage units and commercial facilities.",
+      link: "/pest",
     },
     {
       title: "Industrial Repair & Maintenance in Dabaspet",
       desc: "Reliable repair and maintenance support in Dabaspet for factory buildings, warehouse facilities, plumbing, carpentry and civil upkeep.",
+      link: "/repair",
     },
     {
       title: "Electrical Maintenance in Dabaspet",
       desc: "Preventive electrical maintenance in Dabaspet for factories, warehouses, electrical panels, wiring systems and industrial facilities.",
+      link: "/repair",
     },
     {
       title: "Industrial Manpower Outsourcing in Dabaspet",
       desc: "Skilled, semi-skilled and unskilled manpower outsourcing services in Dabaspet for manufacturing units, warehouses and logistics operations.",
+      link: "/manpower",
     },
   ];
 
@@ -82,11 +88,9 @@ const IntegratedFacilityManagementDabaspet = () => {
         />
       </Helmet>
 
-      {/* Hero */}
       {/* Hero Section */}
       <section className="py-8 md:py-12 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          {/* Left Content */}
           <div>
             <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               Integrated Facility Management Services
@@ -126,7 +130,6 @@ const IntegratedFacilityManagementDabaspet = () => {
             </div>
           </div>
 
-          {/* Right Banner */}
           <div className="flex justify-center">
             <img
               src={bannerImage}
@@ -136,8 +139,6 @@ const IntegratedFacilityManagementDabaspet = () => {
           </div>
         </div>
       </section>
-
-      {/* Service Image */}
 
       {/* Services */}
       <section className="py-16 bg-gray-50 px-6">
@@ -154,9 +155,10 @@ const IntegratedFacilityManagementDabaspet = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-blue-600"
+                to={service.link}
+                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition border-t-4 border-blue-600 block"
               >
                 <div className="text-4xl font-bold text-blue-100 mb-4">
                   0{index + 1}
@@ -167,7 +169,11 @@ const IntegratedFacilityManagementDabaspet = () => {
                 </h3>
 
                 <p className="text-gray-600 leading-7">{service.desc}</p>
-              </div>
+
+                <p className="text-blue-600 font-semibold mt-4">
+                  View Service →
+                </p>
+              </Link>
             ))}
           </div>
         </div>
@@ -189,10 +195,31 @@ const IntegratedFacilityManagementDabaspet = () => {
           </p>
 
           <p className="text-lg text-gray-700 leading-8">
-            Whether you need factory housekeeping staff, industrial security
-            guards, pest control technicians, electricians, maintenance workers
-            or manpower support, our team delivers reliable facility management
-            services in Dabaspet Bangalore.
+            Whether you need{" "}
+            <Link to="/housekeeping" className="text-blue-600 font-semibold">
+              factory housekeeping services
+            </Link>
+            ,{" "}
+            <Link
+              to="/securityservice"
+              className="text-blue-600 font-semibold"
+            >
+              industrial security guards
+            </Link>
+            ,{" "}
+            <Link to="/pest" className="text-blue-600 font-semibold">
+              pest control technicians
+            </Link>
+            ,{" "}
+            <Link to="/repair" className="text-blue-600 font-semibold">
+              maintenance workers
+            </Link>{" "}
+            or{" "}
+            <Link to="/manpower" className="text-blue-600 font-semibold">
+              manpower support
+            </Link>
+            , our team delivers reliable facility management services in
+            Dabaspet Bangalore.
           </p>
         </div>
       </section>

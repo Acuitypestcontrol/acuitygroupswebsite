@@ -10,26 +10,32 @@ const IntegratedFacilityManagementElectronicCity = () => {
     {
       title: "Corporate Housekeeping in Electronic City",
       desc: "Professional housekeeping services in Electronic City for IT parks, corporate offices, tech campuses, commercial buildings and business centres.",
+      link: "/housekeeping",
     },
     {
       title: "Office Security Services in Electronic City",
       desc: "Trained security guards in Electronic City for IT companies, office entrances, visitor management, access control and 24/7 property protection.",
+      link: "/securityservice",
     },
     {
       title: "Pest Management in Electronic City",
       desc: "Reliable pest management services in Electronic City for IT offices, apartments, hospitals, warehouses and commercial properties.",
+      link: "/pest",
     },
     {
       title: "Building Repair & Maintenance in Electronic City",
       desc: "Complete repair and maintenance services in Electronic City for office buildings, apartments, tech parks, plumbing, carpentry and civil upkeep.",
+      link: "/repair",
     },
     {
       title: "Electrical Maintenance in Electronic City",
       desc: "Preventive electrical maintenance in Electronic City for IT parks, commercial buildings, electrical panels, wiring systems and office facilities.",
+      link: "/repair",
     },
     {
       title: "Facility Manpower Outsourcing in Electronic City",
       desc: "Skilled and trained manpower outsourcing services in Electronic City for housekeeping, security, maintenance and facility support operations.",
+      link: "/manpower",
     },
   ];
 
@@ -82,72 +88,64 @@ const IntegratedFacilityManagementElectronicCity = () => {
         />
       </Helmet>
 
-      {/* Hero */}
-      {/* Hero */}
-     {/* Hero Section */}
-<section className="py-8 md:py-12 px-6 bg-gray-50">
-  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      {/* Hero Section */}
+      <section className="py-8 md:py-12 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              Integrated Facility Management Services
+            </span>
 
-    {/* Left Content */}
-    <div>
-      <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-        Integrated Facility Management Services
-      </span>
+            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
+              Facility Management Services in Electronic City Bangalore
+            </h1>
 
-      <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-        Facility Management Services in Electronic City Bangalore
-      </h1>
+            <p className="text-lg text-gray-700 leading-8 mb-6">
+              Acuity Groups provides professional Integrated Facility Management
+              Services in Electronic City Bangalore for IT parks, corporate
+              offices, technology campuses, apartment communities, warehouses
+              and commercial establishments.
+            </p>
 
-      <p className="text-lg text-gray-700 leading-8 mb-6">
-        Acuity Groups provides professional Integrated Facility Management
-        Services in Electronic City Bangalore for IT parks, corporate offices,
-        technology campuses, apartment communities, warehouses and commercial
-        establishments.
-      </p>
+            <p className="text-lg text-gray-700 leading-8 mb-8">
+              Our experienced workforce delivers housekeeping services, security
+              services, pest management, electrical maintenance, repair &
+              maintenance and manpower outsourcing solutions to ensure smooth
+              day-to-day facility operations.
+            </p>
 
-      <p className="text-lg text-gray-700 leading-8 mb-8">
-        Our experienced workforce delivers housekeeping services, security
-        services, pest management, electrical maintenance, repair &
-        maintenance and manpower outsourcing solutions to ensure smooth
-        day-to-day facility operations.
-      </p>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                to="/contactus"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold"
+              >
+                Get Free Quote
+              </Link>
 
-      <div className="flex flex-wrap gap-4">
-        <Link
-          to="/contactus"
-          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold"
-        >
-          Get Free Quote
-        </Link>
+              <a
+                href="tel:+919941229005"
+                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full font-semibold"
+              >
+                Call Now
+              </a>
+            </div>
+          </div>
 
-        <a
-          href="tel:+919941229005"
-          className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full font-semibold"
-        >
-          Call Now
-        </a>
-      </div>
-    </div>
-
-    {/* Right Banner */}
-    <div className="flex justify-center">
-      <img
-        src={bannerImage}
-        alt="Facility Management Services in Electronic City Bangalore"
-        className="w-full max-w-[700px] rounded-3xl shadow-2xl"
-      />
-    </div>
-
-  </div>
-</section>
-
-      {/* Service Image */}
+          <div className="flex justify-center">
+            <img
+              src={bannerImage}
+              alt="Facility Management Services in Electronic City Bangalore"
+              className="w-full max-w-[700px] rounded-3xl shadow-2xl"
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Services */}
       <section className="py-16 bg-gray-50 px-6">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-blue-900 mb-4">
-            Our integrated Facility Management Services in Electronic City
+            Our Integrated Facility Management Services in Electronic City
           </h2>
 
           <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
@@ -158,9 +156,10 @@ const IntegratedFacilityManagementElectronicCity = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-blue-600"
+                to={service.link}
+                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition border-t-4 border-blue-600 block"
               >
                 <div className="text-4xl font-bold text-blue-100 mb-4">
                   0{index + 1}
@@ -171,7 +170,11 @@ const IntegratedFacilityManagementElectronicCity = () => {
                 </h3>
 
                 <p className="text-gray-600 leading-7">{service.desc}</p>
-              </div>
+
+                <p className="text-blue-600 font-semibold mt-4">
+                  View Service →
+                </p>
+              </Link>
             ))}
           </div>
         </div>
@@ -193,10 +196,31 @@ const IntegratedFacilityManagementElectronicCity = () => {
           </p>
 
           <p className="text-lg text-gray-700 leading-8">
-            Whether you need office housekeeping staff, trained security guards,
-            pest control technicians, electricians, maintenance workers or
-            facility manpower support, our team delivers reliable facility
-            management services in Electronic City Bangalore.
+            Whether you need{" "}
+            <Link to="/housekeeping" className="text-blue-600 font-semibold">
+              office housekeeping services
+            </Link>
+            ,{" "}
+            <Link
+              to="/securityservice"
+              className="text-blue-600 font-semibold"
+            >
+              trained security guards
+            </Link>
+            ,{" "}
+            <Link to="/pest" className="text-blue-600 font-semibold">
+              pest control technicians
+            </Link>
+            ,{" "}
+            <Link to="/repair" className="text-blue-600 font-semibold">
+              maintenance workers
+            </Link>{" "}
+            or{" "}
+            <Link to="/manpower" className="text-blue-600 font-semibold">
+              facility manpower support
+            </Link>
+            , our team delivers reliable facility management services in
+            Electronic City Bangalore.
           </p>
         </div>
       </section>

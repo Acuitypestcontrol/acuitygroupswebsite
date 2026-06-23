@@ -10,26 +10,32 @@ const IntegratedFacilityManagementJPNagar = () => {
     {
       title: "Apartment Housekeeping in JP Nagar",
       desc: "Professional housekeeping services in JP Nagar for apartments, gated communities, offices, hospitals, clinics, schools and commercial buildings.",
+      link: "/housekeeping",
     },
     {
       title: "Security Services in JP Nagar",
       desc: "Trained security guards in JP Nagar for apartments, offices, hospitals, educational institutions, retail outlets and commercial properties.",
+      link: "/securityservice",
     },
     {
       title: "Pest Management in JP Nagar",
       desc: "Complete pest management services in JP Nagar including termite control, cockroach control, rodent control and mosquito treatment.",
+      link: "/pest",
     },
     {
       title: "Building Repair & Maintenance in JP Nagar",
       desc: "Reliable repair and maintenance services in JP Nagar for apartments, offices, hospitals, schools, plumbing, carpentry and civil upkeep.",
+      link: "/repair",
     },
     {
       title: "Electrical Maintenance in JP Nagar",
       desc: "Preventive electrical maintenance in JP Nagar for apartments, offices, hospitals, commercial buildings, panels and wiring systems.",
+      link: "/repair",
     },
     {
       title: "Facility Manpower Outsourcing in JP Nagar",
       desc: "Trained manpower outsourcing services in JP Nagar for housekeeping, security, maintenance and daily facility support operations.",
+      link: "/manpower",
     },
   ];
 
@@ -85,7 +91,6 @@ const IntegratedFacilityManagementJPNagar = () => {
       {/* Hero Section */}
       <section className="py-8 md:py-12 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          {/* Left Content */}
           <div>
             <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               Integrated Facility Management Services
@@ -126,7 +131,6 @@ const IntegratedFacilityManagementJPNagar = () => {
             </div>
           </div>
 
-          {/* Right Banner */}
           <div className="flex justify-center">
             <img
               src={bannerImage}
@@ -152,9 +156,10 @@ const IntegratedFacilityManagementJPNagar = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-blue-600"
+                to={service.link}
+                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition border-t-4 border-blue-600 block"
               >
                 <div className="text-4xl font-bold text-blue-100 mb-4">
                   0{index + 1}
@@ -165,7 +170,11 @@ const IntegratedFacilityManagementJPNagar = () => {
                 </h3>
 
                 <p className="text-gray-600 leading-7">{service.desc}</p>
-              </div>
+
+                <p className="text-blue-600 font-semibold mt-4">
+                  View Service →
+                </p>
+              </Link>
             ))}
           </div>
         </div>
@@ -188,10 +197,31 @@ const IntegratedFacilityManagementJPNagar = () => {
           </p>
 
           <p className="text-lg text-gray-700 leading-8">
-            Whether you need apartment housekeeping staff, security guards, pest
-            control technicians, electricians, maintenance workers or facility
-            manpower support, our team delivers reliable facility management
-            services in JP Nagar Bangalore.
+            Whether you need{" "}
+            <Link to="/housekeeping" className="text-blue-600 font-semibold">
+              apartment housekeeping services
+            </Link>
+            ,{" "}
+            <Link
+              to="/securityservice"
+              className="text-blue-600 font-semibold"
+            >
+              security guards
+            </Link>
+            ,{" "}
+            <Link to="/pest" className="text-blue-600 font-semibold">
+              pest control technicians
+            </Link>
+            ,{" "}
+            <Link to="/repair" className="text-blue-600 font-semibold">
+              maintenance workers
+            </Link>{" "}
+            or{" "}
+            <Link to="/manpower" className="text-blue-600 font-semibold">
+              facility manpower support
+            </Link>
+            , our team delivers reliable facility management services in JP
+            Nagar Bangalore.
           </p>
         </div>
       </section>
