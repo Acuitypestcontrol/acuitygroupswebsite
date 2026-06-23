@@ -1,12 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaYoutube,
-
-} from "react-icons/fa";
-
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const SocialSidebar = () => {
   return (

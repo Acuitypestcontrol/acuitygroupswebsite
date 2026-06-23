@@ -28,7 +28,6 @@ const LeadPopup = () => {
     const phone = form.phone.value;
     const email = form.email.value;
     const service = form.service.value;
-  
 
     const whatsappMessage = `*New Website Lead*%0A%0AName: ${name}%0APhone: ${phone}%0AEmail: ${email}%0AService: ${service}`;
 
@@ -53,10 +52,6 @@ const LeadPopup = () => {
         </button>
 
         <div className="relative z-10 text-center px-6 pt-8 pb-5 border-b border-white/15">
-          <div className="inline-block px-4 py-1 mb-3 rounded-full bg-white/15 text-white text-sm font-semibold border border-white/20">
-            Free Consultation
-          </div>
-
           <h2 className="text-3xl font-extrabold text-white mb-2">
             Get a Free Auditing and Site Servey!
           </h2>

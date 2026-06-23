@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaWhatsapp, FaPaperPlane, FaTimes } from "react-icons/fa";
-import Logo from "../images/logoacuity.jpeg"
+import Logo from "../images/logoacuity.jpeg";
 
 const WhatsAppChat = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,7 @@ const WhatsAppChat = () => {
     if (!message.trim()) return;
 
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-      message
+      message,
     )}`;
 
     window.open(url, "_blank");
@@ -83,9 +83,7 @@ const WhatsAppChat = () => {
               How can we help you today?
             </p>
 
-            <p className="text-[10px] text-gray-400 text-right mt-2">
-              ✓✓
-            </p>
+            <p className="text-[10px] text-gray-400 text-right mt-2">✓✓</p>
           </div>
         </div>
 

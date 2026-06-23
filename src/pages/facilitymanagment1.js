@@ -14,7 +14,7 @@ import {
 
 import FacilityHero from "../images/facility.jpg";
 import IntegratedFM from "../images/Integrated Facility Management.jpg";
-import BuildingMaintenance from "../images/buildingmantain.webp"
+import BuildingMaintenance from "../images/buildingmantain.webp";
 import HousekeepingManagement from "../images/housekeepingmanagment.jpg";
 import TechnicalSupport from "../images/electrical.jpg";
 import VendorManagement from "../images/Vendor Management.jpg";
@@ -26,13 +26,21 @@ const FacilityManagement = () => {
       image: IntegratedFM,
       title: "Integrated Facility Management",
       desc: "Complete facility management solutions for commercial buildings, offices, residential properties, and industrial facilities.",
-      features: ["24/7 Operations", "Preventive Maintenance", "Energy Management"],
+      features: [
+        "24/7 Operations",
+        "Preventive Maintenance",
+        "Energy Management",
+      ],
     },
     {
       image: BuildingMaintenance,
       title: "Building Maintenance",
       desc: "Routine building inspections, repairs, preventive maintenance, and operational support services.",
-      features: ["Structural Inspections", "Repair Services", "Safety Compliance"],
+      features: [
+        "Structural Inspections",
+        "Repair Services",
+        "Safety Compliance",
+      ],
     },
     {
       image: HousekeepingManagement,
@@ -50,13 +58,21 @@ const FacilityManagement = () => {
       image: VendorManagement,
       title: "Vendor Management",
       desc: "Efficient coordination and supervision of third-party vendors and service providers.",
-      features: ["Contract Management", "Performance Tracking", "Cost Optimization"],
+      features: [
+        "Contract Management",
+        "Performance Tracking",
+        "Cost Optimization",
+      ],
     },
     {
       image: AssetManagement,
       title: "Asset Management",
       desc: "Facility asset tracking, maintenance scheduling, and operational monitoring support services.",
-      features: ["Asset Inventory", "Maintenance Scheduling", "Lifecycle Tracking"],
+      features: [
+        "Asset Inventory",
+        "Maintenance Scheduling",
+        "Lifecycle Tracking",
+      ],
     },
   ];
 

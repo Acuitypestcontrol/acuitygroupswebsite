@@ -1,18 +1,79 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import pestBanner from "../../images/koramangala.jpg";
+
+import bannerImage from "../../images/koramangalampic.jpg";
+import bannerImage1 from "../../images/koramangala.jpg";
 
 const PestControlKoramangala = () => {
+  const services = [
+    {
+      title: "Apartment Pest Control in Koramangala",
+      desc: "Professional pest control services in Koramangala for apartments, villas, PGs, homes and residential communities.",
+    },
+    {
+      title: "Restaurant Pest Control in Koramangala",
+      desc: "Safe pest management services in Koramangala for restaurants, cafes, cloud kitchens, hotels and food businesses.",
+    },
+    {
+      title: "Cockroach Control in Koramangala",
+      desc: "Effective cockroach control treatment in Koramangala for kitchens, bathrooms, restaurants, offices and commercial properties.",
+    },
+    {
+      title: "Termite Control in Koramangala",
+      desc: "Professional termite inspection and termite treatment in Koramangala for homes, apartments, offices and wooden structures.",
+    },
+    {
+      title: "Rodent Control in Koramangala",
+      desc: "Reliable rat and rodent control services in Koramangala for homes, restaurants, offices, storage areas and commercial buildings.",
+    },
+    {
+      title: "Mosquito & Bed Bug Control in Koramangala",
+      desc: "Complete mosquito control and bed bug treatment in Koramangala for homes, apartments, PGs and residential properties.",
+    },
+  ];
+
+  const whyChoose = [
+    "Safe Pest Control for Homes & Apartments",
+    "Experienced Pest Control Technicians",
+    "Specialized Restaurant & Cafe Pest Treatment",
+    "Customized Pest Control Packages",
+    "Fast Response in Koramangala",
+    "Hygiene & Safety Focused Service",
+  ];
+
+  const faqs = [
+    {
+      q: "Do you provide pest control services in Koramangala?",
+      a: "Yes, Acuity Groups provides pest control services in Koramangala for homes, apartments, restaurants, cafes, offices and commercial properties.",
+    },
+    {
+      q: "Do you provide pest control for restaurants and cafes in Koramangala?",
+      a: "Yes, we provide pest management services in Koramangala for restaurants, cafes, cloud kitchens, hotels and food businesses.",
+    },
+    {
+      q: "Do you provide termite control in Koramangala?",
+      a: "Yes, we provide professional termite inspection and termite treatment services in Koramangala for residential and commercial properties.",
+    },
+    {
+      q: "Is your pest control treatment safe for children and pets?",
+      a: "Yes, our pest control treatments are safe when the recommended guidelines and waiting period are followed after service.",
+    },
+  ];
+
   return (
-    <div className="w-full bg-white text-gray-800">
+    <div className="bg-white text-gray-800">
       <Helmet>
         <title>
           Pest Control Services in Koramangala Bangalore | Acuity Groups
         </title>
         <meta
           name="description"
-          content="Professional pest control services in Koramangala Bangalore. Expert termite control, cockroach control, rodent control and mosquito treatment for homes, apartments and offices."
+          content="Pest Control Services in Koramangala Bangalore by Acuity Groups. Cockroach control, termite control, rodent control, mosquito control, bed bug treatment and restaurant pest control for homes, apartments and offices."
+        />
+        <meta
+          name="keywords"
+          content="Pest Control Services in Koramangala, Pest Control Company in Koramangala, Cockroach Control in Koramangala, Termite Control in Koramangala, Rodent Control in Koramangala, Mosquito Control in Koramangala, Bed Bug Treatment in Koramangala"
         />
         <link
           rel="canonical"
@@ -20,134 +81,165 @@ const PestControlKoramangala = () => {
         />
       </Helmet>
 
-      {/* Banner */}
-      <section
-        className="relative h-[70vh] flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: `url(${pestBanner})` }}
-      >
-        
+      {/* Hero Section */}
+      <section className="py-8 md:py-12 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          {/* Left Content */}
+          <div>
+            <span className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+              Professional Pest Control Services
+            </span>
+
+            <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-6 leading-tight">
+              Pest Control Services in Koramangala Bangalore
+            </h1>
+
+            <p className="text-lg text-gray-700 leading-8 mb-6">
+              Acuity Groups provides professional pest control services in
+              Koramangala Bangalore for apartments, villas, restaurants, cafes,
+              offices, PG accommodations and commercial establishments.
+            </p>
+
+            <p className="text-lg text-gray-700 leading-8 mb-8">
+              Our trained pest control technicians handle cockroaches, termites,
+              rodents, mosquitoes, ants and bed bugs using safe, effective and
+              long-lasting treatment solutions.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <Link
+                to="/contactus"
+                className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold"
+              >
+                Get Free Quote
+              </Link>
+
+              <a
+                href="tel:+919941229005"
+                className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-full font-semibold"
+              >
+                Call Now
+              </a>
+            </div>
+          </div>
+
+          {/* Right Banner */}
+          <div className="flex justify-center">
+            <img
+              src={bannerImage}
+              alt="Pest Control Services in Koramangala Bangalore"
+              className="w-full max-w-[700px] rounded-3xl shadow-2xl"
+            />
+          </div>
+        </div>
       </section>
 
-      {/* Intro */}
-      <section className="py-16 px-6 max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-6">
-          Trusted Pest Control Company in Koramangala
-        </h2>
-
-        <p className="text-lg leading-8 text-gray-700 mb-5">
-          Acuity Groups provides professional pest control services in
-          Koramangala Bangalore for residential and commercial properties. Our
-          trained experts eliminate cockroaches, termites, rodents, mosquitoes,
-          ants and bed bugs using safe and effective treatment methods.
-        </p>
-
-        <p className="text-lg leading-8 text-gray-700">
-          We serve apartments, villas, restaurants, cafes, offices, co-working
-          spaces and commercial establishments throughout Koramangala with
-          customized pest management solutions.
-        </p>
-      </section>
+      {/* Service Image */}
 
       {/* Services */}
       <section className="py-16 bg-gray-50 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-green-800 mb-12">
-            Our Pest Control Solutions
+          <h2 className="text-4xl font-bold text-center text-green-800 mb-4">
+            Our Pest Control Services in Koramangala
           </h2>
 
+          <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+            We provide customized pest control services in Koramangala for
+            apartments, villas, restaurants, cafes, offices, PGs and commercial
+            properties.
+          </p>
+
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              "Cockroach Control",
-              "Termite Control",
-              "Rodent Control",
-              "Mosquito Control",
-              "Bed Bug Treatment",
-              "Ant Control",
-            ].map((item, index) => (
+            {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition"
+                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-green-600"
               >
+                <div className="text-4xl font-bold text-green-100 mb-4">
+                  0{index + 1}
+                </div>
+
                 <h3 className="text-xl font-bold text-green-700 mb-3">
-                  {item}
+                  {service.title}
                 </h3>
-                <p className="text-gray-600 leading-7">
-                  Professional pest treatment to remove pests and prevent future
-                  infestation in your property.
-                </p>
+
+                <p className="text-gray-600 leading-7">{service.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* SEO Content */}
+      <section className="py-16 px-6 max-w-7xl mx-auto">
+        <div className="bg-green-50 rounded-3xl p-8 md:p-12">
+          <h2 className="text-4xl font-bold text-green-800 mb-6">
+            Pest Control Solutions for Koramangala Homes & Businesses
+          </h2>
+
+          <p className="text-lg text-gray-700 leading-8 mb-5">
+            Koramangala is one of Bangalore’s busiest residential and commercial
+            locations, with apartments, restaurants, cafes, offices, PGs,
+            co-working spaces and retail outlets. Acuity Groups supports homes
+            and businesses in Koramangala with professional pest control
+            services focused on hygiene, safety and long-term pest prevention.
+          </p>
+
+          <p className="text-lg text-gray-700 leading-8">
+            Whether you need cockroach control for your kitchen, termite
+            treatment for your property, rodent control for a restaurant or bed
+            bug treatment for a home or PG, our team delivers reliable pest
+            control services in Koramangala Bangalore.
+          </p>
+        </div>
+      </section>
+
       {/* Why Choose */}
       <section className="py-16 px-6 max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-10">
-          Why Choose Acuity Groups?
+        <h2 className="text-4xl font-bold text-green-800 mb-10">
+          Why Choose Acuity Groups in Koramangala?
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {[
-            "Safe and eco-friendly pest control methods",
-            "Experienced pest control technicians",
-            "Service for homes, apartments, restaurants and offices",
-            "Affordable pest control packages in Koramangala",
-            "Fast response and professional support",
-            "Complete hygiene and safety-focused treatment",
-          ].map((point, index) => (
-            <div key={index} className="flex gap-4 items-start">
-              <span className="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">
+        <div className="grid md:grid-cols-3 gap-6">
+          {whyChoose.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-md transition"
+            >
+              <span className="bg-green-600 text-white w-10 h-10 rounded-full flex items-center justify-center mb-4">
                 ✓
               </span>
-              <p className="text-lg text-gray-700">{point}</p>
+              <p className="text-lg font-semibold">{item}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Area Coverage */}
+      {/* Areas */}
       <section className="py-16 bg-green-900 text-white px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">
             Pest Control Across Koramangala
           </h2>
 
-          <p className="text-lg text-green-100 max-w-4xl mx-auto leading-8">
-            We provide pest control services in Koramangala 1st Block, 2nd
+          <p className="text-lg text-green-100 leading-8">
+            We provide pest control services across Koramangala 1st Block, 2nd
             Block, 3rd Block, 4th Block, 5th Block, 6th Block, 7th Block, 8th
-            Block and nearby areas.
+            Block, Jakkasandra, Ejipura, Sony World Signal and nearby areas.
           </p>
         </div>
       </section>
 
       {/* FAQ */}
       <section className="py-16 px-6 max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-10">
+        <h2 className="text-4xl font-bold text-green-800 mb-10">
           Frequently Asked Questions
         </h2>
 
         <div className="space-y-6">
-          {[
-            {
-              q: "Do you provide pest control services in Koramangala?",
-              a: "Yes, we provide pest control services throughout Koramangala and nearby areas.",
-            },
-            {
-              q: "Do you provide pest control for restaurants and cafes?",
-              a: "Yes, we offer pest management services for restaurants, cafes, hotels and food businesses.",
-            },
-            {
-              q: "Do you provide termite control in Koramangala?",
-              a: "Yes, we provide professional termite inspection and treatment services.",
-            },
-            {
-              q: "Is the treatment safe for children and pets?",
-              a: "Yes, our treatments are safe when used according to recommended guidelines.",
-            },
-          ].map((faq, index) => (
+          {faqs.map((faq, index) => (
             <div key={index} className="border-b pb-5">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              <h3 className="font-semibold text-xl mb-2 text-green-800">
                 {faq.q}
               </h3>
               <p className="text-gray-600 leading-7">{faq.a}</p>
@@ -156,14 +248,21 @@ const PestControlKoramangala = () => {
         </div>
       </section>
 
+      {/* Map */}
+      <section
+        className="relative h-[70vh] bg-cover bg-center"
+        style={{ backgroundImage: `url(${bannerImage1})` }}
+      ></section>
+
       {/* CTA */}
       <section className="py-16 bg-gray-100 text-center px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-green-800 mb-4">
+        <h2 className="text-4xl font-bold text-green-800 mb-4">
           Need Pest Control in Koramangala?
         </h2>
 
         <p className="text-lg text-gray-700 mb-8">
-          Contact Acuity Groups today for safe and reliable pest control service.
+          Contact Acuity Groups today for safe and reliable pest control
+          services in Koramangala Bangalore.
         </p>
 
         <Link

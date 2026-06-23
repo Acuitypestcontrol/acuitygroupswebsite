@@ -1,9 +1,66 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import bannerImage from "../../images/electronicmap.jpg";
+
+import bannerImage from "../../images/electronicitympic.jpg";
+import bannerImage1 from "../../images/electronicmap.jpg";
 
 const IntegratedFacilityManagementElectronicCity = () => {
+  const services = [
+    {
+      title: "Corporate Housekeeping in Electronic City",
+      desc: "Professional housekeeping services in Electronic City for IT parks, corporate offices, tech campuses, commercial buildings and business centres.",
+    },
+    {
+      title: "Office Security Services in Electronic City",
+      desc: "Trained security guards in Electronic City for IT companies, office entrances, visitor management, access control and 24/7 property protection.",
+    },
+    {
+      title: "Pest Management in Electronic City",
+      desc: "Reliable pest management services in Electronic City for IT offices, apartments, hospitals, warehouses and commercial properties.",
+    },
+    {
+      title: "Building Repair & Maintenance in Electronic City",
+      desc: "Complete repair and maintenance services in Electronic City for office buildings, apartments, tech parks, plumbing, carpentry and civil upkeep.",
+    },
+    {
+      title: "Electrical Maintenance in Electronic City",
+      desc: "Preventive electrical maintenance in Electronic City for IT parks, commercial buildings, electrical panels, wiring systems and office facilities.",
+    },
+    {
+      title: "Facility Manpower Outsourcing in Electronic City",
+      desc: "Skilled and trained manpower outsourcing services in Electronic City for housekeeping, security, maintenance and facility support operations.",
+    },
+  ];
+
+  const whyChoose = [
+    "Experience Managing IT & Corporate Facilities",
+    "Trained Housekeeping & Security Workforce",
+    "Customized IFM Solutions for Offices",
+    "Support for IT Parks & Commercial Buildings",
+    "Affordable Monthly Facility Packages",
+    "24/7 Facility Support & Supervision",
+  ];
+
+  const faqs = [
+    {
+      q: "Do you provide integrated facility management services in Electronic City?",
+      a: "Yes, Acuity Groups provides integrated facility management services in Electronic City for IT parks, corporate offices, apartments, warehouses and commercial properties.",
+    },
+    {
+      q: "Which facility services do you offer in Electronic City?",
+      a: "We offer housekeeping, security services, pest management, repair and maintenance, electrical maintenance and manpower outsourcing in Electronic City.",
+    },
+    {
+      q: "Do you provide housekeeping services for IT companies in Electronic City?",
+      a: "Yes, we provide professional housekeeping services in Electronic City for IT companies, corporate offices, tech parks and commercial buildings.",
+    },
+    {
+      q: "Do you provide facility manpower outsourcing in Electronic City?",
+      a: "Yes, we provide trained manpower outsourcing services in Electronic City for housekeeping, security, maintenance and facility operations.",
+    },
+  ];
+
   return (
     <div className="bg-white text-gray-800">
       <Helmet>
@@ -13,7 +70,11 @@ const IntegratedFacilityManagementElectronicCity = () => {
         </title>
         <meta
           name="description"
-          content="Professional Integrated Facility Management Services in Electronic City Bangalore including housekeeping, security, pest control, maintenance and manpower outsourcing."
+          content="Integrated Facility Management Services in Electronic City Bangalore by Acuity Groups. Corporate housekeeping, office security, pest management, electrical maintenance, repair maintenance and manpower outsourcing for IT parks, offices and commercial properties."
+        />
+        <meta
+          name="keywords"
+          content="Integrated Facility Management Services in Electronic City, Facility Management Company in Electronic City, Housekeeping Services in Electronic City, Security Services in Electronic City, Pest Control in Electronic City, Manpower Outsourcing in Electronic City, Electrical Maintenance in Electronic City"
         />
         <link
           rel="canonical"
@@ -21,86 +82,147 @@ const IntegratedFacilityManagementElectronicCity = () => {
         />
       </Helmet>
 
-      <section
-        className="relative h-[70vh] bg-cover bg-center flex items-center justify-center"
-        style={{ backgroundImage: `url(${bannerImage})` }}
-      ></section>
+      {/* Hero */}
+      {/* Hero */}
+     {/* Hero Section */}
+<section className="py-8 md:py-12 px-6 bg-gray-50">
+  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
 
-      <section className="py-16 px-6 max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-blue-900 mb-6">
-          Professional Facility Management Company in Electronic City
-        </h2>
+    {/* Left Content */}
+    <div>
+      <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+        Integrated Facility Management Services
+      </span>
 
-        <p className="text-lg text-gray-700 leading-8 mb-5">
-          Acuity Groups provides comprehensive Integrated Facility Management
-          Services in Electronic City Bangalore for IT parks, corporate offices,
-          apartment communities, hospitals, warehouses and industrial
-          facilities.
-        </p>
+      <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
+        Facility Management Services in Electronic City Bangalore
+      </h1>
 
-        <p className="text-lg text-gray-700 leading-8">
-          Our team manages daily facility operations through housekeeping,
-          security services, pest management, repair & maintenance, electrical
-          maintenance and manpower outsourcing support.
-        </p>
-      </section>
+      <p className="text-lg text-gray-700 leading-8 mb-6">
+        Acuity Groups provides professional Integrated Facility Management
+        Services in Electronic City Bangalore for IT parks, corporate offices,
+        technology campuses, apartment communities, warehouses and commercial
+        establishments.
+      </p>
 
+      <p className="text-lg text-gray-700 leading-8 mb-8">
+        Our experienced workforce delivers housekeeping services, security
+        services, pest management, electrical maintenance, repair &
+        maintenance and manpower outsourcing solutions to ensure smooth
+        day-to-day facility operations.
+      </p>
+
+      <div className="flex flex-wrap gap-4">
+        <Link
+          to="/contactus"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold"
+        >
+          Get Free Quote
+        </Link>
+
+        <a
+          href="tel:+919941229005"
+          className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full font-semibold"
+        >
+          Call Now
+        </a>
+      </div>
+    </div>
+
+    {/* Right Banner */}
+    <div className="flex justify-center">
+      <img
+        src={bannerImage}
+        alt="Facility Management Services in Electronic City Bangalore"
+        className="w-full max-w-[700px] rounded-3xl shadow-2xl"
+      />
+    </div>
+
+  </div>
+</section>
+
+      {/* Service Image */}
+
+      {/* Services */}
       <section className="py-16 bg-gray-50 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-blue-900 mb-12">
-            Our Facility Management Services
+          <h2 className="text-4xl font-bold text-center text-blue-900 mb-4">
+            Our integrated Facility Management Services in Electronic City
           </h2>
 
+          <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
+            We provide customized integrated facility management services in
+            Electronic City for IT parks, corporate offices, apartments,
+            hospitals, warehouses and commercial establishments.
+          </p>
+
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              "Housekeeping Services",
-              "Security Services",
-              "Pest Control Services",
-              "Repair & Maintenance",
-              "Electrical Maintenance",
-              "Manpower Outsourcing",
-            ].map((service, index) => (
+            {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition"
+                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition border-t-4 border-blue-600"
               >
+                <div className="text-4xl font-bold text-blue-100 mb-4">
+                  0{index + 1}
+                </div>
+
                 <h3 className="text-xl font-bold text-blue-800 mb-3">
-                  {service}
+                  {service.title}
                 </h3>
-                <p className="text-gray-600">
-                  Professional and reliable services customized for your
-                  facility requirements.
-                </p>
+
+                <p className="text-gray-600 leading-7">{service.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* SEO Content */}
+      <section className="py-16 px-6 max-w-7xl mx-auto">
+        <div className="bg-blue-50 rounded-3xl p-8 md:p-12">
+          <h2 className="text-4xl font-bold text-blue-900 mb-6">
+            Integrated Facility Management Solutions for Electronic City IT Hub
+          </h2>
+
+          <p className="text-lg text-gray-700 leading-8 mb-5">
+            Electronic City is one of Bangalore’s major IT and business hubs,
+            with technology parks, corporate offices, apartments, hospitals,
+            warehouses and commercial spaces. Acuity Groups supports businesses
+            in Electronic City with professional facility management services
+            focused on hygiene, safety, maintenance and smooth daily operations.
+          </p>
+
+          <p className="text-lg text-gray-700 leading-8">
+            Whether you need office housekeeping staff, trained security guards,
+            pest control technicians, electricians, maintenance workers or
+            facility manpower support, our team delivers reliable facility
+            management services in Electronic City Bangalore.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Choose */}
       <section className="py-16 px-6 max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-blue-900 mb-10">
-          Why Choose Acuity Groups?
+          Why Choose Acuity Groups in Electronic City?
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {[
-            "19+ Years Industry Experience",
-            "Professional Trained Workforce",
-            "Customized Facility Solutions",
-            "24/7 Customer Support",
-            "Affordable Service Packages",
-            "Quality Assurance & Compliance",
-          ].map((item, index) => (
-            <div key={index} className="flex items-start gap-4">
-              <span className="bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center">
+        <div className="grid md:grid-cols-3 gap-6">
+          {whyChoose.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-md transition"
+            >
+              <span className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center mb-4">
                 ✓
               </span>
-              <p className="text-lg">{item}</p>
+              <p className="text-lg font-semibold">{item}</p>
             </div>
           ))}
         </div>
       </section>
 
+      {/* Areas */}
       <section className="py-16 bg-blue-900 text-white px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">
@@ -110,51 +232,45 @@ const IntegratedFacilityManagementElectronicCity = () => {
           <p className="text-lg text-blue-100 leading-8">
             We provide integrated facility management services across Electronic
             City Phase 1, Electronic City Phase 2, Neeladri Nagar, Doddathogur,
-            Huskur Road, Bommasandra and nearby locations.
+            Huskur Road, Bommasandra, Hebbagodi and nearby business locations.
           </p>
         </div>
       </section>
 
+      {/* FAQ */}
       <section className="py-16 px-6 max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-blue-900 mb-10">
           Frequently Asked Questions
         </h2>
 
         <div className="space-y-6">
-          {[
-            {
-              q: "Do you provide facility management services in Electronic City?",
-              a: "Yes, we provide complete integrated facility management solutions throughout Electronic City and nearby areas.",
-            },
-            {
-              q: "Do you provide housekeeping services for IT companies?",
-              a: "Yes, we provide professional housekeeping and cleaning services for IT companies, offices and commercial buildings.",
-            },
-            {
-              q: "Do you provide security services in Electronic City?",
-              a: "Yes, we provide trained security guards for offices, apartments, industries and commercial properties.",
-            },
-            {
-              q: "Can you manage large commercial properties?",
-              a: "Yes, we manage IT parks, commercial complexes, hospitals, warehouses and industrial facilities.",
-            },
-          ].map((faq, index) => (
+          {faqs.map((faq, index) => (
             <div key={index} className="border-b pb-5">
-              <h3 className="font-semibold text-xl mb-2">{faq.q}</h3>
-              <p className="text-gray-600">{faq.a}</p>
+              <h3 className="font-semibold text-xl mb-2 text-blue-900">
+                {faq.q}
+              </h3>
+              <p className="text-gray-600 leading-7">{faq.a}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="py-16 bg-gray-100 text-center">
+      {/* Map */}
+      <section
+        className="relative h-[70vh] bg-cover bg-center"
+        style={{ backgroundImage: `url(${bannerImage1})` }}
+      ></section>
+
+      {/* CTA */}
+      <section className="py-16 bg-gray-100 text-center px-6">
         <h2 className="text-4xl font-bold text-blue-900 mb-4">
-          Looking for Facility Management Services in Electronic City?
+          Looking for Integrated Facility Management Services in Electronic
+          City?
         </h2>
 
         <p className="text-lg text-gray-700 mb-8">
-          Contact Acuity Groups today for customized facility management
-          solutions.
+          Contact Acuity Groups today for customized integrated facility
+          management solutions in Electronic City Bangalore.
         </p>
 
         <Link

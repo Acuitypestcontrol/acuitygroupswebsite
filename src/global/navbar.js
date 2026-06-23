@@ -77,7 +77,7 @@ const Navbar = () => {
             <div className="flex items-center gap-2  text-black font-semibold">
               <MapPin size={14} />
               <span>
-                1st Floor, KVO-08, No-28/2, near Sun Jupiter School JP Nagar 6th
+               2nd Floor, KVO-08, No-28/2, near Sun Jupiter School JP Nagar 6th
                 Phase, Yelachenahalli Bengaluru, Karnataka 560078
               </span>
             </div>

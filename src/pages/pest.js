@@ -386,8 +386,7 @@ const PestManagement = () => {
           </h2>
 
           <p className="text-gray-600 text-lg mb-10">
-            Get a free inspection and quote from our pest control experts
-            today.
+            Get a free inspection and quote from our pest control experts today.
           </p>
 
           <div className="flex flex-wrap gap-5 justify-center">

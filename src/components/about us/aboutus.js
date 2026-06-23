@@ -87,7 +87,11 @@ export default function About() {
   return (
     <>
       <Helmet>
-        <link rel="canonical" key="canonical" href="https://www.acuitygroups.in/aboutus" />
+        <link
+          rel="canonical"
+          key="canonical"
+          href="https://www.acuitygroups.in/aboutus"
+        />
         <title>
           About Us | Acuity Groups – Facility Management & Security Services
         </title>
