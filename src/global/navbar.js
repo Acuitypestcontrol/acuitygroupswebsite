@@ -364,7 +364,7 @@ const Navbar = () => {
                     className="flex items-center gap-2 hover:text-yellow-500"
                   >
                     <Phone size={14} />
-                    <span>+91 98765 43210</span>
+                    <span>+91 9941229005</span>
                   </a>
                   <a
                     href="mailto:info@acuitygroups.in"
