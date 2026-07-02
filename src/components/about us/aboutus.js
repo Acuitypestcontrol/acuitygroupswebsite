@@ -247,7 +247,7 @@ export default function About() {
         </section>
 
         {/* LEADERSHIP SECTION */}
-        <section className="py-20 px-6 md:px-12">
+        {/* <section className="py-20 px-6 md:px-12">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-2 rounded-full text-blue-900 tracking-[5px] text-sm font-thin mb-5">
@@ -299,7 +299,7 @@ export default function About() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Mission & Vision */}
         <section className="py-20 bg-white">
@@ -317,20 +317,19 @@ export default function About() {
               <div className="bg-blue-900 text-white p-10 rounded-3xl shadow-xl">
                 <h3 className="text-3xl font-bold mb-5">Our Mission</h3>
                 <p className="text-blue-100 leading-8">
-                  To deliver reliable, efficient, and innovative facility
-                  management solutions that create safe, clean, and productive
-                  environments for our clients while maintaining the highest
-                  standards of quality and professionalism.
+                  To consistently deliver superior facility management services
+                  by integrating skilled manpower, advanced systems, and best
+                  industry practices, ensuring measurable value creation for our
+                  clients.
                 </p>
               </div>
 
               <div className="bg-yellow-500 text-black p-10 rounded-3xl shadow-xl">
                 <h3 className="text-3xl font-bold mb-5">Our Vision</h3>
                 <p className="leading-8">
-                  To become India's most trusted integrated facility management
-                  company by consistently exceeding customer expectations,
-                  embracing innovation, and delivering exceptional service
-                  excellence.
+                  We act as a trusted partner, enabling organizations to focus
+                  on their core business while we seamlessly manage their
+                  facility operations with precision and accountability.
                 </p>
               </div>
             </div>

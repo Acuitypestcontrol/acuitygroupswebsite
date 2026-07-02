@@ -38,13 +38,15 @@ const Navbar = () => {
     }`;
 
   const servicesItems = [
-    { name: "Softservice", path: "/softservices" },
-    { name: "Facility Management", path: "/facilitymanagment1" },
-    { name: "Security Services", path: "/securityservice" },
-    { name: "Housekeeping", path: "/housekeeping" },
-    { name: "Repairing & Maintenance", path: "/repair" },
-    { name: "Pest Management", path: "/pest" },
     { name: "Manpower Outsourcing", path: "/manpower" },
+    { name: "Housekeeping", path: "/housekeeping" },
+    { name: "Pest Management", path: "/pest" },
+    { name: "Softservice", path: "/softservices" },
+
+    // { name: "Facility Management", path: "/facilitymanagment1" },
+    { name: "Security Services", path: "/securityservice" },
+
+    { name: "Repairing & Maintenance", path: "/repair" },
   ];
 
   const careerItems = [

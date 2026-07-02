@@ -25,12 +25,12 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-import Banner1 from "../../images/banner3.jpg";
+// import Banner1 from "../../images/banner3.jpg";
 import Banner2 from "../../images/banner2.png";
 import Banner3 from "../../images/banner1.jpg";
 
 export default function Homepage() {
-  const banners = [Banner1, Banner2, Banner3];
+  const banners = [Banner2, Banner3];
   const videoRef = useRef(null);
   const [showVideo, setShowVideo] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -217,29 +217,18 @@ export default function Homepage() {
   // Services with individual paths
   const services = [
     {
+      title: "Manpower Outsourcing",
+      desc: "Skilled and unskilled manpower outsourcing solutions for businesses across multiple industries.",
+      image: MAnpowerout,
+      path: "/manpower",
+    },
+    {
       title: "Security Services",
       desc: "Professional security guard services for apartments, offices, industries, hospitals and commercial establishments.",
       image: SecurityImage,
       path: "/securityservice",
     },
-    {
-      title: "Soft Services",
-      desc: "Comprehensive housekeeping, cleaning and facility support services for commercial and residential properties.",
-      image: SoftServices1,
-      path: "/softservices",
-    },
-    {
-      title: "Repair and Maintance",
-      desc: "Professional repair and maintenance services in Bangalore for offices, residential buildings, hospitals, and industrial facilities, ensuring smooth operations, safety, and long-lasting infrastructure performance.",
-      image: Housekeeping1,
-      path: "/repair",
-    },
-    {
-      title: "Facility Management",
-      desc: "Integrated facility management services including maintenance, operations, support staff and building management solutions.",
-      image: FacilityManagement1,
-      path: "/facilitymanagment1",
-    },
+
     {
       title: "Pest Management",
       desc: "Safe and effective pest control services including termite, rodent and cockroach management.",
@@ -247,11 +236,23 @@ export default function Homepage() {
       path: "/pest",
     },
     {
-      title: "Manpower Outsourcing",
-      desc: "Skilled and unskilled manpower outsourcing solutions for businesses across multiple industries.",
-      image: MAnpowerout,
-      path: "/manpower",
+      title: "Soft Services",
+      desc: "Comprehensive housekeeping, cleaning and facility support services for commercial and residential properties.",
+      image: SoftServices1,
+      path: "/softservices",
     },
+    // {
+    //   title: "Repair and Maintance",
+    //   desc: "Professional repair and maintenance services in Bangalore for offices, residential buildings, hospitals, and industrial facilities, ensuring smooth operations, safety, and long-lasting infrastructure performance.",
+    //   image: Housekeeping1,
+    //   path: "/repair",
+    // },
+    // {
+    //   title: "Facility Management",
+    //   desc: "Integrated facility management services including maintenance, operations, support staff and building management solutions.",
+    //   image: FacilityManagement1,
+    //   path: "/facilitymanagment1",
+    // },
   ];
 
   const industries = [
@@ -499,7 +500,7 @@ export default function Homepage() {
         </section>
 
         {/* SERVICES SECTION with proper links */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:mx-28">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 md:mx-48">
           {services.map((service, index) => (
             <div
               key={index}
