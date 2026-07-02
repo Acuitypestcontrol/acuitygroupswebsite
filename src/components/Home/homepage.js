@@ -268,7 +268,7 @@ export default function Homepage() {
 
   return (
     <>
-      {/* <LeadPopup /> */}
+      <LeadPopup />
 
       {/* Bangalore Areas Grid */}
       {/* <div className="bg-white rounded-2xl p-8 shadow-md">
