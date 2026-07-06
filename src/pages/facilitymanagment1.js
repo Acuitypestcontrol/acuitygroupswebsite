@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
   Building2,
   Users,
@@ -25,7 +26,7 @@ const FacilityManagement = () => {
     {
       image: IntegratedFM,
       title: "Integrated Facility Management",
-      desc: "Complete facility management solutions for commercial buildings, offices, residential properties, and industrial facilities.",
+      desc: "Complete integrated facility management services in Bangalore for commercial buildings, offices, residential properties, and industrial facilities.",
       features: [
         "24/7 Operations",
         "Preventive Maintenance",
@@ -35,7 +36,7 @@ const FacilityManagement = () => {
     {
       image: BuildingMaintenance,
       title: "Building Maintenance",
-      desc: "Routine building inspections, repairs, preventive maintenance, and operational support services.",
+      desc: "Routine building inspections, repair support, preventive maintenance, and operational facility support services.",
       features: [
         "Structural Inspections",
         "Repair Services",
@@ -45,19 +46,19 @@ const FacilityManagement = () => {
     {
       image: HousekeepingManagement,
       title: "Housekeeping Management",
-      desc: "Professional housekeeping supervision, cleaning coordination, and hygiene maintenance services.",
+      desc: "Professional housekeeping supervision, cleaning coordination, hygiene maintenance, and workplace cleanliness management.",
       features: ["Staff Supervision", "Quality Audits", "Inventory Management"],
     },
     {
       image: TechnicalSupport,
       title: "Technical Support Services",
-      desc: "Electrical, plumbing, HVAC, and technical maintenance support for smooth facility operations.",
+      desc: "Electrical, plumbing, HVAC, and technical maintenance support for smooth facility operations across Bangalore.",
       features: ["Electrical Systems", "Plumbing", "HVAC Maintenance"],
     },
     {
       image: VendorManagement,
       title: "Vendor Management",
-      desc: "Efficient coordination and supervision of third-party vendors and service providers.",
+      desc: "Efficient coordination and supervision of third-party vendors, contractors, and service providers.",
       features: [
         "Contract Management",
         "Performance Tracking",
@@ -67,7 +68,7 @@ const FacilityManagement = () => {
     {
       image: AssetManagement,
       title: "Asset Management",
-      desc: "Facility asset tracking, maintenance scheduling, and operational monitoring support services.",
+      desc: "Facility asset tracking, maintenance scheduling, asset monitoring, and lifecycle management support services.",
       features: [
         "Asset Inventory",
         "Maintenance Scheduling",
@@ -113,14 +114,146 @@ const FacilityManagement = () => {
     "Hotels & Hospitality",
   ];
 
+  const serviceAreas = [
+    "Whitefield",
+    "Electronic City",
+    "Koramangala",
+    "HSR Layout",
+    "JP Nagar",
+    "Peenya",
+    "Hebbal",
+    "BEML Layout",
+    "Dabaspet",
+    "Doddaballapur",
+    "Attibele",
+    "Kumbalgodu",
+  ];
+
   return (
     <div className="bg-white text-gray-800 font-sans overflow-hidden">
+      <Helmet>
+        <title>
+          Integrated Facility Management Services in Bangalore | Acuity Groups
+        </title>
+
+        <meta
+          name="description"
+          content="Acuity Groups provides integrated facility management services in Bangalore including housekeeping management, building maintenance, technical support, vendor management, security support, and facility operations for commercial, residential, and industrial properties."
+        />
+
+        <meta
+          name="keywords"
+          content="integrated facility management services in Bangalore, facility management company in Bangalore, facility management services Bangalore, housekeeping management Bangalore, building maintenance Bangalore, technical facility services Bangalore, vendor management Bangalore, facility operations Bangalore"
+        />
+
+        <meta name="robots" content="index, follow" />
+
+        <link
+          rel="canonical"
+          href="https://www.acuitygroups.in/integrated-facility-management"
+        />
+
+        <meta
+          property="og:title"
+          content="Integrated Facility Management Services in Bangalore | Acuity Groups"
+        />
+        <meta
+          property="og:description"
+          content="Professional facility management company in Bangalore for offices, apartments, industries, hospitals, warehouses, and commercial properties."
+        />
+        <meta
+          property="og:url"
+          content="https://www.acuitygroups.in/integrated-facility-management"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Acuity Groups" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Integrated Facility Management Services in Bangalore | Acuity Groups"
+        />
+        <meta
+          name="twitter:description"
+          content="Acuity Groups offers complete integrated facility management services in Bangalore for commercial, residential, and industrial properties."
+        />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id":
+              "https://www.acuitygroups.in/integrated-facility-management/#service",
+            name: "Integrated Facility Management Services in Bangalore",
+            serviceType: "Integrated Facility Management",
+            provider: {
+              "@type": "LocalBusiness",
+              name: "Acuity Groups",
+              url: "https://www.acuitygroups.in/",
+              telephone: "+919941229005",
+              email: "info@acuitygroups.in",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress:
+                  "2nd Floor, KVO-08, No-28/2, near Sun Jupiter School JP Nagar 6th Phase, Yelachenahalli",
+                addressLocality: "Bengaluru",
+                addressRegion: "Karnataka",
+                postalCode: "560078",
+                addressCountry: "IN",
+              },
+            },
+            areaServed: serviceAreas,
+            description:
+              "Acuity Groups provides integrated facility management services in Bangalore including housekeeping management, building maintenance, technical support, vendor management, and facility operations.",
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Facility Management Services",
+              itemListElement: services.map((service) => ({
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: service.title,
+                  description: service.desc,
+                },
+              })),
+            },
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.acuitygroups.in/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Services",
+                item: "https://www.acuitygroups.in/services",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "Integrated Facility Management",
+                item: "https://www.acuitygroups.in/integrated-facility-management",
+              },
+            ],
+          })}
+        </script>
+      </Helmet>
+
       {/* HERO */}
       <section className="relative min-h-screen flex items-center">
         <div className="absolute inset-0">
           <img
             src={FacilityHero}
-            alt="Facility Management"
+            alt="Integrated Facility Management Services in Bangalore"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-950/85 to-blue-900/40"></div>
@@ -130,22 +263,23 @@ const FacilityManagement = () => {
           <div className="max-w-3xl text-white">
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold mb-6">
               <Building2 size={16} className="text-yellow-300" />
-              <span>FACILITY MANAGEMENT</span>
+              <span>FACILITY MANAGEMENT COMPANY IN BANGALORE</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
-              Integrated Facility Management Services
+              Integrated Facility Management Services in Bangalore
             </h1>
 
             <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-10">
-              Complete facility management solutions for commercial,
-              residential, industrial, and corporate properties with
-              professional operational support.
+              Acuity Groups provides complete facility management solutions for
+              commercial, residential, industrial, and corporate properties with
+              professional operational support, maintenance planning, and trained
+              service teams.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition flex items-center gap-2"
               >
                 Get a Quote <ArrowRight size={18} />
@@ -173,9 +307,9 @@ const FacilityManagement = () => {
               <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-blue-50 text-blue-900 flex items-center justify-center">
                 <stat.icon size={26} />
               </div>
-              <h3 className="text-3xl font-black text-gray-900">
+              <h2 className="text-3xl font-black text-gray-900">
                 {stat.value}
-              </h3>
+              </h2>
               <p className="text-gray-500 text-sm mt-1">{stat.label}</p>
             </div>
           ))}
@@ -192,19 +326,20 @@ const FacilityManagement = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
-              Improve Operational Efficiency & Safety
+              Improve Operational Efficiency, Safety & Workplace Standards
             </h2>
 
             <p className="text-gray-600 text-lg leading-relaxed mb-5">
-              Acuity Groups provides complete facility management services
-              designed to improve workplace maintenance, safety, productivity,
-              and daily business operations.
+              Acuity Groups provides professional integrated facility management
+              services in Bangalore designed to improve workplace maintenance,
+              safety, productivity, hygiene, and daily business operations.
             </p>
 
             <p className="text-gray-600 text-lg leading-relaxed">
-              Our integrated facility management solutions help organizations
-              maintain high operational standards while ensuring smooth
-              day-to-day facility performance.
+              Our facility management solutions help organizations maintain high
+              operational standards while ensuring smooth day-to-day performance
+              across offices, apartments, industries, hospitals, warehouses, and
+              commercial properties.
             </p>
           </div>
 
@@ -238,8 +373,8 @@ const FacilityManagement = () => {
             </h2>
 
             <p className="text-gray-500 text-lg">
-              Comprehensive solutions to keep your facilities running smoothly
-              and professionally.
+              Comprehensive facility management solutions to keep your property
+              running smoothly, safely, and professionally.
             </p>
           </div>
 
@@ -252,7 +387,7 @@ const FacilityManagement = () => {
                 <div className="h-56 overflow-hidden">
                   <img
                     src={service.image}
-                    alt={service.title}
+                    alt={`${service.title} in Bangalore`}
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                   />
                 </div>
@@ -272,14 +407,17 @@ const FacilityManagement = () => {
                         key={idx}
                         className="flex items-center gap-2 text-sm text-gray-700"
                       >
-                        <CheckCircle size={15} className="text-blue-900" />
+                        <CheckCircle
+                          size={15}
+                          className="text-blue-900 flex-shrink-0"
+                        />
                         <span>{feature}</span>
                       </div>
                     ))}
                   </div>
 
                   <Link
-                    to="/contactus"
+                    to="/contact"
                     className="text-blue-900 font-bold inline-flex items-center gap-2"
                   >
                     Enquire Now <ArrowRight size={16} />
@@ -301,11 +439,13 @@ const FacilityManagement = () => {
 
             <p className="text-blue-100 text-lg leading-relaxed mb-8">
               We manage your facilities with trained teams, planned operations,
-              preventive maintenance, and professional supervision.
+              preventive maintenance, vendor coordination, and professional
+              supervision to improve safety, hygiene, and operational
+              efficiency.
             </p>
 
             <Link
-              to="/contactus"
+              to="/contact"
               className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold inline-flex items-center gap-2"
             >
               Contact Us <ArrowRight size={18} />
@@ -326,17 +466,49 @@ const FacilityManagement = () => {
         </div>
       </section>
 
-      {/* INDUSTRIES */}
+      {/* SERVICE AREAS */}
       <section className="py-24 px-6 md:px-12 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <div className="inline-flex items-center gap-2 bg-white border border-blue-100 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
               <Building2 size={15} />
+              <span>SERVICE AREAS</span>
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+              Facility Management Services Across Bangalore
+            </h2>
+
+            <p className="text-gray-500 text-lg">
+              We provide integrated facility management solutions across major
+              commercial, residential, and industrial locations in Bangalore.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {serviceAreas.map((area, index) => (
+              <div
+                key={index}
+                className="bg-white border border-gray-100 rounded-2xl p-5 text-center hover:shadow-lg transition"
+              >
+                <span className="font-bold text-gray-800">{area}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* INDUSTRIES */}
+      <section className="py-24 px-6 md:px-12 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-100 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
+              <Building2 size={15} />
               <span>INDUSTRIES WE SERVE</span>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-              Trusted Across Sectors
+              Trusted Facility Management Across Sectors
             </h2>
 
             <p className="text-gray-500 text-lg">
@@ -349,7 +521,7 @@ const FacilityManagement = () => {
             {industries.map((industry, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-100 rounded-2xl p-5 text-center hover:shadow-lg transition"
+                className="bg-gray-50 border border-gray-100 rounded-2xl p-5 text-center hover:shadow-lg transition"
               >
                 <span className="font-bold text-gray-800">{industry}</span>
               </div>
@@ -362,25 +534,25 @@ const FacilityManagement = () => {
       <section className="py-24 px-6 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
-            Need Reliable Facility Management?
+            Need Reliable Facility Management in Bangalore?
           </h2>
 
           <p className="text-gray-600 text-lg mb-10">
-            Partner with Acuity Groups for professional facility management
-            services designed to improve efficiency, safety, and maintenance
-            standards.
+            Partner with Acuity Groups for professional integrated facility
+            management services designed to improve efficiency, safety,
+            maintenance standards, and workplace operations.
           </p>
 
           <div className="flex flex-wrap gap-5 justify-center">
             <Link
-              to="/contactus"
+              to="/contact"
               className="bg-blue-900 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-800 transition inline-flex items-center gap-2"
             >
               Request a Quote <ArrowRight size={18} />
             </Link>
 
             <a
-              href="tel:9941229005"
+              href="tel:+919941229005"
               className="border-2 border-blue-900 text-blue-900 px-10 py-4 rounded-full font-bold hover:bg-blue-900 hover:text-white transition inline-flex items-center gap-2"
             >
               <PhoneCall size={18} />
