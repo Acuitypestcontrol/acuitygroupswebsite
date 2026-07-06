@@ -2,8 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import AboutImage from "../../images/AboutImage.avif";
 import SecurityImage from "../../images/security123.avif";
 import SoftServices1 from "../../images/softservices.jpg";
-import Housekeeping1 from "../../images/Housekeeping1.jpg";
-import FacilityManagement1 from "../../images/facilitym.jpg";
+
 import Pestcontrol from "../../images/sspestcontrol.jpg";
 import MAnpowerout from "../../images/manpowerout.webp";
 import LeadPopup from "../../components/popup";
@@ -220,39 +219,26 @@ export default function Homepage() {
       title: "Manpower Outsourcing",
       desc: "Skilled and unskilled manpower outsourcing solutions for businesses across multiple industries.",
       image: MAnpowerout,
-      path: "/manpower",
+      path: "/manpower-outsourcing",
     },
     {
       title: "Security Services",
       desc: "Professional security guard services for apartments, offices, industries, hospitals and commercial establishments.",
       image: SecurityImage,
-      path: "/securityservice",
+      path: "/security-services",
     },
-
     {
       title: "Pest Management",
       desc: "Safe and effective pest control services including termite, rodent and cockroach management.",
       image: Pestcontrol,
-      path: "/pest",
+      path: "/pest-management",
     },
     {
       title: "Soft Services",
       desc: "Comprehensive housekeeping, cleaning and facility support services for commercial and residential properties.",
       image: SoftServices1,
-      path: "/softservices",
+      path: "/soft-services",
     },
-    // {
-    //   title: "Repair and Maintance",
-    //   desc: "Professional repair and maintenance services in Bangalore for offices, residential buildings, hospitals, and industrial facilities, ensuring smooth operations, safety, and long-lasting infrastructure performance.",
-    //   image: Housekeeping1,
-    //   path: "/repair",
-    // },
-    // {
-    //   title: "Facility Management",
-    //   desc: "Integrated facility management services including maintenance, operations, support staff and building management solutions.",
-    //   image: FacilityManagement1,
-    //   path: "/facilitymanagment1",
-    // },
   ];
 
   const industries = [
@@ -292,15 +278,104 @@ export default function Homepage() {
         </div>
       </div> */}
       <div className="bg-white text-black overflow-hidden font-['Poppins',system-ui,sans-serif]">
+        <h1 className="sr-only">
+          Integrated Facility Management Services in Bangalore
+        </h1>
         <Helmet>
-          <link rel="canonical" href="https://www.acuitygroups.in/" />
           <title>
-            Acuity Groups | Facility Management & Security Services in Bangalore
+            Integrated Facility Management Services in Bangalore | Acuity Groups
           </title>
+
           <meta
             name="description"
-            content="Acuity Groups Bangalore: Security, housekeeping, pest control, manpower, electrical maintenance for residential, commercial & industrial properties."
+            content="Acuity Groups provides integrated facility management services in Bangalore including housekeeping, security services, pest management, manpower outsourcing, soft services, and repair maintenance for offices, apartments, industries, hospitals, warehouses, and commercial properties."
           />
+
+          <meta
+            name="keywords"
+            content="integrated facility management services in Bangalore, facility management company in Bangalore, housekeeping services Bangalore, security services Bangalore, manpower outsourcing Bangalore, pest management Bangalore, soft services Bangalore, repair and maintenance Bangalore"
+          />
+
+          <meta name="robots" content="index, follow" />
+
+          <link rel="canonical" href="https://www.acuitygroups.in/" />
+
+          <meta
+            property="og:title"
+            content="Integrated Facility Management Services in Bangalore | Acuity Groups"
+          />
+          <meta
+            property="og:description"
+            content="Acuity Groups offers housekeeping, security, pest management, manpower outsourcing, soft services, and repair maintenance services across Bangalore."
+          />
+          <meta property="og:url" content="https://www.acuitygroups.in/" />
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="Acuity Groups" />
+
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta
+            name="twitter:title"
+            content="Integrated Facility Management Services in Bangalore | Acuity Groups"
+          />
+          <meta
+            name="twitter:description"
+            content="Professional integrated facility management services in Bangalore for offices, apartments, industries, hospitals, warehouses, and commercial spaces."
+          />
+
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Acuity Groups",
+              url: "https://www.acuitygroups.in/",
+              description:
+                "Acuity Groups provides integrated facility management services in Bangalore including housekeeping, security services, pest management, manpower outsourcing, soft services, and repair maintenance.",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Bangalore",
+                addressRegion: "Karnataka",
+                addressCountry: "IN",
+              },
+              areaServed: [
+                "Bangalore",
+                "Whitefield",
+                "Electronic City",
+                "Koramangala",
+                "HSR Layout",
+                "JP Nagar",
+                "Peenya",
+                "Hebbal",
+                "Attibele",
+                "Dabaspet",
+                "Doddaballapur",
+                "Kumbalgodu",
+              ],
+              serviceType: [
+                "Integrated Facility Management",
+                "Housekeeping Services",
+                "Security Services",
+                "Pest Management",
+                "Manpower Outsourcing",
+                "Repair and Maintenance",
+                "Soft Services",
+              ],
+            })}
+          </script>
+
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.q,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.a,
+                },
+              })),
+            })}
+          </script>
         </Helmet>
         <section className="relative w-90 h-48 md:w-full md:h-screen overflow-hidden bg-black">
           {banners.map((banner, index) => (
@@ -490,7 +565,7 @@ export default function Homepage() {
                 </div>
               </div>
 
-              <Link to="/aboutus">
+              <Link to="/about">
                 <button className="bg-blue-900 hover:bg-blue-700 text-white hover:text-white px-10 py-4 rounded-full font-thin text-lg transition duration-300 hover:scale-105 shadow-md mb-10 md:mb-10 lg:mb-10">
                   Explore More
                 </button>
@@ -648,7 +723,7 @@ export default function Homepage() {
             {/* Optional CTA */}
             <div className="text-center mt-12">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition shadow-lg"
               >
                 Get Started Today
@@ -913,12 +988,12 @@ export default function Homepage() {
 
             {/* CTA Button */}
             <div className="text-center mt-14">
-              <a
-                href="/pages/servicepage"
+              <Link
+                to="/services"
                 className="inline-flex items-center gap-3 bg-blue-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl"
               >
                 View All Services in Bangalore →
-              </a>
+              </Link>
             </div>
           </div>
         </section>

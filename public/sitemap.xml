@@ -2,52 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Main Pages -->
-  <url><loc>https://www.acuitygroups.in/</loc><priority>1.0</priority></url>
-  <url><loc>https://www.acuitygroups.in/about</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/services</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/blogs/allblogs</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/contactus</loc><priority>0.9</priority></url>
+  <url><loc>https://www.acuitygroups.in/</loc><lastmod>2026-07-06</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.acuitygroups.in/about</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.acuitygroups.in/services</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.acuitygroups.in/contact</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
 
   <!-- Service Pages -->
-  <url><loc>https://www.acuitygroups.in/securityservice</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/softservices</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/housekeeping</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/repair</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/pest</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/facilitymanagment1</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/manpower</loc><priority>0.9</priority></url>
+  <url><loc>https://www.acuitygroups.in/integrated-facility-management</loc><lastmod>2026-07-06</lastmod><priority>1.0</priority></url>
+  <url><loc>https://www.acuitygroups.in/security-services</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.acuitygroups.in/housekeeping-services</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.acuitygroups.in/soft-services</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.acuitygroups.in/repair-maintenance</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.acuitygroups.in/pest-management</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.acuitygroups.in/manpower-outsourcing</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
 
-  <!-- Location Pages -->
-  <url><loc>https://www.acuitygroups.in/integrated-facility-management-whitefield</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/integrated-facility-management-electronic-city</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/integrated-facility-management-koramangala</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/integrated-facility-management-hsr-layout</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/integrated-facility-management-jp-nagar</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/integrated-facility-management-dabaspet</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/integrated-facility-management-attibele</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/integrated-facility-management-kumbalgodu</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/integrated-facility-management-beml</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/integrated-facility-management-hebbal</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/integrated-facility-management-peenya</loc><priority>0.9</priority></url>
-  <url><loc>https://www.acuitygroups.in/integrated-facility-management-doddaballapur</loc><priority>0.9</priority></url>
+  <!-- Location SEO Pages -->
+  <url><loc>https://www.acuitygroups.in/integrated-facility-management-whitefield</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.acuitygroups.in/integrated-facility-management-electronic-city</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.acuitygroups.in/integrated-facility-management-koramangala</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.acuitygroups.in/integrated-facility-management-hsr-layout</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.acuitygroups.in/integrated-facility-management-jp-nagar</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.acuitygroups.in/integrated-facility-management-peenya</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.acuitygroups.in/integrated-facility-management-hebbal</loc><lastmod>2026-07-06</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.acuitygroups.in/integrated-facility-management-beml</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.acuitygroups.in/integrated-facility-management-dabaspet</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.acuitygroups.in/integrated-facility-management-doddaballapur</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.acuitygroups.in/integrated-facility-management-attibele</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.acuitygroups.in/integrated-facility-management-kumbalgodu</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
 
-    <!-- Blog Pages -->
-  <url><loc>https://www.acuitygroups.in/blogs/ManufacturingIndustry</loc><priority>0.8</priority></url>
-  <url><loc>https://www.acuitygroups.in/blogs/EducationIndustry</loc><priority>0.8</priority></url>
-  <url><loc>https://www.acuitygroups.in/blogs/ImportanceofFacility</loc><priority>0.8</priority></url>
-  <url><loc>https://www.acuitygroups.in/blogs/HotelsHospitality</loc><priority>0.8</priority></url>
-  <url><loc>https://www.acuitygroups.in/blogs/mps</loc><priority>0.8</priority></url>
-  <url><loc>https://www.acuitygroups.in/blogs/WhyRegularPest</loc><priority>0.8</priority></url>
-  <url><loc>https://www.acuitygroups.in/blogs/RepairingMaintenance</loc><priority>0.8</priority></url>
-  <url><loc>https://www.acuitygroups.in/blogs/HousekeepingServices</loc><priority>0.8</priority></url>
-  <url><loc>https://www.acuitygroups.in/blogs/WhyIntegrated</loc><priority>0.8</priority></url>
-  <url><loc>https://www.acuitygroups.in/blogs/facilitymanagments</loc><priority>0.8</priority></url>
-  <url><loc>https://www.acuitygroups.in/blogs/cockroaches</loc><priority>0.8</priority></url>
-  <url><loc>https://www.acuitygroups.in/blogs/termite</loc><priority>0.8</priority></url>
-  <url><loc>https://www.acuitygroups.in/blogs/mosquito</loc><priority>0.8</priority></url>
-  <url><loc>https://www.acuitygroups.in/blogs/FromFunction</loc><priority>0.8</priority></url>
-  <url><loc>https://www.acuitygroups.in/blogs/TheImportanceFacilities</loc><priority>0.8</priority></url>
-  <url><loc>https://www.acuitygroups.in/blogs/Learnhow</loc><priority>0.8</priority></url>
-  <url><loc>https://www.acuitygroups.in/blogs/UnleashDesigne</loc><priority>0.8</priority></url>
+  <!-- Career Pages -->
+  <url><loc>https://www.acuitygroups.in/career</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.acuitygroups.in/career/pest-control</loc><lastmod>2026-07-06</lastmod><priority>0.5</priority></url>
+  <url><loc>https://www.acuitygroups.in/career/acuity-groups</loc><lastmod>2026-07-06</lastmod><priority>0.5</priority></url>
+
+  <!-- Blog Pages -->
+  <url><loc>https://www.acuitygroups.in/blogs</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.acuitygroups.in/blogs/cockroach-control</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.acuitygroups.in/blogs/termite-control</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.acuitygroups.in/blogs/mosquito-prevention</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.acuitygroups.in/blogs/hotels-hospitality</loc><lastmod>2026-07-06</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.acuitygroups.in/blogs/importance-of-facility-management</loc><lastmod>2026-07-06</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.acuitygroups.in/blogs/education-industry</loc><lastmod>2026-07-06</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.acuitygroups.in/blogs/from-function-to-feeling</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.acuitygroups.in/blogs/the-importance-of-facilities</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.acuitygroups.in/blogs/learn-how</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.acuitygroups.in/blogs/unleash-design</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.acuitygroups.in/blogs/why-integrated-facility-management</loc><lastmod>2026-07-06</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.acuitygroups.in/blogs/housekeeping-services</loc><lastmod>2026-07-06</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.acuitygroups.in/blogs/why-regular-pest-control</loc><lastmod>2026-07-06</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.acuitygroups.in/blogs/repairing-maintenance</loc><lastmod>2026-07-06</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.acuitygroups.in/blogs/manpower-outsourcing</loc><lastmod>2026-07-06</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.acuitygroups.in/blogs/manufacturing-industry</loc><lastmod>2026-07-06</lastmod><priority>0.7</priority></url>
 
 </urlset>
