@@ -194,7 +194,7 @@ const Careers = () => {
         <meta name="author" content="Acuity Groups" />
 
         <link rel="canonical" href="https://www.acuitygroups.in/career" />
-
+ x
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.acuitygroups.in/career" />
         <meta
