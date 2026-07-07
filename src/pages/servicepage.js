@@ -118,10 +118,7 @@ const Services = () => {
   return (
     <div className="bg-gradient-to-br from-gray-50 to-white">
       <Helmet>
-        <title>
-          Facility Management, Security & Housekeeping Services in Bangalore |
-          Acuity Groups
-        </title>
+        <title>Facility Management Services Bangalore | Acuity Groups</title>
 
         <meta
           name="description"
@@ -139,7 +136,7 @@ const Services = () => {
 
         <meta
           property="og:title"
-          content="Facility Management, Security & Housekeeping Services in Bangalore | Acuity Groups"
+          content="Facility Management Services Bangalore | Acuity Groups"
         />
         <meta
           property="og:description"
