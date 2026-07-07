@@ -134,7 +134,7 @@ const ManpowerOutsourcingBlog = () => {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://www.acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs",
       },
       {
         "@type": "ListItem",
@@ -307,10 +307,7 @@ const ManpowerOutsourcingBlog = () => {
               </li>
               <li className="text-gray-400">/</li>
               <li>
-                <Link
-                  to="/blogs/allblogs"
-                  className="hover:text-indigo-600 transition"
-                >
+                <Link to="/blogs" className="hover:text-indigo-600 transition">
                   Blogs
                 </Link>
               </li>
@@ -569,7 +566,7 @@ const ManpowerOutsourcingBlog = () => {
                 </p>
                 <div className="mt-6 flex flex-wrap gap-4">
                   <Link
-                    to="/contactus"
+                    to="/contact"
                     className="inline-flex items-center gap-2 bg-white text-indigo-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
                   >
                     Build Your Workforce <ArrowRight size={18} />
@@ -650,7 +647,7 @@ const ManpowerOutsourcingBlog = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/TheImportanceFacilities"
+                      to="/blogs/the-importance-of-facilities"
                       className="text-indigo-600 group-hover:text-indigo-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       The Importance of Facilities Management
@@ -665,7 +662,7 @@ const ManpowerOutsourcingBlog = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/demystifying-facility-management"
+                      to="/blogs/learn-how"
                       className="text-indigo-600 group-hover:text-indigo-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       Demystifying Facility Management
@@ -680,7 +677,7 @@ const ManpowerOutsourcingBlog = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/HousekeepingServices"
+                      to="/blogs/housekeeping-services"
                       className="text-indigo-600 group-hover:text-indigo-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       Professional Housekeeping Services

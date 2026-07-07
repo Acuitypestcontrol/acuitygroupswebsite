@@ -48,51 +48,51 @@ export default function Homepage() {
 
   const areas = [
     {
-      name: "Integrated Facility Services in Whitefield",
+      name: "Integrated Facility Management Services in Whitefield",
       path: "/integrated-facility-management-whitefield",
     },
     {
-      name: "Integrated Facility Services in Electronic City",
+      name: "Integrated Facility Management Services in Electronic City",
       path: "/integrated-facility-management-electronic-city",
     },
     {
-      name: "Integrated Facility Services in Koramangala",
+      name: "Integrated Facility Management Services in Koramangala",
       path: "/integrated-facility-management-koramangala",
     },
     {
-      name: "Integrated Facility Services in HSR Layout",
+      name: "Integrated Facility Management Services in HSR Layout",
       path: "/integrated-facility-management-hsr-layout",
     },
     {
-      name: "Integrated Facility Services in JP Nagar",
+      name: "Integrated Facility Management Services in JP Nagar",
       path: "/integrated-facility-management-jp-nagar",
     },
     {
-      name: "Integrated Facility Services in Dabaspet",
+      name: "Integrated Facility Management Services in Dabaspet",
       path: "/integrated-facility-management-dabaspet",
     },
     {
-      name: "Integrated Facility Services in Peenya",
+      name: "Integrated Facility Management Services in Peenya",
       path: "/integrated-facility-management-peenya",
     },
     {
-      name: "Integrated Facility Services in Hebbal",
+      name: "Integrated Facility Management Services in Hebbal",
       path: "/integrated-facility-management-hebbal",
     },
     {
-      name: "Integrated Facility Services in BEML Layout",
+      name: "Integrated Facility Management Services in BEML Layout",
       path: "/integrated-facility-management-beml",
     },
     {
-      name: "Integrated Facility Services in Doddaballapur",
+      name: "Integrated Facility Management Services in Doddaballapur",
       path: "/integrated-facility-management-doddaballapur",
     },
     {
-      name: "Integrated Facility Services in Attibele",
+      name: "Integrated Facility Management Services in Attibele",
       path: "/integrated-facility-management-attibele",
     },
     {
-      name: "Integrated Facility Services in Kumbalagodu",
+      name: "Integrated Facility Management Services in Kumbalgodu",
       path: "/integrated-facility-management-kumbalgodu",
     },
   ];
@@ -288,7 +288,7 @@ export default function Homepage() {
 
           <meta
             name="description"
-            content="Acuity Groups provides integrated facility management services in Bangalore including housekeeping, security services, pest management, manpower outsourcing, soft services, and repair maintenance for offices, apartments, industries, hospitals, warehouses, and commercial properties."
+            content="Acuity Groups offers facility management, security, housekeeping, pest control and manpower services in Bangalore."
           />
 
           <meta
@@ -422,22 +422,6 @@ export default function Homepage() {
             ))}
           </div>
         </section>
-
-        {/* <div className="">
-        <Link
-          to="/pages/servicepage"
-          className="bg-blue-900 text-white px-8 py-4 rounded-full font-semibold shadow-xl hover:bg-blue-800 transition-all"
-        >
-          Explore Services
-        </Link>
-
-        <Link
-          to="/contactus"
-          className="bg-white text-blue-900 px-8 py-4 rounded-full font-semibold shadow-xl hover:bg-gray-100 transition-all"
-        >
-          Contact Us
-        </Link>
-      </div> */}
 
         {/* STATS SECTION */}
         <section
@@ -871,7 +855,7 @@ export default function Homepage() {
             <div className="text-center mt-12">
               <p className="text-gray-600 mb-4">Still have questions?</p>
               <Link
-                to="/contactus"
+                to="/contact"
                 className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition shadow-md"
               >
                 Contact Us

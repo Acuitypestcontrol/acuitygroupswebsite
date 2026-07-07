@@ -138,7 +138,7 @@ const FacilityManagement = () => {
 
         <meta
           name="description"
-          content="Acuity Groups provides integrated facility management services in Bangalore including housekeeping management, building maintenance, technical support, vendor management, security support, and facility operations for commercial, residential, and industrial properties."
+          content="Acuity Groups provides integrated facility management services in Bangalore for offices, apartments and commercial properties."
         />
 
         <meta

@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
   Users,
   Factory,
   Building2,
   Shield,
-  Hammer,
   CheckCircle,
   Briefcase,
   Clock,
@@ -28,7 +28,7 @@ const ManpowerOutsourcing = () => {
     {
       image: IndustrialManpower,
       title: "Industrial Manpower",
-      desc: "Skilled and semi-skilled workers for manufacturing, production, and industrial operations.",
+      desc: "Skilled and semi-skilled workers for manufacturing, production and industrial operations.",
       features: [
         "Machine Operators",
         "Production Workers",
@@ -39,7 +39,7 @@ const ManpowerOutsourcing = () => {
     {
       image: FacilityStaff,
       title: "Facility Management Staff",
-      desc: "Trained workforce for housekeeping, cleaning, maintenance, and facility support services.",
+      desc: "Trained workforce for housekeeping, cleaning, maintenance and facility support services.",
       features: [
         "Housekeeping Staff",
         "Cleaning Supervisors",
@@ -50,7 +50,7 @@ const ManpowerOutsourcing = () => {
     {
       image: SecurityManpower,
       title: "Security Manpower",
-      desc: "Professional security guards, CCTV operators, and gate supervisors for comprehensive safety.",
+      desc: "Professional security guards, CCTV operators and gate supervisors for complete safety support.",
       features: [
         "Security Guards",
         "CCTV Operators",
@@ -61,7 +61,7 @@ const ManpowerOutsourcing = () => {
     {
       image: ConstructionLabour,
       title: "Construction Labour",
-      desc: "Experienced workers for construction projects including masons, electricians, plumbers, and helpers.",
+      desc: "Experienced workers for construction projects including masons, electricians, plumbers and helpers.",
       features: [
         "Masons & Helpers",
         "Electricians",
@@ -72,7 +72,7 @@ const ManpowerOutsourcing = () => {
     {
       image: StaffingSolutions,
       title: "Staffing Solutions",
-      desc: "Temporary and permanent staffing for offices, retail, hospitality, and events.",
+      desc: "Temporary and permanent staffing for offices, retail, hospitality and events.",
       features: [
         "Office Staff",
         "Retail Associates",
@@ -83,7 +83,7 @@ const ManpowerOutsourcing = () => {
     {
       image: PayrollSupport,
       title: "HR & Payroll Support",
-      desc: "Complete HR management, payroll processing, and compliance support for outsourced workforce.",
+      desc: "HR management, payroll processing and compliance support for outsourced workforce.",
       features: [
         "Payroll Processing",
         "Compliance Management",
@@ -131,12 +131,126 @@ const ManpowerOutsourcing = () => {
 
   return (
     <div className="bg-white text-gray-800 font-sans overflow-hidden">
+      <Helmet>
+        <title>Manpower Outsourcing Services in Bangalore | Acuity Groups</title>
+
+        <meta
+          name="description"
+          content="Acuity Groups provides manpower outsourcing services in Bangalore for industries, offices, construction sites and facility operations."
+        />
+
+        <meta
+          name="keywords"
+          content="manpower outsourcing services in Bangalore, manpower supply Bangalore, staffing services Bangalore, industrial manpower Bangalore, facility staff Bangalore"
+        />
+
+        <meta name="robots" content="index, follow" />
+
+        <link
+          rel="canonical"
+          href="https://www.acuitygroups.in/manpower-outsourcing"
+        />
+
+        <meta
+          property="og:title"
+          content="Manpower Outsourcing Services in Bangalore | Acuity Groups"
+        />
+        <meta
+          property="og:description"
+          content="Skilled, semi-skilled and unskilled manpower outsourcing services in Bangalore for industries, offices and facility operations."
+        />
+        <meta
+          property="og:url"
+          content="https://www.acuitygroups.in/manpower-outsourcing"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Acuity Groups" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Manpower Outsourcing Services in Bangalore | Acuity Groups"
+        />
+        <meta
+          name="twitter:description"
+          content="Professional manpower supply and staffing services in Bangalore for industrial, office, security and facility support needs."
+        />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://www.acuitygroups.in/manpower-outsourcing/#service",
+            name: "Manpower Outsourcing Services in Bangalore",
+            serviceType: "Manpower Outsourcing",
+            provider: {
+              "@type": "LocalBusiness",
+              name: "Acuity Groups",
+              url: "https://www.acuitygroups.in/",
+              telephone: "+919941229005",
+              email: "info@acuitygroups.in",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress:
+                  "2nd Floor, KVO-08, No-28/2, near Sun Jupiter School JP Nagar 6th Phase, Yelachenahalli",
+                addressLocality: "Bengaluru",
+                addressRegion: "Karnataka",
+                postalCode: "560078",
+                addressCountry: "IN",
+              },
+            },
+            areaServed: "Bangalore",
+            description:
+              "Professional manpower outsourcing services in Bangalore for industries, offices, construction sites, security and facility support operations.",
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Manpower Outsourcing Services",
+              itemListElement: services.map((service) => ({
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: service.title,
+                  description: service.desc,
+                },
+              })),
+            },
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.acuitygroups.in/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Services",
+                item: "https://www.acuitygroups.in/services",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "Manpower Outsourcing",
+                item: "https://www.acuitygroups.in/manpower-outsourcing",
+              },
+            ],
+          })}
+        </script>
+      </Helmet>
+
       {/* HERO */}
       <section className="relative min-h-screen flex items-center">
         <div className="absolute inset-0">
           <img
             src={ManpowerHero}
-            alt="Manpower Outsourcing Services"
+            alt="Manpower Outsourcing Services in Bangalore"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-950/85 to-blue-900/40"></div>
@@ -146,22 +260,22 @@ const ManpowerOutsourcing = () => {
           <div className="max-w-3xl text-white">
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold mb-6">
               <Briefcase size={16} className="text-yellow-300" />
-              <span>MANPOWER OUTSOURCING</span>
+              <span>MANPOWER OUTSOURCING IN BANGALORE</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
-              Professional Manpower Outsourcing Services
+              Manpower Outsourcing Services in Bangalore
             </h1>
 
             <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-10">
-              Skilled, semi-skilled, and unskilled workforce solutions for
-              industries, offices, construction projects, and facility
+              Skilled, semi-skilled and unskilled workforce solutions for
+              industries, offices, construction projects and facility
               operations.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition flex items-center gap-2"
               >
                 Hire Manpower <ArrowRight size={18} />
@@ -189,9 +303,9 @@ const ManpowerOutsourcing = () => {
               <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-blue-50 text-blue-900 flex items-center justify-center">
                 <stat.icon size={26} />
               </div>
-              <h3 className="text-3xl font-black text-gray-900">
+              <h2 className="text-3xl font-black text-gray-900">
                 {stat.value}
-              </h3>
+              </h2>
               <p className="text-gray-500 text-sm mt-1">{stat.label}</p>
             </div>
           ))}
@@ -212,16 +326,15 @@ const ManpowerOutsourcing = () => {
             </h2>
 
             <p className="text-gray-600 text-lg leading-relaxed mb-5">
-              We provide trained manpower to support businesses in operations,
-              maintenance, security, facility support, construction, and
-              industrial work.
+              We provide trained manpower in Bangalore to support business
+              operations, maintenance, security, facility support, construction
+              and industrial work.
             </p>
 
             <p className="text-gray-600 text-lg leading-relaxed">
-              From temporary staff for seasonal requirements to permanent
-              workforce for long-term projects, we offer flexible outsourcing
-              solutions that reduce HR burden and improve operational
-              efficiency.
+              From temporary staff for seasonal requirements to long-term
+              workforce deployment, we offer flexible outsourcing solutions that
+              reduce HR burden and improve operational efficiency.
             </p>
           </div>
 
@@ -256,7 +369,7 @@ const ManpowerOutsourcing = () => {
 
             <p className="text-gray-500 text-lg">
               Comprehensive staffing solutions for industries, offices,
-              security, facility support, and construction needs.
+              security, facility support and construction needs.
             </p>
           </div>
 
@@ -269,7 +382,7 @@ const ManpowerOutsourcing = () => {
                 <div className="h-56 overflow-hidden">
                   <img
                     src={service.image}
-                    alt={service.title}
+                    alt={`${service.title} in Bangalore`}
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                   />
                 </div>
@@ -289,14 +402,17 @@ const ManpowerOutsourcing = () => {
                         key={idx}
                         className="flex items-center gap-2 text-sm text-gray-700"
                       >
-                        <CheckCircle size={15} className="text-blue-900" />
+                        <CheckCircle
+                          size={15}
+                          className="text-blue-900 flex-shrink-0"
+                        />
                         <span>{feature}</span>
                       </div>
                     ))}
                   </div>
 
                   <Link
-                    to="/contactus"
+                    to="/contact"
                     className="text-blue-900 font-bold inline-flex items-center gap-2"
                   >
                     Enquire Now <ArrowRight size={16} />
@@ -318,12 +434,11 @@ const ManpowerOutsourcing = () => {
 
             <p className="text-blue-100 text-lg leading-relaxed mb-8">
               We help businesses reduce hiring challenges with trained,
-              verified, compliant, and professionally managed manpower
-              solutions.
+              verified, compliant and professionally managed manpower solutions.
             </p>
 
             <Link
-              to="/contactus"
+              to="/contact"
               className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold inline-flex items-center gap-2"
             >
               Contact Us <ArrowRight size={18} />
@@ -354,7 +469,7 @@ const ManpowerOutsourcing = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-              Trusted Across Sectors
+              Trusted Manpower Outsourcing Across Sectors
             </h2>
 
             <p className="text-gray-500 text-lg">
@@ -382,24 +497,24 @@ const ManpowerOutsourcing = () => {
       <section className="py-24 px-6 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
-            Need Reliable Manpower?
+            Need Reliable Manpower in Bangalore?
           </h2>
 
           <p className="text-gray-600 text-lg mb-10">
-            Let us handle your staffing needs with trained, verified, and
+            Let us handle your staffing needs with trained, verified and
             professionally managed workforce solutions.
           </p>
 
           <div className="flex flex-wrap gap-5 justify-center">
             <Link
-              to="/contactus"
+              to="/contact"
               className="bg-blue-900 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-800 transition inline-flex items-center gap-2"
             >
               Hire Manpower <ArrowRight size={18} />
             </Link>
 
             <a
-              href="tel:9941229005"
+              href="tel:+919941229005"
               className="border-2 border-blue-900 text-blue-900 px-10 py-4 rounded-full font-bold hover:bg-blue-900 hover:text-white transition inline-flex items-center gap-2"
             >
               <PhoneCall size={18} />

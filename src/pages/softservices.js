@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
   Sparkles,
   Building2,
@@ -10,7 +11,6 @@ import {
   PhoneCall,
   ArrowRight,
   Wrench,
-  Shield,
   Calendar,
   Headphones,
   CheckCircle,
@@ -27,13 +27,13 @@ const SoftServices = () => {
     {
       image: HousekeepingImg,
       title: "Housekeeping Services",
-      desc: "Complete housekeeping solutions for offices, apartments, hospitals, malls, and industrial facilities.",
+      desc: "Complete housekeeping solutions for offices, apartments, hospitals, malls and industrial facilities.",
       features: ["Daily cleaning", "Waste management", "Floor care"],
     },
     {
       image: CorporateCleaningImg,
       title: "Corporate Cleaning",
-      desc: "Professional office cleaning including workstation cleaning, washroom sanitation, pantry cleaning, and floor maintenance.",
+      desc: "Professional office cleaning including workstation cleaning, washroom sanitation, pantry cleaning and floor maintenance.",
       features: [
         "Workstation cleaning",
         "Washroom sanitation",
@@ -43,7 +43,7 @@ const SoftServices = () => {
     {
       image: DeepCleaningImg,
       title: "Deep Cleaning Services",
-      desc: "Advanced deep cleaning for commercial, residential, and industrial spaces using modern equipment.",
+      desc: "Advanced deep cleaning for commercial, residential and industrial spaces using modern equipment.",
       features: [
         "High-pressure cleaning",
         "Carpet shampooing",
@@ -53,7 +53,7 @@ const SoftServices = () => {
     {
       image: WashroomImg,
       title: "Washroom Hygiene",
-      desc: "Complete washroom hygiene management with sanitization, odor control, and hygiene monitoring.",
+      desc: "Complete washroom hygiene management with sanitization, odor control and hygiene monitoring.",
       features: ["Sanitization", "Odor control", "Hygiene monitoring"],
     },
   ];
@@ -85,12 +85,120 @@ const SoftServices = () => {
 
   return (
     <div className="bg-white text-gray-800 font-sans overflow-hidden">
+      <Helmet>
+        <title>Soft Services in Bangalore | Acuity Groups</title>
+
+        <meta
+          name="description"
+          content="Acuity Groups provides soft services in Bangalore including housekeeping, cleaning, deep cleaning and washroom hygiene."
+        />
+
+        <meta
+          name="keywords"
+          content="soft services in Bangalore, housekeeping services Bangalore, corporate cleaning Bangalore, deep cleaning Bangalore, washroom hygiene Bangalore"
+        />
+
+        <meta name="robots" content="index, follow" />
+
+        <link rel="canonical" href="https://www.acuitygroups.in/soft-services" />
+
+        <meta
+          property="og:title"
+          content="Soft Services in Bangalore | Acuity Groups"
+        />
+        <meta
+          property="og:description"
+          content="Professional soft services in Bangalore including housekeeping, corporate cleaning, deep cleaning and washroom hygiene."
+        />
+        <meta property="og:url" content="https://www.acuitygroups.in/soft-services" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Acuity Groups" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Soft Services in Bangalore | Acuity Groups"
+        />
+        <meta
+          name="twitter:description"
+          content="Housekeeping, corporate cleaning, deep cleaning and washroom hygiene services in Bangalore."
+        />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://www.acuitygroups.in/soft-services/#service",
+            name: "Soft Services in Bangalore",
+            serviceType: "Soft Services",
+            provider: {
+              "@type": "LocalBusiness",
+              name: "Acuity Groups",
+              url: "https://www.acuitygroups.in/",
+              telephone: "+919941229005",
+              email: "info@acuitygroups.in",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress:
+                  "2nd Floor, KVO-08, No-28/2, near Sun Jupiter School JP Nagar 6th Phase, Yelachenahalli",
+                addressLocality: "Bengaluru",
+                addressRegion: "Karnataka",
+                postalCode: "560078",
+                addressCountry: "IN",
+              },
+            },
+            areaServed: "Bangalore",
+            description:
+              "Professional soft services in Bangalore including housekeeping, corporate cleaning, deep cleaning and washroom hygiene.",
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Soft Services",
+              itemListElement: services.map((service) => ({
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: service.title,
+                  description: service.desc,
+                },
+              })),
+            },
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.acuitygroups.in/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Services",
+                item: "https://www.acuitygroups.in/services",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "Soft Services",
+                item: "https://www.acuitygroups.in/soft-services",
+              },
+            ],
+          })}
+        </script>
+      </Helmet>
+
       {/* HERO */}
       <section className="relative min-h-screen flex items-center">
         <div className="absolute inset-0">
           <img
             src={Ss}
-            alt="Soft Services"
+            alt="Soft Services in Bangalore"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-950/85 to-blue-900/40"></div>
@@ -100,29 +208,29 @@ const SoftServices = () => {
           <div className="max-w-3xl text-white">
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold mb-6">
               <Sparkles size={16} className="text-yellow-300" />
-              <span>SOFT SERVICES</span>
+              <span>SOFT SERVICES IN BANGALORE</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
-              Professional Cleaning & Housekeeping Services
+              Professional Soft Services in Bangalore
             </h1>
 
             <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-10">
-              Reliable housekeeping, corporate cleaning, deep cleaning, and
+              Reliable housekeeping, corporate cleaning, deep cleaning and
               washroom hygiene solutions for offices, industries, apartments,
-              hospitals, and institutions.
+              hospitals and institutions.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition flex items-center gap-2"
               >
                 Get a Quote <ArrowRight size={18} />
               </Link>
 
               <Link
-                to="/pages/servicepage"
+                to="/services"
                 className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-blue-900 transition"
               >
                 View Services
@@ -143,9 +251,9 @@ const SoftServices = () => {
               <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-blue-50 text-blue-900 flex items-center justify-center">
                 <stat.icon size={26} />
               </div>
-              <h3 className="text-3xl font-black text-gray-900">
+              <h2 className="text-3xl font-black text-gray-900">
                 {stat.value}
-              </h3>
+              </h2>
               <p className="text-gray-500 text-sm mt-1">{stat.label}</p>
             </div>
           ))}
@@ -166,12 +274,12 @@ const SoftServices = () => {
             </h2>
 
             <p className="text-gray-600 text-lg leading-relaxed mb-5">
-              Acuity Groups provides professional soft services that keep your
-              premises clean, hygienic, organized, and safe.
+              Acuity Groups provides professional soft services in Bangalore
+              that keep your premises clean, hygienic, organized and safe.
             </p>
 
             <p className="text-gray-600 text-lg leading-relaxed">
-              Our trained team, modern equipment, and quality-focused service
+              Our trained team, modern equipment and quality-focused service
               process help businesses maintain a professional environment every
               day.
             </p>
@@ -181,10 +289,10 @@ const SoftServices = () => {
             {whyChoose.map((item, index) => (
               <div
                 key={index}
-                className="bg-white/10 border border-white/10 rounded-2xl p-5"
+                className="bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition"
               >
-                <CheckCircle className="text-yellow-300 mb-3" size={24} />
-                <h3 className="font-bold">{item}</h3>
+                <CheckCircle className="text-blue-900 mb-3" size={24} />
+                <h3 className="font-bold text-gray-900">{item}</h3>
               </div>
             ))}
           </div>
@@ -206,7 +314,7 @@ const SoftServices = () => {
 
             <p className="text-gray-500 text-lg">
               Complete cleaning and hygiene solutions for commercial,
-              residential, and industrial spaces.
+              residential and industrial spaces.
             </p>
           </div>
 
@@ -219,7 +327,7 @@ const SoftServices = () => {
                 <div className="h-56 overflow-hidden">
                   <img
                     src={service.image}
-                    alt={service.title}
+                    alt={`${service.title} in Bangalore`}
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                   />
                 </div>
@@ -239,14 +347,17 @@ const SoftServices = () => {
                         key={idx}
                         className="flex items-center gap-2 text-sm text-gray-700"
                       >
-                        <CheckCircle size={15} className="text-blue-900" />
+                        <CheckCircle
+                          size={15}
+                          className="text-blue-900 flex-shrink-0"
+                        />
                         <span>{feature}</span>
                       </div>
                     ))}
                   </div>
 
                   <Link
-                    to="/contactus"
+                    to="/contact"
                     className="text-blue-900 font-bold inline-flex items-center gap-2"
                   >
                     Enquire Now <ArrowRight size={16} />
@@ -267,12 +378,12 @@ const SoftServices = () => {
             </h2>
 
             <p className="text-blue-100 text-lg leading-relaxed mb-8">
-              We focus on quality, reliability, trained manpower, and
+              We focus on quality, reliability, trained manpower and
               professional service delivery for every facility.
             </p>
 
             <Link
-              to="/contactus"
+              to="/contact"
               className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold inline-flex items-center gap-2"
             >
               Contact Us <ArrowRight size={18} />
@@ -297,7 +408,7 @@ const SoftServices = () => {
       <section className="py-24 px-6 md:px-12 bg-gray-50">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
-            Need Professional Soft Services?
+            Need Professional Soft Services in Bangalore?
           </h2>
 
           <p className="text-gray-600 text-lg mb-10">
@@ -307,14 +418,14 @@ const SoftServices = () => {
 
           <div className="flex flex-wrap gap-5 justify-center">
             <Link
-              to="/contactus"
+              to="/contact"
               className="bg-blue-900 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-800 transition inline-flex items-center gap-2"
             >
               Request a Quote <ArrowRight size={18} />
             </Link>
 
             <a
-              href="tel:9941229005"
+              href="tel:+919941229005"
               className="border-2 border-blue-900 text-blue-900 px-10 py-4 rounded-full font-bold hover:bg-blue-900 hover:text-white transition inline-flex items-center gap-2"
             >
               <PhoneCall size={18} />

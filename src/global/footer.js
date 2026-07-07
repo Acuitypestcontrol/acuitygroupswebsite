@@ -20,18 +20,20 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand Column */}
           <div>
-            <div className="items-center mb-5">
+            <Link to="/" className="inline-block mb-5">
               <img
                 src={Logo}
                 alt="Acuity Groups Logo"
-                className="h-32 w-auto "
+                className="h-32 w-auto"
               />
-            </div>
+            </Link>
+
             <p className="text-gray-500 text-sm leading-relaxed">
-              Acuity Groups delivers complete facility management, security
-              services, pest management, manpower outsourcing and maintenance
-              solutions for businesses, industries and residential communities.
+              Acuity Groups provides integrated facility management, security
+              services, housekeeping, pest management, manpower outsourcing and
+              maintenance solutions in Bangalore.
             </p>
+
             {/* Social Icons */}
             <div className="flex gap-3 mt-6">
               <a
@@ -39,25 +41,27 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-gray-100 text-blue-800 flex items-center justify-center hover:bg-blue-800 hover:text-white transition"
-                aria-label="Facebook"
+                aria-label="Acuity Groups Facebook"
               >
                 <Facebook size={16} />
               </a>
+
               <a
                 href="https://instagram.com/acuitygroups"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-gray-100 text-blue-800 flex items-center justify-center hover:bg-blue-800 hover:text-white transition"
-                aria-label="Instagram"
+                aria-label="Acuity Groups Instagram"
               >
                 <Instagram size={16} />
               </a>
+
               <a
                 href="https://linkedin.com/company/acuitygroups"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-gray-100 text-blue-800 flex items-center justify-center hover:bg-blue-800 hover:text-white transition"
-                aria-label="LinkedIn"
+                aria-label="Acuity Groups LinkedIn"
               >
                 <Linkedin size={16} />
               </a>
@@ -66,159 +70,90 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold text-gray-800 mb-5 border-l-3 border-blue-600 pl-3">
+            <h3 className="text-lg font-bold text-gray-800 mb-5 border-l-4 border-blue-600 pl-3">
               Quick Links
             </h3>
+
             <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/"
-                  className="flex items-center gap-2 text-gray-500 hover:text-blue-600 transition"
-                >
-                  <ChevronRight size={14} /> Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/aboutus"
-                  className="flex items-center gap-2 text-gray-500 hover:text-blue-600 transition"
-                >
-                  <ChevronRight size={14} /> About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="pages/servicepage"
-                  className="flex items-center gap-2 text-gray-500 hover:text-blue-600 transition"
-                >
-                  <ChevronRight size={14} /> Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/career"
-                  className="flex items-center gap-2 text-gray-500 hover:text-blue-600 transition"
-                >
-                  <ChevronRight size={14} /> Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contactus"
-                  className="flex items-center gap-2 text-gray-500 hover:text-blue-600 transition"
-                >
-                  <ChevronRight size={14} /> Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/blog"
-                  className="flex items-center gap-2 text-gray-500 hover:text-blue-600 transition"
-                >
-                  <ChevronRight size={14} /> Blog
-                </Link>
-              </li>
+              <FooterLink to="/" label="Home" />
+              <FooterLink to="/about" label="About Us" />
+              <FooterLink to="/services" label="Services" />
+              <FooterLink to="/career" label="Careers" />
+              <FooterLink to="/blogs" label="Blogs" />
+              <FooterLink to="/contact" label="Contact Us" />
             </ul>
           </div>
 
           {/* Our Services */}
           <div>
-            <h3 className="text-lg font-bold text-gray-800 mb-5 border-l-3 border-blue-600 pl-3">
+            <h3 className="text-lg font-bold text-gray-800 mb-5 border-l-4 border-blue-600 pl-3">
               Our Services
             </h3>
+
             <ul className="space-y-3">
-              <li>
-                <Link
-                  to="/softservices"
-                  className="flex items-center gap-2 text-gray-500 hover:text-blue-600 transition"
-                >
-                  <ChevronRight size={14} /> Soft Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/securityservice"
-                  className="flex items-center gap-2 text-gray-500 hover:text-blue-600 transition"
-                >
-                  <ChevronRight size={14} /> Security Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/facilitymanagment1"
-                  className="flex items-center gap-2 text-gray-500 hover:text-blue-600 transition"
-                >
-                  <ChevronRight size={14} /> Facility Management
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/housekeeping"
-                  className="flex items-center gap-2 text-gray-500 hover:text-blue-600 transition"
-                >
-                  <ChevronRight size={14} /> Housekeeping
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/repair"
-                  className="flex items-center gap-2 text-gray-500 hover:text-blue-600 transition"
-                >
-                  <ChevronRight size={14} /> Repair & Maintenance
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/pest"
-                  className="flex items-center gap-2 text-gray-500 hover:text-blue-600 transition"
-                >
-                  <ChevronRight size={14} /> Pest Management
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/manpower"
-                  className="flex items-center gap-2 text-gray-500 hover:text-blue-600 transition"
-                >
-                  <ChevronRight size={14} /> Manpower Outsourcing
-                </Link>
-              </li>
+              <FooterLink
+                to="/integrated-facility-management"
+                label="Integrated Facility Management"
+              />
+              <FooterLink to="/security-services" label="Security Services" />
+              <FooterLink
+                to="/housekeeping-services"
+                label="Housekeeping Services"
+              />
+              <FooterLink to="/soft-services" label="Soft Services" />
+              <FooterLink to="/pest-management" label="Pest Management" />
+              <FooterLink
+                to="/manpower-outsourcing"
+                label="Manpower Outsourcing"
+              />
+              <FooterLink
+                to="/repair-maintenance"
+                label="Repair & Maintenance"
+              />
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-bold text-gray-800 mb-5 border-l-3 border-blue-600 pl-3">
+            <h3 className="text-lg font-bold text-gray-800 mb-5 border-l-4 border-blue-600 pl-3">
               Contact Info
             </h3>
+
             <div className="space-y-5">
               <div className="flex items-start gap-3">
                 <div className="bg-blue-100 p-2 rounded-lg text-blue-800">
                   <Phone size={16} />
                 </div>
+
                 <div>
                   <p className="text-xs text-gray-500 uppercase">Call Us</p>
+
                   <a
                     href="tel:+919941229005"
                     className="text-gray-700 hover:text-blue-600 transition"
                   >
                     +91 99412 29005
                   </a>
+
                   <br />
+
                   <a
-                    href="tel:+08041229005"
+                    href="tel:+918041229005"
                     className="text-gray-500 text-sm hover:text-blue-600 transition"
                   >
                     080 4122 9005
                   </a>
                 </div>
               </div>
+
               <div className="flex items-start gap-3">
                 <div className="bg-blue-100 p-2 rounded-lg text-blue-800">
                   <Mail size={16} />
                 </div>
+
                 <div>
                   <p className="text-xs text-gray-500 uppercase">Email</p>
+
                   <a
                     href="mailto:info@acuitygroups.in"
                     className="text-gray-700 hover:text-blue-600 transition"
@@ -227,16 +162,28 @@ export default function Footer() {
                   </a>
                 </div>
               </div>
+
               <div className="flex items-start gap-3">
                 <div className="bg-blue-100 p-2 rounded-lg text-blue-800">
                   <MapPin size={16} />
                 </div>
+
                 <div>
                   <p className="text-xs text-gray-500 uppercase">Location</p>
+
                   <p className="text-gray-600">
                     2nd Floor, KVO-08, No-28/2, near Sun Jupiter School JP Nagar
                     6th Phase, Yelachenahalli Bengaluru, Karnataka 560078
                   </p>
+
+                  <a
+                    href="https://maps.google.com/?q=12.8978823,77.5722624"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block mt-2 text-blue-700 text-sm font-medium hover:underline"
+                  >
+                    View on Map →
+                  </a>
                 </div>
               </div>
             </div>
@@ -248,19 +195,36 @@ export default function Footer() {
           <p>
             © {new Date().getFullYear()} Acuity Groups. All rights reserved.
           </p>
+
           <div className="flex gap-6">
-            <Link
-              to="/privacy-policy"
-              className="hover:text-blue-600 transition"
-            >
-              Privacy Policy
+            <Link to="/services" className="hover:text-blue-600 transition">
+              Services
             </Link>
-            <Link to="/terms" className="hover:text-blue-600 transition">
-              Terms & Conditions
+
+            <Link to="/blogs" className="hover:text-blue-600 transition">
+              Blogs
+            </Link>
+
+            <Link to="/contact" className="hover:text-blue-600 transition">
+              Contact
             </Link>
           </div>
         </div>
       </div>
     </footer>
+  );
+}
+
+function FooterLink({ to, label }) {
+  return (
+    <li>
+      <Link
+        to={to}
+        className="flex items-center gap-2 text-gray-500 hover:text-blue-600 transition"
+      >
+        <ChevronRight size={14} />
+        {label}
+      </Link>
+    </li>
   );
 }

@@ -16,7 +16,6 @@ import {
   Facebook,
   Building,
   Bug,
-  AlertTriangle,
   Leaf,
   Award,
   Phone,
@@ -51,7 +50,7 @@ const PestManagementBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://www.acuitygroups.in/blogs/pest-management",
+    "https://www.acuitygroups.in/blogs/why-regular-pest-control",
   );
   const shareTitle = encodeURIComponent(
     "Why Regular Pest Control Is Essential for Businesses | Acuity Groups",
@@ -85,7 +84,7 @@ const PestManagementBlog = () => {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://www.acuitygroups.in/blogs/pest-management",
+      "@id": "https://www.acuitygroups.in/blogs/why-regular-pest-control",
     },
   };
 
@@ -134,13 +133,13 @@ const PestManagementBlog = () => {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://www.acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Pest Management",
-        item: "https://www.acuitygroups.in/blogs/pest-management",
+        item: "https://www.acuitygroups.in/blogs/why-regular-pest-control",
       },
     ],
   };
@@ -173,7 +172,7 @@ const PestManagementBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://www.acuitygroups.in/blogs/pest-management"
+          href="https://www.acuitygroups.in/blogs/why-regular-pest-control"
         />
         <title>
           Why Regular Pest Control Is Essential for Businesses | Acuity Groups
@@ -193,7 +192,7 @@ const PestManagementBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://www.acuitygroups.in/blogs/pest-management"
+          content="https://www.acuitygroups.in/blogs/why-regular-pest-control"
         />
         <meta
           property="og:title"
@@ -306,10 +305,7 @@ const PestManagementBlog = () => {
               </li>
               <li className="text-gray-400">/</li>
               <li>
-                <Link
-                  to="/blogs/allblogs"
-                  className="hover:text-orange-600 transition"
-                >
+                <Link to="/blogs" className="hover:text-orange-600 transition">
                   Blogs
                 </Link>
               </li>
@@ -559,7 +555,7 @@ const PestManagementBlog = () => {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link
-                    to="/contactus"
+                    to="/contact"
                     className="inline-flex items-center gap-2 bg-white text-orange-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
                   >
                     Schedule a Pest Audit <ArrowRight size={18} />
@@ -590,7 +586,7 @@ const PestManagementBlog = () => {
               {/* Back to blogs */}
               <div className="pt-4 border-t border-gray-200">
                 <Link
-                  to="/blogs/allblogs"
+                  to="/blogs"
                   className="text-orange-600 hover:text-orange-700 font-medium inline-flex items-center gap-1"
                 >
                   ← Back to all blogs
@@ -639,7 +635,7 @@ const PestManagementBlog = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/HousekeepingServices"
+                      to="/blogs/housekeeping-services"
                       className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       Professional Housekeeping Services
@@ -763,7 +759,7 @@ const PestManagementBlog = () => {
                 Contact Our Experts <ArrowRight size={18} />
               </Link>
               <Link
-                to="/blogs/allblogs"
+                to="/blogs"
                 className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition"
               >
                 Browse All Blogs

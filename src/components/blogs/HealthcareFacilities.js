@@ -25,7 +25,6 @@ import {
   Phone,
 } from "lucide-react";
 
-// Import images
 import bannerImg from "../../images/healthcare-facility-banner.jpg";
 import hospitalMgmt from "../../images/hospital-management.jpg";
 import hospitalCleaning from "../../images/hospital-cleaning.jpg";
@@ -35,15 +34,19 @@ const HealthcareFacilityManagementBlog = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [activeFaq, setActiveFaq] = useState(null);
 
+  const pageUrl =
+    "https://www.acuitygroups.in/blogs/importance-of-facility-management";
+
   const toggleFaq = (index) => {
     setActiveFaq(activeFaq === index ? null : index);
   };
 
-  // Scroll to top on mount
   useEffect(() => {
     window.scrollTo(0, 0);
+
     const handleScroll = () => setShowScrollTop(window.scrollY > 500);
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -53,11 +56,9 @@ const HealthcareFacilityManagementBlog = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const shareUrl = encodeURIComponent(
-    "https://www.acuitygroups.in/blogs/healthcare-facility-management",
-  );
+  const shareUrl = encodeURIComponent(pageUrl);
   const shareTitle = encodeURIComponent(
-    "The Importance of Facility Management in Healthcare Facilities | Acuity Groups",
+    "The Importance of Facility Management in Healthcare Facilities | Acuity Groups"
   );
 
   const tocSections = [
@@ -67,61 +68,58 @@ const HealthcareFacilityManagementBlog = () => {
     { id: "why-acuity", title: "Why Acuity Groups" },
   ];
 
-  // Structured Data: Article + FAQ + Breadcrumb
+  const faqs = [
+    {
+      q: "Why is facility management important in healthcare?",
+      a: "Facility management supports hygiene, patient safety, compliance, maintenance and smooth daily operations in healthcare facilities.",
+    },
+    {
+      q: "What services does Acuity Groups offer for healthcare facilities?",
+      a: "Acuity Groups provides housekeeping, sanitization support, security, maintenance, waste management support and integrated facility management for hospitals and clinics.",
+    },
+    {
+      q: "How does facility management improve patient experience?",
+      a: "Clean, safe and well-maintained environments create a better experience for patients, visitors, doctors and healthcare staff.",
+    },
+  ];
+
   const articleData = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: "The Importance of Facility Management in Healthcare Facilities",
     description:
-      "Enhance patient safety, infection control, and operational efficiency in your healthcare facility. Explore medical facility insights from Acuity Groups.",
+      "Learn how facility management supports hygiene, safety, compliance and operational efficiency in healthcare facilities.",
     image:
       "https://www.acuitygroups.in/static/media/healthcare-facility-banner.jpg",
     datePublished: "2025-06-01",
-    dateModified: "2025-06-01",
-    author: { "@type": "Organization", name: "Acuity Groups" },
+    dateModified: "2026-07-06",
+    author: {
+      "@type": "Organization",
+      name: "Acuity Groups",
+      url: "https://www.acuitygroups.in/",
+    },
     publisher: {
       "@type": "Organization",
       name: "Acuity Groups",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.acuitygroups.in/logo.png",
-      },
+      url: "https://www.acuitygroups.in/",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://www.acuitygroups.in/blogs/healthcare-facility-management",
+      "@id": pageUrl,
     },
   };
 
   const faqData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Why is facility management critical in healthcare?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "It ensures infection control, patient safety, regulatory compliance, and reliable operation of medical equipment and support services.",
-        },
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
       },
-      {
-        "@type": "Question",
-        name: "What services does Acuity Groups offer for healthcare facilities?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Acuity Groups provides hygiene sanitization, security, maintenance, medical waste management, and integrated facility management tailored to hospitals and clinics.",
-        },
-      },
-      {
-        "@type": "Question",
-        name: "How does facility management improve patient experience?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Clean, safe, and well-maintained environments reduce stress, prevent infections, and create a healing atmosphere that improves overall patient satisfaction.",
-        },
-      },
-    ],
+    })),
   };
 
   const breadcrumbData = {
@@ -138,18 +136,17 @@ const HealthcareFacilityManagementBlog = () => {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://www.acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs",
       },
       {
         "@type": "ListItem",
         position: 3,
-        name: "Healthcare Facility Management",
-        item: "https://www.acuitygroups.in/blogs/healthcare-facility-management",
+        name: "Importance of Facility Management",
+        item: pageUrl,
       },
     ],
   };
 
-  // Stats data
   const stats = [
     {
       value: "30+",
@@ -158,12 +155,12 @@ const HealthcareFacilityManagementBlog = () => {
     },
     {
       value: "99%",
-      label: "Compliance Rate",
+      label: "Quality Focus",
       icon: <Award className="text-teal-600 w-6 h-6" />,
     },
     {
       value: "24/7",
-      label: "Emergency Support",
+      label: "Support",
       icon: <Clock className="text-teal-600 w-6 h-6" />,
     },
     {
@@ -176,77 +173,59 @@ const HealthcareFacilityManagementBlog = () => {
   return (
     <>
       <Helmet>
-        <link
-          rel="canonical"
-          href="https://www.acuitygroups.in/blogs/healthcare-facility-management"
-        />
         <title>
-          The Importance of Facility Management in Healthcare Facilities |
-          Acuity Groups
+          Facility Management in Healthcare Facilities | Acuity Groups
         </title>
+
         <meta
           name="description"
-          content="Discover how professional facility management enhances patient safety, infection control, compliance, and operational efficiency in healthcare facilities. Expert insights from Acuity Groups."
+          content="Learn how facility management supports hygiene, safety, compliance and smooth operations in healthcare facilities."
         />
+
         <meta
           name="keywords"
-          content="healthcare facility management, hospital management, infection control, medical waste management, healthcare compliance, patient safety, Acuity Groups"
+          content="healthcare facility management, hospital facility management, hospital housekeeping, healthcare cleaning, healthcare maintenance, Acuity Groups"
         />
+
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Acuity Groups" />
 
-        {/* Open Graph / Facebook */}
+        <link rel="canonical" href={pageUrl} />
+
         <meta property="og:type" content="article" />
-        <meta
-          property="og:url"
-          content="https://www.acuitygroups.in/blogs/healthcare-facility-management"
-        />
+        <meta property="og:url" content={pageUrl} />
         <meta
           property="og:title"
-          content="The Importance of Facility Management in Healthcare Facilities | Acuity Groups"
+          content="Facility Management in Healthcare Facilities | Acuity Groups"
         />
         <meta
           property="og:description"
-          content="Discover how professional facility management enhances patient safety, infection control, compliance, and operational efficiency in healthcare facilities. Expert insights from Acuity Groups."
-        />
-        <meta
-          property="og:image"
-          content="https://www.acuitygroups.in/static/media/healthcare-facility-banner.jpg"
+          content="Facility management supports hygiene, safety, compliance and operational efficiency in healthcare facilities."
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary" />
         <meta
           name="twitter:title"
-          content="The Importance of Facility Management in Healthcare Facilities"
+          content="Facility Management in Healthcare Facilities | Acuity Groups"
         />
         <meta
           name="twitter:description"
-          content="Discover how professional facility management enhances patient safety, infection control, compliance, and operational efficiency in healthcare facilities."
+          content="Learn how facility management supports healthcare operations."
         />
-        <meta
-          name="twitter:image"
-          content="https://www.acuitygroups.in/static/media/healthcare-facility-banner.jpg"
-        />
+
+        <script type="application/ld+json">
+          {JSON.stringify(articleData)}
+        </script>
+
+        <script type="application/ld+json">{JSON.stringify(faqData)}</script>
+
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbData)}
+        </script>
       </Helmet>
 
-      {/* Structured Data (JSON-LD) */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
-      />
-
       <div className="bg-gradient-to-br from-teal-50 via-white to-gray-50 text-gray-800 font-sans relative">
-        {/* Scroll to top button */}
         {showScrollTop && (
           <button
             onClick={scrollToTop}
@@ -261,31 +240,38 @@ const HealthcareFacilityManagementBlog = () => {
         <div className="relative h-[70vh] min-h-[550px] overflow-hidden">
           <img
             src={bannerImg}
-            alt="Healthcare facility management - clean hospital corridor with medical staff"
+            alt="Healthcare facility management services"
             className="absolute inset-0 w-full h-full object-cover"
             loading="eager"
             fetchPriority="high"
           />
+
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
+
           <div className="absolute inset-0 flex flex-col items-start justify-center px-6 md:px-12 lg:px-24 max-w-5xl text-white">
             <span className="bg-teal-600 backdrop-blur-sm px-5 py-2 rounded-full text-sm font-semibold tracking-wide inline-flex items-center gap-2">
               🏥 Healthcare Facility Management
             </span>
+
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mt-6 max-w-4xl leading-tight drop-shadow-lg">
               The Importance of Facility Management in Healthcare Facilities
             </h1>
+
             <div className="flex flex-wrap gap-5 mt-6 text-white/90">
               <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full">
                 <User size={18} /> Acuity Groups
               </div>
+
               <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Calendar size={18} /> June 1, 2025
               </div>
+
               <div className="flex items-center gap-2 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full">
                 <Clock size={18} /> 5 min read
               </div>
             </div>
           </div>
+
           <div className="absolute bottom-0 w-full">
             <svg
               viewBox="0 0 1200 120"
@@ -310,16 +296,17 @@ const HealthcareFacilityManagementBlog = () => {
                   Home
                 </Link>
               </li>
+
               <li className="text-gray-400">/</li>
+
               <li>
-                <Link
-                  to="/blogs/allblogs"
-                  className="hover:text-teal-600 transition"
-                >
+                <Link to="/blogs" className="hover:text-teal-600 transition">
                   Blogs
                 </Link>
               </li>
+
               <li className="text-gray-400">/</li>
+
               <li className="text-gray-700 font-medium">
                 Healthcare Facility Management
               </li>
@@ -343,7 +330,7 @@ const HealthcareFacilityManagementBlog = () => {
           </div>
 
           <div className="grid lg:grid-cols-12 gap-10">
-            {/* Table of Contents - Left */}
+            {/* Table of Contents */}
             <div className="hidden lg:block lg:col-span-3">
               <div className="sticky top-24 bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-5 border border-gray-100">
                 <div className="flex items-center gap-2 mb-4 pb-2 border-b border-gray-200">
@@ -352,6 +339,7 @@ const HealthcareFacilityManagementBlog = () => {
                     On this page
                   </h3>
                 </div>
+
                 <ul className="space-y-2 text-sm">
                   {tocSections.map((section) => (
                     <li key={section.id}>
@@ -371,38 +359,44 @@ const HealthcareFacilityManagementBlog = () => {
                     </li>
                   ))}
                 </ul>
+
                 <div className="mt-6 pt-4 border-t border-gray-100">
                   <div className="flex justify-around">
                     <button
                       onClick={() =>
                         window.open(
                           `https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`,
-                          "_blank",
+                          "_blank"
                         )
                       }
                       className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-500"
+                      aria-label="Share on Twitter"
                     >
                       <Twitter size={18} />
                     </button>
+
                     <button
                       onClick={() =>
                         window.open(
                           `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareTitle}`,
-                          "_blank",
+                          "_blank"
                         )
                       }
                       className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-700"
+                      aria-label="Share on LinkedIn"
                     >
                       <Linkedin size={18} />
                     </button>
+
                     <button
                       onClick={() =>
                         window.open(
                           `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`,
-                          "_blank",
+                          "_blank"
                         )
                       }
                       className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-600"
+                      aria-label="Share on Facebook"
                     >
                       <Facebook size={18} />
                     </button>
@@ -413,76 +407,72 @@ const HealthcareFacilityManagementBlog = () => {
 
             {/* Main Article */}
             <div className="lg:col-span-6 space-y-8">
-              {/* Introduction */}
               <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
                 <p className="text-xl text-gray-700 leading-relaxed border-l-4 border-teal-500 pl-5 italic">
-                  Healthcare facilities require the highest standards of
-                  cleanliness, safety, and operational efficiency. Effective
-                  facility management plays a critical role in supporting
-                  patient care while ensuring hospitals and healthcare centers
-                  operate smoothly.
+                  Healthcare facilities require strong standards of cleanliness,
+                  safety and operational efficiency. Effective facility
+                  management plays an important role in supporting patient care
+                  while helping hospitals and healthcare centers operate
+                  smoothly.
                 </p>
               </div>
 
-              {/* Hospital Management Image */}
               <div className="my-2">
                 <img
                   src={hospitalMgmt}
-                  alt="Hospital management team reviewing facility operations"
+                  alt="Healthcare facility management team"
                   className="w-full rounded-2xl shadow-lg object-cover max-h-[400px]"
                   loading="lazy"
                 />
+
                 <div className="flex justify-between items-center mt-2 text-sm text-gray-500">
-                  <span>
-                    🏥 Professional healthcare facility management team
-                  </span>
+                  <span>🏥 Healthcare facility management support</span>
                   <span className="bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full">
                     Core Service
                   </span>
                 </div>
               </div>
 
-              {/* Patient Safety Section */}
               <div id="patient-safety" className="scroll-mt-24">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center gap-2">
                   <Heart size={28} className="text-teal-500" /> Supporting
                   Patient Safety
                 </h2>
+
                 <p className="text-gray-700 leading-relaxed">
                   Clean and properly maintained healthcare environments help
-                  reduce infection risks and improve patient outcomes. Facility
-                  management ensures that critical systems (HVAC, medical gases,
-                  electrical backups) and support services remain reliable 24/7.
-                  A single lapse can lead to hospital-acquired infections, which
-                  affect 1 in 31 hospital patients on any given day.
+                  support hygiene, safety and better patient experience.
+                  Facility management also helps ensure that critical building
+                  systems and support services remain reliable for daily
+                  operations.
                 </p>
               </div>
 
-              {/* Service Cards */}
               <div>
                 <h2 className="text-2xl font-bold text-gray-800 mb-6">
                   🔧 Core Facility Management Services
                 </h2>
+
                 <div className="grid md:grid-cols-2 gap-6">
                   {[
                     {
                       title: "Hygiene & Sanitization",
-                      desc: "Maintain infection-free environments through professional cleaning and disinfection protocols.",
+                      desc: "Support cleaner healthcare environments through professional cleaning and disinfection routines.",
                       icon: Droplet,
                     },
                     {
                       title: "Security Services",
-                      desc: "Protect patients, visitors, and healthcare staff with access control and surveillance.",
+                      desc: "Support safety for patients, visitors and healthcare staff through access control and security manpower.",
                       icon: Shield,
                     },
                     {
                       title: "Maintenance Support",
-                      desc: "Ensure uninterrupted operation of medical equipment and facility systems.",
+                      desc: "Help maintain facility systems, electrical points, plumbing and daily operational requirements.",
                       icon: Wrench,
                     },
                     {
-                      title: "Waste Management",
-                      desc: "Handle medical waste safely and compliantly, reducing environmental and health risks.",
+                      title: "Waste Management Support",
+                      desc: "Support safe waste handling practices as per healthcare facility requirements.",
                       icon: Trash2,
                     },
                   ].map((service, idx) => (
@@ -493,44 +483,44 @@ const HealthcareFacilityManagementBlog = () => {
                       <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-teal-600 transition-colors">
                         <service.icon className="text-teal-600 group-hover:text-white w-6 h-6" />
                       </div>
+
                       <h3 className="text-xl font-bold text-gray-800 mb-2">
                         {service.title}
                       </h3>
+
                       <p className="text-gray-600">{service.desc}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Hospital Cleaning Image */}
               <div className="relative">
                 <img
                   src={hospitalCleaning}
-                  alt="Hospital cleaning staff sanitizing a patient room"
+                  alt="Hospital cleaning and sanitization service"
                   className="w-full rounded-2xl shadow-lg object-cover max-h-[400px]"
                   loading="lazy"
                 />
+
                 <div className="absolute bottom-4 left-4 bg-black/50 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">
-                  🧼 High-touch surface disinfection
+                  🧼 Healthcare cleaning support
                 </div>
               </div>
 
-              {/* Compliance Section */}
               <div id="compliance" className="scroll-mt-24">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center gap-2">
                   <CheckCircle size={28} className="text-teal-500" />{" "}
-                  Maintaining Regulatory Compliance
+                  Maintaining Standards and Compliance
                 </h2>
+
                 <p className="text-gray-700 leading-relaxed">
-                  Healthcare facilities must comply with strict safety and
-                  hygiene regulations (OSHA, JCI, local health codes).
-                  Professional facility management helps ensure standards are
-                  consistently met while minimizing operational risks, avoiding
-                  fines, and protecting your reputation.
+                  Healthcare facilities need consistent hygiene, safety and
+                  service standards. Professional facility management helps
+                  maintain cleaning schedules, manpower coordination, maintenance
+                  support and routine checks for smoother operations.
                 </p>
               </div>
 
-              {/* Support Team Image */}
               <div className="relative">
                 <img
                   src={supportTeam}
@@ -538,25 +528,26 @@ const HealthcareFacilityManagementBlog = () => {
                   className="w-full rounded-2xl shadow-lg object-cover max-h-[400px]"
                   loading="lazy"
                 />
+
                 <div className="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm text-white text-xs px-3 py-1 rounded-full">
-                  👥 24/7 coordination team
+                  👥 Facility coordination team
                 </div>
               </div>
 
-              {/* Benefits Section */}
               <div id="benefits" className="scroll-mt-24">
                 <h2 className="text-3xl font-bold text-gray-800 mb-6 flex items-center gap-2">
                   <Sparkles size={28} className="text-teal-500" /> Key Benefits
                   of Professional FM
                 </h2>
+
                 <div className="grid sm:grid-cols-2 gap-3">
                   {[
-                    "Improved patient safety",
-                    "Better hygiene & infection control",
-                    "Reliable facility operations",
+                    "Improved hygiene support",
+                    "Better facility operations",
+                    "Reliable maintenance support",
                     "Enhanced staff productivity",
-                    "Regulatory compliance",
-                    "Better patient experience",
+                    "Cleaner patient areas",
+                    "Better visitor experience",
                   ].map((item, i) => (
                     <div
                       key={i}
@@ -572,41 +563,40 @@ const HealthcareFacilityManagementBlog = () => {
                 </div>
               </div>
 
-              {/* Did you know? */}
               <div className="bg-gradient-to-r from-teal-50 to-cyan-50 rounded-2xl p-6 border border-teal-100">
                 <h3 className="text-xl font-bold text-teal-800 mb-2 flex items-center gap-2">
                   💡 Did You Know?
                 </h3>
+
                 <p className="text-gray-700">
-                  Proper facility management can reduce hospital-acquired
-                  infections by up to 30% and improve patient satisfaction
-                  scores by 25%. Investing in professional FM directly impacts
-                  your bottom line and reputation.
+                  Well-managed healthcare facilities create a cleaner, safer and
+                  more organized environment for patients, visitors and staff.
                 </p>
               </div>
 
-              {/* Why Acuity Groups */}
               <div
                 id="why-acuity"
                 className="bg-gradient-to-br from-teal-600 to-cyan-700 text-white p-8 rounded-2xl shadow-xl scroll-mt-24"
               >
                 <h2 className="text-3xl font-bold mb-4">
-                  Why Choose Acuity Groups for Healthcare FM? 🏥
+                  Why Choose Acuity Groups for Healthcare FM?
                 </h2>
+
                 <p className="text-teal-100 leading-relaxed text-lg">
-                  Acuity Groups delivers specialized facility management
-                  solutions for hospitals, clinics, and long-term care
-                  facilities. From infection control and medical waste disposal
-                  to 24/7 maintenance and security, we ensure your healthcare
-                  environment is safe, compliant, and focused on healing.
+                  Acuity Groups provides professional facility management support
+                  for hospitals, clinics and healthcare properties. From
+                  housekeeping and maintenance to security and manpower support,
+                  our team helps maintain smooth day-to-day operations.
                 </p>
+
                 <div className="mt-6 flex flex-wrap gap-4">
                   <Link
-                    to="/contactus"
+                    to="/contact"
                     className="inline-flex items-center gap-2 bg-white text-teal-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
                   >
                     Partner With Us <ArrowRight size={18} />
                   </Link>
+
                   <Link
                     to="/services"
                     className="inline-flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition"
@@ -616,26 +606,22 @@ const HealthcareFacilityManagementBlog = () => {
                 </div>
               </div>
 
-              {/* Conclusion */}
               <div className="bg-gradient-to-r from-gray-900 to-gray-800 text-white p-8 rounded-2xl shadow-xl">
                 <h2 className="text-3xl font-bold mb-4 flex items-center gap-2">
                   🎯 Conclusion
                 </h2>
+
                 <p className="text-gray-200 text-lg leading-relaxed">
-                  Facility management is essential for delivering safe,
-                  efficient, and patient-focused healthcare services. Acuity
-                  Groups provides comprehensive healthcare facility solutions
-                  that support quality care and operational excellence. By
-                  partnering with us, you ensure your medical facility runs like
-                  a well-oiled machine — saving lives, one clean and safe
-                  environment at a time.
+                  Facility management is essential for safe, clean and efficient
+                  healthcare environments. Acuity Groups provides healthcare
+                  facility solutions that support daily operations, hygiene,
+                  safety and service quality.
                 </p>
               </div>
 
-              {/* Back to blogs */}
               <div className="pt-4 border-t border-gray-200">
                 <Link
-                  to="/blogs/allblogs"
+                  to="/blogs"
                   className="text-teal-600 hover:text-teal-700 font-medium inline-flex items-center gap-1"
                 >
                   ← Back to all blogs
@@ -645,113 +631,133 @@ const HealthcareFacilityManagementBlog = () => {
 
             {/* Right Sidebar */}
             <aside className="lg:col-span-3 space-y-8">
-              {/* Expert Card */}
               <div className="bg-white rounded-2xl shadow-lg p-6 text-center border border-gray-100">
                 <div className="w-24 h-24 mx-auto rounded-full overflow-hidden bg-gray-200 mb-4">
                   <img
                     src={supportTeam}
-                    alt="Healthcare FM Expert"
+                    alt="Acuity Groups healthcare facility team"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="font-bold text-xl">Acuity Healthcare Team</h3>
+
+                <h3 className="font-bold text-xl">Acuity Groups</h3>
+
                 <p className="text-gray-500 text-sm mt-1">
                   Facility Management Specialists
                 </p>
+
                 <p className="text-gray-600 text-sm mt-3">
-                  15+ years in healthcare facility management.
+                  Professional facility management support for healthcare
+                  properties in Bangalore.
                 </p>
+
                 <div className="mt-4 flex justify-center gap-2">
                   <Phone size={18} className="text-teal-600" />
                   <span className="text-sm text-gray-600">
-                    24/7 Emergency Support
+                    24/7 Support Available
                   </span>
                 </div>
               </div>
 
-              {/* Related Articles with thumbnails */}
               <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
                 <h3 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
                   📚 Related Articles
                 </h3>
+
                 <ul className="space-y-4">
                   <li className="flex gap-3 items-center group">
                     <div className="w-12 h-12 rounded-md overflow-hidden bg-gray-200 flex-shrink-0">
                       <img
                         src={hospitalMgmt}
-                        alt="thumb"
+                        alt="The Importance of Facilities Management"
                         className="w-full h-full object-cover"
                       />
                     </div>
+
                     <Link
-                      to="/blogs/TheImportanceFacilities"
+                      to="/blogs/the-importance-of-facilities"
                       className="text-teal-600 group-hover:text-teal-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       The Importance of Facilities Management
                     </Link>
                   </li>
+
                   <li className="flex gap-3 items-center group">
                     <div className="w-12 h-12 rounded-md overflow-hidden bg-gray-200 flex-shrink-0">
                       <img
                         src={hospitalCleaning}
-                        alt="thumb"
+                        alt="Integrated Design From Function to Feeling"
                         className="w-full h-full object-cover"
                       />
                     </div>
+
                     <Link
-                      to="/blogs/FromFunction"
+                      to="/blogs/from-function-to-feeling"
                       className="text-teal-600 group-hover:text-teal-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       Integrated Design: From Function to Feeling
                     </Link>
                   </li>
+
                   <li className="flex gap-3 items-center group">
                     <div className="w-12 h-12 rounded-md overflow-hidden bg-gray-200 flex-shrink-0">
                       <img
                         src={bannerImg}
-                        alt="thumb"
+                        alt="Integrated Facility Management Benefits"
                         className="w-full h-full object-cover"
                       />
                     </div>
+
+                    <Link
+                      to="/blogs/why-integrated-facility-management"
+                      className="text-teal-600 group-hover:text-teal-700 group-hover:underline transition text-sm font-medium flex-1"
+                    >
+                      Why Integrated Facility Management Matters
+                    </Link>
                   </li>
                 </ul>
               </div>
 
-              {/* Quick CTA Card */}
               <div className="bg-gradient-to-br from-teal-50 to-cyan-100 rounded-2xl p-6 shadow-md border border-teal-100 text-center">
                 <div className="text-5xl mb-3">🏥</div>
+
                 <h3 className="font-bold text-teal-900 text-lg mb-2">
-                  Trusted Healthcare Partner
+                  Healthcare Facility Support
                 </h3>
+
                 <p className="text-gray-700 text-sm mb-4">
-                  Get a free consultation for your hospital or clinic.
+                  Get support for your hospital, clinic or healthcare property.
                 </p>
+
                 <Link
-                  to="/contactus"
+                  to="/contact"
                   className="block text-center bg-teal-600 text-white py-2.5 rounded-full hover:bg-teal-700 transition shadow"
                 >
                   Request a Quote
                 </Link>
+
                 <div className="mt-4 rounded-lg overflow-hidden">
                   <img
                     src={hospitalMgmt}
-                    alt="Healthcare"
+                    alt="Healthcare facility management quote"
                     className="w-full h-20 object-cover"
                   />
                 </div>
               </div>
 
-              {/* Trust Badge */}
               <div className="bg-white rounded-2xl p-5 text-center shadow-lg border">
                 <div className="flex justify-center gap-0.5 text-yellow-400 text-2xl mb-2">
                   ★★★★★
                 </div>
+
                 <p className="font-semibold text-gray-800">
-                  Trusted by 30+ Hospitals
+                  Trusted Facility Management Support
                 </p>
+
                 <p className="text-xs text-gray-500 mt-1">
-                  Safe | Compliant | Caring
+                  Safe | Clean | Professional
                 </p>
+
                 <div className="flex justify-center gap-4 mt-3">
                   <Thermometer size={20} className="text-gray-400" />
                   <BarChart size={20} className="text-gray-400" />
@@ -762,29 +768,18 @@ const HealthcareFacilityManagementBlog = () => {
           </div>
         </div>
 
-        {/* FAQ Section with Accordion */}
+        {/* FAQ Section */}
         <section className="max-w-5xl mx-auto px-6 py-16 border-t border-gray-200">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
               Frequently Asked Questions
             </h2>
+
             <div className="w-20 h-1 bg-teal-600 mx-auto rounded-full"></div>
           </div>
+
           <div className="space-y-4">
-            {[
-              {
-                q: "Why is facility management critical in healthcare?",
-                a: "It ensures infection control, patient safety, regulatory compliance, and reliable operation of medical equipment and support services.",
-              },
-              {
-                q: "What services does Acuity Groups offer for healthcare facilities?",
-                a: "Acuity Groups provides hygiene sanitization, security, maintenance, medical waste management, and integrated facility management tailored to hospitals and clinics.",
-              },
-              {
-                q: "How does facility management improve patient experience?",
-                a: "Clean, safe, and well-maintained environments reduce stress, prevent infections, and create a healing atmosphere that improves overall patient satisfaction.",
-              },
-            ].map((faq, idx) => (
+            {faqs.map((faq, idx) => (
               <div
                 key={idx}
                 className="bg-white rounded-xl shadow-md overflow-hidden"
@@ -798,6 +793,7 @@ const HealthcareFacilityManagementBlog = () => {
                     {activeFaq === idx ? "−" : "+"}
                   </span>
                 </button>
+
                 {activeFaq === idx && (
                   <div className="p-5 pt-0 text-gray-600 border-t border-gray-100">
                     {faq.a}
@@ -808,32 +804,36 @@ const HealthcareFacilityManagementBlog = () => {
           </div>
         </section>
 
-        {/* Bottom CTA Banner */}
+        {/* Bottom CTA */}
         <section className="relative bg-gradient-to-r from-teal-800 via-cyan-800 to-teal-900 text-white py-16 text-center overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <img
               src={bannerImg}
-              alt="background pattern"
+              alt="Healthcare facility management background"
               className="w-full h-full object-cover"
             />
           </div>
+
           <div className="relative max-w-3xl mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Elevate Your Healthcare Facility?
+              Ready to Improve Your Healthcare Facility?
             </h2>
+
             <p className="text-teal-100 text-lg mb-8">
               Partner with Acuity Groups for professional facility management
-              that puts patients first.
+              support.
             </p>
+
             <div className="flex flex-wrap justify-center gap-5">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="inline-flex items-center gap-2 bg-white text-teal-800 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg"
               >
                 Contact Our Experts <ArrowRight size={18} />
               </Link>
+
               <Link
-                to="/blogs/allblogs"
+                to="/blogs"
                 className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition"
               >
                 Browse All Blogs
@@ -843,12 +843,9 @@ const HealthcareFacilityManagementBlog = () => {
         </section>
 
         <style>{`
-          @keyframes fade-in-up {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+          .scroll-mt-24 {
+            scroll-margin-top: 6rem;
           }
-          .animate-fade-in-up { animation: fade-in-up 0.6s ease-out forwards; }
-          .scroll-mt-24 { scroll-margin-top: 6rem; }
         `}</style>
       </div>
     </>

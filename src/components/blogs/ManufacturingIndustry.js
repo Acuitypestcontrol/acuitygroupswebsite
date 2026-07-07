@@ -175,7 +175,7 @@ const ManufacturingFacilityManagementBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://www.acuitygroups.in/blogs/manufacturing-facility-management"
+          href="https://www.acuitygroups.in/blogs/manufacturing-industry"
         />
         <title>
           The Role of Facility Management in Manufacturing Excellence | Acuity
@@ -196,7 +196,7 @@ const ManufacturingFacilityManagementBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://www.acuitygroups.in/blogs/manufacturing-facility-management"
+          content="https://www.acuitygroups.in/blogs/manufacturing-industry"
         />
         <meta
           property="og:title"
@@ -309,10 +309,7 @@ const ManufacturingFacilityManagementBlog = () => {
               </li>
               <li className="text-gray-400">/</li>
               <li>
-                <Link
-                  to="/blogs/allblogs"
-                  className="hover:text-orange-600 transition"
-                >
+                <Link to="/blogs" className="hover:text-orange-600 transition">
                   Blogs
                 </Link>
               </li>
@@ -593,7 +590,7 @@ const ManufacturingFacilityManagementBlog = () => {
                 </p>
                 <div className="mt-6 flex flex-wrap gap-4">
                   <Link
-                    to="/contactus"
+                    to="/contact"
                     className="inline-flex items-center gap-2 bg-white text-orange-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
                   >
                     Optimize Your Facility <ArrowRight size={18} />
@@ -674,7 +671,7 @@ const ManufacturingFacilityManagementBlog = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/TheImportanceFacilities"
+                      to="/blogs/the-importance-of-facilities"
                       className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       The Importance of Facilities Management
@@ -704,7 +701,7 @@ const ManufacturingFacilityManagementBlog = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/HousekeepingServices"
+                      to="/blogs/housekeeping-services"
                       className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       Professional Housekeeping Services

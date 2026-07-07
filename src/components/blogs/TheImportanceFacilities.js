@@ -49,7 +49,7 @@ const TheUnsungHeroesBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://www.acuitygroups.in/blogs/the-unsung-heroes",
+    "https://www.acuitygroups.in/blogs/the-importance-of-facilities",
   );
   const shareTitle = encodeURIComponent(
     "The Unsung Heroes: Facilities and the Power of Good Management | Acuity Groups",
@@ -84,7 +84,7 @@ const TheUnsungHeroesBlog = () => {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://www.acuitygroups.in/blogs/the-unsung-heroes",
+      "@id": "https://www.acuitygroups.in/blogs/the-importance-of-facilities",
     },
   };
 
@@ -133,13 +133,13 @@ const TheUnsungHeroesBlog = () => {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://www.acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Unsung Heroes",
-        item: "https://www.acuitygroups.in/blogs/the-unsung-heroes",
+        item: "https://www.acuitygroups.in/blogs/the-importance-of-facilities",
       },
     ],
   };
@@ -172,7 +172,7 @@ const TheUnsungHeroesBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://www.acuitygroups.in/blogs/the-unsung-heroes"
+          href="https://www.acuitygroups.in/blogs/the-importance-of-facilities"
         />
         <title>
           The Unsung Heroes: Facilities and the Power of Good Management |
@@ -193,7 +193,7 @@ const TheUnsungHeroesBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://www.acuitygroups.in/blogs/the-unsung-heroes"
+          content="https://www.acuitygroups.in/blogs/the-importance-of-facilities"
         />
         <meta
           property="og:title"
@@ -306,10 +306,7 @@ const TheUnsungHeroesBlog = () => {
               </li>
               <li className="text-gray-400">/</li>
               <li>
-                <Link
-                  to="/blogs/allblogs"
-                  className="hover:text-green-600 transition"
-                >
+                <Link to="/blogs" className="hover:text-green-600 transition">
                   Blogs
                 </Link>
               </li>
@@ -590,7 +587,7 @@ const TheUnsungHeroesBlog = () => {
                 </ul>
                 <div className="flex flex-wrap gap-4">
                   <Link
-                    to="/contactus"
+                    to="/contact"
                     className="inline-flex items-center gap-2 bg-white text-green-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
                   >
                     Get a Free Consultation <ArrowRight size={18} />
@@ -623,7 +620,7 @@ const TheUnsungHeroesBlog = () => {
               {/* Back to blogs */}
               <div className="pt-4 border-t border-gray-200">
                 <Link
-                  to="/blogs/allblogs"
+                  to="/blogs"
                   className="text-green-600 hover:text-green-700 font-medium inline-flex items-center gap-1"
                 >
                   ← Back to all blogs
@@ -672,7 +669,7 @@ const TheUnsungHeroesBlog = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/demystifying-facility-management"
+                      to="/blogs/learn-how"
                       className="text-green-600 group-hover:text-green-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       Demystifying Facility Management
@@ -687,7 +684,7 @@ const TheUnsungHeroesBlog = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/preventive-maintenance"
+                      to="/blogs/repairing-maintenance"
                       className="text-green-600 group-hover:text-green-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       Preventive Maintenance Guide
@@ -702,7 +699,7 @@ const TheUnsungHeroesBlog = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/manufacturing-facility-management"
+                      to="/blogs/manufacturing-industry"
                       className="text-green-600 group-hover:text-green-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       Manufacturing Facility Management
@@ -827,7 +824,7 @@ const TheUnsungHeroesBlog = () => {
                 Contact Our Experts <ArrowRight size={18} />
               </Link>
               <Link
-                to="/blogs/allblogs"
+                to="/blogs"
                 className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition"
               >
                 Browse All Blogs

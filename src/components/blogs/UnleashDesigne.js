@@ -5,7 +5,6 @@ import {
   Calendar,
   User,
   Clock,
-  Shield,
   Sparkles,
   CheckCircle,
   ArrowRight,
@@ -19,11 +18,9 @@ import {
   Home,
   Brush,
   Award,
-  Building,
   Phone,
   BarChart,
   Thermometer,
-  TrendingUp,
 } from "lucide-react";
 import UnleashDesigne from "../../images/UnleashDesigne.jpg";
 import UnleashDesigne1 from "../../images/UnleashDesigne1.jpg";
@@ -55,7 +52,7 @@ const InteriorDesignTrends2024 = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://www.acuitygroups.in/blogs/interior-design-trends-2024",
+    "https://www.acuitygroups.in/blogs/unleash-design",
   );
   const shareTitle = encodeURIComponent(
     "Unleash Your Inner Designer: Top Tips & Trends for 2024 | Acuity Groups",
@@ -90,7 +87,7 @@ const InteriorDesignTrends2024 = () => {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://www.acuitygroups.in/blogs/interior-design-trends-2024",
+      "@id": "https://www.acuitygroups.in/blogs/unleash-design",
     },
   };
 
@@ -139,13 +136,13 @@ const InteriorDesignTrends2024 = () => {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://www.acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Interior Design Trends 2024",
-        item: "https://www.acuitygroups.in/blogs/interior-design-trends-2024",
+        item: "https://www.acuitygroups.in/blogs/unleash-design",
       },
     ],
   };
@@ -178,7 +175,7 @@ const InteriorDesignTrends2024 = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://www.acuitygroups.in/blogs/interior-design-trends-2024"
+          href="https://www.acuitygroups.in/blogs/unleash-design"
         />
         <title>
           Unleash Your Inner Designer: Top Tips & Trends for 2024 | Acuity
@@ -199,7 +196,7 @@ const InteriorDesignTrends2024 = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://www.acuitygroups.in/blogs/interior-design-trends-2024"
+          content="https://www.acuitygroups.in/blogs/unleash-design"
         />
         <meta
           property="og:title"
@@ -312,10 +309,7 @@ const InteriorDesignTrends2024 = () => {
               </li>
               <li className="text-gray-400">/</li>
               <li>
-                <Link
-                  to="/blogs/allblogs"
-                  className="hover:text-orange-600 transition"
-                >
+                <Link to="/blogs" className="hover:text-orange-600 transition">
                   Blogs
                 </Link>
               </li>
@@ -704,7 +698,7 @@ const InteriorDesignTrends2024 = () => {
                 </p>
                 <div className="mt-6 flex flex-wrap gap-4">
                   <Link
-                    to="/contactus"
+                    to="/contact"
                     className="inline-flex items-center gap-2 bg-white text-orange-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
                   >
                     Get a Free Design Consultation <ArrowRight size={18} />
@@ -721,7 +715,7 @@ const InteriorDesignTrends2024 = () => {
               {/* Back to blogs */}
               <div className="pt-4 border-t border-gray-200">
                 <Link
-                  to="/blogs/allblogs"
+                  to="/blogs"
                   className="text-orange-600 hover:text-orange-700 font-medium inline-flex items-center gap-1"
                 >
                   ← Back to all blogs
@@ -770,7 +764,7 @@ const InteriorDesignTrends2024 = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/FromFunction"
+                      to="/blogs/from-function-to-feeling"
                       className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       Integrated Design: From Function to Feeling
@@ -785,7 +779,7 @@ const InteriorDesignTrends2024 = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/sustainable-home-tips"
+                      to="/blogs/the-importance-of-facilities"
                       className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       Sustainable Home Improvement Tips
@@ -800,7 +794,7 @@ const InteriorDesignTrends2024 = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/diy-home-decor"
+                      to="/blogs/learn-how"
                       className="text-orange-600 group-hover:text-orange-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       Easy DIY Home Decor Ideas
@@ -925,7 +919,7 @@ const InteriorDesignTrends2024 = () => {
                 Contact Our Experts <ArrowRight size={18} />
               </Link>
               <Link
-                to="/blogs/allblogs"
+                to="/blogs"
                 className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition"
               >
                 Browse All Blogs

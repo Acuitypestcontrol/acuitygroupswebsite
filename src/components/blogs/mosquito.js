@@ -133,7 +133,7 @@ const MosquitoPrevention = () => {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://www.acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs",
       },
       {
         "@type": "ListItem",
@@ -305,10 +305,7 @@ const MosquitoPrevention = () => {
               </li>
               <li className="text-gray-400">/</li>
               <li>
-                <Link
-                  to="/blogs/allblogs"
-                  className="hover:text-blue-600 transition"
-                >
+                <Link to="/blogs" className="hover:text-blue-600 transition">
                   Blogs
                 </Link>
               </li>
@@ -654,7 +651,7 @@ const MosquitoPrevention = () => {
                 </p>
                 <div className="mt-4">
                   <Link
-                    to="/contactus"
+                    to="/contact"
                     className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition shadow-md"
                   >
                     Get a Free Inspection <ArrowRight size={18} />
@@ -714,7 +711,7 @@ const MosquitoPrevention = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/pest-control-tips"
+                      to="/blogs/why-regular-pest-control"
                       className="text-blue-600 group-hover:text-blue-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       Essential Pest Control Tips for Homes
@@ -729,7 +726,7 @@ const MosquitoPrevention = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/monsoon-health-safety"
+                      to="/blogs/HousekeepingServices"
                       className="text-blue-600 group-hover:text-blue-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       Monsoon Health & Safety Guide
@@ -744,7 +741,7 @@ const MosquitoPrevention = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/HousekeepingServices"
+                      to="/blogs/housekeeping-services"
                       className="text-blue-600 group-hover:text-blue-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       Professional Housekeeping Services

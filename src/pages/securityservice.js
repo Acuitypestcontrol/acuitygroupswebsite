@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import {
   Shield,
   Building2,
-  Home,
-  Factory,
   Users,
   Camera,
   CheckCircle,
@@ -28,7 +27,7 @@ const SecurityServices = () => {
     {
       image: MannedGuarding,
       title: "Manned Guarding Services",
-      desc: "Trained and disciplined security guards for offices, apartments, hospitals, industrial units, educational institutions, and retail spaces.",
+      desc: "Trained security guards for offices, apartments, hospitals, industrial units, educational institutions, and retail spaces.",
       features: ["24/7 Availability", "Quick Response", "Regular Patrols"],
     },
     {
@@ -46,7 +45,7 @@ const SecurityServices = () => {
     {
       image: IndustrialSecurity,
       title: "Industrial Security Services",
-      desc: "Industrial protection including gate management, patrol services, material movement monitoring, and access prevention.",
+      desc: "Industrial security support including gate management, patrol services, material monitoring, and access control.",
       features: [
         "Material Monitoring",
         "Perimeter Security",
@@ -110,12 +109,126 @@ const SecurityServices = () => {
 
   return (
     <div className="bg-white text-gray-800 font-sans overflow-hidden">
+      <Helmet>
+        <title>Security Services in Bangalore | Acuity Groups</title>
+
+        <meta
+          name="description"
+          content="Acuity Groups provides professional security services in Bangalore for offices, apartments, industries, hospitals and commercial properties."
+        />
+
+        <meta
+          name="keywords"
+          content="security services in Bangalore, security guard services Bangalore, corporate security Bangalore, residential security Bangalore, industrial security Bangalore"
+        />
+
+        <meta name="robots" content="index, follow" />
+
+        <link
+          rel="canonical"
+          href="https://www.acuitygroups.in/security-services"
+        />
+
+        <meta
+          property="og:title"
+          content="Security Services in Bangalore | Acuity Groups"
+        />
+        <meta
+          property="og:description"
+          content="Professional security guard services in Bangalore for offices, apartments, industries, hospitals and commercial properties."
+        />
+        <meta
+          property="og:url"
+          content="https://www.acuitygroups.in/security-services"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Acuity Groups" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Security Services in Bangalore | Acuity Groups"
+        />
+        <meta
+          name="twitter:description"
+          content="Trained security guards and professional security services in Bangalore for commercial, residential and industrial properties."
+        />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://www.acuitygroups.in/security-services/#service",
+            name: "Security Services in Bangalore",
+            serviceType: "Security Services",
+            provider: {
+              "@type": "LocalBusiness",
+              name: "Acuity Groups",
+              url: "https://www.acuitygroups.in/",
+              telephone: "+919941229005",
+              email: "info@acuitygroups.in",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress:
+                  "2nd Floor, KVO-08, No-28/2, near Sun Jupiter School JP Nagar 6th Phase, Yelachenahalli",
+                addressLocality: "Bengaluru",
+                addressRegion: "Karnataka",
+                postalCode: "560078",
+                addressCountry: "IN",
+              },
+            },
+            areaServed: "Bangalore",
+            description:
+              "Professional security services in Bangalore for offices, apartments, industries, hospitals, warehouses and commercial properties.",
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Security Services",
+              itemListElement: services.map((service) => ({
+                "@type": "Offer",
+                itemOffered: {
+                  "@type": "Service",
+                  name: service.title,
+                  description: service.desc,
+                },
+              })),
+            },
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.acuitygroups.in/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Services",
+                item: "https://www.acuitygroups.in/services",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "Security Services",
+                item: "https://www.acuitygroups.in/security-services",
+              },
+            ],
+          })}
+        </script>
+      </Helmet>
+
       {/* HERO */}
       <section className="relative min-h-screen flex items-center">
         <div className="absolute inset-0">
           <img
             src={SecurityHero}
-            alt="Security Services"
+            alt="Security Services in Bangalore"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-950/85 to-blue-900/40"></div>
@@ -125,22 +238,22 @@ const SecurityServices = () => {
           <div className="max-w-3xl text-white">
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold mb-6">
               <Shield size={16} className="text-yellow-300" />
-              <span>SECURITY SERVICES</span>
+              <span>SECURITY SERVICES IN BANGALORE</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
-              Professional Security Services
+              Professional Security Services in Bangalore
             </h1>
 
             <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-10">
-              Professional security services for commercial, residential,
-              industrial, and corporate facilities with trained security
-              personnel and reliable safety management solutions.
+              Acuity Groups provides trained security guards and reliable
+              security management solutions for commercial, residential,
+              industrial, and corporate facilities.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition flex items-center gap-2"
               >
                 Get a Quote <ArrowRight size={18} />
@@ -168,9 +281,9 @@ const SecurityServices = () => {
               <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-blue-50 text-blue-900 flex items-center justify-center">
                 <stat.icon size={26} />
               </div>
-              <h3 className="text-3xl font-black text-gray-900">
+              <h2 className="text-3xl font-black text-gray-900">
                 {stat.value}
-              </h3>
+              </h2>
               <p className="text-gray-500 text-sm mt-1">{stat.label}</p>
             </div>
           ))}
@@ -191,13 +304,13 @@ const SecurityServices = () => {
             </h2>
 
             <p className="text-gray-600 text-lg leading-relaxed mb-5">
-              Acuity Groups provides reliable and professional security services
-              designed to protect people, property, assets, and business
+              Acuity Groups provides professional security services in Bangalore
+              designed to protect people, property, assets, and daily business
               operations.
             </p>
 
             <p className="text-gray-600 text-lg leading-relaxed">
-              Our trained security personnel, modern security practices, and
+              Our trained security personnel, supervision systems, and
               customer-focused approach help organizations maintain safe,
               secure, and well-monitored environments.
             </p>
@@ -233,8 +346,8 @@ const SecurityServices = () => {
             </h2>
 
             <p className="text-gray-500 text-lg">
-              Comprehensive security solutions tailored to your specific
-              business, residential, and industrial needs.
+              Comprehensive security solutions tailored to commercial,
+              residential, industrial, and business requirements.
             </p>
           </div>
 
@@ -247,7 +360,7 @@ const SecurityServices = () => {
                 <div className="h-56 overflow-hidden">
                   <img
                     src={service.image}
-                    alt={service.title}
+                    alt={`${service.title} in Bangalore`}
                     className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
                   />
                 </div>
@@ -267,14 +380,17 @@ const SecurityServices = () => {
                         key={idx}
                         className="flex items-center gap-2 text-sm text-gray-700"
                       >
-                        <CheckCircle size={15} className="text-blue-900" />
+                        <CheckCircle
+                          size={15}
+                          className="text-blue-900 flex-shrink-0"
+                        />
                         <span>{feature}</span>
                       </div>
                     ))}
                   </div>
 
                   <Link
-                    to="/contactus"
+                    to="/contact"
                     className="text-blue-900 font-bold inline-flex items-center gap-2"
                   >
                     Enquire Now <ArrowRight size={16} />
@@ -301,7 +417,7 @@ const SecurityServices = () => {
             </p>
 
             <Link
-              to="/contactus"
+              to="/contact"
               className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold inline-flex items-center gap-2"
             >
               Contact Us <ArrowRight size={18} />
@@ -332,12 +448,12 @@ const SecurityServices = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-              Trusted Across Sectors
+              Trusted Security Services Across Sectors
             </h2>
 
             <p className="text-gray-500 text-lg">
               We provide professional security solutions for a wide range of
-              industries and properties.
+              industries and property types.
             </p>
           </div>
 
@@ -360,7 +476,7 @@ const SecurityServices = () => {
       <section className="py-24 px-6 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
-            Need Reliable Security Solutions?
+            Need Reliable Security Services in Bangalore?
           </h2>
 
           <p className="text-gray-600 text-lg mb-10">
@@ -370,14 +486,14 @@ const SecurityServices = () => {
 
           <div className="flex flex-wrap gap-5 justify-center">
             <Link
-              to="/contactus"
+              to="/contact"
               className="bg-blue-900 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-800 transition inline-flex items-center gap-2"
             >
               Get a Quote <ArrowRight size={18} />
             </Link>
 
             <a
-              href="tel:9941229005"
+              href="tel:+919941229005"
               className="border-2 border-blue-900 text-blue-900 px-10 py-4 rounded-full font-bold hover:bg-blue-900 hover:text-white transition inline-flex items-center gap-2"
             >
               <PhoneCall size={18} />

@@ -50,7 +50,7 @@ const SecurityServicesBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://www.acuitygroups.in/blogs/security-services",
+    "https://www.acuitygroups.in/blogs/why-integrated-facility-management",
   );
   const shareTitle = encodeURIComponent(
     "Why Every Business Needs Professional Security Services | Acuity Groups",
@@ -84,7 +84,8 @@ const SecurityServicesBlog = () => {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://www.acuitygroups.in/blogs/security-services",
+      "@id":
+        "https://www.acuitygroups.in/blogs/why-integrated-facility-management",
     },
   };
 
@@ -133,13 +134,13 @@ const SecurityServicesBlog = () => {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://www.acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Security Services",
-        item: "https://www.acuitygroups.in/blogs/security-services",
+        item: "https://www.acuitygroups.in/blogs/why-integrated-facility-management",
       },
     ],
   };
@@ -172,7 +173,7 @@ const SecurityServicesBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://www.acuitygroups.in/blogs/security-services"
+          href="https://www.acuitygroups.in/blogs/why-integrated-facility-management"
         />
         <title>
           Why Every Business Needs Professional Security Services | Acuity
@@ -193,7 +194,7 @@ const SecurityServicesBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://www.acuitygroups.in/blogs/security-services"
+          content="https://www.acuitygroups.in/blogs/why-integrated-facility-management"
         />
         <meta
           property="og:title"
@@ -306,10 +307,7 @@ const SecurityServicesBlog = () => {
               </li>
               <li className="text-gray-400">/</li>
               <li>
-                <Link
-                  to="/blogs/allblogs"
-                  className="hover:text-red-600 transition"
-                >
+                <Link to="/blogs" className="hover:text-red-600 transition">
                   Blogs
                 </Link>
               </li>
@@ -561,7 +559,7 @@ const SecurityServicesBlog = () => {
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link
-                    to="/contactus"
+                    to="/contact"
                     className="inline-flex items-center gap-2 bg-white text-red-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
                   >
                     Get a Free Consultation <ArrowRight size={18} />
@@ -593,7 +591,7 @@ const SecurityServicesBlog = () => {
               {/* Back to blogs */}
               <div className="pt-4 border-t border-gray-200">
                 <Link
-                  to="/blogs/allblogs"
+                  to="/blogs"
                   className="text-red-600 hover:text-red-700 font-medium inline-flex items-center gap-1"
                 >
                   ← Back to all blogs
@@ -642,7 +640,7 @@ const SecurityServicesBlog = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/TheImportanceFacilities"
+                      to="/blogs/the-importance-of-facilities"
                       className="text-red-600 group-hover:text-red-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       The Importance of Facilities Management
@@ -666,7 +664,7 @@ const SecurityServicesBlog = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/manufacturing-facility-management"
+                      to="/blogs/manufacturing-industry"
                       className="text-red-600 group-hover:text-red-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       Manufacturing Facility Management
@@ -697,6 +695,12 @@ const SecurityServicesBlog = () => {
                     className="w-full h-20 object-cover"
                   />
                 </div>
+                <Link
+                  to="/blogs/learn-how"
+                  className="text-red-600 group-hover:text-red-700 group-hover:underline transition text-sm font-medium flex-1"
+                >
+                  Learn How Facility Management Improves Operations
+                </Link>
               </div>
 
               {/* Trust Badge */}
@@ -791,7 +795,7 @@ const SecurityServicesBlog = () => {
                 Contact Our Experts <ArrowRight size={18} />
               </Link>
               <Link
-                to="/blogs/allblogs"
+                to="/blogs"
                 className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition"
               >
                 Browse All Blogs

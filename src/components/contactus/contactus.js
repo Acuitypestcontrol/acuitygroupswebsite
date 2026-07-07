@@ -35,19 +35,32 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Construct WhatsApp message
-    const whatsappNumber = "919941229005"; // without '+' for wa.me
-    const message = `*New Enquiry from Acuity Website*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone}%0A*Service:* ${formData.service || "Not specified"}%0A*Message:* ${formData.message}`;
+    const whatsappNumber = "919941229005";
 
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+    const message = `*New Enquiry from Acuity Website*
 
-    // Open WhatsApp in a new tab
+*Name:* ${formData.name}
+*Email:* ${formData.email}
+*Phone:* ${formData.phone}
+*Service:* ${formData.service || "Not specified"}
+*Message:* ${formData.message}`;
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+
     window.open(whatsappUrl, "_blank");
 
-    // Show success message and clear form
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 5000);
-    setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      service: "",
+      message: "",
+    });
   };
 
   const contactInfo = [
@@ -82,22 +95,49 @@ const ContactUs = () => {
   ];
 
   const servicesList = [
+    "Integrated Facility Management",
     "Security Services",
-    "Housekeeping",
-    "Facility Management",
-    "Pest Control",
+    "Housekeeping Services",
+    "Soft Services",
+    "Pest Management",
     "Repair & Maintenance",
     "Manpower Outsourcing",
   ];
 
-  // JSON-LD for LocalBusiness schema
+  const faqs = [
+    {
+      question: "How quickly can you respond?",
+      answer:
+        "We respond to all inquiries within 24 hours. For urgent requests, please call our helpline.",
+    },
+    {
+      question: "Do you offer free consultations?",
+      answer:
+        "Yes, we provide free site visits and consultations for our facility management and support services.",
+    },
+    {
+      question: "What areas do you serve?",
+      answer:
+        "We serve Bangalore and major business, residential and industrial locations across India.",
+    },
+    {
+      question: "Are your staff background verified?",
+      answer:
+        "Yes, our security, housekeeping and facility staff undergo background verification and training.",
+    },
+  ];
+
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://www.acuitygroups.in/contact/#localbusiness",
     name: "Acuity Groups",
-    image: "https://www.acuitygroups.in/logo.png",
+    url: "https://www.acuitygroups.in/",
+    image: "https://www.acuitygroups.in/og-image.jpg",
     telephone: "+919941229005",
     email: "info@acuitygroups.in",
+    description:
+      "Acuity Groups provides facility management, security, housekeeping, pest management, manpower outsourcing and maintenance services in Bangalore.",
     address: {
       "@type": "PostalAddress",
       streetAddress:
@@ -113,76 +153,98 @@ const ContactUs = () => {
       longitude: "77.5722624",
     },
     openingHours: "Mo-Sa 09:00-18:00",
-    url: "https://www.acuitygroups.in",
-    sameAs: [
-      "https://facebook.com/acuitygroups",
-      "https://twitter.com/acuitygroups",
-      "https://linkedin.com/company/acuitygroups",
-      "https://instagram.com/acuitygroups",
+    areaServed: "Bangalore",
+    priceRange: "$$",
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.acuitygroups.in/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Contact",
+        item: "https://www.acuitygroups.in/contact",
+      },
     ],
   };
 
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://www.acuitygroups.in/contactus" />
-        <title>
-          Contact Us | Acuity Groups – Facility Management Services in Bangalore
-        </title>
+        <title>Contact Acuity Groups | Facility Management Bangalore</title>
+
         <meta
           name="description"
-          content="Get in touch with Acuity Groups for facility management, security, housekeeping, pest control, and maintenance services in Bangalore. Free consultation and quick response."
+          content="Contact Acuity Groups for facility management, security, housekeeping, pest control and manpower services in Bangalore."
         />
+
         <meta
           name="keywords"
-          content="contact Acuity Groups, facility management Bangalore, security services, housekeeping services, pest control, repair maintenance, manpower outsourcing"
+          content="contact Acuity Groups, facility management Bangalore, security services Bangalore, housekeeping services Bangalore, pest control Bangalore"
         />
+
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Acuity Groups" />
 
-        {/* Open Graph / Facebook */}
+        <link rel="canonical" href="https://www.acuitygroups.in/contact" />
+
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://www.acuitygroups.in/contactus"
-        />
+        <meta property="og:site_name" content="Acuity Groups" />
+        <meta property="og:url" content="https://www.acuitygroups.in/contact" />
         <meta
           property="og:title"
-          content="Contact Us | Acuity Groups – Facility Management Services"
+          content="Contact Acuity Groups | Facility Management Bangalore"
         />
         <meta
           property="og:description"
-          content="Contact Acuity Groups for professional facility management, security, housekeeping, and pest control services in Bangalore. Get a free quote today."
+          content="Get in touch with Acuity Groups for facility management, security, housekeeping, pest control and manpower services in Bangalore."
         />
-        <meta
-          property="og:image"
-          content="https://www.acuitygroups.in/static/media/contact-og.jpg"
-        />
-        <meta property="og:site_name" content="Acuity Groups" />
+        <meta property="og:image" content="https://www.acuitygroups.in/og-image.jpg" />
 
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Contact Us | Acuity Groups – Facility Management Services"
+          content="Contact Acuity Groups | Facility Management Bangalore"
         />
         <meta
           name="twitter:description"
-          content="Contact Acuity Groups for professional facility management, security, housekeeping, and pest control services in Bangalore."
+          content="Contact Acuity Groups for facility management and support services in Bangalore."
         />
-        <meta
-          name="twitter:image"
-          content="https://www.acuitygroups.in/static/media/contact-og.jpg"
-        />
-      </Helmet>
+        <meta name="twitter:image" content="https://www.acuitygroups.in/og-image.jpg" />
 
-      {/* JSON-LD for LocalBusiness */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(localBusinessSchema),
-        }}
-      />
+        <script type="application/ld+json">
+          {JSON.stringify(localBusinessSchema)}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+      </Helmet>
 
       <div className="bg-white text-gray-800 overflow-hidden font-['Poppins',system-ui,sans-serif]">
         {/* HERO SECTION */}
@@ -197,15 +259,15 @@ const ContactUs = () => {
               <Phone size={14} />
               <span>CONTACT US</span>
             </div>
+
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6">
-              Get In{" "}
-              <span className="bg-gradient-to-r from-blue-300 to-blue-100 bg-clip-text text-transparent">
-                Touch
-              </span>
+              Contact Acuity Groups
             </h1>
+
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Have questions or need a quote? Our team is ready to assist you
-              with professional facility management and security solutions.
+              Get in touch for facility management, security, housekeeping,
+              pest management, manpower outsourcing and maintenance services in
+              Bangalore.
             </p>
           </div>
         </section>
@@ -222,23 +284,21 @@ const ContactUs = () => {
                   <div className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <info.icon size={28} className="text-blue-800" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+
+                  <h2 className="text-xl font-bold text-gray-900 mb-3">
                     {info.title}
-                  </h3>
+                  </h2>
+
                   {info.details.map((detail, i) => (
-                    <p
-                      key={i}
-                      className="text-gray-600 text-sm leading-relaxed"
-                    >
+                    <p key={i} className="text-gray-600 text-sm leading-relaxed">
                       {detail}
                     </p>
                   ))}
+
                   {info.action && (
                     <a
                       href={info.action}
-                      target={
-                        info.title === "Office Address" ? "_blank" : "_self"
-                      }
+                      target={info.title === "Office Address" ? "_blank" : "_self"}
                       rel="noopener noreferrer"
                       className="inline-block mt-4 text-blue-800 text-sm font-medium hover:underline"
                     >
@@ -263,15 +323,13 @@ const ContactUs = () => {
                 <Send size={14} />
                 <span>SEND US A MESSAGE</span>
               </div>
+
               <h2 className="text-4xl md:text-5xl font-black text-gray-900">
-                We'd Love to{" "}
-                <span className="bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
-                  Hear From You
-                </span>
+                Request a Service Quote
               </h2>
+
               <p className="text-gray-500 max-w-2xl mx-auto mt-4">
-                Fill out the form below and we'll get back to you within 24
-                hours.
+                Fill out the form below and our team will get back to you.
               </p>
             </div>
 
@@ -283,12 +341,14 @@ const ContactUs = () => {
                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <CheckCircle size={32} className="text-green-600" />
                     </div>
+
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">
                       Thank You!
                     </h3>
+
                     <p className="text-gray-600">
-                      Your message has been sent successfully. We'll contact you
-                      soon.
+                      Your message has been sent successfully. We will contact
+                      you soon.
                     </p>
                   </div>
                 ) : (
@@ -307,6 +367,7 @@ const ContactUs = () => {
                         placeholder="Enter your name"
                       />
                     </div>
+
                     <div>
                       <label className="block text-gray-700 font-medium mb-2">
                         Email Address *
@@ -321,6 +382,7 @@ const ContactUs = () => {
                         placeholder="Enter your email"
                       />
                     </div>
+
                     <div>
                       <label className="block text-gray-700 font-medium mb-2">
                         Phone Number *
@@ -335,6 +397,7 @@ const ContactUs = () => {
                         placeholder="Enter your phone number"
                       />
                     </div>
+
                     <div>
                       <label className="block text-gray-700 font-medium mb-2">
                         Service Interested In
@@ -353,6 +416,7 @@ const ContactUs = () => {
                         ))}
                       </select>
                     </div>
+
                     <div>
                       <label className="block text-gray-700 font-medium mb-2">
                         Message *
@@ -367,6 +431,7 @@ const ContactUs = () => {
                         placeholder="Tell us about your requirements..."
                       ></textarea>
                     </div>
+
                     <button
                       type="submit"
                       className="w-full bg-blue-800 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition shadow-md hover:shadow-lg flex items-center justify-center gap-2"
@@ -377,7 +442,7 @@ const ContactUs = () => {
                 )}
               </div>
 
-              {/* Google Map - Corrected to show actual office location */}
+              {/* Google Map */}
               <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-[500px]">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.221768514095!2d77.5696875!3d12.8978823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15812f498439%3A0x50b67493a003f061!2sAcuity%20Pest%20Control%20-%20Best%20Pest%20Control%20Services!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
@@ -394,113 +459,84 @@ const ContactUs = () => {
           </div>
         </section>
 
-        {/* SOCIAL MEDIA & CTA */}
+        {/* SOCIAL MEDIA */}
         <section className="py-20 px-6 md:px-12">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">
               Connect With Us on Social Media
             </h2>
+
             <p className="text-gray-600 mb-8">
-              Follow us for updates, service announcements, and industry
+              Follow us for updates, service announcements and industry
               insights.
             </p>
+
             <div className="flex justify-center gap-6">
               <a
                 href="https://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Acuity Groups Facebook"
                 className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-blue-800 hover:text-white transition group"
               >
-                <Facebook
-                  size={20}
-                  className="text-blue-800 group-hover:text-white"
-                />
+                <Facebook size={20} className="text-blue-800 group-hover:text-white" />
               </a>
+
               <a
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Acuity Groups Twitter"
                 className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-blue-800 hover:text-white transition group"
               >
-                <Twitter
-                  size={20}
-                  className="text-blue-800 group-hover:text-white"
-                />
+                <Twitter size={20} className="text-blue-800 group-hover:text-white" />
               </a>
+
               <a
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Acuity Groups LinkedIn"
                 className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-blue-800 hover:text-white transition group"
               >
-                <Linkedin
-                  size={20}
-                  className="text-blue-800 group-hover:text-white"
-                />
+                <Linkedin size={20} className="text-blue-800 group-hover:text-white" />
               </a>
+
               <a
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Acuity Groups Instagram"
                 className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-blue-800 hover:text-white transition group"
               >
-                <Instagram
-                  size={20}
-                  className="text-blue-800 group-hover:text-white"
-                />
+                <Instagram size={20} className="text-blue-800 group-hover:text-white" />
               </a>
             </div>
           </div>
         </section>
 
-        {/* FAQ / ADDITIONAL INFO */}
+        {/* FAQ */}
         <section className="py-20 px-6 md:px-12 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-black text-gray-900">
-                Frequently Asked{" "}
-                <span className="bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
-                  Questions
-                </span>
+                Frequently Asked Questions
               </h2>
             </div>
+
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  How quickly can you respond?
-                </h3>
-                <p className="text-gray-600">
-                  We respond to all inquiries within 24 hours. For urgent
-                  requests, please call our helpline.
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Do you offer free consultations?
-                </h3>
-                <p className="text-gray-600">
-                  Yes, we provide free site visits and consultations for all our
-                  services.
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  What areas do you serve?
-                </h3>
-                <p className="text-gray-600">
-                  We serve Bangalore, Chennai, Hyderabad, Mumbai, Delhi NCR, and
-                  other major cities across India.
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition">
-                <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  Are your staff background verified?
-                </h3>
-                <p className="text-gray-600">
-                  Yes, all our security and housekeeping staff undergo thorough
-                  background verification and training.
-                </p>
-              </div>
+              {faqs.map((faq, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition"
+                >
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {faq.question}
+                  </h3>
+
+                  <p className="text-gray-600">{faq.answer}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

@@ -23,38 +23,38 @@ export default function About() {
     {
       icon: Sparkles,
       title: "Housekeeping & Soft Services",
-      desc: "Professional cleaning, housekeeping, and facility upkeep.",
-      path: "/housekeeping",
+      desc: "Professional cleaning, housekeeping and facility upkeep services.",
+      path: "/housekeeping-services",
     },
     {
       icon: Shield,
       title: "Security Services",
-      desc: "Physical & electronic security, manned guarding, surveillance.",
+      desc: "Manned guarding, security supervision and safety support.",
       path: "/security-services",
     },
     {
       icon: Building,
-      title: "Technical Services",
-      desc: "Electrical, HVAC, plumbing, and technical maintenance.",
-      path: "/technical-maintenance",
+      title: "Integrated Facility Management",
+      desc: "Complete facility operations, support and maintenance solutions.",
+      path: "/integrated-facility-management",
     },
     {
       icon: Wrench,
       title: "Repair & Maintenance",
-      desc: "Preventive & corrective maintenance for all facilities.",
-      path: "/facility-management",
+      desc: "Preventive and corrective maintenance for properties and facilities.",
+      path: "/repair-maintenance",
     },
     {
       icon: Bug,
-      title: "Pest Control Services",
-      desc: "Eco‑friendly pest management for healthy environments.",
+      title: "Pest Management",
+      desc: "Safe pest management solutions for healthy environments.",
       path: "/pest-management",
     },
     {
       icon: Users,
-      title: "Manpower Management",
-      desc: "Skilled workforce deployment & HR support.",
-      path: "/manpower",
+      title: "Manpower Outsourcing",
+      desc: "Skilled workforce deployment and manpower support services.",
+      path: "/manpower-outsourcing",
     },
   ];
 
@@ -62,7 +62,7 @@ export default function About() {
     "Clean and hygienic environments",
     "Safe and secure premises",
     "Efficient maintenance solutions",
-    "Environment‑friendly practices",
+    "Environment-friendly practices",
     "High operational standards",
     "Customer satisfaction driven",
   ];
@@ -84,33 +84,168 @@ export default function About() {
     "Quick response & service support",
   ];
 
+  const serviceAreas = [
+    {
+      name: "Whitefield",
+      path: "/integrated-facility-management-whitefield",
+    },
+    {
+      name: "Electronic City",
+      path: "/integrated-facility-management-electronic-city",
+    },
+    {
+      name: "Koramangala",
+      path: "/integrated-facility-management-koramangala",
+    },
+    {
+      name: "HSR Layout",
+      path: "/integrated-facility-management-hsr-layout",
+    },
+    {
+      name: "JP Nagar",
+      path: "/integrated-facility-management-jp-nagar",
+    },
+    {
+      name: "Peenya",
+      path: "/integrated-facility-management-peenya",
+    },
+    {
+      name: "Hebbal",
+      path: "/integrated-facility-management-hebbal",
+    },
+    {
+      name: "BEML Layout",
+      path: "/integrated-facility-management-beml",
+    },
+    {
+      name: "Dabaspet",
+      path: "/integrated-facility-management-dabaspet",
+    },
+    {
+      name: "Doddaballapur",
+      path: "/integrated-facility-management-doddaballapur",
+    },
+    {
+      name: "Attibele",
+      path: "/integrated-facility-management-attibele",
+    },
+    {
+      name: "Kumbalgodu",
+      path: "/integrated-facility-management-kumbalgodu",
+    },
+  ];
+
   return (
     <>
       <Helmet>
-        <link
-          rel="canonical"
-          key="canonical"
-          href="https://www.acuitygroups.in/aboutus"
-        />
-        <title>
-          About Us | Acuity Groups – Facility Management & Security Services
-        </title>
+        <title>About Acuity Groups | Facility Management Bangalore</title>
+
         <meta
           name="description"
-          content="Bangalore's trusted integrated facility management, security, pest control, & manpower outsourcing company for 19+ years."
+          content="Learn about Acuity Groups, a facility management company in Bangalore offering security, housekeeping, pest control and manpower services."
         />
+
+        <meta
+          name="keywords"
+          content="about Acuity Groups, facility management company Bangalore, security services Bangalore, housekeeping services Bangalore, manpower outsourcing Bangalore"
+        />
+
+        <meta name="robots" content="index, follow" />
+
+        <link rel="canonical" href="https://www.acuitygroups.in/about" />
+
+        <meta
+          property="og:title"
+          content="About Acuity Groups | Facility Management Bangalore"
+        />
+        <meta
+          property="og:description"
+          content="Acuity Groups provides facility management, security, housekeeping, pest management and manpower services in Bangalore."
+        />
+        <meta property="og:url" content="https://www.acuitygroups.in/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Acuity Groups" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="About Acuity Groups | Facility Management Bangalore"
+        />
+        <meta
+          name="twitter:description"
+          content="Know more about Acuity Groups and our facility management services in Bangalore."
+        />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            "@id": "https://www.acuitygroups.in/about/#aboutpage",
+            name: "About Acuity Groups",
+            url: "https://www.acuitygroups.in/about",
+            description:
+              "Acuity Groups is a facility management company in Bangalore offering security, housekeeping, pest management, manpower outsourcing and maintenance services.",
+            mainEntity: {
+              "@type": "LocalBusiness",
+              name: "Acuity Groups",
+              url: "https://www.acuitygroups.in/",
+              telephone: "+919941229005",
+              email: "info@acuitygroups.in",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress:
+                  "2nd Floor, KVO-08, No-28/2, near Sun Jupiter School JP Nagar 6th Phase, Yelachenahalli",
+                addressLocality: "Bengaluru",
+                addressRegion: "Karnataka",
+                postalCode: "560078",
+                addressCountry: "IN",
+              },
+              areaServed: "Bangalore",
+              serviceType: [
+                "Integrated Facility Management",
+                "Security Services",
+                "Housekeeping Services",
+                "Pest Management",
+                "Manpower Outsourcing",
+                "Repair and Maintenance",
+              ],
+            },
+          })}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.acuitygroups.in/",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "About",
+                item: "https://www.acuitygroups.in/about",
+              },
+            ],
+          })}
+        </script>
       </Helmet>
 
       <div className="bg-white text-black overflow-hidden font-['Poppins',system-ui,sans-serif]">
-        {/* HERO SECTION - BANNER RETAINED */}
+        {/* HERO SECTION */}
         <section className="relative w-full h-[50vh] md:h-[60vh] min-h-[550px] overflow-hidden">
           <div className="absolute inset-0 w-full h-full">
             <img
               src={AboutBanner}
-              alt="Acuity Integrated Facility Management"
+              alt="Acuity Groups Facility Management Company in Bangalore"
               className="w-full h-full object-cover object-center"
             />
           </div>
+
           <div className="absolute inset-0 bg-black/50" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent" />
@@ -119,17 +254,19 @@ export default function About() {
             <div className="max-w-4xl">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/30 px-5 py-2 rounded-full text-amber-400 tracking-[5px] text-sm font-thin mb-6">
                 <Building size={14} />
-                <span>ACUITY INTEGRATED</span>
+                <span>ACUITY GROUPS</span>
               </div>
+
               <h1 className="text-5xl md:text-7xl font-black text-white mb-6">
                 About{" "}
                 <span className="bg-gradient-to-r from-amber-400 to-amber-300 bg-clip-text text-transparent">
-                  Us
+                  Acuity Groups
                 </span>
               </h1>
+
               <p className="text-gray-200 text-lg md:text-xl max-w-2xl mx-auto">
-                Leading Facility Management, Security, Housekeeping &
-                Maintenance Services Company in Bangalore
+                Facility Management, Security, Housekeeping, Pest Management &
+                Manpower Services Company in Bangalore
               </p>
             </div>
           </div>
@@ -142,33 +279,32 @@ export default function About() {
               <p className="text-black uppercase tracking-[5px] mb-4 font-thin">
                 Who We Are
               </p>
+
               <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-                India's Leading{" "}
+                Bangalore’s Trusted{" "}
                 <span className="text-blue-900">
                   Integrated Facility Management
                 </span>{" "}
                 Provider
               </h2>
+
               <p className="text-gray-600 leading-relaxed mb-4 text-lg">
-                Acuity Integrated Facility Management is a professionally
-                managed organization delivering comprehensive Property
-                Maintenance Services across corporate, industrial, and
-                residential sectors. Established with a vision to provide
-                reliable and efficient solutions, Acuity specializes in
-                Integrated Corporate Support Services, ensuring high standards
-                in housekeeping, security, technical operations, and
-                maintenance.
+                Acuity Groups is a professionally managed facility management
+                company delivering reliable property maintenance and corporate
+                support services across commercial, industrial and residential
+                sectors.
               </p>
+
               <p className="text-gray-500 leading-relaxed text-lg">
-                We are a team of trained and dedicated professionals focused on
-                delivering customized facility solutions based on client
-                requirements. Our goal is to build long‑term relationships by
-                consistently improving service quality and exceeding client
-                expectations.
+                We provide integrated facility management, security services,
+                housekeeping, pest management, repair maintenance and manpower
+                outsourcing solutions based on client requirements and property
+                operations.
               </p>
+
               <div className="mt-8 grid grid-cols-2 gap-4">
                 {strengths.map((strength, idx) => (
-                  <div key={idx} className="flex items-center gap-2 ">
+                  <div key={idx} className="flex items-center gap-2">
                     <CheckCircle size={18} className="text-blue-900" />
                     <span className="text-gray-700 text-sm">{strength}</span>
                   </div>
@@ -180,12 +316,12 @@ export default function About() {
               <InfoCard
                 icon={Shield}
                 title="Trusted Services"
-                desc="ISO certified & industry approved"
+                desc="Reliable facility support"
               />
               <InfoCard
                 icon={Users}
                 title="Skilled Workforce"
-                desc="Trained & background verified"
+                desc="Trained & verified staff"
               />
               <InfoCard
                 icon={Award}
@@ -195,13 +331,13 @@ export default function About() {
               <InfoCard
                 icon={Building}
                 title="Corporate Expertise"
-                desc="Serving top businesses"
+                desc="Serving business properties"
               />
             </div>
           </div>
         </section>
 
-        {/* Statistics Section */}
+        {/* STATISTICS */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
@@ -209,7 +345,7 @@ export default function About() {
                 <div className="flex justify-center mb-3">
                   <Trophy className="w-10 h-10 text-blue-600" />
                 </div>
-                <h3 className="text-4xl font-bold text-blue-900 mb-2">19+</h3>
+                <h2 className="text-4xl font-bold text-blue-900 mb-2">19+</h2>
                 <p className="text-gray-700 font-medium">
                   Years of Industry Experience
                 </p>
@@ -219,9 +355,9 @@ export default function About() {
                 <div className="flex justify-center mb-3">
                   <Users className="w-10 h-10 text-yellow-600" />
                 </div>
-                <h3 className="text-4xl font-bold text-yellow-600 mb-2">
+                <h2 className="text-4xl font-bold text-yellow-600 mb-2">
                   100+
-                </h3>
+                </h2>
                 <p className="text-gray-700 font-medium">
                   Trained Professionals
                 </p>
@@ -231,7 +367,7 @@ export default function About() {
                 <div className="flex justify-center mb-3">
                   <Star className="w-10 h-10 text-green-600" />
                 </div>
-                <h3 className="text-4xl font-bold text-green-600 mb-2">500+</h3>
+                <h2 className="text-4xl font-bold text-green-600 mb-2">500+</h2>
                 <p className="text-gray-700 font-medium">Happy Clients</p>
               </div>
 
@@ -239,69 +375,14 @@ export default function About() {
                 <div className="flex justify-center mb-3">
                   <Clock className="w-10 h-10 text-red-600" />
                 </div>
-                <h3 className="text-4xl font-bold text-red-600 mb-2">24/7</h3>
+                <h2 className="text-4xl font-bold text-red-600 mb-2">24/7</h2>
                 <p className="text-gray-700 font-medium">Service Support</p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* LEADERSHIP SECTION */}
-        {/* <section className="py-20 px-6 md:px-12">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-2 rounded-full text-blue-900 tracking-[5px] text-sm font-thin mb-5">
-                <Users size={14} />
-                <span>OUR LEADERSHIP</span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900">
-                Led by{" "}
-                <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text text-transparent">
-                  Industry Expertise
-                </span>
-              </h2>
-              <p className="text-gray-500 max-w-2xl mx-auto mt-4">
-                19+ years of experience driving excellence in facility
-                management
-              </p>
-            </div>
-            <div className="max-w-4xl mx-auto bg-white rounded-3xl p-8 md:p-12 border border-gray-100 shadow-sm">
-              <div className="flex flex-col md:flex-row gap-8 items-center">
-                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#B8D34C] to-blue-900 flex items-center justify-center text-white text-4xl font-semibold shadow-lg">
-                  RM
-                </div>
-                <div className="flex-1 text-center md:text-left">
-                  <h3 className="text-2xl font-semibold text-gray-900">
-                    Mr. Rajeshekar M N
-                  </h3>
-                  <p className="text-black font-thin mb-3">
-                    Founder & Managing Director
-                  </p>
-                  <p className="text-gray-600 leading-relaxed">
-                    With over{" "}
-                    <strong className="text-blue-900">
-                      19 years of rich industry experience
-                    </strong>{" "}
-                    in facility management and operations, Mr. Rajeshekar brings
-                    strong leadership, operational excellence, and a commitment
-                    to quality. Under his guidance, Acuity has developed deep
-                    expertise in Integrated Facility Management, Security
-                    Services (Physical & Electronic), Housekeeping & Soft
-                    Services, Technical & Maintenance Services, and Manpower
-                    Management & Deployment.
-                  </p>
-                  <p className="text-gray-600 leading-relaxed mt-3">
-                    His commitment to quality, discipline, and customer
-                    satisfaction drives the organization towards continuous
-                    growth and excellence.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
-
-        {/* Mission & Vision */}
+        {/* MISSION & VISION */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
@@ -317,26 +398,25 @@ export default function About() {
               <div className="bg-blue-900 text-white p-10 rounded-3xl shadow-xl">
                 <h3 className="text-3xl font-bold mb-5">Our Mission</h3>
                 <p className="text-blue-100 leading-8">
-                  To consistently deliver superior facility management services
-                  by integrating skilled manpower, advanced systems, and best
-                  industry practices, ensuring measurable value creation for our
-                  clients.
+                  To deliver dependable facility management services by
+                  combining skilled manpower, quality systems and best industry
+                  practices for measurable value creation.
                 </p>
               </div>
 
               <div className="bg-yellow-500 text-black p-10 rounded-3xl shadow-xl">
                 <h3 className="text-3xl font-bold mb-5">Our Vision</h3>
                 <p className="leading-8">
-                  We act as a trusted partner, enabling organizations to focus
-                  on their core business while we seamlessly manage their
-                  facility operations with precision and accountability.
+                  To be a trusted facility management partner that helps
+                  organizations focus on their core business while we manage
+                  their daily facility operations.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Core Values */}
+        {/* CORE VALUES */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
@@ -355,41 +435,26 @@ export default function About() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
-                <div className="text-5xl mb-4">🤝</div>
-                <h3 className="text-xl font-bold mb-3">Integrity</h3>
-                <p className="text-gray-600">
-                  We operate with honesty, transparency, and accountability in
-                  everything we do.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
-                <div className="text-5xl mb-4">⭐</div>
-                <h3 className="text-xl font-bold mb-3">Excellence</h3>
-                <p className="text-gray-600">
-                  We continuously strive to deliver superior quality services
-                  and exceed expectations.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
-                <div className="text-5xl mb-4">🛡️</div>
-                <h3 className="text-xl font-bold mb-3">Safety</h3>
-                <p className="text-gray-600">
-                  Maintaining safe environments is at the heart of our service
-                  commitment.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
-                <div className="text-5xl mb-4">❤️</div>
-                <h3 className="text-xl font-bold mb-3">Customer Focus</h3>
-                <p className="text-gray-600">
-                  We build lasting partnerships by understanding and fulfilling
-                  client requirements.
-                </p>
-              </div>
+              <ValueCard
+                icon="🤝"
+                title="Integrity"
+                desc="We operate with honesty, transparency and accountability in everything we do."
+              />
+              <ValueCard
+                icon="⭐"
+                title="Excellence"
+                desc="We continuously strive to deliver superior service quality and exceed expectations."
+              />
+              <ValueCard
+                icon="🛡️"
+                title="Safety"
+                desc="Maintaining safe environments is at the heart of our service commitment."
+              />
+              <ValueCard
+                icon="❤️"
+                title="Customer Focus"
+                desc="We build lasting partnerships by understanding and fulfilling client requirements."
+              />
             </div>
           </div>
         </section>
@@ -401,12 +466,14 @@ export default function About() {
               <Building size={14} />
               <span>WHAT WE OFFER</span>
             </div>
+
             <h2 className="text-4xl md:text-5xl font-black text-gray-900">
               Our{" "}
               <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text">
                 Services
               </span>
             </h2>
+
             <p className="text-gray-500 max-w-2xl mx-auto mt-4">
               Comprehensive facility management solutions tailored to your needs
             </p>
@@ -421,10 +488,13 @@ export default function About() {
                 <div className="w-14 h-14 rounded-xl bg-blue-10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
                   <service.icon size={28} className="text-blue-900" />
                 </div>
+
                 <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-900 transition-colors">
                   {service.title}
                 </h3>
+
                 <p className="text-gray-600 leading-relaxed">{service.desc}</p>
+
                 <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
                   <Link
                     to={service.path}
@@ -448,11 +518,13 @@ export default function About() {
                   Commitment
                 </span>
               </h2>
+
               <p className="text-gray-500 max-w-2xl mx-auto mt-4">
-                Driven by customer satisfaction and environment‑friendly
+                Driven by customer satisfaction and environment-friendly
                 practices
               </p>
             </div>
+
             <div className="grid md:grid-cols-3 gap-6">
               {commitments.map((item, idx) => (
                 <div
@@ -475,6 +547,7 @@ export default function About() {
                 <Building size={14} />
                 <span>INDUSTRIES WE SERVE</span>
               </div>
+
               <h2 className="text-4xl md:text-5xl font-black text-gray-900">
                 Trusted Across{" "}
                 <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text text-transparent">
@@ -496,7 +569,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA SECTION */}
         <section className="py-20 bg-gradient-to-r from-blue-950 to-blue-800">
           <div className="max-w-5xl mx-auto text-center px-4">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -505,20 +578,20 @@ export default function About() {
 
             <p className="text-blue-100 text-lg leading-8 max-w-3xl mx-auto mb-10">
               Partner with Acuity Groups for professional facility management,
-              security services, housekeeping, pest management, maintenance, and
-              manpower outsourcing solutions tailored to your needs.
+              security services, housekeeping, pest management, maintenance and
+              manpower outsourcing solutions.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <a
-                href="/contactus"
+              <Link
+                to="/contact"
                 className="bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold transition-all duration-300"
               >
                 Get Free Consultation
-              </a>
+              </Link>
 
               <a
-                href="tel:9941229005"
+                href="tel:+919941229005"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-full font-semibold transition-all duration-300"
               >
                 Call Now
@@ -527,41 +600,41 @@ export default function About() {
           </div>
         </section>
 
+        {/* SERVICE AREAS */}
         <section className="py-10 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6">
-            {/* Heading */}
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-blue-900 mb-4">
                 Facility Management Services Across Bangalore
               </h2>
+
               <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-                We provide professional facility management solutions across all
+                We provide professional facility management solutions across
                 major areas of Bangalore.
               </p>
             </div>
 
-            {/* Service Cards (optional – adds more visuals) */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
               {[
                 {
                   title: "Commercial Cleaning",
                   icon: "🧹",
-                  desc: "Office, mall, bank cleaning",
+                  desc: "Office, mall and commercial cleaning",
                 },
                 {
                   title: "Home Services",
                   icon: "🏠",
-                  desc: "Deep cleaning, mopping, sweeping",
+                  desc: "Deep cleaning, mopping and sweeping",
                 },
                 {
                   title: "Hotel Housekeeping",
                   icon: "🏨",
-                  desc: "Room & lobby maintenance",
+                  desc: "Room, lobby and hygiene maintenance",
                 },
                 {
                   title: "Facility Maintenance",
                   icon: "🔧",
-                  desc: "Electrical, plumbing, repairs",
+                  desc: "Electrical, plumbing and repair support",
                 },
               ].map((service, idx) => (
                 <div
@@ -577,56 +650,34 @@ export default function About() {
               ))}
             </div>
 
-            {/* Bangalore Areas Grid */}
             <div className="bg-white rounded-2xl p-8 shadow-md">
               <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
-                📍 Service Areas in Bangalore
+                Service Areas in Bangalore
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-                {[
-                  "Whitefield",
-                  "Electronic City",
-                  "Marathahalli",
-                  "HSR Layout",
-                  "Koramangala",
-                  "Indiranagar",
-                  "Jayanagar",
-                  "JP Nagar",
-                  "BTM Layout",
-                  "Bannerghatta Road",
-                  "Yelahanka",
-                  "Hebbal",
-                  "Rajajinagar",
-                  "Malleshwaram",
-                  "KR Puram",
-                  "Bellandur",
-                  "Sarjapur Road",
-                  "Banashankari",
-                  "Nagarbhavi",
-                  "RT Nagar",
-                ].map((area, index) => (
-                  <a
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {serviceAreas.map((area, index) => (
+                  <Link
                     key={index}
-                    href={`/facility-management-${area.toLowerCase().replace(/\s+/g, "-")}`}
-                    className="flex items-center gap-2 text-gray-700 hover:text-blue-700 hover:bg-blue-50 p-2 rounded-lg transition-all group"
+                    to={area.path}
+                    className="flex items-center gap-2 text-gray-700 hover:text-blue-700 hover:bg-blue-50 p-4 rounded-lg border border-gray-100 transition-all group"
                   >
                     <span className="text-yellow-500 group-hover:translate-x-1 transition">
                       📍
                     </span>
-                    {area}
-                  </a>
+                    Integrated Facility Management in {area.name}
+                  </Link>
                 ))}
               </div>
             </div>
 
-            {/* CTA Button */}
             <div className="text-center mt-14">
-              <a
-                href="/pages/servicepage"
+              <Link
+                to="/services"
                 className="inline-flex items-center gap-3 bg-blue-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl"
               >
                 View All Services in Bangalore →
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -646,7 +697,7 @@ function InfoCard({ icon: Icon, title, desc }) {
   return (
     <div className="bg-gray-50 p-5 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow hover:border-blue-200">
       <div className="flex items-center gap-4">
-        <div className="w-10 h-10 rounded-xl  flex items-center justify-center">
+        <div className="w-10 h-10 rounded-xl flex items-center justify-center">
           <Icon size={20} className="text-blue-900" />
         </div>
         <div>
@@ -654,6 +705,16 @@ function InfoCard({ icon: Icon, title, desc }) {
           <p className="text-gray-500 text-sm">{desc}</p>
         </div>
       </div>
+    </div>
+  );
+}
+
+function ValueCard({ icon, title, desc }) {
+  return (
+    <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
+      <div className="text-5xl mb-4">{icon}</div>
+      <h3 className="text-xl font-bold mb-3">{title}</h3>
+      <p className="text-gray-600">{desc}</p>
     </div>
   );
 }

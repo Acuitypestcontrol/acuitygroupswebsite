@@ -29,7 +29,6 @@ const Navbar = () => {
     };
   }, [isOpen]);
 
-  // Main nav link style (Home, About, Blogs, Contact)
   const navLinkClass = ({ isActive }) =>
     `relative text-[20px] font-semibold transition-all duration-300 ${
       isActive
@@ -38,20 +37,21 @@ const Navbar = () => {
     }`;
 
   const servicesItems = [
-    { name: "Manpower Outsourcing", path: "/manpower" },
-    { name: "Housekeeping", path: "/housekeeping" },
-    { name: "Pest Management", path: "/pest" },
-    { name: "Softservice", path: "/softservices" },
-
-    // { name: "Facility Management", path: "/facilitymanagment1" },
-    { name: "Security Services", path: "/securityservice" },
-
-    { name: "Repairing & Maintenance", path: "/repair" },
+    {
+      name: "Integrated Facility Management",
+      path: "/integrated-facility-management",
+    },
+    { name: "Security Services", path: "/security-services" },
+    { name: "Housekeeping Services", path: "/housekeeping-services" },
+    { name: "Soft Services", path: "/soft-services" },
+    { name: "Pest Management", path: "/pest-management" },
+    { name: "Manpower Outsourcing", path: "/manpower-outsourcing" },
+    { name: "Repair & Maintenance", path: "/repair-maintenance" },
   ];
 
   const careerItems = [
-    { name: "Pest Control Careers", path: "/career/pestcareer" },
-    { name: "Acuity Groups Careers", path: "/career/acuitygroups" },
+    { name: "Pest Control Careers", path: "/career/pest-control" },
+    { name: "Acuity Groups Careers", path: "/career/acuity-groups" },
   ];
 
   return (
@@ -62,12 +62,13 @@ const Navbar = () => {
           <div className="max-w-7xl mx-auto px-6 h-10 flex items-center justify-between text-sm">
             <div className="flex items-center gap-6 text-gray-600">
               <a
-                href="tel:+9941229005"
+                href="tel:+919941229005"
                 className="flex items-center gap-2 hover:text-yellow-500 transition-colors text-black font-semibold"
               >
                 <Phone size={14} />
-                <span>9941229005 / 08041229005</span>
+                <span>+91 99412 29005 / 080 4122 9005</span>
               </a>
+
               <a
                 href="mailto:info@acuitygroups.in"
                 className="flex items-center gap-2 hover:text-yellow-500 transition-colors text-black font-semibold"
@@ -76,7 +77,8 @@ const Navbar = () => {
                 <span>info@acuitygroups.in</span>
               </a>
             </div>
-            <div className="flex items-center gap-2  text-black font-semibold">
+
+            <div className="flex items-center gap-2 text-black font-semibold">
               <MapPin size={14} />
               <span>
                 2nd Floor, KVO-08, No-28/2, near Sun Jupiter School JP Nagar 6th
@@ -90,7 +92,7 @@ const Navbar = () => {
         <div
           className={`transition-all duration-500 ${
             scrolled
-              ? "hidden lg:block bg-white/10 backdrop-blur-sm "
+              ? "hidden lg:block bg-white/10 backdrop-blur-sm"
               : "bg-transparent"
           }`}
         >
@@ -101,7 +103,7 @@ const Navbar = () => {
                 <img
                   src={Logo}
                   alt="Acuity Groups Logo"
-                  className="h-24 w-auto object-contain lg:h-40 "
+                  className="h-24 w-auto object-contain lg:h-40"
                 />
               </Link>
 
@@ -110,7 +112,8 @@ const Navbar = () => {
                 <NavLink to="/" className={navLinkClass} end>
                   Home
                 </NavLink>
-                <NavLink to="/aboutus" className={navLinkClass}>
+
+                <NavLink to="/about" className={navLinkClass}>
                   About
                 </NavLink>
 
@@ -122,7 +125,7 @@ const Navbar = () => {
                 >
                   <div className="flex items-center gap-1">
                     <Link
-                      to="pages/servicepage"
+                      to="/services"
                       className={`text-[20px] font-semibold transition-all duration-300 ${
                         servicesOpen
                           ? "text-blue-900"
@@ -131,6 +134,7 @@ const Navbar = () => {
                     >
                       Services
                     </Link>
+
                     <button
                       onClick={() => setServicesOpen(!servicesOpen)}
                       className="focus:outline-none"
@@ -138,10 +142,13 @@ const Navbar = () => {
                     >
                       <ChevronDown
                         size={16}
-                        className={`transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""} text-gray-600`}
+                        className={`transition-transform duration-300 ${
+                          servicesOpen ? "rotate-180" : ""
+                        } text-gray-600`}
                       />
                     </button>
                   </div>
+
                   <div
                     className={`absolute top-8 left-0 w-80 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 origin-top ${
                       servicesOpen
@@ -180,9 +187,12 @@ const Navbar = () => {
                     Career
                     <ChevronDown
                       size={16}
-                      className={`transition-transform duration-300 ${careerOpen ? "rotate-180" : ""}`}
+                      className={`transition-transform duration-300 ${
+                        careerOpen ? "rotate-180" : ""
+                      }`}
                     />
                   </button>
+
                   <div
                     className={`absolute top-8 left-0 w-72 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-300 origin-top ${
                       careerOpen
@@ -205,17 +215,18 @@ const Navbar = () => {
                   </div>
                 </div>
 
-                <NavLink to="/blogs/allblogs" className={navLinkClass}>
+                <NavLink to="/blogs" className={navLinkClass}>
                   Blogs
                 </NavLink>
-                <NavLink to="/contactus" className={navLinkClass}>
+
+                <NavLink to="/contact" className={navLinkClass}>
                   Contact
                 </NavLink>
               </nav>
 
               {/* Desktop CTA */}
               <div className="hidden lg:block">
-                <Link to="/contactus">
+                <Link to="/contact">
                   <button className="relative overflow-hidden group px-6 py-2.5 bg-black text-white font-medium rounded-full shadow-md hover:shadow-yellow-500/30 transition-all duration-300 hover:scale-105">
                     <span className="relative z-10">Get Started</span>
                     <span className="absolute inset-0 w-0 bg-blue-900 group-hover:w-full transition-all duration-500"></span>
@@ -243,8 +254,9 @@ const Navbar = () => {
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between p-6 border-b border-gray-100">
               <Link to="/" onClick={() => setIsOpen(false)}>
-                <img src={Logo} alt="Logo" className="h-14 w-auto" />
+                <img src={Logo} alt="Acuity Groups Logo" className="h-14 w-auto" />
               </Link>
+
               <button
                 onClick={() => setIsOpen(false)}
                 className="p-2 rounded-full hover:bg-gray-100"
@@ -252,22 +264,33 @@ const Navbar = () => {
                 <X size={24} />
               </button>
             </div>
+
             <div className="flex-1 overflow-hidden p-6">
               <div className="flex flex-col gap-4">
                 <NavLink
                   to="/"
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) =>
-                    `text-lg font-medium transition ${isActive ? "text-blue-900" : "text-gray-800 hover:text-blue-900"}`
+                    `text-lg font-medium transition ${
+                      isActive
+                        ? "text-blue-900"
+                        : "text-gray-800 hover:text-blue-900"
+                    }`
                   }
+                  end
                 >
                   Home
                 </NavLink>
+
                 <NavLink
-                  to="/aboutus"
+                  to="/about"
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) =>
-                    `text-lg font-medium transition ${isActive ? "text-yellow-500" : "text-gray-800 hover:text-yellow-500"}`
+                    `text-lg font-medium transition ${
+                      isActive
+                        ? "text-yellow-500"
+                        : "text-gray-800 hover:text-yellow-500"
+                    }`
                   }
                 >
                   About
@@ -279,16 +302,32 @@ const Navbar = () => {
                     onClick={() => setServicesOpen(!servicesOpen)}
                     className="flex items-center justify-between w-full text-lg font-medium text-gray-800 hover:text-yellow-500 transition"
                   >
-                    Services{" "}
+                    Services
                     <ChevronDown
                       size={20}
-                      className={`transition-transform duration-300 ${servicesOpen ? "rotate-180" : ""}`}
+                      className={`transition-transform duration-300 ${
+                        servicesOpen ? "rotate-180" : ""
+                      }`}
                     />
                   </button>
+
                   <div
-                    className={`overflow-hidden transition-all duration-300 ${servicesOpen ? "max-h-96 mt-3" : "max-h-0"}`}
+                    className={`overflow-hidden transition-all duration-300 ${
+                      servicesOpen ? "max-h-96 mt-3" : "max-h-0"
+                    }`}
                   >
                     <div className="pl-4 border-l-2 border-yellow-400 space-y-2">
+                      <Link
+                        to="/services"
+                        onClick={() => {
+                          setIsOpen(false);
+                          setServicesOpen(false);
+                        }}
+                        className="block py-2 text-gray-600 hover:text-yellow-500 transition"
+                      >
+                        All Services
+                      </Link>
+
                       {servicesItems.map((item, idx) => (
                         <Link
                           key={idx}
@@ -312,14 +351,19 @@ const Navbar = () => {
                     onClick={() => setCareerOpen(!careerOpen)}
                     className="flex items-center justify-between w-full text-lg font-medium text-gray-800 hover:text-yellow-500 transition"
                   >
-                    Career{" "}
+                    Career
                     <ChevronDown
                       size={20}
-                      className={`transition-transform duration-300 ${careerOpen ? "rotate-180" : ""}`}
+                      className={`transition-transform duration-300 ${
+                        careerOpen ? "rotate-180" : ""
+                      }`}
                     />
                   </button>
+
                   <div
-                    className={`overflow-hidden transition-all duration-300 ${careerOpen ? "max-h-96 mt-3" : "max-h-0"}`}
+                    className={`overflow-hidden transition-all duration-300 ${
+                      careerOpen ? "max-h-96 mt-3" : "max-h-0"
+                    }`}
                   >
                     <div className="pl-4 border-l-2 border-yellow-400 space-y-2">
                       {careerItems.map((item, idx) => (
@@ -346,28 +390,32 @@ const Navbar = () => {
                 >
                   Blogs
                 </NavLink>
+
                 <NavLink
-                  to="/contactus"
+                  to="/contact"
                   onClick={() => setIsOpen(false)}
                   className="text-lg font-medium text-gray-800 hover:text-yellow-500 transition"
                 >
                   Contact
                 </NavLink>
               </div>
+
               <div className="pt-8 mt-8 border-t border-gray-100">
-                <Link to="/contactus" onClick={() => setIsOpen(false)}>
+                <Link to="/contact" onClick={() => setIsOpen(false)}>
                   <button className="w-full py-3 bg-black text-white font-medium rounded-full hover:bg-yellow-500 hover:text-black transition">
                     Get Started
                   </button>
                 </Link>
+
                 <div className="mt-6 space-y-3 text-sm text-gray-500">
                   <a
-                    href="tel:9941229005"
+                    href="tel:+919941229005"
                     className="flex items-center gap-2 hover:text-yellow-500"
                   >
                     <Phone size={14} />
-                    <span>+91 9941229005</span>
+                    <span>+91 99412 29005</span>
                   </a>
+
                   <a
                     href="mailto:info@acuitygroups.in"
                     className="flex items-center gap-2 hover:text-yellow-500"
@@ -375,6 +423,7 @@ const Navbar = () => {
                     <Mail size={14} />
                     <span>info@acuitygroups.in</span>
                   </a>
+
                   <div className="flex items-center gap-2">
                     <MapPin size={14} />
                     <span>

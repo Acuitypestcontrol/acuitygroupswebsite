@@ -50,7 +50,7 @@ const PreventiveMaintenanceBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://www.acuitygroups.in/blogs/preventive-maintenance",
+    "https://www.acuitygroups.in/blogs/repairing-maintenance",
   );
   const shareTitle = encodeURIComponent(
     "Preventive Maintenance: The Key to Long-Term Asset Performance | Acuity Groups",
@@ -84,7 +84,7 @@ const PreventiveMaintenanceBlog = () => {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": "https://www.acuitygroups.in/blogs/preventive-maintenance",
+      "@id": "https://www.acuitygroups.in/blogs/repairing-maintenance",
     },
   };
 
@@ -133,13 +133,13 @@ const PreventiveMaintenanceBlog = () => {
         "@type": "ListItem",
         position: 2,
         name: "Blogs",
-        item: "https://www.acuitygroups.in/blogs/allblogs",
+        item: "https://www.acuitygroups.in/blogs",
       },
       {
         "@type": "ListItem",
         position: 3,
         name: "Preventive Maintenance",
-        item: "https://www.acuitygroups.in/blogs/preventive-maintenance",
+        item: "https://www.acuitygroups.in/blogs/repairing-maintenance",
       },
     ],
   };
@@ -161,7 +161,7 @@ const PreventiveMaintenanceBlog = () => {
       icon: <Clock className="text-blue-600 w-6 h-6" />,
     },
     {
-      value: "15+",
+      value: "15+", to:"/blogs",
       label: "Years Experience",
       icon: <Calendar className="text-blue-600 w-6 h-6" />,
     },
@@ -172,7 +172,7 @@ const PreventiveMaintenanceBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://www.acuitygroups.in/blogs/preventive-maintenance"
+          href="https://www.acuitygroups.in/blogs/repairing-maintenance"
         />
         <title>
           Preventive Maintenance: The Key to Long-Term Asset Performance |
@@ -193,7 +193,7 @@ const PreventiveMaintenanceBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://www.acuitygroups.in/blogs/preventive-maintenance"
+          content="https://www.acuitygroups.in/blogs/repairing-maintenance"
         />
         <meta
           property="og:title"
@@ -307,7 +307,7 @@ const PreventiveMaintenanceBlog = () => {
               <li className="text-gray-400">/</li>
               <li>
                 <Link
-                  to="/blogs/allblogs"
+               to="/blogs"
                   className="hover:text-blue-600 transition"
                 >
                   Blogs
@@ -596,7 +596,7 @@ const PreventiveMaintenanceBlog = () => {
               {/* Back to blogs */}
               <div className="pt-4 border-t border-gray-200">
                 <Link
-                  to="/blogs/allblogs"
+                  to="/blogs"
                   className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center gap-1"
                 >
                   ← Back to all blogs
@@ -799,7 +799,7 @@ const PreventiveMaintenanceBlog = () => {
                 Contact Our Experts <ArrowRight size={18} />
               </Link>
               <Link
-                to="/blogs/allblogs"
+                to="/blogs"
                 className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white/10 transition"
               >
                 Browse All Blogs
