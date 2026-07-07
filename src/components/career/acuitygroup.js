@@ -145,7 +145,10 @@ const Career = () => {
   return (
     <>
       <Helmet>
-        <link rel="canonical" href="https://www.acuitygroups.in/career" />
+        <link
+          rel="canonical"
+          href="https://www.acuitygroups.in/career/acuity-groups"
+        />
         <title>
           Careers | Join Acuity Groups – Facility Management Jobs in Bangalore
         </title>
@@ -162,7 +165,7 @@ const Career = () => {
 
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.acuitygroups.in/career" />
+        <meta property="og:url" content="https://www.acuitygroups.in/career/acuity-groups"/>
         <meta
           property="og:title"
           content="Careers | Join Acuity Groups – Facility Management Jobs"
