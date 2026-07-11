@@ -100,8 +100,14 @@ export default function App() {
         {/* Blog pages */}
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/blogs/cockroach-control" element={<Cockroaches />} />
-        <Route path="/blogs/termite-control" element={<TermiteControlGuide />} />
-        <Route path="/blogs/mosquito-prevention" element={<MosquitoPrevention />} />
+        <Route
+          path="/blogs/termite-control"
+          element={<TermiteControlGuide />}
+        />
+        <Route
+          path="/blogs/mosquito-prevention"
+          element={<MosquitoPrevention />}
+        />
         <Route
           path="/blogs/hotels-hospitality"
           element={<HotelsHospitality />}
@@ -179,10 +185,7 @@ export default function App() {
           path="/integrated-facility-management-hebbal"
           element={<Hebbal />}
         />
-        <Route
-          path="/integrated-facility-management-beml"
-          element={<Beml />}
-        />
+        <Route path="/integrated-facility-management-beml" element={<Beml />} />
         <Route
           path="/integrated-facility-management-doddaballapur"
           element={<Doddaballapur />}
@@ -201,25 +204,34 @@ export default function App() {
 
         {/* Old URL redirects */}
         <Route path="/homepage" element={<Navigate to="/" replace />} />
-        <Route path="/aboutus" element={<Navigate to="/about" replace />} />
+        <Route path="/about" element={<Navigate to="/about" replace />} />
         <Route path="/contactus" element={<Navigate to="/contact" replace />} />
-        <Route path="/pages/servicepage" element={<Navigate to="/services" replace />} />
-        <Route path="/services-5" element={<Navigate to="/services" replace />} />
+        <Route
+          path="/pages/servicepage"
+          element={<Navigate to="/services" replace />}
+        />
+        <Route path="/services" element={<Navigate to="/services" replace />} />
 
         <Route
           path="/Securityservice"
           element={<Navigate to="/security-services" replace />}
         />
         <Route
-          path="/facilitymanagment1"
+          path="/integrated-facility-management"
           element={<Navigate to="/integrated-facility-management" replace />}
         />
         <Route
           path="/Housekeeping"
           element={<Navigate to="/housekeeping-services" replace />}
         />
-        <Route path="/repair" element={<Navigate to="/repair-maintenance" replace />} />
-        <Route path="/pest" element={<Navigate to="/pest-management" replace />} />
+        <Route
+          path="/repair"
+          element={<Navigate to="/repair-maintenance" replace />}
+        />
+        <Route
+          path="/pest"
+          element={<Navigate to="/pest-management" replace />}
+        />
         <Route
           path="/manpower"
           element={<Navigate to="/manpower-outsourcing" replace />}
@@ -260,7 +272,9 @@ export default function App() {
         />
         <Route
           path="/blogs/ImportanceofFacility"
-          element={<Navigate to="/blogs/importance-of-facility-management" replace />}
+          element={
+            <Navigate to="/blogs/importance-of-facility-management" replace />
+          }
         />
         <Route
           path="/blogs/EducationIndustry"
@@ -276,7 +290,9 @@ export default function App() {
         />
         <Route
           path="/blogs/TheImportanceFacilities"
-          element={<Navigate to="/blogs/the-importance-of-facilities" replace />}
+          element={
+            <Navigate to="/blogs/the-importance-of-facilities" replace />
+          }
         />
         <Route
           path="/blogs/Learnhow"
@@ -288,7 +304,9 @@ export default function App() {
         />
         <Route
           path="/blogs/WhyIntegrated"
-          element={<Navigate to="/blogs/why-integrated-facility-management" replace />}
+          element={
+            <Navigate to="/blogs/why-integrated-facility-management" replace />
+          }
         />
         <Route
           path="/blogs/HousekeepingServices"

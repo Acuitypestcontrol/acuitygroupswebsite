@@ -10,7 +10,7 @@ const PestControlBEML = () => {
     {
       title: "Integrated Facility Management in BEML Layout",
       desc: "Complete integrated facility management services in BEML Layout for apartments, villas, offices and commercial properties.",
-      link: "/facilitymanagment1",
+      link: "/integrated-facility-management",
     },
     {
       title: "Security Services in BEML Layout",
@@ -198,10 +198,7 @@ const PestControlBEML = () => {
               housekeeping services
             </Link>
             ,{" "}
-            <Link
-              to="/securityservice"
-              className="text-blue-600 font-semibold"
-            >
+            <Link to="/securityservice" className="text-blue-600 font-semibold">
               security guards
             </Link>
             ,{" "}

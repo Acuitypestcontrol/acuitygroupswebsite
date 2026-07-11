@@ -1,7 +1,7 @@
 {
   "redirects": [
     {
-      "source": "/aboutus",
+      "source": "/about",
       "destination": "/about",
       "permanent": true
     },
@@ -11,12 +11,12 @@
       "permanent": true
     },
     {
-      "source": "/services-5",
+      "source": "/services",
       "destination": "/services",
       "permanent": true
     },
     {
-      "source": "/facilitymanagment1",
+      "source": "/integrated-facility-management",
       "destination": "/integrated-facility-management",
       "permanent": true
     },
