@@ -1,0 +1,35 @@
+{
+  "redirects": [
+    {
+      "source": "/aboutus",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/contactus",
+      "destination": "/contact",
+      "permanent": true
+    },
+    {
+      "source": "/services-5",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/facilitymanagment1",
+      "destination": "/integrated-facility-management",
+      "permanent": true
+    },
+    {
+      "source": "/pest",
+      "destination": "/pest-management",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
