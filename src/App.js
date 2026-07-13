@@ -204,21 +204,15 @@ export default function App() {
 
         {/* Old URL redirects */}
         <Route path="/homepage" element={<Navigate to="/" replace />} />
-        <Route path="/about" element={<Navigate to="/about" replace />} />
         <Route path="/contactus" element={<Navigate to="/contact" replace />} />
         <Route
           path="/pages/servicepage"
           element={<Navigate to="/services" replace />}
         />
-        <Route path="/services" element={<Navigate to="/services" replace />} />
 
         <Route
           path="/Securityservice"
           element={<Navigate to="/security-services" replace />}
-        />
-        <Route
-          path="/integrated-facility-management"
-          element={<Navigate to="/integrated-facility-management" replace />}
         />
         <Route
           path="/Housekeeping"
@@ -241,6 +235,7 @@ export default function App() {
           element={<Navigate to="/soft-services" replace />}
         />
 
+        {/* Career Old Route Redirects */}
         <Route
           path="/career/pestcareer"
           element={<Navigate to="/career/pest-control" replace />}
@@ -250,6 +245,7 @@ export default function App() {
           element={<Navigate to="/career/acuity-groups" replace />}
         />
 
+        {/* Blog Old Route Redirects */}
         <Route
           path="/blogs/allblogs"
           element={<Navigate to="/blogs" replace />}
