@@ -46,7 +46,7 @@ const ContactUs = () => {
 *Message:* ${formData.message}`;
 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      message
+      message,
     )}`;
 
     window.open(whatsappUrl, "_blank");
@@ -220,7 +220,10 @@ const ContactUs = () => {
           property="og:description"
           content="Get in touch with Acuity Groups for facility management, security, housekeeping, pest control and manpower services in Bangalore."
         />
-        <meta property="og:image" content="https://www.acuitygroups.in/og-image.jpg" />
+        <meta
+          property="og:image"
+          content="https://www.acuitygroups.in/og-image.jpg"
+        />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -231,15 +234,16 @@ const ContactUs = () => {
           name="twitter:description"
           content="Contact Acuity Groups for facility management and support services in Bangalore."
         />
-        <meta name="twitter:image" content="https://www.acuitygroups.in/og-image.jpg" />
+        <meta
+          name="twitter:image"
+          content="https://www.acuitygroups.in/og-image.jpg"
+        />
 
         <script type="application/ld+json">
           {JSON.stringify(localBusinessSchema)}
         </script>
 
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
 
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema)}
@@ -265,8 +269,8 @@ const ContactUs = () => {
             </h1>
 
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Get in touch for facility management, security, housekeeping,
-              pest management, manpower outsourcing and maintenance services in
+              Get in touch for facility management, security, housekeeping, pest
+              management, manpower outsourcing and maintenance services in
               Bangalore.
             </p>
           </div>
@@ -290,7 +294,10 @@ const ContactUs = () => {
                   </h2>
 
                   {info.details.map((detail, i) => (
-                    <p key={i} className="text-gray-600 text-sm leading-relaxed">
+                    <p
+                      key={i}
+                      className="text-gray-600 text-sm leading-relaxed"
+                    >
                       {detail}
                     </p>
                   ))}
@@ -298,7 +305,9 @@ const ContactUs = () => {
                   {info.action && (
                     <a
                       href={info.action}
-                      target={info.title === "Office Address" ? "_blank" : "_self"}
+                      target={
+                        info.title === "Office Address" ? "_blank" : "_self"
+                      }
                       rel="noopener noreferrer"
                       className="inline-block mt-4 text-blue-800 text-sm font-medium hover:underline"
                     >
@@ -445,14 +454,12 @@ const ContactUs = () => {
               {/* Google Map */}
               <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-[500px]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.221768514095!2d77.5696875!3d12.8978823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15812f498439%3A0x50b67493a003f061!2sAcuity%20Pest%20Control%20-%20Best%20Pest%20Control%20Services!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d222.18323075287873!2d77.5720666112782!3d12.897686125184315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15b4c1a50ca5%3A0x18f7114f7bde8de1!2sAcuity%20Groups%20LLP!5e1!3m2!1sen!2sin!4v1783944986471!5m2!1sen!2sin"
+                  width="600"
+                  height="450"
+                  allowfullscreen=""
                   loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Acuity Groups Office Location"
+                  referrerpolicy="strict-origin-when-cross-origin"
                 ></iframe>
               </div>
             </div>
@@ -479,7 +486,10 @@ const ContactUs = () => {
                 aria-label="Acuity Groups Facebook"
                 className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-blue-800 hover:text-white transition group"
               >
-                <Facebook size={20} className="text-blue-800 group-hover:text-white" />
+                <Facebook
+                  size={20}
+                  className="text-blue-800 group-hover:text-white"
+                />
               </a>
 
               <a
@@ -489,7 +499,10 @@ const ContactUs = () => {
                 aria-label="Acuity Groups Twitter"
                 className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-blue-800 hover:text-white transition group"
               >
-                <Twitter size={20} className="text-blue-800 group-hover:text-white" />
+                <Twitter
+                  size={20}
+                  className="text-blue-800 group-hover:text-white"
+                />
               </a>
 
               <a
@@ -499,7 +512,10 @@ const ContactUs = () => {
                 aria-label="Acuity Groups LinkedIn"
                 className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-blue-800 hover:text-white transition group"
               >
-                <Linkedin size={20} className="text-blue-800 group-hover:text-white" />
+                <Linkedin
+                  size={20}
+                  className="text-blue-800 group-hover:text-white"
+                />
               </a>
 
               <a
@@ -509,7 +525,10 @@ const ContactUs = () => {
                 aria-label="Acuity Groups Instagram"
                 className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-blue-800 hover:text-white transition group"
               >
-                <Instagram size={20} className="text-blue-800 group-hover:text-white" />
+                <Instagram
+                  size={20}
+                  className="text-blue-800 group-hover:text-white"
+                />
               </a>
             </div>
           </div>
