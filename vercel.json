@@ -1,7 +1,15 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "trailingSlash": false,
   "redirects": [
+    {
+      "source": "/facilitymanagment1",
+      "destination": "/integrated-facility-management",
+      "permanent": true
+    },
+    {
+      "source": "/services-5",
+      "destination": "/services",
+      "permanent": true
+    },
     {
       "source": "/contactus",
       "destination": "/contact",
