@@ -133,14 +133,12 @@ const FacilityManagement = () => {
     <div className="bg-white text-gray-800 font-sans overflow-hidden">
       <Helmet>
         <title>
-          <title>
-            Integrated Facility Management Company in Bangalore | Acuity Groups
-          </title>
+          Integrated Facility Management Company in Bangalore | Acuity Groups
         </title>
 
         <meta
           name="description"
-          content="Acuity Groups provides integrated facility management services in Bangalore for offices, apartments and commercial properties."
+          content="Acuity Groups is an integrated facility management company in Bangalore providing housekeeping, security, manpower, pest control, repair and maintenance services."
         />
 
         <meta
