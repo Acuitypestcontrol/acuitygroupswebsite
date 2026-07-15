@@ -111,7 +111,7 @@ const Housekeeping = () => {
 
         <meta
           name="description"
-          content="Acuity Groups provides housekeeping services in Bangalore for homes, offices, apartments, hospitals, hotels and commercial spaces."
+          content="Acuity Groups provides professional housekeeping services in Bangalore for offices, apartments, hospitals, hotels, industries and commercial properties."
         />
 
         <meta

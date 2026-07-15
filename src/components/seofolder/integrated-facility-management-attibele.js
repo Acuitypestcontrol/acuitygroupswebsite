@@ -10,32 +10,32 @@ const IntegratedFacilityManagementAttibele = () => {
     {
       title: "Industrial Housekeeping in Attibele",
       desc: "Professional industrial housekeeping services in Attibele for factories, warehouses, manufacturing units and industrial facilities.",
-      link: "/housekeeping",
+      link: "/housekeeping-services",
     },
     {
       title: "Security Services in Attibele",
       desc: "Trained security guards, gate security, visitor management and 24/7 protection for industries and commercial buildings in Attibele.",
-      link: "/securityservice",
+      link: "/security-services",
     },
     {
       title: "Pest Management in Attibele",
       desc: "Complete pest control solutions in Attibele including termite control, cockroach control, rodent control and mosquito treatment.",
-      link: "/pest",
+      link: "/pest-management",
     },
     {
       title: "Repair & Maintenance in Attibele",
       desc: "Reliable building repair and maintenance services in Attibele including plumbing, carpentry, civil work and facility upkeep.",
-      link: "/repair",
+      link: "/repair-maintenance",
     },
     {
       title: "Electrical Maintenance in Attibele",
       desc: "Preventive electrical maintenance, wiring inspection, panel servicing and electrical troubleshooting for facilities in Attibele.",
-      link: "/repair",
+      link: "/repair-maintenance",
     },
     {
       title: "Manpower Outsourcing in Attibele",
       desc: "Skilled, semi-skilled and unskilled manpower outsourcing services in Attibele for industries, warehouses and offices.",
-      link: "/manpower",
+      link: "/manpower-outsourcing",
     },
   ];
 
@@ -71,13 +71,14 @@ const IntegratedFacilityManagementAttibele = () => {
     <div className="bg-white text-gray-800">
       <Helmet>
         <title>
-          Integrated Facility Management Services in Attibele Bangalore | Acuity
-          Groups
+          Integrated Facility Management Services in Attibele | Acuity Groups
         </title>
         <meta
           name="description"
-          content="Integrated Facility Management Services in Attibele Bangalore by Acuity Groups. Housekeeping, security services, pest control, electrical maintenance, repair maintenance and manpower outsourcing for industries and commercial properties."
+          content="Acuity Groups provides integrated facility management services in Attibele for factories, warehouses, industrial units and commercial properties."
         />
+
+        <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
           content="Integrated Facility Management Services in Attibele, Facility Management Company in Attibele, Housekeeping Services in Attibele, Security Services in Attibele, Pest Control in Attibele, Manpower Outsourcing in Attibele, Electrical Maintenance in Attibele"
@@ -97,7 +98,7 @@ const IntegratedFacilityManagementAttibele = () => {
             </span>
 
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-              Facility Management Services in Attibele Bangalore
+              Integrated Facility Management Services in Attibele
             </h1>
 
             <p className="text-lg text-gray-700 leading-8 mb-6">
@@ -116,7 +117,7 @@ const IntegratedFacilityManagementAttibele = () => {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold"
               >
                 Get Free Quote
@@ -134,7 +135,7 @@ const IntegratedFacilityManagementAttibele = () => {
           <div className="flex justify-center">
             <img
               src={bannerImage}
-              alt="Facility Management Services in Attibele Bangalore"
+              alt="Integrated Facility Management Services in Attibele"
               className="w-full max-w-[700px] rounded-3xl shadow-2xl"
             />
           </div>
@@ -196,23 +197,35 @@ const IntegratedFacilityManagementAttibele = () => {
 
           <p className="text-lg text-gray-700 leading-8">
             Whether you need{" "}
-            <Link to="/housekeeping" className="text-blue-600 font-semibold">
+            <Link
+              to="/housekeeping-services"
+              className="text-blue-600 font-semibold"
+            >
               housekeeping services
             </Link>
             ,{" "}
-            <Link to="/securityservice" className="text-blue-600 font-semibold">
+            <Link
+              to="/security-services"
+              className="text-blue-600 font-semibold"
+            >
               security guards
             </Link>
             ,{" "}
-            <Link to="/pest" className="text-blue-600 font-semibold">
+            <Link to="/pest-management" className="text-blue-600 font-semibold">
               pest control services
             </Link>
             ,{" "}
-            <Link to="/repair" className="text-blue-600 font-semibold">
+            <Link
+              to="/repair-maintenance"
+              className="text-blue-600 font-semibold"
+            >
               maintenance technicians
             </Link>{" "}
             or{" "}
-            <Link to="/manpower" className="text-blue-600 font-semibold">
+            <Link
+              to="/manpower-outsourcing"
+              className="text-blue-600 font-semibold"
+            >
               manpower support
             </Link>
             , our team delivers reliable facility management services in
@@ -293,7 +306,7 @@ const IntegratedFacilityManagementAttibele = () => {
         </p>
 
         <Link
-          to="/contactus"
+          to="/contact"
           className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-semibold"
         >
           Contact Us

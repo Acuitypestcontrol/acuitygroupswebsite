@@ -132,11 +132,11 @@ const PestManagement = () => {
   return (
     <div className="bg-white text-gray-800 font-sans overflow-hidden">
       <Helmet>
-        <title>Pest Management Services in Bangalore | Acuity Groups</title>
+        <title>Pest Control Services in Bangalore | Acuity Groups</title>
 
         <meta
           name="description"
-          content="Acuity Groups provides pest management services in Bangalore for homes, offices, apartments, hotels, restaurants and commercial spaces."
+          content="Acuity Groups provides pest control services in Bangalore for homes, apartments, offices, hotels, hospitals, restaurants, warehouses and industrial properties."
         />
 
         <meta
@@ -153,7 +153,7 @@ const PestManagement = () => {
 
         <meta
           property="og:title"
-          content="Pest Management Services in Bangalore | Acuity Groups"
+          content="Pest Control Services in Bangalore | Acuity Groups"
         />
         <meta
           property="og:description"
@@ -169,7 +169,7 @@ const PestManagement = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Pest Management Services in Bangalore | Acuity Groups"
+          content="Pest Control Services in Bangalore | Acuity Groups"
         />
         <meta
           name="twitter:description"
@@ -182,7 +182,7 @@ const PestManagement = () => {
             "@type": "Service",
             "@id": "https://www.acuitygroups.in/pest-management/#service",
             name: "Pest Management Services in Bangalore",
-            serviceType: "Pest Management",
+            serviceType: "Pest Control Services",
             provider: {
               "@type": "LocalBusiness",
               name: "Acuity Groups",
@@ -201,7 +201,7 @@ const PestManagement = () => {
             },
             areaServed: "Bangalore",
             description:
-              "Professional pest management services in Bangalore for residential, commercial and industrial properties.",
+              "Acuity Groups provides professional pest control services in Bangalore for homes, apartments, offices, hotels, hospitals, restaurants, warehouses and industrial properties.",
             hasOfferCatalog: {
               "@type": "OfferCatalog",
               name: "Pest Management Services",
@@ -264,7 +264,7 @@ const PestManagement = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
-              Professional Pest Management Services in Bangalore
+                Professional Pest Control Services in Bangalore
             </h1>
 
             <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-10">

@@ -10,32 +10,32 @@ const IntegratedFacilityManagementJPNagar = () => {
     {
       title: "Apartment Housekeeping in JP Nagar",
       desc: "Professional housekeeping services in JP Nagar for apartments, gated communities, offices, hospitals, clinics, schools and commercial buildings.",
-      link: "/housekeeping",
+      link: "/housekeeping-services",
     },
     {
       title: "Security Services in JP Nagar",
       desc: "Trained security guards in JP Nagar for apartments, offices, hospitals, educational institutions, retail outlets and commercial properties.",
-      link: "/securityservice",
+      link: "/security-services",
     },
     {
       title: "Pest Management in JP Nagar",
       desc: "Complete pest management services in JP Nagar including termite control, cockroach control, rodent control and mosquito treatment.",
-      link: "/pest",
+      link: "/pest-management",
     },
     {
       title: "Building Repair & Maintenance in JP Nagar",
       desc: "Reliable repair and maintenance services in JP Nagar for apartments, offices, hospitals, schools, plumbing, carpentry and civil upkeep.",
-      link: "/repair",
+      link: "/repair-maintenance",
     },
     {
       title: "Electrical Maintenance in JP Nagar",
       desc: "Preventive electrical maintenance in JP Nagar for apartments, offices, hospitals, commercial buildings, panels and wiring systems.",
-      link: "/repair",
+      link: "/repair-maintenance",
     },
     {
       title: "Facility Manpower Outsourcing in JP Nagar",
       desc: "Trained manpower outsourcing services in JP Nagar for housekeeping, security, maintenance and daily facility support operations.",
-      link: "/manpower",
+      link: "/manpower-outsourcing",
     },
   ];
 
@@ -71,17 +71,17 @@ const IntegratedFacilityManagementJPNagar = () => {
     <div className="bg-white text-gray-800">
       <Helmet>
         <title>
-          Integrated Facility Management Services in JP Nagar Bangalore | Acuity
-          Groups
+          Integrated Facility Management Services in JP Nagar | Acuity Groups
         </title>
         <meta
           name="description"
-          content="Integrated Facility Management Services in JP Nagar Bangalore by Acuity Groups. Apartment housekeeping, security services, pest management, electrical maintenance, repair maintenance and manpower outsourcing for apartments, offices, hospitals, schools and commercial properties."
+          content="Acuity Groups provides integrated facility management services in JP Nagar for apartments, offices, hospitals, schools and commercial properties."
         />
         <meta
           name="keywords"
           content="Integrated Facility Management Services in JP Nagar, Facility Management Company in JP Nagar, Housekeeping Services in JP Nagar, Security Services in JP Nagar, Pest Control in JP Nagar, Manpower Outsourcing in JP Nagar, Electrical Maintenance in JP Nagar"
         />
+        <meta name="robots" content="index, follow" />
         <link
           rel="canonical"
           href="https://www.acuitygroups.in/integrated-facility-management-jp-nagar"
@@ -97,7 +97,7 @@ const IntegratedFacilityManagementJPNagar = () => {
             </span>
 
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-              Facility Management Services in JP Nagar Bangalore
+              Integrated Facility Management Services in JP Nagar
             </h1>
 
             <p className="text-lg text-gray-700 leading-8 mb-6">
@@ -116,7 +116,7 @@ const IntegratedFacilityManagementJPNagar = () => {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold"
               >
                 Get Free Quote
@@ -198,26 +198,35 @@ const IntegratedFacilityManagementJPNagar = () => {
 
           <p className="text-lg text-gray-700 leading-8">
             Whether you need{" "}
-            <Link to="/housekeeping" className="text-blue-600 font-semibold">
+            <Link
+              to="/housekeeping-services"
+              className="text-blue-600 font-semibold"
+            >
               apartment housekeeping services
             </Link>
             ,{" "}
             <Link
-              to="/securityservice"
+              to="/security-services"
               className="text-blue-600 font-semibold"
             >
               security guards
             </Link>
             ,{" "}
-            <Link to="/pest" className="text-blue-600 font-semibold">
+            <Link to="/pest-management" className="text-blue-600 font-semibold">
               pest control technicians
             </Link>
             ,{" "}
-            <Link to="/repair" className="text-blue-600 font-semibold">
+            <Link
+              to="/repair-maintenance"
+              className="text-blue-600 font-semibold"
+            >
               maintenance workers
             </Link>{" "}
             or{" "}
-            <Link to="/manpower" className="text-blue-600 font-semibold">
+            <Link
+              to="/manpower-outsourcing"
+              className="text-blue-600 font-semibold"
+            >
               facility manpower support
             </Link>
             , our team delivers reliable facility management services in JP
@@ -298,7 +307,7 @@ const IntegratedFacilityManagementJPNagar = () => {
         </p>
 
         <Link
-          to="/contactus"
+          to="/contact"
           className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-semibold"
         >
           Contact Us

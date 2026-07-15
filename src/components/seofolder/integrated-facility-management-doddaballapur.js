@@ -5,37 +5,37 @@ import { Helmet } from "react-helmet-async";
 import bannerImage from "../../images/doddaballapurmimage (1).jpg";
 import bannerImage1 from "../../images/doddaballapur.jpg";
 
-const PestControlDoddaballapur = () => {
+const IntegratedFacilityManagementDoddaballapur = () => {
   const services = [
     {
       title: "Factory Housekeeping in Doddaballapur",
       desc: "Professional factory housekeeping services in Doddaballapur for production units, warehouses, industrial floors and manufacturing facilities.",
-      link: "/housekeeping",
+      link: "/housekeeping-services",
     },
     {
       title: "Industrial Security Services in Doddaballapur",
       desc: "Trained industrial security guards in Doddaballapur for factory gates, warehouse security, visitor management and night patrol support.",
-      link: "/securityservice",
+      link: "/security-services",
     },
     {
       title: "Pest Control for Industries in Doddaballapur",
       desc: "Complete pest control services in Doddaballapur for factories, warehouses, offices and commercial spaces including termite, rodent and cockroach control.",
-      link: "/pest",
+      link: "/pest-management",
     },
     {
       title: "Factory Repair & Maintenance in Doddaballapur",
       desc: "Reliable repair and maintenance services in Doddaballapur for factory buildings, warehouses, plumbing, carpentry and civil maintenance needs.",
-      link: "/repair",
+      link: "/repair-maintenance",
     },
     {
       title: "Electrical Maintenance in Doddaballapur",
       desc: "Preventive electrical maintenance in Doddaballapur for factories, commercial buildings, panels, wiring systems and industrial facilities.",
-      link: "/repair",
+      link: "/repair-maintenance",
     },
     {
       title: "Industrial Manpower Outsourcing in Doddaballapur",
       desc: "Skilled, semi-skilled and unskilled manpower outsourcing services in Doddaballapur for industries, warehouses and manufacturing operations.",
-      link: "/manpower",
+      link: "/manpower-outsourcing",
     },
   ];
 
@@ -71,20 +71,22 @@ const PestControlDoddaballapur = () => {
     <div className="bg-white text-gray-800">
       <Helmet>
         <title>
-          Integrated Facility Management Services in Doddaballapur Bangalore |
-          Acuity Groups
+          Integrated Facility Management Services in Doddaballapur | Acuity
+          Groups
         </title>
         <meta
           name="description"
-          content="Integrated Facility Management Services in Doddaballapur Bangalore by Acuity Groups. Factory housekeeping, industrial security, pest control, electrical maintenance, repair maintenance and manpower outsourcing for factories, warehouses and commercial properties."
+          content="Acuity Groups provides integrated facility management services in Doddaballapur for factories, warehouses, manufacturing units and industrial properties."
         />
+
+        <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
           content="Integrated Facility Management Services in Doddaballapur, Facility Management Company in Doddaballapur, Factory Housekeeping in Doddaballapur, Industrial Security Services in Doddaballapur, Pest Control in Doddaballapur, Manpower Outsourcing in Doddaballapur, Electrical Maintenance in Doddaballapur"
         />
         <link
           rel="canonical"
-          href="https://www.acuitygroups.in/seofolder/doddaballapur"
+          href="https://www.acuitygroups.in/integrated-facility-management-doddaballapur"
         />
       </Helmet>
 
@@ -97,7 +99,7 @@ const PestControlDoddaballapur = () => {
             </span>
 
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-              Facility Management Services in Doddaballapur Bangalore
+              Integrated Facility Management Services in Doddaballapur
             </h1>
 
             <p className="text-lg text-gray-700 leading-8 mb-6">
@@ -115,7 +117,7 @@ const PestControlDoddaballapur = () => {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold"
               >
                 Get Free Quote
@@ -196,23 +198,35 @@ const PestControlDoddaballapur = () => {
 
           <p className="text-lg text-gray-700 leading-8">
             Whether you need{" "}
-            <Link to="/housekeeping" className="text-blue-600 font-semibold">
+            <Link
+              to="/housekeeping-services"
+              className="text-blue-600 font-semibold"
+            >
               factory housekeeping services
             </Link>
             ,{" "}
-            <Link to="/securityservice" className="text-blue-600 font-semibold">
+            <Link
+              to="/security-services"
+              className="text-blue-600 font-semibold"
+            >
               industrial security guards
             </Link>
             ,{" "}
-            <Link to="/pest" className="text-blue-600 font-semibold">
+            <Link to="/pest-management" className="text-blue-600 font-semibold">
               pest control technicians
             </Link>
             ,{" "}
-            <Link to="/repair" className="text-blue-600 font-semibold">
+            <Link
+              to="/repair-maintenance"
+              className="text-blue-600 font-semibold"
+            >
               maintenance workers
             </Link>{" "}
             or{" "}
-            <Link to="/manpower" className="text-blue-600 font-semibold">
+            <Link
+              to="/manpower-outsourcing"
+              className="text-blue-600 font-semibold"
+            >
               manpower support
             </Link>
             , our team delivers reliable facility management services in
@@ -294,7 +308,7 @@ const PestControlDoddaballapur = () => {
         </p>
 
         <Link
-          to="/contactus"
+          to="/contact"
           className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-semibold"
         >
           Contact Us
@@ -304,4 +318,4 @@ const PestControlDoddaballapur = () => {
   );
 };
 
-export default PestControlDoddaballapur;
+export default IntegratedFacilityManagementDoddaballapur;

@@ -718,7 +718,7 @@ const TheUnsungHeroesBlog = () => {
                   Get a free consultation to optimize your facility management.
                 </p>
                 <Link
-                  to="/contactus"
+                  to="/contact"
                   className="block text-center bg-green-600 text-white py-2.5 rounded-full hover:bg-green-700 transition shadow"
                 >
                   Request a Quote
@@ -818,7 +818,7 @@ const TheUnsungHeroesBlog = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-5">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="inline-flex items-center gap-2 bg-white text-green-800 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg"
               >
                 Contact Our Experts <ArrowRight size={18} />

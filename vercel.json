@@ -11,7 +11,7 @@
       "permanent": true
     },
     {
-      "source": "/contactus",
+      "source": "/contact",
       "destination": "/contact",
       "permanent": true
     },

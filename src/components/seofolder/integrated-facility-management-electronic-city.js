@@ -10,7 +10,7 @@ const IntegratedFacilityManagementElectronicCity = () => {
     {
       title: "Corporate Housekeeping in Electronic City",
       desc: "Professional housekeeping services in Electronic City for IT parks, corporate offices, tech campuses, commercial buildings and business centres.",
-      link: "/housekeeping",
+      link: "/housekeeping-services",
     },
     {
       title: "Office Security Services in Electronic City",
@@ -116,7 +116,7 @@ const IntegratedFacilityManagementElectronicCity = () => {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold"
               >
                 Get Free Quote
@@ -197,26 +197,35 @@ const IntegratedFacilityManagementElectronicCity = () => {
 
           <p className="text-lg text-gray-700 leading-8">
             Whether you need{" "}
-            <Link to="/housekeeping" className="text-blue-600 font-semibold">
+            <Link
+              to="/housekeeping-services"
+              className="text-blue-600 font-semibold"
+            >
               office housekeeping services
             </Link>
             ,{" "}
             <Link
-              to="/securityservice"
+              to="/security-services"
               className="text-blue-600 font-semibold"
             >
               trained security guards
             </Link>
             ,{" "}
-            <Link to="/pest" className="text-blue-600 font-semibold">
+            <Link to="/pest-management" className="text-blue-600 font-semibold">
               pest control technicians
             </Link>
             ,{" "}
-            <Link to="/repair" className="text-blue-600 font-semibold">
+            <Link
+              to="/repair-maintenance"
+              className="text-blue-600 font-semibold"
+            >
               maintenance workers
             </Link>{" "}
             or{" "}
-            <Link to="/manpower" className="text-blue-600 font-semibold">
+            <Link
+              to="/manpower-outsourcing"
+              className="text-blue-600 font-semibold"
+            >
               facility manpower support
             </Link>
             , our team delivers reliable facility management services in
@@ -298,7 +307,7 @@ const IntegratedFacilityManagementElectronicCity = () => {
         </p>
 
         <Link
-          to="/contactus"
+          to="/contact"
           className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-semibold"
         >
           Contact Us

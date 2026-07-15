@@ -10,32 +10,32 @@ const IntegratedFacilityManagementKumbalgodu = () => {
     {
       title: "Industrial Housekeeping in Kumbalgodu",
       desc: "Professional industrial housekeeping services in Kumbalgodu for factories, warehouses, industrial parks, institutions and commercial facilities.",
-      link: "/housekeeping",
+      link: "/housekeeping-services",
     },
     {
       title: "Industrial Security Services in Kumbalgodu",
       desc: "Trained security guards in Kumbalgodu for factory gates, warehouse security, visitor management, apartment security and commercial properties.",
-      link: "/securityservice",
+      link: "/security-services",
     },
     {
       title: "Pest Management in Kumbalgodu",
       desc: "Complete pest management services in Kumbalgodu including termite control, cockroach control, rodent control and mosquito treatment.",
-      link: "/pest",
+      link: "/pest-management",
     },
     {
       title: "Repair & Maintenance in Kumbalgodu",
       desc: "Reliable repair and maintenance services in Kumbalgodu for factories, warehouses, institutions, apartments, plumbing, carpentry and civil upkeep.",
-      link: "/repair",
+      link: "/repair-maintenance",
     },
     {
       title: "Electrical Maintenance in Kumbalgodu",
       desc: "Preventive electrical maintenance in Kumbalgodu for industrial units, warehouses, institutions, commercial buildings, panels and wiring systems.",
-      link: "/repair",
+      link: "/repair-maintenance",
     },
     {
       title: "Manpower Outsourcing in Kumbalgodu",
       desc: "Skilled, semi-skilled and unskilled manpower outsourcing services in Kumbalgodu for industries, warehouses, institutions and commercial operations.",
-      link: "/manpower",
+      link: "/manpower-outsourcing",
     },
   ];
 
@@ -71,13 +71,14 @@ const IntegratedFacilityManagementKumbalgodu = () => {
     <div className="bg-white text-gray-800">
       <Helmet>
         <title>
-          Integrated Facility Management Services in Kumbalgodu Bangalore |
-          Acuity Groups
+          Integrated Facility Management Services in Kumbalgodu | Acuity Groups
         </title>
         <meta
           name="description"
-          content="Integrated Facility Management Services in Kumbalgodu Bangalore by Acuity Groups. Industrial housekeeping, security services, pest management, electrical maintenance, repair maintenance and manpower outsourcing for industrial parks, factories, warehouses and commercial properties."
+          content="Acuity Groups provides integrated facility management services in Kumbalgodu for factories, warehouses, industrial parks, institutions and commercial properties."
         />
+
+        <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
           content="Integrated Facility Management Services in Kumbalgodu, Facility Management Company in Kumbalgodu, Industrial Housekeeping in Kumbalgodu, Security Services in Kumbalgodu, Pest Control in Kumbalgodu, Manpower Outsourcing in Kumbalgodu, Electrical Maintenance in Kumbalgodu"
@@ -97,7 +98,7 @@ const IntegratedFacilityManagementKumbalgodu = () => {
             </span>
 
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-              Facility Management Services in Kumbalgodu Bangalore
+              Integrated Facility Management Services in Kumbalgodu
             </h1>
 
             <p className="text-lg text-gray-700 leading-8 mb-6">
@@ -116,7 +117,7 @@ const IntegratedFacilityManagementKumbalgodu = () => {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold"
               >
                 Get Free Quote
@@ -134,7 +135,7 @@ const IntegratedFacilityManagementKumbalgodu = () => {
           <div className="flex justify-center">
             <img
               src={bannerImage}
-              alt="Facility Management Services in Kumbalgodu Bangalore"
+              alt="Integrated Facility Management Services in Kumbalgodu"
               className="w-full max-w-[700px] rounded-3xl shadow-2xl"
             />
           </div>
@@ -198,26 +199,35 @@ const IntegratedFacilityManagementKumbalgodu = () => {
 
           <p className="text-lg text-gray-700 leading-8">
             Whether you need{" "}
-            <Link to="/housekeeping" className="text-blue-600 font-semibold">
+            <Link
+              to="/housekeeping-services"
+              className="text-blue-600 font-semibold"
+            >
               industrial housekeeping services
             </Link>
             ,{" "}
             <Link
-              to="/securityservice"
+              to="/security-services"
               className="text-blue-600 font-semibold"
             >
               security guards
             </Link>
             ,{" "}
-            <Link to="/pest" className="text-blue-600 font-semibold">
+            <Link to="/pest-management" className="text-blue-600 font-semibold">
               pest control technicians
             </Link>
             ,{" "}
-            <Link to="/repair" className="text-blue-600 font-semibold">
+            <Link
+              to="/repair-maintenance"
+              className="text-blue-600 font-semibold"
+            >
               maintenance workers
             </Link>{" "}
             or{" "}
-            <Link to="/manpower" className="text-blue-600 font-semibold">
+            <Link
+              to="/manpower-outsourcing"
+              className="text-blue-600 font-semibold"
+            >
               manpower support
             </Link>
             , our team delivers reliable facility management services in
@@ -298,7 +308,7 @@ const IntegratedFacilityManagementKumbalgodu = () => {
         </p>
 
         <Link
-          to="/contactus"
+          to="/contact"
           className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-semibold"
         >
           Contact Us

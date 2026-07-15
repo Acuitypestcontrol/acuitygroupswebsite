@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet-async";
 import bannerImage from "../../images/bemlmpic.jpg";
 import bannerImage1 from "../../images/bemlimap.jpg";
 
-const PestControlBEML = () => {
+const IntegratedFacilityManagementBEML = () => {
   const services = [
     {
       title: "Integrated Facility Management in BEML Layout",
@@ -15,27 +15,27 @@ const PestControlBEML = () => {
     {
       title: "Security Services in BEML Layout",
       desc: "Trained security guards, gate security, visitor management and 24/7 security support for properties in BEML Layout.",
-      link: "/securityservice",
+      link: "/security-services",
     },
     {
       title: "Housekeeping Services in BEML Layout",
       desc: "Professional housekeeping services in BEML Layout for apartments, offices, villas and commercial spaces.",
-      link: "/housekeeping",
+      link: "/housekeeping-services",
     },
     {
       title: "Pest Control Services in BEML Layout",
       desc: "Reliable pest control services in BEML Layout including termite, cockroach, rodent and mosquito control.",
-      link: "/pest",
+      link: "/pest-management",
     },
     {
       title: "Manpower Outsourcing in BEML Layout",
       desc: "Skilled and trained manpower outsourcing services in BEML Layout for facility support requirements.",
-      link: "/manpower",
+      link: "/manpower-outsourcing",
     },
     {
       title: "Repair & Maintenance in BEML Layout",
       desc: "Complete repair and maintenance services in BEML Layout including plumbing, electrical, carpentry and civil repairs.",
-      link: "/repair",
+      link: "/repair-maintenance",
     },
   ];
 
@@ -71,19 +71,21 @@ const PestControlBEML = () => {
     <div className="bg-white text-gray-800">
       <Helmet>
         <title>
-          Integrated Facility Services in BEML Layout Bangalore | Acuity Groups
+          Integrated Facility Management Services in BEML Layout | Acuity Groups
         </title>
         <meta
           name="description"
-          content="Integrated Facility Management Services in BEML Layout Bangalore by Acuity Groups. Security services, housekeeping, pest control, manpower outsourcing, repair and maintenance solutions for residential and commercial properties."
+          content="Acuity Groups provides integrated facility management services in BEML Layout for apartments, villas, offices and commercial properties."
         />
+
+        <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
           content="Integrated Facility Management Services in BEML Layout, Facility Management Company in BEML Layout, Security Services in BEML Layout, Housekeeping Services in BEML Layout, Pest Control Services in BEML Layout, Manpower Outsourcing in BEML Layout"
         />
         <link
           rel="canonical"
-          href="https://www.acuitygroups.in/seofolder/beml"
+          href="https://www.acuitygroups.in/integrated-facility-management-beml"
         />
       </Helmet>
 
@@ -96,7 +98,7 @@ const PestControlBEML = () => {
             </span>
 
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-              Facility Management Services in BEML Layout Bangalore
+              Integrated Facility Management Services in BEML Layout
             </h1>
 
             <p className="text-lg text-gray-700 leading-8 mb-6">
@@ -114,7 +116,7 @@ const PestControlBEML = () => {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold"
               >
                 Get Free Quote
@@ -194,23 +196,35 @@ const PestControlBEML = () => {
 
           <p className="text-lg text-gray-700 leading-8">
             Whether you need{" "}
-            <Link to="/housekeeping" className="text-blue-600 font-semibold">
+            <Link
+              to="/housekeeping-services"
+              className="text-blue-600 font-semibold"
+            >
               housekeeping services
             </Link>
             ,{" "}
-            <Link to="/securityservice" className="text-blue-600 font-semibold">
+            <Link
+              to="/security-services"
+              className="text-blue-600 font-semibold"
+            >
               security guards
             </Link>
             ,{" "}
-            <Link to="/pest" className="text-blue-600 font-semibold">
+            <Link to="/pest-management" className="text-blue-600 font-semibold">
               pest control services
             </Link>
             ,{" "}
-            <Link to="/repair" className="text-blue-600 font-semibold">
+            <Link
+              to="/repair-maintenance"
+              className="text-blue-600 font-semibold"
+            >
               maintenance technicians
             </Link>{" "}
             or{" "}
-            <Link to="/manpower" className="text-blue-600 font-semibold">
+            <Link
+              to="/manpower-outsourcing"
+              className="text-blue-600 font-semibold"
+            >
               manpower support
             </Link>
             , our team delivers reliable facility management services in BEML
@@ -291,7 +305,7 @@ const PestControlBEML = () => {
         </p>
 
         <Link
-          to="/contactus"
+          to="/contact"
           className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-semibold"
         >
           Contact Us
@@ -301,4 +315,4 @@ const PestControlBEML = () => {
   );
 };
 
-export default PestControlBEML;
+export default IntegratedFacilityManagementBEML;

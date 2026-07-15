@@ -624,7 +624,7 @@ const TermiteControlGuide = () => {
                 </p>
                 <div className="mt-4">
                   <Link
-                    to="/contactus"
+                    to="/contact"
                     className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 transition shadow-md"
                   >
                     Get a Free Inspection <ArrowRight size={18} />
@@ -733,7 +733,7 @@ const TermiteControlGuide = () => {
                   Get a free professional inspection for your home.
                 </p>
                 <Link
-                  to="/contactus"
+                  to="/contact"
                   className="block text-center bg-blue-600 text-white py-2.5 rounded-full hover:bg-blue-700 transition shadow"
                 >
                   Request a Quote
@@ -832,7 +832,7 @@ const TermiteControlGuide = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-5">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="inline-flex items-center gap-2 bg-white text-blue-800 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg"
               >
                 Request a Quote <ArrowRight size={18} />

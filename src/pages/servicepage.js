@@ -21,7 +21,7 @@ const Services = () => {
       link: "/integrated-facility-management",
     },
     {
-      title: "Security Services",
+      title: "Security Guard Services",
       description:
         "Professional security guard services, access control support, patrolling, CCTV monitoring, and trained manpower for offices, apartments, industries, and commercial spaces.",
       image: SecurityImg,
@@ -35,14 +35,14 @@ const Services = () => {
       link: "/housekeeping-services",
     },
     {
-      title: "Soft Services",
+      title: "Facility Soft Services",
       description:
         "Reliable soft services including housekeeping support, cleaning staff, pantry support, hygiene management, and facility support staff for business operations.",
       image: HousekeepingImg,
       link: "/soft-services",
     },
     {
-      title: "Pest Management",
+      title: "Pest Control Services",
       description:
         "Safe and effective pest management solutions for termites, rodents, cockroaches, mosquitoes, bed bugs, and commercial pest control requirements.",
       image: PestImg,
@@ -56,7 +56,7 @@ const Services = () => {
       link: "/manpower-outsourcing",
     },
     {
-      title: "Repair & Maintenance",
+      title: "Repair and Maintenance Services",
       description:
         "Electrical, plumbing, carpentry, preventive maintenance, and general repair services to keep your building infrastructure safe and operational.",
       image: MaintenanceImg,
@@ -118,11 +118,13 @@ const Services = () => {
   return (
     <div className="bg-gradient-to-br from-gray-50 to-white">
       <Helmet>
-        <title>Facility Management Services Bangalore | Acuity Groups</title>
+        <title>
+          Facility Management & Support Services in Bangalore | Acuity Groups
+        </title>
 
         <meta
           name="description"
-          content="Acuity Groups provides integrated facility management services in Bangalore including security services, housekeeping, soft services, pest management, manpower outsourcing, and repair maintenance for offices, apartments, industries, hospitals, and commercial properties."
+          content="Explore Acuity Groups services in Bangalore, including integrated facility management, housekeeping, security guards, manpower outsourcing, pest control, soft services and maintenance."
         />
 
         <meta
@@ -136,20 +138,23 @@ const Services = () => {
 
         <meta
           property="og:title"
-          content="Facility Management Services Bangalore | Acuity Groups"
+          content="Facility Management & Support Services in Bangalore | Acuity Groups"
         />
         <meta
           property="og:description"
           content="Acuity Groups offers integrated facility management, security, housekeeping, pest management, manpower outsourcing, and repair maintenance services across Bangalore."
         />
-        <meta property="og:url" content="https://www.acuitygroups.in/services" />
+        <meta
+          property="og:url"
+          content="https://www.acuitygroups.in/services"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Acuity Groups" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Facility Management Services in Bangalore | Acuity Groups"
+          content="Facility Management & Support Services in Bangalore | Acuity Groups"
         />
         <meta
           name="twitter:description"
@@ -208,7 +213,7 @@ const Services = () => {
 
         <div className="relative h-full flex flex-col items-center justify-center text-center text-white px-4">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold max-w-5xl leading-tight drop-shadow-lg">
-            Facility Management Services in Bangalore
+            Facility Management and Support Services in Bangalore
           </h1>
 
           <p className="text-lg md:text-xl max-w-3xl mx-auto text-gray-100 mt-5">

@@ -696,7 +696,7 @@ const ManpowerOutsourcingBlog = () => {
                   Get a free consultation for your workforce needs.
                 </p>
                 <Link
-                  to="/contactus"
+                  to="/contact"
                   className="block text-center bg-indigo-600 text-white py-2.5 rounded-full hover:bg-indigo-700 transition shadow"
                 >
                   Request a Quote
@@ -795,7 +795,7 @@ const ManpowerOutsourcingBlog = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-5">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="inline-flex items-center gap-2 bg-white text-indigo-800 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg"
               >
                 Contact Our Experts <ArrowRight size={18} />

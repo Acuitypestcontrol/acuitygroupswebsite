@@ -161,7 +161,8 @@ const PreventiveMaintenanceBlog = () => {
       icon: <Clock className="text-blue-600 w-6 h-6" />,
     },
     {
-      value: "15+", to:"/blogs",
+      value: "15+",
+      to: "/blogs",
       label: "Years Experience",
       icon: <Calendar className="text-blue-600 w-6 h-6" />,
     },
@@ -306,10 +307,7 @@ const PreventiveMaintenanceBlog = () => {
               </li>
               <li className="text-gray-400">/</li>
               <li>
-                <Link
-               to="/blogs"
-                  className="hover:text-blue-600 transition"
-                >
+                <Link to="/blogs" className="hover:text-blue-600 transition">
                   Blogs
                 </Link>
               </li>
@@ -564,7 +562,7 @@ const PreventiveMaintenanceBlog = () => {
                 </p>
                 <div className="mt-6 flex flex-wrap gap-4">
                   <Link
-                    to="/contactus"
+                    to="/contact"
                     className="inline-flex items-center gap-2 bg-white text-blue-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
                   >
                     Schedule Maintenance <ArrowRight size={18} />
@@ -694,7 +692,7 @@ const PreventiveMaintenanceBlog = () => {
                   Get a free consultation for your preventive maintenance needs.
                 </p>
                 <Link
-                  to="/contactus"
+                  to="/contact"
                   className="block text-center bg-blue-600 text-white py-2.5 rounded-full hover:bg-blue-700 transition shadow"
                 >
                   Request a Quote
@@ -793,7 +791,7 @@ const PreventiveMaintenanceBlog = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-5">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="inline-flex items-center gap-2 bg-white text-blue-800 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg"
               >
                 Contact Our Experts <ArrowRight size={18} />

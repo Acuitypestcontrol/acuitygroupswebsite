@@ -110,11 +110,11 @@ const SecurityServices = () => {
   return (
     <div className="bg-white text-gray-800 font-sans overflow-hidden">
       <Helmet>
-        <title>Security Services in Bangalore | Acuity Groups</title>
+        <title>Security Guard Services in Bangalore | Acuity Groups</title>
 
         <meta
           name="description"
-          content="Acuity Groups provides professional security services in Bangalore for offices, apartments, industries, hospitals and commercial properties."
+          content="Acuity Groups provides trained security guard services in Bangalore for offices, apartments, industries, hospitals, warehouses and commercial properties."
         />
 
         <meta
@@ -131,7 +131,7 @@ const SecurityServices = () => {
 
         <meta
           property="og:title"
-          content="Security Services in Bangalore | Acuity Groups"
+          content="Security Guard Services in Bangalore | Acuity Groups"
         />
         <meta
           property="og:description"
@@ -147,7 +147,7 @@ const SecurityServices = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Security Services in Bangalore | Acuity Groups"
+          content="Security Guard Services in Bangalore | Acuity Groups"
         />
         <meta
           name="twitter:description"
@@ -159,8 +159,8 @@ const SecurityServices = () => {
             "@context": "https://schema.org",
             "@type": "Service",
             "@id": "https://www.acuitygroups.in/security-services/#service",
-            name: "Security Services in Bangalore",
-            serviceType: "Security Services",
+            name: "Security Guard Services in Bangalore",
+            serviceType: "Security Guard Services",
             provider: {
               "@type": "LocalBusiness",
               name: "Acuity Groups",
@@ -242,7 +242,7 @@ const SecurityServices = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
-              Professional Security Services in Bangalore
+              Professional Security Guard Services in Bangalore
             </h1>
 
             <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-10">

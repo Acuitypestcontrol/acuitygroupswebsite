@@ -90,7 +90,7 @@ const SoftServices = () => {
 
         <meta
           name="description"
-          content="Acuity Groups provides soft services in Bangalore including housekeeping, cleaning, deep cleaning and washroom hygiene."
+          content="Acuity Groups provides facility soft services in Bangalore, including housekeeping, corporate cleaning, deep cleaning and washroom hygiene for offices, apartments and industries."
         />
 
         <meta
@@ -100,24 +100,30 @@ const SoftServices = () => {
 
         <meta name="robots" content="index, follow" />
 
-        <link rel="canonical" href="https://www.acuitygroups.in/soft-services" />
+        <link
+          rel="canonical"
+          href="https://www.acuitygroups.in/soft-services"
+        />
 
         <meta
           property="og:title"
-          content="Soft Services in Bangalore | Acuity Groups"
+          content="Facility Soft Services in Bangalore | Acuity Groups"
         />
         <meta
           property="og:description"
           content="Professional soft services in Bangalore including housekeeping, corporate cleaning, deep cleaning and washroom hygiene."
         />
-        <meta property="og:url" content="https://www.acuitygroups.in/soft-services" />
+        <meta
+          property="og:url"
+          content="https://www.acuitygroups.in/soft-services"
+        />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Acuity Groups" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Soft Services in Bangalore | Acuity Groups"
+          content="Facility Soft Services in Bangalore | Acuity Groups"
         />
         <meta
           name="twitter:description"
@@ -130,7 +136,7 @@ const SoftServices = () => {
             "@type": "Service",
             "@id": "https://www.acuitygroups.in/soft-services/#service",
             name: "Soft Services in Bangalore",
-            serviceType: "Soft Services",
+            serviceType: "Facility Soft Services",
             provider: {
               "@type": "LocalBusiness",
               name: "Acuity Groups",
@@ -149,7 +155,7 @@ const SoftServices = () => {
             },
             areaServed: "Bangalore",
             description:
-              "Professional soft services in Bangalore including housekeeping, corporate cleaning, deep cleaning and washroom hygiene.",
+              "Acuity Groups provides facility soft services in Bangalore, including housekeeping, corporate cleaning, deep cleaning and washroom hygiene for commercial, residential and industrial properties.",
             hasOfferCatalog: {
               "@type": "OfferCatalog",
               name: "Soft Services",

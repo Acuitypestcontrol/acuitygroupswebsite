@@ -580,7 +580,7 @@ const HotelFacilityManagementBlog = () => {
                 </p>
                 <div className="mt-6 flex flex-wrap gap-4">
                   <Link
-                    to="/contactus"
+                    to="/contact"
                     className="inline-flex items-center gap-2 bg-white text-amber-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
                   >
                     Partner With Us <ArrowRight size={18} />
@@ -704,7 +704,7 @@ const HotelFacilityManagementBlog = () => {
                   needs.
                 </p>
                 <Link
-                  to="/contactus"
+                  to="/contact"
                   className="block text-center bg-amber-600 text-white py-2.5 rounded-full hover:bg-amber-700 transition shadow"
                 >
                   Request a Quote
@@ -804,7 +804,7 @@ const HotelFacilityManagementBlog = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-5">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="inline-flex items-center gap-2 bg-white text-amber-800 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg"
               >
                 Contact Our Experts <ArrowRight size={18} />

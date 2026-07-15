@@ -5,7 +5,6 @@ import SoftServices1 from "../../images/softservices.jpg";
 
 import Pestcontrol from "../../images/sspestcontrol.jpg";
 import MAnpowerout from "../../images/manpowerout.webp";
-import LeadPopup from "../../components/popup";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import {
@@ -254,7 +253,6 @@ export default function Homepage() {
 
   return (
     <>
-      <LeadPopup />
 
       {/* Bangalore Areas Grid */}
       {/* <div className="bg-white rounded-2xl p-8 shadow-md">
@@ -279,16 +277,16 @@ export default function Homepage() {
       </div> */}
       <div className="bg-white text-black overflow-hidden font-['Poppins',system-ui,sans-serif]">
         <h1 className="sr-only">
-          Integrated Facility Management Services in Bangalore
+            Integrated Facility Management Company in Bangalore
         </h1>
         <Helmet>
           <title>
-            Integrated Facility Management Services in Bangalore | Acuity Groups
+            Integrated Facility Management Company in Bangalore | Acuity Groups
           </title>
 
           <meta
             name="description"
-            content="Acuity Groups offers facility management, security, housekeeping, pest control and manpower services in Bangalore."
+            content="Acuity Groups is an integrated facility management company in Bangalore providing housekeeping, security, manpower outsourcing, pest control, soft services, repair and maintenance."
           />
 
           <meta
@@ -302,7 +300,7 @@ export default function Homepage() {
 
           <meta
             property="og:title"
-            content="Integrated Facility Management Services in Bangalore | Acuity Groups"
+            content="Integrated Facility Management Company in Bangalore | Acuity Groups"
           />
           <meta
             property="og:description"
@@ -315,7 +313,7 @@ export default function Homepage() {
           <meta name="twitter:card" content="summary_large_image" />
           <meta
             name="twitter:title"
-            content="Integrated Facility Management Services in Bangalore | Acuity Groups"
+            content="Integrated Facility Management Company in Bangalore | Acuity Groups"
           />
           <meta
             name="twitter:description"

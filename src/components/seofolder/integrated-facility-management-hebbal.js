@@ -5,37 +5,37 @@ import { Helmet } from "react-helmet-async";
 import bannerImage from "../../images/hebbalb.jpg";
 import bannerImage1 from "../../images/hebbal.jpg";
 
-const PestControlHebbal = () => {
+const IntegratedFacilityManagementHebbal = () => {
   const services = [
     {
       title: "Apartment Housekeeping in Hebbal",
       desc: "Professional housekeeping services in Hebbal for apartments, gated communities, offices, hospitals, IT parks and commercial buildings.",
-      link: "/housekeeping",
+      link: "/housekeeping-services",
     },
     {
       title: "Security Services in Hebbal",
       desc: "Trained security guards in Hebbal for apartments, corporate offices, hospitals, commercial buildings and residential communities.",
-      link: "/securityservice",
+      link: "/security-services",
     },
     {
       title: "Pest Management in Hebbal",
       desc: "Complete pest management services in Hebbal including termite control, cockroach control, rodent control and mosquito treatment.",
-      link: "/pest",
+      link: "/pest-management",
     },
     {
       title: "Building Repair & Maintenance in Hebbal",
       desc: "Reliable repair and maintenance services in Hebbal for apartments, offices, hospitals, plumbing, carpentry and civil upkeep.",
-      link: "/repair",
+      link: "/repair-maintenance",
     },
     {
       title: "Electrical Maintenance in Hebbal",
       desc: "Preventive electrical maintenance in Hebbal for apartments, offices, commercial buildings, panels, wiring and facility systems.",
-      link: "/repair",
+      link: "/repair-maintenance",
     },
     {
       title: "Facility Manpower Outsourcing in Hebbal",
       desc: "Trained manpower outsourcing services in Hebbal for housekeeping, security, maintenance and facility support operations.",
-      link: "/manpower",
+      link: "/manpower-outsourcing",
     },
   ];
 
@@ -71,20 +71,21 @@ const PestControlHebbal = () => {
     <div className="bg-white text-gray-800">
       <Helmet>
         <title>
-          Integrated Facility Management Services in Hebbal Bangalore | Acuity
-          Groups
+          Integrated Facility Management Services in Hebbal | Acuity Groups
         </title>
         <meta
           name="description"
-          content="Integrated Facility Management Services in Hebbal Bangalore by Acuity Groups. Apartment housekeeping, office security, pest management, electrical maintenance, repair maintenance and manpower outsourcing for apartments, IT parks, hospitals and commercial properties."
+          content="Acuity Groups provides integrated facility management services in Hebbal for apartments, offices, IT parks, hospitals and commercial properties."
         />
+
+        <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
           content="Integrated Facility Management Services in Hebbal, Facility Management Company in Hebbal, Housekeeping Services in Hebbal, Security Services in Hebbal, Pest Control in Hebbal, Manpower Outsourcing in Hebbal, Electrical Maintenance in Hebbal"
         />
         <link
           rel="canonical"
-          href="https://www.acuitygroups.in/seofolder/hebbal"
+          href="https://www.acuitygroups.in/integrated-facility-management-hebbal"
         />
       </Helmet>
 
@@ -97,7 +98,7 @@ const PestControlHebbal = () => {
             </span>
 
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-              Facility Management Services in Hebbal Bangalore
+              Integrated Facility Management Services in Hebbal
             </h1>
 
             <p className="text-lg text-gray-700 leading-8 mb-6">
@@ -116,7 +117,7 @@ const PestControlHebbal = () => {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold"
               >
                 Get Free Quote
@@ -198,26 +199,35 @@ const PestControlHebbal = () => {
 
           <p className="text-lg text-gray-700 leading-8">
             Whether you need{" "}
-            <Link to="/housekeeping" className="text-blue-600 font-semibold">
+            <Link
+              to="/housekeeping-services"
+              className="text-blue-600 font-semibold"
+            >
               apartment housekeeping services
             </Link>
             ,{" "}
             <Link
-              to="/securityservice"
+              to="/security-services"
               className="text-blue-600 font-semibold"
             >
               office security guards
             </Link>
             ,{" "}
-            <Link to="/pest" className="text-blue-600 font-semibold">
+            <Link to="/pest-management" className="text-blue-600 font-semibold">
               pest control technicians
             </Link>
             ,{" "}
-            <Link to="/repair" className="text-blue-600 font-semibold">
+            <Link
+              to="/repair-maintenance"
+              className="text-blue-600 font-semibold"
+            >
               maintenance workers
             </Link>{" "}
             or{" "}
-            <Link to="/manpower" className="text-blue-600 font-semibold">
+            <Link
+              to="/manpower-outsourcing"
+              className="text-blue-600 font-semibold"
+            >
               facility manpower support
             </Link>
             , our team delivers reliable facility management services in Hebbal
@@ -298,7 +308,7 @@ const PestControlHebbal = () => {
         </p>
 
         <Link
-          to="/contactus"
+          to="/contact"
           className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-semibold"
         >
           Contact Us
@@ -308,4 +318,4 @@ const PestControlHebbal = () => {
   );
 };
 
-export default PestControlHebbal;
+export default IntegratedFacilityManagementHebbal;

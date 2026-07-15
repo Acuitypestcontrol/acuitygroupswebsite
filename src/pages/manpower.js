@@ -132,11 +132,13 @@ const ManpowerOutsourcing = () => {
   return (
     <div className="bg-white text-gray-800 font-sans overflow-hidden">
       <Helmet>
-        <title>Manpower Outsourcing Services in Bangalore | Acuity Groups</title>
+        <title>
+          Manpower Outsourcing Services in Bangalore | Acuity Groups
+        </title>
 
         <meta
           name="description"
-          content="Acuity Groups provides manpower outsourcing services in Bangalore for industries, offices, construction sites and facility operations."
+          content="Acuity Groups provides manpower outsourcing and supply services in Bangalore, including skilled, semi-skilled and unskilled staff with PF, ESI and payroll support."
         />
 
         <meta
@@ -201,7 +203,7 @@ const ManpowerOutsourcing = () => {
             },
             areaServed: "Bangalore",
             description:
-              "Professional manpower outsourcing services in Bangalore for industries, offices, construction sites, security and facility support operations.",
+              "Acuity Groups provides manpower outsourcing and supply services in Bangalore, including skilled, semi-skilled and unskilled workforce with PF, ESI, payroll and compliance support.",
             hasOfferCatalog: {
               "@type": "OfferCatalog",
               name: "Manpower Outsourcing Services",
@@ -322,13 +324,14 @@ const ManpowerOutsourcing = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
-              Professional Staffing for Every Need
+              Manpower Supply and Staffing Solutions for Every Need
             </h2>
 
             <p className="text-gray-600 text-lg leading-relaxed mb-5">
-              We provide trained manpower in Bangalore to support business
-              operations, maintenance, security, facility support, construction
-              and industrial work.
+              Acuity Groups provides skilled, semi-skilled and unskilled
+              manpower supply services in Bangalore for industries, offices,
+              warehouses, construction projects, security operations and
+              facility management.
             </p>
 
             <p className="text-gray-600 text-lg leading-relaxed">

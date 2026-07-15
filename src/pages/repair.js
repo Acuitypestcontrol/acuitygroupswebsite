@@ -113,7 +113,7 @@ const RepairMaintenance = () => {
 
         <meta
           name="description"
-          content="Acuity Groups provides repair and maintenance services in Bangalore for electrical, plumbing, carpentry and building maintenance."
+          content="Acuity Groups provides repair and maintenance services in Bangalore, including electrical, plumbing, carpentry and building maintenance for commercial and residential properties."
         />
 
         <meta
@@ -178,7 +178,7 @@ const RepairMaintenance = () => {
             },
             areaServed: "Bangalore",
             description:
-              "Professional repair and maintenance services in Bangalore including electrical, plumbing, carpentry and building maintenance.",
+              "Acuity Groups provides professional repair and maintenance services in Bangalore, including electrical, plumbing, carpentry, preventive maintenance and building upkeep.",
             hasOfferCatalog: {
               "@type": "OfferCatalog",
               name: "Repair and Maintenance Services",
@@ -298,12 +298,13 @@ const RepairMaintenance = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
-              Professional Repair & Maintenance
+              Professional Building Repair and Maintenance Solutions
             </h2>
 
             <p className="text-gray-600 text-lg leading-relaxed mb-5">
-              We provide complete repair and maintenance support in Bangalore to
-              ensure smooth functioning of your property and infrastructure.
+              Acuity Groups provides complete repair and maintenance services in
+              Bangalore for offices, apartments, commercial buildings,
+              industries, hospitals, hotels and warehouses.
             </p>
 
             <p className="text-gray-600 text-lg leading-relaxed">

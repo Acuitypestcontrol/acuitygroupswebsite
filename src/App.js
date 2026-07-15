@@ -204,7 +204,7 @@ export default function App() {
 
         {/* Old URL redirects */}
         <Route path="/homepage" element={<Navigate to="/" replace />} />
-        <Route path="/contactus" element={<Navigate to="/contact" replace />} />
+        <Route path="/contact" element={<Navigate to="/contact" replace />} />
         <Route
           path="/pages/servicepage"
           element={<Navigate to="/services" replace />}

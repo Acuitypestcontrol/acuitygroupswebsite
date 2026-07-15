@@ -5,37 +5,37 @@ import { Helmet } from "react-helmet-async";
 import bannerImage from "../../images/peenyampic.jpg";
 import bannerImage1 from "../../images/peenya.jpg";
 
-const PestControlPeenya = () => {
+const IntegratedFacilityManagementPeenya = () => {
   const services = [
     {
       title: "Industrial Housekeeping in Peenya",
       desc: "Professional industrial housekeeping services in Peenya for factories, production floors, warehouses, manufacturing units and industrial workspaces.",
-      link: "/housekeeping",
+      link: "/housekeeping-services",
     },
     {
       title: "Industrial Security Services in Peenya",
       desc: "Trained industrial security guards in Peenya for factory gates, warehouse security, visitor management, access control and night patrol support.",
-      link: "/securityservice",
+      link: "/security-services",
     },
     {
       title: "Pest Management in Peenya",
       desc: "Complete pest management services in Peenya for factories, warehouses, offices and commercial spaces including termite, rodent and cockroach control.",
-      link: "/pest",
+      link: "/pest-management",
     },
     {
       title: "Factory Repair & Maintenance in Peenya",
       desc: "Reliable repair and maintenance services in Peenya for factory buildings, warehouses, plumbing, carpentry and civil maintenance requirements.",
-      link: "/repair",
+      link: "/repair-maintenance",
     },
     {
       title: "Electrical Maintenance in Peenya",
       desc: "Preventive electrical maintenance in Peenya for factories, industrial panels, wiring systems, commercial buildings and warehouse facilities.",
-      link: "/repair",
+      link: "/repair-maintenance",
     },
     {
       title: "Industrial Manpower Outsourcing in Peenya",
       desc: "Skilled, semi-skilled and unskilled manpower outsourcing services in Peenya for manufacturing units, warehouses and industrial operations.",
-      link: "/manpower",
+      link: "/manpower-outsourcing",
     },
   ];
 
@@ -71,20 +71,21 @@ const PestControlPeenya = () => {
     <div className="bg-white text-gray-800">
       <Helmet>
         <title>
-          Integrated Facility Management Services in Peenya Bangalore | Acuity
-          Groups
+          Integrated Facility Management Services in Peenya | Acuity Groups
         </title>
         <meta
           name="description"
-          content="Integrated Facility Management Services in Peenya Bangalore by Acuity Groups. Industrial housekeeping, industrial security, pest management, electrical maintenance, repair maintenance and manpower outsourcing for factories, warehouses and manufacturing units."
+          content="Acuity Groups provides integrated facility management services in Peenya for factories, warehouses, manufacturing units and industrial properties."
         />
+
+        <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
           content="Integrated Facility Management Services in Peenya, Facility Management Company in Peenya, Industrial Housekeeping in Peenya, Industrial Security Services in Peenya, Pest Control in Peenya, Manpower Outsourcing in Peenya, Electrical Maintenance in Peenya"
         />
         <link
           rel="canonical"
-          href="https://www.acuitygroups.in/seofolder/peenya"
+          href="https://www.acuitygroups.in/integrated-facility-management-peenya"
         />
       </Helmet>
 
@@ -99,7 +100,7 @@ const PestControlPeenya = () => {
             </span>
 
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-              Facility Management Services in Peenya Bangalore
+              Integrated Facility Management Services in Peenya
             </h1>
 
             <p className="text-lg text-gray-700 leading-8 mb-6">
@@ -117,7 +118,7 @@ const PestControlPeenya = () => {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold"
               >
                 Get Free Quote
@@ -198,23 +199,32 @@ const PestControlPeenya = () => {
             safety, cleanliness, maintenance and smooth daily operations.
           </p>
           Whether you need{" "}
-          <Link to="/housekeeping" className="text-blue-600 font-semibold">
+          <Link
+            to="/housekeeping-services"
+            className="text-blue-600 font-semibold"
+          >
             industrial housekeeping services
           </Link>
           ,{" "}
-          <Link to="/securityservice" className="text-blue-600 font-semibold">
+          <Link to="/security-services" className="text-blue-600 font-semibold">
             factory security guards
           </Link>
           ,{" "}
-          <Link to="/pest" className="text-blue-600 font-semibold">
+          <Link to="/pest-management" className="text-blue-600 font-semibold">
             pest control technicians
           </Link>
           ,{" "}
-          <Link to="/repair" className="text-blue-600 font-semibold">
+          <Link
+            to="/repair-maintenance"
+            className="text-blue-600 font-semibold"
+          >
             maintenance workers
           </Link>{" "}
           or{" "}
-          <Link to="/manpower" className="text-blue-600 font-semibold">
+          <Link
+            to="/manpower-outsourcing"
+            className="text-blue-600 font-semibold"
+          >
             manpower support
           </Link>
           , our team delivers reliable facility management services in Peenya
@@ -295,7 +305,7 @@ const PestControlPeenya = () => {
         </p>
 
         <Link
-          to="/contactus"
+          to="/contact"
           className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-semibold"
         >
           Contact Us
@@ -305,4 +315,4 @@ const PestControlPeenya = () => {
   );
 };
 
-export default PestControlPeenya;
+export default IntegratedFacilityManagementPeenya;

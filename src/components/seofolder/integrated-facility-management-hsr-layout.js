@@ -10,32 +10,32 @@ const IntegratedFacilityManagementHSRLayout = () => {
     {
       title: "Apartment Housekeeping in HSR Layout",
       desc: "Professional housekeeping services in HSR Layout for apartments, gated communities, offices, clinics, restaurants and retail outlets.",
-      link: "/housekeeping",
+      link: "/housekeeping-services",
     },
     {
       title: "Security Services in HSR Layout",
       desc: "Trained security guards in HSR Layout for apartments, commercial buildings, offices, clinics, restaurants and residential communities.",
-      link: "/securityservice",
+      link: "/security-services",
     },
     {
       title: "Pest Management in HSR Layout",
       desc: "Complete pest management services in HSR Layout including termite control, cockroach control, rodent control and mosquito treatment.",
-      link: "/pest",
+      link: "/pest-management",
     },
     {
       title: "Building Repair & Maintenance in HSR Layout",
       desc: "Reliable repair and maintenance services in HSR Layout for apartments, offices, retail spaces, plumbing, carpentry and civil upkeep.",
-      link: "/repair",
+      link: "/repair-maintenance",
     },
     {
       title: "Electrical Maintenance in HSR Layout",
       desc: "Preventive electrical maintenance in HSR Layout for apartments, commercial buildings, restaurants, clinics, panels and wiring systems.",
-      link: "/repair",
+      link: "/repair-maintenance",
     },
     {
       title: "Facility Manpower Outsourcing in HSR Layout",
       desc: "Trained manpower outsourcing services in HSR Layout for housekeeping, security, maintenance and daily facility support operations.",
-      link: "/manpower",
+      link: "/manpower-outsourcing",
     },
   ];
 
@@ -71,13 +71,13 @@ const IntegratedFacilityManagementHSRLayout = () => {
     <div className="bg-white text-gray-800">
       <Helmet>
         <title>
-          Integrated Facility Management Services in HSR Layout Bangalore |
-          Acuity Groups
+          Integrated Facility Management Services in HSR Layout | Acuity Groups
         </title>
         <meta
           name="description"
-          content="Integrated Facility Management Services in HSR Layout Bangalore by Acuity Groups. Apartment housekeeping, security services, pest management, electrical maintenance, repair maintenance and manpower outsourcing for apartments, offices, clinics, restaurants and commercial properties."
+          content="Acuity Groups provides integrated facility management services in HSR Layout for apartments, offices, clinics, restaurants and commercial properties."
         />
+        <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
           content="Integrated Facility Management Services in HSR Layout, Facility Management Company in HSR Layout, Housekeeping Services in HSR Layout, Security Services in HSR Layout, Pest Control in HSR Layout, Manpower Outsourcing in HSR Layout, Electrical Maintenance in HSR Layout"
@@ -97,7 +97,7 @@ const IntegratedFacilityManagementHSRLayout = () => {
             </span>
 
             <h1 className="text-5xl font-bold text-blue-900 mb-6 leading-tight">
-              Facility Management Services in HSR Layout Bangalore
+              Integrated Facility Management Services in HSR Layout
             </h1>
 
             <p className="text-lg text-gray-700 leading-8 mb-6">
@@ -109,7 +109,7 @@ const IntegratedFacilityManagementHSRLayout = () => {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold"
               >
                 Get Free Quote
@@ -191,26 +191,35 @@ const IntegratedFacilityManagementHSRLayout = () => {
 
           <p className="text-lg text-gray-700 leading-8">
             Whether you need{" "}
-            <Link to="/housekeeping" className="text-blue-600 font-semibold">
+            <Link
+              to="/housekeeping-services"
+              className="text-blue-600 font-semibold"
+            >
               apartment housekeeping services
             </Link>
             ,{" "}
             <Link
-              to="/securityservice"
+              to="/security-services"
               className="text-blue-600 font-semibold"
             >
               security guards
             </Link>
             ,{" "}
-            <Link to="/pest" className="text-blue-600 font-semibold">
+            <Link to="/pest-management" className="text-blue-600 font-semibold">
               pest control technicians
             </Link>
             ,{" "}
-            <Link to="/repair" className="text-blue-600 font-semibold">
+            <Link
+              to="/repair-maintenance"
+              className="text-blue-600 font-semibold"
+            >
               maintenance workers
             </Link>{" "}
             or{" "}
-            <Link to="/manpower" className="text-blue-600 font-semibold">
+            <Link
+              to="/manpower-outsourcing"
+              className="text-blue-600 font-semibold"
+            >
               facility manpower support
             </Link>
             , our team delivers reliable facility management services in HSR
@@ -291,7 +300,7 @@ const IntegratedFacilityManagementHSRLayout = () => {
         </p>
 
         <Link
-          to="/contactus"
+          to="/contact"
           className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-semibold"
         >
           Contact Us

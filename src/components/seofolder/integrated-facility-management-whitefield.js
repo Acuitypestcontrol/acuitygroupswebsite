@@ -10,32 +10,32 @@ const IntegratedFacilityManagementWhitefield = () => {
     {
       title: "IT Park Housekeeping in Whitefield",
       desc: "Professional housekeeping services in Whitefield for IT parks, corporate offices, commercial complexes, apartments and healthcare facilities.",
-      link: "/housekeeping",
+      link: "/housekeeping-services",
     },
     {
       title: "Security Services in Whitefield",
       desc: "Trained security guards in Whitefield for IT parks, apartments, offices, hospitals, commercial buildings and gated communities.",
-      link: "/securityservice",
+      link: "/security-services",
     },
     {
       title: "Pest Management in Whitefield",
       desc: "Complete pest management services in Whitefield including termite control, cockroach control, rodent control and mosquito treatment.",
-      link: "/pest",
+      link: "/pest-management",
     },
     {
       title: "Repair & Maintenance in Whitefield",
       desc: "Reliable repair and maintenance services in Whitefield for IT parks, apartments, offices, hospitals, plumbing, carpentry and civil upkeep.",
-      link: "/repair",
+      link: "/repair-maintenance",
     },
     {
       title: "Electrical Maintenance in Whitefield",
       desc: "Preventive electrical maintenance in Whitefield for IT parks, commercial buildings, apartments, panels, wiring and facility systems.",
-      link: "/repair",
+      link: "/repair-maintenance",
     },
     {
       title: "Facility Manpower Outsourcing in Whitefield",
       desc: "Trained manpower outsourcing services in Whitefield for housekeeping, security, maintenance and daily facility support operations.",
-      link: "/corporate-staffing",
+      link: "/manpower-outsourcing",
     },
   ];
 
@@ -71,13 +71,13 @@ const IntegratedFacilityManagementWhitefield = () => {
     <div className="bg-white text-gray-800">
       <Helmet>
         <title>
-          Integrated Facility Management Services in Whitefield Bangalore |
-          Acuity Groups
+          Integrated Facility Management Services in Whitefield | Acuity Groups
         </title>
         <meta
           name="description"
-          content="Integrated Facility Management Services in Whitefield Bangalore by Acuity Groups. IT park housekeeping, security services, pest management, electrical maintenance, repair maintenance and manpower outsourcing for IT parks, apartments, hospitals and commercial properties."
+          content="Acuity Groups provides integrated facility management services in Whitefield for IT parks, offices, apartments, hospitals and commercial properties."
         />
+        <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
           content="Integrated Facility Management Services in Whitefield, Facility Management Company in Whitefield, Housekeeping Services in Whitefield, Security Services in Whitefield, Pest Control in Whitefield, Manpower Outsourcing in Whitefield, Electrical Maintenance in Whitefield"
@@ -97,7 +97,7 @@ const IntegratedFacilityManagementWhitefield = () => {
             </span>
 
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-              Facility Management Services in Whitefield Bangalore
+              Integrated Facility Management Services in Whitefield
             </h1>
 
             <p className="text-lg text-gray-700 leading-8 mb-6">
@@ -116,7 +116,7 @@ const IntegratedFacilityManagementWhitefield = () => {
 
             <div className="flex flex-wrap gap-4">
               <Link
-                to="/contactus"
+                to="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold"
               >
                 Get Free Quote
@@ -198,27 +198,33 @@ const IntegratedFacilityManagementWhitefield = () => {
 
           <p className="text-lg text-gray-700 leading-8">
             Whether you need{" "}
-            <Link to="/housekeeping" className="text-blue-600 font-semibold">
+            <Link
+              to="/housekeeping-services"
+              className="text-blue-600 font-semibold"
+            >
               office housekeeping services
             </Link>
             ,{" "}
             <Link
-              to="/securityservice"
+              to="/security-services"
               className="text-blue-600 font-semibold"
             >
               trained security guards
             </Link>
             ,{" "}
-            <Link to="/pest" className="text-blue-600 font-semibold">
+            <Link to="/pest-management" className="text-blue-600 font-semibold">
               pest control technicians
             </Link>
             ,{" "}
-            <Link to="/repair" className="text-blue-600 font-semibold">
+            <Link
+              to="/repair-maintenance"
+              className="text-blue-600 font-semibold"
+            >
               maintenance workers
             </Link>{" "}
             or{" "}
             <Link
-              to="/corporate-staffing"
+              to="/manpower-outsourcing"
               className="text-blue-600 font-semibold"
             >
               facility manpower support
@@ -301,7 +307,7 @@ const IntegratedFacilityManagementWhitefield = () => {
         </p>
 
         <Link
-          to="/contactus"
+          to="/contact"
           className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-semibold"
         >
           Contact Us
