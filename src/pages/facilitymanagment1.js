@@ -133,7 +133,9 @@ const FacilityManagement = () => {
     <div className="bg-white text-gray-800 font-sans overflow-hidden">
       <Helmet>
         <title>
-          Integrated Facility Management Services in Bangalore | Acuity Groups
+          <title>
+            Integrated Facility Management Company in Bangalore | Acuity Groups
+          </title>
         </title>
 
         <meta
@@ -267,14 +269,14 @@ const FacilityManagement = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
-              Integrated Facility Management Services in Bangalore
+              Integrated Facility Management Company in Bangalore
             </h1>
 
             <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-10">
               Acuity Groups provides complete facility management solutions for
               commercial, residential, industrial, and corporate properties with
-              professional operational support, maintenance planning, and trained
-              service teams.
+              professional operational support, maintenance planning, and
+              trained service teams.
             </p>
 
             <div className="flex flex-wrap gap-4">
