@@ -253,7 +253,6 @@ export default function Homepage() {
 
   return (
     <>
-
       {/* Bangalore Areas Grid */}
       {/* <div className="bg-white rounded-2xl p-8 shadow-md">
         <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
@@ -277,7 +276,7 @@ export default function Homepage() {
       </div> */}
       <div className="bg-white text-black overflow-hidden font-['Poppins',system-ui,sans-serif]">
         <h1 className="sr-only">
-            Integrated Facility Management Company in Bangalore
+          Integrated Facility Management Company in Bangalore
         </h1>
         <Helmet>
           <title>
@@ -489,14 +488,18 @@ export default function Homepage() {
               </p>
               <h2 className="text-4xl md:text-6xl font-black text-gray-900 leading-tight mb-8">
                 Trusted
-                <span className="text-blue-900"> Facility Management </span>&
-                Security Services Company
+                <span className="text-blue-900">
+                  {" "}
+                  Integrated Facility Management{" "}
+                </span>
+                & Services in Bangalore
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                Acuity Groups is one of the leading facility management and
-                security service providers in India, delivering reliable,
-                professional and cost-effective solutions for residential,
-                commercial and industrial spaces.
+                Acuity Groups provides integrated facility management services
+                in Bangalore, including housekeeping, security guards, manpower
+                outsourcing, pest control, soft services, electrical maintenance
+                and repair services for residential, commercial and industrial
+                properties.
               </p>
               <p className="text-gray-500 text-lg leading-relaxed mb-8">
                 We specialize in integrated facility management services
