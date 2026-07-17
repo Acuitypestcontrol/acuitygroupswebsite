@@ -95,6 +95,11 @@
       "source": "/blogs/mps",
       "destination": "/blogs/manpower-outsourcing",
       "permanent": true
+    },
+    {
+      "source": "/blogs/why-integrated-facility-management",
+      "destination": "/blogs/professional-security-services",
+      "permanent": true
     }
   ],
   "rewrites": [

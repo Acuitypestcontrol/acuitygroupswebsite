@@ -131,7 +131,7 @@ export default function App() {
         <Route path="/blogs/learn-how" element={<Learnhow />} />
         <Route path="/blogs/unleash-design" element={<UnleashDesigne />} />
         <Route
-          path="/blogs/why-integrated-facility-management"
+          path="/blogs/professional-security-services"
           element={<WhyIntegrated />}
         />
         <Route
@@ -204,7 +204,7 @@ export default function App() {
 
         {/* Old URL redirects */}
         <Route path="/homepage" element={<Navigate to="/" replace />} />
-       
+
         <Route
           path="/pages/servicepage"
           element={<Navigate to="/services" replace />}

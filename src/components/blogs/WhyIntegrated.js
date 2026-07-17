@@ -50,7 +50,7 @@ const SecurityServicesBlog = () => {
   };
 
   const shareUrl = encodeURIComponent(
-    "https://www.acuitygroups.in/blogs/why-integrated-facility-management",
+    "https://www.acuitygroups.in/blogs/professional-security-services",
   );
   const shareTitle = encodeURIComponent(
     "Why Every Business Needs Professional Security Services | Acuity Groups",
@@ -85,7 +85,7 @@ const SecurityServicesBlog = () => {
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id":
-        "https://www.acuitygroups.in/blogs/why-integrated-facility-management",
+        "https://www.acuitygroups.in/blogs/professional-security-services",
     },
   };
 
@@ -140,7 +140,7 @@ const SecurityServicesBlog = () => {
         "@type": "ListItem",
         position: 3,
         name: "Security Services",
-        item: "https://www.acuitygroups.in/blogs/why-integrated-facility-management",
+        item: "https://www.acuitygroups.in/blogs/professional-security-services",
       },
     ],
   };
@@ -173,7 +173,7 @@ const SecurityServicesBlog = () => {
       <Helmet>
         <link
           rel="canonical"
-          href="https://www.acuitygroups.in/blogs/why-integrated-facility-management"
+          href="https://www.acuitygroups.in/blogs/professional-security-services"
         />
         <title>
           Why Every Business Needs Professional Security Services | Acuity
@@ -194,7 +194,7 @@ const SecurityServicesBlog = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://www.acuitygroups.in/blogs/why-integrated-facility-management"
+          content="https://www.acuitygroups.in/blogs/professional-security-services"
         />
         <meta
           property="og:title"
@@ -407,9 +407,17 @@ const SecurityServicesBlog = () => {
               <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
                 <p className="text-xl text-gray-700 leading-relaxed border-l-4 border-red-500 pl-5 italic">
                   Security is one of the most important aspects of any business.
-                  Whether you operate an office, retail store, hotel, hospital,
+                  Whether you operate an office, retail store, hotel, hospital
                   or industrial facility, professional security services help
-                  protect people, assets, and operations from potential risks.
+                  protect people, assets and operations from potential risks.
+                  Security is also an important part of our{" "}
+                  <Link
+                    to="/integrated-facility-management"
+                    className="font-semibold text-red-700 underline hover:text-red-800"
+                  >
+                    integrated facility management services in Bangalore
+                  </Link>
+                  .
                 </p>
               </div>
 
@@ -557,20 +565,12 @@ const SecurityServicesBlog = () => {
                   customized security solutions ensure safety, compliance, and
                   peace of mind.
                 </p>
-                <div className="flex flex-wrap gap-4">
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center gap-2 bg-white text-red-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg"
-                  >
-                    Get a Free Consultation <ArrowRight size={18} />
-                  </Link>
-                  <Link
-                    to="/services"
-                    className="inline-flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition"
-                  >
-                    Explore Services
-                  </Link>
-                </div>
+                <Link
+                  to="/integrated-facility-management"
+                  className="inline-flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition"
+                >
+                  Explore Facility Management
+                </Link>
               </div>
 
               {/* Conclusion */}

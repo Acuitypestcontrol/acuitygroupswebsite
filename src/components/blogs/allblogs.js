@@ -92,7 +92,7 @@ const blogs = [
     description:
       "Discover how professional security services protect businesses, employees, assets, and customers while ensuring a safe working environment.",
     image: Security,
-    link: "/blogs/WhyIntegrated",
+    link: "/blogs/professional-security-services",
   },
   {
     title: "Facility Management: A Cornerstone of Property Optimization",
@@ -167,7 +167,10 @@ const popularTopics = [
     name: "Professional Housekeeping Services",
     link: "/blogs/HousekeepingServices",
   },
-  { name: "Professional Security Services", link: "/blogs/WhyIntegrated" },
+  {
+    name: "Professional Security Services",
+    link: "/blogs/professional-security-services",
+  },
   { name: "Pest Control for Businesses", link: "/blogs/WhyRegularPest" },
   { name: "Manpower Outsourcing Benefits", link: "/blogs/mps" },
   { name: "Preventive Maintenance", link: "/blogs/RepairingMaintenance" },
