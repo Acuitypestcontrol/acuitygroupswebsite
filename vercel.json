@@ -2,6 +2,11 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
+      "source": "/homepage",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/facilitymanagment1",
       "destination": "/integrated-facility-management",
       "permanent": true
@@ -12,13 +17,83 @@
       "permanent": true
     },
     {
+      "source": "/pages/servicepage",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
       "source": "/contactus",
       "destination": "/contact",
       "permanent": true
     },
     {
+      "source": "/Securityservice",
+      "destination": "/security-services",
+      "permanent": true
+    },
+    {
+      "source": "/Housekeeping",
+      "destination": "/housekeeping-services",
+      "permanent": true
+    },
+    {
+      "source": "/repair",
+      "destination": "/repair-maintenance",
+      "permanent": true
+    },
+    {
       "source": "/pest",
       "destination": "/pest-management",
+      "permanent": true
+    },
+    {
+      "source": "/manpower",
+      "destination": "/manpower-outsourcing",
+      "permanent": true
+    },
+    {
+      "source": "/softservices",
+      "destination": "/soft-services",
+      "permanent": true
+    },
+    {
+      "source": "/career/pestcareer",
+      "destination": "/career/pest-control",
+      "permanent": true
+    },
+    {
+      "source": "/career/acuitygroups",
+      "destination": "/career/acuity-groups",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/allblogs",
+      "destination": "/blogs",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/cockroaches",
+      "destination": "/blogs/cockroach-control",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/termite",
+      "destination": "/blogs/termite-control",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/mosquito",
+      "destination": "/blogs/mosquito-prevention",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/facilitymanagment",
+      "destination": "/integrated-facility-management",
+      "permanent": true
+    },
+    {
+      "source": "/blogs/mps",
+      "destination": "/blogs/manpower-outsourcing",
       "permanent": true
     }
   ],
