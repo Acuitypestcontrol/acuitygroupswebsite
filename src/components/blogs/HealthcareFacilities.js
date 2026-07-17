@@ -58,7 +58,7 @@ const HealthcareFacilityManagementBlog = () => {
 
   const shareUrl = encodeURIComponent(pageUrl);
   const shareTitle = encodeURIComponent(
-    "The Importance of Facility Management in Healthcare Facilities | Acuity Groups"
+    "The Importance of Facility Management in Healthcare Facilities | Acuity Groups",
   );
 
   const tocSections = [
@@ -366,7 +366,7 @@ const HealthcareFacilityManagementBlog = () => {
                       onClick={() =>
                         window.open(
                           `https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`,
-                          "_blank"
+                          "_blank",
                         )
                       }
                       className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-500"
@@ -379,7 +379,7 @@ const HealthcareFacilityManagementBlog = () => {
                       onClick={() =>
                         window.open(
                           `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareTitle}`,
-                          "_blank"
+                          "_blank",
                         )
                       }
                       className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-700"
@@ -392,7 +392,7 @@ const HealthcareFacilityManagementBlog = () => {
                       onClick={() =>
                         window.open(
                           `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`,
-                          "_blank"
+                          "_blank",
                         )
                       }
                       className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-600"
@@ -516,8 +516,9 @@ const HealthcareFacilityManagementBlog = () => {
                 <p className="text-gray-700 leading-relaxed">
                   Healthcare facilities need consistent hygiene, safety and
                   service standards. Professional facility management helps
-                  maintain cleaning schedules, manpower coordination, maintenance
-                  support and routine checks for smoother operations.
+                  maintain cleaning schedules, manpower coordination,
+                  maintenance support and routine checks for smoother
+                  operations.
                 </p>
               </div>
 
@@ -583,8 +584,8 @@ const HealthcareFacilityManagementBlog = () => {
                 </h2>
 
                 <p className="text-teal-100 leading-relaxed text-lg">
-                  Acuity Groups provides professional facility management support
-                  for hospitals, clinics and healthcare properties. From
+                  Acuity Groups provides professional facility management
+                  support for hospitals, clinics and healthcare properties. From
                   housekeeping and maintenance to security and manpower support,
                   our team helps maintain smooth day-to-day operations.
                 </p>
@@ -709,7 +710,7 @@ const HealthcareFacilityManagementBlog = () => {
                     </div>
 
                     <Link
-                      to="/blogs/why-integrated-facility-management"
+                      to="/blogs/professional-security-services"
                       className="text-teal-600 group-hover:text-teal-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
                       Why Integrated Facility Management Matters

@@ -58,7 +58,7 @@ const ProfessionalHousekeepingBlog = () => {
 
   const shareUrl = encodeURIComponent(pageUrl);
   const shareTitle = encodeURIComponent(
-    "Professional Housekeeping Services in Commercial Spaces | Acuity Groups"
+    "Professional Housekeeping Services in Commercial Spaces | Acuity Groups",
   );
 
   const tocSections = [
@@ -156,7 +156,7 @@ const ProfessionalHousekeepingBlog = () => {
     },
     {
       title: "Why Integrated Facility Management Matters",
-      link: "/blogs/why-integrated-facility-management",
+      link: "/blogs/professional-security-services",
       image: House3,
     },
     {
@@ -192,7 +192,9 @@ const ProfessionalHousekeepingBlog = () => {
   return (
     <>
       <Helmet>
-        <title>Professional Housekeeping Services | Acuity Groups Bangalore</title>
+        <title>
+          Professional Housekeeping Services | Acuity Groups Bangalore
+        </title>
 
         <meta
           name="description"
@@ -387,7 +389,7 @@ const ProfessionalHousekeepingBlog = () => {
                       onClick={() =>
                         window.open(
                           `https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`,
-                          "_blank"
+                          "_blank",
                         )
                       }
                       className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-500"
@@ -400,7 +402,7 @@ const ProfessionalHousekeepingBlog = () => {
                       onClick={() =>
                         window.open(
                           `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareTitle}`,
-                          "_blank"
+                          "_blank",
                         )
                       }
                       className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-700"
@@ -413,7 +415,7 @@ const ProfessionalHousekeepingBlog = () => {
                       onClick={() =>
                         window.open(
                           `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`,
-                          "_blank"
+                          "_blank",
                         )
                       }
                       className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-600"
@@ -431,9 +433,9 @@ const ProfessionalHousekeepingBlog = () => {
               <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
                 <p className="text-xl text-gray-700 leading-relaxed border-l-4 border-green-500 pl-5 italic">
                   A clean and organized workplace is important for employee
-                  well-being, customer satisfaction and overall business success.
-                  Professional housekeeping services help businesses maintain
-                  hygienic, safe and welcoming environments.
+                  well-being, customer satisfaction and overall business
+                  success. Professional housekeeping services help businesses
+                  maintain hygienic, safe and welcoming environments.
                 </p>
               </div>
 

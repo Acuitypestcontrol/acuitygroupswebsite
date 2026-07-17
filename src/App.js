@@ -301,7 +301,7 @@ export default function App() {
         <Route
           path="/blogs/WhyIntegrated"
           element={
-            <Navigate to="/blogs/why-integrated-facility-management" replace />
+            <Navigate to="/blogs/professional-security-services" replace />
           }
         />
         <Route
