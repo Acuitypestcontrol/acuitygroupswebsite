@@ -9,7 +9,6 @@ import {
 import Navbar from "./global/navbar";
 import Footer from "./global/footer";
 import ScrollToTop from "../src/components/Scrolltop";
-
 import Home from "./components/Home/homepage";
 import Aboutus from "./components/about us/aboutus";
 import Contact from "./components/contactus/contactus";
@@ -50,7 +49,7 @@ import ImportanceofFacility from "./components/blogs/ImportanceofFacility";
 import EducationIndustry from "./components/blogs/EducationIndustry";
 import ManufacturingIndustry from "./components/blogs/ManufacturingIndustry";
 import HotelsHospitality from "./components/blogs/HotelsHospitality";
-
+import FacilityManagementBlog from "./components/blogs/facilitymanagment";
 import Whitefield from "./components/seofolder/integrated-facility-management-whitefield";
 import ElectronicCity from "./components/seofolder/integrated-facility-management-electronic-city";
 import Koramangala from "./components/seofolder/integrated-facility-management-koramangala";
@@ -278,7 +277,7 @@ export default function App() {
         />
         <Route
           path="/blogs/facilitymanagment"
-          element={<Navigate to="/integrated-facility-management" replace />}
+          element={<FacilityManagementBlog />}
         />
         <Route
           path="/blogs/FromFunction"

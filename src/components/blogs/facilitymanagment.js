@@ -428,12 +428,12 @@ const FacilityManagementBlog = () => {
 
                 <p className="text-gray-700 leading-relaxed mb-6">
                   Choose Acuity Groups as your{" "}
-                  <Link
-                    to="/"
+                  <a
+                    href="https://www.acuitygroups.in/"
                     className="font-semibold text-green-700 underline hover:text-green-800"
                   >
                     Integrated Facility Management Company in Bangalore
-                  </Link>
+                  </a>
                   . We provide comprehensive solutions for businesses,
                   residential complexes, industrial facilities and commercial
                   properties.
