@@ -547,13 +547,17 @@ export default function Homepage() {
             <p className="mb-5 font-light uppercase tracking-[5px] text-black">
               Trusted Facility Management Partner
             </p>
-
             <p className="mb-8 text-lg leading-relaxed text-gray-600">
-              Acuity Groups provides integrated facility management services in
-              Bangalore, including housekeeping, security guards, manpower
-              outsourcing, pest control, soft services, electrical maintenance
-              and repair services for residential, commercial and industrial
-              properties.
+              Acuity Groups provides{" "}
+              <Link
+                to="/integrated-facility-management"
+                className="font-semibold text-blue-900 underline hover:text-blue-700"
+              >
+                integrated facility management services in Bangalore
+              </Link>
+              , including housekeeping, security guards, manpower outsourcing,
+              pest control, soft services, electrical maintenance and repair
+              services for residential, commercial and industrial properties.
             </p>
 
             <p className="mb-8 text-lg leading-relaxed text-gray-500">
