@@ -202,9 +202,7 @@ const FacilityManagementBlog = () => {
           {JSON.stringify(articleData)}
         </script>
 
-        <script type="application/ld+json">
-          {JSON.stringify(faqData)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(faqData)}</script>
 
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema)}
@@ -308,10 +306,10 @@ const FacilityManagementBlog = () => {
               <div className="bg-white rounded-2xl shadow-md p-6 md:p-8">
                 <p className="text-xl text-gray-700 leading-relaxed">
                   Facility management is a critical discipline that includes the
-                  planning, coordination and control of physical resources needed
-                  to support daily operations. It covers building maintenance,
-                  cleaning, security, pest management, energy efficiency and
-                  workplace support.
+                  planning, coordination and control of physical resources
+                  needed to support daily operations. It covers building
+                  maintenance, cleaning, security, pest management, energy
+                  efficiency and workplace support.
                 </p>
               </div>
 
@@ -338,9 +336,10 @@ const FacilityManagementBlog = () => {
 
                 <p className="text-gray-700 leading-relaxed">
                   Facility management ensures that buildings, infrastructure and
-                  workplace environments operate efficiently. It combines people,
-                  processes and technology to create safe, productive and
-                  cost-effective environments for businesses and property owners.
+                  workplace environments operate efficiently. It combines
+                  people, processes and technology to create safe, productive
+                  and cost-effective environments for businesses and property
+                  owners.
                 </p>
               </div>
 
@@ -368,8 +367,8 @@ const FacilityManagementBlog = () => {
                       Asset Preservation
                     </h3>
                     <p className="text-gray-600">
-                      Regular inspections and maintenance help extend the life of
-                      equipment, infrastructure and property assets.
+                      Regular inspections and maintenance help extend the life
+                      of equipment, infrastructure and property assets.
                     </p>
                   </div>
 
@@ -428,9 +427,16 @@ const FacilityManagementBlog = () => {
                 </h2>
 
                 <p className="text-gray-700 leading-relaxed mb-6">
-                  Acuity Groups provides comprehensive facility management
-                  solutions for businesses, residential complexes, industrial
-                  facilities and commercial properties in Bangalore.
+                  Choose Acuity Groups as your{" "}
+                  <Link
+                    to="/"
+                    className="font-semibold text-green-700 underline hover:text-green-800"
+                  >
+                    Integrated Facility Management Company in Bangalore
+                  </Link>
+                  . We provide comprehensive solutions for businesses,
+                  residential complexes, industrial facilities and commercial
+                  properties.
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-4">
@@ -516,10 +522,10 @@ const FacilityManagementBlog = () => {
 
                 <p className="text-green-50 text-lg leading-relaxed">
                   Facility management plays a vital role in maintaining
-                  efficient, safe and productive environments. By partnering with
-                  Acuity Groups, property owners can improve service quality,
-                  reduce costs, preserve assets and enhance long-term property
-                  value.
+                  efficient, safe and productive environments. By partnering
+                  with Acuity Groups, property owners can improve service
+                  quality, reduce costs, preserve assets and enhance long-term
+                  property value.
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-4">
@@ -531,10 +537,10 @@ const FacilityManagementBlog = () => {
                   </Link>
 
                   <Link
-                    to="/services"
+                    to="/integrated-facility-management"
                     className="inline-flex items-center gap-2 border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition"
                   >
-                    Explore Services
+                    Explore Facility Management Services
                   </Link>
                 </div>
               </div>
@@ -593,8 +599,8 @@ const FacilityManagementBlog = () => {
                             idx === 0
                               ? Fm
                               : idx === 1
-                              ? Dicipline
-                              : FacilityManagement
+                                ? Dicipline
+                                : FacilityManagement
                           }
                           alt={blog.title}
                           className="w-full h-full object-cover"
