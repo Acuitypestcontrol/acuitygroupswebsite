@@ -31,8 +31,7 @@ const FacilityManagementBlog = () => {
     setActiveFaq(activeFaq === index ? null : index);
   };
 
-  const pageUrl =
-    "https://www.acuitygroups.in/blogs/importance-of-facility-management";
+  const pageUrl = "https://www.acuitygroups.in/blogs/facilitymanagment";
 
   const faqs = [
     {
