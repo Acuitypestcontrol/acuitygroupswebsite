@@ -254,30 +254,20 @@ export default function Homepage() {
   return (
     <>
       {/* Bangalore Areas Grid */}
-      {/* <div className="bg-white rounded-2xl p-8 shadow-md">
-        <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
-          📍 Service Areas in Bangalore
-        </h3>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-          {areas.map((area, index) => (
-            <Link
-              key={index}
-              to={area.path}
-              className="flex items-center gap-2 text-gray-700 hover:text-blue-700 hover:bg-blue-50 p-2 rounded-lg transition-all group"
-            >
-              <span className="text-yellow-500 group-hover:translate-x-1 transition">
-                📍
-              </span>
-              {area.name}
-            </Link>
-          ))}
-        </div>
-      </div> */}
       <div className="bg-white text-black overflow-hidden font-['Poppins',system-ui,sans-serif]">
-        <h1 className="sr-only">
-          Integrated Facility Management Company in Bangalore
-        </h1>
+        <div className="absolute inset-0 z-30 flex items-center justify-center px-6">
+          <div className="text-center max-w-5xl">
+            <h1 className="text-3xl md:text-6xl font-bold text-white">
+              Integrated Facility Management Company in Bangalore
+            </h1>
+
+            <p className="mt-4 text-white text-lg md:text-xl">
+              Professional housekeeping, security, manpower, pest management and
+              maintenance services.
+            </p>
+          </div>
+        </div>
         <Helmet>
           <title>
             Integrated Facility Management Company in Bangalore | Acuity Groups
