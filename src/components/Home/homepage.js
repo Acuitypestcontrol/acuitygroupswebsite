@@ -24,6 +24,7 @@ import Pestcontrol from "../../images/sspestcontrol.jpg";
 import MAnpowerout from "../../images/manpowerout.webp";
 import Banner2 from "../../images/banner2.png";
 import Banner3 from "../../images/banner1.jpg";
+import RepairImage from "../../images/repair.jpg";
 
 export default function Homepage() {
   const banners = [
@@ -117,6 +118,13 @@ export default function Homepage() {
 
   const services = [
     {
+      title: "Integrated Facility Management",
+      desc: "Complete facility management services in Bangalore covering housekeeping, security, maintenance, manpower and operational support.",
+      image: AboutImage,
+      path: "/integrated-facility-management",
+    },
+
+    {
       title: "Manpower Outsourcing",
       desc: "Skilled and unskilled manpower outsourcing solutions for businesses across multiple industries.",
       image: MAnpowerout,
@@ -139,6 +147,12 @@ export default function Homepage() {
       desc: "Comprehensive housekeeping, cleaning and facility support services for commercial and residential properties.",
       image: SoftServices1,
       path: "/soft-services",
+    },
+    {
+      title: "Repair & Maintenance",
+      desc: "Professional electrical, plumbing, repair and preventive maintenance support for commercial and residential properties.",
+      image: RepairImage,
+      path: "/repair-maintenance",
     },
   ];
 
@@ -589,13 +603,21 @@ export default function Homepage() {
                 </div>
               ))}
             </div>
+            <div className="grid w-full max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2">
+              <Link
+                to="/about"
+                className="flex w-full items-center justify-center rounded-full border-2 border-blue-900 px-5 py-4 text-center text-base font-semibold text-blue-900 transition duration-300 hover:bg-blue-50"
+              >
+                About Acuity Groups
+              </Link>
 
-            <Link
-              to="/about"
-              className="inline-flex rounded-full bg-blue-900 px-10 py-4 text-lg font-light text-white shadow-md transition duration-300 hover:scale-105 hover:bg-blue-700"
-            >
-              Explore More
-            </Link>
+              <Link
+                to="/integrated-facility-management"
+                className="flex w-full items-center justify-center rounded-full bg-blue-900 px-5 py-4 text-center text-base font-semibold text-white shadow-md transition duration-300 hover:bg-blue-700"
+              >
+                Explore Facility Management
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -615,7 +637,7 @@ export default function Homepage() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <article
                 key={service.path}
@@ -921,16 +943,13 @@ export default function Homepage() {
               ))}
             </div>
           </div>
-
-          <div className="mt-14 text-center">
-            <Link
-              to="/services"
-              className="inline-flex items-center gap-3 rounded-xl bg-blue-900 px-8 py-4 font-semibold text-white shadow-lg transition-all hover:bg-blue-800 hover:shadow-xl"
-            >
-              View All Services in Bangalore
-              <ChevronRight size={18} />
-            </Link>
-          </div>
+          <Link
+            to="/integrated-facility-management"
+            className="inline-flex items-center gap-3 rounded-xl bg-blue-900 px-8 py-4 font-semibold text-white shadow-lg transition-all hover:bg-blue-800 hover:shadow-xl"
+          >
+            Explore Facility Management Services
+            <ChevronRight size={18} />
+          </Link>
         </div>
       </section>
 

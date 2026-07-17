@@ -9,7 +9,7 @@ import SecurityImg from "../images/security iamge1.jpg";
 import HousekeepingImg from "../images/housekeeping.jpg";
 import PestImg from "../images/pest7889.jpg";
 import ManpowerImg from "../images/manpowerout.webp";
-import MaintenanceImg from "../images/RepairingMaintenance.jpg";
+import MaintenanceImg from "../images/repair.jpg";
 
 const Services = () => {
   const services = [

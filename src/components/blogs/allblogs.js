@@ -13,7 +13,7 @@ import Learnhow from "../../images/Learnhow.png";
 import UnleashDesigne from "../../images/UnleashDesigne.jpg";
 import Security from "../../images/security.png";
 import Security1 from "../../images/home1.jpg";
-import RepairingMaintenance from "../../images/RepairingMaintenance.jpg";
+import RepairingMaintenance from "../../images/repair.jpg";
 import Why from "../../images/pest7889.jpg";
 import Manpower from "../../images/manpower (1).jpg";
 import HotelsHospitality from "../../images/house1 (1).jpg";

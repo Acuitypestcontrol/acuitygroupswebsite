@@ -23,7 +23,7 @@ import {
   BarChart,
   Thermometer,
 } from "lucide-react";
-import RepairingMaintenance1 from "../../images/RepairingMaintenance.jpg";
+import RepairingMaintenance1 from "../../images/repair.jpg";
 import RepairingMaintenance2 from "../../images/RepairingMaintenance1.jpg";
 import RepairingMaintenance3 from "../../images/RepairingMaintenance2.jpg";
 
@@ -70,7 +70,7 @@ const PreventiveMaintenanceBlog = () => {
     headline: "Preventive Maintenance: The Key to Long-Term Asset Performance",
     description:
       "Discover how preventive maintenance reduces downtime, lowers repair costs, extends asset life, and improves safety. Expert insights from Acuity Groups.",
-    image: "https://www.acuitygroups.in/static/media/RepairingMaintenance.jpg",
+    image: "https://www.acuitygroups.in/static/media/repair.jpg",
     datePublished: "2025-06-01",
     dateModified: "2025-06-01",
     author: { "@type": "Organization", name: "Acuity Groups" },
@@ -206,7 +206,7 @@ const PreventiveMaintenanceBlog = () => {
         />
         <meta
           property="og:image"
-          content="https://www.acuitygroups.in/static/media/RepairingMaintenance.jpg"
+          content="https://www.acuitygroups.in/static/media/repair.jpg"
         />
         <meta property="og:site_name" content="Acuity Groups" />
 
@@ -222,7 +222,7 @@ const PreventiveMaintenanceBlog = () => {
         />
         <meta
           name="twitter:image"
-          content="https://www.acuitygroups.in/static/media/RepairingMaintenance.jpg"
+          content="https://www.acuitygroups.in/static/media/repair.jpg"
         />
       </Helmet>
 

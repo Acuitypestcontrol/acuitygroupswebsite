@@ -14,7 +14,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 
-import MaintenanceHero from "../images/RepairingMaintenance.jpg";
+import MaintenanceHero from "../images/repair.jpg";
 import ElectricalService from "../images/electricalservicepng.jpg";
 import PlumbingService from "../images/plumbing.jpg";
 import CarpentryService from "../images/carpentry.jpg";
