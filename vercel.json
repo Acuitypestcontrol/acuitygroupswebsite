@@ -87,11 +87,6 @@
       "permanent": true
     },
     {
-      "source": "/blogs/facilitymanagment",
-      "destination": "/integrated-facility-management",
-      "permanent": true
-    },
-    {
       "source": "/blogs/mps",
       "destination": "/blogs/manpower-outsourcing",
       "permanent": true
