@@ -115,18 +115,54 @@ const FacilityManagement = () => {
   ];
 
   const serviceAreas = [
-    "Whitefield",
-    "Electronic City",
-    "Koramangala",
-    "HSR Layout",
-    "JP Nagar",
-    "Peenya",
-    "Hebbal",
-    "BEML Layout",
-    "Dabaspet",
-    "Doddaballapur",
-    "Attibele",
-    "Kumbalgodu",
+    {
+      name: "Whitefield",
+      path: "/integrated-facility-management-whitefield",
+    },
+    {
+      name: "Electronic City",
+      path: "/integrated-facility-management-electronic-city",
+    },
+    {
+      name: "Koramangala",
+      path: "/integrated-facility-management-koramangala",
+    },
+    {
+      name: "HSR Layout",
+      path: "/integrated-facility-management-hsr-layout",
+    },
+    {
+      name: "JP Nagar",
+      path: "/integrated-facility-management-jp-nagar",
+    },
+    {
+      name: "Peenya",
+      path: "/integrated-facility-management-peenya",
+    },
+    {
+      name: "Hebbal",
+      path: "/integrated-facility-management-hebbal",
+    },
+    {
+      name: "BEML Layout",
+      path: "/integrated-facility-management-beml",
+    },
+    {
+      name: "Dabaspet",
+      path: "/integrated-facility-management-dabaspet",
+    },
+    {
+      name: "Doddaballapur",
+      path: "/integrated-facility-management-doddaballapur",
+    },
+    {
+      name: "Attibele",
+      path: "/integrated-facility-management-attibele",
+    },
+    {
+      name: "Kumbalgodu",
+      path: "/integrated-facility-management-kumbalgodu",
+    },
   ];
 
   return (
@@ -467,36 +503,19 @@ const FacilityManagement = () => {
       </section>
 
       {/* SERVICE AREAS */}
-      <section className="py-24 px-6 md:px-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="inline-flex items-center gap-2 bg-white border border-blue-100 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
-              <Building2 size={15} />
-              <span>SERVICE AREAS</span>
-            </div>
-
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-              Facility Management Services Across Bangalore
-            </h2>
-
-            <p className="text-gray-500 text-lg">
-              We provide integrated facility management solutions across major
-              commercial, residential, and industrial locations in Bangalore.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {serviceAreas.map((area, index) => (
-              <div
-                key={index}
-                className="bg-white border border-gray-100 rounded-2xl p-5 text-center hover:shadow-lg transition"
-              >
-                <span className="font-bold text-gray-800">{area}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {serviceAreas.map((area) => (
+          <Link
+            key={area.path}
+            to={area.path}
+            className="bg-white border border-gray-100 rounded-2xl p-5 text-center hover:shadow-lg hover:border-blue-200 hover:text-blue-900 transition"
+          >
+            <span className="font-bold text-gray-800">
+              Facility Management Services in {area.name}
+            </span>
+          </Link>
+        ))}
+      </div>
 
       {/* INDUSTRIES */}
       <section className="py-24 px-6 md:px-12 bg-white">
