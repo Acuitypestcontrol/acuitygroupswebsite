@@ -1,4 +1,5 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
       "source": "/facilitymanagment1",
@@ -11,7 +12,7 @@
       "permanent": true
     },
     {
-      "source": "/contact",
+      "source": "/contactus",
       "destination": "/contact",
       "permanent": true
     },
