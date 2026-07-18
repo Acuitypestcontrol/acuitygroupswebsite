@@ -107,19 +107,43 @@ const SecurityServices = () => {
     "Retail Stores & Showrooms",
   ];
 
+  const faqs = [
+    {
+      question:
+        "What security services does Acuity Groups provide in Bangalore?",
+      answer:
+        "Acuity Groups provides manned guarding, corporate security, residential security, industrial security, event security and CCTV monitoring support across Bangalore.",
+    },
+    {
+      question: "Are your security guards trained and background verified?",
+      answer:
+        "Yes. Our security personnel undergo identity verification, background checks, basic security training and site-specific instructions before deployment.",
+    },
+    {
+      question: "Do you provide 24/7 security guard services?",
+      answer:
+        "Yes. We provide round-the-clock security coverage with shift planning, supervision, attendance monitoring and emergency response support.",
+    },
+    {
+      question: "Which properties can use your security services?",
+      answer:
+        "Our security services are suitable for offices, apartments, industries, hospitals, schools, hotels, warehouses, shopping malls and commercial properties.",
+    },
+  ];
+
   return (
     <div className="bg-white text-gray-800 font-sans overflow-hidden">
       <Helmet>
-        <title>Security Guard Services in Bangalore | Acuity Groups</title>
+        <title>Security Services Company in Bangalore | Acuity Groups</title>
 
         <meta
           name="description"
-          content="Acuity Groups provides trained security guard services in Bangalore for offices, apartments, industries, hospitals, warehouses and commercial properties."
+          content="Acuity Groups is a professional security services company in Bangalore providing trained security guards for offices, apartments, industries, hospitals, warehouses and commercial properties."
         />
 
         <meta
           name="keywords"
-          content="security services in Bangalore, security guard services Bangalore, corporate security Bangalore, residential security Bangalore, industrial security Bangalore"
+          content="security services company in Bangalore, security guard services in Bangalore, corporate security services Bangalore, residential security services Bangalore, industrial security guards Bangalore, CCTV monitoring services Bangalore"
         />
 
         <meta name="robots" content="index, follow" />
@@ -131,36 +155,52 @@ const SecurityServices = () => {
 
         <meta
           property="og:title"
-          content="Security Guard Services in Bangalore | Acuity Groups"
+          content="Security Services Company in Bangalore | Acuity Groups"
         />
+
         <meta
           property="og:description"
-          content="Professional security guard services in Bangalore for offices, apartments, industries, hospitals and commercial properties."
+          content="Acuity Groups is a professional security services company in Bangalore providing trained security guards for offices, apartments, industries, hospitals, warehouses and commercial properties."
         />
+
         <meta
           property="og:url"
           content="https://www.acuitygroups.in/security-services"
         />
+
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Acuity Groups" />
+        <meta property="og:image" content={SecurityHero} />
+
+        <meta
+          property="og:image:alt"
+          content="Security Services Company in Bangalore"
+        />
 
         <meta name="twitter:card" content="summary_large_image" />
+
         <meta
           name="twitter:title"
-          content="Security Guard Services in Bangalore | Acuity Groups"
-        />
-        <meta
-          name="twitter:description"
-          content="Trained security guards and professional security services in Bangalore for commercial, residential and industrial properties."
+          content="Security Services Company in Bangalore | Acuity Groups"
         />
 
+        <meta
+          name="twitter:description"
+          content="Professional security guard and security management services in Bangalore for commercial, residential and industrial properties."
+        />
+
+        <meta name="twitter:image" content={SecurityHero} />
+
+        {/* Service Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
             "@id": "https://www.acuitygroups.in/security-services/#service",
-            name: "Security Guard Services in Bangalore",
-            serviceType: "Security Guard Services",
+            name: "Security Services Company in Bangalore",
+            serviceType:
+              "Professional Security Guard and Security Management Services",
+            image: `https://www.acuitygroups.in${SecurityHero}`,
             provider: {
               "@type": "LocalBusiness",
               name: "Acuity Groups",
@@ -177,9 +217,12 @@ const SecurityServices = () => {
                 addressCountry: "IN",
               },
             },
-            areaServed: "Bangalore",
+            areaServed: {
+              "@type": "City",
+              name: "Bengaluru",
+            },
             description:
-              "Professional security services in Bangalore for offices, apartments, industries, hospitals, warehouses and commercial properties.",
+              "Acuity Groups is a professional security services company in Bangalore providing trained guards, corporate security, residential security, industrial security, event security and CCTV monitoring support.",
             hasOfferCatalog: {
               "@type": "OfferCatalog",
               name: "Security Services",
@@ -195,6 +238,7 @@ const SecurityServices = () => {
           })}
         </script>
 
+        {/* Breadcrumb Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -221,6 +265,22 @@ const SecurityServices = () => {
             ],
           })}
         </script>
+
+        {/* FAQ Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          })}
+        </script>
       </Helmet>
 
       {/* HERO */}
@@ -228,17 +288,19 @@ const SecurityServices = () => {
         <div className="absolute inset-0">
           <img
             src={SecurityHero}
-            alt="Security Services in Bangalore"
+            alt="Security Services Company in Bangalore"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-950/85 to-blue-900/40"></div>
+
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-950/85 to-blue-900/40" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full">
           <div className="max-w-3xl text-white">
             <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold mb-6">
               <Shield size={16} className="text-yellow-300" />
-              <span>SECURITY SERVICES IN BANGALORE</span>
+
+              <span>SECURITY SERVICES COMPANY IN BANGALORE</span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
@@ -281,9 +343,11 @@ const SecurityServices = () => {
               <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-blue-50 text-blue-900 flex items-center justify-center">
                 <stat.icon size={26} />
               </div>
+
               <h2 className="text-3xl font-black text-gray-900">
                 {stat.value}
               </h2>
+
               <p className="text-gray-500 text-sm mt-1">{stat.label}</p>
             </div>
           ))}
@@ -296,6 +360,7 @@ const SecurityServices = () => {
           <div>
             <div className="inline-flex items-center gap-2 bg-blue-50 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
               <Sparkles size={15} />
+
               <span>WHY SECURITY MATTERS</span>
             </div>
 
@@ -304,9 +369,15 @@ const SecurityServices = () => {
             </h2>
 
             <p className="text-gray-600 text-lg leading-relaxed mb-5">
-              Acuity Groups provides professional security services in Bangalore
-              designed to protect people, property, assets, and daily business
-              operations.
+              As part of our{" "}
+              <Link
+                to="/integrated-facility-management"
+                className="font-semibold text-blue-900 underline hover:text-blue-700"
+              >
+                integrated facility management services in Bangalore
+              </Link>
+              , Acuity Groups provides professional security solutions designed
+              to protect people, property, assets and daily business operations.
             </p>
 
             <p className="text-gray-600 text-lg leading-relaxed">
@@ -325,6 +396,7 @@ const SecurityServices = () => {
                 <div className="w-12 h-12 bg-blue-900 text-white rounded-xl flex items-center justify-center mb-4">
                   <benefit.icon size={24} />
                 </div>
+
                 <h3 className="font-bold text-gray-900">{benefit.text}</h3>
               </div>
             ))}
@@ -338,6 +410,7 @@ const SecurityServices = () => {
           <div className="text-center max-w-3xl mx-auto mb-14">
             <div className="inline-flex items-center gap-2 bg-white border border-blue-100 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
               <Shield size={15} />
+
               <span>WHAT WE OFFER</span>
             </div>
 
@@ -384,6 +457,7 @@ const SecurityServices = () => {
                           size={15}
                           className="text-blue-900 flex-shrink-0"
                         />
+
                         <span>{feature}</span>
                       </div>
                     ))}
@@ -431,6 +505,7 @@ const SecurityServices = () => {
                 className="bg-white/10 border border-white/10 rounded-2xl p-5"
               >
                 <CheckCircle className="text-yellow-300 mb-3" size={24} />
+
                 <h3 className="font-bold">{item}</h3>
               </div>
             ))}
@@ -444,6 +519,7 @@ const SecurityServices = () => {
           <div className="text-center max-w-3xl mx-auto mb-14">
             <div className="inline-flex items-center gap-2 bg-white border border-blue-100 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
               <Building2 size={15} />
+
               <span>INDUSTRIES WE SERVE</span>
             </div>
 
@@ -472,11 +548,52 @@ const SecurityServices = () => {
         </div>
       </section>
 
+      {/* FAQ SECTION */}
+      <section className="bg-gray-50 px-6 py-20 md:px-12">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-12 text-center">
+            <div className="mb-5 inline-flex rounded-full border border-blue-100 bg-white px-5 py-2 text-sm font-bold text-blue-900">
+              FREQUENTLY ASKED QUESTIONS
+            </div>
+
+            <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
+              Security Services FAQs
+            </h2>
+
+            <p className="text-lg text-gray-500">
+              Common questions about our professional security services in
+              Bangalore.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq) => (
+              <details
+                key={faq.question}
+                className="group rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition hover:shadow-md"
+              >
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-gray-900">
+                  <span>{faq.question}</span>
+
+                  <span className="text-2xl text-blue-900 transition group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+
+                <p className="mt-4 border-t border-gray-100 pt-4 leading-relaxed text-gray-600">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-24 px-6 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
-            Need Reliable Security Services in Bangalore?
+            Looking for a Security Services Company in Bangalore?
           </h2>
 
           <p className="text-gray-600 text-lg mb-10">
