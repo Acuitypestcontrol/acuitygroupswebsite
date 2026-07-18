@@ -13,6 +13,9 @@ import {
   PhoneCall,
   ArrowRight,
   Sparkles,
+  MessageCircle,
+  MapPin,
+  HelpCircle,
 } from "lucide-react";
 
 import ManpowerHero from "../images/manpowerout.webp";
@@ -23,114 +26,307 @@ import ConstructionLabour from "../images/labours.jpg";
 import StaffingSolutions from "../images/staffing.jpg";
 import PayrollSupport from "../images/now.jpg";
 
+const services = [
+  {
+    image: IndustrialManpower,
+    title: "Industrial Manpower",
+    desc: "Skilled, semi-skilled and unskilled workers for manufacturing, production, packaging and industrial operations.",
+    features: [
+      "Machine Operators",
+      "Production Workers",
+      "Packing Staff",
+      "Quality Control Staff",
+    ],
+    link: "/contact",
+  },
+  {
+    image: FacilityStaff,
+    title: "Facility Management Staff",
+    desc: "Trained workforce for housekeeping, cleaning, maintenance and complete facility support operations.",
+    features: [
+      "Housekeeping Staff",
+      "Cleaning Supervisors",
+      "Office Assistants",
+      "Maintenance Helpers",
+    ],
+    link: "/housekeeping",
+  },
+  {
+    image: SecurityManpower,
+    title: "Security Manpower",
+    desc: "Professional security guards, CCTV operators, gate supervisors and patrol staff for property protection.",
+    features: [
+      "Security Guards",
+      "CCTV Operators",
+      "Gate Supervisors",
+      "Patrol Staff",
+    ],
+    link: "/securityservice",
+  },
+  {
+    image: ConstructionLabour,
+    title: "Construction Labour",
+    desc: "Experienced workers for construction and maintenance projects, including masons, electricians, plumbers and helpers.",
+    features: [
+      "Masons and Helpers",
+      "Electricians",
+      "Plumbers",
+      "Site Workers",
+    ],
+    link: "/repair",
+  },
+  {
+    image: StaffingSolutions,
+    title: "Staffing Solutions",
+    desc: "Temporary, permanent and contract staffing solutions for offices, retail, hospitality, logistics and events.",
+    features: [
+      "Office Staff",
+      "Retail Associates",
+      "Event Staff",
+      "Temporary Placements",
+    ],
+    link: "/contact",
+  },
+  {
+    image: PayrollSupport,
+    title: "HR and Payroll Support",
+    desc: "Workforce payroll processing, attendance tracking, statutory compliance and HR administration support.",
+    features: [
+      "Payroll Processing",
+      "Compliance Management",
+      "Attendance Tracking",
+      "PF and ESI Support",
+    ],
+    link: "/contact",
+  },
+];
+
+const benefits = [
+  { text: "Trained and Verified Staff", icon: Users },
+  { text: "Quick Replacement Support", icon: Clock },
+  { text: "Flexible Contract Terms", icon: Briefcase },
+  { text: "Multi-location Deployment", icon: Building2 },
+  { text: "PF, ESI and Compliance Support", icon: Shield },
+  { text: "24/7 Workforce Assistance", icon: Award },
+];
+
+const stats = [
+  { label: "Staff Deployed", value: "2000+", icon: Users },
+  { label: "Active Clients", value: "150+", icon: Award },
+  { label: "Industries Served", value: "15+", icon: Factory },
+  { label: "Replacement Support", value: "24 Hrs", icon: Clock },
+];
+
+const whyChoose = [
+  "Trained and verified workforce",
+  "Quick staff replacement support",
+  "Flexible staffing contracts",
+  "Multi-location deployment",
+  "PF, ESI and payroll management",
+  "24/7 workforce assistance",
+];
+
+const industries = [
+  "Manufacturing Units",
+  "Corporate Offices",
+  "Residential Complexes",
+  "Hospitals and Clinics",
+  "Educational Institutions",
+  "Hotels and Hospitality",
+  "Warehouses and Logistics",
+  "Construction Sites",
+];
+
+const serviceAreas = [
+  "JP Nagar",
+  "Whitefield",
+  "Electronic City",
+  "Koramangala",
+  "HSR Layout",
+  "Hebbal",
+  "Peenya",
+  "Yelahanka",
+  "Banashankari",
+  "Marathahalli",
+  "Doddaballapur",
+  "Attibele",
+];
+
+const relatedServices = [
+  {
+    title: "Housekeeping Services",
+    desc: "Trained housekeeping staff for offices, industries and residential properties.",
+    link: "/housekeeping",
+  },
+  {
+    title: "Security Services",
+    desc: "Professional security guards and property protection support.",
+    link: "/securityservice",
+  },
+  {
+    title: "Soft Services",
+    desc: "Cleaning, hygiene and workplace support services.",
+    link: "/softservices",
+  },
+  {
+    title: "Integrated Facility Management",
+    desc: "Complete facility operations managed through one service partner.",
+    link: "/integrated-facility-management",
+  },
+  {
+    title: "Repair and Maintenance",
+    desc: "Electrical, plumbing and property maintenance solutions.",
+    link: "/repair",
+  },
+  {
+    title: "Pest Management",
+    desc: "Professional pest control services for commercial and residential properties.",
+    link: "/pest-management",
+  },
+];
+
+const faqItems = [
+  {
+    question: "What manpower outsourcing services do you provide?",
+    answer:
+      "Acuity Groups provides industrial manpower, housekeeping staff, security personnel, construction labour, office staffing, temporary staffing and payroll support services in Bangalore.",
+  },
+  {
+    question: "Do you provide skilled and unskilled manpower?",
+    answer:
+      "Yes. We provide skilled, semi-skilled and unskilled workers based on the operational requirements, job responsibilities and deployment duration of each client.",
+  },
+  {
+    question: "Do you manage PF, ESI and payroll compliance?",
+    answer:
+      "Yes. Our manpower outsourcing support can include attendance management, payroll processing, PF, ESI and applicable statutory compliance documentation.",
+  },
+  {
+    question: "Can you provide temporary and contract staff?",
+    answer:
+      "Yes. We provide temporary, contract and long-term workforce deployment for seasonal requirements, short-term projects and regular business operations.",
+  },
+  {
+    question: "Which industries do you serve?",
+    answer:
+      "We serve manufacturing, corporate offices, hospitals, educational institutions, hotels, warehouses, logistics companies, residential properties and construction projects.",
+  },
+  {
+    question: "How quickly can manpower be deployed?",
+    answer:
+      "Deployment time depends on the role, number of workers, skills required and location. Contact our team with your requirement to receive an estimated deployment schedule.",
+  },
+];
+
 const ManpowerOutsourcing = () => {
-  const services = [
-    {
-      image: IndustrialManpower,
-      title: "Industrial Manpower",
-      desc: "Skilled and semi-skilled workers for manufacturing, production and industrial operations.",
-      features: [
-        "Machine Operators",
-        "Production Workers",
-        "Packing Staff",
-        "Quality Control",
-      ],
-    },
-    {
-      image: FacilityStaff,
-      title: "Facility Management Staff",
-      desc: "Trained workforce for housekeeping, cleaning, maintenance and facility support services.",
-      features: [
-        "Housekeeping Staff",
-        "Cleaning Supervisors",
-        "Office Assistants",
-        "Maintenance Helpers",
-      ],
-    },
-    {
-      image: SecurityManpower,
-      title: "Security Manpower",
-      desc: "Professional security guards, CCTV operators and gate supervisors for complete safety support.",
-      features: [
-        "Security Guards",
-        "CCTV Operators",
-        "Gate Supervisors",
-        "Patrol Staff",
-      ],
-    },
-    {
-      image: ConstructionLabour,
-      title: "Construction Labour",
-      desc: "Experienced workers for construction projects including masons, electricians, plumbers and helpers.",
-      features: [
-        "Masons & Helpers",
-        "Electricians",
-        "Plumbers",
-        "Site Workers",
-      ],
-    },
-    {
-      image: StaffingSolutions,
-      title: "Staffing Solutions",
-      desc: "Temporary and permanent staffing for offices, retail, hospitality and events.",
-      features: [
-        "Office Staff",
-        "Retail Associates",
-        "Event Staff",
-        "Temp Placements",
-      ],
-    },
-    {
-      image: PayrollSupport,
-      title: "HR & Payroll Support",
-      desc: "HR management, payroll processing and compliance support for outsourced workforce.",
-      features: [
-        "Payroll Processing",
-        "Compliance Management",
-        "Attendance Tracking",
-        "Statutory Compliance",
-      ],
-    },
-  ];
+  const canonicalUrl = "https://www.acuitygroups.in/manpower-outsourcing";
 
-  const benefits = [
-    { text: "Trained & Verified Staff", icon: Users },
-    { text: "Quick Replacement Policy", icon: Clock },
-    { text: "Flexible Contract Terms", icon: Briefcase },
-    { text: "PAN India Service Network", icon: Building2 },
-    { text: "Compliance & PF Support", icon: Shield },
-    { text: "24/7 Deployment Support", icon: Award },
-  ];
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${canonicalUrl}/#service`,
+    name: "Manpower Outsourcing Services in Bangalore",
+    alternateName: "Manpower Supply Services in Bangalore",
+    serviceType: "Manpower Outsourcing and Staffing Services",
+    url: canonicalUrl,
+    description:
+      "Skilled, semi-skilled and unskilled manpower outsourcing services in Bangalore with payroll, PF, ESI and compliance support.",
+    provider: {
+      "@type": "LocalBusiness",
+      "@id": "https://www.acuitygroups.in/#organization",
+      name: "Acuity Groups LLP",
+      url: "https://www.acuitygroups.in/",
+      telephone: "+919941229005",
+      email: "info@acuitygroups.in",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress:
+          "2nd Floor, KVO-08, No-28/2, near Sun Jupiter School, JP Nagar 6th Phase, Yelachenahalli",
+        addressLocality: "Bengaluru",
+        addressRegion: "Karnataka",
+        postalCode: "560078",
+        addressCountry: "IN",
+      },
+    },
+    areaServed: {
+      "@type": "City",
+      name: "Bengaluru",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Manpower Outsourcing Services",
+      itemListElement: services.map((service) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: service.title,
+          description: service.desc,
+          url: `https://www.acuitygroups.in${service.link}`,
+        },
+      })),
+    },
+  };
 
-  const stats = [
-    { label: "Staff Deployed", value: "2000+", icon: Users },
-    { label: "Active Clients", value: "150+", icon: Award },
-    { label: "Industries Served", value: "15+", icon: Factory },
-    { label: "Replacement Guarantee", value: "24 Hrs", icon: Clock },
-  ];
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.acuitygroups.in/#organization",
+    name: "Acuity Groups LLP",
+    url: "https://www.acuitygroups.in/",
+    logo: "https://www.acuitygroups.in/logo192.png",
+    email: "info@acuitygroups.in",
+    telephone: "+919941229005",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress:
+        "2nd Floor, KVO-08, No-28/2, near Sun Jupiter School, JP Nagar 6th Phase, Yelachenahalli",
+      addressLocality: "Bengaluru",
+      addressRegion: "Karnataka",
+      postalCode: "560078",
+      addressCountry: "IN",
+    },
+  };
 
-  const whyChoose = [
-    "Trained & verified workforce",
-    "Quick replacement policy",
-    "Flexible contract options",
-    "PAN India deployment support",
-    "PF, ESI & compliance management",
-    "24/7 workforce assistance",
-  ];
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.acuitygroups.in/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://www.acuitygroups.in/services",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Manpower Outsourcing",
+        item: canonicalUrl,
+      },
+    ],
+  };
 
-  const industries = [
-    "Manufacturing Units",
-    "Corporate Offices",
-    "Residential Complexes",
-    "Hospitals & Clinics",
-    "Educational Institutions",
-    "Hotels & Hospitality",
-    "Warehouses & Logistics",
-    "Construction Sites",
-  ];
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
 
   return (
-    <div className="bg-white text-gray-800 font-sans overflow-hidden">
+    <div className="overflow-hidden bg-white font-sans text-gray-800">
       <Helmet>
         <title>
           Manpower Outsourcing Services in Bangalore | Acuity Groups
@@ -138,20 +334,18 @@ const ManpowerOutsourcing = () => {
 
         <meta
           name="description"
-          content="Acuity Groups provides manpower outsourcing and supply services in Bangalore, including skilled, semi-skilled and unskilled staff with PF, ESI and payroll support."
+          content="Manpower outsourcing services in Bangalore for industrial, facility, security, construction and office staffing with payroll, PF and ESI support."
         />
 
         <meta
           name="keywords"
-          content="manpower outsourcing services in Bangalore, manpower supply Bangalore, staffing services Bangalore, industrial manpower Bangalore, facility staff Bangalore"
+          content="manpower outsourcing Bangalore, manpower supply Bangalore, industrial manpower Bangalore, contract staffing Bangalore, temporary staffing Bangalore, permanent staffing Bangalore, facility manpower Bangalore, housekeeping manpower Bangalore, security manpower Bangalore, skilled manpower Bangalore, semi skilled manpower Bangalore, unskilled manpower Bangalore, HR outsourcing Bangalore, payroll outsourcing Bangalore"
         />
 
         <meta name="robots" content="index, follow" />
+        <meta name="author" content="Acuity Groups LLP" />
 
-        <link
-          rel="canonical"
-          href="https://www.acuitygroups.in/manpower-outsourcing"
-        />
+        <link rel="canonical" href={canonicalUrl} />
 
         <meta
           property="og:title"
@@ -159,14 +353,11 @@ const ManpowerOutsourcing = () => {
         />
         <meta
           property="og:description"
-          content="Skilled, semi-skilled and unskilled manpower outsourcing services in Bangalore for industries, offices and facility operations."
+          content="Skilled, semi-skilled and unskilled manpower supply services for industries, offices, security, construction and facility operations."
         />
-        <meta
-          property="og:url"
-          content="https://www.acuitygroups.in/manpower-outsourcing"
-        />
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Acuity Groups" />
+        <meta property="og:site_name" content="Acuity Groups LLP" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -175,182 +366,145 @@ const ManpowerOutsourcing = () => {
         />
         <meta
           name="twitter:description"
-          content="Professional manpower supply and staffing services in Bangalore for industrial, office, security and facility support needs."
+          content="Professional manpower supply and staffing services in Bangalore with payroll and statutory compliance support."
         />
 
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "@id": "https://www.acuitygroups.in/manpower-outsourcing/#service",
-            name: "Manpower Outsourcing Services in Bangalore",
-            serviceType: "Manpower Outsourcing",
-            provider: {
-              "@type": "LocalBusiness",
-              name: "Acuity Groups",
-              url: "https://www.acuitygroups.in/",
-              telephone: "+919941229005",
-              email: "info@acuitygroups.in",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress:
-                  "2nd Floor, KVO-08, No-28/2, near Sun Jupiter School JP Nagar 6th Phase, Yelachenahalli",
-                addressLocality: "Bengaluru",
-                addressRegion: "Karnataka",
-                postalCode: "560078",
-                addressCountry: "IN",
-              },
-            },
-            areaServed: "Bangalore",
-            description:
-              "Acuity Groups provides manpower outsourcing and supply services in Bangalore, including skilled, semi-skilled and unskilled workforce with PF, ESI, payroll and compliance support.",
-            hasOfferCatalog: {
-              "@type": "OfferCatalog",
-              name: "Manpower Outsourcing Services",
-              itemListElement: services.map((service) => ({
-                "@type": "Offer",
-                itemOffered: {
-                  "@type": "Service",
-                  name: service.title,
-                  description: service.desc,
-                },
-              })),
-            },
-          })}
+          {JSON.stringify(serviceSchema)}
         </script>
 
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://www.acuitygroups.in/",
-              },
-              {
-                "@type": "ListItem",
-                position: 2,
-                name: "Services",
-                item: "https://www.acuitygroups.in/services",
-              },
-              {
-                "@type": "ListItem",
-                position: 3,
-                name: "Manpower Outsourcing",
-                item: "https://www.acuitygroups.in/manpower-outsourcing",
-              },
-            ],
-          })}
+          {JSON.stringify(organizationSchema)}
         </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center">
+      <section className="relative flex min-h-screen items-center">
         <div className="absolute inset-0">
           <img
             src={ManpowerHero}
-            alt="Manpower Outsourcing Services in Bangalore"
-            className="w-full h-full object-cover"
+            alt="Manpower outsourcing and staffing services in Bangalore"
+            className="h-full w-full object-cover"
+            width="1920"
+            height="1080"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-950/85 to-blue-900/40"></div>
+
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-950/85 to-blue-900/40" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full">
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-12">
           <div className="max-w-3xl text-white">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-semibold backdrop-blur-md">
               <Briefcase size={16} className="text-yellow-300" />
               <span>MANPOWER OUTSOURCING IN BANGALORE</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+            <h1 className="mb-6 text-5xl font-black leading-tight md:text-7xl">
               Manpower Outsourcing Services in Bangalore
             </h1>
 
-            <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-10">
+            <p className="mb-10 text-lg leading-relaxed text-blue-100 md:text-xl">
               Skilled, semi-skilled and unskilled workforce solutions for
-              industries, offices, construction projects and facility
-              operations.
+              industries, offices, construction projects, security operations
+              and facility management.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/contact"
-                className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition flex items-center gap-2"
+                className="flex items-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-blue-900 transition hover:bg-blue-50"
               >
-                Hire Manpower <ArrowRight size={18} />
+                Hire Manpower
+                <ArrowRight size={18} />
               </Link>
 
-              <Link
-                to="/services"
-                className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-blue-900 transition"
+              <a
+                href="https://wa.me/919941229005?text=Hello%20Acuity%20Groups,%20I%20need%20manpower%20outsourcing%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-full border-2 border-white px-8 py-4 font-bold text-white transition hover:bg-white hover:text-blue-900"
               >
-                View Services
-              </Link>
+                <MessageCircle size={18} />
+                WhatsApp Us
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* STATS */}
-      <section className="-mt-20 relative z-20 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5">
-          {stats.map((stat, index) => (
+      <section className="relative z-20 -mt-20 px-6 md:px-12">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-5 md:grid-cols-4">
+          {stats.map(({ label, value, icon: Icon }) => (
             <div
-              key={index}
-              className="bg-white rounded-2xl shadow-xl p-6 text-center border border-gray-100"
+              key={label}
+              className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-xl"
             >
-              <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-blue-50 text-blue-900 flex items-center justify-center">
-                <stat.icon size={26} />
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-blue-50 text-blue-900">
+                <Icon size={26} />
               </div>
-              <h2 className="text-3xl font-black text-gray-900">
-                {stat.value}
-              </h2>
-              <p className="text-gray-500 text-sm mt-1">{stat.label}</p>
+
+              <p className="text-3xl font-black text-gray-900">{value}</p>
+              <p className="mt-1 text-sm text-gray-500">{label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* INTRO */}
-      <section className="py-24 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+      {/* INTRODUCTION */}
+      <section className="px-6 py-24 md:px-12">
+        <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
           <div>
-            <div className="inline-flex items-center gap-2 bg-blue-50 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-blue-50 px-5 py-2 text-sm font-bold text-blue-900">
               <Sparkles size={15} />
               <span>RELIABLE WORKFORCE SOLUTIONS</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+            <h2 className="mb-6 text-4xl font-black leading-tight text-gray-900 md:text-5xl">
               Manpower Supply and Staffing Solutions for Every Need
             </h2>
 
-            <p className="text-gray-600 text-lg leading-relaxed mb-5">
+            <p className="mb-5 text-lg leading-relaxed text-gray-600">
               Acuity Groups provides skilled, semi-skilled and unskilled
               manpower supply services in Bangalore for industries, offices,
               warehouses, construction projects, security operations and
               facility management.
             </p>
 
-            <p className="text-gray-600 text-lg leading-relaxed">
-              From temporary staff for seasonal requirements to long-term
-              workforce deployment, we offer flexible outsourcing solutions that
-              reduce HR burden and improve operational efficiency.
+            <p className="text-lg leading-relaxed text-gray-600">
+              We support temporary staffing, contract workforce and long-term
+              deployment with attendance, payroll, PF, ESI and compliance
+              management. Explore our{" "}
+              <Link
+                to="/integrated-facility-management"
+                className="font-semibold text-blue-900 hover:underline"
+              >
+                integrated facility management services
+              </Link>{" "}
+              for complete workplace support.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-4">
-            {benefits.map((benefit, index) => (
+          <div className="grid gap-4 sm:grid-cols-2">
+            {benefits.map(({ text, icon: Icon }) => (
               <div
-                key={index}
-                className="bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition"
+                key={text}
+                className="rounded-2xl border border-gray-100 bg-gray-50 p-5 transition hover:shadow-lg"
               >
-                <div className="w-12 h-12 bg-blue-900 text-white rounded-xl flex items-center justify-center mb-4">
-                  <benefit.icon size={24} />
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-900 text-white">
+                  <Icon size={24} />
                 </div>
-                <h3 className="font-bold text-gray-900">{benefit.text}</h3>
+
+                <h3 className="font-bold text-gray-900">{text}</h3>
               </div>
             ))}
           </div>
@@ -358,56 +512,60 @@ const ManpowerOutsourcing = () => {
       </section>
 
       {/* SERVICES */}
-      <section className="py-24 px-6 md:px-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="inline-flex items-center gap-2 bg-white border border-blue-100 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
+      <section className="bg-gray-50 px-6 py-24 md:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-14 max-w-3xl text-center">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-5 py-2 text-sm font-bold text-blue-900">
               <Briefcase size={15} />
               <span>WHAT WE OFFER</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+            <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
               Our Manpower Solutions
             </h2>
 
-            <p className="text-gray-500 text-lg">
-              Comprehensive staffing solutions for industries, offices,
-              security, facility support and construction needs.
+            <p className="text-lg text-gray-500">
+              Staffing solutions for industries, offices, security, facility
+              support, logistics and construction requirements.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition group"
+          <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service) => (
+              <article
+                key={service.title}
+                className="group overflow-hidden rounded-3xl bg-white shadow-md transition hover:shadow-2xl"
               >
                 <div className="h-56 overflow-hidden">
                   <img
                     src={service.image}
-                    alt={`${service.title} in Bangalore`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                    alt={`${service.title} services in Bangalore`}
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                    width="600"
+                    height="400"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-black text-gray-900 mb-3">
+                  <h3 className="mb-3 text-xl font-black text-gray-900">
                     {service.title}
                   </h3>
 
-                  <p className="text-gray-600 text-sm leading-relaxed mb-5">
+                  <p className="mb-5 text-sm leading-relaxed text-gray-600">
                     {service.desc}
                   </p>
 
-                  <div className="space-y-2 mb-5">
-                    {service.features.map((feature, idx) => (
+                  <div className="mb-5 space-y-2">
+                    {service.features.map((feature) => (
                       <div
-                        key={idx}
+                        key={feature}
                         className="flex items-center gap-2 text-sm text-gray-700"
                       >
                         <CheckCircle
                           size={15}
-                          className="text-blue-900 flex-shrink-0"
+                          className="flex-shrink-0 text-blue-900"
                         />
                         <span>{feature}</span>
                       </div>
@@ -415,46 +573,50 @@ const ManpowerOutsourcing = () => {
                   </div>
 
                   <Link
-                    to="/contact"
-                    className="text-blue-900 font-bold inline-flex items-center gap-2"
+                    to={service.link}
+                    aria-label={`Learn more about ${service.title}`}
+                    className="inline-flex items-center gap-2 font-bold text-blue-900 hover:underline"
                   >
-                    Enquire Now <ArrowRight size={16} />
+                    Learn More
+                    <ArrowRight size={16} />
                   </Link>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
       {/* WHY CHOOSE */}
-      <section className="py-24 px-6 md:px-12 bg-white">
-        <div className="max-w-7xl mx-auto bg-blue-950 rounded-[40px] p-8 md:p-14 text-white grid lg:grid-cols-2 gap-12 items-center">
+      <section className="bg-white px-6 py-24 md:px-12">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 rounded-[40px] bg-blue-950 p-8 text-white md:p-14 lg:grid-cols-2">
           <div>
-            <h2 className="text-4xl md:text-5xl font-black mb-6">
+            <h2 className="mb-6 text-4xl font-black md:text-5xl">
               Why Choose Acuity Groups?
             </h2>
 
-            <p className="text-blue-100 text-lg leading-relaxed mb-8">
-              We help businesses reduce hiring challenges with trained,
-              verified, compliant and professionally managed manpower solutions.
+            <p className="mb-8 text-lg leading-relaxed text-blue-100">
+              We reduce recruitment and workforce management challenges through
+              trained staff, verification support, flexible contracts, payroll
+              administration and statutory compliance management.
             </p>
 
             <Link
               to="/contact"
-              className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold inline-flex items-center gap-2"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-blue-900"
             >
-              Contact Us <ArrowRight size={18} />
+              Discuss Your Requirement
+              <ArrowRight size={18} />
             </Link>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-4">
-            {whyChoose.map((item, index) => (
+          <div className="grid gap-4 sm:grid-cols-2">
+            {whyChoose.map((item) => (
               <div
-                key={index}
-                className="bg-white/10 border border-white/10 rounded-2xl p-5"
+                key={item}
+                className="rounded-2xl border border-white/10 bg-white/10 p-5"
               >
-                <CheckCircle className="text-yellow-300 mb-3" size={24} />
+                <CheckCircle className="mb-3 text-yellow-300" size={24} />
                 <h3 className="font-bold">{item}</h3>
               </div>
             ))}
@@ -463,31 +625,31 @@ const ManpowerOutsourcing = () => {
       </section>
 
       {/* INDUSTRIES */}
-      <section className="py-24 px-6 md:px-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="inline-flex items-center gap-2 bg-white border border-blue-100 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
+      <section className="bg-gray-50 px-6 py-24 md:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-14 max-w-3xl text-center">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-5 py-2 text-sm font-bold text-blue-900">
               <Building2 size={15} />
               <span>INDUSTRIES WE SERVE</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
-              Trusted Manpower Outsourcing Across Sectors
+            <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
+              Manpower Outsourcing Across Business Sectors
             </h2>
 
-            <p className="text-gray-500 text-lg">
-              We provide manpower outsourcing solutions for a wide range of
-              business sectors.
+            <p className="text-lg text-gray-500">
+              Flexible workforce support for commercial, industrial,
+              institutional and residential operations.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {industries.map((industry, index) => (
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {industries.map((industry) => (
               <div
-                key={index}
-                className="bg-white border border-gray-100 rounded-2xl p-5 text-center hover:shadow-lg transition"
+                key={industry}
+                className="rounded-2xl border border-gray-100 bg-white p-5 text-center transition hover:shadow-lg"
               >
-                <span className="font-bold text-gray-800 text-sm">
+                <span className="text-sm font-bold text-gray-800">
                   {industry}
                 </span>
               </div>
@@ -496,32 +658,169 @@ const ManpowerOutsourcing = () => {
         </div>
       </section>
 
+      {/* SERVICE AREAS */}
+      <section className="bg-white px-6 py-24 md:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-14 max-w-3xl text-center">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-blue-50 px-5 py-2 text-sm font-bold text-blue-900">
+              <MapPin size={15} />
+              <span>MANPOWER SERVICE AREAS</span>
+            </div>
+
+            <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
+              Manpower Supply Across Bangalore
+            </h2>
+
+            <p className="text-lg text-gray-500">
+              Contact us for manpower deployment across major industrial and
+              commercial locations in Bengaluru.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+            {serviceAreas.map((area) => (
+              <Link
+                key={area}
+                to="/contact"
+                aria-label={`Request manpower services in ${area}`}
+                className="flex items-center justify-center gap-2 rounded-2xl border border-gray-100 bg-gray-50 p-5 text-center font-bold text-gray-800 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-900"
+              >
+                <MapPin size={16} />
+                {area}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* RELATED SERVICES */}
+      <section className="bg-gray-50 px-6 py-24 md:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-14 max-w-3xl text-center">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-5 py-2 text-sm font-bold text-blue-900">
+              <Sparkles size={15} />
+              <span>RELATED SERVICES</span>
+            </div>
+
+            <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
+              Complete Facility Support Services
+            </h2>
+
+            <p className="text-lg text-gray-500">
+              Explore other workplace and facility services provided by Acuity
+              Groups.
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {relatedServices.map((service) => (
+              <Link
+                key={service.title}
+                to={service.link}
+                className="group rounded-3xl border border-gray-100 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              >
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-900 text-white">
+                  <ArrowRight
+                    size={22}
+                    className="transition group-hover:translate-x-1"
+                  />
+                </div>
+
+                <h3 className="mb-3 text-xl font-black text-gray-900">
+                  {service.title}
+                </h3>
+
+                <p className="text-sm leading-relaxed text-gray-600">
+                  {service.desc}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="bg-white px-6 py-24 md:px-12">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-12 text-center">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-blue-50 px-5 py-2 text-sm font-bold text-blue-900">
+              <HelpCircle size={15} />
+              <span>FREQUENTLY ASKED QUESTIONS</span>
+            </div>
+
+            <h2 className="text-4xl font-black text-gray-900 md:text-5xl">
+              Manpower Outsourcing FAQs
+            </h2>
+          </div>
+
+          <div className="space-y-5">
+            {faqItems.map((item) => (
+              <article
+                key={item.question}
+                className="rounded-2xl border border-gray-100 bg-gray-50 p-6"
+              >
+                <h3 className="mb-3 text-lg font-black text-gray-900">
+                  {item.question}
+                </h3>
+
+                <p className="leading-relaxed text-gray-600">{item.answer}</p>
+              </article>
+            ))}
+          </div>
+
+          <p className="mt-8 text-center text-gray-600">
+            Need more information?{" "}
+            <Link
+              to="/contact"
+              className="font-bold text-blue-900 hover:underline"
+            >
+              Contact our manpower outsourcing team
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="py-24 px-6 md:px-12 bg-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
+      <section className="bg-gray-50 px-6 py-24 md:px-12">
+        <div className="mx-auto max-w-5xl text-center">
+          <h2 className="mb-6 text-4xl font-black text-gray-900 md:text-6xl">
             Need Reliable Manpower in Bangalore?
           </h2>
 
-          <p className="text-gray-600 text-lg mb-10">
-            Let us handle your staffing needs with trained, verified and
-            professionally managed workforce solutions.
+          <p className="mb-10 text-lg text-gray-600">
+            Share your staffing requirement with our team and receive a
+            workforce deployment plan based on your role, location and contract
+            requirements.
           </p>
 
-          <div className="flex flex-wrap gap-5 justify-center">
+          <div className="flex flex-wrap justify-center gap-5">
             <Link
               to="/contact"
-              className="bg-blue-900 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-800 transition inline-flex items-center gap-2"
+              className="inline-flex items-center gap-2 rounded-full bg-blue-900 px-10 py-4 font-bold text-white transition hover:bg-blue-800"
             >
-              Hire Manpower <ArrowRight size={18} />
+              Hire Manpower
+              <ArrowRight size={18} />
             </Link>
 
             <a
               href="tel:+919941229005"
-              className="border-2 border-blue-900 text-blue-900 px-10 py-4 rounded-full font-bold hover:bg-blue-900 hover:text-white transition inline-flex items-center gap-2"
+              aria-label="Call Acuity Groups for manpower outsourcing services"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-blue-900 px-10 py-4 font-bold text-blue-900 transition hover:bg-blue-900 hover:text-white"
             >
               <PhoneCall size={18} />
               +91 99412 29005
+            </a>
+
+            <a
+              href="https://wa.me/919941229005?text=Hello%20Acuity%20Groups,%20I%20need%20manpower%20outsourcing%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp Acuity Groups for manpower outsourcing"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-green-600 px-10 py-4 font-bold text-green-700 transition hover:bg-green-600 hover:text-white"
+            >
+              <MessageCircle size={18} />
+              WhatsApp Us
             </a>
           </div>
         </div>

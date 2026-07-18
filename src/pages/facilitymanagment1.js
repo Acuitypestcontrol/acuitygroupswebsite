@@ -187,45 +187,40 @@ const FacilityManagement = () => {
     },
   ];
 
-  <script type="application/ld+json">
-    {JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faqs.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
-        },
-      })),
-    })}
-  </script>;
-
   return (
     <div className="bg-white text-gray-800 font-sans overflow-hidden">
       <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          })}
+        </script>
+        ;
         <title>
           Integrated Facility Management Services in Bangalore | Acuity Groups
         </title>
-
         <meta
           name="description"
           content="Professional integrated facility management services in Bangalore for offices, apartments, industries and commercial properties, including housekeeping, security, maintenance and manpower support."
         />
-
         <meta
           name="keywords"
           content="integrated facility management services in Bangalore, facility management company in Bangalore, facility management services Bangalore, housekeeping management Bangalore, building maintenance Bangalore, technical facility services Bangalore, vendor management Bangalore, facility operations Bangalore"
         />
-
         <meta name="robots" content="index, follow" />
-
         <link
           rel="canonical"
           href="https://www.acuitygroups.in/integrated-facility-management"
         />
-
         <meta
           property="og:title"
           content="Integrated Facility Management Services in Bangalore | Acuity Groups"
@@ -245,7 +240,6 @@ const FacilityManagement = () => {
           property="og:image:alt"
           content="Integrated Facility Management Services in Bangalore"
         />
-
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -256,7 +250,6 @@ const FacilityManagement = () => {
           content="Acuity Groups offers complete integrated facility management services in Bangalore for commercial, residential, and industrial properties."
         />
         <meta name="twitter:image" content={FacilityHero} />
-
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -302,7 +295,6 @@ const FacilityManagement = () => {
             },
           })}
         </script>
-
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
