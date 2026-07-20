@@ -177,11 +177,11 @@ const ManpowerOutsourcingBlog = () => {
         />
         <title>
           Benefits of Manpower Outsourcing for Growing Businesses | Acuity
-          Groups
+          Groups LLP
         </title>
         <meta
           name="description"
-          content="Discover how manpower outsourcing helps businesses reduce costs, access skilled talent, scale flexibly, and manage compliance. Expert insights from Acuity Groups."
+          content="Discover how manpower outsourcing helps businesses in Bangalore reduce hiring costs and build a skilled, flexible workforce."
         />
         <meta
           name="keywords"

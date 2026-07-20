@@ -167,9 +167,7 @@ Thank you.`;
         identifier: {
           "@type": "PropertyValue",
           name: "Acuity Groups",
-          value: `AG-${job.title
-            .toUpperCase()
-            .replace(/[^A-Z0-9]+/g, "-")}`,
+          value: `AG-${job.title.toUpperCase().replace(/[^A-Z0-9]+/g, "-")}`,
         },
         datePosted: "2026-07-20",
         validThrough: "2026-09-30T23:59:59+05:30",
@@ -232,15 +230,12 @@ Thank you.`;
   return (
     <>
       <Helmet>
-        <title>
-          Careers at Acuity Groups | Facility Management Jobs Bengaluru
-        </title>
+        <title>Jobs in Bengaluru | Careers at Acuity Groups LLP</title>
 
         <meta
           name="description"
-          content="Explore current job openings at Acuity Groups in Bengaluru. Apply for facility management, business development, administration and field officer positions."
+          content="Explore job openings at Acuity Groups LLP in Bengaluru. Apply for facility management, business development, administration and field officer roles."
         />
-
         <meta
           name="keywords"
           content="Acuity Groups careers, facility management jobs Bengaluru, facility manager jobs, field officer jobs, business development manager jobs, administration jobs Bengaluru"
@@ -326,9 +321,9 @@ Thank you.`;
             </h1>
 
             <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Join a professional team delivering facility management,
-              security, housekeeping, pest management, manpower and maintenance
-              services across Bengaluru and Karnataka.
+              Join a professional team delivering facility management, security,
+              housekeeping, pest management, manpower and maintenance services
+              across Bengaluru and Karnataka.
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4 justify-center">
@@ -518,8 +513,8 @@ Thank you.`;
               </h2>
 
               <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-                Send your updated resume and relevant documents through
-                WhatsApp or email. Our recruitment team will contact shortlisted
+                Send your updated resume and relevant documents through WhatsApp
+                or email. Our recruitment team will contact shortlisted
                 candidates.
               </p>
 

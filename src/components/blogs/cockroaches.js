@@ -129,11 +129,13 @@ const CockroachInfestation = () => {
   return (
     <>
       <Helmet>
-        <title>How to Identify Cockroach Infestation at Home | Acuity Groups</title>
+        <title>
+          How to Identify Cockroach Infestation at Home | Acuity Groups LLP
+        </title>
 
         <meta
           name="description"
-          content="Learn signs of cockroach infestation and get professional cockroach control services in Bangalore from Acuity Groups."
+          content="Learn the signs of cockroach infestation and get professional cockroach control services in Bangalore from Acuity Groups LLP."
         />
 
         <meta
@@ -171,9 +173,7 @@ const CockroachInfestation = () => {
           {JSON.stringify(articleSchema)}
         </script>
 
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
 
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema)}
@@ -246,9 +246,7 @@ const CockroachInfestation = () => {
                 </Link>
               </li>
               <li className="text-gray-400">/</li>
-              <li className="text-gray-700 font-medium">
-                Cockroach Control
-              </li>
+              <li className="text-gray-700 font-medium">Cockroach Control</li>
             </ol>
           </nav>
 
@@ -274,9 +272,15 @@ const CockroachInfestation = () => {
                     <li>
                       Look for droppings in corners, drawers and kitchen areas.
                     </li>
-                    <li>Check for egg casings behind furniture and cabinets.</li>
-                    <li>A musty, oily smell can indicate a larger infestation.</li>
-                    <li>Seal cracks, remove food sources and fix water leaks.</li>
+                    <li>
+                      Check for egg casings behind furniture and cabinets.
+                    </li>
+                    <li>
+                      A musty, oily smell can indicate a larger infestation.
+                    </li>
+                    <li>
+                      Seal cracks, remove food sources and fix water leaks.
+                    </li>
                     <li>Call professionals for complete cockroach control.</li>
                   </ul>
                 </div>
@@ -407,7 +411,8 @@ const CockroachInfestation = () => {
                 <p className="text-gray-700 mb-4">
                   If you continue seeing cockroaches even after cleaning and
                   using traps, there may be a hidden infestation. Professional
-                  pest control helps identify nesting areas and treat the source.
+                  pest control helps identify nesting areas and treat the
+                  source.
                 </p>
 
                 <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
@@ -438,8 +443,8 @@ const CockroachInfestation = () => {
                 </p>
                 <p className="text-gray-700 mt-2">
                   Cockroaches hide in small cracks, drains, kitchen cabinets and
-                  appliance gaps. Early detection helps stop the infestation from
-                  spreading.
+                  appliance gaps. Early detection helps stop the infestation
+                  from spreading.
                 </p>
               </div>
 

@@ -199,68 +199,16 @@ const ContactUs = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Acuity Groups | Facility Management Bangalore</title>
+        <title>Contact Acuity Groups LLP | Facility Services Bangalore</title>
 
         <meta
           name="description"
-          content="Contact Acuity Groups for facility management, security, housekeeping, pest control and manpower services in Bangalore."
-        />
-
-        <meta
-          name="keywords"
-          content="contact Acuity Groups, facility management Bangalore, security services Bangalore, housekeeping services Bangalore, pest control Bangalore"
+          content="Contact Acuity Groups LLP for facility management, housekeeping, security, pest control, manpower and maintenance services in Bangalore."
         />
 
         <meta name="robots" content="index, follow" />
-        <meta name="author" content="Acuity Groups" />
 
         <link rel="canonical" href="https://www.acuitygroups.in/contact" />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Acuity Groups" />
-        <meta property="og:url" content="https://www.acuitygroups.in/contact" />
-
-        <meta
-          property="og:title"
-          content="Contact Acuity Groups | Facility Management Bangalore"
-        />
-
-        <meta
-          property="og:description"
-          content="Get in touch with Acuity Groups for facility management, security, housekeeping, pest control and manpower services in Bangalore."
-        />
-
-        <meta
-          property="og:image"
-          content="https://www.acuitygroups.in/og-image.jpg"
-        />
-
-        <meta name="twitter:card" content="summary_large_image" />
-
-        <meta
-          name="twitter:title"
-          content="Contact Acuity Groups | Facility Management Bangalore"
-        />
-
-        <meta
-          name="twitter:description"
-          content="Contact Acuity Groups for facility management and support services in Bangalore."
-        />
-
-        <meta
-          name="twitter:image"
-          content="https://www.acuitygroups.in/og-image.jpg"
-        />
-
-        <script type="application/ld+json">
-          {JSON.stringify(localBusinessSchema)}
-        </script>
-
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
-        </script>
       </Helmet>
 
       <div className="bg-white text-gray-800 overflow-hidden font-['Poppins',system-ui,sans-serif]">

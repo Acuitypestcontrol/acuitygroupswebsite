@@ -176,11 +176,11 @@ const HotelFacilityManagementBlog = () => {
         />
         <title>
           Why Hotels Need Professional Facility Management Services | Acuity
-          Groups
+          Groups LLP
         </title>
         <meta
           name="description"
-          content="Discover how professional facility management enhances guest satisfaction, operational efficiency, and safety in hotels. Expert insights from Acuity Groups."
+          content="Discover how professional facility management improves guest satisfaction, hotel safety and operational efficiency in Bangalore."
         />
         <meta
           name="keywords"

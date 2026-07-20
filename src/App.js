@@ -6,6 +6,7 @@ import {
   Navigate,
 } from "react-router-dom";
 
+
 import Navbar from "./global/navbar";
 import Footer from "./global/footer";
 import ScrollToTop from "../src/components/Scrolltop";
@@ -276,7 +277,7 @@ export default function App() {
           element={<Navigate to="/blogs/education-industry" replace />}
         />
         <Route
-          path="/blogs/facilitymanagment"
+          path="/blogs/facility-management"
           element={<FacilityManagementBlog />}
         />
         <Route
@@ -325,7 +326,7 @@ export default function App() {
         />
 
         {/* 404 fallback */}
-        <Route path="*" element={<Navigate to="/" replace />} />
+     <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
 
       <Footer />

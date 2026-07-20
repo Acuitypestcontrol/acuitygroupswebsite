@@ -178,11 +178,11 @@ const ManufacturingFacilityManagementBlog = () => {
         />
         <title>
           The Role of Facility Management in Manufacturing Excellence | Acuity
-          Groups
+          Groups LLP
         </title>
         <meta
           name="description"
-          content="Discover how professional facility management enhances equipment reliability, workplace safety, operational efficiency, and compliance in manufacturing. Expert insights from Acuity Groups."
+          content="Discover how facility management improves manufacturing efficiency, equipment reliability and workplace safety in Bangalore."
         />
         <meta
           name="keywords"

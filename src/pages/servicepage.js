@@ -124,7 +124,7 @@ const Services = () => {
 
         <meta
           name="description"
-          content="Explore Acuity Groups services in Bangalore, including integrated facility management, housekeeping, security guards, manpower outsourcing, pest control, soft services and maintenance."
+          content="Explore Acuity Groups LLP services in Bangalore, including facility management, housekeeping, security, pest control, manpower and maintenance."
         />
 
         <meta

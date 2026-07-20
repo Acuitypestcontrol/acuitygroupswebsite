@@ -176,10 +176,11 @@ const PestManagementBlog = () => {
         />
         <title>
           Why Regular Pest Control Is Essential for Businesses | Acuity Groups
+          LLP
         </title>
         <meta
           name="description"
-          content="Don't let rodents and termites ruin your business property. Discover the vital role of commercial pest control in health safety and compliance."
+          content="Discover how commercial pest control protects businesses from rodents, termites and infestations in Bangalore while ensuring compliance."
         />
         <meta
           name="keywords"

@@ -56,7 +56,7 @@ const DemystifyingFacilityManagementBlog = () => {
 
   const shareUrl = encodeURIComponent(pageUrl);
   const shareTitle = encodeURIComponent(
-    "Demystifying Facility Management: From Buzzwords to Bottom Line | Acuity Groups"
+    "Demystifying Facility Management: From Buzzwords to Bottom Line | Acuity Groups",
   );
 
   const tocSections = [
@@ -191,12 +191,12 @@ const DemystifyingFacilityManagementBlog = () => {
       <Helmet>
         <title>
           Learn How Facility Management Improves Business Operations | Acuity
-          Groups
+          Groups LLP
         </title>
 
         <meta
           name="description"
-          content="Learn how facility management improves cost control, productivity, maintenance, workplace comfort and operational efficiency."
+          content="Discover how facility management improves cost control, maintenance and workplace productivity for businesses in Bangalore."
         />
 
         <meta
@@ -384,7 +384,7 @@ const DemystifyingFacilityManagementBlog = () => {
                       onClick={() =>
                         window.open(
                           `https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`,
-                          "_blank"
+                          "_blank",
                         )
                       }
                       className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-500"
@@ -397,7 +397,7 @@ const DemystifyingFacilityManagementBlog = () => {
                       onClick={() =>
                         window.open(
                           `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareTitle}`,
-                          "_blank"
+                          "_blank",
                         )
                       }
                       className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-700"
@@ -410,7 +410,7 @@ const DemystifyingFacilityManagementBlog = () => {
                       onClick={() =>
                         window.open(
                           `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`,
-                          "_blank"
+                          "_blank",
                         )
                       }
                       className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-600"
@@ -635,10 +635,11 @@ const DemystifyingFacilityManagementBlog = () => {
                 </h2>
 
                 <p className="text-gray-200 text-lg leading-relaxed">
-                  Facility management is a strategic support system that improves
-                  cost control, productivity, safety and business continuity.
-                  Partner with Acuity Groups to manage your facility with better
-                  structure, trained teams and reliable service support.
+                  Facility management is a strategic support system that
+                  improves cost control, productivity, safety and business
+                  continuity. Partner with Acuity Groups to manage your facility
+                  with better structure, trained teams and reliable service
+                  support.
                 </p>
               </div>
 

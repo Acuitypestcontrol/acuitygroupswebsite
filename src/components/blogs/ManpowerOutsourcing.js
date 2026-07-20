@@ -61,7 +61,7 @@ const ManpowerOutsourcingBlog = () => {
 
   const shareUrl = encodeURIComponent(pageUrl);
   const shareTitle = encodeURIComponent(
-    "Benefits of Manpower Outsourcing for Growing Businesses | Acuity Groups"
+    "Benefits of Manpower Outsourcing for Growing Businesses | Acuity Groups",
   );
 
   const tocSections = [
@@ -195,11 +195,11 @@ const ManpowerOutsourcingBlog = () => {
       <Helmet>
         <title>
           Manpower Outsourcing Services for Growing Businesses | Acuity Groups
+          LLP
         </title>
-
         <meta
           name="description"
-          content="Learn how manpower outsourcing helps businesses reduce hiring costs, access skilled talent, scale teams and manage compliance."
+          content="Discover how manpower outsourcing helps businesses in Bangalore reduce hiring costs and build a skilled, flexible workforce."
         />
 
         <meta
@@ -391,7 +391,7 @@ const ManpowerOutsourcingBlog = () => {
                       onClick={() =>
                         window.open(
                           `https://twitter.com/intent/tweet?text=${shareTitle}&url=${shareUrl}`,
-                          "_blank"
+                          "_blank",
                         )
                       }
                       className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-500"
@@ -404,7 +404,7 @@ const ManpowerOutsourcingBlog = () => {
                       onClick={() =>
                         window.open(
                           `https://www.linkedin.com/shareArticle?mini=true&url=${shareUrl}&title=${shareTitle}`,
-                          "_blank"
+                          "_blank",
                         )
                       }
                       className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-700"
@@ -417,7 +417,7 @@ const ManpowerOutsourcingBlog = () => {
                       onClick={() =>
                         window.open(
                           `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`,
-                          "_blank"
+                          "_blank",
                         )
                       }
                       className="p-2 rounded-full bg-gray-50 hover:bg-blue-50 transition text-gray-600 hover:text-blue-600"
@@ -805,7 +805,8 @@ const ManpowerOutsourcingBlog = () => {
             </h2>
 
             <p className="text-indigo-100 text-lg mb-8">
-              Let Acuity Groups provide the manpower support your business needs.
+              Let Acuity Groups provide the manpower support your business
+              needs.
             </p>
 
             <div className="flex flex-wrap justify-center gap-5">

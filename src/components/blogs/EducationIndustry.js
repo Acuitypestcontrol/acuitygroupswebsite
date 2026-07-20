@@ -152,13 +152,13 @@ const EducationFacilityManagementBlog = () => {
     <>
       <Helmet>
         <title>
-          Facility Management for Schools and Colleges | Acuity Groups
+          Facility Management for Schools and Colleges | Acuity Groups LLP
         </title>
 
-        <meta
-          name="description"
-          content="Learn why schools and colleges need facility management for security, housekeeping, pest control and maintenance."
-        />
+       <meta
+  name="description"
+  content="Learn why schools and colleges need professional facility management for security, housekeeping, pest control and maintenance in Bangalore."
+/>
 
         <meta
           name="keywords"

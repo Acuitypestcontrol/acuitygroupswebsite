@@ -172,11 +172,11 @@ const TermiteControlGuide = () => {
           href="https://www.acuitygroups.in/blogs/termite-control-guide"
         />
         <title>
-          Termite Control: Complete Home Protection Guide | Acuity Groups
+          Termite Control: Complete Home Protection Guide | Acuity Groups LLP
         </title>
         <meta
           name="description"
-          content="Protect your wooden furniture and home structure from damaging termites. Learn prevention tips, signs of infestation, DIY methods, and when to call professionals."
+          content="Learn how to prevent termite damage to wooden furniture and buildings with expert termite control tips for properties in Bangalore."
         />
         <meta
           name="keywords"

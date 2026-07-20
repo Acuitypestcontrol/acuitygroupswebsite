@@ -176,11 +176,11 @@ const TheUnsungHeroesBlog = () => {
         />
         <title>
           The Unsung Heroes: Facilities and the Power of Good Management |
-          Acuity Groups
+          Acuity Groups LLP
         </title>
         <meta
           name="description"
-          content="Discover how professional facility management boosts productivity, reduces costs, enhances safety, and builds a strong brand image. Expert insights from Acuity Groups."
+          content="Learn how professional facility management improves productivity, workplace safety and operational efficiency for businesses in Bangalore."
         />
         <meta
           name="keywords"

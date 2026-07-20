@@ -230,7 +230,7 @@ export default function Blog() {
         </title>
         <meta
           name="description"
-          content="Expert blogs on Facility Management, Security Services, Housekeeping, Pest Control, Manpower Outsourcing, Maintenance, and Workplace Productivity. Insights from Acuity Groups, Bangalore."
+          content="Apply for pest control technician, operations supervisor and business support jobs at Acuity Groups LLP in Bengaluru. Freshers can also apply."
         />
         <meta
           name="keywords"

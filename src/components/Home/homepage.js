@@ -401,15 +401,13 @@ export default function Homepage() {
     <div className="overflow-hidden bg-white text-black font-['Poppins',system-ui,sans-serif]">
       <Helmet>
         <title>
-          Acuity Groups LLP | Integrated Facility Management Services in
-          Bangalore
+          Integrated Facility Management in Bangalore | Acuity Groups LLP
         </title>
 
         <meta
           name="description"
-          content="Acuity Groups LLP provides integrated facility management, security, housekeeping, pest management, manpower outsourcing and maintenance services in Bangalore."
+          content="Acuity Groups LLP offers trusted facility management, security, housekeeping and pest control services in Bangalore."
         />
-
         <meta name="robots" content="index, follow" />
 
         <link rel="canonical" href="https://www.acuitygroups.in/" />

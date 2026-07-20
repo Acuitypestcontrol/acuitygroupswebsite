@@ -156,11 +156,13 @@ const IntegratedDesignBlog = () => {
   return (
     <>
       <Helmet>
-        <title>Integrated Design and Facility Management | Acuity Groups</title>
+        <title>
+          Integrated Design and Facility Management | Acuity Groups LLP
+        </title>
 
         <meta
           name="description"
-          content="Learn how integrated design combines facility management and space planning to create functional and inspiring spaces."
+          content="Discover how integrated design and facility management improve workplace efficiency, functionality and employee experience in Bangalore."
         />
 
         <meta
@@ -198,9 +200,7 @@ const IntegratedDesignBlog = () => {
           {JSON.stringify(articleData)}
         </script>
 
-        <script type="application/ld+json">
-          {JSON.stringify(faqData)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(faqData)}</script>
 
         <script type="application/ld+json">
           {JSON.stringify(breadcrumbSchema)}

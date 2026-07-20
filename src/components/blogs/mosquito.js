@@ -173,11 +173,11 @@ const MosquitoPrevention = () => {
           href="https://www.acuitygroups.in/blogs/mosquito-prevention"
         />
         <title>
-          Mosquito Prevention Tips for a Healthier Home | Acuity Groups
+          Mosquito Prevention Tips for a Healthier Home | Acuity Groups LLP
         </title>
         <meta
           name="description"
-          content="Simple and effective mosquito control methods to protect your family from dengue, malaria, and chikungunya. Learn to eliminate breeding sites, use natural repellents, and when to call professionals."
+          content="Learn effective mosquito control methods to prevent dengue, malaria and chikungunya while protecting your home in Bangalore."
         />
         <meta
           name="keywords"

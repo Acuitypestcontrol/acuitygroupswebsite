@@ -177,11 +177,11 @@ const PreventiveMaintenanceBlog = () => {
         />
         <title>
           Preventive Maintenance: The Key to Long-Term Asset Performance |
-          Acuity Groups
+          Acuity Groups LLP
         </title>
         <meta
           name="description"
-          content="Discover how preventive maintenance reduces downtime, lowers repair costs, extends asset life, and improves safety. Expert insights from Acuity Groups."
+          content="Discover how preventive maintenance improves equipment reliability, reduces repair costs and boosts workplace safety in Bangalore."
         />
         <meta
           name="keywords"

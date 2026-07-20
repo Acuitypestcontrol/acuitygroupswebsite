@@ -179,11 +179,11 @@ const InteriorDesignTrends2024 = () => {
         />
         <title>
           Unleash Your Inner Designer: Top Tips & Trends for 2024 | Acuity
-          Groups
+          Groups LLP
         </title>
         <meta
           name="description"
-          content="Ready to refresh your space? Discover the top 2026 interior design trends, from soothing biophilic elements and earthy tones to creative DIY home projects."
+          content="Explore 2026 interior design trends that create modern, functional and inspiring spaces for homes, offices and commercial properties."
         />
         <meta
           name="keywords"

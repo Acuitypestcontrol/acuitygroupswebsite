@@ -239,7 +239,7 @@ Thank you.`;
 
         <meta
           name="description"
-          content="Apply for pest control technician, operations supervisor and business support jobs at Acuity Groups in Bengaluru. Freshers and experienced candidates can apply."
+          content="Apply for pest control jobs at Acuity Groups LLP in Bengaluru. Openings for technicians and supervisors. Freshers and experienced candidates can apply."
         />
 
         <meta

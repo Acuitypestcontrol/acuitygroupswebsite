@@ -174,13 +174,13 @@ const HealthcareFacilityManagementBlog = () => {
     <>
       <Helmet>
         <title>
-          Facility Management in Healthcare Facilities | Acuity Groups
+          Facility Management in Healthcare Facilities | Acuity Groups LLP
         </title>
 
-        <meta
-          name="description"
-          content="Learn how facility management supports hygiene, safety, compliance and smooth operations in healthcare facilities."
-        />
+       <meta
+  name="description"
+  content="Learn how facility management improves hygiene, safety and compliance for hospitals and healthcare facilities in Bangalore."
+/>
 
         <meta
           name="keywords"

@@ -192,13 +192,10 @@ const ProfessionalHousekeepingBlog = () => {
   return (
     <>
       <Helmet>
-        <title>
-          Professional Housekeeping Services | Acuity Groups Bangalore
-        </title>
-
+        <title>Professional Housekeeping Services | Acuity Groups LLP</title>
         <meta
           name="description"
-          content="Learn how professional housekeeping services improve hygiene, safety, productivity and customer experience in commercial spaces."
+          content="Learn how professional housekeeping services improve hygiene, workplace safety and productivity for businesses in Bangalore."
         />
 
         <meta

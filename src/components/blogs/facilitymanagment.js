@@ -158,12 +158,11 @@ const FacilityManagementBlog = () => {
       <Helmet>
         <title>
           Importance of Facility Management for Property Optimization | Acuity
-          Groups
+          Groups LLP
         </title>
-
         <meta
           name="description"
-          content="Learn how facility management improves property value, reduces costs and supports building maintenance in Bangalore."
+          content="Learn how Acuity Groups LLP helps businesses improve property value, reduce maintenance costs and manage facilities efficiently in Bangalore."
         />
 
         <meta

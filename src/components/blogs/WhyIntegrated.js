@@ -84,8 +84,7 @@ const SecurityServicesBlog = () => {
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id":
-        "https://www.acuitygroups.in/blogs/professional-security-services",
+      "@id": "https://www.acuitygroups.in/blogs/professional-security-services",
     },
   };
 
@@ -177,11 +176,11 @@ const SecurityServicesBlog = () => {
         />
         <title>
           Why Every Business Needs Professional Security Services | Acuity
-          Groups
+          Groups LLP
         </title>
         <meta
           name="description"
-          content="Boost customer confidence and workplace safety. Learn how professional business security services and smart access control solutions from Acuity Groups mitigate risk."
+          content="Discover how business security services improve workplace safety, asset protection and risk management for businesses in Bangalore."
         />
         <meta
           name="keywords"

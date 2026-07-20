@@ -321,11 +321,10 @@ const PestManagement = () => {
   return (
     <div className="overflow-hidden bg-white font-sans text-gray-800">
       <Helmet>
-        <title>Pest Control Services in Bangalore | Acuity Groups</title>
-
+        <title>Pest Control Jobs in Bengaluru | Acuity Groups LLP</title>
         <meta
           name="description"
-          content="Professional pest control services in Bangalore for homes, offices, hotels, hospitals, restaurants, warehouses and industrial properties."
+          content="Apply for pest control technician and supervisor jobs at Acuity Groups LLP in Bengaluru. Freshers and experienced candidates can apply."
         />
 
         <meta
@@ -336,7 +335,10 @@ const PestManagement = () => {
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Acuity Groups LLP" />
 
-        <link rel="canonical" href={canonicalUrl} />
+        <link
+          rel="canonical"
+          href="https://www.acuitygroups.in/career/pest-control"
+        />
 
         <meta
           property="og:title"
