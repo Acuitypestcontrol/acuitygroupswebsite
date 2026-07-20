@@ -13,23 +13,72 @@
     <!-- Font Optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Default fallback only. Page SEO comes from React Helmet -->
-    <title>Acuity Groups</title>
+    <!-- Default fallback SEO. Individual page SEO comes from React Helmet -->
+    <title>
+      Acuity Groups LLP | Integrated Facility Management Services in Bangalore
+    </title>
 
     <meta
       name="description"
-      content="Acuity Groups provides facility management, security, housekeeping, pest management, manpower outsourcing and maintenance services in Bangalore."
+      content="Acuity Groups LLP provides integrated facility management, security, housekeeping, pest management, manpower outsourcing and maintenance services in Bangalore."
     />
 
-    <meta name="author" content="Acuity Groups" />
+    <meta name="author" content="Acuity Groups LLP" />
     <meta name="robots" content="index, follow" />
 
-    <!-- IMPORTANT: Do not add canonical here. Canonical must be page-wise in Helmet. -->
+    <!-- Open Graph fallback -->
+    <meta
+      property="og:title"
+      content="Acuity Groups LLP | Integrated Facility Management Services in Bangalore"
+    />
+
+    <meta
+      property="og:description"
+      content="Acuity Groups LLP provides integrated facility management, security, housekeeping, pest management, manpower outsourcing and maintenance services in Bangalore."
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.acuitygroups.in/" />
+    <meta property="og:site_name" content="Acuity Groups LLP" />
+
+    <!-- Twitter fallback -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta
+      name="twitter:title"
+      content="Acuity Groups LLP | Integrated Facility Management Services in Bangalore"
+    />
+
+    <meta
+      name="twitter:description"
+      content="Professional facility management, housekeeping, security, pest management, manpower outsourcing and maintenance services across Bangalore."
+    />
+
+    <!--
+      Do not add a canonical tag here.
+      Canonical URLs must be added page-wise using React Helmet.
+    -->
+
+    <!-- Website Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://www.acuitygroups.in/#website",
+        "url": "https://www.acuitygroups.in/",
+        "name": "Acuity Groups LLP",
+        "alternateName": "Acuity Groups",
+        "publisher": {
+          "@id": "https://www.acuitygroups.in/#localbusiness"
+        }
+      }
+    </script>
 
     <!-- Local Business Schema -->
     <script type="application/ld+json">
@@ -37,34 +86,75 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "@id": "https://www.acuitygroups.in/#localbusiness",
-        "name": "Acuity Groups",
+        "name": "Acuity Groups LLP",
+        "alternateName": "Acuity Groups",
         "url": "https://www.acuitygroups.in/",
         "telephone": "+919941229005",
         "email": "info@acuitygroups.in",
         "image": "https://www.acuitygroups.in/og-image.jpg",
-        "description": "Acuity Groups provides integrated facility management services in Bangalore including housekeeping, security services, pest management, manpower outsourcing, soft services, and repair maintenance.",
+        "logo": "https://www.acuitygroups.in/logo192.png",
+        "description": "Acuity Groups LLP provides integrated facility management services in Bangalore, including housekeeping, security services, pest management, manpower outsourcing, soft services, and repair and maintenance.",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "2nd Floor, KVO-08, No-28/2, near Sun Jupiter School JP Nagar 6th Phase, Yelachenahalli",
+          "streetAddress": "2nd Floor, KVO-08, No-28/2, near Sun Jupiter School, JP Nagar 6th Phase, Yelachenahalli",
           "addressLocality": "Bengaluru",
           "addressRegion": "Karnataka",
           "postalCode": "560078",
           "addressCountry": "IN"
         },
         "areaServed": [
-          "Bangalore",
-          "Whitefield",
-          "Electronic City",
-          "Koramangala",
-          "HSR Layout",
-          "JP Nagar",
-          "Peenya",
-          "Hebbal",
-          "BEML Layout",
-          "Dabaspet",
-          "Doddaballapur",
-          "Attibele",
-          "Kumbalgodu"
+          {
+            "@type": "City",
+            "name": "Bengaluru"
+          },
+          {
+            "@type": "Place",
+            "name": "Whitefield"
+          },
+          {
+            "@type": "Place",
+            "name": "Electronic City"
+          },
+          {
+            "@type": "Place",
+            "name": "Koramangala"
+          },
+          {
+            "@type": "Place",
+            "name": "HSR Layout"
+          },
+          {
+            "@type": "Place",
+            "name": "JP Nagar"
+          },
+          {
+            "@type": "Place",
+            "name": "Peenya"
+          },
+          {
+            "@type": "Place",
+            "name": "Hebbal"
+          },
+          {
+            "@type": "Place",
+            "name": "BEML Layout"
+          },
+          {
+            "@type": "Place",
+            "name": "Dabaspet"
+          },
+          {
+            "@type": "Place",
+            "name": "Doddaballapur"
+          },
+          {
+            "@type": "Place",
+            "name": "Attibele"
+          },
+          {
+            "@type": "Place",
+            "name": "Kumbalgodu"
+          }
         ],
         "serviceType": [
           "Integrated Facility Management",
@@ -79,24 +169,27 @@
       }
     </script>
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-J4HL7CRSRR"
     ></script>
+
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
 
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
       gtag("config", "G-J4HL7CRSRR");
     </script>
   </head>
 
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
     <div id="root"></div>
   </body>
 </html>
