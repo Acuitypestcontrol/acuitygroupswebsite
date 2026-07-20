@@ -12,6 +12,11 @@ import {
   ArrowRight,
   Sparkles,
   ShieldCheck,
+  MapPin,
+  MessageCircle,
+  Shield,
+  Bug,
+  UserRoundCheck,
 } from "lucide-react";
 
 import MaintenanceHero from "../images/repair.jpg";
@@ -138,6 +143,60 @@ const RepairMaintenance = () => {
     "Warehouses and Logistics",
   ];
 
+  const serviceAreas = [
+    "JP Nagar",
+    "Whitefield",
+    "Electronic City",
+    "Koramangala",
+    "HSR Layout",
+    "Hebbal",
+    "Peenya",
+    "Banashankari",
+    "Marathahalli",
+    "Yelahanka",
+    "Doddaballapur",
+    "Attibele",
+  ];
+
+  const relatedServices = [
+    {
+      title: "Integrated Facility Management",
+      desc: "Complete management of housekeeping, security, maintenance and daily facility operations.",
+      link: "/integrated-facility-management",
+      icon: Building2,
+    },
+    {
+      title: "Housekeeping Services",
+      desc: "Professional housekeeping support for commercial, residential and industrial properties.",
+      link: "/housekeeping",
+      icon: Sparkles,
+    },
+    {
+      title: "Security Services",
+      desc: "Trained security personnel and professional guarding solutions for all property types.",
+      link: "/securityservice",
+      icon: Shield,
+    },
+    {
+      title: "Soft Services",
+      desc: "Corporate cleaning, deep cleaning, washroom hygiene and workplace support services.",
+      link: "/softservices",
+      icon: CheckCircle,
+    },
+    {
+      title: "Pest Management",
+      desc: "Professional pest management services for offices, apartments, industries and warehouses.",
+      link: "/pest-management",
+      icon: Bug,
+    },
+    {
+      title: "Manpower Outsourcing",
+      desc: "Reliable trained manpower for technical maintenance and daily facility operations.",
+      link: "/manpower",
+      icon: UserRoundCheck,
+    },
+  ];
+
   const faqs = [
     {
       question:
@@ -164,12 +223,112 @@ const RepairMaintenance = () => {
     {
       question: "How can I request a repair or maintenance quotation?",
       answer:
-        "You can contact Acuity Groups by phone or submit the contact form with your property type, location and maintenance requirements. Our team will assess the work and provide a suitable quotation.",
+        "You can contact Acuity Groups by phone, WhatsApp or the website contact form. Share your property type, location and maintenance requirements, and our team will provide a suitable quotation.",
+    },
+    {
+      question: "Do you provide annual maintenance contracts in Bangalore?",
+      answer:
+        "Yes. We provide customized annual maintenance contracts for electrical systems, plumbing, carpentry, building upkeep and general property maintenance.",
     },
   ];
 
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.acuitygroups.in/#organization",
+    name: "Acuity Groups LLP",
+    url: "https://www.acuitygroups.in/",
+    telephone: "+919941229005",
+    email: "info@acuitygroups.in",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress:
+        "2nd Floor, KVO-08, No-28/2, near Sun Jupiter School, JP Nagar 6th Phase, Yelachenahalli",
+      addressLocality: "Bengaluru",
+      addressRegion: "Karnataka",
+      postalCode: "560078",
+      addressCountry: "IN",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+919941229005",
+      contactType: "customer service",
+      areaServed: "IN",
+      availableLanguage: ["English", "Kannada", "Hindi"],
+    },
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.acuitygroups.in/repair/#service",
+    name: "Repair and Maintenance Services in Bangalore",
+    serviceType:
+      "Electrical, Plumbing, Carpentry and Building Maintenance Services",
+    url: "https://www.acuitygroups.in/repair",
+    provider: {
+      "@id": "https://www.acuitygroups.in/#organization",
+    },
+    areaServed: serviceAreas.map((area) => ({
+      "@type": "Place",
+      name: `${area}, Bengaluru`,
+    })),
+    description:
+      "Professional repair and maintenance services in Bangalore, including electrical maintenance, plumbing, carpentry, preventive maintenance and building repairs.",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Repair and Maintenance Services",
+      itemListElement: services.map((service) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: service.title,
+          description: service.desc,
+        },
+      })),
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.acuitygroups.in/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://www.acuitygroups.in/services",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Repair and Maintenance Services",
+        item: "https://www.acuitygroups.in/repair",
+      },
+    ],
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
-    <div className="bg-white text-gray-800 font-sans overflow-hidden">
+    <div className="overflow-hidden bg-white font-sans text-gray-800">
       <Helmet>
         <title>
           Repair and Maintenance Services in Bangalore | Acuity Groups
@@ -177,22 +336,18 @@ const RepairMaintenance = () => {
 
         <meta
           name="description"
-          content="Professional repair and maintenance services in Bangalore, including electrical, plumbing, carpentry and building maintenance for offices, apartments, industries and commercial properties."
+          content="Professional repair and maintenance services in Bangalore, including electrical, plumbing, carpentry and building maintenance for commercial and residential properties."
         />
 
         <meta
           name="keywords"
-          content="repair and maintenance services in Bangalore, building maintenance company Bangalore, electrical maintenance services Bangalore, plumbing services Bangalore, carpentry services Bangalore, property maintenance Bangalore"
+          content="repair and maintenance services in Bangalore, building maintenance company Bangalore, electrical maintenance Bangalore, plumbing services Bangalore, carpentry services Bangalore, property maintenance Bangalore"
         />
 
         <meta name="robots" content="index, follow" />
 
-        <link
-          rel="canonical"
-          href="https://www.acuitygroups.in/repair-maintenance"
-        />
+        <link rel="canonical" href="https://www.acuitygroups.in/repair" />
 
-        {/* Open Graph */}
         <meta
           property="og:title"
           content="Repair and Maintenance Services in Bangalore | Acuity Groups"
@@ -200,13 +355,10 @@ const RepairMaintenance = () => {
 
         <meta
           property="og:description"
-          content="Professional electrical, plumbing, carpentry and building maintenance services in Bangalore for residential, commercial and industrial properties."
+          content="Professional electrical, plumbing, carpentry and building maintenance services for residential, commercial and industrial properties in Bangalore."
         />
 
-        <meta
-          property="og:url"
-          content="https://www.acuitygroups.in/repair-maintenance"
-        />
+        <meta property="og:url" content="https://www.acuitygroups.in/repair" />
 
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Acuity Groups" />
@@ -214,10 +366,9 @@ const RepairMaintenance = () => {
 
         <meta
           property="og:image:alt"
-          content="Repair and Maintenance Services in Bangalore"
+          content="Repair and maintenance services in Bangalore"
         />
 
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
 
         <meta
@@ -227,129 +378,56 @@ const RepairMaintenance = () => {
 
         <meta
           name="twitter:description"
-          content="Professional electrical, plumbing, carpentry and building maintenance services in Bangalore."
+          content="Electrical, plumbing, carpentry and building maintenance services in Bangalore."
         />
 
         <meta name="twitter:image" content={MaintenanceHero} />
 
-        {/* Service Schema */}
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "@id": "https://www.acuitygroups.in/repair-maintenance/#service",
-            name: "Repair and Maintenance Services in Bangalore",
-            serviceType:
-              "Electrical, Plumbing, Carpentry and Building Maintenance Services",
-            url: "https://www.acuitygroups.in/repair-maintenance",
-            image: `https://www.acuitygroups.in${MaintenanceHero}`,
-            provider: {
-              "@type": "LocalBusiness",
-              name: "Acuity Groups",
-              url: "https://www.acuitygroups.in/",
-              telephone: "+919941229005",
-              email: "info@acuitygroups.in",
-              address: {
-                "@type": "PostalAddress",
-                streetAddress:
-                  "2nd Floor, KVO-08, No-28/2, near Sun Jupiter School, JP Nagar 6th Phase, Yelachenahalli",
-                addressLocality: "Bengaluru",
-                addressRegion: "Karnataka",
-                postalCode: "560078",
-                addressCountry: "IN",
-              },
-            },
-            areaServed: {
-              "@type": "City",
-              name: "Bengaluru",
-            },
-            description:
-              "Professional repair and maintenance services in Bangalore, including electrical maintenance, plumbing, carpentry, preventive maintenance and building repairs.",
-            hasOfferCatalog: {
-              "@type": "OfferCatalog",
-              name: "Repair and Maintenance Services",
-              itemListElement: services.map((service) => ({
-                "@type": "Offer",
-                itemOffered: {
-                  "@type": "Service",
-                  name: service.title,
-                  description: service.desc,
-                },
-              })),
-            },
-          })}
+          {JSON.stringify(organizationSchema)}
         </script>
 
-        {/* Breadcrumb Schema */}
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://www.acuitygroups.in/",
-              },
-              {
-                "@type": "ListItem",
-                position: 2,
-                name: "Services",
-                item: "https://www.acuitygroups.in/services",
-              },
-              {
-                "@type": "ListItem",
-                position: 3,
-                name: "Repair and Maintenance Services",
-                item: "https://www.acuitygroups.in/repair-maintenance",
-              },
-            ],
-          })}
+          {JSON.stringify(serviceSchema)}
         </script>
 
-        {/* FAQ Schema */}
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: faqs.map((faq) => ({
-              "@type": "Question",
-              name: faq.question,
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: faq.answer,
-              },
-            })),
-          })}
+          {JSON.stringify(breadcrumbSchema)}
         </script>
+
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center">
+      <section className="relative flex min-h-screen items-center">
         <div className="absolute inset-0">
           <img
             src={MaintenanceHero}
-            alt="Repair and Maintenance Services in Bangalore"
-            className="w-full h-full object-cover"
+            alt="Repair and maintenance services in Bangalore"
+            className="h-full w-full object-cover"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            width="1920"
+            height="1080"
           />
 
           <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-950/85 to-blue-900/40" />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full">
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-6 md:px-12">
           <div className="max-w-3xl text-white">
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-md px-5 py-2 rounded-full text-sm font-semibold mb-6">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-semibold backdrop-blur-md">
               <Wrench size={16} className="text-yellow-300" />
 
               <span>REPAIR AND MAINTENANCE IN BANGALORE</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+            <h1 className="mb-6 text-5xl font-black leading-tight md:text-7xl">
               Repair and Maintenance Services in Bangalore
             </h1>
 
-            <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-10">
+            <p className="mb-10 text-lg leading-relaxed text-blue-100 md:text-xl">
               Professional electrical, plumbing, carpentry and building
               maintenance solutions for residential, commercial and industrial
               properties.
@@ -358,14 +436,24 @@ const RepairMaintenance = () => {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/contact"
-                className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition flex items-center gap-2"
+                className="flex items-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-blue-900 transition hover:bg-blue-50"
               >
                 Get a Quote <ArrowRight size={18} />
               </Link>
 
+              <a
+                href="https://wa.me/919941229005?text=Hello%20Acuity%20Groups,%20I%20need%20repair%20and%20maintenance%20services%20in%20Bangalore."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-full border-2 border-green-400 bg-green-500/20 px-8 py-4 font-bold text-white transition hover:bg-green-500"
+              >
+                <MessageCircle size={18} />
+                WhatsApp Us
+              </a>
+
               <Link
                 to="/services"
-                className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-blue-900 transition"
+                className="rounded-full border-2 border-white px-8 py-4 font-bold text-white transition hover:bg-white hover:text-blue-900"
               >
                 View Services
               </Link>
@@ -375,42 +463,40 @@ const RepairMaintenance = () => {
       </section>
 
       {/* STATS */}
-      <section className="-mt-20 relative z-20 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5">
+      <section className="relative z-20 -mt-20 px-6 md:px-12">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-5 md:grid-cols-4">
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="bg-white rounded-2xl shadow-xl p-6 text-center border border-gray-100"
+              className="rounded-2xl border border-gray-100 bg-white p-6 text-center shadow-xl"
             >
-              <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-blue-50 text-blue-900 flex items-center justify-center">
+              <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-blue-50 text-blue-900">
                 <stat.icon size={26} />
               </div>
 
-              <h2 className="text-3xl font-black text-gray-900">
-                {stat.value}
-              </h2>
+              <p className="text-3xl font-black text-gray-900">{stat.value}</p>
 
-              <p className="text-gray-500 text-sm mt-1">{stat.label}</p>
+              <p className="mt-1 text-sm text-gray-500">{stat.label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* INTRO */}
-      <section className="py-24 px-6 md:px-12">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+      {/* INTRODUCTION */}
+      <section className="px-6 py-24 md:px-12">
+        <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-2">
           <div>
-            <div className="inline-flex items-center gap-2 bg-blue-50 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-blue-50 px-5 py-2 text-sm font-bold text-blue-900">
               <Sparkles size={15} />
 
               <span>COMPLETE MAINTENANCE SOLUTIONS</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 leading-tight">
+            <h2 className="mb-6 text-4xl font-black leading-tight text-gray-900 md:text-5xl">
               Professional Property Repair and Maintenance Solutions
             </h2>
 
-            <p className="text-gray-600 text-lg leading-relaxed mb-5">
+            <p className="mb-5 text-lg leading-relaxed text-gray-600">
               As part of our{" "}
               <Link
                 to="/integrated-facility-management"
@@ -423,20 +509,46 @@ const RepairMaintenance = () => {
               warehouses and commercial buildings.
             </p>
 
-            <p className="text-gray-600 text-lg leading-relaxed">
+            <p className="mb-5 text-lg leading-relaxed text-gray-600">
               From electrical faults and plumbing leaks to carpentry work,
-              waterproofing and building upkeep, our team delivers reliable
-              solutions to keep your property safe and functional.
+              waterproofing and building upkeep, our team delivers dependable
+              solutions to keep your property safe, functional and
+              well-maintained.
+            </p>
+
+            <p className="text-lg leading-relaxed text-gray-600">
+              Our maintenance services can also be combined with{" "}
+              <Link
+                to="/housekeeping"
+                className="font-semibold text-blue-900 underline hover:text-blue-700"
+              >
+                housekeeping services
+              </Link>
+              ,{" "}
+              <Link
+                to="/securityservice"
+                className="font-semibold text-blue-900 underline hover:text-blue-700"
+              >
+                security services
+              </Link>{" "}
+              and{" "}
+              <Link
+                to="/manpower"
+                className="font-semibold text-blue-900 underline hover:text-blue-700"
+              >
+                manpower outsourcing
+              </Link>{" "}
+              for complete property management.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid gap-4 sm:grid-cols-2">
             {benefits.map((benefit) => (
               <div
                 key={benefit.text}
-                className="bg-gray-50 border border-gray-100 rounded-2xl p-5 hover:shadow-lg transition"
+                className="rounded-2xl border border-gray-100 bg-gray-50 p-5 transition hover:shadow-lg"
               >
-                <div className="w-12 h-12 bg-blue-900 text-white rounded-xl flex items-center justify-center mb-4">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-900 text-white">
                   <benefit.icon size={24} />
                 </div>
 
@@ -448,49 +560,53 @@ const RepairMaintenance = () => {
       </section>
 
       {/* SERVICES */}
-      <section className="py-24 px-6 md:px-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="inline-flex items-center gap-2 bg-white border border-blue-100 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
+      <section className="bg-gray-50 px-6 py-24 md:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-14 max-w-3xl text-center">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-5 py-2 text-sm font-bold text-blue-900">
               <Wrench size={15} />
 
               <span>WHAT WE OFFER</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+            <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
               Our Repair and Maintenance Services
             </h2>
 
-            <p className="text-gray-500 text-lg">
+            <p className="text-lg text-gray-500">
               Complete property maintenance solutions designed to improve
               safety, functionality and long-term building condition.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
+          <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((service) => (
-              <div
+              <article
                 key={service.title}
-                className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-2xl transition group"
+                className="group overflow-hidden rounded-3xl bg-white shadow-md transition hover:shadow-2xl"
               >
                 <div className="h-56 overflow-hidden">
                   <img
                     src={service.image}
                     alt={`${service.title} in Bangalore`}
-                    className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                    loading="lazy"
+                    decoding="async"
+                    width="600"
+                    height="400"
                   />
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-xl font-black text-gray-900 mb-3">
+                  <h3 className="mb-3 text-xl font-black text-gray-900">
                     {service.title}
                   </h3>
 
-                  <p className="text-gray-600 text-sm leading-relaxed mb-5">
+                  <p className="mb-5 text-sm leading-relaxed text-gray-600">
                     {service.desc}
                   </p>
 
-                  <div className="space-y-2 mb-5">
+                  <div className="mb-5 space-y-2">
                     {service.features.map((feature) => (
                       <div
                         key={feature}
@@ -498,7 +614,7 @@ const RepairMaintenance = () => {
                       >
                         <CheckCircle
                           size={15}
-                          className="text-blue-900 flex-shrink-0"
+                          className="flex-shrink-0 text-blue-900"
                         />
 
                         <span>{feature}</span>
@@ -508,26 +624,26 @@ const RepairMaintenance = () => {
 
                   <Link
                     to="/contact"
-                    className="text-blue-900 font-bold inline-flex items-center gap-2"
+                    className="inline-flex items-center gap-2 font-bold text-blue-900 hover:text-blue-700"
                   >
                     Enquire Now <ArrowRight size={16} />
                   </Link>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* WHY CHOOSE */}
-      <section className="py-24 px-6 md:px-12 bg-white">
-        <div className="max-w-7xl mx-auto bg-blue-950 rounded-[40px] p-8 md:p-14 text-white grid lg:grid-cols-2 gap-12 items-center">
+      {/* WHY CHOOSE US */}
+      <section className="bg-white px-6 py-24 md:px-12">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 rounded-[40px] bg-blue-950 p-8 text-white md:p-14 lg:grid-cols-2">
           <div>
-            <h2 className="text-4xl md:text-5xl font-black mb-6">
+            <h2 className="mb-6 text-4xl font-black md:text-5xl">
               Why Choose Acuity Groups?
             </h2>
 
-            <p className="text-blue-100 text-lg leading-relaxed mb-8">
+            <p className="mb-8 text-lg leading-relaxed text-blue-100">
               We provide dependable repair and maintenance services through
               skilled technicians, planned supervision, quality materials and
               transparent communication.
@@ -535,19 +651,19 @@ const RepairMaintenance = () => {
 
             <Link
               to="/contact"
-              className="bg-white text-blue-900 px-8 py-4 rounded-full font-bold inline-flex items-center gap-2"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-blue-900"
             >
               Contact Us <ArrowRight size={18} />
             </Link>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid gap-4 sm:grid-cols-2">
             {whyChoose.map((item) => (
               <div
                 key={item}
-                className="bg-white/10 border border-white/10 rounded-2xl p-5"
+                className="rounded-2xl border border-white/10 bg-white/10 p-5"
               >
-                <CheckCircle className="text-yellow-300 mb-3" size={24} />
+                <CheckCircle className="mb-3 text-yellow-300" size={24} />
 
                 <h3 className="font-bold">{item}</h3>
               </div>
@@ -557,43 +673,125 @@ const RepairMaintenance = () => {
       </section>
 
       {/* INDUSTRIES */}
-      <section className="py-24 px-6 md:px-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <div className="inline-flex items-center gap-2 bg-white border border-blue-100 px-5 py-2 rounded-full text-blue-900 text-sm font-bold mb-5">
+      <section className="bg-gray-50 px-6 py-24 md:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-14 max-w-3xl text-center">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-5 py-2 text-sm font-bold text-blue-900">
               <Building2 size={15} />
 
               <span>INDUSTRIES WE SERVE</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+            <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
               Property Maintenance Across Industries
             </h2>
 
-            <p className="text-gray-500 text-lg">
+            <p className="text-lg text-gray-500">
               We provide repair and maintenance solutions for residential,
               corporate, commercial, healthcare, hospitality and industrial
               properties.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {industries.map((industry) => (
               <div
                 key={industry}
-                className="bg-white border border-gray-100 rounded-2xl p-5 text-center hover:shadow-lg transition"
+                className="rounded-2xl border border-gray-100 bg-white p-6 text-center transition hover:shadow-lg"
               >
-                <span className="font-bold text-gray-800 text-sm">
-                  {industry}
-                </span>
+                <Wrench className="mx-auto mb-3 text-blue-900" size={25} />
+
+                <h3 className="font-bold text-gray-800">{industry}</h3>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* SERVICE AREAS */}
+      <section className="bg-white px-6 py-24 md:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-14 max-w-3xl text-center">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full bg-blue-50 px-5 py-2 text-sm font-bold text-blue-900">
+              <MapPin size={15} />
+
+              <span>MAINTENANCE SERVICE AREAS</span>
+            </div>
+
+            <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
+              Repair Services Across Bangalore
+            </h2>
+
+            <p className="text-lg text-gray-500">
+              We provide property repair and maintenance services across major
+              residential, commercial and industrial areas in Bengaluru.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            {serviceAreas.map((area) => (
+              <div
+                key={area}
+                className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-6 py-3 font-semibold text-blue-950"
+              >
+                <MapPin size={17} />
+                {area}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* RELATED SERVICES */}
+      <section className="bg-gray-50 px-6 py-24 md:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-14 max-w-3xl text-center">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-5 py-2 text-sm font-bold text-blue-900">
+              <Wrench size={15} />
+
+              <span>RELATED SERVICES</span>
+            </div>
+
+            <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
+              Complete Facility Support Services
+            </h2>
+
+            <p className="text-lg text-gray-500">
+              Combine maintenance services with our complete facility management
+              solutions for smooth property operations.
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {relatedServices.map((service) => (
+              <Link
+                key={service.title}
+                to={service.link}
+                className="group rounded-3xl border border-gray-100 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              >
+                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-900 transition group-hover:bg-blue-900 group-hover:text-white">
+                  <service.icon size={27} />
+                </div>
+
+                <h3 className="mb-3 text-xl font-black text-gray-900">
+                  {service.title}
+                </h3>
+
+                <p className="mb-5 leading-relaxed text-gray-600">
+                  {service.desc}
+                </p>
+
+                <span className="inline-flex items-center gap-2 font-bold text-blue-900">
+                  View Service <ArrowRight size={17} />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
-      <section className="bg-white px-6 py-20 md:px-12">
+      <section className="bg-white px-6 py-24 md:px-12">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
             <div className="mb-5 inline-flex rounded-full border border-blue-100 bg-blue-50 px-5 py-2 text-sm font-bold text-blue-900">
@@ -633,32 +831,42 @@ const RepairMaintenance = () => {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 px-6 md:px-12 bg-gray-50">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
+      {/* FINAL CTA */}
+      <section className="bg-gray-50 px-6 py-24 md:px-12">
+        <div className="mx-auto max-w-5xl text-center">
+          <h2 className="mb-6 text-4xl font-black text-gray-900 md:text-6xl">
             Looking for Repair and Maintenance Services in Bangalore?
           </h2>
 
-          <p className="text-gray-600 text-lg mb-10">
+          <p className="mb-10 text-lg text-gray-600">
             Contact Acuity Groups for professional electrical, plumbing,
             carpentry and building maintenance solutions for your property.
           </p>
 
-          <div className="flex flex-wrap gap-5 justify-center">
+          <div className="flex flex-wrap justify-center gap-5">
             <Link
               to="/contact"
-              className="bg-blue-900 text-white px-10 py-4 rounded-full font-bold hover:bg-blue-800 transition inline-flex items-center gap-2"
+              className="inline-flex items-center gap-2 rounded-full bg-blue-900 px-10 py-4 font-bold text-white transition hover:bg-blue-800"
             >
               Get a Quote <ArrowRight size={18} />
             </Link>
 
             <a
               href="tel:+919941229005"
-              className="border-2 border-blue-900 text-blue-900 px-10 py-4 rounded-full font-bold hover:bg-blue-900 hover:text-white transition inline-flex items-center gap-2"
+              className="inline-flex items-center gap-2 rounded-full border-2 border-blue-900 px-10 py-4 font-bold text-blue-900 transition hover:bg-blue-900 hover:text-white"
             >
               <PhoneCall size={18} />
               +91 99412 29005
+            </a>
+
+            <a
+              href="https://wa.me/919941229005?text=Hello%20Acuity%20Groups,%20I%20need%20repair%20and%20maintenance%20services%20in%20Bangalore."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-green-600 px-10 py-4 font-bold text-white transition hover:bg-green-700"
+            >
+              <MessageCircle size={18} />
+              WhatsApp Us
             </a>
           </div>
         </div>

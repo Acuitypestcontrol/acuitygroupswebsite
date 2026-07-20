@@ -13,6 +13,10 @@ import {
   ArrowRight,
   Sparkles,
   CheckCircle,
+  MessageCircle,
+  MapPin,
+  Wrench,
+  Briefcase,
 } from "lucide-react";
 
 import PestHero from "../images/pest.webp";
@@ -128,6 +132,60 @@ const industries = [
   "Food Processing Units",
 ];
 
+const serviceAreas = [
+  "JP Nagar",
+  "Whitefield",
+  "Electronic City",
+  "Koramangala",
+  "HSR Layout",
+  "Hebbal",
+  "Peenya",
+  "Yelahanka",
+  "Banashankari",
+  "Marathahalli",
+  "Doddaballapur",
+  "Attibele",
+];
+
+const relatedServices = [
+  {
+    title: "Integrated Facility Management",
+    desc: "Complete facility operations, maintenance and workplace support under one professional service partner.",
+    link: "/integrated-facility-management",
+    icon: Building2,
+  },
+  {
+    title: "Housekeeping Services",
+    desc: "Professional cleaning and housekeeping staff for residential, commercial and industrial properties.",
+    link: "/housekeeping",
+    icon: Sparkles,
+  },
+  {
+    title: "Security Services",
+    desc: "Trained security guards, CCTV monitoring and property protection services.",
+    link: "/securityservice",
+    icon: Shield,
+  },
+  {
+    title: "Repair and Maintenance",
+    desc: "Electrical, plumbing, carpentry and general building maintenance services.",
+    link: "/repair",
+    icon: Wrench,
+  },
+  {
+    title: "Manpower Outsourcing",
+    desc: "Skilled, semi-skilled and unskilled workforce deployment with payroll and compliance support.",
+    link: "/manpower",
+    icon: Briefcase,
+  },
+  {
+    title: "Soft Services",
+    desc: "Cleaning, hygiene, sanitation and workplace support services for different property types.",
+    link: "/softservices",
+    icon: CheckCircle,
+  },
+];
+
 const faqItems = [
   {
     question: "Which pest control services do you provide in Bangalore?",
@@ -142,50 +200,75 @@ const faqItems = [
   {
     question: "Are your pest control treatments safe?",
     answer:
-      "Our technicians use appropriate treatment methods and products based on the property, pest type and safety requirements.",
+      "Our technicians use suitable treatment methods and products based on the property type, pest infestation and safety requirements. Customers receive preparation and post-treatment guidance where required.",
   },
   {
     question: "Do you provide termite treatment in Bangalore?",
     answer:
       "Yes. We provide pre-construction termite treatment, post-construction termite treatment, soil treatment and wood protection services.",
   },
+  {
+    question: "How often should pest control be done?",
+    answer:
+      "The service frequency depends on the property type, infestation level and pest activity. Homes may need periodic treatment, while commercial and food-handling properties may require monthly pest management visits.",
+  },
+  {
+    question: "Can I book a pest inspection before treatment?",
+    answer:
+      "Yes. Contact our team with your location and pest problem. We can arrange an inspection and recommend a suitable treatment plan.",
+  },
 ];
 
 const PestManagement = () => {
+  const canonicalUrl = "https://www.acuitygroups.in/pest-management";
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.acuitygroups.in/#organization",
+    name: "Acuity Groups LLP",
+    url: "https://www.acuitygroups.in/",
+    logo: "https://www.acuitygroups.in/logo192.png",
+    telephone: "+919941229005",
+    email: "info@acuitygroups.in",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress:
+        "2nd Floor, KVO-08, No-28/2, near Sun Jupiter School, JP Nagar 6th Phase, Yelachenahalli",
+      addressLocality: "Bengaluru",
+      addressRegion: "Karnataka",
+      postalCode: "560078",
+      addressCountry: "IN",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+919941229005",
+      contactType: "customer service",
+      areaServed: "IN",
+      availableLanguage: ["English", "Kannada", "Hindi"],
+    },
+  };
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://www.acuitygroups.in/pest-management/#service",
-    name: "Pest Management Services in Bangalore",
-    alternateName: "Pest Control Services in Bangalore",
+    "@id": `${canonicalUrl}/#service`,
+    name: "Pest Control Services in Bangalore",
+    alternateName: "Pest Management Services in Bengaluru",
     serviceType: "Pest Control and Pest Management",
-    url: "https://www.acuitygroups.in/pest-management",
+    url: canonicalUrl,
     description:
       "Professional pest control services in Bangalore for homes, offices, apartments, hotels, hospitals, restaurants, warehouses and industrial properties.",
     provider: {
-      "@type": "LocalBusiness",
       "@id": "https://www.acuitygroups.in/#organization",
-      name: "Acuity Groups LLP",
-      url: "https://www.acuitygroups.in/",
-      telephone: "+919941229005",
-      email: "info@acuitygroups.in",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress:
-          "2nd Floor, KVO-08, No-28/2, near Sun Jupiter School, JP Nagar 6th Phase, Yelachenahalli",
-        addressLocality: "Bengaluru",
-        addressRegion: "Karnataka",
-        postalCode: "560078",
-        addressCountry: "IN",
-      },
     },
-    areaServed: {
-      "@type": "City",
-      name: "Bengaluru",
-    },
+    areaServed: serviceAreas.map((area) => ({
+      "@type": "Place",
+      name: `${area}, Bengaluru, Karnataka`,
+    })),
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Pest Management Services",
+      name: "Pest Control Services",
       itemListElement: services.map((service) => ({
         "@type": "Offer",
         itemOffered: {
@@ -217,7 +300,7 @@ const PestManagement = () => {
         "@type": "ListItem",
         position: 3,
         name: "Pest Management",
-        item: "https://www.acuitygroups.in/pest-management",
+        item: canonicalUrl,
       },
     ],
   };
@@ -253,35 +336,45 @@ const PestManagement = () => {
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Acuity Groups LLP" />
 
-        <link
-          rel="canonical"
-          href="https://www.acuitygroups.in/pest-management"
-        />
+        <link rel="canonical" href={canonicalUrl} />
 
         <meta
           property="og:title"
           content="Pest Control Services in Bangalore | Acuity Groups"
         />
+
         <meta
           property="og:description"
           content="Safe and professional pest management services for residential, commercial and industrial properties in Bangalore."
         />
-        <meta
-          property="og:url"
-          content="https://www.acuitygroups.in/pest-management"
-        />
+
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Acuity Groups LLP" />
+        <meta property="og:image" content={PestHero} />
+
+        <meta
+          property="og:image:alt"
+          content="Professional pest control services in Bangalore"
+        />
 
         <meta name="twitter:card" content="summary_large_image" />
+
         <meta
           name="twitter:title"
           content="Pest Control Services in Bangalore | Acuity Groups"
         />
+
         <meta
           name="twitter:description"
           content="Pest control services in Bangalore for termites, rodents, cockroaches, mosquitoes, ants and bed bugs."
         />
+
+        <meta name="twitter:image" content={PestHero} />
+
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
 
         <script type="application/ld+json">
           {JSON.stringify(serviceSchema)}
@@ -301,7 +394,10 @@ const PestManagement = () => {
             src={PestHero}
             alt="Professional pest control services in Bangalore"
             className="h-full w-full object-cover"
+            width="1920"
+            height="1080"
             loading="eager"
+            decoding="async"
             fetchPriority="high"
           />
 
@@ -312,6 +408,7 @@ const PestManagement = () => {
           <div className="max-w-3xl text-white">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-semibold backdrop-blur-md">
               <Bug size={16} className="text-yellow-300" />
+
               <span>PEST MANAGEMENT SERVICES IN BANGALORE</span>
             </div>
 
@@ -332,6 +429,17 @@ const PestManagement = () => {
                 Book Service
                 <ArrowRight size={18} />
               </Link>
+
+              <a
+                href="https://wa.me/919941229005?text=Hello%20Acuity%20Groups,%20I%20need%20pest%20control%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp Acuity Groups for pest control services"
+                className="flex items-center gap-2 rounded-full border-2 border-green-400 bg-green-500/20 px-8 py-4 font-bold text-white transition hover:bg-green-500"
+              >
+                <MessageCircle size={18} />
+                WhatsApp Us
+              </a>
 
               <Link
                 to="/services"
@@ -357,6 +465,7 @@ const PestManagement = () => {
               </div>
 
               <p className="text-3xl font-black text-gray-900">{value}</p>
+
               <p className="mt-1 text-sm text-gray-500">{label}</p>
             </div>
           ))}
@@ -379,13 +488,39 @@ const PestManagement = () => {
             <p className="mb-5 text-lg leading-relaxed text-gray-600">
               Acuity Groups provides professional pest management services in
               Bangalore to control harmful pests and maintain clean, hygienic
-              and comfortable residential and commercial environments.
+              and comfortable residential, commercial and industrial
+              environments.
             </p>
 
-            <p className="text-lg leading-relaxed text-gray-600">
+            <p className="mb-5 text-lg leading-relaxed text-gray-600">
               Our pest management approach combines property inspection,
               prevention, monitoring and targeted treatment based on the pest
               problem and property requirements.
+            </p>
+
+            <p className="text-lg leading-relaxed text-gray-600">
+              Pest management can also be combined with our{" "}
+              <Link
+                to="/integrated-facility-management"
+                className="font-semibold text-blue-900 underline hover:text-blue-700"
+              >
+                integrated facility management
+              </Link>
+              ,{" "}
+              <Link
+                to="/housekeeping"
+                className="font-semibold text-blue-900 underline hover:text-blue-700"
+              >
+                housekeeping services
+              </Link>{" "}
+              and{" "}
+              <Link
+                to="/softservices"
+                className="font-semibold text-blue-900 underline hover:text-blue-700"
+              >
+                soft services
+              </Link>{" "}
+              for complete workplace hygiene and property maintenance.
             </p>
           </div>
 
@@ -420,8 +555,8 @@ const PestManagement = () => {
             </h2>
 
             <p className="text-lg text-gray-500">
-              Pest control solutions for residential, commercial and industrial
-              properties across Bangalore.
+              Professional pest control solutions for residential, commercial
+              and industrial properties across Bangalore.
             </p>
           </div>
 
@@ -436,7 +571,10 @@ const PestManagement = () => {
                     src={service.image}
                     alt={`${service.title} services in Bangalore`}
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                    width="600"
+                    height="400"
                     loading="lazy"
+                    decoding="async"
                   />
                 </div>
 
@@ -459,6 +597,7 @@ const PestManagement = () => {
                           size={15}
                           className="flex-shrink-0 text-blue-900"
                         />
+
                         <span>{feature}</span>
                       </div>
                     ))}
@@ -467,7 +606,7 @@ const PestManagement = () => {
                   <Link
                     to="/contact"
                     aria-label={`Enquire about ${service.title}`}
-                    className="inline-flex items-center gap-2 font-bold text-blue-900"
+                    className="inline-flex items-center gap-2 font-bold text-blue-900 transition hover:text-blue-700"
                   >
                     Enquire Now
                     <ArrowRight size={16} />
@@ -479,7 +618,7 @@ const PestManagement = () => {
         </div>
       </section>
 
-      {/* WHY CHOOSE US */}
+      {/* WHY CHOOSE */}
       <section className="bg-white px-6 py-24 md:px-12">
         <div className="mx-auto grid max-w-7xl items-center gap-12 rounded-[40px] bg-blue-950 p-8 text-white md:p-14 lg:grid-cols-2">
           <div>
@@ -489,13 +628,13 @@ const PestManagement = () => {
 
             <p className="mb-8 text-lg leading-relaxed text-blue-100">
               We provide planned pest control solutions through trained
-              technicians, appropriate products, detailed inspection and
+              technicians, suitable products, detailed property inspections and
               long-term pest prevention support.
             </p>
 
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-blue-900"
+              className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 font-bold text-blue-900 transition hover:bg-blue-50"
             >
               Contact Us
               <ArrowRight size={18} />
@@ -509,6 +648,7 @@ const PestManagement = () => {
                 className="rounded-2xl border border-white/10 bg-white/10 p-5"
               >
                 <CheckCircle className="mb-3 text-yellow-300" size={24} />
+
                 <h3 className="font-bold">{item}</h3>
               </div>
             ))}
@@ -516,11 +656,55 @@ const PestManagement = () => {
         </div>
       </section>
 
-      {/* INDUSTRIES */}
+      {/* SERVICE AREAS */}
+
       <section className="bg-gray-50 px-6 py-24 md:px-12">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-14 max-w-3xl text-center">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-5 py-2 text-sm font-bold text-blue-900">
+              <MapPin size={15} />
+              <span>PEST CONTROL SERVICE AREAS</span>
+            </div>
+
+            <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
+              Pest Control Services Across Bangalore
+            </h2>
+
+            <p className="text-lg text-gray-500">
+              We provide professional pest control services across major
+              residential, commercial and industrial locations in Bengaluru.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            {serviceAreas.map((area) => (
+              <div
+                key={area}
+                className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-6 py-3 font-semibold text-blue-950"
+              >
+                <MapPin size={17} />
+                Pest Control in {area}
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-blue-900 px-8 py-4 font-bold text-white transition hover:bg-blue-800"
+            >
+              Check Service Availability
+              <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* INDUSTRIES */}
+      <section className="bg-white px-6 py-24 md:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-14 max-w-3xl text-center">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-5 py-2 text-sm font-bold text-blue-900">
               <Building2 size={15} />
               <span>INDUSTRIES WE SERVE</span>
             </div>
@@ -530,8 +714,8 @@ const PestManagement = () => {
             </h2>
 
             <p className="text-lg text-gray-500">
-              Pest management support for homes, workplaces, institutions and
-              industrial facilities.
+              Pest management support for homes, workplaces, institutions,
+              hospitality businesses and industrial facilities.
             </p>
           </div>
 
@@ -539,13 +723,65 @@ const PestManagement = () => {
             {industries.map((industry) => (
               <div
                 key={industry}
-                className="rounded-2xl border border-gray-100 bg-white p-5 text-center transition hover:shadow-lg"
+                className="rounded-2xl border border-gray-100 bg-gray-50 p-6 text-center transition hover:shadow-lg"
               >
-                <span className="text-sm font-bold text-gray-800">
-                  {industry}
-                </span>
+                <Bug className="mx-auto mb-3 text-blue-900" size={24} />
+
+                <h3 className="font-bold text-gray-800">{industry}</h3>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* RELATED SERVICES */}
+      <section className="bg-gray-50 px-6 py-24 md:px-12">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto mb-14 max-w-3xl text-center">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-5 py-2 text-sm font-bold text-blue-900">
+              <Sparkles size={15} />
+              <span>RELATED SERVICES</span>
+            </div>
+
+            <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
+              Complete Property Support Services
+            </h2>
+
+            <p className="text-lg text-gray-500">
+              Explore other facility and property services provided by Acuity
+              Groups.
+            </p>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {relatedServices.map((service) => {
+              const Icon = service.icon;
+
+              return (
+                <Link
+                  key={service.title}
+                  to={service.link}
+                  className="group rounded-3xl border border-gray-100 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-900 transition group-hover:bg-blue-900 group-hover:text-white">
+                    <Icon size={27} />
+                  </div>
+
+                  <h3 className="mb-3 text-xl font-black text-gray-900">
+                    {service.title}
+                  </h3>
+
+                  <p className="mb-5 leading-relaxed text-gray-600">
+                    {service.desc}
+                  </p>
+
+                  <span className="inline-flex items-center gap-2 font-bold text-blue-900">
+                    View Service
+                    <ArrowRight size={17} />
+                  </span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -564,20 +800,37 @@ const PestManagement = () => {
             </h2>
           </div>
 
-          <div className="space-y-5">
+          <div className="space-y-4">
             {faqItems.map((item) => (
-              <article
+              <details
                 key={item.question}
-                className="rounded-2xl border border-gray-100 bg-gray-50 p-6"
+                className="group rounded-2xl border border-gray-100 bg-gray-50 p-6 shadow-sm transition hover:shadow-md"
               >
-                <h3 className="mb-3 text-lg font-black text-gray-900">
-                  {item.question}
-                </h3>
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-gray-900">
+                  <span>{item.question}</span>
 
-                <p className="leading-relaxed text-gray-600">{item.answer}</p>
-              </article>
+                  <span className="text-2xl text-blue-900 transition group-open:rotate-45">
+                    +
+                  </span>
+                </summary>
+
+                <p className="mt-4 border-t border-gray-200 pt-4 leading-relaxed text-gray-600">
+                  {item.answer}
+                </p>
+              </details>
             ))}
           </div>
+
+          <p className="mt-8 text-center text-gray-600">
+            Have another question?{" "}
+            <Link
+              to="/contact"
+              className="font-bold text-blue-900 hover:underline"
+            >
+              Contact our pest control team
+            </Link>
+            .
+          </p>
         </div>
       </section>
 
@@ -590,7 +843,8 @@ const PestManagement = () => {
 
           <p className="mb-10 text-lg text-gray-600">
             Contact our team to schedule a pest inspection and receive a
-            suitable pest management plan for your property.
+            suitable pest management plan for your home, office or commercial
+            property.
           </p>
 
           <div className="flex flex-wrap justify-center gap-5">
@@ -609,6 +863,17 @@ const PestManagement = () => {
             >
               <PhoneCall size={18} />
               +91 99412 29005
+            </a>
+
+            <a
+              href="https://wa.me/919941229005?text=Hello%20Acuity%20Groups,%20I%20need%20pest%20control%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp Acuity Groups for pest control services"
+              className="inline-flex items-center gap-2 rounded-full bg-green-600 px-10 py-4 font-bold text-white transition hover:bg-green-700"
+            >
+              <MessageCircle size={18} />
+              WhatsApp Us
             </a>
           </div>
         </div>

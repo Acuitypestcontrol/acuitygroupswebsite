@@ -1,17 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  Send,
-  CheckCircle,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-} from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 
 const ContactUs = () => {
   useEffect(() => {
@@ -29,7 +18,10 @@ const ContactUs = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
   const handleSubmit = (e) => {
@@ -49,10 +41,9 @@ const ContactUs = () => {
       message,
     )}`;
 
-    window.open(whatsappUrl, "_blank");
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
 
     setIsSubmitted(true);
-    setTimeout(() => setIsSubmitted(false), 5000);
 
     setFormData({
       name: "",
@@ -118,7 +109,7 @@ const ContactUs = () => {
     {
       question: "What areas do you serve?",
       answer:
-        "We serve Bangalore and major business, residential and industrial locations across India.",
+        "We serve Bengaluru, including JP Nagar, Whitefield, Electronic City, Koramangala, HSR Layout, Peenya, Hebbal, Attibele, Doddaballapur and nearby locations.",
     },
     {
       question: "Are your staff background verified?",
@@ -153,8 +144,24 @@ const ContactUs = () => {
       longitude: "77.5722624",
     },
     openingHours: "Mo-Sa 09:00-18:00",
-    areaServed: "Bangalore",
-    priceRange: "$$",
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Bengaluru",
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Karnataka",
+      },
+    ],
+    priceRange: "₹₹",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+919941229005",
+      contactType: "customer service",
+      areaServed: "IN",
+      availableLanguage: ["English", "Kannada", "Hindi"],
+    },
   };
 
   const faqSchema = {
@@ -212,28 +219,34 @@ const ContactUs = () => {
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Acuity Groups" />
         <meta property="og:url" content="https://www.acuitygroups.in/contact" />
+
         <meta
           property="og:title"
           content="Contact Acuity Groups | Facility Management Bangalore"
         />
+
         <meta
           property="og:description"
           content="Get in touch with Acuity Groups for facility management, security, housekeeping, pest control and manpower services in Bangalore."
         />
+
         <meta
           property="og:image"
           content="https://www.acuitygroups.in/og-image.jpg"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
+
         <meta
           name="twitter:title"
           content="Contact Acuity Groups | Facility Management Bangalore"
         />
+
         <meta
           name="twitter:description"
           content="Contact Acuity Groups for facility management and support services in Bangalore."
         />
+
         <meta
           name="twitter:image"
           content="https://www.acuitygroups.in/og-image.jpg"
@@ -255,12 +268,14 @@ const ContactUs = () => {
         <section className="relative bg-gradient-to-br from-blue-900 to-blue-700 text-white py-24 md:py-32">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full filter blur-3xl"></div>
+
             <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full filter blur-3xl"></div>
           </div>
 
           <div className="relative max-w-7xl mx-auto px-6 text-center">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2 rounded-full text-blue-100 tracking-[5px] text-sm font-semibold mb-6">
               <Phone size={14} />
+
               <span>CONTACT US</span>
             </div>
 
@@ -293,9 +308,9 @@ const ContactUs = () => {
                     {info.title}
                   </h2>
 
-                  {info.details.map((detail, i) => (
+                  {info.details.map((detail, index) => (
                     <p
-                      key={i}
+                      key={index}
                       className="text-gray-600 text-sm leading-relaxed"
                     >
                       {detail}
@@ -324,12 +339,13 @@ const ContactUs = () => {
           </div>
         </section>
 
-        {/* CONTACT FORM & MAP */}
+        {/* CONTACT FORM AND MAP */}
         <section className="py-20 px-6 md:px-12 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-2 rounded-full text-blue-800 tracking-[5px] text-sm font-semibold mb-5">
                 <Send size={14} />
+
                 <span>SEND US A MESSAGE</span>
               </div>
 
@@ -338,12 +354,13 @@ const ContactUs = () => {
               </h2>
 
               <p className="text-gray-500 max-w-2xl mx-auto mt-4">
-                Fill out the form below and our team will get back to you.
+                Fill out the form below and continue your enquiry through
+                WhatsApp.
               </p>
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12">
-              {/* Contact Form */}
+              {/* CONTACT FORM */}
               <div className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
                 {isSubmitted ? (
                   <div className="text-center py-12">
@@ -352,74 +369,110 @@ const ContactUs = () => {
                     </div>
 
                     <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                      Thank You!
+                      WhatsApp Opened
                     </h3>
 
-                    <p className="text-gray-600">
-                      Your message has been sent successfully. We will contact
-                      you soon.
+                    <p className="text-gray-600 mb-6">
+                      Your enquiry has been prepared in WhatsApp. Please tap the
+                      Send button in WhatsApp to complete your request.
                     </p>
+
+                    <button
+                      type="button"
+                      onClick={() => setIsSubmitted(false)}
+                      className="bg-blue-800 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition"
+                    >
+                      Send Another Enquiry
+                    </button>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div>
-                      <label className="block text-gray-700 font-medium mb-2">
+                      <label
+                        htmlFor="name"
+                        className="block text-gray-700 font-medium mb-2"
+                      >
                         Full Name *
                       </label>
+
                       <input
+                        id="name"
                         type="text"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
                         required
+                        autoComplete="name"
                         className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 transition"
                         placeholder="Enter your name"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-gray-700 font-medium mb-2">
+                      <label
+                        htmlFor="email"
+                        className="block text-gray-700 font-medium mb-2"
+                      >
                         Email Address *
                       </label>
+
                       <input
+                        id="email"
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
                         required
+                        autoComplete="email"
                         className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 transition"
                         placeholder="Enter your email"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-gray-700 font-medium mb-2">
+                      <label
+                        htmlFor="phone"
+                        className="block text-gray-700 font-medium mb-2"
+                      >
                         Phone Number *
                       </label>
+
                       <input
+                        id="phone"
                         type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
                         required
+                        inputMode="numeric"
+                        pattern="[0-9+\s-]{10,15}"
+                        minLength="10"
+                        maxLength="15"
+                        autoComplete="tel"
                         className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 transition"
                         placeholder="Enter your phone number"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-gray-700 font-medium mb-2">
+                      <label
+                        htmlFor="service"
+                        className="block text-gray-700 font-medium mb-2"
+                      >
                         Service Interested In
                       </label>
+
                       <select
+                        id="service"
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 transition"
                       >
                         <option value="">Select a service</option>
-                        {servicesList.map((service, idx) => (
-                          <option key={idx} value={service}>
+
+                        {servicesList.map((service, index) => (
+                          <option key={index} value={service}>
                             {service}
                           </option>
                         ))}
@@ -427,10 +480,15 @@ const ContactUs = () => {
                     </div>
 
                     <div>
-                      <label className="block text-gray-700 font-medium mb-2">
+                      <label
+                        htmlFor="message"
+                        className="block text-gray-700 font-medium mb-2"
+                      >
                         Message *
                       </label>
+
                       <textarea
+                        id="message"
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
@@ -445,96 +503,29 @@ const ContactUs = () => {
                       type="submit"
                       className="w-full bg-blue-800 hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition shadow-md hover:shadow-lg flex items-center justify-center gap-2"
                     >
-                      Send Message <Send size={18} />
+                      Send Enquiry on WhatsApp
+                      <Send size={18} />
                     </button>
                   </form>
                 )}
               </div>
 
-              {/* Google Map */}
+              {/* GOOGLE MAP */}
               <div className="bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100 h-[500px]">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d222.18323075287873!2d77.5720666112782!3d12.897686125184315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15b4c1a50ca5%3A0x18f7114f7bde8de1!2sAcuity%20Groups%20LLP!5e1!3m2!1sen!2sin!4v1783944986471!5m2!1sen!2sin"
-                  width="600"
-                  height="450"
-                  allowfullscreen=""
+                  className="w-full h-full border-0"
+                  allowFullScreen
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  title="Acuity Groups office location in Bengaluru"
                   loading="lazy"
-                  referrerpolicy="strict-origin-when-cross-origin"
                 ></iframe>
               </div>
             </div>
           </div>
         </section>
 
-        {/* SOCIAL MEDIA */}
-        <section className="py-20 px-6 md:px-12">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">
-              Connect With Us on Social Media
-            </h2>
-
-            <p className="text-gray-600 mb-8">
-              Follow us for updates, service announcements and industry
-              insights.
-            </p>
-
-            <div className="flex justify-center gap-6">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Acuity Groups Facebook"
-                className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-blue-800 hover:text-white transition group"
-              >
-                <Facebook
-                  size={20}
-                  className="text-blue-800 group-hover:text-white"
-                />
-              </a>
-
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Acuity Groups Twitter"
-                className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-blue-800 hover:text-white transition group"
-              >
-                <Twitter
-                  size={20}
-                  className="text-blue-800 group-hover:text-white"
-                />
-              </a>
-
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Acuity Groups LinkedIn"
-                className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-blue-800 hover:text-white transition group"
-              >
-                <Linkedin
-                  size={20}
-                  className="text-blue-800 group-hover:text-white"
-                />
-              </a>
-
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Acuity Groups Instagram"
-                className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-blue-800 hover:text-white transition group"
-              >
-                <Instagram
-                  size={20}
-                  className="text-blue-800 group-hover:text-white"
-                />
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
+        {/* FAQ SECTION */}
         <section className="py-20 px-6 md:px-12 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">

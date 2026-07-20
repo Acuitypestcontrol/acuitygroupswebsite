@@ -24,13 +24,13 @@ export default function About() {
       icon: Sparkles,
       title: "Housekeeping & Soft Services",
       desc: "Professional cleaning, housekeeping and facility upkeep services.",
-      path: "/housekeeping-services",
+      path: "/housekeeping",
     },
     {
       icon: Shield,
       title: "Security Services",
       desc: "Manned guarding, security supervision and safety support.",
-      path: "/security-services",
+      path: "/securityservice",
     },
     {
       icon: Building,
@@ -42,7 +42,7 @@ export default function About() {
       icon: Wrench,
       title: "Repair & Maintenance",
       desc: "Preventive and corrective maintenance for properties and facilities.",
-      path: "/repair-maintenance",
+      path: "/repair",
     },
     {
       icon: Bug,
@@ -54,7 +54,7 @@ export default function About() {
       icon: Users,
       title: "Manpower Outsourcing",
       desc: "Skilled workforce deployment and manpower support services.",
-      path: "/manpower-outsourcing",
+      path: "/manpower",
     },
   ];
 
@@ -171,6 +171,12 @@ export default function About() {
           name="twitter:title"
           content="About Acuity Groups | Facility Management Bangalore"
         />
+        <meta property="og:image" content={AboutBanner} />
+        <meta
+          property="og:image:alt"
+          content="Acuity Groups Facility Management Company"
+        />
+        <meta name="twitter:image" content={AboutBanner} />
         <meta
           name="twitter:description"
           content="Know more about Acuity Groups and our facility management services in Bangalore."
@@ -241,8 +247,11 @@ export default function About() {
           <div className="absolute inset-0 w-full h-full">
             <img
               src={AboutBanner}
-              alt="Acuity Groups Facility Management Company in Bangalore"
-              className="w-full h-full object-cover object-center"
+              width="1920"
+              height="1080"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
             />
           </div>
 
