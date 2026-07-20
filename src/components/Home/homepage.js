@@ -360,9 +360,10 @@ export default function Homepage() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Acuity Groups LLP",
+    alternateName: "Acuity Groups",
     url: "https://www.acuitygroups.in/",
     description:
-      "Acuity Groups provides integrated facility management services in Bangalore including housekeeping, security services, pest management, manpower outsourcing, soft services, repair and maintenance.",
+      "Acuity Groups LLP provides integrated facility management services in Bangalore including housekeeping, security services, pest management, manpower outsourcing, soft services, repair and maintenance.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Bengaluru",
@@ -400,39 +401,40 @@ export default function Homepage() {
     <div className="overflow-hidden bg-white text-black font-['Poppins',system-ui,sans-serif]">
       <Helmet>
         <title>
-          Integrated Facility Management Company in Bangalore | Acuity Groups
+          Acuity Groups LLP | Integrated Facility Management Services in
+          Bangalore
         </title>
 
         <meta
           name="description"
-          content="Acuity Groups is an integrated facility management company in Bangalore providing housekeeping, security, manpower outsourcing, pest control, soft services, repair and maintenance."
+          content="Acuity Groups LLP provides integrated facility management, security, housekeeping, pest management, manpower outsourcing and maintenance services in Bangalore."
         />
 
         <meta name="robots" content="index, follow" />
 
         <link rel="canonical" href="https://www.acuitygroups.in/" />
 
+        {/* Open Graph */}
         <meta
           property="og:title"
-          content="Integrated Facility Management Company in Bangalore | Acuity Groups"
+          content="Acuity Groups LLP | Facility Management Services Bangalore"
         />
 
         <meta
           property="og:description"
-          content="Acuity Groups offers housekeeping, security, pest management, manpower outsourcing, soft services and repair maintenance services across Bangalore."
+          content="Acuity Groups LLP provides housekeeping, security, pest management, manpower outsourcing, soft services and repair and maintenance services across Bangalore."
         />
 
         <meta property="og:url" content="https://www.acuitygroups.in/" />
-
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Acuity Groups LLP" />
 
-        <meta property="og:site_name" content="Acuity Groups" />
-
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
 
         <meta
           name="twitter:title"
-          content="Integrated Facility Management Company in Bangalore | Acuity Groups"
+          content="Acuity Groups LLP | Facility Management Services Bangalore"
         />
 
         <meta
@@ -440,10 +442,23 @@ export default function Homepage() {
           content="Professional integrated facility management services in Bangalore for offices, apartments, industries, hospitals, warehouses and commercial spaces."
         />
 
+        {/* Website Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Acuity Groups LLP",
+            alternateName: "Acuity Groups",
+            url: "https://www.acuitygroups.in/",
+          })}
+        </script>
+
+        {/* Local Business Schema */}
         <script type="application/ld+json">
           {JSON.stringify(localBusinessSchema)}
         </script>
 
+        {/* FAQ Schema */}
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
@@ -551,7 +566,7 @@ export default function Homepage() {
 
           <div>
             <p className="mb-5 font-light uppercase tracking-[5px] text-black">
-              About Acuity Groups
+              About Acuity Groups LLP
             </p>
 
             <h1 className="mb-8 text-4xl font-black leading-tight text-gray-900 md:text-6xl">
@@ -562,7 +577,7 @@ export default function Homepage() {
               Trusted Facility Management Partner
             </p>
             <p className="mb-8 text-lg leading-relaxed text-gray-600">
-              Acuity Groups provides{" "}
+              Acuity Groups LLP provides{" "}
               <Link
                 to="/integrated-facility-management"
                 className="font-semibold text-blue-900 underline hover:text-blue-700"
@@ -608,7 +623,7 @@ export default function Homepage() {
                 to="/about"
                 className="flex w-full items-center justify-center rounded-full border-2 border-blue-900 px-5 py-4 text-center text-base font-semibold text-blue-900 transition duration-300 hover:bg-blue-50"
               >
-                About Acuity Groups
+                About Acuity Groups LLP
               </Link>
 
               <Link
@@ -690,7 +705,7 @@ export default function Homepage() {
             </span>
 
             <h2 className="mb-4 text-3xl font-extrabold text-gray-900 md:text-4xl">
-              Why Choose Acuity Groups?
+              Why Choose Acuity Groups LLP?
             </h2>
 
             <div className="mx-auto mb-6 h-1 w-24 rounded-full bg-blue-600" />
