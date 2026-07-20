@@ -245,14 +245,7 @@ export default function About() {
         {/* HERO SECTION */}
         <section className="relative w-full h-[50vh] md:h-[60vh] min-h-[550px] overflow-hidden">
           <div className="absolute inset-0 w-full h-full">
-            <img
-              src={AboutBanner}
-              width="1920"
-              height="1080"
-              loading="eager"
-              decoding="async"
-              fetchPriority="high"
-            />
+            <img className="hidden md:block md:h-[550px]" src={AboutBanner} alt="Acuity Groups" />
           </div>
 
           <div className="absolute inset-0 bg-black/50" />
