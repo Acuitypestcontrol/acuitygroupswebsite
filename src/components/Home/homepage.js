@@ -30,7 +30,7 @@ export default function Homepage() {
   const banners = [
     {
       image: Banner2,
-      alt: "Integrated facility management services in Bangalore",
+      alt: "Facility management company and services in Bangalore",
     },
     {
       image: Banner3,
@@ -40,51 +40,51 @@ export default function Homepage() {
 
   const areas = [
     {
-      name: "Integrated Facility Management Services in Whitefield",
+      name: "Facility Management Services in Whitefield",
       path: "/integrated-facility-management-whitefield",
     },
     {
-      name: "Integrated Facility Management Services in Electronic City",
+      name: "Facility Management Services in Electronic City",
       path: "/integrated-facility-management-electronic-city",
     },
     {
-      name: "Integrated Facility Management Services in Koramangala",
+      name: "Facility Management Services in Koramangala",
       path: "/integrated-facility-management-koramangala",
     },
     {
-      name: "Integrated Facility Management Services in HSR Layout",
+      name: "Facility Management Services in HSR Layout",
       path: "/integrated-facility-management-hsr-layout",
     },
     {
-      name: "Integrated Facility Management Services in JP Nagar",
+      name: "Facility Management Services in JP Nagar",
       path: "/integrated-facility-management-jp-nagar",
     },
     {
-      name: "Integrated Facility Management Services in Dabaspet",
+      name: "Facility Management Services in Dabaspet",
       path: "/integrated-facility-management-dabaspet",
     },
     {
-      name: "Integrated Facility Management Services in Peenya",
+      name: "Facility Management Services in Peenya",
       path: "/integrated-facility-management-peenya",
     },
     {
-      name: "Integrated Facility Management Services in Hebbal",
+      name: "Facility Management Services in Hebbal",
       path: "/integrated-facility-management-hebbal",
     },
     {
-      name: "Integrated Facility Management Services in BEML Layout",
+      name: "Facility Management Services in BEML Layout",
       path: "/integrated-facility-management-beml",
     },
     {
-      name: "Integrated Facility Management Services in Doddaballapur",
+      name: "Facility Management Services in Doddaballapur",
       path: "/integrated-facility-management-doddaballapur",
     },
     {
-      name: "Integrated Facility Management Services in Attibele",
+      name: "Facility Management Services in Attibele",
       path: "/integrated-facility-management-attibele",
     },
     {
-      name: "Integrated Facility Management Services in Kumbalgodu",
+      name: "Facility Management Services in Kumbalgodu",
       path: "/integrated-facility-management-kumbalgodu",
     },
   ];
@@ -123,7 +123,6 @@ export default function Homepage() {
       image: AboutImage,
       path: "/integrated-facility-management",
     },
-
     {
       title: "Manpower Outsourcing",
       desc: "Skilled and unskilled manpower outsourcing solutions for businesses across multiple industries.",
@@ -259,6 +258,7 @@ export default function Homepage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [openIndex, setOpenIndex] = useState(null);
+
   const [counters, setCounters] = useState({
     years: 0,
     clients: 0,
@@ -363,7 +363,7 @@ export default function Homepage() {
     alternateName: "Acuity Groups",
     url: "https://www.acuitygroups.in/",
     description:
-      "Acuity Groups LLP provides integrated facility management services in Bangalore including housekeeping, security services, pest management, manpower outsourcing, soft services, repair and maintenance.",
+      "Acuity Groups LLP provides facility management services in Bangalore including housekeeping, security services, pest management, manpower outsourcing, soft services, repair and maintenance.",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Bengaluru",
@@ -371,7 +371,7 @@ export default function Homepage() {
       addressCountry: "IN",
     },
     areaServed: areas.map((area) =>
-      area.name.replace("Integrated Facility Management Services in ", ""),
+      area.name.replace("Facility Management Services in ", ""),
     ),
     serviceType: [
       "Integrated Facility Management",
@@ -401,46 +401,44 @@ export default function Homepage() {
     <div className="overflow-hidden bg-white text-black font-['Poppins',system-ui,sans-serif]">
       <Helmet>
         <title>
-          Integrated Facility Management in Bangalore | Acuity Groups LLP
+          Facility Management Company in Bangalore | Acuity Groups LLP
         </title>
 
         <meta
           name="description"
-          content="Acuity Groups LLP offers trusted facility management, security, housekeeping and pest control services in Bangalore."
+          content="Acuity Groups LLP is a facility management company in Bangalore providing housekeeping, security, pest management, manpower outsourcing and maintenance services."
         />
+
         <meta name="robots" content="index, follow" />
 
         <link rel="canonical" href="https://www.acuitygroups.in/" />
 
-        {/* Open Graph */}
         <meta
           property="og:title"
-          content="Acuity Groups LLP | Facility Management Services Bangalore"
+          content="Facility Management Company in Bangalore | Acuity Groups LLP"
         />
 
         <meta
           property="og:description"
-          content="Acuity Groups LLP provides housekeeping, security, pest management, manpower outsourcing, soft services and repair and maintenance services across Bangalore."
+          content="Professional facility management, housekeeping, security, pest management, manpower outsourcing and maintenance services across Bangalore."
         />
 
         <meta property="og:url" content="https://www.acuitygroups.in/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Acuity Groups LLP" />
 
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
 
         <meta
           name="twitter:title"
-          content="Acuity Groups LLP | Facility Management Services Bangalore"
+          content="Facility Management Company in Bangalore | Acuity Groups LLP"
         />
 
         <meta
           name="twitter:description"
-          content="Professional integrated facility management services in Bangalore for offices, apartments, industries, hospitals, warehouses and commercial spaces."
+          content="Professional facility management services in Bangalore for offices, apartments, industries, hospitals, warehouses and commercial spaces."
         />
 
-        {/* Website Schema */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -451,12 +449,10 @@ export default function Homepage() {
           })}
         </script>
 
-        {/* Local Business Schema */}
         <script type="application/ld+json">
           {JSON.stringify(localBusinessSchema)}
         </script>
 
-        {/* FAQ Schema */}
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
@@ -474,7 +470,7 @@ export default function Homepage() {
             <img
               src={banner.image}
               alt={banner.alt}
-              className="h-full w-full"
+              className="h-full w-full object-cover"
             />
           </div>
         ))}
@@ -550,14 +546,13 @@ export default function Homepage() {
           <div className="relative hidden md:block">
             <img
               src={AboutImage}
-              alt="Acuity Groups integrated facility management services"
+              alt="Acuity Groups facility management services"
               loading="lazy"
               className="w-full rounded-3xl object-cover shadow-xl"
             />
 
             <div className="absolute -bottom-8 -right-8 rounded-3xl bg-blue-900 px-8 py-6 text-white shadow-2xl">
               <p className="text-5xl">19+</p>
-
               <p className="text-lg font-light">Years Experience</p>
             </div>
           </div>
@@ -568,12 +563,14 @@ export default function Homepage() {
             </p>
 
             <h1 className="mb-8 text-4xl font-black leading-tight text-gray-900 md:text-6xl">
-              Integrated Facility Management Company
+              Facility Management Company
               <span className="text-blue-900"> in Bangalore</span>
             </h1>
+
             <p className="mb-5 font-light uppercase tracking-[5px] text-black">
               Trusted Facility Management Partner
             </p>
+
             <p className="mb-8 text-lg leading-relaxed text-gray-600">
               Acuity Groups LLP provides{" "}
               <Link
@@ -583,7 +580,7 @@ export default function Homepage() {
                 integrated facility management services in Bangalore
               </Link>
               , including housekeeping, security guards, manpower outsourcing,
-              pest control, soft services, electrical maintenance and repair
+              pest management, soft services, electrical maintenance and repair
               services for residential, commercial and industrial properties.
             </p>
 
@@ -604,18 +601,18 @@ export default function Homepage() {
               {[
                 "Professional Security Services",
                 "Expert Facility Management",
-                "Pest Control Solutions",
+                "Pest Management Solutions",
                 "Electrical Maintenance",
                 "Manpower Outsourcing",
                 "24/7 Customer Support",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-4">
                   <span className="h-4 w-4 rounded-full bg-blue-900" />
-
                   <p className="text-lg text-gray-800">{item}</p>
                 </div>
               ))}
             </div>
+
             <div className="grid w-full max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2">
               <Link
                 to="/about"
@@ -628,13 +625,12 @@ export default function Homepage() {
                 to="/integrated-facility-management"
                 className="flex w-full items-center justify-center rounded-full bg-blue-900 px-5 py-4 text-center text-base font-semibold text-white shadow-md transition duration-300 hover:bg-blue-700"
               >
-                Explore Facility Management
+                Explore Integrated Facility Management
               </Link>
             </div>
           </div>
         </div>
       </section>
-
       {/* SERVICES SECTION */}
       <section className="bg-white px-6 py-12 md:py-20">
         <div className="mx-auto max-w-7xl">
@@ -690,6 +686,16 @@ export default function Homepage() {
                 </div>
               </article>
             ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              to="/integrated-facility-management"
+              className="inline-flex items-center gap-3 rounded-xl bg-blue-900 px-8 py-4 font-semibold text-white shadow-lg transition-all hover:bg-blue-800 hover:shadow-xl"
+            >
+              Learn About Integrated Facility Management Services
+              <ChevronRight size={18} />
+            </Link>
           </div>
         </div>
       </section>
@@ -766,7 +772,6 @@ export default function Homepage() {
                   className="inline-flex items-center gap-3 rounded-full border border-gray-200 bg-white px-8 py-4 text-lg font-medium text-gray-700 shadow-sm transition-all hover:border-blue-300 hover:text-blue-900"
                 >
                   <Building size={18} className="text-blue-900" />
-
                   {industry}
                 </div>
               ))}
@@ -774,7 +779,6 @@ export default function Homepage() {
           </div>
         </div>
       </section>
-
       {/* TESTIMONIALS SECTION */}
       <section className="bg-white px-6 py-12 md:px-12 md:py-24">
         <div className="mx-auto max-w-7xl">
@@ -956,13 +960,16 @@ export default function Homepage() {
               ))}
             </div>
           </div>
-          <Link
-            to="/integrated-facility-management"
-            className="inline-flex items-center gap-3 rounded-xl bg-blue-900 px-8 py-4 font-semibold text-white shadow-lg transition-all hover:bg-blue-800 hover:shadow-xl"
-          >
-            Explore Facility Management Services
-            <ChevronRight size={18} />
-          </Link>
+
+          <div className="mt-10 text-center">
+            <Link
+              to="/integrated-facility-management"
+              className="inline-flex items-center gap-3 rounded-xl bg-blue-900 px-8 py-4 font-semibold text-white shadow-lg transition-all hover:bg-blue-800 hover:shadow-xl"
+            >
+              Explore Integrated Facility Management Services
+              <ChevronRight size={18} />
+            </Link>
+          </div>
         </div>
       </section>
 
