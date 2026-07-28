@@ -273,7 +273,6 @@ const FacilityManagement = () => {
       path: "/integrated-facility-management-kumbalgodu",
     },
   ];
-
   const relatedServices = [
     {
       title: "Housekeeping Services",
@@ -312,6 +311,7 @@ const FacilityManagement = () => {
       icon: Bug,
     },
   ];
+
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "ProfessionalService"],
@@ -322,7 +322,6 @@ const FacilityManagement = () => {
     telephone: "+919941229005",
     email: "info@acuitygroups.in",
     image: "https://www.acuitygroups.in/logo192.png",
-
     address: {
       "@type": "PostalAddress",
       streetAddress:
@@ -332,12 +331,10 @@ const FacilityManagement = () => {
       postalCode: "560078",
       addressCountry: "IN",
     },
-
     areaServed: {
       "@type": "City",
       name: "Bengaluru",
     },
-
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+919941229005",
@@ -345,6 +342,7 @@ const FacilityManagement = () => {
       availableLanguage: ["English", "Kannada", "Hindi"],
     },
   };
+
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -434,15 +432,9 @@ const FacilityManagement = () => {
         />
 
         <meta name="robots" content="index, follow" />
-
         <meta name="author" content="Acuity Groups LLP" />
 
-        <link
-          rel="canonical"
-          href="https://www.acuitygroups.in/integrated-facility-management"
-        />
-
-        {/* Open Graph */}
+        <link rel="canonical" href={canonicalUrl} />
 
         <meta
           property="og:title"
@@ -454,13 +446,8 @@ const FacilityManagement = () => {
           content="Professional Integrated Facility Management Services in Bangalore for offices, apartments, industries and commercial properties."
         />
 
-        <meta
-          property="og:url"
-          content="https://www.acuitygroups.in/integrated-facility-management"
-        />
-
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
-
         <meta property="og:site_name" content="Acuity Groups LLP" />
 
         <meta
@@ -472,8 +459,6 @@ const FacilityManagement = () => {
           property="og:image:alt"
           content="Integrated Facility Management Services in Bangalore"
         />
-
-        {/* Twitter */}
 
         <meta name="twitter:card" content="summary_large_image" />
 
@@ -492,8 +477,6 @@ const FacilityManagement = () => {
           content="https://www.acuitygroups.in/images/integrated-facility-management-bangalore.jpg"
         />
 
-        {/* Structured Data */}
-
         <script type="application/ld+json">
           {JSON.stringify(organizationSchema)}
         </script>
@@ -508,6 +491,7 @@ const FacilityManagement = () => {
 
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
+
       {/* VISIBLE BREADCRUMB */}
       <nav
         aria-label="Breadcrumb"
@@ -556,7 +540,6 @@ const FacilityManagement = () => {
           <div className="max-w-3xl text-white">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2 text-sm font-semibold backdrop-blur-md">
               <Building2 size={16} className="text-yellow-300" />
-
               <span>INTEGRATED FACILITY MANAGEMENT SERVICES IN BANGALORE</span>
             </div>
 
@@ -566,15 +549,13 @@ const FacilityManagement = () => {
             >
               Integrated Facility Management Services in Bangalore
             </h1>
+
             <p className="mb-10 max-w-2xl text-lg leading-relaxed text-blue-100 md:text-xl">
-              Acuity Groups LLP is a leading provider of Integrated Facility
-              Management Services in Bangalore, delivering housekeeping,
-              security, repair & maintenance, pest management, technical support
-              and manpower outsourcing for offices, apartments, commercial
-              buildings, industries, hospitals, educational institutions and
-              warehouses. Our customized facility management solutions improve
-              operational efficiency, workplace safety and property maintenance
-              across Bengaluru.
+              Acuity Groups LLP provides integrated facility management services
+              in Bangalore for offices, apartments, commercial properties,
+              industries, hospitals, schools and warehouses. Our services
+              include housekeeping, security, repair and maintenance, pest
+              management, technical support and manpower outsourcing.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -606,7 +587,6 @@ const FacilityManagement = () => {
           </div>
         </div>
       </section>
-
       {/* STATS */}
       <section className="relative z-20 -mt-16 px-6 md:-mt-20 md:px-12">
         <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
@@ -803,7 +783,6 @@ const FacilityManagement = () => {
           <div>
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-2 text-sm font-bold">
               <ShieldCheck size={16} />
-
               <span>WHY CHOOSE ACUITY GROUPS LLP</span>
             </div>
 
@@ -851,21 +830,18 @@ const FacilityManagement = () => {
                 className="rounded-2xl border border-white/10 bg-white/10 p-5 transition hover:bg-white/15"
               >
                 <CheckCircle className="mb-3 text-yellow-300" size={24} />
-
                 <h3 className="font-bold">{item}</h3>
               </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* SERVICE AREAS */}
       <section className="bg-gray-50 px-6 py-24 md:px-12">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-14 max-w-3xl text-center">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-5 py-2 text-sm font-bold text-blue-900">
               <MapPin size={15} />
-
               <span>FACILITY MANAGEMENT ACROSS BANGALORE</span>
             </div>
 
@@ -916,9 +892,7 @@ const FacilityManagement = () => {
               Our location-based facility management services include
               housekeeping, security, technical maintenance, manpower
               outsourcing, pest management, vendor coordination and preventive
-              maintenance support. Every service plan is prepared according to
-              the property type, manpower requirement, operating schedule and
-              site condition.
+              maintenance support.
             </p>
 
             <div className="text-center">
@@ -961,7 +935,6 @@ const FacilityManagement = () => {
                 className="rounded-2xl border border-gray-100 bg-gray-50 p-6 text-center transition hover:-translate-y-1 hover:bg-white hover:shadow-lg"
               >
                 <Building2 className="mx-auto mb-3 text-blue-900" size={25} />
-
                 <h3 className="font-bold text-gray-800">{industry}</h3>
               </div>
             ))}
@@ -973,19 +946,16 @@ const FacilityManagement = () => {
             </h3>
 
             <p className="mb-5 text-lg leading-8 text-gray-700">
-              Every property has different operational requirements. A corporate
-              office may need daily housekeeping, front-office support, security
-              and technical maintenance, while a factory may require industrial
-              cleaning, equipment support, safety supervision and skilled
-              manpower.
+              Every property has different operational requirements. Corporate
+              offices may need housekeeping, security and technical maintenance,
+              while factories may require industrial cleaning, safety support
+              and skilled manpower.
             </p>
 
             <p className="text-lg leading-8 text-gray-700">
-              Acuity Groups LLP studies the property size, operating hours,
-              footfall, compliance needs and service priorities before preparing
-              a customized facility management plan. This ensures proper
-              manpower allocation, regular supervision and consistent service
-              quality.
+              Acuity Groups LLP studies property size, operating hours,
+              compliance needs and service priorities before preparing a
+              customized facility management plan.
             </p>
           </div>
         </div>
@@ -1058,7 +1028,7 @@ const FacilityManagement = () => {
             </h2>
 
             <p className="text-lg leading-relaxed text-blue-100">
-              We follow a structured process to provide reliable, measurable and
+              We follow a structured process to provide reliable,
               property-specific facility management services.
             </p>
           </div>
@@ -1091,7 +1061,6 @@ const FacilityManagement = () => {
           </div>
         </div>
       </section>
-
       {/* FAQ */}
       <section className="bg-white px-6 py-24 md:px-12">
         <div className="mx-auto max-w-4xl">
@@ -1153,174 +1122,6 @@ const FacilityManagement = () => {
         </div>
       </section>
 
-      {/* INDUSTRIES */}
-      <section className="bg-white px-6 py-24 md:px-12">
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto mb-14 max-w-3xl text-center">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-5 py-2 text-sm font-bold text-blue-900">
-              <Building2 size={15} />
-
-              <span>INDUSTRIES WE SERVE</span>
-            </div>
-
-            <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
-              Facility Management for Different Property Types
-            </h2>
-
-            <p className="text-lg leading-relaxed text-gray-500">
-              Our service plans are customized according to the property size,
-              operating schedule, manpower needs, safety requirements and
-              service standards.
-            </p>
-          </div>
-
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {industries.map((industry) => (
-              <div
-                key={industry}
-                className="rounded-2xl border border-gray-100 bg-gray-50 p-6 text-center transition hover:-translate-y-1 hover:bg-white hover:shadow-lg"
-              >
-                <Building2 className="mx-auto mb-3 text-blue-900" size={25} />
-
-                <h3 className="font-bold text-gray-800">{industry}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* RELATED SERVICES */}
-      <section className="bg-gray-50 px-6 py-24 md:px-12">
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto mb-14 max-w-3xl text-center">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white px-5 py-2 text-sm font-bold text-blue-900">
-              <Sparkles size={15} />
-
-              <span>RELATED SERVICES</span>
-            </div>
-
-            <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
-              Complete Facility Support Solutions
-            </h2>
-
-            <p className="text-lg leading-relaxed text-gray-500">
-              Explore the specialized services included within our integrated
-              facility management solutions.
-            </p>
-          </div>
-
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {relatedServices.map((service) => {
-              const Icon = service.icon;
-
-              return (
-                <Link
-                  key={service.title}
-                  to={service.link}
-                  className="group rounded-3xl border border-gray-100 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-                >
-                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-900 transition group-hover:bg-blue-900 group-hover:text-white">
-                    <Icon size={27} />
-                  </div>
-
-                  <h3 className="mb-3 text-xl font-black text-gray-900">
-                    {service.title}
-                  </h3>
-
-                  <p className="mb-5 leading-relaxed text-gray-600">
-                    {service.desc}
-                  </p>
-
-                  <span className="inline-flex items-center gap-2 font-bold text-blue-900">
-                    View Service
-                    <ArrowRight size={17} />
-                  </span>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-      {/* WORK PROCESS */}
-      <section className="bg-blue-950 px-6 py-24 text-white md:px-12">
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto mb-14 max-w-3xl text-center">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-2 text-sm font-bold">
-              <CheckCircle size={15} />
-
-              <span>OUR WORK PROCESS</span>
-            </div>
-
-            <h2 className="mb-4 text-4xl font-black md:text-5xl">
-              How We Plan and Manage Your Facility
-            </h2>
-
-            <p className="text-lg leading-relaxed text-blue-100">
-              Every property receives a site-based service plan instead of a
-              one-size-fits-all facility management package.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {processSteps.map((item) => (
-              <article
-                key={item.step}
-                className="rounded-3xl border border-white/10 bg-white/10 p-7 transition hover:bg-white/15"
-              >
-                <span className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-white font-black text-blue-950">
-                  {item.step}
-                </span>
-
-                <h3 className="mb-3 text-xl font-black">{item.title}</h3>
-
-                <p className="leading-relaxed text-blue-100">{item.desc}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="bg-white px-6 py-24 md:px-12">
-        <div className="mx-auto max-w-4xl">
-          <div className="mb-12 text-center">
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-5 py-2 text-sm font-bold text-blue-900">
-              <span>FREQUENTLY ASKED QUESTIONS</span>
-            </div>
-
-            <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">
-              Facility Management FAQs
-            </h2>
-
-            <p className="text-lg leading-relaxed text-gray-500">
-              Common questions about our integrated facility management services
-              in Bangalore.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq) => (
-              <details
-                key={faq.question}
-                className="group rounded-2xl border border-gray-100 bg-gray-50 p-6 shadow-sm transition hover:shadow-md"
-              >
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-bold text-gray-900">
-                  <span>{faq.question}</span>
-
-                  <span className="text-2xl text-blue-900 transition group-open:rotate-45">
-                    +
-                  </span>
-                </summary>
-
-                <p className="mt-4 border-t border-gray-200 pt-4 leading-relaxed text-gray-600">
-                  {faq.answer}
-                </p>
-              </details>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* BANGALORE OFFICE */}
       <section className="bg-gray-50 px-6 py-20 md:px-12">
         <div className="mx-auto grid max-w-7xl gap-8 rounded-[36px] border border-gray-100 bg-white p-8 shadow-sm lg:grid-cols-2 lg:p-12">
@@ -1378,6 +1179,7 @@ const FacilityManagement = () => {
 
               <span>
                 <span className="block text-sm text-gray-500">Email us</span>
+
                 <strong className="break-all text-gray-900">
                   info@acuitygroups.in
                 </strong>
@@ -1397,6 +1199,7 @@ const FacilityManagement = () => {
 
               <span>
                 <span className="block text-sm text-gray-500">WhatsApp us</span>
+
                 <strong className="text-gray-900">
                   Request a Site Inspection
                 </strong>
@@ -1440,16 +1243,13 @@ const FacilityManagement = () => {
               For corporate offices and commercial buildings, our facility
               management services support workplace cleanliness, access control,
               preventive maintenance, technical operations, vendor coordination
-              and employee comfort. Regular monitoring helps reduce service
-              interruptions and maintain professional workplace standards.
+              and employee comfort.
             </p>
 
             <p className="mb-5 text-lg leading-relaxed text-gray-600">
               For apartments and residential communities, we provide
               housekeeping supervision, common-area cleaning, security support,
-              repair coordination, pest management and trained manpower. The
-              service plan can be customized according to the number of blocks,
-              operating hours, amenities and resident requirements.
+              repair coordination, pest management and trained manpower.
             </p>
 
             <p className="mb-5 text-lg leading-relaxed text-gray-600">
@@ -1457,22 +1257,19 @@ const FacilityManagement = () => {
               attention to safety, equipment areas, production floors, loading
               zones and workforce coordination. Our team prepares site-specific
               schedules for industrial housekeeping, security, electrical
-              maintenance, repairs, pest management and manpower deployment.
+              maintenance, repairs and manpower deployment.
             </p>
 
             <p className="text-lg leading-relaxed text-gray-600">
-              Preventive maintenance, safety checks, vendor management, energy
-              awareness and service-quality reviews are included according to
-              the approved scope of work. With coverage across Whitefield,
-              Electronic City, Koramangala, HSR Layout, JP Nagar, Peenya,
-              Hebbal, Attibele, Kumbalgodu and other Bengaluru locations, Acuity
-              Groups LLP provides reliable integrated facility management
-              services for different property types.
+              With service coverage across Whitefield, Electronic City,
+              Koramangala, HSR Layout, JP Nagar, Peenya, Hebbal, Attibele,
+              Kumbalgodu and other Bengaluru locations, Acuity Groups LLP
+              provides reliable integrated facility management services for
+              different property types.
             </p>
           </div>
         </div>
       </section>
-
       {/* FINAL CTA */}
       <section className="bg-gray-50 px-6 pb-24 pt-8 md:px-12">
         <div className="mx-auto max-w-5xl rounded-[40px] bg-white px-7 py-16 text-center shadow-sm md:px-12">
