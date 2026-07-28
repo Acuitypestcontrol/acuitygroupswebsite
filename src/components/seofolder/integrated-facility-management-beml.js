@@ -8,8 +8,8 @@ import bannerImage1 from "../../images/bemlimap.jpg";
 const IntegratedFacilityManagementBEML = () => {
   const services = [
     {
-      title: "Integrated Facility Management in BEML Layout",
-      desc: "Complete integrated facility management services in BEML Layout for apartments, villas, offices and commercial properties.",
+      title: "Facility Management Services in BEML Layout",
+      desc: "Professional facility management services in BEML Layout for apartments, villas, offices and commercial properties.",
       link: "/integrated-facility-management",
     },
     {
@@ -71,17 +71,16 @@ const IntegratedFacilityManagementBEML = () => {
     <div className="bg-white text-gray-800">
       <Helmet>
         <title>
-          Integrated Facility Management Services in BEML Layout | Acuity Groups
+          Facility Management Services in BEML Layout | Acuity Groups LLP
         </title>
         <meta
           name="description"
-          content="Acuity Groups provides integrated facility management services in BEML Layout for apartments, villas, offices and commercial properties."
+          content="Facility management services in BEML Layout for apartments, offices and commercial properties, including housekeeping, security and maintenance."
         />
-
         <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
-          content="Integrated Facility Management Services in BEML Layout, Facility Management Company in BEML Layout, Security Services in BEML Layout, Housekeeping Services in BEML Layout, Pest Control Services in BEML Layout, Manpower Outsourcing in BEML Layout"
+          content="Facility Management Services in BEML Layout, Facility Management Company in BEML Layout, Housekeeping Services in BEML Layout, Security Services in BEML Layout, Pest Management in BEML Layout, Manpower Outsourcing in BEML Layout, Repair and Maintenance in BEML Layout"
         />
         <link
           rel="canonical"
@@ -94,17 +93,19 @@ const IntegratedFacilityManagementBEML = () => {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
             <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Integrated Facility Management Services
+              Facility Management Services
             </span>
 
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-              Integrated Facility Management Services in BEML Layout
+              Facility Management Services in BEML Layout
             </h1>
 
             <p className="text-lg text-gray-700 leading-8 mb-6">
-              Acuity Groups provides professional Integrated Facility Management
-              Services in BEML Layout Bangalore for apartments, villas,
-              residential communities, offices and commercial establishments.
+              Acuity Groups LLP provides professional facility management
+              services in BEML Layout for apartments, villas, residential
+              communities, offices and commercial establishments. Our integrated
+              facility management solutions help maintain clean, secure and
+              efficiently managed properties.
             </p>
 
             <p className="text-lg text-gray-700 leading-8 mb-8">
@@ -231,6 +232,17 @@ const IntegratedFacilityManagementBEML = () => {
             Layout Bangalore.
           </p>
         </div>
+        <p className="mt-6 text-lg text-gray-700 leading-8">
+          Learn more about our{" "}
+          <Link
+            to="/integrated-facility-management"
+            className="text-blue-600 font-semibold underline"
+          >
+            Integrated Facility Management Services in Bangalore
+          </Link>{" "}
+          for complete IFM solutions across commercial and residential
+          properties.
+        </p>
       </section>
 
       {/* Why Choose */}

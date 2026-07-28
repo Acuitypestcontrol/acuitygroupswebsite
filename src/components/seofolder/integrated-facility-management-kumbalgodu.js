@@ -71,17 +71,17 @@ const IntegratedFacilityManagementKumbalgodu = () => {
     <div className="bg-white text-gray-800">
       <Helmet>
         <title>
-          Integrated Facility Management Services in Kumbalgodu | Acuity Groups
+          Facility Management Services in Kumbalgodu | Acuity Groups LLP
         </title>
         <meta
           name="description"
-          content="Acuity Groups provides integrated facility management services in Kumbalgodu for factories, warehouses, industrial parks, institutions and commercial properties."
+          content="Facility management services in Kumbalgodu for factories, warehouses and industrial properties, including housekeeping, security and maintenance."
         />
 
         <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
-          content="Integrated Facility Management Services in Kumbalgodu, Facility Management Company in Kumbalgodu, Industrial Housekeeping in Kumbalgodu, Security Services in Kumbalgodu, Pest Control in Kumbalgodu, Manpower Outsourcing in Kumbalgodu, Electrical Maintenance in Kumbalgodu"
+          content="Facility Management Services in Kumbalgodu, Facility Management Company in Kumbalgodu, Industrial Housekeeping in Kumbalgodu, Security Services in Kumbalgodu, Pest Management in Kumbalgodu, Manpower Outsourcing in Kumbalgodu, Electrical Maintenance in Kumbalgodu"
         />
         <link
           rel="canonical"
@@ -94,18 +94,18 @@ const IntegratedFacilityManagementKumbalgodu = () => {
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
             <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Integrated Facility Management Services
+              Facility Management Services
             </span>
 
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-              Integrated Facility Management Services in Kumbalgodu
+              Facility Management Services in Kumbalgodu
             </h1>
-
             <p className="text-lg text-gray-700 leading-8 mb-6">
-              Acuity Groups provides professional Integrated Facility Management
-              Services in Kumbalgodu Bangalore for industrial parks, warehouses,
+              Acuity Groups LLP provides professional facility management
+              services in Kumbalgodu for industrial parks, warehouses,
               factories, institutions, apartment communities and commercial
-              establishments.
+              establishments. Our integrated facility management solutions help
+              maintain clean, safe and efficiently managed properties.
             </p>
 
             <p className="text-lg text-gray-700 leading-8 mb-8">
@@ -135,7 +135,7 @@ const IntegratedFacilityManagementKumbalgodu = () => {
           <div className="flex justify-center">
             <img
               src={bannerImage}
-              alt="Integrated Facility Management Services in Kumbalgodu"
+              alt="Facility Management Services in Kumbalgodu"
               className="w-full max-w-[700px] rounded-3xl shadow-2xl"
             />
           </div>
@@ -234,6 +234,17 @@ const IntegratedFacilityManagementKumbalgodu = () => {
             Kumbalgodu Bangalore.
           </p>
         </div>
+        <p className="mt-6 text-lg text-gray-700 leading-8">
+          Learn more about our{" "}
+          <Link
+            to="/integrated-facility-management"
+            className="text-blue-600 font-semibold underline"
+          >
+            Integrated Facility Management Services in Bangalore
+          </Link>{" "}
+          for complete industrial, commercial and institutional facility
+          solutions.
+        </p>
       </section>
 
       {/* Why Choose */}
@@ -299,7 +310,7 @@ const IntegratedFacilityManagementKumbalgodu = () => {
       {/* CTA */}
       <section className="py-16 bg-gray-100 text-center px-6">
         <h2 className="text-4xl font-bold text-blue-900 mb-4">
-          Looking for Facility Management Services in Kumbalgodu?
+          Need Facility Management Services in Kumbalgodu?
         </h2>
 
         <p className="text-lg text-gray-700 mb-8">

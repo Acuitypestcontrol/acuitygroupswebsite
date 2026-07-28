@@ -406,7 +406,7 @@ export default function Homepage() {
 
         <meta
           name="description"
-          content="Acuity Groups LLP is a facility management company in Bangalore providing housekeeping, security, pest management, manpower outsourcing and maintenance services."
+          content="Acuity Groups LLP provides facility management, housekeeping, security, pest management and manpower outsourcing services across Bangalore."
         />
 
         <meta name="robots" content="index, follow" />
@@ -470,7 +470,7 @@ export default function Homepage() {
             <img
               src={banner.image}
               alt={banner.alt}
-              className="h-full w-full object-cover"
+              className="h-full w-full"
             />
           </div>
         ))}

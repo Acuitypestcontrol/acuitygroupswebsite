@@ -19,7 +19,7 @@ const IntegratedFacilityManagementPeenya = () => {
     },
     {
       title: "Pest Management in Peenya",
-      desc: "Complete pest management services in Peenya for factories, warehouses, offices and commercial spaces including termite, rodent and cockroach control.",
+      desc: "Complete pest management services in Peenya for factories, warehouses, offices and commercial spaces, including termite, rodent and cockroach control.",
       link: "/pest-management",
     },
     {
@@ -50,12 +50,12 @@ const IntegratedFacilityManagementPeenya = () => {
 
   const faqs = [
     {
-      q: "Do you provide integrated facility management services in Peenya?",
-      a: "Yes, Acuity Groups provides integrated facility management services in Peenya for factories, warehouses, manufacturing units, offices and commercial properties.",
+      q: "Do you provide facility management services in Peenya?",
+      a: "Yes, Acuity Groups LLP provides professional facility management services in Peenya for factories, warehouses, manufacturing units, offices and commercial properties.",
     },
     {
       q: "Do you provide facility services for factories and warehouses in Peenya?",
-      a: "Yes, we provide housekeeping, security, pest control, manpower outsourcing, repair and maintenance services for factories and warehouses in Peenya.",
+      a: "Yes, we provide housekeeping, security, pest management, manpower outsourcing, repair and maintenance services for factories and warehouses in Peenya.",
     },
     {
       q: "Do you provide industrial security services in Peenya?",
@@ -67,53 +67,160 @@ const IntegratedFacilityManagementPeenya = () => {
     },
   ];
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Facility Management Services in Peenya",
+    description:
+      "Professional facility management services in Peenya for factories, warehouses and industrial facilities, including housekeeping, security, pest management, maintenance and manpower outsourcing.",
+    serviceType: "Facility Management Services",
+    provider: {
+      "@type": "Organization",
+      name: "Acuity Groups LLP",
+      url: "https://www.acuitygroups.in/",
+      telephone: "+91-99412-29005",
+    },
+    areaServed: {
+      "@type": "Place",
+      name: "Peenya, Bengaluru, Karnataka",
+    },
+    url: "https://www.acuitygroups.in/integrated-facility-management-peenya",
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://www.acuitygroups.in/",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Integrated Facility Management",
+        item: "https://www.acuitygroups.in/integrated-facility-management",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Facility Management Services in Peenya",
+        item: "https://www.acuitygroups.in/integrated-facility-management-peenya",
+      },
+    ],
+  };
+
   return (
     <div className="bg-white text-gray-800">
       <Helmet>
         <title>
-          Integrated Facility Management Services in Peenya | Acuity Groups
+          Facility Management Services in Peenya | Acuity Groups LLP
         </title>
+
         <meta
           name="description"
-          content="Acuity Groups provides integrated facility management services in Peenya for factories, warehouses, manufacturing units and industrial properties."
+          content="Facility management services in Peenya for factories, warehouses and industrial facilities, including housekeeping, security and maintenance."
+        />
+
+        <meta
+          name="keywords"
+          content="Facility Management Services in Peenya, Facility Management Company in Peenya, Industrial Housekeeping in Peenya, Industrial Security Services in Peenya, Pest Management in Peenya, Manpower Outsourcing in Peenya, Electrical Maintenance in Peenya"
         />
 
         <meta name="robots" content="index, follow" />
-        <meta
-          name="keywords"
-          content="Integrated Facility Management Services in Peenya, Facility Management Company in Peenya, Industrial Housekeeping in Peenya, Industrial Security Services in Peenya, Pest Control in Peenya, Manpower Outsourcing in Peenya, Electrical Maintenance in Peenya"
-        />
+
         <link
           rel="canonical"
           href="https://www.acuitygroups.in/integrated-facility-management-peenya"
         />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="Facility Management Services in Peenya | Acuity Groups LLP"
+        />
+
+        <meta
+          property="og:description"
+          content="Professional facility management services in Peenya for factories, warehouses, manufacturing units and industrial facilities."
+        />
+
+        <meta
+          property="og:url"
+          content="https://www.acuitygroups.in/integrated-facility-management-peenya"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <meta property="og:site_name" content="Acuity Groups LLP" />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          name="twitter:title"
+          content="Facility Management Services in Peenya | Acuity Groups LLP"
+        />
+
+        <meta
+          name="twitter:description"
+          content="Facility management services in Peenya for factories, warehouses and industrial properties."
+        />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
 
-      {/* Hero */}
       {/* Hero Section */}
       <section className="py-8 md:py-12 px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          {/* Left Content */}
           <div>
             <span className="inline-block bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Integrated Facility Management Services
+              Facility Management Services
             </span>
 
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-              Integrated Facility Management Services in Peenya
+              Facility Management Services in Peenya
             </h1>
 
             <p className="text-lg text-gray-700 leading-8 mb-6">
-              Acuity Groups provides professional Integrated Facility Management
-              Services in Peenya Bangalore for factories, manufacturing units,
-              warehouses, industrial buildings and commercial establishments.
+              Acuity Groups LLP provides professional facility management
+              services in Peenya for factories, manufacturing units, warehouses,
+              industrial buildings and commercial establishments. Our integrated
+              facility management solutions help maintain clean, safe and
+              efficiently managed industrial properties.
             </p>
 
             <p className="text-lg text-gray-700 leading-8 mb-8">
-              Our experienced workforce delivers housekeeping services, security
-              services, pest management, electrical maintenance, repair &
-              maintenance and manpower outsourcing solutions to ensure smooth
-              day-to-day facility operations.
+              Our experienced workforce delivers housekeeping, security, pest
+              management, electrical maintenance, repair and maintenance, and
+              manpower outsourcing solutions to support smooth day-to-day
+              facility operations.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -126,25 +233,23 @@ const IntegratedFacilityManagementPeenya = () => {
 
               <a
                 href="tel:+919941229005"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full font-semibold"
+                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-full font-semibold transition"
               >
                 Call Now
               </a>
             </div>
           </div>
 
-          {/* Right Banner */}
           <div className="flex justify-center">
             <img
               src={bannerImage}
-              alt="Facility Management Services in Peenya Bangalore"
+              alt="Facility Management Services in Peenya"
               className="w-full max-w-[700px] rounded-3xl shadow-2xl"
+              loading="eager"
             />
           </div>
         </div>
       </section>
-
-      {/* Service Image */}
 
       {/* Services */}
       <section className="py-16 bg-gray-50 px-6">
@@ -159,15 +264,15 @@ const IntegratedFacilityManagementPeenya = () => {
             offices and commercial establishments.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Link
-                key={index}
+                key={service.title}
                 to={service.link}
                 className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition border-t-4 border-blue-600 block"
               >
                 <div className="text-4xl font-bold text-blue-100 mb-4">
-                  0{index + 1}
+                  {String(index + 1).padStart(2, "0")}
                 </div>
 
                 <h3 className="text-xl font-bold text-blue-800 mb-3">
@@ -188,65 +293,88 @@ const IntegratedFacilityManagementPeenya = () => {
       {/* SEO Content */}
       <section className="py-16 px-6 max-w-7xl mx-auto">
         <div className="bg-blue-50 rounded-3xl p-8 md:p-12">
-          <h2 className="text-4xl font-bold text-blue-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
             Facility Management Solutions for Peenya Industrial Area
           </h2>
+
           <p className="text-lg text-gray-700 leading-8 mb-5">
             Peenya is one of Bangalore’s largest industrial locations, with
             factories, manufacturing units, warehouses, engineering companies
-            and commercial buildings. Acuity Groups supports businesses in
+            and commercial buildings. Acuity Groups LLP supports businesses in
             Peenya with professional facility management services focused on
-            safety, cleanliness, maintenance and smooth daily operations.
+            workplace safety, cleanliness, preventive maintenance and efficient
+            daily operations.
           </p>
-          Whether you need{" "}
-          <Link
-            to="/housekeeping-services"
-            className="text-blue-600 font-semibold"
-          >
-            industrial housekeeping services
-          </Link>
-          ,{" "}
-          <Link to="/security-services" className="text-blue-600 font-semibold">
-            factory security guards
-          </Link>
-          ,{" "}
-          <Link to="/pest-management" className="text-blue-600 font-semibold">
-            pest control technicians
-          </Link>
-          ,{" "}
-          <Link
-            to="/repair-maintenance"
-            className="text-blue-600 font-semibold"
-          >
-            maintenance workers
-          </Link>{" "}
-          or{" "}
-          <Link
-            to="/manpower-outsourcing"
-            className="text-blue-600 font-semibold"
-          >
-            manpower support
-          </Link>
-          , our team delivers reliable facility management services in Peenya
-          Bangalore.
+
+          <p className="text-lg text-gray-700 leading-8">
+            Whether you need{" "}
+            <Link
+              to="/housekeeping-services"
+              className="text-blue-600 font-semibold hover:underline"
+            >
+              industrial housekeeping services
+            </Link>
+            ,{" "}
+            <Link
+              to="/security-services"
+              className="text-blue-600 font-semibold hover:underline"
+            >
+              factory security guards
+            </Link>
+            ,{" "}
+            <Link
+              to="/pest-management"
+              className="text-blue-600 font-semibold hover:underline"
+            >
+              pest management technicians
+            </Link>
+            ,{" "}
+            <Link
+              to="/repair-maintenance"
+              className="text-blue-600 font-semibold hover:underline"
+            >
+              repair and maintenance workers
+            </Link>{" "}
+            or{" "}
+            <Link
+              to="/manpower-outsourcing"
+              className="text-blue-600 font-semibold hover:underline"
+            >
+              industrial manpower support
+            </Link>
+            , our team delivers reliable facility management services throughout
+            Peenya and the surrounding industrial areas.
+          </p>
+
+          <p className="mt-6 text-lg text-gray-700 leading-8">
+            Learn more about our{" "}
+            <Link
+              to="/integrated-facility-management"
+              className="text-blue-600 font-semibold underline"
+            >
+              Integrated Facility Management Services in Bangalore
+            </Link>{" "}
+            for complete industrial and commercial facility solutions.
+          </p>
         </div>
       </section>
 
       {/* Why Choose */}
       <section className="py-16 px-6 max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-blue-900 mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-10">
           Why Choose Acuity Groups in Peenya?
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {whyChoose.map((item, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {whyChoose.map((item) => (
             <div
-              key={index}
+              key={item}
               className="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-md transition"
             >
               <span className="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center mb-4">
                 ✓
               </span>
+
               <p className="text-lg font-semibold">{item}</p>
             </div>
           ))}
@@ -256,57 +384,59 @@ const IntegratedFacilityManagementPeenya = () => {
       {/* Areas */}
       <section className="py-16 bg-blue-900 text-white px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Serving Peenya & Nearby Areas
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Serving Peenya and Nearby Areas
           </h2>
 
           <p className="text-lg text-blue-100 leading-8">
-            We provide integrated facility management services across Peenya
-            Industrial Area, Peenya 1st Phase, Peenya 2nd Phase, Peenya 3rd
-            Phase, Nagasandra, Jalahalli, Dasarahalli, Yeshwanthpur and nearby
-            areas.
+            We provide facility management services across Peenya Industrial
+            Area, Peenya 1st Phase, Peenya 2nd Phase, Peenya 3rd Phase,
+            Nagasandra, Jalahalli, Dasarahalli, Yeshwanthpur and nearby
+            industrial and commercial areas.
           </p>
         </div>
       </section>
 
       {/* FAQ */}
       <section className="py-16 px-6 max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-blue-900 mb-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-10">
           Frequently Asked Questions
         </h2>
 
         <div className="space-y-6">
-          {faqs.map((faq, index) => (
-            <div key={index} className="border-b pb-5">
+          {faqs.map((faq) => (
+            <div key={faq.q} className="border-b pb-5">
               <h3 className="font-semibold text-xl mb-2 text-blue-900">
                 {faq.q}
               </h3>
+
               <p className="text-gray-600 leading-7">{faq.a}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Map */}
+      {/* Location Image */}
       <section
-        className="relative h-[70vh] bg-cover bg-center"
+        className="relative h-[45vh] md:h-[70vh] bg-cover bg-center"
         style={{ backgroundImage: `url(${bannerImage1})` }}
+        aria-label="Peenya facility management service area"
       ></section>
 
       {/* CTA */}
       <section className="py-16 bg-gray-100 text-center px-6">
-        <h2 className="text-4xl font-bold text-blue-900 mb-4">
-          Looking for Facility Management Services in Peenya?
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">
+          Need Facility Management Services in Peenya?
         </h2>
 
         <p className="text-lg text-gray-700 mb-8">
-          Contact Acuity Groups today for customized integrated facility
-          management solutions in Peenya Bangalore.
+          Contact Acuity Groups LLP for customized facility management solutions
+          for factories, warehouses and commercial properties in Peenya.
         </p>
 
         <Link
           to="/contact"
-          className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-semibold"
+          className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full font-semibold transition"
         >
           Contact Us
         </Link>

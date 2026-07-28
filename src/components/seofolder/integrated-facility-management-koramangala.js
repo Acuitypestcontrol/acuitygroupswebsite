@@ -71,17 +71,17 @@ const IntegratedFacilityManagementKoramangala = () => {
     <div className="bg-white text-gray-800">
       <Helmet>
         <title>
-          Integrated Facility Management Services in Koramangala | Acuity Groups
+          Facility Management Services in Koramangala | Acuity Groups LLP
         </title>
 
         <meta
           name="description"
-          content="Acuity Groups provides integrated facility management services in Koramangala, including housekeeping, security, manpower, pest control and maintenance."
+          content="Facility management services in Koramangala for offices, apartments and commercial properties, including housekeeping, security and maintenance."
         />
 
         <meta
           name="keywords"
-          content="integrated facility management services in Koramangala, facility management company in Koramangala, housekeeping services Koramangala, security services Koramangala, manpower outsourcing Koramangala"
+          content="Facility Management Services in Koramangala, Facility Management Company in Koramangala, Housekeeping Services in Koramangala, Security Services in Koramangala, Pest Management in Koramangala, Manpower Outsourcing in Koramangala"
         />
 
         <meta name="robots" content="index, follow" />
@@ -166,13 +166,15 @@ const IntegratedFacilityManagementKoramangala = () => {
             </span>
 
             <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight">
-              Integrated Facility Management Services in Koramangala
+              Facility Management Services in Koramangala
             </h1>
 
             <p className="text-lg text-gray-700 leading-8 mb-6">
-              Acuity Groups provides professional integrated facility management
-              services in Koramangala for apartments, offices, hotels,
-              restaurants, hospitals, retail outlets and commercial properties.
+              Acuity Groups LLP provides professional facility management
+              services in Koramangala for corporate offices, commercial
+              buildings, apartments, retail spaces and business establishments.
+              Our integrated facility management solutions ensure clean, secure
+              and well-maintained workplaces.
             </p>
 
             <p className="text-lg text-gray-700 leading-8 mb-8">
@@ -297,6 +299,16 @@ const IntegratedFacilityManagementKoramangala = () => {
             .
           </p>
         </div>
+        <p className="mt-6 text-lg text-gray-700 leading-8">
+          Learn more about our{" "}
+          <Link
+            to="/integrated-facility-management"
+            className="text-blue-600 font-semibold underline"
+          >
+            Integrated Facility Management Services in Bangalore
+          </Link>
+          .
+        </p>
       </section>
 
       {/* WHY CHOOSE */}
@@ -365,7 +377,7 @@ const IntegratedFacilityManagementKoramangala = () => {
       {/* CTA */}
       <section className="py-16 bg-gray-100 text-center px-6">
         <h2 className="text-4xl font-bold text-blue-900 mb-4">
-          Looking for Facility Management Services in Koramangala?
+          Need Facility Management Services in Koramangala?
         </h2>
 
         <p className="text-lg text-gray-700 mb-8">

@@ -71,11 +71,11 @@ const IntegratedFacilityManagementWhitefield = () => {
     <div className="bg-white text-gray-800">
       <Helmet>
         <title>
-          Integrated Facility Management Services in Whitefield | Acuity Groups
+          Facility Management Services in Whitefield | Acuity Groups LLP
         </title>
         <meta
           name="description"
-          content="Acuity Groups provides integrated facility management services in Whitefield for IT parks, offices, apartments, hospitals and commercial properties."
+          content="Acuity Groups LLP provides facility management services in Whitefield including housekeeping, security, pest management, manpower outsourcing and maintenance solutions for offices, apartments and commercial properties."
         />
         <meta name="robots" content="index, follow" />
         <meta

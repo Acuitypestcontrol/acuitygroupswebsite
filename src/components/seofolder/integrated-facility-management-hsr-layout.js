@@ -71,16 +71,16 @@ const IntegratedFacilityManagementHSRLayout = () => {
     <div className="bg-white text-gray-800">
       <Helmet>
         <title>
-          Integrated Facility Management Services in HSR Layout | Acuity Groups
+          Facility Management Services in HSR Layout | Acuity Groups LLP
         </title>
         <meta
           name="description"
-          content="Acuity Groups provides integrated facility management services in HSR Layout for apartments, offices, clinics, restaurants and commercial properties."
+          content="Facility management services in HSR Layout for apartments, offices and commercial properties, including housekeeping, security and maintenance."
         />
         <meta name="robots" content="index, follow" />
         <meta
           name="keywords"
-          content="Integrated Facility Management Services in HSR Layout, Facility Management Company in HSR Layout, Housekeeping Services in HSR Layout, Security Services in HSR Layout, Pest Control in HSR Layout, Manpower Outsourcing in HSR Layout, Electrical Maintenance in HSR Layout"
+          content="Facility Management Services in HSR Layout, Facility Management Company in HSR Layout, Housekeeping Services in HSR Layout, Security Services in HSR Layout, Pest Control in HSR Layout, Manpower Outsourcing in HSR Layout, Electrical Maintenance in HSR Layout"
         />
         <link
           rel="canonical"
@@ -101,10 +101,11 @@ const IntegratedFacilityManagementHSRLayout = () => {
             </h1>
 
             <p className="text-lg text-gray-700 leading-8 mb-6">
-              Acuity Groups provides complete Integrated Facility Management
-              Services in HSR Layout including housekeeping, security services,
-              pest management, maintenance support and manpower outsourcing for
-              apartments, offices, clinics and commercial properties.
+              Acuity Groups LLP provides professional facility management
+              services in HSR Layout for apartments, offices, clinics,
+              restaurants, retail outlets and commercial properties. Our
+              integrated facility management solutions help maintain clean,
+              secure and efficiently managed facilities.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -226,6 +227,16 @@ const IntegratedFacilityManagementHSRLayout = () => {
             Layout Bangalore.
           </p>
         </div>
+        <p className="mt-6 text-lg text-gray-700 leading-8">
+          Explore our{" "}
+          <Link
+            to="/integrated-facility-management"
+            className="text-blue-600 font-semibold underline"
+          >
+            Integrated Facility Management Services in Bangalore
+          </Link>{" "}
+          for complete IFM solutions across the city.
+        </p>
       </section>
 
       {/* Why Choose */}
