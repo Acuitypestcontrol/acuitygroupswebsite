@@ -89,21 +89,13 @@ const FacilityManagement = () => {
       image: HousekeepingManagement,
       title: "Housekeeping Management",
       desc: "Professional housekeeping supervision, cleaning coordination, hygiene maintenance and workplace cleanliness management.",
-      features: [
-        "Staff Supervision",
-        "Quality Audits",
-        "Inventory Management",
-      ],
+      features: ["Staff Supervision", "Quality Audits", "Inventory Management"],
     },
     {
       image: TechnicalSupport,
       title: "Technical Support Services",
       desc: "Electrical, plumbing, HVAC and technical maintenance support for smooth facility operations across Bangalore.",
-      features: [
-        "Electrical Systems",
-        "Plumbing",
-        "HVAC Maintenance",
-      ],
+      features: ["Electrical Systems", "Plumbing", "HVAC Maintenance"],
     },
     {
       image: VendorManagement,
@@ -254,15 +246,15 @@ const FacilityManagement = () => {
     },
     {
       name: "Peenya",
-      path: "/integrated-facility-management-peenya",
+      path: "/seofolder/peenya",
     },
     {
       name: "Hebbal",
-      path: "/integrated-facility-management-hebbal",
+      path: "/seofolder/hebbal",
     },
     {
       name: "BEML Layout",
-      path: "/integrated-facility-management-beml",
+      path: "/seofolder/beml",
     },
     {
       name: "Dabaspet",
@@ -270,7 +262,7 @@ const FacilityManagement = () => {
     },
     {
       name: "Doddaballapur",
-      path: "/integrated-facility-management-doddaballapur",
+      path: "/seofolder/doddaballapur",
     },
     {
       name: "Attibele",
@@ -321,38 +313,38 @@ const FacilityManagement = () => {
     },
   ];
   const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "ProfessionalService"],
-  "@id": "https://www.acuitygroups.in/#organization",
-  name: "Acuity Groups LLP",
-  url: "https://www.acuitygroups.in/",
-  logo: "https://www.acuitygroups.in/logo192.png",
-  telephone: "+919941229005",
-  email: "info@acuitygroups.in",
-  image: "https://www.acuitygroups.in/logo192.png",
-
-  address: {
-    "@type": "PostalAddress",
-    streetAddress:
-      "2nd Floor, KVO-08, No-28/2, near Sun Jupiter School, JP Nagar 6th Phase, Yelachenahalli",
-    addressLocality: "Bengaluru",
-    addressRegion: "Karnataka",
-    postalCode: "560078",
-    addressCountry: "IN",
-  },
-
-  areaServed: {
-    "@type": "City",
-    name: "Bengaluru",
-  },
-
-  contactPoint: {
-    "@type": "ContactPoint",
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "@id": "https://www.acuitygroups.in/#organization",
+    name: "Acuity Groups LLP",
+    url: "https://www.acuitygroups.in/",
+    logo: "https://www.acuitygroups.in/logo192.png",
     telephone: "+919941229005",
-    contactType: "customer service",
-    availableLanguage: ["English", "Kannada", "Hindi"],
-  },
-};
+    email: "info@acuitygroups.in",
+    image: "https://www.acuitygroups.in/logo192.png",
+
+    address: {
+      "@type": "PostalAddress",
+      streetAddress:
+        "2nd Floor, KVO-08, No-28/2, near Sun Jupiter School, JP Nagar 6th Phase, Yelachenahalli",
+      addressLocality: "Bengaluru",
+      addressRegion: "Karnataka",
+      postalCode: "560078",
+      addressCountry: "IN",
+    },
+
+    areaServed: {
+      "@type": "City",
+      name: "Bengaluru",
+    },
+
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+919941229005",
+      contactType: "customer service",
+      availableLanguage: ["English", "Kannada", "Hindi"],
+    },
+  };
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -426,23 +418,29 @@ const FacilityManagement = () => {
   return (
     <div className="overflow-hidden bg-white font-sans text-gray-800">
       <Helmet>
-        <title>
-          Integrated Facility Management Company in Bangalore | Acuity Groups
-        </title>
+        <title>Integrated Facility Management Bangalore | Acuity Groups</title>
 
         <meta
           name="description"
-          content="Acuity Groups LLP is an integrated facility management company in Bangalore providing housekeeping, security, maintenance, pest management and manpower services."
+          content="Integrated facility management services in Bangalore for offices, apartments and industries. Get housekeeping, security, maintenance and manpower support."
+        />
+
+        <meta
+          name="keywords"
+          content="integrated facility management Bangalore, facility management company Bangalore, facility management services Bangalore, housekeeping services Bangalore, security services Bangalore"
         />
 
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Acuity Groups LLP" />
 
-        <link rel="canonical" href={canonicalUrl} />
+        <link
+          rel="canonical"
+          href="https://www.acuitygroups.in/integrated-facility-management"
+        />
 
         <meta
           property="og:title"
-          content="Integrated Facility Management Company in Bangalore | Acuity Groups"
+          content="Integrated Facility Management Bangalore | Acuity Groups"
         />
 
         <meta
@@ -450,21 +448,29 @@ const FacilityManagement = () => {
           content="Professional facility management solutions for offices, apartments, industries, hospitals, warehouses and commercial properties across Bangalore."
         />
 
-        <meta property="og:url" content={canonicalUrl} />
+        <meta
+          property="og:url"
+          content="https://www.acuitygroups.in/integrated-facility-management"
+        />
+
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Acuity Groups LLP" />
-        <meta property="og:image" content={FacilityHero} />
+
+        <meta
+          property="og:image"
+          content="https://www.acuitygroups.in/images/integrated-facility-management-bangalore.jpg"
+        />
 
         <meta
           property="og:image:alt"
-          content="Integrated facility management company in Bangalore"
+          content="Integrated facility management services in Bangalore"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
 
         <meta
           name="twitter:title"
-          content="Integrated Facility Management Company in Bangalore"
+          content="Integrated Facility Management Bangalore | Acuity Groups"
         />
 
         <meta
@@ -472,7 +478,10 @@ const FacilityManagement = () => {
           content="Housekeeping, security, maintenance, pest management and manpower services for properties across Bangalore."
         />
 
-        <meta name="twitter:image" content={FacilityHero} />
+        <meta
+          name="twitter:image"
+          content="https://www.acuitygroups.in/images/integrated-facility-management-bangalore.jpg"
+        />
 
         <script type="application/ld+json">
           {JSON.stringify(organizationSchema)}
@@ -486,11 +495,8 @@ const FacilityManagement = () => {
           {JSON.stringify(breadcrumbSchema)}
         </script>
 
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
-
       {/* VISIBLE BREADCRUMB */}
       <nav
         aria-label="Breadcrumb"
@@ -516,11 +522,14 @@ const FacilityManagement = () => {
       </nav>
 
       {/* HERO */}
-      <section className="relative flex min-h-[88vh] items-center">
+      <section
+        aria-labelledby="facility-management-heading"
+        className="relative flex min-h-[88vh] items-center"
+      >
         <div className="absolute inset-0">
           <img
             src={FacilityHero}
-            alt="Integrated facility management company in Bangalore"
+            alt="Integrated facility management services in Bangalore"
             className="h-full w-full object-cover"
             width="1920"
             height="1080"
@@ -540,14 +549,18 @@ const FacilityManagement = () => {
               <span>FACILITY MANAGEMENT COMPANY IN BANGALORE</span>
             </div>
 
-            <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl md:text-7xl">
+            <h1
+              id="facility-management-heading"
+              className="mb-6 text-4xl font-black leading-tight sm:text-5xl md:text-7xl"
+            >
               Integrated Facility Management Services in Bangalore
             </h1>
-
             <p className="mb-10 max-w-2xl text-lg leading-relaxed text-blue-100 md:text-xl">
-              Housekeeping, security, repair and maintenance, pest management
-              and manpower support for offices, apartments, commercial
-              buildings, industries and institutions across Bengaluru.
+              Acuity Groups LLP provides integrated facility management services
+              including housekeeping, security, repair and maintenance, pest
+              management and manpower support for offices, apartments,
+              commercial buildings, industries and institutions across
+              Bengaluru.
             </p>
 
             <div className="flex flex-wrap gap-4">
@@ -596,9 +609,7 @@ const FacilityManagement = () => {
                 {value}
               </p>
 
-              <p className="mt-1 text-xs text-gray-500 md:text-sm">
-                {label}
-              </p>
+              <p className="mt-1 text-xs text-gray-500 md:text-sm">{label}</p>
             </div>
           ))}
         </div>
@@ -620,17 +631,16 @@ const FacilityManagement = () => {
 
             <p className="mb-5 text-lg leading-relaxed text-gray-600">
               Acuity Groups LLP is an integrated facility management company in
-              Bangalore providing coordinated housekeeping, security, repair
-              and maintenance, pest management and manpower support for
-              offices, apartments, commercial buildings, industries,
-              warehouses, hospitals and educational institutions.
+              Bangalore providing coordinated housekeeping, security, repair and
+              maintenance, pest management and manpower support for offices,
+              apartments, commercial buildings, industries, warehouses,
+              hospitals and educational institutions.
             </p>
 
             <p className="mb-5 text-lg leading-relaxed text-gray-600">
               Our team studies the property, operating hours, manpower needs,
-              hygiene requirements, safety priorities and maintenance
-              schedules before preparing a customized facility management
-              plan.
+              hygiene requirements, safety priorities and maintenance schedules
+              before preparing a customized facility management plan.
             </p>
 
             <p className="text-lg leading-relaxed text-gray-600">
@@ -689,7 +699,7 @@ const FacilityManagement = () => {
           </div>
         </div>
       </section>
-            {/* SERVICES */}
+      {/* SERVICES */}
       <section className="bg-gray-50 px-6 py-24 md:px-12">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-14 max-w-3xl text-center">
@@ -912,10 +922,7 @@ const FacilityManagement = () => {
                 key={industry}
                 className="rounded-2xl border border-gray-100 bg-gray-50 p-6 text-center transition hover:-translate-y-1 hover:bg-white hover:shadow-lg"
               >
-                <Building2
-                  className="mx-auto mb-3 text-blue-900"
-                  size={25}
-                />
+                <Building2 className="mx-auto mb-3 text-blue-900" size={25} />
 
                 <h3 className="font-bold text-gray-800">{industry}</h3>
               </div>
@@ -976,7 +983,7 @@ const FacilityManagement = () => {
           </div>
         </div>
       </section>
-            {/* WORK PROCESS */}
+      {/* WORK PROCESS */}
       <section className="bg-blue-950 px-6 py-24 text-white md:px-12">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto mb-14 max-w-3xl text-center">
@@ -1028,8 +1035,8 @@ const FacilityManagement = () => {
             </h2>
 
             <p className="text-lg leading-relaxed text-gray-500">
-              Common questions about our integrated facility management
-              services in Bangalore.
+              Common questions about our integrated facility management services
+              in Bangalore.
             </p>
           </div>
 
@@ -1073,23 +1080,16 @@ const FacilityManagement = () => {
             <p className="mb-6 leading-relaxed text-gray-600">
               Share your property type, Bangalore location, required services,
               working hours and expected manpower. Our team can arrange a site
-              inspection and prepare a customized facility management
-              proposal.
+              inspection and prepare a customized facility management proposal.
             </p>
 
             <address className="not-italic leading-8 text-gray-700">
               <strong className="text-gray-900">Acuity Groups LLP</strong>
-
               <br />
-
               2nd Floor, KVO-08, No. 28/2, near Sun Jupiter School,
-
               <br />
-
               JP Nagar 6th Phase, Yelachenahalli,
-
               <br />
-
               Bengaluru, Karnataka – 560078
             </address>
           </div>
@@ -1141,9 +1141,7 @@ const FacilityManagement = () => {
               </span>
 
               <span>
-                <span className="block text-sm text-gray-500">
-                  WhatsApp us
-                </span>
+                <span className="block text-sm text-gray-500">WhatsApp us</span>
 
                 <strong className="text-gray-900">
                   Request a Site Inspection
@@ -1177,8 +1175,8 @@ const FacilityManagement = () => {
 
           <p className="mx-auto mb-10 max-w-3xl text-lg leading-relaxed text-gray-600">
             Partner with Acuity Groups LLP for professional facility management
-            services designed to improve safety, hygiene, maintenance
-            standards, manpower coordination and daily workplace operations.
+            services designed to improve safety, hygiene, maintenance standards,
+            manpower coordination and daily workplace operations.
           </p>
 
           <div className="flex flex-wrap justify-center gap-5">
