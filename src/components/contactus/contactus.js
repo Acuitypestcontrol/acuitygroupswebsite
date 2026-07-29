@@ -58,7 +58,7 @@ const ContactUs = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+91 99412 29005", "080 4122 9005"],
+      details: ["+91 99412 29005"],
       action: "tel:+919941229005",
     },
     {

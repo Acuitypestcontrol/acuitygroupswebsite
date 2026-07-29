@@ -112,7 +112,7 @@
 //               >
 //                 <Phone size={14} />
 
-//                 <span>+91 99412 29005 / 080 4122 9005</span>
+//                 <span>+91 99412 29005 </span>
 //               </a>
 
 //               <a
@@ -613,7 +613,6 @@
 
 // export default Navbar;
 
-
 import React, { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
@@ -713,9 +712,7 @@ const Navbar = () => {
 
   const navLinkClass = ({ isActive }) =>
     `group relative inline-flex items-center py-3 text-[16px] font-semibold tracking-[-0.2px] transition-colors duration-300 xl:text-[17px] ${
-      isActive
-        ? "text-[#0B1F3A]"
-        : "text-slate-700 hover:text-[#0B1F3A]"
+      isActive ? "text-[#0B1F3A]" : "text-slate-700 hover:text-[#0B1F3A]"
     }`;
 
   const dropdownAnimation = {
@@ -776,7 +773,7 @@ const Navbar = () => {
                 </span>
 
                 <span className="font-medium">
-                  +91 99412 29005 / 080 4122 9005
+                  +91 99412 29005
                 </span>
               </a>
 
@@ -805,12 +802,12 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Main Navbar */}
+        {/* MAIN NAVBAR */}
         <div
-          className={`relative transition-all duration-500 ${
+          className={`transition-all duration-500 ${
             scrolled
-              ? "border-b border-white/50 bg-white/80 shadow-[0_12px_40px_rgba(15,23,42,0.12)] backdrop-blur-2xl"
-              : "bg-white/45 backdrop-blur-md"
+              ? "bg-white/25 backdrop-blur-xl shadow-sm"
+              : "bg-white/10 backdrop-blur-md"
           }`}
         >
           {/* Navbar Glow */}
@@ -854,9 +851,7 @@ const Navbar = () => {
                     damping: 18,
                   }}
                   className={`relative w-auto object-contain transition-all duration-500 ${
-                    scrolled
-                      ? "h-[66px] lg:h-[74px]"
-                      : "h-[78px] lg:h-[98px]"
+                    scrolled ? "h-[66px] lg:h-[84px]" : "h-[78px] lg:h-[98px]"
                   }`}
                 />
               </Link>
@@ -873,9 +868,7 @@ const Navbar = () => {
                     {({ isActive }) => (
                       <>
                         <span>Home</span>
-                        {renderUnderline(
-                          hoveredMenu === "home" || isActive,
-                        )}
+                        {renderUnderline(hoveredMenu === "home" || isActive)}
                       </>
                     )}
                   </NavLink>
@@ -891,9 +884,7 @@ const Navbar = () => {
                     {({ isActive }) => (
                       <>
                         <span>About</span>
-                        {renderUnderline(
-                          hoveredMenu === "about" || isActive,
-                        )}
+                        {renderUnderline(hoveredMenu === "about" || isActive)}
                       </>
                     )}
                   </NavLink>
@@ -922,7 +913,6 @@ const Navbar = () => {
                       }`}
                     >
                       Services
-
                       {renderUnderline(
                         hoveredMenu === "services" || servicesOpen,
                       )}
@@ -1033,9 +1023,7 @@ const Navbar = () => {
                       }`}
                     />
 
-                    {renderUnderline(
-                      hoveredMenu === "career" || careerOpen,
-                    )}
+                    {renderUnderline(hoveredMenu === "career" || careerOpen)}
                   </button>
 
                   <AnimatePresence>
@@ -1088,9 +1076,7 @@ const Navbar = () => {
                     {({ isActive }) => (
                       <>
                         <span>Blogs</span>
-                        {renderUnderline(
-                          hoveredMenu === "blogs" || isActive,
-                        )}
+                        {renderUnderline(hoveredMenu === "blogs" || isActive)}
                       </>
                     )}
                   </NavLink>
@@ -1106,9 +1092,7 @@ const Navbar = () => {
                     {({ isActive }) => (
                       <>
                         <span>Contact</span>
-                        {renderUnderline(
-                          hoveredMenu === "contact" || isActive,
-                        )}
+                        {renderUnderline(hoveredMenu === "contact" || isActive)}
                       </>
                     )}
                   </NavLink>
@@ -1469,9 +1453,7 @@ const Navbar = () => {
                         <Mail size={15} />
                       </span>
 
-                      <span className="font-medium">
-                        info@acuitygroups.in
-                      </span>
+                      <span className="font-medium">info@acuitygroups.in</span>
                     </a>
 
                     <div className="flex items-start gap-3 text-sm leading-6 text-slate-600">
@@ -1496,9 +1478,7 @@ const Navbar = () => {
       {/* Navbar Spacer */}
       <div
         className={`transition-all duration-500 ${
-          scrolled
-            ? "h-[78px] lg:h-[82px]"
-            : "h-[92px] lg:h-[148px]"
+          scrolled ? "h-[78px] lg:h-[82px]" : "h-[92px] lg:h-[148px]"
         }`}
       />
     </>

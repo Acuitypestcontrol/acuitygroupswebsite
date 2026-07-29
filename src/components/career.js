@@ -441,7 +441,7 @@ const Careers = () => {
                   className="flex items-center gap-3 text-gray-700 hover:text-blue-800 transition"
                 >
                   <Phone size={20} className="text-blue-800" />
-                  <span>+91 99412 29005 / 080 4122 9005</span>
+                  <span>+91 99412 29005</span>
                 </a>
 
                 <div className="flex items-start gap-3 text-gray-700">

@@ -141,7 +141,7 @@
 //                     href="tel:+918041229005"
 //                     className="text-gray-500 text-sm hover:text-blue-600 transition"
 //                   >
-//                     080 4122 9005
+//
 //                   </a>
 //                 </div>
 //               </div>
@@ -409,10 +409,7 @@ export default function Footer() {
               to="/manpower-outsourcing"
               label="Manpower Outsourcing"
             />
-            <FooterLink
-              to="/repair-maintenance"
-              label="Repair & Maintenance"
-            />
+            <FooterLink to="/repair-maintenance" label="Repair & Maintenance" />
           </FooterColumn>
 
           {/* Contact */}
@@ -433,13 +430,6 @@ export default function Footer() {
                     </a>
 
                     <br />
-
-                    <a
-                      href="tel:+918041229005"
-                      className="text-sm text-white/50 transition-colors duration-300 hover:text-[#F4C067]"
-                    >
-                      080 4122 9005
-                    </a>
                   </div>
                 }
               />
@@ -476,7 +466,6 @@ export default function Footer() {
                       className="group/map mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-[#F4C067] transition-colors duration-300 hover:text-white"
                     >
                       View on Map
-
                       <ArrowRight
                         size={14}
                         className="transition-transform duration-300 group-hover/map:translate-x-1"
@@ -492,9 +481,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-14 border-t border-white/10 pt-6">
           <div className="flex flex-col items-center justify-between gap-4 text-center text-xs text-white/45 md:flex-row md:text-left">
-            <p>
-              © {currentYear} Acuity Groups. All rights reserved.
-            </p>
+            <p>© {currentYear} Acuity Groups. All rights reserved.</p>
 
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
               <Link
