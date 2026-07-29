@@ -250,6 +250,7 @@ const FacilityManagement = () => {
       </nav>
 
       <section aria-labelledby="facility-management-heading" className="relative flex min-h-[88vh] items-center">
+         
         <div className="absolute inset-0">
           <motion.img
             initial={{ opacity: 0, scale: 1.15 }}
@@ -264,7 +265,7 @@ const FacilityManagement = () => {
             decoding="async"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-950/90 to-blue-900/40" />
+         <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-950/90 to-blue-900/40" />
         </div>
 
         <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-24 md:px-12">

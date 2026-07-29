@@ -1,4 +1,5 @@
 import React from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import {
@@ -19,6 +20,8 @@ import {
 import AboutBanner from "../../images/aboutbanner.jpg";
 
 export default function About() {
+  const reduceMotion = useReducedMotion();
+
   const services = [
     {
       icon: Sparkles,
@@ -135,6 +138,108 @@ export default function About() {
     },
   ];
 
+  const localServices = [
+    {
+      title: "Commercial Cleaning",
+      icon: "🧹",
+      desc: "Office, mall and commercial cleaning",
+    },
+    {
+      title: "Home Services",
+      icon: "🏠",
+      desc: "Deep cleaning, mopping and sweeping",
+    },
+    {
+      title: "Hotel Housekeeping",
+      icon: "🏨",
+      desc: "Room, lobby and hygiene maintenance",
+    },
+    {
+      title: "Facility Maintenance",
+      icon: "🔧",
+      desc: "Electrical, plumbing and repair support",
+    },
+  ];
+
+  const fadeUp = {
+    hidden: reduceMotion
+      ? {}
+      : {
+          opacity: 0,
+          y: 50,
+        },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.75,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
+  const fadeLeft = {
+    hidden: reduceMotion
+      ? {}
+      : {
+          opacity: 0,
+          x: -60,
+        },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
+  const fadeRight = {
+    hidden: reduceMotion
+      ? {}
+      : {
+          opacity: 0,
+          x: 60,
+        },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
+  const staggerContainer = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: reduceMotion ? 0 : 0.1,
+      },
+    },
+  };
+
+  const staggerItem = {
+    hidden: reduceMotion
+      ? {}
+      : {
+          opacity: 0,
+          y: 30,
+          scale: 0.96,
+        },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: [0.22, 1, 0.36, 1],
+      },
+    },
+  };
+
   return (
     <>
       <Helmet>
@@ -158,25 +263,34 @@ export default function About() {
           property="og:title"
           content="About Acuity Groups | Facility Management Bangalore"
         />
+
         <meta
           property="og:description"
           content="Acuity Groups provides facility management, security, housekeeping, pest management and manpower services in Bangalore."
         />
+
         <meta property="og:url" content="https://www.acuitygroups.in/about" />
+
         <meta property="og:type" content="website" />
+
         <meta property="og:site_name" content="Acuity Groups" />
 
         <meta name="twitter:card" content="summary_large_image" />
+
         <meta
           name="twitter:title"
           content="About Acuity Groups | Facility Management Bangalore"
         />
+
         <meta property="og:image" content={AboutBanner} />
+
         <meta
           property="og:image:alt"
           content="Acuity Groups Facility Management Company"
         />
+
         <meta name="twitter:image" content={AboutBanner} />
+
         <meta
           name="twitter:description"
           content="Know more about Acuity Groups and our facility management services in Bangalore."
@@ -241,48 +355,204 @@ export default function About() {
         </script>
       </Helmet>
 
-      <div className="bg-white text-black overflow-hidden font-['Poppins',system-ui,sans-serif]">
+      <div className="overflow-hidden bg-white text-black font-['Poppins',system-ui,sans-serif]">
         {/* HERO SECTION */}
-        <section className="relative w-full h-[50vh] md:h-[60vh] min-h-[550px] overflow-hidden">
-          <div className="absolute inset-0 w-full h-full">
-            <img className="hidden md:block md:h-[550px]" src={AboutBanner} alt="Acuity Groups" />
-          </div>
+        <section className="relative min-h-[550px] w-full overflow-hidden">
+          <motion.img
+            src={AboutBanner}
+            alt="Acuity Groups"
+            className="absolute inset-0 h-full w-full object-cover"
+            initial={reduceMotion ? false : { scale: 1.16 }}
+            animate={reduceMotion ? undefined : { scale: 1 }}
+            transition={{
+              duration: 9,
+              ease: "easeOut",
+            }}
+          />
 
-          <div className="absolute inset-0 bg-black/50" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-black/60" />
 
-          <div className="relative h-full flex items-center justify-center text-center px-6 z-10">
-            <div className="max-w-4xl">
-              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/30 px-5 py-2 rounded-full text-amber-400 tracking-[5px] text-sm font-thin mb-6">
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+
+          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+
+          <motion.div
+            aria-hidden="true"
+            className="absolute left-[8%] top-[20%] h-60 w-60 rounded-full bg-blue-500/20 blur-3xl"
+            animate={
+              reduceMotion
+                ? undefined
+                : {
+                    x: [0, 25, 0],
+                    y: [0, -20, 0],
+                    scale: [1, 1.15, 1],
+                  }
+            }
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+
+          <motion.div
+            aria-hidden="true"
+            className="absolute bottom-[10%] right-[8%] h-60 w-60 rounded-full bg-yellow-400/20 blur-3xl"
+            animate={
+              reduceMotion
+                ? undefined
+                : {
+                    x: [0, -20, 0],
+                    y: [0, 25, 0],
+                    scale: [1.1, 1, 1.1],
+                  }
+            }
+            transition={{
+              duration: 9,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+
+          <div className="relative z-10 flex min-h-[550px] items-center justify-center px-6 text-center">
+            <div className="max-w-5xl">
+              <motion.div
+                initial={
+                  reduceMotion
+                    ? false
+                    : {
+                        opacity: 0,
+                        y: 25,
+                        scale: 0.9,
+                      }
+                }
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                }}
+                transition={{
+                  duration: 0.7,
+                  delay: 0.15,
+                }}
+                className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-5 py-2 text-sm font-light tracking-[5px] text-amber-400 backdrop-blur-md"
+              >
                 <Building size={14} />
-                <span>ACUITY GROUPS</span>
-              </div>
 
-              <h1 className="text-5xl md:text-7xl font-black text-white mb-6">
+                <span>ACUITY GROUPS</span>
+              </motion.div>
+
+              <motion.h1
+                initial={
+                  reduceMotion
+                    ? false
+                    : {
+                        opacity: 0,
+                        y: 45,
+                      }
+                }
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.9,
+                  delay: 0.3,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                className="mb-6 text-5xl font-black leading-tight text-white md:text-7xl"
+              >
                 About{" "}
-                <span className="bg-gradient-to-r from-amber-400 to-amber-300 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 bg-clip-text text-transparent">
                   Acuity Groups
                 </span>
-              </h1>
+              </motion.h1>
 
-              <p className="text-gray-200 text-lg md:text-xl max-w-2xl mx-auto">
+              <motion.p
+                initial={
+                  reduceMotion
+                    ? false
+                    : {
+                        opacity: 0,
+                        y: 30,
+                      }
+                }
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  duration: 0.8,
+                  delay: 0.5,
+                }}
+                className="mx-auto max-w-3xl text-lg leading-8 text-gray-200 md:text-xl"
+              >
                 Facility Management, Security, Housekeeping, Pest Management &
                 Manpower Services Company in Bangalore
-              </p>
+              </motion.p>
+
+              <motion.div
+                initial={
+                  reduceMotion
+                    ? false
+                    : {
+                        opacity: 0,
+                        scaleX: 0,
+                      }
+                }
+                animate={{
+                  opacity: 1,
+                  scaleX: 1,
+                }}
+                transition={{
+                  duration: 1,
+                  delay: 0.75,
+                }}
+                className="mx-auto mt-8 h-1 w-28 origin-center rounded-full bg-gradient-to-r from-blue-500 to-yellow-400"
+              />
             </div>
           </div>
         </section>
 
         {/* WHO WE ARE */}
-        <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-black uppercase tracking-[5px] mb-4 font-thin">
+        <section className="relative px-6 py-20 md:px-12">
+          <div className="absolute left-0 top-20 h-72 w-72 rounded-full bg-blue-100/60 blur-3xl" />
+
+          <div className="relative mx-auto grid max-w-7xl items-center gap-16 md:grid-cols-2">
+            <motion.div
+              variants={fadeLeft}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+            >
+              <p className="mb-4 font-light uppercase tracking-[5px] text-black">
                 Who We Are
               </p>
 
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+              <motion.div
+                initial={
+                  reduceMotion
+                    ? false
+                    : {
+                        width: 0,
+                      }
+                }
+                whileInView={{
+                  width: 80,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                transition={{
+                  duration: 0.8,
+                }}
+                className="mb-6 h-1 rounded-full bg-gradient-to-r from-blue-900 to-yellow-400"
+              />
+
+              <h2 className="mb-6 text-4xl font-black leading-tight text-gray-900 md:text-5xl">
                 Bangalore’s Trusted{" "}
                 <span className="text-blue-900">
                   Integrated Facility Management
@@ -290,397 +560,827 @@ export default function About() {
                 Provider
               </h2>
 
-              <p className="text-gray-600 leading-relaxed mb-4 text-lg">
+              <p className="mb-4 text-lg leading-relaxed text-gray-600">
                 Acuity Groups is a professionally managed facility management
                 company delivering reliable property maintenance and corporate
                 support services across commercial, industrial and residential
                 sectors.
               </p>
 
-              <p className="text-gray-500 leading-relaxed text-lg">
+              <p className="text-lg leading-relaxed text-gray-500">
                 We provide integrated facility management, security services,
                 housekeeping, pest management, repair maintenance and manpower
                 outsourcing solutions based on client requirements and property
                 operations.
               </p>
 
-              <div className="mt-8 grid grid-cols-2 gap-4">
-                {strengths.map((strength, idx) => (
-                  <div key={idx} className="flex items-center gap-2">
-                    <CheckCircle size={18} className="text-blue-900" />
-                    <span className="text-gray-700 text-sm">{strength}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+              <motion.div
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{
+                  once: true,
+                  amount: 0.3,
+                }}
+                className="mt-8 grid gap-4 sm:grid-cols-2"
+              >
+                {strengths.map((strength) => (
+                  <motion.div
+                    key={strength}
+                    variants={staggerItem}
+                    whileHover={{
+                      x: 6,
+                    }}
+                    className="flex items-center gap-3 rounded-xl border border-gray-100 bg-white p-3 shadow-sm"
+                  >
+                    <CheckCircle
+                      size={19}
+                      className="flex-shrink-0 text-blue-900"
+                    />
 
-            <div className="grid gap-5 bg-white">
-              <InfoCard
-                icon={Shield}
-                title="Trusted Services"
-                desc="Reliable facility support"
-              />
-              <InfoCard
-                icon={Users}
-                title="Skilled Workforce"
-                desc="Trained & verified staff"
-              />
-              <InfoCard
-                icon={Award}
-                title="Quality Assurance"
-                desc="Regular audits & feedback"
-              />
-              <InfoCard
-                icon={Building}
-                title="Corporate Expertise"
-                desc="Serving business properties"
-              />
-            </div>
+                    <span className="text-sm text-gray-700">{strength}</span>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              variants={fadeRight}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              className="relative"
+            >
+              <div className="absolute -inset-5 rounded-[36px] bg-gradient-to-br from-blue-100 to-yellow-50 blur-2xl" />
+
+              <motion.div
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{
+                  once: true,
+                  amount: 0.2,
+                }}
+                className="relative grid gap-5 rounded-[30px] border border-white/80 bg-white/80 p-6 shadow-2xl backdrop-blur-xl"
+              >
+                <InfoCard
+                  variants={staggerItem}
+                  icon={Shield}
+                  title="Trusted Services"
+                  desc="Reliable facility support"
+                />
+
+                <InfoCard
+                  variants={staggerItem}
+                  icon={Users}
+                  title="Skilled Workforce"
+                  desc="Trained & verified staff"
+                />
+
+                <InfoCard
+                  variants={staggerItem}
+                  icon={Award}
+                  title="Quality Assurance"
+                  desc="Regular audits & feedback"
+                />
+
+                <InfoCard
+                  variants={staggerItem}
+                  icon={Building}
+                  title="Corporate Expertise"
+                  desc="Serving business properties"
+                />
+              </motion.div>
+            </motion.div>
           </div>
         </section>
 
         {/* STATISTICS */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-blue-50 rounded-2xl p-8 text-center shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div className="flex justify-center mb-3">
-                  <Trophy className="w-10 h-10 text-blue-600" />
-                </div>
-                <h2 className="text-4xl font-bold text-blue-900 mb-2">19+</h2>
-                <p className="text-gray-700 font-medium">
-                  Years of Industry Experience
-                </p>
-              </div>
+        <section className="bg-gradient-to-b from-white to-blue-50/50 py-16">
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{
+              once: true,
+              amount: 0.2,
+            }}
+            className="mx-auto grid max-w-7xl grid-cols-2 gap-5 px-4 sm:px-6 lg:grid-cols-4 lg:px-8"
+          >
+            <StatCard
+              variants={staggerItem}
+              icon={Trophy}
+              value="19+"
+              title="Years of Industry Experience"
+              cardClass="bg-blue-50"
+              iconClass="text-blue-600"
+              valueClass="text-blue-900"
+            />
 
-              <div className="bg-yellow-50 rounded-2xl p-8 text-center shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div className="flex justify-center mb-3">
-                  <Users className="w-10 h-10 text-yellow-600" />
-                </div>
-                <h2 className="text-4xl font-bold text-yellow-600 mb-2">
-                  100+
-                </h2>
-                <p className="text-gray-700 font-medium">
-                  Trained Professionals
-                </p>
-              </div>
+            <StatCard
+              variants={staggerItem}
+              icon={Users}
+              value="100+"
+              title="Trained Professionals"
+              cardClass="bg-yellow-50"
+              iconClass="text-yellow-600"
+              valueClass="text-yellow-600"
+            />
 
-              <div className="bg-green-50 rounded-2xl p-8 text-center shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div className="flex justify-center mb-3">
-                  <Star className="w-10 h-10 text-green-600" />
-                </div>
-                <h2 className="text-4xl font-bold text-green-600 mb-2">500+</h2>
-                <p className="text-gray-700 font-medium">Happy Clients</p>
-              </div>
+            <StatCard
+              variants={staggerItem}
+              icon={Star}
+              value="500+"
+              title="Happy Clients"
+              cardClass="bg-green-50"
+              iconClass="text-green-600"
+              valueClass="text-green-600"
+            />
 
-              <div className="bg-red-50 rounded-2xl p-8 text-center shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div className="flex justify-center mb-3">
-                  <Clock className="w-10 h-10 text-red-600" />
-                </div>
-                <h2 className="text-4xl font-bold text-red-600 mb-2">24/7</h2>
-                <p className="text-gray-700 font-medium">Service Support</p>
-              </div>
-            </div>
-          </div>
+            <StatCard
+              variants={staggerItem}
+              icon={Clock}
+              value="24/7"
+              title="Service Support"
+              cardClass="bg-red-50"
+              iconClass="text-red-600"
+              valueClass="text-red-600"
+            />
+          </motion.div>
         </section>
 
         {/* MISSION & VISION */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-14">
-              <span className="text-blue-600 font-semibold uppercase tracking-wider">
+        <section className="relative overflow-hidden bg-white py-20">
+          <div className="absolute -left-32 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full bg-blue-100 blur-3xl" />
+
+          <div className="absolute -right-32 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full bg-yellow-100 blur-3xl" />
+
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+                amount: 0.3,
+              }}
+              className="mb-14 text-center"
+            >
+              <span className="font-semibold uppercase tracking-wider text-blue-600">
                 Our Purpose
               </span>
-              <h2 className="text-4xl font-bold text-gray-900 mt-3">
+
+              <h2 className="mt-3 text-4xl font-bold text-gray-900">
                 Mission & Vision
               </h2>
-            </div>
+            </motion.div>
 
-            <div className="grid lg:grid-cols-2 gap-8">
-              <div className="bg-blue-900 text-white p-10 rounded-3xl shadow-xl">
-                <h3 className="text-3xl font-bold mb-5">Our Mission</h3>
-                <p className="text-blue-100 leading-8">
-                  To deliver dependable facility management services by
-                  combining skilled manpower, quality systems and best industry
-                  practices for measurable value creation.
-                </p>
-              </div>
+            <div className="grid gap-8 lg:grid-cols-2">
+              <motion.div
+                initial={
+                  reduceMotion
+                    ? false
+                    : {
+                        opacity: 0,
+                        x: -60,
+                        rotateY: -8,
+                      }
+                }
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  rotateY: 0,
+                }}
+                viewport={{
+                  once: true,
+                  amount: 0.3,
+                }}
+                whileHover={{
+                  y: -10,
+                  scale: 1.02,
+                }}
+                transition={{
+                  duration: 0.8,
+                }}
+                className="group relative overflow-hidden rounded-3xl bg-blue-900 p-10 text-white shadow-xl"
+              >
+                <motion.div
+                  aria-hidden="true"
+                  className="absolute -right-14 -top-14 h-48 w-48 rounded-full bg-white/10"
+                  animate={
+                    reduceMotion
+                      ? undefined
+                      : {
+                          scale: [1, 1.2, 1],
+                        }
+                  }
+                  transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                  }}
+                />
 
-              <div className="bg-yellow-500 text-black p-10 rounded-3xl shadow-xl">
-                <h3 className="text-3xl font-bold mb-5">Our Vision</h3>
-                <p className="leading-8">
-                  To be a trusted facility management partner that helps
-                  organizations focus on their core business while we manage
-                  their daily facility operations.
-                </p>
-              </div>
+                <div className="relative z-10">
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10">
+                    <Shield size={28} />
+                  </div>
+
+                  <h3 className="mb-5 text-3xl font-bold">Our Mission</h3>
+
+                  <p className="leading-8 text-blue-100">
+                    To deliver dependable facility management services by
+                    combining skilled manpower, quality systems and best
+                    industry practices for measurable value creation.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={
+                  reduceMotion
+                    ? false
+                    : {
+                        opacity: 0,
+                        x: 60,
+                        rotateY: 8,
+                      }
+                }
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  rotateY: 0,
+                }}
+                viewport={{
+                  once: true,
+                  amount: 0.3,
+                }}
+                whileHover={{
+                  y: -10,
+                  scale: 1.02,
+                }}
+                transition={{
+                  duration: 0.8,
+                }}
+                className="group relative overflow-hidden rounded-3xl bg-yellow-500 p-10 text-black shadow-xl"
+              >
+                <motion.div
+                  aria-hidden="true"
+                  className="absolute -bottom-16 -left-16 h-52 w-52 rounded-full bg-white/20"
+                  animate={
+                    reduceMotion
+                      ? undefined
+                      : {
+                          scale: [1.2, 1, 1.2],
+                        }
+                  }
+                  transition={{
+                    duration: 7,
+                    repeat: Infinity,
+                  }}
+                />
+
+                <div className="relative z-10">
+                  <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-black/10">
+                    <Star size={28} />
+                  </div>
+
+                  <h3 className="mb-5 text-3xl font-bold">Our Vision</h3>
+
+                  <p className="leading-8">
+                    To be a trusted facility management partner that helps
+                    organizations focus on their core business while we manage
+                    their daily facility operations.
+                  </p>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
 
         {/* CORE VALUES */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-14">
-              <span className="text-blue-600 font-semibold uppercase tracking-wider">
+        <section className="bg-gray-50 py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+                amount: 0.3,
+              }}
+              className="mb-14 text-center"
+            >
+              <span className="font-semibold uppercase tracking-wider text-blue-600">
                 Core Values
               </span>
 
-              <h2 className="text-4xl font-bold text-gray-900 mt-3">
+              <h2 className="mt-3 text-4xl font-bold text-gray-900">
                 Principles That Drive Us
               </h2>
 
-              <p className="text-gray-600 mt-4 max-w-3xl mx-auto">
+              <p className="mx-auto mt-4 max-w-3xl text-gray-600">
                 Our values guide every decision we make and every service we
                 deliver to our clients.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              className="grid gap-8 md:grid-cols-2 lg:grid-cols-4"
+            >
               <ValueCard
+                variants={staggerItem}
                 icon="🤝"
                 title="Integrity"
                 desc="We operate with honesty, transparency and accountability in everything we do."
               />
+
               <ValueCard
+                variants={staggerItem}
                 icon="⭐"
                 title="Excellence"
                 desc="We continuously strive to deliver superior service quality and exceed expectations."
               />
+
               <ValueCard
+                variants={staggerItem}
                 icon="🛡️"
                 title="Safety"
                 desc="Maintaining safe environments is at the heart of our service commitment."
               />
+
               <ValueCard
+                variants={staggerItem}
                 icon="❤️"
                 title="Customer Focus"
                 desc="We build lasting partnerships by understanding and fulfilling client requirements."
               />
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* OUR SERVICES */}
-        <section className="py-20 px-6 md:px-12 max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-2 rounded-full text-black tracking-[5px] text-sm font-thin mb-5">
+        <section className="mx-auto max-w-7xl px-6 py-20 md:px-12">
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{
+              once: true,
+              amount: 0.3,
+            }}
+            className="mb-12 text-center"
+          >
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-5 py-2 text-sm font-light tracking-[5px] text-black">
               <Building size={14} />
+
               <span>WHAT WE OFFER</span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-black text-gray-900">
-              Our{" "}
-              <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text">
-                Services
-              </span>
+            <h2 className="text-4xl font-black text-gray-900 md:text-5xl">
+              Our <span className="text-blue-900">Services</span>
             </h2>
 
-            <p className="text-gray-500 max-w-2xl mx-auto mt-4">
+            <p className="mx-auto mt-4 max-w-2xl text-gray-500">
               Comprehensive facility management solutions tailored to your needs
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="group bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-blue-200 hover:-translate-y-2 transition-all duration-500 hover:shadow-xl hover:shadow-blue-100"
+          <motion.div
+            variants={staggerContainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{
+              once: true,
+              amount: 0.15,
+            }}
+            className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+          >
+            {services.map((service) => (
+              <motion.div
+                key={service.title}
+                variants={staggerItem}
+                whileHover={{
+                  y: -12,
+                  scale: 1.015,
+                }}
+                className="group relative overflow-hidden rounded-3xl border border-gray-100 bg-gray-50 p-7 shadow-sm transition-shadow duration-500 hover:border-blue-200 hover:shadow-2xl"
               >
-                <div className="w-14 h-14 rounded-xl bg-blue-10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
-                  <service.icon size={28} className="text-blue-900" />
-                </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-yellow-50 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-                <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-900 transition-colors">
-                  {service.title}
-                </h3>
+                <div className="relative z-10">
+                  <motion.div
+                    whileHover={
+                      reduceMotion
+                        ? {}
+                        : {
+                            rotate: [0, -8, 8, 0],
+                            scale: 1.1,
+                          }
+                    }
+                    transition={{
+                      duration: 0.5,
+                    }}
+                    className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-md"
+                  >
+                    <service.icon size={28} className="text-blue-900" />
+                  </motion.div>
 
-                <p className="text-gray-600 leading-relaxed">{service.desc}</p>
+                  <h3 className="mb-3 text-xl font-semibold text-gray-800 transition-colors group-hover:text-blue-900">
+                    {service.title}
+                  </h3>
 
-                <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <p className="leading-relaxed text-gray-600">
+                    {service.desc}
+                  </p>
+
                   <Link
                     to={service.path}
-                    className="text-blue-900 flex items-center gap-1 text-sm font-medium"
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blue-900"
                   >
-                    Learn More <ChevronRight size={16} />
+                    Learn More
+
+                    <ChevronRight
+                      size={17}
+                      className="transition-transform duration-300 group-hover:translate-x-2"
+                    />
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </section>
 
         {/* OUR COMMITMENT */}
-        <section className="py-20 px-6 md:px-12 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-black text-gray-900">
-                Our{" "}
-                <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text text-transparent">
-                  Commitment
-                </span>
+        <section className="bg-gray-50 px-6 py-20 md:px-12">
+          <div className="mx-auto max-w-7xl">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+                amount: 0.3,
+              }}
+              className="mb-12 text-center"
+            >
+              <h2 className="text-3xl font-black text-gray-900 md:text-4xl">
+                Our <span className="text-blue-900">Commitment</span>
               </h2>
 
-              <p className="text-gray-500 max-w-2xl mx-auto mt-4">
+              <p className="mx-auto mt-4 max-w-2xl text-gray-500">
                 Driven by customer satisfaction and environment-friendly
                 practices
               </p>
-            </div>
+            </motion.div>
 
-            <div className="grid md:grid-cols-3 gap-6">
-              {commitments.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white p-6 rounded-xl border border-gray-100 flex items-center gap-3 hover:shadow-md transition"
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              className="grid gap-6 md:grid-cols-3"
+            >
+              {commitments.map((item) => (
+                <motion.div
+                  key={item}
+                  variants={staggerItem}
+                  whileHover={{
+                    x: 8,
+                    scale: 1.02,
+                  }}
+                  className="flex items-center gap-4 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-lg"
                 >
-                  <CheckCircle className="text-blue-900 w-5 h-5 flex-shrink-0" />
-                  <span className="text-gray-700">{item}</span>
-                </div>
+                  <motion.div
+                    whileHover={{
+                      rotate: 360,
+                    }}
+                    transition={{
+                      duration: 0.5,
+                    }}
+                  >
+                    <CheckCircle className="h-6 w-6 flex-shrink-0 text-blue-900" />
+                  </motion.div>
+
+                  <span className="font-medium text-gray-700">{item}</span>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* INDUSTRIES WE SERVE */}
-        <section className="py-20 px-6 md:px-12">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-5 py-2 rounded-full text-black tracking-[5px] text-sm font-thin mb-5">
+        <section className="px-6 py-20 md:px-12">
+          <div className="mx-auto max-w-7xl">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+                amount: 0.3,
+              }}
+              className="mb-12 text-center"
+            >
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-5 py-2 text-sm font-light tracking-[5px] text-black">
                 <Building size={14} />
+
                 <span>INDUSTRIES WE SERVE</span>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900">
-                Trusted Across{" "}
-                <span className="bg-gradient-to-r from-blue-900 to-blue-900 bg-clip-text text-transparent">
-                  Sectors
-                </span>
+              <h2 className="text-4xl font-black text-gray-900 md:text-5xl">
+                Trusted Across <span className="text-blue-900">Sectors</span>
               </h2>
-            </div>
+            </motion.div>
 
-            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {industries.map((industry, idx) => (
-                <div
-                  key={idx}
-                  className="bg-gray-50 border border-gray-200 p-4 rounded-xl text-center hover:border-blue-300 hover:shadow-md transition"
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              className="grid gap-6 md:grid-cols-3 lg:grid-cols-4"
+            >
+              {industries.map((industry) => (
+                <motion.div
+                  key={industry}
+                  variants={staggerItem}
+                  whileHover={{
+                    y: -8,
+                    scale: 1.04,
+                  }}
+                  className="relative overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 p-5 text-center shadow-sm transition-shadow hover:border-blue-300 hover:shadow-lg"
                 >
-                  <span className="text-gray-800 font-medium">{industry}</span>
-                </div>
+                  <motion.div
+                    className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-blue-900 to-yellow-400"
+                    initial={{
+                      width: 0,
+                    }}
+                    whileHover={{
+                      width: "100%",
+                    }}
+                  />
+
+                  <span className="font-medium text-gray-800">{industry}</span>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* CTA SECTION */}
-        <section className="py-20 bg-gradient-to-r from-blue-950 to-blue-800">
-          <div className="max-w-5xl mx-auto text-center px-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <section className="relative overflow-hidden bg-gradient-to-r from-blue-950 via-blue-900 to-blue-800 py-20">
+          <motion.div
+            aria-hidden="true"
+            className="absolute -left-24 top-0 h-72 w-72 rounded-full bg-blue-400/20 blur-3xl"
+            animate={
+              reduceMotion
+                ? undefined
+                : {
+                    x: [0, 30, 0],
+                    scale: [1, 1.2, 1],
+                  }
+            }
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+
+          <motion.div
+            aria-hidden="true"
+            className="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-yellow-400/20 blur-3xl"
+            animate={
+              reduceMotion
+                ? undefined
+                : {
+                    y: [0, -30, 0],
+                    scale: [1.2, 1, 1.2],
+                  }
+            }
+            transition={{
+              duration: 9,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+
+          <motion.div
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{
+              once: true,
+              amount: 0.3,
+            }}
+            className="relative z-10 mx-auto max-w-5xl px-4 text-center"
+          >
+            <h2 className="mb-6 text-4xl font-bold text-white md:text-5xl">
               Ready to Transform Your Facility Operations?
             </h2>
 
-            <p className="text-blue-100 text-lg leading-8 max-w-3xl mx-auto mb-10">
+            <p className="mx-auto mb-10 max-w-3xl text-lg leading-8 text-blue-100">
               Partner with Acuity Groups for professional facility management,
               security services, housekeeping, pest management, maintenance and
               manpower outsourcing solutions.
             </p>
 
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link
-                to="/contact"
-                className="bg-yellow-500 hover:bg-yellow-400 text-black px-8 py-4 rounded-full font-semibold transition-all duration-300"
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <motion.div
+                whileHover={{
+                  scale: 1.06,
+                }}
+                whileTap={{
+                  scale: 0.97,
+                }}
               >
-                Get Free Consultation
-              </Link>
+                <Link
+                  to="/contact"
+                  className="inline-block rounded-full bg-yellow-500 px-8 py-4 font-semibold text-black shadow-lg transition-colors hover:bg-yellow-400"
+                >
+                  Get Free Consultation
+                </Link>
+              </motion.div>
 
-              <a
-                href="tel:+919941229005"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-full font-semibold transition-all duration-300"
+              <motion.div
+                whileHover={{
+                  scale: 1.06,
+                }}
+                whileTap={{
+                  scale: 0.97,
+                }}
               >
-                Call Now
-              </a>
+                <a
+                  href="tel:+919941229005"
+                  className="inline-block rounded-full border-2 border-white px-8 py-4 font-semibold text-white transition-colors hover:bg-white hover:text-blue-900"
+                >
+                  Call Now
+                </a>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </section>
 
         {/* SERVICE AREAS */}
-        <section className="py-10 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-blue-900 mb-4">
+        <section className="bg-gray-50 py-16">
+          <div className="mx-auto max-w-7xl px-6">
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+                amount: 0.3,
+              }}
+              className="mb-12 text-center"
+            >
+              <h2 className="mb-4 text-4xl font-bold text-blue-900">
                 Facility Management Services Across Bangalore
               </h2>
 
-              <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              <p className="mx-auto max-w-2xl text-lg text-gray-600">
                 We provide professional facility management solutions across
                 major areas of Bangalore.
               </p>
-            </div>
+            </motion.div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-              {[
-                {
-                  title: "Commercial Cleaning",
-                  icon: "🧹",
-                  desc: "Office, mall and commercial cleaning",
-                },
-                {
-                  title: "Home Services",
-                  icon: "🏠",
-                  desc: "Deep cleaning, mopping and sweeping",
-                },
-                {
-                  title: "Hotel Housekeeping",
-                  icon: "🏨",
-                  desc: "Room, lobby and hygiene maintenance",
-                },
-                {
-                  title: "Facility Maintenance",
-                  icon: "🔧",
-                  desc: "Electrical, plumbing and repair support",
-                },
-              ].map((service, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition text-center"
+            <motion.div
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              className="mb-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+            >
+              {localServices.map((service) => (
+                <motion.div
+                  key={service.title}
+                  variants={staggerItem}
+                  whileHover={{
+                    y: -10,
+                    scale: 1.03,
+                  }}
+                  className="rounded-2xl bg-white p-6 text-center shadow-md transition-shadow hover:shadow-xl"
                 >
-                  <div className="text-5xl mb-3">{service.icon}</div>
-                  <h3 className="text-xl font-bold text-blue-900 mb-2">
+                  <motion.div
+                    whileHover={
+                      reduceMotion
+                        ? {}
+                        : {
+                            rotate: [0, -8, 8, 0],
+                            scale: 1.12,
+                          }
+                    }
+                    className="mb-3 text-5xl"
+                  >
+                    {service.icon}
+                  </motion.div>
+
+                  <h3 className="mb-2 text-xl font-bold text-blue-900">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">{service.desc}</p>
-                </div>
-              ))}
-            </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-md">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
+                  <p className="text-sm text-gray-600">{service.desc}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              className="rounded-3xl bg-white p-8 shadow-xl"
+            >
+              <h3 className="mb-6 text-center text-2xl font-semibold text-gray-800">
                 Service Areas in Bangalore
               </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {serviceAreas.map((area, index) => (
-                  <Link
-                    key={index}
-                    to={area.path}
-                    className="flex items-center gap-2 text-gray-700 hover:text-blue-700 hover:bg-blue-50 p-4 rounded-lg border border-gray-100 transition-all group"
-                  >
-                    <span className="text-yellow-500 group-hover:translate-x-1 transition">
-                      📍
-                    </span>
-                    Integrated Facility Management in {area.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            <div className="text-center mt-14">
-              <Link
-                to="/services"
-                className="inline-flex items-center gap-3 bg-blue-900 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-800 transition-all shadow-lg hover:shadow-xl"
+              <motion.div
+                variants={staggerContainer}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{
+                  once: true,
+                  amount: 0.1,
+                }}
+                className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
               >
-                View All Services in Bangalore →
-              </Link>
-            </div>
+                {serviceAreas.map((area) => (
+                  <motion.div
+                    key={area.name}
+                    variants={staggerItem}
+                    whileHover={{
+                      x: 7,
+                    }}
+                  >
+                    <Link
+                      to={area.path}
+                      className="group flex items-center gap-3 rounded-xl border border-gray-100 p-4 text-gray-700 transition-all hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+                    >
+                      <motion.span
+                        className="text-yellow-500"
+                        whileHover={{
+                          scale: 1.2,
+                        }}
+                      >
+                        📍
+                      </motion.span>
+
+                      Integrated Facility Management in {area.name}
+                    </Link>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{
+                once: true,
+              }}
+              className="mt-14 text-center"
+            >
+              <motion.div
+                whileHover={{
+                  scale: 1.05,
+                }}
+                whileTap={{
+                  scale: 0.97,
+                }}
+                className="inline-block"
+              >
+                <Link
+                  to="/services"
+                  className="inline-flex items-center gap-3 rounded-xl bg-blue-900 px-8 py-4 font-semibold text-white shadow-lg transition-colors hover:bg-blue-800 hover:shadow-xl"
+                >
+                  View All Services in Bangalore
+                  <ChevronRight size={19} />
+                </Link>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
 
@@ -694,29 +1394,108 @@ export default function About() {
   );
 }
 
-/* COMPONENT */
-function InfoCard({ icon: Icon, title, desc }) {
+function InfoCard({ icon: Icon, title, desc, variants }) {
   return (
-    <div className="bg-gray-50 p-5 rounded-2xl border border-gray-100 hover:shadow-md transition-shadow hover:border-blue-200">
+    <motion.div
+      variants={variants}
+      whileHover={{
+        x: 8,
+        scale: 1.02,
+      }}
+      className="group rounded-2xl border border-gray-100 bg-gray-50 p-5 transition-all hover:border-blue-200 hover:bg-white hover:shadow-lg"
+    >
       <div className="flex items-center gap-4">
-        <div className="w-10 h-10 rounded-xl flex items-center justify-center">
-          <Icon size={20} className="text-blue-900" />
-        </div>
+        <motion.div
+          whileHover={{
+            rotate: 8,
+            scale: 1.1,
+          }}
+          className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-blue-50 transition-colors group-hover:bg-blue-900"
+        >
+          <Icon
+            size={22}
+            className="text-blue-900 transition-colors group-hover:text-white"
+          />
+        </motion.div>
+
         <div>
           <h3 className="font-semibold text-gray-800">{title}</h3>
-          <p className="text-gray-500 text-sm">{desc}</p>
+
+          <p className="text-sm text-gray-500">{desc}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
-function ValueCard({ icon, title, desc }) {
+function StatCard({
+  icon: Icon,
+  value,
+  title,
+  cardClass,
+  iconClass,
+  valueClass,
+  variants,
+}) {
   return (
-    <div className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300">
-      <div className="text-5xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold mb-3">{title}</h3>
-      <p className="text-gray-600">{desc}</p>
-    </div>
+    <motion.div
+      variants={variants}
+      whileHover={{
+        y: -10,
+        scale: 1.03,
+      }}
+      className={`${cardClass} relative overflow-hidden rounded-3xl p-6 text-center shadow-md transition-shadow hover:shadow-xl sm:p-8`}
+    >
+      <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-white/50" />
+
+      <div className="relative z-10">
+        <motion.div
+          whileHover={{
+            rotate: [0, -10, 10, 0],
+            scale: 1.1,
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+          className="mb-3 flex justify-center"
+        >
+          <Icon className={`h-10 w-10 ${iconClass}`} />
+        </motion.div>
+
+        <h2 className={`mb-2 text-4xl font-bold ${valueClass}`}>{value}</h2>
+
+        <p className="font-medium text-gray-700">{title}</p>
+      </div>
+    </motion.div>
+  );
+}
+
+function ValueCard({ icon, title, desc, variants }) {
+  return (
+    <motion.div
+      variants={variants}
+      whileHover={{
+        y: -12,
+        rotate: 1,
+        scale: 1.03,
+      }}
+      className="group relative overflow-hidden rounded-3xl border border-gray-100 bg-white p-8 shadow-md transition-shadow hover:shadow-2xl"
+    >
+      <div className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-blue-900 to-yellow-400 transition-transform duration-500 group-hover:scale-x-100" />
+
+      <motion.div
+        whileHover={{
+          scale: 1.2,
+          rotate: 8,
+        }}
+        className="mb-4 text-5xl"
+      >
+        {icon}
+      </motion.div>
+
+      <h3 className="mb-3 text-xl font-bold text-gray-900">{title}</h3>
+
+      <p className="leading-relaxed text-gray-600">{desc}</p>
+    </motion.div>
   );
 }

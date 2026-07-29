@@ -6,6 +6,7 @@ import {
   Navigate,
 } from "react-router-dom";
 
+import './index.css';
 
 import Navbar from "./global/navbar";
 import Footer from "./global/footer";
