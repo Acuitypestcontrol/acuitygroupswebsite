@@ -68,7 +68,7 @@ import Kumbalgodu from "./components/seofolder/integrated-facility-management-ku
 export default function App() {
   return (
     <Router>
-      <WhatsAppButton />
+      {/* <WhatsAppButton /> */}
       <SocialSidebar />
       <ScrollToTop />
       <Navbar />
