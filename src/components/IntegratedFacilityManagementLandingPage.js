@@ -267,7 +267,11 @@ const services = [
     icon: "star",
     link: "/housekeeping-services",
     cluster: "cleaning",
-    related: ["Deep Cleaning Services", "Janitorial Services", "Carpet Shampooing"],
+    related: [
+      "Deep Cleaning Services",
+      "Janitorial Services",
+      "Carpet Shampooing",
+    ],
   },
   {
     title: "Deep Cleaning Services",
@@ -276,7 +280,11 @@ const services = [
     icon: "star",
     link: "/integrated-facility-management",
     cluster: "cleaning",
-    related: ["Housekeeping Services", "Carpet Shampooing", "Swimming Pool Cleaning"],
+    related: [
+      "Housekeeping Services",
+      "Carpet Shampooing",
+      "Swimming Pool Cleaning",
+    ],
   },
   {
     title: "Carpet Shampooing",
@@ -285,7 +293,11 @@ const services = [
     icon: "sparkle",
     link: "/services",
     cluster: "cleaning",
-    related: ["Deep Cleaning Services", "Housekeeping Services", "Janitorial Services"],
+    related: [
+      "Deep Cleaning Services",
+      "Housekeeping Services",
+      "Janitorial Services",
+    ],
   },
   {
     title: "Swimming Pool Cleaning",
@@ -307,7 +319,11 @@ const services = [
     icon: "shield",
     link: "/security-services",
     cluster: "security",
-    related: ["Home Guard Services", "Apartment Facility Management", "Property Management Services"],
+    related: [
+      "Home Guard Services",
+      "Apartment Facility Management",
+      "Property Management Services",
+    ],
   },
   {
     title: "Home Guard Services",
@@ -316,7 +332,11 @@ const services = [
     icon: "shield",
     link: "/security-services",
     cluster: "security",
-    related: ["Security Guard Services", "Apartment Facility Management", "Housekeeping Services"],
+    related: [
+      "Security Guard Services",
+      "Apartment Facility Management",
+      "Housekeeping Services",
+    ],
   },
   {
     title: "Office Boy & Pantry Services",
@@ -325,7 +345,11 @@ const services = [
     icon: "users",
     link: "/soft-services",
     cluster: "staffing",
-    related: ["Janitorial Services", "Steward Services", "Corporate Facility Management"],
+    related: [
+      "Janitorial Services",
+      "Steward Services",
+      "Corporate Facility Management",
+    ],
   },
   {
     title: "Steward Services",
@@ -334,7 +358,11 @@ const services = [
     icon: "users",
     link: "/soft-services",
     cluster: "staffing",
-    related: ["Office Boy & Pantry Services", "Housekeeping Services", "Janitorial Services"],
+    related: [
+      "Office Boy & Pantry Services",
+      "Housekeeping Services",
+      "Janitorial Services",
+    ],
   },
   {
     title: "Janitorial Services",
@@ -343,7 +371,11 @@ const services = [
     icon: "star",
     link: "/repair-maintenance",
     cluster: "cleaning",
-    related: ["Housekeeping Services", "Deep Cleaning Services", "Office Boy & Pantry Services"],
+    related: [
+      "Housekeeping Services",
+      "Deep Cleaning Services",
+      "Office Boy & Pantry Services",
+    ],
   },
   {
     title: "Picker & Packer Services",
@@ -352,7 +384,11 @@ const services = [
     icon: "users",
     link: "/soft-services",
     cluster: "staffing",
-    related: ["Loading & Unloading", "Manpower Outsourcing", "Multi Technician Services"],
+    related: [
+      "Loading & Unloading",
+      "Manpower Outsourcing",
+      "Multi Technician Services",
+    ],
   },
   {
     title: "Loading & Unloading",
@@ -361,7 +397,11 @@ const services = [
     icon: "users",
     link: "/soft-services",
     cluster: "staffing",
-    related: ["Picker & Packer Services", "Manpower Outsourcing", "Repair & Maintenance"],
+    related: [
+      "Picker & Packer Services",
+      "Manpower Outsourcing",
+      "Repair & Maintenance",
+    ],
   },
   {
     title: "Repair & Maintenance",
@@ -370,7 +410,11 @@ const services = [
     icon: "settings",
     link: "/repair-maintenance",
     cluster: "maintenance",
-    related: ["Multi Technician Services", "Electrical Maintenance", "Plumbing Services"],
+    related: [
+      "Multi Technician Services",
+      "Electrical Maintenance",
+      "Plumbing Services",
+    ],
   },
   {
     title: "Multi Technician Services",
@@ -379,7 +423,11 @@ const services = [
     icon: "settings",
     link: "/integrated-facility-management",
     cluster: "maintenance",
-    related: ["Repair & Maintenance", "Electrical Maintenance", "AC Technician Services"],
+    related: [
+      "Repair & Maintenance",
+      "Electrical Maintenance",
+      "AC Technician Services",
+    ],
   },
   {
     title: "Electrical Maintenance",
@@ -388,7 +436,11 @@ const services = [
     icon: "settings",
     link: "/repair-maintenance",
     cluster: "maintenance",
-    related: ["Repair & Maintenance", "AC Technician Services", "Multi Technician Services"],
+    related: [
+      "Repair & Maintenance",
+      "AC Technician Services",
+      "Multi Technician Services",
+    ],
   },
   {
     title: "Plumbing Services",
@@ -397,7 +449,11 @@ const services = [
     icon: "settings",
     link: "/repair-maintenance",
     cluster: "maintenance",
-    related: ["Repair & Maintenance", "Electrical Maintenance", "Multi Technician Services"],
+    related: [
+      "Repair & Maintenance",
+      "Electrical Maintenance",
+      "Multi Technician Services",
+    ],
   },
   {
     title: "AC Technician Services",
@@ -406,7 +462,11 @@ const services = [
     icon: "settings",
     link: "/repair-maintenance",
     cluster: "maintenance",
-    related: ["Electrical Maintenance", "Multi Technician Services", "Repair & Maintenance"],
+    related: [
+      "Electrical Maintenance",
+      "Multi Technician Services",
+      "Repair & Maintenance",
+    ],
   },
   {
     title: "Carpentry & Painting",
@@ -415,7 +475,11 @@ const services = [
     icon: "settings",
     link: "/repair-maintenance",
     cluster: "maintenance",
-    related: ["Repair & Maintenance", "Multi Technician Services", "Facility Supervisor Staffing"],
+    related: [
+      "Repair & Maintenance",
+      "Multi Technician Services",
+      "Facility Supervisor Staffing",
+    ],
   },
   {
     title: "Facility Supervisor Staffing",
@@ -424,7 +488,11 @@ const services = [
     icon: "users",
     link: "/manpower-outsourcing",
     cluster: "maintenance",
-    related: ["Repair & Maintenance", "Integrated Facility Management", "Manpower Outsourcing"],
+    related: [
+      "Repair & Maintenance",
+      "Integrated Facility Management",
+      "Manpower Outsourcing",
+    ],
   },
   {
     title: "Pest Management",
@@ -433,7 +501,11 @@ const services = [
     icon: "bug",
     link: "/pest-management-services",
     cluster: "pest",
-    related: ["Housekeeping Services", "Deep Cleaning Services", "Apartment Facility Management"],
+    related: [
+      "Housekeeping Services",
+      "Deep Cleaning Services",
+      "Apartment Facility Management",
+    ],
   },
 ];
 
@@ -446,29 +518,66 @@ const linkByTitle = services.reduce((map, service) => {
 /* Generic manpower outsourcing service used as a related-link target
    even though it doesn't have its own card (covered across staffing roles) */
 linkByTitle["Manpower Outsourcing"] = "/manpower-outsourcing-services";
-linkByTitle["Corporate Facility Management"] = "/integrated-facility-management";
+linkByTitle["Corporate Facility Management"] =
+  "/integrated-facility-management";
 
 /* =========================================================
    SERVICE KEYWORDS — now rendered as real internal links
    ========================================================= */
 
 const serviceKeywords = [
-  { label: "Facility Management Services in Bangalore", link: "/integrated-facility-management" },
-  { label: "Integrated Facility Management", link: "/integrated-facility-management" },
-  { label: "Top Facility Management Companies in Bangalore", link: "/integrated-facility-management" },
-  { label: "Facility Management Services Near Me", link: "/integrated-facility-management" },
-  { label: "Facility Management Company", link: "/integrated-facility-management" },
+  {
+    label: "Facility Management Services in Bangalore",
+    link: "/integrated-facility-management",
+  },
+  {
+    label: "Integrated Facility Management",
+    link: "/integrated-facility-management",
+  },
+  {
+    label: "Top Facility Management Companies in Bangalore",
+    link: "/integrated-facility-management",
+  },
+  {
+    label: "Facility Management Services Near Me",
+    link: "/integrated-facility-management",
+  },
+  {
+    label: "Facility Management Company",
+    link: "/integrated-facility-management",
+  },
   { label: "Facility Management Company Profile", link: "/about" },
-  { label: "Property Management Services", link: "/property-management-services" },
-  { label: "Property Management Company", link: "/property-management-services" },
-  { label: "Facility Management for Apartments in Bangalore", link: "/facility-management-services-apartments" },
-  { label: "Apartment Facility Management", link: "/facility-management-services-apartments" },
-  { label: "Corporate Facility Management", link: "/integrated-facility-management" },
-  { label: "Commercial Facility Management", link: "/integrated-facility-management" },
+  {
+    label: "Property Management Services",
+    link: "/property-management-services",
+  },
+  {
+    label: "Property Management Company",
+    link: "/property-management-services",
+  },
+  {
+    label: "Facility Management for Apartments in Bangalore",
+    link: "/facility-management-services-apartments",
+  },
+  {
+    label: "Apartment Facility Management",
+    link: "/facility-management-services-apartments",
+  },
+  {
+    label: "Corporate Facility Management",
+    link: "/integrated-facility-management",
+  },
+  {
+    label: "Commercial Facility Management",
+    link: "/integrated-facility-management",
+  },
   { label: "Housekeeping Services", link: "/housekeeping-services" },
   { label: "Deep Cleaning Services", link: "/deep-cleaning-services" },
   { label: "Carpet Shampooing Services", link: "/carpet-shampooing-services" },
-  { label: "Swimming Pool Cleaning Services", link: "/swimming-pool-cleaning-services" },
+  {
+    label: "Swimming Pool Cleaning Services",
+    link: "/swimming-pool-cleaning-services",
+  },
   { label: "Security Guard Services", link: "/security-services" },
   { label: "Security Supervisor Services", link: "/security-services" },
   { label: "Home Guard Services", link: "/home-guard-services" },
@@ -477,16 +586,25 @@ const serviceKeywords = [
   { label: "Steward Services", link: "/steward-services" },
   { label: "Janitorial Services", link: "/janitorial-services" },
   { label: "Picker & Packer Services", link: "/picker-packer-services" },
-  { label: "Loading & Unloading Services", link: "/loading-unloading-services" },
+  {
+    label: "Loading & Unloading Services",
+    link: "/loading-unloading-services",
+  },
   { label: "Manpower Outsourcing", link: "/manpower-outsourcing-services" },
-  { label: "Repair & Maintenance Services", link: "/repair-maintenance-services" },
+  {
+    label: "Repair & Maintenance Services",
+    link: "/repair-maintenance-services",
+  },
   { label: "Multi Technician Services", link: "/multi-technician-services" },
   { label: "Electrical Maintenance", link: "/electrical-maintenance-services" },
   { label: "Plumbing Services", link: "/plumbing-services" },
   { label: "Carpentry Services", link: "/carpentry-painting-services" },
   { label: "Painting Services", link: "/carpentry-painting-services" },
   { label: "AC Technician Services", link: "/ac-technician-services" },
-  { label: "Facility Supervisor Services", link: "/facility-supervisor-services" },
+  {
+    label: "Facility Supervisor Services",
+    link: "/facility-supervisor-services",
+  },
   { label: "Pest Control Services", link: "/pest-management-services" },
   { label: "Rodent Control", link: "/pest-management-services" },
   { label: "Reptile Control", link: "/pest-management-services" },
@@ -539,12 +657,37 @@ const faqs = [
     question: "What is integrated facility management?",
     answer: (
       <>
-        Integrated facility management combines multiple property-support functions under one coordinated service model. Depending on the property requirement, this can include{" "}
-        <Link to="/housekeeping-services" className="font-semibold text-emerald-600 hover:underline">housekeeping</Link>,{" "}
-        <Link to="/security-services" className="font-semibold text-emerald-600 hover:underline">security</Link>,{" "}
-        <Link to="/repair-maintenance-services" className="font-semibold text-emerald-600 hover:underline">technical maintenance</Link>,{" "}
-        <Link to="/manpower-outsourcing-services" className="font-semibold text-emerald-600 hover:underline">manpower outsourcing</Link>,{" "}
-        cleaning, pest management and operational support.
+        Integrated facility management combines multiple property-support
+        functions under one coordinated service model. Depending on the property
+        requirement, this can include{" "}
+        <Link
+          to="/housekeeping-services"
+          className="font-semibold text-emerald-600 hover:underline"
+        >
+          housekeeping
+        </Link>
+        ,{" "}
+        <Link
+          to="/security-services"
+          className="font-semibold text-emerald-600 hover:underline"
+        >
+          security
+        </Link>
+        ,{" "}
+        <Link
+          to="/repair-maintenance-services"
+          className="font-semibold text-emerald-600 hover:underline"
+        >
+          technical maintenance
+        </Link>
+        ,{" "}
+        <Link
+          to="/manpower-outsourcing-services"
+          className="font-semibold text-emerald-600 hover:underline"
+        >
+          manpower outsourcing
+        </Link>
+        , cleaning, pest management and operational support.
       </>
     ),
   },
@@ -553,14 +696,43 @@ const faqs = [
     answer: (
       <>
         Acuity Groups provides{" "}
-        <Link to="/integrated-facility-management" className="font-semibold text-emerald-600 hover:underline">integrated facility management</Link>,{" "}
-        <Link to="/property-management-services" className="font-semibold text-emerald-600 hover:underline">property management</Link>,{" "}
-        apartment facility management,{" "}
-        <Link to="/housekeeping-services" className="font-semibold text-emerald-600 hover:underline">housekeeping</Link>,{" "}
-        <Link to="/security-services" className="font-semibold text-emerald-600 hover:underline">security</Link>,{" "}
-        office boy and pantry services, janitorial services, picker and packer manpower, loading and unloading,{" "}
-        <Link to="/repair-maintenance-services" className="font-semibold text-emerald-600 hover:underline">repair and maintenance</Link>,{" "}
-        electrical, plumbing, AC, carpentry, painting and pest management solutions.
+        <Link
+          to="/integrated-facility-management"
+          className="font-semibold text-emerald-600 hover:underline"
+        >
+          integrated facility management
+        </Link>
+        ,{" "}
+        <Link
+          to="/property-management-services"
+          className="font-semibold text-emerald-600 hover:underline"
+        >
+          property management
+        </Link>
+        , apartment facility management,{" "}
+        <Link
+          to="/housekeeping-services"
+          className="font-semibold text-emerald-600 hover:underline"
+        >
+          housekeeping
+        </Link>
+        ,{" "}
+        <Link
+          to="/security-services"
+          className="font-semibold text-emerald-600 hover:underline"
+        >
+          security
+        </Link>
+        , office boy and pantry services, janitorial services, picker and packer
+        manpower, loading and unloading,{" "}
+        <Link
+          to="/repair-maintenance-services"
+          className="font-semibold text-emerald-600 hover:underline"
+        >
+          repair and maintenance
+        </Link>
+        , electrical, plumbing, AC, carpentry, painting and pest management
+        solutions.
       </>
     ),
   },
@@ -569,8 +741,17 @@ const faqs = [
       "Do you provide facility management services for apartments in Bangalore?",
     answer: (
       <>
-        Yes. Apartment and gated-community facility management can include housekeeping, security guards, supervisors, common-area cleaning, technical maintenance, pest management, manpower coordination and day-to-day facility operations. See our{" "}
-        <Link to="/facility-management-services-apartments" className="font-semibold text-emerald-600 hover:underline">apartment facility management</Link> page.
+        Yes. Apartment and gated-community facility management can include
+        housekeeping, security guards, supervisors, common-area cleaning,
+        technical maintenance, pest management, manpower coordination and
+        day-to-day facility operations. See our{" "}
+        <Link
+          to="/facility-management-services-apartments"
+          className="font-semibold text-emerald-600 hover:underline"
+        >
+          apartment facility management
+        </Link>{" "}
+        page.
       </>
     ),
   },
@@ -579,8 +760,14 @@ const faqs = [
     answer: (
       <>
         Yes. Acuity Groups provides{" "}
-        <Link to="/property-management-services" className="font-semibold text-emerald-600 hover:underline">property management support</Link>{" "}
-        for residential and commercial properties, helping coordinate manpower, housekeeping, security, maintenance and other operational requirements.
+        <Link
+          to="/property-management-services"
+          className="font-semibold text-emerald-600 hover:underline"
+        >
+          property management support
+        </Link>{" "}
+        for residential and commercial properties, helping coordinate manpower,
+        housekeeping, security, maintenance and other operational requirements.
       </>
     ),
   },
@@ -588,8 +775,16 @@ const faqs = [
     question: "Do you provide security guards and security supervisors?",
     answer: (
       <>
-        Yes. Security manpower can be arranged for apartments, offices, commercial properties, warehouses, institutions and other facilities based on the required deployment. Explore our{" "}
-        <Link to="/security-services" className="font-semibold text-emerald-600 hover:underline">security guard services</Link>.
+        Yes. Security manpower can be arranged for apartments, offices,
+        commercial properties, warehouses, institutions and other facilities
+        based on the required deployment. Explore our{" "}
+        <Link
+          to="/security-services"
+          className="font-semibold text-emerald-600 hover:underline"
+        >
+          security guard services
+        </Link>
+        .
       </>
     ),
   },
@@ -597,9 +792,23 @@ const faqs = [
     question: "Can you provide housekeeping and janitorial manpower?",
     answer: (
       <>
-        Yes. Housekeeping and janitorial manpower can be provided for offices, apartments, commercial properties, institutions and other facilities. See our{" "}
-        <Link to="/housekeeping-services" className="font-semibold text-emerald-600 hover:underline">housekeeping services</Link> and{" "}
-        <Link to="/janitorial-services" className="font-semibold text-emerald-600 hover:underline">janitorial services</Link>.
+        Yes. Housekeeping and janitorial manpower can be provided for offices,
+        apartments, commercial properties, institutions and other facilities.
+        See our{" "}
+        <Link
+          to="/housekeeping-services"
+          className="font-semibold text-emerald-600 hover:underline"
+        >
+          housekeeping services
+        </Link>{" "}
+        and{" "}
+        <Link
+          to="/janitorial-services"
+          className="font-semibold text-emerald-600 hover:underline"
+        >
+          janitorial services
+        </Link>
+        .
       </>
     ),
   },
@@ -607,8 +816,16 @@ const faqs = [
     question: "Do you provide picker and packer manpower?",
     answer: (
       <>
-        Yes. Picker and packer manpower can support warehouses, logistics operations, distribution centres and e-commerce-related operations. Learn more about our{" "}
-        <Link to="/picker-packer-services" className="font-semibold text-emerald-600 hover:underline">picker & packer services</Link>.
+        Yes. Picker and packer manpower can support warehouses, logistics
+        operations, distribution centres and e-commerce-related operations.
+        Learn more about our{" "}
+        <Link
+          to="/picker-packer-services"
+          className="font-semibold text-emerald-600 hover:underline"
+        >
+          picker & packer services
+        </Link>
+        .
       </>
     ),
   },
@@ -616,8 +833,16 @@ const faqs = [
     question: "Do you provide repair and maintenance teams?",
     answer: (
       <>
-        Yes. Maintenance support can include multi-technicians, electricians, plumbers, carpenters, painters, AC technicians and general repair and maintenance personnel. Check our{" "}
-        <Link to="/repair-maintenance-services" className="font-semibold text-emerald-600 hover:underline">repair & maintenance services</Link>.
+        Yes. Maintenance support can include multi-technicians, electricians,
+        plumbers, carpenters, painters, AC technicians and general repair and
+        maintenance personnel. Check our{" "}
+        <Link
+          to="/repair-maintenance-services"
+          className="font-semibold text-emerald-600 hover:underline"
+        >
+          repair & maintenance services
+        </Link>
+        .
       </>
     ),
   },
@@ -625,8 +850,16 @@ const faqs = [
     question: "Do you provide pest management services?",
     answer: (
       <>
-        Yes. Pest management services can include general pest control, rodent control, termite treatment, reptile management and integrated pest management solutions. See our{" "}
-        <Link to="/pest-management-services" className="font-semibold text-emerald-600 hover:underline">pest management services</Link>.
+        Yes. Pest management services can include general pest control, rodent
+        control, termite treatment, reptile management and integrated pest
+        management solutions. See our{" "}
+        <Link
+          to="/pest-management-services"
+          className="font-semibold text-emerald-600 hover:underline"
+        >
+          pest management services
+        </Link>
+        .
       </>
     ),
   },
@@ -790,7 +1023,10 @@ const IntegratedFacilityManagementLandingPage = () => {
       name: faq.question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: typeof faq.answer === "string" ? faq.answer : "See our FAQ section for detailed answers.",
+        text:
+          typeof faq.answer === "string"
+            ? faq.answer
+            : "See our FAQ section for detailed answers.",
       },
     })),
   };
@@ -881,138 +1117,6 @@ const IntegratedFacilityManagementLandingPage = () => {
       {/* Added overflow-x-hidden to prevent any horizontal scroll on small devices */}
       <div className="min-h-screen overflow-x-hidden bg-white text-slate-950">
         {/* =================================================
-            HEADER
-            ================================================= */}
-
-        <header
-          className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-            scrolled
-              ? "bg-slate-950/95 py-3 shadow-lg backdrop-blur-md"
-              : "bg-transparent py-5"
-          }`}
-        >
-          <div className="mx-auto flex max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500 text-base font-black text-slate-950">
-                A
-              </div>
-
-              <div className="leading-none">
-                <p className="text-sm font-black tracking-wide text-white">
-                  ACUITY
-                </p>
-
-                <p className="text-[8px] font-bold uppercase tracking-[0.28em] text-slate-400">
-                  Groups LLP
-                </p>
-              </div>
-            </Link>
-
-            <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
-              {navLinks.map((item) =>
-                item.type === "route" ? (
-                  <Link
-                    key={item.label}
-                    to={item.to}
-                    className="text-sm font-bold text-slate-300 transition hover:text-emerald-400"
-                  >
-                    {item.label}
-                  </Link>
-                ) : (
-                  <button
-                    key={item.label}
-                    type="button"
-                    onClick={() => scrollToSection(item.id)}
-                    className="text-sm font-bold text-slate-300 transition hover:text-emerald-400"
-                  >
-                    {item.label}
-                  </button>
-                )
-              )}
-            </nav>
-
-            <div className="hidden items-center gap-3 lg:flex">
-              <a
-                href={`tel:${PHONE}`}
-                className="flex items-center gap-2 text-sm font-bold text-slate-200 transition hover:text-emerald-400"
-              >
-                <Icon name="phone" size={16} />
-                {DISPLAY_PHONE}
-              </a>
-
-              <button
-                type="button"
-                onClick={() => scrollToSection("enquiry")}
-                className="rounded-full bg-emerald-500 px-5 py-2.5 text-sm font-black text-slate-950 transition hover:-translate-y-0.5 hover:bg-emerald-400"
-              >
-                Get a Quote
-              </button>
-            </div>
-
-            <button
-              type="button"
-              onClick={() => setMobileMenu((open) => !open)}
-              className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/15 text-white lg:hidden"
-              aria-label={mobileMenu ? "Close menu" : "Open menu"}
-              aria-expanded={mobileMenu}
-            >
-              <Icon name={mobileMenu ? "close" : "menu"} size={20} />
-            </button>
-          </div>
-
-          {mobileMenu && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="mt-4 border-t border-white/10 bg-slate-950 px-5 pb-6 pt-4 lg:hidden"
-            >
-              <nav className="flex flex-col gap-1" aria-label="Mobile">
-                {navLinks.map((item) =>
-                  item.type === "route" ? (
-                    <Link
-                      key={item.label}
-                      to={item.to}
-                      onClick={() => setMobileMenu(false)}
-                      className="rounded-lg px-2 py-3 text-sm font-bold text-slate-200 hover:bg-white/5 hover:text-emerald-400"
-                    >
-                      {item.label}
-                    </Link>
-                  ) : (
-                    <button
-                      key={item.label}
-                      type="button"
-                      onClick={() => scrollToSection(item.id)}
-                      className="rounded-lg px-2 py-3 text-left text-sm font-bold text-slate-200 hover:bg-white/5 hover:text-emerald-400"
-                    >
-                      {item.label}
-                    </button>
-                  )
-                )}
-              </nav>
-
-              <div className="mt-4 flex flex-col gap-3 border-t border-white/10 pt-4">
-                <a
-                  href={`tel:${PHONE}`}
-                  className="flex items-center gap-2 text-sm font-bold text-slate-200"
-                >
-                  <Icon name="phone" size={16} />
-                  {DISPLAY_PHONE}
-                </a>
-
-                <button
-                  type="button"
-                  onClick={() => scrollToSection("enquiry")}
-                  className="rounded-full bg-emerald-500 px-5 py-3 text-sm font-black text-slate-950"
-                >
-                  Get a Quote
-                </button>
-              </div>
-            </motion.div>
-          )}
-        </header>
-
-        {/* =================================================
             BREADCRUMB (SEO + orientation)
             ================================================= */}
 
@@ -1089,11 +1193,17 @@ const IntegratedFacilityManagementLandingPage = () => {
                     className="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg"
                   >
                     Professional{" "}
-                    <Link to="/integrated-facility-management" className="font-semibold text-emerald-400 hover:underline">
+                    <Link
+                      to="/integrated-facility-management"
+                      className="font-semibold text-emerald-400 hover:underline"
+                    >
                       facility management
                     </Link>{" "}
                     and{" "}
-                    <Link to="/property-management-services" className="font-semibold text-emerald-400 hover:underline">
+                    <Link
+                      to="/property-management-services"
+                      className="font-semibold text-emerald-400 hover:underline"
+                    >
                       property management
                     </Link>{" "}
                     solutions for apartments, offices, commercial buildings,
@@ -1202,14 +1312,38 @@ const IntegratedFacilityManagementLandingPage = () => {
 
                       <div className="space-y-3">
                         {[
-                          { label: "Housekeeping & Janitorial", link: "/housekeeping-services" },
-                          { label: "Security Guards & Supervisors", link: "/security-services" },
-                          { label: "Property Management", link: "/property-management-services" },
-                          { label: "Technical Repair & Maintenance", link: "/repair-maintenance-services" },
-                          { label: "Picker & Packer Manpower", link: "/picker-packer-services" },
-                          { label: "Deep Cleaning & Carpet Cleaning", link: "/deep-cleaning-services" },
-                          { label: "Electrical, Plumbing & AC", link: "/electrical-maintenance-services" },
-                          { label: "Pest & Rodent Management", link: "/pest-management-services" },
+                          {
+                            label: "Housekeeping & Janitorial",
+                            link: "/housekeeping-services",
+                          },
+                          {
+                            label: "Security Guards & Supervisors",
+                            link: "/security-services",
+                          },
+                          {
+                            label: "Property Management",
+                            link: "/property-management-services",
+                          },
+                          {
+                            label: "Technical Repair & Maintenance",
+                            link: "/repair-maintenance-services",
+                          },
+                          {
+                            label: "Picker & Packer Manpower",
+                            link: "/picker-packer-services",
+                          },
+                          {
+                            label: "Deep Cleaning & Carpet Cleaning",
+                            link: "/deep-cleaning-services",
+                          },
+                          {
+                            label: "Electrical, Plumbing & AC",
+                            link: "/electrical-maintenance-services",
+                          },
+                          {
+                            label: "Pest & Rodent Management",
+                            link: "/pest-management-services",
+                          },
                         ].map((item, index) => (
                           <motion.div
                             key={item.label}
@@ -1307,21 +1441,33 @@ const IntegratedFacilityManagementLandingPage = () => {
                 <p className="mt-6 text-base leading-8 text-slate-600 sm:text-lg">
                   Managing a property requires more than individual vendors.
                   Acuity Groups provides coordinated{" "}
-                  <Link to="/integrated-facility-management" className="font-semibold text-emerald-600 hover:underline">
+                  <Link
+                    to="/integrated-facility-management"
+                    className="font-semibold text-emerald-600 hover:underline"
+                  >
                     integrated facility management
                   </Link>{" "}
                   services designed to simplify day-to-day operations, manpower
                   management, cleaning, security, maintenance and property
                   support. From{" "}
-                  <Link to="/housekeeping-services" className="font-semibold text-emerald-600 hover:underline">
+                  <Link
+                    to="/housekeeping-services"
+                    className="font-semibold text-emerald-600 hover:underline"
+                  >
                     housekeeping
                   </Link>{" "}
                   and{" "}
-                  <Link to="/security-services" className="font-semibold text-emerald-600 hover:underline">
+                  <Link
+                    to="/security-services"
+                    className="font-semibold text-emerald-600 hover:underline"
+                  >
                     security
                   </Link>{" "}
                   to{" "}
-                  <Link to="/repair-maintenance-services" className="font-semibold text-emerald-600 hover:underline">
+                  <Link
+                    to="/repair-maintenance-services"
+                    className="font-semibold text-emerald-600 hover:underline"
+                  >
                     maintenance
                   </Link>
                   , we cover all your facility needs.
@@ -1452,7 +1598,7 @@ const IntegratedFacilityManagementLandingPage = () => {
                             >
                               {relatedTitle}
                             </Link>
-                          ) : null
+                          ) : null,
                         )}
                       </div>
                     )}
@@ -1504,14 +1650,38 @@ const IntegratedFacilityManagementLandingPage = () => {
 
                   <div className="mt-8 space-y-4">
                     {[
-                      { label: "Integrated facility management solutions", link: "/integrated-facility-management" },
-                      { label: "Property management support", link: "/property-management-services" },
-                      { label: "Professional housekeeping and cleaning teams", link: "/housekeeping-services" },
-                      { label: "Security guards and supervisors", link: "/security-services" },
-                      { label: "Technical repair and maintenance manpower", link: "/repair-maintenance-services" },
-                      { label: "Flexible manpower outsourcing", link: "/manpower-outsourcing-services" },
-                      { label: "Picker and packer manpower", link: "/picker-packer-services" },
-                      { label: "Pest and rodent management", link: "/pest-management-services" },
+                      {
+                        label: "Integrated facility management solutions",
+                        link: "/integrated-facility-management",
+                      },
+                      {
+                        label: "Property management support",
+                        link: "/property-management-services",
+                      },
+                      {
+                        label: "Professional housekeeping and cleaning teams",
+                        link: "/housekeeping-services",
+                      },
+                      {
+                        label: "Security guards and supervisors",
+                        link: "/security-services",
+                      },
+                      {
+                        label: "Technical repair and maintenance manpower",
+                        link: "/repair-maintenance-services",
+                      },
+                      {
+                        label: "Flexible manpower outsourcing",
+                        link: "/manpower-outsourcing-services",
+                      },
+                      {
+                        label: "Picker and packer manpower",
+                        link: "/picker-packer-services",
+                      },
+                      {
+                        label: "Pest and rodent management",
+                        link: "/pest-management-services",
+                      },
                     ].map((item) => (
                       <Link
                         key={item.label}
@@ -1690,24 +1860,60 @@ const IntegratedFacilityManagementLandingPage = () => {
                   className="grid gap-4 sm:grid-cols-2"
                 >
                   {[
-                    { label: "Housekeeping Staff", link: "/housekeeping-services" },
+                    {
+                      label: "Housekeeping Staff",
+                      link: "/housekeeping-services",
+                    },
                     { label: "Security Guards", link: "/security-services" },
-                    { label: "Security Supervisors", link: "/security-services" },
+                    {
+                      label: "Security Supervisors",
+                      link: "/security-services",
+                    },
                     { label: "Home Guards", link: "/home-guard-services" },
-                    { label: "Office Boys", link: "/office-boy-pantry-services" },
-                    { label: "Pantry Staff", link: "/office-boy-pantry-services" },
+                    {
+                      label: "Office Boys",
+                      link: "/office-boy-pantry-services",
+                    },
+                    {
+                      label: "Pantry Staff",
+                      link: "/office-boy-pantry-services",
+                    },
                     { label: "Stewards", link: "/steward-services" },
                     { label: "Janitors", link: "/janitorial-services" },
-                    { label: "Picker & Packers", link: "/picker-packer-services" },
-                    { label: "Loading & Unloading Staff", link: "/loading-unloading-services" },
-                    { label: "Multi Technicians", link: "/multi-technician-services" },
-                    { label: "Electricians", link: "/electrical-maintenance-services" },
+                    {
+                      label: "Picker & Packers",
+                      link: "/picker-packer-services",
+                    },
+                    {
+                      label: "Loading & Unloading Staff",
+                      link: "/loading-unloading-services",
+                    },
+                    {
+                      label: "Multi Technicians",
+                      link: "/multi-technician-services",
+                    },
+                    {
+                      label: "Electricians",
+                      link: "/electrical-maintenance-services",
+                    },
                     { label: "Plumbers", link: "/plumbing-services" },
-                    { label: "Carpenters", link: "/carpentry-painting-services" },
+                    {
+                      label: "Carpenters",
+                      link: "/carpentry-painting-services",
+                    },
                     { label: "Painters", link: "/carpentry-painting-services" },
-                    { label: "AC Technicians", link: "/ac-technician-services" },
-                    { label: "Facility Supervisors & Executives", link: "/facility-supervisor-services" },
-                    { label: "General Support Staff", link: "/manpower-outsourcing-services" },
+                    {
+                      label: "AC Technicians",
+                      link: "/ac-technician-services",
+                    },
+                    {
+                      label: "Facility Supervisors & Executives",
+                      link: "/facility-supervisor-services",
+                    },
+                    {
+                      label: "General Support Staff",
+                      link: "/manpower-outsourcing-services",
+                    },
                   ].map((item) => (
                     <motion.div key={item.label} variants={fadeUp}>
                       <Link
@@ -2563,173 +2769,6 @@ const IntegratedFacilityManagementLandingPage = () => {
             </div>
           </section>
         </main>
-
-        {/* =================================================
-            FOOTER (sitemap-style interlinking for SEO + UX)
-            ================================================= */}
-
-        <footer className="bg-slate-950 px-5 py-14 text-white sm:px-6">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid gap-10 md:grid-cols-4">
-              <div className="md:col-span-1">
-                <Link to="/" className="flex items-center gap-3">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500 text-lg font-black text-slate-950">
-                    A
-                  </div>
-
-                  <div>
-                    <p className="text-lg font-black">ACUITY</p>
-
-                    <p className="text-[9px] font-bold uppercase tracking-[0.28em] text-slate-500">
-                      Groups LLP
-                    </p>
-                  </div>
-                </Link>
-
-                <p className="mt-5 max-w-xl text-sm leading-7 text-slate-400">
-                  Integrated facility management, property management,
-                  housekeeping, security, manpower outsourcing, cleaning, repair
-                  & maintenance and pest management services in Bangalore.
-                </p>
-
-                <div className="mt-6 space-y-3">
-                  <a
-                    href={`tel:${PHONE}`}
-                    className="flex items-start gap-3 text-sm text-slate-400 transition hover:text-emerald-400"
-                  >
-                    <Icon name="phone" size={17} />
-                    <span>{DISPLAY_PHONE}</span>
-                  </a>
-
-                  <a
-                    href={`mailto:${EMAIL}`}
-                    className="flex items-start gap-3 break-all text-sm text-slate-400 transition hover:text-emerald-400"
-                  >
-                    <Icon name="mail" size={17} />
-                    <span>{EMAIL}</span>
-                  </a>
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-sm font-black uppercase tracking-wider text-white">
-                  Management & Cleaning
-                </h3>
-
-                <div className="mt-4 space-y-3">
-                  {services
-                    .filter((s) => s.cluster === "management" || s.cluster === "cleaning")
-                    .map((service) => (
-                      <Link
-                        key={service.link}
-                        to={service.link}
-                        className="block text-sm text-slate-400 transition hover:text-emerald-400"
-                      >
-                        {service.title}
-                      </Link>
-                    ))}
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-sm font-black uppercase tracking-wider text-white">
-                  Staffing & Security
-                </h3>
-
-                <div className="mt-4 space-y-3">
-                  {services
-                    .filter((s) => s.cluster === "staffing" || s.cluster === "security")
-                    .map((service) => (
-                      <Link
-                        key={service.link}
-                        to={service.link}
-                        className="block text-sm text-slate-400 transition hover:text-emerald-400"
-                      >
-                        {service.title}
-                      </Link>
-                    ))}
-                </div>
-              </div>
-
-              <div>
-                <h3 className="text-sm font-black uppercase tracking-wider text-white">
-                  Maintenance & Pest Control
-                </h3>
-
-                <div className="mt-4 space-y-3">
-                  {services
-                    .filter((s) => s.cluster === "maintenance" || s.cluster === "pest")
-                    .map((service) => (
-                      <Link
-                        key={service.link}
-                        to={service.link}
-                        className="block text-sm text-slate-400 transition hover:text-emerald-400"
-                      >
-                        {service.title}
-                      </Link>
-                    ))}
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-10 flex flex-wrap gap-4 border-t border-white/10 pt-7 text-xs text-slate-500">
-              <Link to="/" className="transition hover:text-emerald-400">
-                Home
-              </Link>
-              <Link to="/services" className="transition hover:text-emerald-400">
-                All Services
-              </Link>
-              <Link to="/about" className="transition hover:text-emerald-400">
-                About Acuity Groups
-              </Link>
-              <Link to="/contact" className="transition hover:text-emerald-400">
-                Contact
-              </Link>
-              <Link to="/integrated-facility-management" className="transition hover:text-emerald-400">
-                Integrated Facility Management
-              </Link>
-              <Link to="/property-management-services" className="transition hover:text-emerald-400">
-                Property Management
-              </Link>
-              <Link to="/housekeeping-services" className="transition hover:text-emerald-400">
-                Housekeeping
-              </Link>
-              <Link to="/security-services" className="transition hover:text-emerald-400">
-                Security
-              </Link>
-            </div>
-
-            <div className="mt-6 border-t border-white/10 pt-7 text-center text-xs text-slate-500">
-              © {new Date().getFullYear()} Acuity Groups LLP. All Rights
-              Reserved.
-            </div>
-          </div>
-        </footer>
-
-        {/* =================================================
-            MOBILE CALL BUTTON
-            ================================================= */}
-
-        <div className="fixed bottom-4 left-4 right-4 z-40 sm:hidden">
-          <div className="flex gap-2 rounded-2xl border border-slate-200 bg-white/95 p-2 shadow-2xl backdrop-blur">
-            <a
-              href={`tel:${PHONE}`}
-              className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-slate-950 py-3 text-sm font-black text-white"
-            >
-              <Icon name="phone" size={17} />
-              Call
-            </a>
-
-            <button
-              type="button"
-              onClick={() => scrollToSection("enquiry")}
-              className="flex flex-[1.5] items-center justify-center gap-2 rounded-xl bg-emerald-600 py-3 text-sm font-black text-white"
-            >
-              Get Quote
-              <Icon name="arrow" size={17} />
-            </button>
-          </div>
-        </div>
       </div>
     </>
   );
