@@ -6,11 +6,12 @@ import {
   Navigate,
 } from "react-router-dom";
 
-import './index.css';
+import "./index.css";
 
 import Navbar from "./global/navbar";
 import Footer from "./global/footer";
 import ScrollToTop from "../src/components/Scrolltop";
+
 import Home from "./components/Home/homepage";
 import Aboutus from "./components/about us/aboutus";
 import Contact from "./components/contactus/contactus";
@@ -34,6 +35,16 @@ import SocialSidebar from "./components/sidesocialbar";
 import WhatsAppButton from "./components/whatsappbutton";
 import LeadPopup from "./components/popup";
 
+/* =========================================================
+   NEW LANDING PAGE
+   ========================================================= */
+
+import IntegratedFacilityManagementLandingPage from "./components/IntegratedFacilityManagementLandingPage";
+
+/* =========================================================
+   BLOG IMPORTS
+   ========================================================= */
+
 import Blogs from "./components/blogs/allblogs";
 import Cockroaches from "./components/blogs/cockroaches";
 import TermiteControlGuide from "./components/blogs/termite";
@@ -52,6 +63,11 @@ import EducationIndustry from "./components/blogs/EducationIndustry";
 import ManufacturingIndustry from "./components/blogs/ManufacturingIndustry";
 import HotelsHospitality from "./components/blogs/HotelsHospitality";
 import FacilityManagementBlog from "./components/blogs/facilitymanagment";
+
+/* =========================================================
+   LOCATION SEO IMPORTS
+   ========================================================= */
+
 import Whitefield from "./components/seofolder/integrated-facility-management-whitefield";
 import ElectronicCity from "./components/seofolder/integrated-facility-management-electronic-city";
 import Koramangala from "./components/seofolder/integrated-facility-management-koramangala";
@@ -69,142 +85,278 @@ export default function App() {
   return (
     <Router>
       {/* <WhatsAppButton /> */}
+
       <SocialSidebar />
       <ScrollToTop />
       <Navbar />
       <LeadPopup />
 
       <Routes>
-        {/* Main canonical pages */}
-        <Route path="/" element={<Home />} />
+
+        {/* =====================================================
+            MAIN WEBSITE FLOW
+            ===================================================== */}
+
+        {/* FIRST PAGE VISITORS SEE */}
+        <Route
+          path="/"
+          element={<IntegratedFacilityManagementLandingPage />}
+        />
+
+        {/* EXISTING ACUITY GROUPS HOMEPAGE */}
+        <Route
+          path="/home"
+          element={<Home />}
+        />
+
+        {/* =====================================================
+            MAIN CANONICAL PAGES
+            ===================================================== */}
+
         <Route path="/about" element={<Aboutus />} />
+
         <Route path="/services" element={<Services />} />
+
         <Route path="/contact" element={<Contact />} />
 
-        {/* Service canonical pages */}
-        <Route path="/security-services" element={<Securityservice />} />
+        {/* =====================================================
+            SERVICE CANONICAL PAGES
+            ===================================================== */}
+
+        <Route
+          path="/security-services"
+          element={<Securityservice />}
+        />
+
+        {/* EXISTING FACILITY MANAGEMENT PAGE
+            DO NOT REMOVE THIS URL */}
         <Route
           path="/integrated-facility-management"
           element={<Facilitymanagment />}
         />
-        <Route path="/housekeeping-services" element={<Housekeeping />} />
-        <Route path="/repair-maintenance" element={<RepairMaintenance />} />
-        <Route path="/pest-management" element={<PestManagement />} />
-        <Route path="/manpower-outsourcing" element={<ManpowerOutsourcing />} />
-        <Route path="/soft-services" element={<Softservices />} />
 
-        {/* Career pages */}
-        <Route path="/career" element={<Career />} />
-        <Route path="/career/pest-control" element={<Pestcareer />} />
-        <Route path="/career/acuity-groups" element={<Acuitygroups />} />
+        <Route
+          path="/housekeeping-services"
+          element={<Housekeeping />}
+        />
 
-        {/* Blog pages */}
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/blogs/cockroach-control" element={<Cockroaches />} />
+        <Route
+          path="/repair-maintenance"
+          element={<RepairMaintenance />}
+        />
+
+        <Route
+          path="/pest-management"
+          element={<PestManagement />}
+        />
+
+        <Route
+          path="/manpower-outsourcing"
+          element={<ManpowerOutsourcing />}
+        />
+
+        <Route
+          path="/soft-services"
+          element={<Softservices />}
+        />
+
+        {/* =====================================================
+            CAREER PAGES
+            ===================================================== */}
+
+        <Route
+          path="/career"
+          element={<Career />}
+        />
+
+        <Route
+          path="/career/pest-control"
+          element={<Pestcareer />}
+        />
+
+        <Route
+          path="/career/acuity-groups"
+          element={<Acuitygroups />}
+        />
+
+        {/* =====================================================
+            BLOG PAGES
+            ===================================================== */}
+
+        <Route
+          path="/blogs"
+          element={<Blogs />}
+        />
+
+        <Route
+          path="/blogs/cockroach-control"
+          element={<Cockroaches />}
+        />
+
         <Route
           path="/blogs/termite-control"
           element={<TermiteControlGuide />}
         />
+
         <Route
           path="/blogs/mosquito-prevention"
           element={<MosquitoPrevention />}
         />
+
         <Route
           path="/blogs/hotels-hospitality"
           element={<HotelsHospitality />}
         />
+
         <Route
           path="/blogs/importance-of-facility-management"
           element={<ImportanceofFacility />}
         />
+
         <Route
           path="/blogs/education-industry"
           element={<EducationIndustry />}
         />
+
         <Route
           path="/blogs/from-function-to-feeling"
           element={<FromFunctiontoFeeling />}
         />
+
         <Route
           path="/blogs/the-importance-of-facilities"
           element={<TheImportanceFacilities />}
         />
-        <Route path="/blogs/learn-how" element={<Learnhow />} />
-        <Route path="/blogs/unleash-design" element={<UnleashDesigne />} />
+
+        <Route
+          path="/blogs/learn-how"
+          element={<Learnhow />}
+        />
+
+        <Route
+          path="/blogs/unleash-design"
+          element={<UnleashDesigne />}
+        />
+
         <Route
           path="/blogs/professional-security-services"
           element={<WhyIntegrated />}
         />
+
         <Route
           path="/blogs/housekeeping-services"
           element={<HousekeepingServices />}
         />
+
         <Route
           path="/blogs/why-regular-pest-control"
           element={<WhyRegularPest />}
         />
+
         <Route
           path="/blogs/repairing-maintenance"
           element={<RepairingMaintenance />}
         />
-        <Route path="/blogs/manpower-outsourcing" element={<Mps />} />
+
+        <Route
+          path="/blogs/manpower-outsourcing"
+          element={<Mps />}
+        />
+
         <Route
           path="/blogs/manufacturing-industry"
           element={<ManufacturingIndustry />}
         />
 
-        {/* Location SEO pages */}
+        <Route
+          path="/blogs/facility-management"
+          element={<FacilityManagementBlog />}
+        />
+
+        {/* =====================================================
+            LOCATION SEO PAGES
+            ===================================================== */}
+
         <Route
           path="/integrated-facility-management-whitefield"
           element={<Whitefield />}
         />
+
         <Route
           path="/integrated-facility-management-electronic-city"
           element={<ElectronicCity />}
         />
+
         <Route
           path="/integrated-facility-management-koramangala"
           element={<Koramangala />}
         />
+
         <Route
           path="/integrated-facility-management-hsr-layout"
           element={<HSRLayout />}
         />
+
         <Route
           path="/integrated-facility-management-jp-nagar"
           element={<IntegratedFacilityManagementJPNagar />}
         />
+
         <Route
           path="/integrated-facility-management-dabaspet"
           element={<Dabaspet />}
         />
+
         <Route
           path="/integrated-facility-management-peenya"
           element={<Peenya />}
         />
+
         <Route
           path="/integrated-facility-management-hebbal"
           element={<Hebbal />}
         />
-        <Route path="/integrated-facility-management-beml" element={<Beml />} />
+
+        <Route
+          path="/integrated-facility-management-beml"
+          element={<Beml />}
+        />
+
         <Route
           path="/integrated-facility-management-doddaballapur"
           element={<Doddaballapur />}
         />
+
         <Route
           path="/integrated-facility-management-attibele"
           element={<Attibele />}
         />
+
         <Route
           path="/integrated-facility-management-kumbalgodu"
           element={<Kumbalgodu />}
         />
 
-        {/* Admin */}
-        <Route path="/admindashboard" element={<AdminDashboard />} />
+        {/* =====================================================
+            ADMIN
+            ===================================================== */}
 
-        {/* Old URL redirects */}
-        <Route path="/homepage" element={<Navigate to="/" replace />} />
+        <Route
+          path="/admindashboard"
+          element={<AdminDashboard />}
+        />
+
+        {/* =====================================================
+            OLD URL REDIRECTS
+            ===================================================== */}
+
+        {/* OLD HOMEPAGE URL
+            Previously /homepage -> /
+            Now /homepage -> /home */}
+        <Route
+          path="/homepage"
+          element={<Navigate to="/home" replace />}
+        />
 
         <Route
           path="/pages/servicepage"
@@ -215,119 +367,239 @@ export default function App() {
           path="/Securityservice"
           element={<Navigate to="/security-services" replace />}
         />
+
         <Route
           path="/Housekeeping"
           element={<Navigate to="/housekeeping-services" replace />}
         />
+
         <Route
           path="/repair"
           element={<Navigate to="/repair-maintenance" replace />}
         />
+
         <Route
           path="/pest"
           element={<Navigate to="/pest-management" replace />}
         />
+
         <Route
           path="/manpower"
           element={<Navigate to="/manpower-outsourcing" replace />}
         />
+
         <Route
           path="/softservices"
           element={<Navigate to="/soft-services" replace />}
         />
 
-        {/* Career Old Route Redirects */}
+        {/* =====================================================
+            CAREER OLD ROUTE REDIRECTS
+            ===================================================== */}
+
         <Route
           path="/career/pestcareer"
-          element={<Navigate to="/career/pest-control" replace />}
-        />
-        <Route
-          path="/career/acuitygroups"
-          element={<Navigate to="/career/acuity-groups" replace />}
+          element={
+            <Navigate
+              to="/career/pest-control"
+              replace
+            />
+          }
         />
 
-        {/* Blog Old Route Redirects */}
+        <Route
+          path="/career/acuitygroups"
+          element={
+            <Navigate
+              to="/career/acuity-groups"
+              replace
+            />
+          }
+        />
+
+        {/* =====================================================
+            BLOG OLD ROUTE REDIRECTS
+            ===================================================== */}
+
         <Route
           path="/blogs/allblogs"
           element={<Navigate to="/blogs" replace />}
         />
+
         <Route
           path="/blogs/cockroaches"
-          element={<Navigate to="/blogs/cockroach-control" replace />}
+          element={
+            <Navigate
+              to="/blogs/cockroach-control"
+              replace
+            />
+          }
         />
+
         <Route
           path="/blogs/termite"
-          element={<Navigate to="/blogs/termite-control" replace />}
+          element={
+            <Navigate
+              to="/blogs/termite-control"
+              replace
+            />
+          }
         />
+
         <Route
           path="/blogs/mosquito"
-          element={<Navigate to="/blogs/mosquito-prevention" replace />}
+          element={
+            <Navigate
+              to="/blogs/mosquito-prevention"
+              replace
+            />
+          }
         />
+
         <Route
           path="/blogs/HotelsHospitality"
-          element={<Navigate to="/blogs/hotels-hospitality" replace />}
+          element={
+            <Navigate
+              to="/blogs/hotels-hospitality"
+              replace
+            />
+          }
         />
+
         <Route
           path="/blogs/ImportanceofFacility"
           element={
-            <Navigate to="/blogs/importance-of-facility-management" replace />
+            <Navigate
+              to="/blogs/importance-of-facility-management"
+              replace
+            />
           }
         />
+
         <Route
           path="/blogs/EducationIndustry"
-          element={<Navigate to="/blogs/education-industry" replace />}
+          element={
+            <Navigate
+              to="/blogs/education-industry"
+              replace
+            />
+          }
         />
+
         <Route
           path="/blogs/facility-management"
           element={<FacilityManagementBlog />}
         />
+
         <Route
           path="/blogs/FromFunction"
-          element={<Navigate to="/blogs/from-function-to-feeling" replace />}
+          element={
+            <Navigate
+              to="/blogs/from-function-to-feeling"
+              replace
+            />
+          }
         />
+
         <Route
           path="/blogs/TheImportanceFacilities"
           element={
-            <Navigate to="/blogs/the-importance-of-facilities" replace />
+            <Navigate
+              to="/blogs/the-importance-of-facilities"
+              replace
+            />
           }
         />
+
         <Route
           path="/blogs/Learnhow"
-          element={<Navigate to="/blogs/learn-how" replace />}
+          element={
+            <Navigate
+              to="/blogs/learn-how"
+              replace
+            />
+          }
         />
+
         <Route
           path="/blogs/UnleashDesigne"
-          element={<Navigate to="/blogs/unleash-design" replace />}
+          element={
+            <Navigate
+              to="/blogs/unleash-design"
+              replace
+            />
+          }
         />
+
         <Route
           path="/blogs/WhyIntegrated"
           element={
-            <Navigate to="/blogs/professional-security-services" replace />
+            <Navigate
+              to="/blogs/professional-security-services"
+              replace
+            />
           }
         />
+
         <Route
           path="/blogs/HousekeepingServices"
-          element={<Navigate to="/blogs/housekeeping-services" replace />}
-        />
-        <Route
-          path="/blogs/WhyRegularPest"
-          element={<Navigate to="/blogs/why-regular-pest-control" replace />}
-        />
-        <Route
-          path="/blogs/RepairingMaintenance"
-          element={<Navigate to="/blogs/repairing-maintenance" replace />}
-        />
-        <Route
-          path="/blogs/mps"
-          element={<Navigate to="/blogs/manpower-outsourcing" replace />}
-        />
-        <Route
-          path="/blogs/ManufacturingIndustry"
-          element={<Navigate to="/blogs/manufacturing-industry" replace />}
+          element={
+            <Navigate
+              to="/blogs/housekeeping-services"
+              replace
+            />
+          }
         />
 
-        {/* 404 fallback */}
-     <Route path="*" element={<Navigate to="/" replace />} />
+        <Route
+          path="/blogs/WhyRegularPest"
+          element={
+            <Navigate
+              to="/blogs/why-regular-pest-control"
+              replace
+            />
+          }
+        />
+
+        <Route
+          path="/blogs/RepairingMaintenance"
+          element={
+            <Navigate
+              to="/blogs/repairing-maintenance"
+              replace
+            />
+          }
+        />
+
+        <Route
+          path="/blogs/mps"
+          element={
+            <Navigate
+              to="/blogs/manpower-outsourcing"
+              replace
+            />
+          }
+        />
+
+        <Route
+          path="/blogs/ManufacturingIndustry"
+          element={
+            <Navigate
+              to="/blogs/manufacturing-industry"
+              replace
+            />
+          }
+        />
+
+        {/* =====================================================
+            404 FALLBACK
+            ===================================================== */}
+
+        <Route
+          path="*"
+          element={<Navigate to="/" replace />}
+        />
+
       </Routes>
 
       <Footer />
