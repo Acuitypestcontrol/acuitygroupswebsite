@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import Pic from "../images/nfacility.jpg";
-import HEROIMAGE from "../images/nfacility.jpg";
+import HEROIMAGE from "../images/choose1.jpg";
 
 const PHONE = "919941229005";
 const DISPLAY_PHONE = "+91 99412 29005";
