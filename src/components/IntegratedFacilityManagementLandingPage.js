@@ -11,8 +11,6 @@ const EMAIL = "info@acuitygroups.in";
 const LANDING_URL =
   "https://www.acuitygroups.in/integrated-facility-management-bangalore";
 
-
-
 /* =========================================================
    ICONS
 ========================================================= */
@@ -86,9 +84,11 @@ const staggerContainer = {
   },
 };
 
+
+
 const viewport = {
-  once: false,
-  amount: 0.15,
+  once: true,
+  amount: 0.1,
 };
 
 /* =========================================================
@@ -701,8 +701,6 @@ const IntegratedFacilityManagementLandingPage = () => {
             className="absolute inset-0 w-full h-full object-cover blur-[3px] scale-105"
           />
 
-       
-
           {/* Dark Overlay */}
           <div className="absolute inset-0 bg-black/55" />
 
@@ -710,7 +708,7 @@ const IntegratedFacilityManagementLandingPage = () => {
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-white">
             <div className="max-w-3xl">
               <p className="text-sm md:text-base font-semibold uppercase tracking-wider mb-4">
-                Facility Management Experts in Bangalore
+                Facility Management Service in Bangalore
               </p>
 
               <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
@@ -913,6 +911,7 @@ const IntegratedFacilityManagementLandingPage = () => {
                 </motion.div>
               ))}
             </motion.div>
+          
           </div>
         </section>
 

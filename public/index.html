@@ -53,6 +53,16 @@
     </script>
 
     <script src="https://analytics.ahrefs.com/analytics.js" data-key="EhWFxj55QnKJJVScm8EIAg" async></script>
+    <script>
+fetch("https://api.localo.com/api/structured_data/3gx-45FO4D4oNcgqe6cqTh-7OoPQBby4H5_SeLqwHVs/local_business")
+.then(response => response.json())
+.then(data => {
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.textContent = JSON.stringify(data);
+  document.head.appendChild(script);
+});
+</script>
   </head>
 
   <body>
