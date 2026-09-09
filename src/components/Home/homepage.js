@@ -695,8 +695,8 @@ export default function Homepage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://www.acuitygroups.in/#webpage",
-    url: "https://www.acuitygroups.in/",
+    "@id": "https://www.acuitygroups.in/home#webpage",
+    url: "https://www.acuitygroups.in/home",
     name: "Facility Management Company in Bangalore | Acuity Groups LLP",
     description:
       "Acuity Groups LLP is a facility management company in Bangalore offering integrated facility management, housekeeping, security, manpower outsourcing, pest management and maintenance services.",
@@ -772,12 +772,7 @@ export default function Homepage() {
           name="googlebot"
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         />
-
-        <link rel="canonical" href="https://www.acuitygroups.in/" />
-
-        <meta name="language" content="English" />
-
-        <meta name="revisit-after" content="7 days" />
+        <link rel="canonical" href="https://www.acuitygroups.in/home" />
 
         {/* =====================================================
             OPEN GRAPH
@@ -793,7 +788,7 @@ export default function Homepage() {
           content="Acuity Groups LLP provides integrated facility management, housekeeping, security, manpower outsourcing, pest management and maintenance services across Bangalore."
         />
 
-        <meta property="og:url" content="https://www.acuitygroups.in/" />
+        <meta property="og:url" content="https://www.acuitygroups.in/home" />
 
         <meta property="og:type" content="website" />
 
