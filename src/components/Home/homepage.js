@@ -758,7 +758,7 @@ export default function Homepage() {
 
         <meta
           name="description"
-          content="Acuity Groups LLP is a facility management company in Bangalore offering integrated facility management, housekeeping, security, manpower outsourcing, pest control and maintenance services."
+          content="Acuity Groups LLP is a facility management company in Bangalore offering integrated facility management, housekeeping, security, manpower and pest control."
         />
 
         <meta
