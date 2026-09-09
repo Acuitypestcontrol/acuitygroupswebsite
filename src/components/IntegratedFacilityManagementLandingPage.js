@@ -84,8 +84,6 @@ const staggerContainer = {
   },
 };
 
-
-
 const viewport = {
   once: true,
   amount: 0.1,
@@ -911,7 +909,6 @@ const IntegratedFacilityManagementLandingPage = () => {
                 </motion.div>
               ))}
             </motion.div>
-          
           </div>
         </section>
 

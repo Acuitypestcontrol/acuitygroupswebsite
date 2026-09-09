@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -18,7 +16,6 @@ import {
   Building,
   CheckCircle,
   ChevronDown,
-  ChevronLeft,
   ChevronRight,
   Clock,
   Headphones,
@@ -333,7 +330,7 @@ export default function Homepage() {
   const banners = [
     {
       image: Banner2,
-      alt: "Facility management company and services in Bangalore",
+      alt: "Acuity Groups integrated facility management services in Bangalore",
     },
     {
       image: Banner3,
@@ -395,27 +392,27 @@ export default function Homepage() {
   const faqs = [
     {
       q: "Do you offer cost-effective facility management packages?",
-      a: "Yes, we offer flexible service packages suitable for different budgets.",
+      a: "Yes, Acuity Groups LLP offers flexible facility management service packages designed for different property requirements and operational needs.",
     },
     {
       q: "Do you provide facility management services in Bangalore?",
-      a: "Yes, Acuity Groups provides professional facility management services for residential, commercial and industrial properties across Bangalore.",
+      a: "Yes, Acuity Groups LLP provides professional facility management services across Bangalore for residential, commercial and industrial properties.",
     },
     {
       q: "What services are included in facility management?",
-      a: "Housekeeping, security services, pest management, maintenance solutions and manpower outsourcing services.",
+      a: "Our facility management solutions include housekeeping, security services, pest management, repair and maintenance, manpower outsourcing, soft services and technical support.",
     },
     {
       q: "Do you provide security guard services?",
-      a: "Yes, we provide trained security guards for apartments, offices, hospitals, industries and commercial establishments.",
+      a: "Yes, we provide professional security guard services for apartments, offices, hospitals, industries, warehouses and commercial establishments.",
     },
     {
       q: "Do you offer pest control services?",
-      a: "Yes, we provide termite control, rodent control and complete pest management solutions.",
+      a: "Yes, Acuity Groups provides pest management solutions including termite control, rodent control, cockroach control and other general pest management services.",
     },
     {
       q: "Do you provide manpower outsourcing services?",
-      a: "Yes, we offer skilled and unskilled manpower outsourcing solutions for various industries.",
+      a: "Yes, we provide skilled and unskilled manpower outsourcing solutions for businesses, residential properties, commercial establishments and industrial facilities.",
     },
   ];
 
@@ -549,7 +546,6 @@ export default function Homepage() {
   const videoRef = useRef(null);
   const statsStarted = useRef(false);
 
-  // ADD THIS
   const scrollRef = useRef(null);
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -634,23 +630,45 @@ export default function Homepage() {
     requestAnimationFrame(update);
   };
 
+  /*
+   * SEO STRUCTURED DATA
+   *
+   * Important:
+   * Only include business information that is actually available
+   * on the website/company profile. Do not add fake phone numbers,
+   * emails, opening hours or social profiles.
+   */
+
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://www.acuitygroups.in/#business",
     name: "Acuity Groups LLP",
     alternateName: "Acuity Groups",
     url: "https://www.acuitygroups.in/",
     description:
-      "Acuity Groups LLP provides facility management services in Bangalore including housekeeping, security services, pest management, manpower outsourcing, soft services, repair and maintenance.",
+      "Acuity Groups LLP is a facility management company in Bangalore offering integrated facility management, housekeeping, security, manpower outsourcing, pest management, soft services and repair and maintenance solutions.",
+    image: "https://www.acuitygroups.in/",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Bengaluru",
       addressRegion: "Karnataka",
       addressCountry: "IN",
     },
-    areaServed: areas.map((area) =>
-      area.name.replace("Facility Management Services in ", ""),
-    ),
+    areaServed: [
+      "Whitefield",
+      "Electronic City",
+      "Koramangala",
+      "HSR Layout",
+      "JP Nagar",
+      "Dabaspet",
+      "Peenya",
+      "Hebbal",
+      "BEML Layout",
+      "Doddaballapur",
+      "Attibele",
+      "Kumbalgodu",
+    ],
     serviceType: [
       "Integrated Facility Management",
       "Housekeeping Services",
@@ -660,6 +678,35 @@ export default function Homepage() {
       "Repair and Maintenance",
       "Soft Services",
     ],
+  };
+
+  const webSiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.acuitygroups.in/#website",
+    name: "Acuity Groups LLP",
+    alternateName: "Acuity Groups",
+    url: "https://www.acuitygroups.in/",
+    publisher: {
+      "@id": "https://www.acuitygroups.in/#business",
+    },
+  };
+
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.acuitygroups.in/#webpage",
+    url: "https://www.acuitygroups.in/",
+    name: "Facility Management Company in Bangalore | Acuity Groups LLP",
+    description:
+      "Acuity Groups LLP is a facility management company in Bangalore offering integrated facility management, housekeeping, security, manpower outsourcing, pest management and maintenance services.",
+    isPartOf: {
+      "@id": "https://www.acuitygroups.in/#website",
+    },
+    about: {
+      "@id": "https://www.acuitygroups.in/#business",
+    },
+    inLanguage: "en-IN",
   };
 
   const faqSchema = {
@@ -701,18 +748,40 @@ export default function Homepage() {
   return (
     <div className="overflow-hidden bg-[#F6F8FC] text-[#111827] font-['IBM_Plex_Sans',system-ui,sans-serif]">
       <Helmet>
+        {/* =====================================================
+            PRIMARY SEO
+        ====================================================== */}
+
         <title>
           Facility Management Company in Bangalore | Acuity Groups LLP
         </title>
 
         <meta
           name="description"
-          content="Acuity Groups LLP provides facility management, housekeeping, security, pest management and manpower outsourcing services across Bangalore."
+          content="Acuity Groups LLP is a facility management company in Bangalore offering integrated facility management, housekeeping, security, manpower outsourcing, pest control and maintenance services."
+        />
+
+        <meta
+          name="keywords"
+          content="facility management company in Bangalore, facility management services Bangalore, integrated facility management Bangalore, housekeeping services Bangalore, security services Bangalore, manpower outsourcing Bangalore, pest control Bangalore"
         />
 
         <meta name="robots" content="index, follow" />
 
+        <meta
+          name="googlebot"
+          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+
         <link rel="canonical" href="https://www.acuitygroups.in/" />
+
+        <meta name="language" content="English" />
+
+        <meta name="revisit-after" content="7 days" />
+
+        {/* =====================================================
+            OPEN GRAPH
+        ====================================================== */}
 
         <meta
           property="og:title"
@@ -721,12 +790,20 @@ export default function Homepage() {
 
         <meta
           property="og:description"
-          content="Professional facility management, housekeeping, security, pest management, manpower outsourcing and maintenance services across Bangalore."
+          content="Acuity Groups LLP provides integrated facility management, housekeeping, security, manpower outsourcing, pest management and maintenance services across Bangalore."
         />
 
         <meta property="og:url" content="https://www.acuitygroups.in/" />
+
         <meta property="og:type" content="website" />
+
         <meta property="og:site_name" content="Acuity Groups LLP" />
+
+        <meta property="og:locale" content="en_IN" />
+
+        {/* =====================================================
+            TWITTER / X
+        ====================================================== */}
 
         <meta name="twitter:card" content="summary_large_image" />
 
@@ -737,8 +814,12 @@ export default function Homepage() {
 
         <meta
           name="twitter:description"
-          content="Professional facility management services in Bangalore for offices, apartments, industries, hospitals, warehouses and commercial spaces."
+          content="Professional facility management services in Bangalore for offices, apartments, industries, hospitals, warehouses and commercial properties."
         />
+
+        {/* =====================================================
+            PERFORMANCE / FONTS
+        ====================================================== */}
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
 
@@ -753,24 +834,41 @@ export default function Homepage() {
           rel="stylesheet"
         />
 
+        {/* =====================================================
+            WEBSITE SCHEMA
+        ====================================================== */}
+
         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "Acuity Groups LLP",
-            alternateName: "Acuity Groups",
-            url: "https://www.acuitygroups.in/",
-          })}
+          {JSON.stringify(webSiteSchema)}
         </script>
+
+        {/* =====================================================
+            LOCAL BUSINESS SCHEMA
+        ====================================================== */}
 
         <script type="application/ld+json">
           {JSON.stringify(localBusinessSchema)}
         </script>
 
+        {/* =====================================================
+            WEBPAGE SCHEMA
+        ====================================================== */}
+
+        <script type="application/ld+json">
+          {JSON.stringify(webPageSchema)}
+        </script>
+
+        {/* =====================================================
+            FAQ SCHEMA
+        ====================================================== */}
+
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      {/* UNIQUE SPLIT HERO */}
+      {/* =====================================================
+          HERO
+      ====================================================== */}
+
       <section
         ref={heroRef}
         className="relative min-h-[780px] overflow-hidden bg-[#07172C] lg:min-h-screen"
@@ -802,6 +900,8 @@ export default function Homepage() {
               <motion.div variants={fadeUp}>
                 <SectionLabel light>About Acuity Groups LLP</SectionLabel>
               </motion.div>
+
+              {/* MAIN PAGE H1 - KEEP ONLY ONE H1 */}
 
               <motion.h1
                 variants={fadeUp}
@@ -841,21 +941,18 @@ export default function Homepage() {
                 </SectionLabel>
               </motion.div>
 
+              {/* SEO-OPTIMIZED INTRODUCTION */}
+
               <motion.p
                 variants={fadeUp}
                 className="mt-7 max-w-2xl text-base leading-8 text-white/70 sm:text-lg"
               >
-                Acuity Groups LLP provides{" "}
-                <Link
-                  to="/integrated-facility-management"
-                  className="font-semibold text-white underline decoration-[#E8A33D] decoration-2 underline-offset-4"
-                >
-                  integrated facility management services in Bangalore
-                </Link>
-                , including housekeeping, security guards, manpower outsourcing,
+                Acuity Groups LLP is a trusted facility management company in
+                Bangalore providing integrated facility management solutions for
+                residential, commercial and industrial properties. Our services
+                include housekeeping, security services, manpower outsourcing,
                 pest management, soft services, electrical maintenance and
-                repair services for residential, commercial and industrial
-                properties.
+                repair services.
               </motion.p>
 
               <motion.div
@@ -865,6 +962,7 @@ export default function Homepage() {
                 <MagneticButton>
                   <Link
                     to="/integrated-facility-management"
+                    aria-label="Explore integrated facility management services in Bangalore"
                     className="group flex items-center justify-center gap-3 rounded-full bg-[#E8A33D] px-7 py-4 font-semibold text-[#07172C] shadow-[0_15px_50px_rgba(232,163,61,0.25)] transition hover:bg-[#f3b554]"
                   >
                     Explore Integrated Facility Management
@@ -878,6 +976,7 @@ export default function Homepage() {
                 <MagneticButton>
                   <Link
                     to="/about"
+                    aria-label="Learn more about Acuity Groups LLP"
                     className="flex items-center justify-center rounded-full border border-white/30 bg-white/5 px-7 py-4 font-semibold text-white backdrop-blur-md transition hover:bg-white/10"
                   >
                     About Acuity Groups LLP
@@ -886,6 +985,8 @@ export default function Homepage() {
               </motion.div>
             </motion.div>
           </motion.div>
+
+          {/* HERO IMAGE AREA */}
 
           <motion.div
             style={
@@ -925,6 +1026,8 @@ export default function Homepage() {
                     key={banners[currentSlide].alt}
                     src={banners[currentSlide].image}
                     alt={banners[currentSlide].alt}
+                    loading={currentSlide === 0 ? "eager" : "lazy"}
+                    fetchPriority={currentSlide === 0 ? "high" : "auto"}
                     initial={{
                       opacity: 0,
                       scale: 1.08,
@@ -968,38 +1071,48 @@ export default function Homepage() {
               >
                 <img
                   src={AboutImage}
-                  alt="Acuity Groups facility management services"
+                  alt="Acuity Groups facility management team and services in Bangalore"
+                  loading="lazy"
                   className="h-full w-full rounded-[27px] object-cover"
                 />
               </motion.div>
+
+              {/* EXPERIENCE BADGE */}
 
               <motion.div
                 initial={{
                   opacity: 0,
                   scale: 0.8,
                 }}
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                }}
+                animate={
+                  reduceMotion
+                    ? {
+                        opacity: 1,
+                        scale: 1,
+                      }
+                    : {
+                        opacity: 1,
+                        scale: 1,
+                        y: [0, -10, 0],
+                      }
+                }
                 transition={{
                   delay: 0.85,
                   duration: 0.7,
                   ease: EASE,
+                  y: {
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  },
                 }}
-                animate={
-                  reduceMotion
-                    ? undefined
-                    : {
-                        y: [0, -10, 0],
-                      }
-                }
                 className="absolute bottom-[38%] left-[43%] z-20 flex h-36 w-36 items-center justify-center rounded-full border border-white/20 bg-[#E8A33D] text-center text-[#07172C] shadow-2xl sm:h-40 sm:w-40"
               >
                 <div>
                   <p className="font-['Archivo',system-ui,sans-serif] text-4xl font-black">
                     19+
                   </p>
+
                   <p className="mt-1 px-4 text-xs font-semibold uppercase tracking-[2px]">
                     Years Experience
                   </p>
@@ -1012,7 +1125,8 @@ export default function Homepage() {
                     key={banner.alt}
                     type="button"
                     onClick={() => setCurrentSlide(index)}
-                    aria-label={`Show slide ${index + 1}`}
+                    aria-label={`Show facility management image ${index + 1}`}
+                    aria-current={currentSlide === index ? "true" : undefined}
                     className={`flex h-12 w-12 items-center justify-center rounded-full border font-['IBM_Plex_Mono',monospace] text-xs transition ${
                       currentSlide === index
                         ? "border-[#E8A33D] bg-[#E8A33D] text-[#07172C]"
@@ -1029,6 +1143,7 @@ export default function Homepage() {
 
         <motion.a
           href="#home-stats"
+          aria-label="Scroll to company statistics"
           initial={{
             opacity: 0,
           }}
@@ -1063,7 +1178,10 @@ export default function Homepage() {
         </motion.a>
       </section>
 
-      {/* STAT DASHBOARD */}
+      {/* =====================================================
+          STAT DASHBOARD
+      ====================================================== */}
+
       <section
         id="home-stats"
         className="relative z-20 bg-[#F6F8FC] px-5 pb-14 sm:px-8 lg:px-14"
@@ -1113,7 +1231,10 @@ export default function Homepage() {
         </motion.div>
       </section>
 
-      {/* EDITORIAL ABOUT */}
+      {/* =====================================================
+          ABOUT
+      ====================================================== */}
+
       <section className="relative overflow-hidden bg-[#F6F8FC] px-5 py-20 sm:px-8 lg:px-14 lg:py-28">
         <AnimatedWallpaper />
 
@@ -1140,7 +1261,7 @@ export default function Homepage() {
             >
               <img
                 src={AboutImage}
-                alt="Acuity Groups facility management services"
+                alt="Acuity Groups integrated facility management services in Bangalore"
                 loading="lazy"
                 className="h-full w-full object-cover"
               />
@@ -1242,7 +1363,10 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* UNIQUE SERVICES LAYOUT */}
+      {/* =====================================================
+          SERVICES
+      ====================================================== */}
+
       <section className="relative overflow-hidden bg-[#081A32] py-16 lg:py-28">
         <AnimatedWallpaper dark />
 
@@ -1273,19 +1397,12 @@ export default function Homepage() {
           </motion.div>
 
           <div className="grid min-w-0 gap-7 lg:grid-cols-[360px_minmax(0,1fr)]">
-            {/* MOBILE HORIZONTAL SCROLLING SERVICE BUTTONS */}
             <motion.div
               variants={stagger}
               initial="hidden"
               whileInView="show"
               viewport={viewportOnce}
-              className="
-          services-mobile-scroll
-          flex w-full max-w-full snap-x snap-mandatory gap-3
-          overflow-x-auto overscroll-x-contain pb-4
-          touch-pan-x
-          lg:flex-col lg:overflow-visible lg:pb-0
-        "
+              className="services-mobile-scroll flex w-full max-w-full snap-x snap-mandatory gap-3 overflow-x-auto overscroll-x-contain pb-4 touch-pan-x lg:flex-col lg:overflow-visible lg:pb-0"
             >
               {services.map((service, index) => (
                 <motion.button
@@ -1293,23 +1410,16 @@ export default function Homepage() {
                   variants={fadeUp}
                   type="button"
                   onClick={() => setActiveService(index)}
+                  aria-label={`View ${service.title}`}
+                  aria-pressed={activeService === index}
                   whileHover={{
                     x: reduceMotion ? 0 : 7,
                   }}
-                  className={`
-              group flex min-h-[100px]
-              min-w-[84vw] max-w-[84vw]
-              snap-center items-center justify-between
-              rounded-2xl border px-5 py-5 text-left
-              transition-all duration-300
-              sm:min-w-[310px] sm:max-w-[310px]
-              lg:min-h-0 lg:w-full lg:min-w-0 lg:max-w-none
-              ${
-                activeService === index
-                  ? "border-[#E8A33D] bg-[#E8A33D] text-[#081A32] shadow-[0_15px_40px_rgba(232,163,61,0.22)]"
-                  : "border-white/10 bg-white/5 text-white hover:bg-white/10"
-              }
-            `}
+                  className={`group flex min-h-[100px] min-w-[84vw] max-w-[84vw] snap-center items-center justify-between rounded-2xl border px-5 py-5 text-left transition-all duration-300 sm:min-w-[310px] sm:max-w-[310px] lg:min-h-0 lg:w-full lg:min-w-0 lg:max-w-none ${
+                    activeService === index
+                      ? "border-[#E8A33D] bg-[#E8A33D] text-[#081A32] shadow-[0_15px_40px_rgba(232,163,61,0.22)]"
+                      : "border-white/10 bg-white/5 text-white hover:bg-white/10"
+                  }`}
                 >
                   <span className="flex min-w-0 items-center gap-4">
                     <span
@@ -1339,7 +1449,6 @@ export default function Homepage() {
               ))}
             </motion.div>
 
-            {/* ACTIVE SERVICE IMAGE PANEL */}
             <div className="relative min-w-0 overflow-hidden rounded-[26px] border border-white/10 bg-white/5 p-2 shadow-2xl backdrop-blur-lg sm:rounded-[38px] sm:p-5">
               <CornerLines light />
 
@@ -1365,12 +1474,13 @@ export default function Homepage() {
                     duration: 0.55,
                     ease: EASE,
                   }}
-                 className="relative min-h-[420px] w-full overflow-hidden rounded-[21px] sm:min-h-[590px] sm:rounded-[30px]"
+                  className="relative min-h-[420px] w-full overflow-hidden rounded-[21px] sm:min-h-[590px] sm:rounded-[30px]"
                 >
                   <motion.img
                     key={services[activeService].image}
                     src={services[activeService].image}
-                    alt={`${services[activeService].title} in Bangalore`}
+                    alt={`${services[activeService].title} services in Bangalore`}
+                    loading="lazy"
                     initial={{
                       scale: 1.08,
                     }}
@@ -1384,7 +1494,6 @@ export default function Homepage() {
                     className="absolute inset-0 h-full w-full object-cover object-center"
                   />
 
-                  {/* Stronger mobile overlay so text is readable */}
                   <div className="absolute inset-0 bg-gradient-to-t from-[#081A32] via-[#081A32]/75 to-[#081A32]/10 sm:via-[#081A32]/45" />
 
                   <div className="absolute inset-x-0 bottom-0 z-10 p-5 pb-7 sm:p-10 lg:p-14">
@@ -1406,6 +1515,7 @@ export default function Homepage() {
 
                     <Link
                       to={services[activeService].path}
+                      aria-label={`Learn more about ${services[activeService].title}`}
                       className="group mt-6 inline-flex items-center gap-2 rounded-full bg-[#E8A33D] px-6 py-3.5 text-sm font-semibold text-[#081A32] shadow-lg sm:mt-8 sm:gap-3 sm:px-7 sm:py-4 sm:text-base"
                     >
                       Learn More
@@ -1429,6 +1539,7 @@ export default function Homepage() {
           >
             <Link
               to="/integrated-facility-management"
+              aria-label="Learn about integrated facility management services"
               className="group inline-flex max-w-full items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-4 text-center text-sm font-semibold text-white backdrop-blur-md transition hover:border-[#E8A33D] hover:bg-[#E8A33D] hover:text-[#081A32] sm:gap-3 sm:px-8 sm:text-base"
             >
               Learn About Integrated Facility Management Services
@@ -1440,7 +1551,11 @@ export default function Homepage() {
           </motion.div>
         </div>
       </section>
-      {/* SEO CONTENT WITH DIAGONAL PANEL */}
+
+      {/* =====================================================
+          SEO CONTENT
+      ====================================================== */}
+
       <section className="relative overflow-hidden bg-white py-20 lg:py-28">
         <AnimatedWallpaper />
 
@@ -1478,6 +1593,7 @@ export default function Homepage() {
 
                 <Link
                   to="/integrated-facility-management"
+                  aria-label="Explore integrated facility management services in Bangalore"
                   className="group mt-8 inline-flex items-center gap-3 rounded-full bg-[#E8A33D] px-7 py-4 font-semibold text-[#0B1F3A]"
                 >
                   Explore Integrated Facility Management
@@ -1492,7 +1608,10 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* WHY CHOOSE US TIMELINE */}
+      {/* =====================================================
+          WHY CHOOSE US
+      ====================================================== */}
+
       <section className="relative overflow-hidden bg-[#F1F5FA] py-20 lg:py-28">
         <AnimatedWallpaper />
 
@@ -1566,7 +1685,7 @@ export default function Homepage() {
                     whileHover={{
                       y: -6,
                     }}
-                    className={`rounded-[24px] border border-white bg-white/80 p-6 shadow-lg backdrop-blur-md sm:order-2 lg:hidden`}
+                    className="rounded-[24px] border border-white bg-white/80 p-6 shadow-lg backdrop-blur-md sm:order-2 lg:hidden"
                   >
                     <h3 className="text-lg font-bold text-[#0B1F3A]">
                       {title}
@@ -1592,6 +1711,7 @@ export default function Homepage() {
           >
             <Link
               to="/contact"
+              aria-label="Contact Acuity Groups LLP"
               className="group inline-flex items-center gap-3 rounded-full bg-[#E8A33D] px-8 py-4 font-semibold text-[#0B1F3A] shadow-lg"
             >
               Get Started Today
@@ -1604,7 +1724,10 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* ANIMATED INDUSTRIES SECTION */}
+      {/* =====================================================
+          INDUSTRIES
+      ====================================================== */}
+
       <section className="relative overflow-hidden bg-white py-20 lg:py-28">
         <AnimatedWallpaper />
 
@@ -1628,9 +1751,7 @@ export default function Homepage() {
             </motion.h2>
           </motion.div>
 
-          {/* DESKTOP ROTATING ORBIT */}
           <div className="relative mx-auto mt-16 hidden h-[650px] max-w-[1000px] items-center justify-center lg:flex">
-            {/* Outer rotating circle */}
             <motion.div
               animate={
                 reduceMotion
@@ -1680,7 +1801,6 @@ export default function Homepage() {
               })}
             </motion.div>
 
-            {/* Inner rotating circle */}
             <motion.div
               animate={
                 reduceMotion
@@ -1730,7 +1850,6 @@ export default function Homepage() {
               })}
             </motion.div>
 
-            {/* Center circle */}
             <motion.div
               animate={
                 reduceMotion
@@ -1759,7 +1878,6 @@ export default function Homepage() {
             </motion.div>
           </div>
 
-          {/* MOBILE AUTO-SCROLLING CAROUSEL */}
           <div className="relative mt-12 overflow-hidden lg:hidden">
             <div className="pointer-events-none absolute inset-y-0 left-0 z-20 w-10 bg-gradient-to-r from-white to-transparent" />
 
@@ -1802,7 +1920,10 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* TESTIMONIAL NOTES */}
+      {/* =====================================================
+          TESTIMONIALS
+      ====================================================== */}
+
       <section className="relative overflow-hidden bg-[#0B1F3A] py-20 lg:py-28">
         <AnimatedWallpaper dark />
 
@@ -1868,7 +1989,10 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* FAQ SPLIT LAYOUT */}
+      {/* =====================================================
+          FAQ
+      ====================================================== */}
+
       <section className="relative overflow-hidden bg-[#F6F8FC] py-20 lg:py-28">
         <AnimatedWallpaper />
 
@@ -1892,6 +2016,7 @@ export default function Homepage() {
 
             <Link
               to="/contact"
+              aria-label="Contact Acuity Groups LLP for facility management services"
               className="group mt-5 inline-flex items-center gap-3 rounded-full bg-[#0B1F3A] px-7 py-4 font-semibold text-white"
             >
               Contact Us
@@ -1989,7 +2114,10 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* VIDEO DEVICE FRAME */}
+      {/* =====================================================
+          COMPANY VIDEO
+      ====================================================== */}
+
       <section
         ref={videoRef}
         className="relative overflow-hidden bg-white py-20 lg:py-28"
@@ -2030,8 +2158,9 @@ export default function Homepage() {
                   <iframe
                     className="h-full w-full"
                     src="https://www.youtube.com/embed/t4mzk3InKrI?autoplay=1&mute=1"
-                    title="Acuity Groups company overview video"
+                    title="Acuity Groups LLP facility management company overview"
                     frameBorder="0"
+                    loading="lazy"
                     allow="autoplay; encrypted-media"
                     allowFullScreen
                   />
@@ -2046,7 +2175,10 @@ export default function Homepage() {
         </div>
       </section>
 
-      {/* SERVICE AREAS */}
+      {/* =====================================================
+          SERVICE AREAS
+      ====================================================== */}
+
       <section className="relative overflow-hidden bg-[#F1F5FA] py-20 lg:py-28">
         <AnimatedWallpaper />
 
@@ -2096,7 +2228,9 @@ export default function Homepage() {
                   {String(index + 1).padStart(2, "0")}
                 </span>
 
-                <div className="text-5xl">{service.icon}</div>
+                <div className="text-5xl" aria-hidden="true">
+                  {service.icon}
+                </div>
 
                 <h3 className="mt-6 text-xl font-black text-[#0B1F3A]">
                   {service.title}
@@ -2136,6 +2270,7 @@ export default function Homepage() {
                 <motion.div key={area.path} variants={fadeUp}>
                   <Link
                     to={area.path}
+                    aria-label={area.name}
                     className="group flex min-h-[74px] items-center gap-4 rounded-2xl border border-gray-100 bg-[#F8FAFD] p-4 transition hover:border-[#E8A33D] hover:bg-white hover:shadow-md"
                   >
                     <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-[#0B1F3A] text-[#E8A33D] transition group-hover:bg-[#E8A33D] group-hover:text-[#0B1F3A]">
@@ -2164,6 +2299,7 @@ export default function Homepage() {
           >
             <Link
               to="/integrated-facility-management"
+              aria-label="Explore integrated facility management services across Bangalore"
               className="group inline-flex items-center gap-3 rounded-full bg-[#0B1F3A] px-8 py-4 font-semibold text-white shadow-xl"
             >
               Explore Integrated Facility Management Services
@@ -2175,6 +2311,10 @@ export default function Homepage() {
           </motion.div>
         </div>
       </section>
+
+      {/* =====================================================
+          GLOBAL PAGE STYLES
+      ====================================================== */}
 
       <style>
         {`
