@@ -431,13 +431,13 @@ export default function Homepage() {
     },
     {
       title: "Security Services",
-      desc: "Professional security guard services for apartments, offices, industries, hospitals and commercial establishments.",
+      desc: "Professional security guard services in Bangalore for apartments, offices, industries, hospitals and commercial establishments.",
       image: SecurityImage,
       path: "/security-services",
     },
     {
       title: "Pest Management",
-      desc: "Safe and effective pest control services including termite, rodent and cockroach management.",
+      desc: "Safe and effective pest control services in Bangalore including termite, rodent and cockroach management.",
       image: Pestcontrol,
       path: "/pest-management",
     },
@@ -932,10 +932,9 @@ export default function Homepage() {
                 className="mt-8 max-w-2xl border-l-2 border-[#E8A33D] pl-5"
               >
                 <SectionLabel light>
-                  Trusted Facility Management Partner
+                  Facility Management Company in Bangalore
                 </SectionLabel>
               </motion.div>
-
               {/* SEO-OPTIMIZED INTRODUCTION */}
 
               <motion.p
@@ -960,7 +959,7 @@ export default function Homepage() {
                     aria-label="Explore integrated facility management services in Bangalore"
                     className="group flex items-center justify-center gap-3 rounded-full bg-[#E8A33D] px-7 py-4 font-semibold text-[#07172C] shadow-[0_15px_50px_rgba(232,163,61,0.25)] transition hover:bg-[#f3b554]"
                   >
-                    Explore Integrated Facility Management
+                    Explore Integrated Facility Management Services in Bangalore
                     <ChevronRight
                       size={18}
                       className="transition-transform group-hover:translate-x-1"
@@ -1304,16 +1303,23 @@ export default function Homepage() {
               variants={fadeUp}
               className="font-['Archivo',system-ui,sans-serif] text-4xl font-black leading-[1.05] text-[#0B1F3A] sm:text-5xl lg:text-6xl"
             >
-              Trusted Facility Management Partner
+              Trusted Facility Management Company in Bangalore
             </motion.h2>
 
             <motion.p
               variants={fadeUp}
               className="mt-8 text-lg leading-8 text-gray-600"
             >
-              We specialize in housekeeping services, security guard services,
-              manpower outsourcing, pest management, electrical maintenance,
-              repair and maintenance solutions and corporate support services.
+              We specialize in{" "}
+              <Link
+                to="/integrated-facility-management"
+                className="font-semibold text-[#0B1F3A] underline decoration-[#E8A33D] decoration-2 underline-offset-4"
+              >
+                integrated facility management services
+              </Link>
+              , housekeeping services, security guard services, manpower
+              outsourcing, pest management, electrical maintenance, repair and
+              maintenance solutions and corporate support services.
             </motion.p>
 
             <motion.p
@@ -1385,9 +1391,10 @@ export default function Homepage() {
               variants={fadeUp}
               className="max-w-2xl text-base leading-7 text-white/65 sm:text-lg sm:leading-8 lg:justify-self-end"
             >
-              Complete housekeeping, security, manpower outsourcing, pest
-              management and soft-service solutions for commercial and
-              residential properties.
+              We provide integrated facility management services in Bangalore
+              covering housekeeping, security, manpower outsourcing, pest
+              management, soft services and maintenance for commercial,
+              residential and industrial properties.
             </motion.p>
           </motion.div>
 
@@ -2197,8 +2204,10 @@ export default function Homepage() {
               variants={fadeUp}
               className="text-lg leading-8 text-gray-600"
             >
-              We provide professional facility management solutions across major
-              business, residential and industrial areas of Bangalore.
+              We provide professional facility management services across major
+              residential, commercial and industrial areas of Bangalore,
+              including Whitefield, Electronic City, Koramangala, HSR Layout, JP
+              Nagar, Peenya, Hebbal and other key locations.
             </motion.p>
           </motion.div>
 
