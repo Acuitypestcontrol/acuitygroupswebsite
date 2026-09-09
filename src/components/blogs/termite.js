@@ -699,10 +699,10 @@ const TermiteControlGuide = () => {
                       />
                     </div>
                     <Link
-                      to="/blogs/pest-control-tips"
+                      to="/blogs/why-regular-pest-control"
                       className="text-blue-600 group-hover:text-blue-700 group-hover:underline transition text-sm font-medium flex-1"
                     >
-                      Essential Pest Control for Homes
+                      Why Regular Pest Control
                     </Link>
                   </li>
                   <li className="flex gap-3 items-center group">
