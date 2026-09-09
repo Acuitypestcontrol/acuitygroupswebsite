@@ -3,10 +3,7 @@
   <head>
     <meta charset="utf-8" />
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <meta name="theme-color" content="#ffffff" />
 
@@ -16,11 +13,7 @@
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
@@ -36,6 +29,7 @@
     -->
 
     <!-- Google Analytics -->
+    <!-- Google Analytics + Google Ads -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-J4HL7CRSRR"
@@ -49,29 +43,50 @@
       }
 
       gtag("js", new Date());
+
+      gtag("config", "G-J4HL7CRSRR");
+      gtag("config", "AW-18262832950");
+    </script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
       gtag("config", "G-J4HL7CRSRR");
     </script>
 
-    <script src="https://analytics.ahrefs.com/analytics.js" data-key="EhWFxj55QnKJJVScm8EIAg" async></script>
+    <script
+      src="https://analytics.ahrefs.com/analytics.js"
+      data-key="EhWFxj55QnKJJVScm8EIAg"
+      async
+    ></script>
     <script>
-fetch("https://api.localo.com/api/structured_data/3gx-45FO4D4oNcgqe6cqTh-7OoPQBby4H5_SeLqwHVs/local_business")
-.then(response => response.json())
-.then(data => {
-  const script = document.createElement("script");
-  script.type = "application/ld+json";
-  script.textContent = JSON.stringify(data);
-  document.head.appendChild(script);
-});
-</script>
+      fetch(
+        "https://api.localo.com/api/structured_data/3gx-45FO4D4oNcgqe6cqTh-7OoPQBby4H5_SeLqwHVs/local_business",
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          const script = document.createElement("script");
+          script.type = "application/ld+json";
+          script.textContent = JSON.stringify(data);
+          document.head.appendChild(script);
+        });
+    </script>
   </head>
 
   <body>
     <noscript>
       You need to enable JavaScript to run this application.
     </noscript>
-    
 
     <div id="root"></div>
-    <script src="//code.tidio.co/hgwtlhlv8wltjn2dr622s3jdundocwt1.js" async></script>
+    <script
+      src="//code.tidio.co/hgwtlhlv8wltjn2dr622s3jdundocwt1.js"
+      async
+    ></script>
   </body>
 </html>
