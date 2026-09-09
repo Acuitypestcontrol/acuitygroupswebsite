@@ -250,10 +250,7 @@ Thank you.`;
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Acuity Groups LLP" />
 
-        <link
-          rel="canonical"
-          href="https://www.acuitygroups.in/career/pest-control"
-        />
+        <link rel="canonical" href="https://www.acuitygroups.in/pest" />
 
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Acuity Groups" />
