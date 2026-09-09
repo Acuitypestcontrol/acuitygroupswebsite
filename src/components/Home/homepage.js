@@ -648,7 +648,7 @@ export default function Homepage() {
     url: "https://www.acuitygroups.in/",
     description:
       "Acuity Groups LLP is a facility management company in Bangalore offering integrated facility management, housekeeping, security, manpower outsourcing, pest management, soft services and repair and maintenance solutions.",
-    image: "https://www.acuitygroups.in/",
+    image: "https://www.acuitygroups.in/images/logo.png",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Bengaluru",
