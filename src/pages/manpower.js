@@ -219,7 +219,7 @@ const faqItems = [
 ];
 
 const ManpowerOutsourcing = () => {
-  const canonicalUrl = "https://www.acuitygroups.in/manpower";
+  const canonicalUrl = "https://www.acuitygroups.in/manpower-outsourcing";
 
   const organizationSchema = {
     "@context": "https://schema.org",
