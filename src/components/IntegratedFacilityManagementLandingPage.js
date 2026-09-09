@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet-async";
 import Pic from "../images/nfacility.jpg";
@@ -8,8 +8,6 @@ import HEROIMAGE from "../images/choose1.jpg";
 const PHONE = "919941229005";
 const DISPLAY_PHONE = "+91 99412 29005";
 const EMAIL = "info@acuitygroups.in";
-const LANDING_URL =
-  "https://www.acuitygroups.in/integrated-facility-management-bangalore";
 
 /* =========================================================
    ICONS
@@ -514,6 +512,22 @@ const faqs = [
 ========================================================= */
 
 const IntegratedFacilityManagementLandingPage = () => {
+  const location = useLocation();
+
+  /*
+    SEO CANONICAL URL
+
+    Homepage:
+    https://www.acuitygroups.in/
+
+    Bangalore landing page:
+    https://www.acuitygroups.in/integrated-facility-management-bangalore
+  */
+  const PAGE_URL =
+    location.pathname === "/"
+      ? "https://www.acuitygroups.in/"
+      : "https://www.acuitygroups.in/integrated-facility-management-bangalore";
+
   const [openFaq, setOpenFaq] = useState(null);
   const [formLoading, setFormLoading] = useState(false);
   const [formStatus, setFormStatus] = useState("");
@@ -629,7 +643,7 @@ const IntegratedFacilityManagementLandingPage = () => {
         "@type": "ListItem",
         position: 2,
         name: "Facility Management Services in Bangalore",
-        item: LANDING_URL,
+        item: PAGE_URL,
       },
     ],
   };
@@ -644,7 +658,8 @@ const IntegratedFacilityManagementLandingPage = () => {
           content="Acuity Groups provides integrated facility management services in Bangalore including property management, apartment facility management, housekeeping, security, manpower outsourcing, cleaning, repair & maintenance and pest management."
         />
 
-        <link rel="canonical" href={LANDING_URL} />
+        {/* IMPORTANT: Dynamic canonical URL */}
+        <link rel="canonical" href={PAGE_URL} />
 
         <meta
           property="og:title"
@@ -657,7 +672,9 @@ const IntegratedFacilityManagementLandingPage = () => {
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={LANDING_URL} />
+
+        {/* IMPORTANT: Dynamic Open Graph URL */}
+        <meta property="og:url" content={PAGE_URL} />
 
         <meta name="twitter:card" content="summary_large_image" />
 
@@ -692,17 +709,14 @@ const IntegratedFacilityManagementLandingPage = () => {
         ====================================================== */}
 
         <section className="relative min-h-[500px] flex items-center overflow-hidden">
-          {/* Background Image */}
           <img
             src={Pic}
             alt="Professional pest control services in Bangalore"
             className="absolute inset-0 w-full h-full object-cover blur-[3px] scale-105"
           />
 
-          {/* Dark Overlay */}
           <div className="absolute inset-0 bg-black/55" />
 
-          {/* Content */}
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-white">
             <div className="max-w-3xl">
               <p className="text-sm md:text-base font-semibold uppercase tracking-wider mb-4">
@@ -979,8 +993,6 @@ const IntegratedFacilityManagementLandingPage = () => {
                 </div>
               </motion.div>
 
-              {/* SIMPLE IMAGE / CTA CARD */}
-
               <motion.div
                 variants={fadeUp}
                 initial="hidden"
@@ -1211,8 +1223,6 @@ const IntegratedFacilityManagementLandingPage = () => {
 
           <div className="relative mx-auto max-w-7xl">
             <div className="grid items-start gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-              {/* CONTACT INFO */}
-
               <motion.div
                 variants={fadeUp}
                 initial="hidden"
@@ -1290,8 +1300,6 @@ const IntegratedFacilityManagementLandingPage = () => {
                   </div>
                 </div>
               </motion.div>
-
-              {/* FORM */}
 
               <motion.div
                 initial={{
