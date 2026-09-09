@@ -454,6 +454,13 @@ export default function App() {
           element={<Navigate to="/blogs/manufacturing-industry" replace />}
         />
 
+        <Route path="/manpower-outsourcing" element={<ManpowerOutsourcing />} />
+
+        <Route
+          path="/corporate-staffing"
+          element={<Navigate to="/manpower-outsourcing" replace />}
+        />
+
         {/* =====================================================
             404 FALLBACK
             ===================================================== */}
