@@ -92,22 +92,15 @@ export default function App() {
       <LeadPopup />
 
       <Routes>
-
         {/* =====================================================
             MAIN WEBSITE FLOW
             ===================================================== */}
 
         {/* FIRST PAGE VISITORS SEE */}
-        <Route
-          path="/"
-          element={<IntegratedFacilityManagementLandingPage />}
-        />
+        <Route path="/" element={<IntegratedFacilityManagementLandingPage />} />
 
         {/* EXISTING ACUITY GROUPS HOMEPAGE */}
-        <Route
-          path="/home"
-          element={<Home />}
-        />
+        <Route path="/home" element={<Home />} />
 
         {/* =====================================================
             MAIN CANONICAL PAGES
@@ -123,9 +116,11 @@ export default function App() {
             SERVICE CANONICAL PAGES
             ===================================================== */}
 
+        <Route path="/security-services" element={<Securityservice />} />
+
         <Route
-          path="/security-services"
-          element={<Securityservice />}
+          path="/blogs/termite-control-guide"
+          element={<TermiteControlGuide />}
         />
 
         {/* EXISTING FACILITY MANAGEMENT PAGE
@@ -135,63 +130,33 @@ export default function App() {
           element={<Facilitymanagment />}
         />
 
-        <Route
-          path="/housekeeping-services"
-          element={<Housekeeping />}
-        />
+        <Route path="/housekeeping-services" element={<Housekeeping />} />
 
-        <Route
-          path="/repair-maintenance"
-          element={<RepairMaintenance />}
-        />
+        <Route path="/repair-maintenance" element={<RepairMaintenance />} />
 
-        <Route
-          path="/pest-management"
-          element={<PestManagement />}
-        />
+        <Route path="/pest-management" element={<PestManagement />} />
 
-        <Route
-          path="/manpower-outsourcing"
-          element={<ManpowerOutsourcing />}
-        />
+        <Route path="/manpower-outsourcing" element={<ManpowerOutsourcing />} />
 
-        <Route
-          path="/soft-services"
-          element={<Softservices />}
-        />
+        <Route path="/soft-services" element={<Softservices />} />
 
         {/* =====================================================
             CAREER PAGES
             ===================================================== */}
 
-        <Route
-          path="/career"
-          element={<Career />}
-        />
+        <Route path="/career" element={<Career />} />
 
-        <Route
-          path="/career/pest-control"
-          element={<Pestcareer />}
-        />
+        <Route path="/career/pest-control" element={<Pestcareer />} />
 
-        <Route
-          path="/career/acuity-groups"
-          element={<Acuitygroups />}
-        />
+        <Route path="/career/acuity-groups" element={<Acuitygroups />} />
 
         {/* =====================================================
             BLOG PAGES
             ===================================================== */}
 
-        <Route
-          path="/blogs"
-          element={<Blogs />}
-        />
+        <Route path="/blogs" element={<Blogs />} />
 
-        <Route
-          path="/blogs/cockroach-control"
-          element={<Cockroaches />}
-        />
+        <Route path="/blogs/cockroach-control" element={<Cockroaches />} />
 
         <Route
           path="/blogs/termite-control"
@@ -228,15 +193,9 @@ export default function App() {
           element={<TheImportanceFacilities />}
         />
 
-        <Route
-          path="/blogs/learn-how"
-          element={<Learnhow />}
-        />
+        <Route path="/blogs/learn-how" element={<Learnhow />} />
 
-        <Route
-          path="/blogs/unleash-design"
-          element={<UnleashDesigne />}
-        />
+        <Route path="/blogs/unleash-design" element={<UnleashDesigne />} />
 
         <Route
           path="/blogs/professional-security-services"
@@ -258,10 +217,7 @@ export default function App() {
           element={<RepairingMaintenance />}
         />
 
-        <Route
-          path="/blogs/manpower-outsourcing"
-          element={<Mps />}
-        />
+        <Route path="/blogs/manpower-outsourcing" element={<Mps />} />
 
         <Route
           path="/blogs/manufacturing-industry"
@@ -317,10 +273,7 @@ export default function App() {
           element={<Hebbal />}
         />
 
-        <Route
-          path="/integrated-facility-management-beml"
-          element={<Beml />}
-        />
+        <Route path="/integrated-facility-management-beml" element={<Beml />} />
 
         <Route
           path="/integrated-facility-management-doddaballapur"
@@ -341,10 +294,7 @@ export default function App() {
             ADMIN
             ===================================================== */}
 
-        <Route
-          path="/admindashboard"
-          element={<AdminDashboard />}
-        />
+        <Route path="/admindashboard" element={<AdminDashboard />} />
 
         {/* =====================================================
             OLD URL REDIRECTS
@@ -353,10 +303,7 @@ export default function App() {
         {/* OLD HOMEPAGE URL
             Previously /homepage -> /
             Now /homepage -> /home */}
-        <Route
-          path="/homepage"
-          element={<Navigate to="/home" replace />}
-        />
+        <Route path="/homepage" element={<Navigate to="/home" replace />} />
 
         <Route
           path="/pages/servicepage"
@@ -399,22 +346,12 @@ export default function App() {
 
         <Route
           path="/career/pestcareer"
-          element={
-            <Navigate
-              to="/career/pest-control"
-              replace
-            />
-          }
+          element={<Navigate to="/career/pest-control" replace />}
         />
 
         <Route
           path="/career/acuitygroups"
-          element={
-            <Navigate
-              to="/career/acuity-groups"
-              replace
-            />
-          }
+          element={<Navigate to="/career/acuity-groups" replace />}
         />
 
         {/* =====================================================
@@ -428,62 +365,34 @@ export default function App() {
 
         <Route
           path="/blogs/cockroaches"
-          element={
-            <Navigate
-              to="/blogs/cockroach-control"
-              replace
-            />
-          }
+          element={<Navigate to="/blogs/cockroach-control" replace />}
         />
 
         <Route
           path="/blogs/termite"
-          element={
-            <Navigate
-              to="/blogs/termite-control"
-              replace
-            />
-          }
+          element={<Navigate to="/blogs/termite-control" replace />}
         />
 
         <Route
           path="/blogs/mosquito"
-          element={
-            <Navigate
-              to="/blogs/mosquito-prevention"
-              replace
-            />
-          }
+          element={<Navigate to="/blogs/mosquito-prevention" replace />}
         />
 
         <Route
           path="/blogs/HotelsHospitality"
-          element={
-            <Navigate
-              to="/blogs/hotels-hospitality"
-              replace
-            />
-          }
+          element={<Navigate to="/blogs/hotels-hospitality" replace />}
         />
 
         <Route
           path="/blogs/ImportanceofFacility"
           element={
-            <Navigate
-              to="/blogs/importance-of-facility-management"
-              replace
-            />
+            <Navigate to="/blogs/importance-of-facility-management" replace />
           }
         />
 
         <Route
           path="/blogs/EducationIndustry"
-          element={
-            <Navigate
-              to="/blogs/education-industry"
-              replace
-            />
-          }
+          element={<Navigate to="/blogs/education-industry" replace />}
         />
 
         <Route
@@ -493,113 +402,63 @@ export default function App() {
 
         <Route
           path="/blogs/FromFunction"
-          element={
-            <Navigate
-              to="/blogs/from-function-to-feeling"
-              replace
-            />
-          }
+          element={<Navigate to="/blogs/from-function-to-feeling" replace />}
         />
 
         <Route
           path="/blogs/TheImportanceFacilities"
           element={
-            <Navigate
-              to="/blogs/the-importance-of-facilities"
-              replace
-            />
+            <Navigate to="/blogs/the-importance-of-facilities" replace />
           }
         />
 
         <Route
           path="/blogs/Learnhow"
-          element={
-            <Navigate
-              to="/blogs/learn-how"
-              replace
-            />
-          }
+          element={<Navigate to="/blogs/learn-how" replace />}
         />
 
         <Route
           path="/blogs/UnleashDesigne"
-          element={
-            <Navigate
-              to="/blogs/unleash-design"
-              replace
-            />
-          }
+          element={<Navigate to="/blogs/unleash-design" replace />}
         />
 
         <Route
           path="/blogs/WhyIntegrated"
           element={
-            <Navigate
-              to="/blogs/professional-security-services"
-              replace
-            />
+            <Navigate to="/blogs/professional-security-services" replace />
           }
         />
 
         <Route
           path="/blogs/HousekeepingServices"
-          element={
-            <Navigate
-              to="/blogs/housekeeping-services"
-              replace
-            />
-          }
+          element={<Navigate to="/blogs/housekeeping-services" replace />}
         />
 
         <Route
           path="/blogs/WhyRegularPest"
-          element={
-            <Navigate
-              to="/blogs/why-regular-pest-control"
-              replace
-            />
-          }
+          element={<Navigate to="/blogs/why-regular-pest-control" replace />}
         />
 
         <Route
           path="/blogs/RepairingMaintenance"
-          element={
-            <Navigate
-              to="/blogs/repairing-maintenance"
-              replace
-            />
-          }
+          element={<Navigate to="/blogs/repairing-maintenance" replace />}
         />
 
         <Route
           path="/blogs/mps"
-          element={
-            <Navigate
-              to="/blogs/manpower-outsourcing"
-              replace
-            />
-          }
+          element={<Navigate to="/blogs/manpower-outsourcing" replace />}
         />
 
         <Route
           path="/blogs/ManufacturingIndustry"
-          element={
-            <Navigate
-              to="/blogs/manufacturing-industry"
-              replace
-            />
-          }
+          element={<Navigate to="/blogs/manufacturing-industry" replace />}
         />
 
         {/* =====================================================
             404 FALLBACK
             ===================================================== */}
 
-        <Route
-          path="*"
-          element={<Navigate to="/" replace />}
-        />
-
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
 
       <Footer />
