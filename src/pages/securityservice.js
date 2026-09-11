@@ -255,6 +255,7 @@ const SecurityServices = () => {
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+919941229005",
+      availableLanguage: ["English", "Kannada", "Hindi"],
       contactType: "customer service",
       areaServed: "IN",
       availableLanguage: ["English", "Kannada", "Hindi"],
@@ -264,10 +265,10 @@ const SecurityServices = () => {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": "https://www.acuitygroups.in/securityservice/#service",
+    "@id": "https://www.acuitygroups.in/security-services/#service",
     name: "Security Services Company in Bangalore",
     serviceType: "Professional Security Guard and Security Management Services",
-    url: "https://www.acuitygroups.in/securityservice",
+    url: "https://www.acuitygroups.in/security-services",
     provider: {
       "@id": "https://www.acuitygroups.in/#organization",
     },
@@ -345,10 +346,9 @@ const SecurityServices = () => {
         />
 
         <meta name="robots" content="index, follow" />
-
         <link
           rel="canonical"
-          href="https://www.acuitygroups.in/securityservice"
+          href="https://www.acuitygroups.in/security-services"
         />
 
         <meta
@@ -362,9 +362,9 @@ const SecurityServices = () => {
         />
 
         <meta
-          property="og:url"
-          content="https://www.acuitygroups.in/securityservice"
-        />
+  property="og:url"
+  content="https://www.acuitygroups.in/security-services"
+/>
 
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Acuity Groups" />
