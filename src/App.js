@@ -89,7 +89,7 @@ export default function App() {
       <SocialSidebar />
       <ScrollToTop />
       <Navbar />
-      <LeadPopup />
+      {/* <LeadPopup /> */}
 
       <Routes>
         {/* =====================================================

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import HomeHero from "../../images/banner1.avif";
 import {
   AnimatePresence,
   motion,
@@ -33,7 +34,7 @@ import SecurityImage from "../../images/security123.avif";
 import SoftServices1 from "../../images/softservices.jpg";
 import Pestcontrol from "../../images/sspestcontrol.jpg";
 import MAnpowerout from "../../images/manpowerout.webp";
-import Banner2 from "../../images/prasad.png";
+import Banner2 from "../../images/softservices.jpg";
 import Banner3 from "../../images/banner1.avif";
 import RepairImage from "../../images/repair.jpg";
 
@@ -863,18 +864,52 @@ export default function Homepage() {
       {/* =====================================================
           HERO
       ====================================================== */}
-
       <section
         ref={heroRef}
-        className="relative min-h-[780px] overflow-hidden bg-[#07172C] lg:min-h-screen"
+        className="relative flex min-h-[100dvh] w-full items-center overflow-hidden bg-[#56667c] sm:min-h-[92vh] lg:h-[calc(113vh-164px)] lg:min-h-0"
       >
-        <AnimatedWallpaper dark />
+        {/* FULL SCREEN HERO IMAGE */}
+        <div className="absolute inset-0 h-full w-full">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={banners[currentSlide].alt}
+              src={banners[currentSlide].image}
+              alt={banners[currentSlide].alt}
+              initial={{
+                opacity: 0,
+                scale: 1.03,
+              }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+              }}
+              exit={{
+                opacity: 0,
+                scale: 1.01,
+              }}
+              transition={{
+                duration: 1,
+                ease: EASE,
+              }}
+              className="absolute inset-0 h-full w-full"
+            />
+          </AnimatePresence>
 
-        <div className="hero-grid absolute inset-0 opacity-30" />
+          {/* LIGHT OVERLAY - lets the image breathe on desktop */}
+          <div className="absolute inset-0 bg-[#07172C]/25" />
 
-        <div className="absolute left-[55%] top-0 hidden h-full w-px bg-white/10 lg:block" />
+          {/* MOBILE: soft full-height wash so text stays readable edge-to-edge */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#07172C]/55 via-[#07172C]/35 to-[#07172C]/70 lg:hidden" />
 
-        <div className="relative z-10 mx-auto grid min-h-[780px] max-w-[1500px] grid-cols-1 lg:min-h-screen lg:grid-cols-[1.05fr_0.95fr]">
+          {/* DESKTOP: gradient only behind the text column on the left */}
+          <div className="absolute inset-0 hidden bg-gradient-to-r from-[#07172C]/85 via-[#07172C]/35 to-transparent lg:block" />
+
+          {/* BOTTOM GRADIENT - anchors the section against whatever follows */}
+          <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#07172C]/70 to-transparent" />
+        </div>
+
+        {/* HERO TEXT */}
+        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1500px] items-center px-5 py-24 sm:px-8 sm:py-28 lg:px-16 lg:py-0 xl:px-24">
           <motion.div
             style={
               reduceMotion
@@ -884,62 +919,54 @@ export default function Homepage() {
                     opacity: heroOpacity,
                   }
             }
-            className="flex items-center px-6 pb-20 pt-32 sm:px-10 lg:px-16 lg:pb-32 lg:pt-36 xl:px-24"
+            className="max-w-4xl"
           >
-            <motion.div
-              variants={stagger}
-              initial="hidden"
-              animate="show"
-              className="max-w-3xl"
-            >
+            <motion.div variants={stagger} initial="hidden" animate="show">
+              {/* LABEL */}
               <motion.div variants={fadeUp}>
                 <SectionLabel light>About Acuity Groups LLP</SectionLabel>
               </motion.div>
 
-              {/* MAIN PAGE H1 - KEEP ONLY ONE H1 */}
-
+              {/* HEADING */}
               <motion.h1
                 variants={fadeUp}
-                className="font-['Archivo',system-ui,sans-serif] text-[45px] font-black leading-[0.98] tracking-[-2px] text-white sm:text-6xl lg:text-7xl xl:text-[92px]"
+                className="mt-5 font-['Archivo',system-ui,sans-serif] text-[36px] font-black leading-[1] tracking-[-1px] text-white sm:mt-6 sm:text-5xl sm:leading-[0.97] sm:tracking-[-1.5px] md:text-6xl lg:text-5xl xl:text-[72px] xl:tracking-[-2px]"
               >
                 Facility
                 <br />
                 Management
                 <br />
-                <span className="relative inline-block text-[#E8A33D]">
+                <span className="relative inline-block text-[#F5B754]">
                   Company
                   <motion.span
-                    initial={{
-                      scaleX: 0,
-                    }}
-                    animate={{
-                      scaleX: 1,
-                    }}
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
                     transition={{
                       delay: 0.9,
                       duration: 0.9,
                       ease: EASE,
                     }}
-                    className="absolute -bottom-2 left-0 h-[3px] w-full origin-left bg-[#E8A33D]"
+                    className="absolute -bottom-1 left-0 h-[3px] w-full origin-left bg-[#F5B754] sm:-bottom-2"
                   />
                 </span>
                 <br />
                 <span className="text-white/90">in Bangalore</span>
               </motion.h1>
 
+              {/* SUBTITLE */}
               <motion.div
                 variants={fadeUp}
-                className="mt-8 max-w-2xl border-l-2 border-[#E8A33D] pl-5"
+                className="mt-6 max-w-2xl border-l-2 border-[#F5B754] pl-4 sm:mt-7 sm:pl-5"
               >
                 <SectionLabel light>
                   Facility Management Company in Bangalore
                 </SectionLabel>
               </motion.div>
-              {/* SEO-OPTIMIZED INTRODUCTION */}
 
+              {/* DESCRIPTION */}
               <motion.p
                 variants={fadeUp}
-                className="mt-7 max-w-2xl text-base leading-8 text-white/70 sm:text-lg"
+                className="mt-5 max-w-2xl text-sm leading-7 text-white/85 sm:mt-6 sm:text-base sm:leading-8 lg:text-lg"
               >
                 Acuity Groups LLP is a trusted facility management company in
                 Bangalore providing integrated facility management solutions for
@@ -949,20 +976,24 @@ export default function Homepage() {
                 repair services.
               </motion.p>
 
+              {/* BUTTONS */}
               <motion.div
                 variants={fadeUp}
-                className="mt-10 flex flex-col gap-4 sm:flex-row"
+                className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4"
               >
                 <MagneticButton>
                   <Link
                     to="/integrated-facility-management"
-                    aria-label="Explore integrated facility management services in Bangalore"
-                    className="group flex items-center justify-center gap-3 rounded-full bg-[#E8A33D] px-7 py-4 font-semibold text-[#07172C] shadow-[0_15px_50px_rgba(232,163,61,0.25)] transition hover:bg-[#f3b554]"
+                    className="group flex items-center justify-center gap-3 rounded-full bg-[#F5B754] px-6 py-3.5 text-center text-sm font-semibold text-[#07172C] shadow-[0_15px_40px_rgba(245,183,84,0.3)] transition hover:bg-[#ffc766] sm:px-7 sm:py-4 sm:text-base"
                   >
-                    Explore Integrated Facility Management Services in Bangalore
+                    <span className="sm:hidden">Explore Our Services</span>
+                    <span className="hidden sm:inline">
+                      Explore Integrated Facility Management Services in
+                      Bangalore
+                    </span>
                     <ChevronRight
                       size={18}
-                      className="transition-transform group-hover:translate-x-1"
+                      className="flex-shrink-0 transition-transform group-hover:translate-x-1"
                     />
                   </Link>
                 </MagneticButton>
@@ -970,8 +1001,7 @@ export default function Homepage() {
                 <MagneticButton>
                   <Link
                     to="/about"
-                    aria-label="Learn more about Acuity Groups LLP"
-                    className="flex items-center justify-center rounded-full border border-white/30 bg-white/5 px-7 py-4 font-semibold text-white backdrop-blur-md transition hover:bg-white/10"
+                    className="flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/20 sm:px-7 sm:py-4 sm:text-base"
                   >
                     About Acuity Groups LLP
                   </Link>
@@ -979,199 +1009,26 @@ export default function Homepage() {
               </motion.div>
             </motion.div>
           </motion.div>
-
-          {/* HERO IMAGE AREA */}
-
-          <motion.div
-            style={
-              reduceMotion
-                ? undefined
-                : {
-                    y: heroImageY,
-                    scale: heroImageScale,
-                    opacity: heroOpacity,
-                  }
-            }
-            className="relative min-h-[530px] px-5 pb-24 sm:px-10 lg:min-h-screen lg:px-12 lg:pb-20 lg:pt-28"
-          >
-            <div className="relative mx-auto h-[500px] max-w-[650px] lg:h-[calc(100vh-150px)] lg:min-h-[630px]">
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  rotate: -8,
-                  x: 80,
-                }}
-                animate={{
-                  opacity: 1,
-                  rotate: -4,
-                  x: 0,
-                }}
-                transition={{
-                  duration: 1,
-                  delay: 0.25,
-                  ease: EASE,
-                }}
-                className="absolute left-0 top-7 h-[72%] w-[74%] overflow-hidden rounded-[38px] border border-white/20 bg-white/10 p-2 shadow-2xl backdrop-blur-md"
-              >
-                <CornerLines light />
-
-                <AnimatePresence mode="wait">
-                  <motion.img
-                    key={banners[currentSlide].alt}
-                    src={banners[currentSlide].image}
-                    alt={banners[currentSlide].alt}
-                    loading={currentSlide === 0 ? "eager" : "lazy"}
-                    fetchPriority={currentSlide === 0 ? "high" : "auto"}
-                    initial={{
-                      opacity: 0,
-                      scale: 1.08,
-                    }}
-                    animate={{
-                      opacity: 1,
-                      scale: 1,
-                    }}
-                    exit={{
-                      opacity: 0,
-                      scale: 0.98,
-                    }}
-                    transition={{
-                      duration: 1,
-                      ease: EASE,
-                    }}
-                    className="h-full w-full rounded-[31px] object-cover"
-                  />
-                </AnimatePresence>
-
-                <div className="absolute inset-2 rounded-[31px] bg-gradient-to-t from-[#07172C]/70 via-transparent to-transparent" />
-              </motion.div>
-
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  rotate: 8,
-                  x: -70,
-                }}
-                animate={{
-                  opacity: 1,
-                  rotate: 4,
-                  x: 0,
-                }}
-                transition={{
-                  duration: 1,
-                  delay: 0.55,
-                  ease: EASE,
-                }}
-                className="absolute bottom-10 right-0 h-[53%] w-[58%] overflow-hidden rounded-[34px] border border-white/20 bg-white/10 p-2 shadow-2xl backdrop-blur-md"
-              >
-                <img
-                  src={AboutImage}
-                  alt="Acuity Groups facility management team and services in Bangalore"
-                  loading="lazy"
-                  className="h-full w-full rounded-[27px] object-cover"
-                />
-              </motion.div>
-
-              {/* EXPERIENCE BADGE */}
-
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  scale: 0.8,
-                }}
-                animate={
-                  reduceMotion
-                    ? {
-                        opacity: 1,
-                        scale: 1,
-                      }
-                    : {
-                        opacity: 1,
-                        scale: 1,
-                        y: [0, -10, 0],
-                      }
-                }
-                transition={{
-                  delay: 0.85,
-                  duration: 0.7,
-                  ease: EASE,
-                  y: {
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  },
-                }}
-                className="absolute bottom-[38%] left-[43%] z-20 flex h-36 w-36 items-center justify-center rounded-full border border-white/20 bg-[#E8A33D] text-center text-[#07172C] shadow-2xl sm:h-40 sm:w-40"
-              >
-                <div>
-                  <p className="font-['Archivo',system-ui,sans-serif] text-4xl font-black">
-                    19+
-                  </p>
-
-                  <p className="mt-1 px-4 text-xs font-semibold uppercase tracking-[2px]">
-                    Years Experience
-                  </p>
-                </div>
-              </motion.div>
-
-              <div className="absolute right-2 top-4 z-30 flex flex-col gap-3">
-                {banners.map((banner, index) => (
-                  <button
-                    key={banner.alt}
-                    type="button"
-                    onClick={() => setCurrentSlide(index)}
-                    aria-label={`Show facility management image ${index + 1}`}
-                    aria-current={currentSlide === index ? "true" : undefined}
-                    className={`flex h-12 w-12 items-center justify-center rounded-full border font-['IBM_Plex_Mono',monospace] text-xs transition ${
-                      currentSlide === index
-                        ? "border-[#E8A33D] bg-[#E8A33D] text-[#07172C]"
-                        : "border-white/30 bg-white/10 text-white backdrop-blur-md hover:bg-white/20"
-                    }`}
-                  >
-                    {String(index + 1).padStart(2, "0")}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </motion.div>
         </div>
 
-        <motion.a
-          href="#home-stats"
-          aria-label="Scroll to company statistics"
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: 1,
-          }}
-          transition={{
-            delay: 1.2,
-            duration: 0.8,
-          }}
-          className="absolute bottom-7 left-1/2 z-30 hidden -translate-x-1/2 flex-col items-center gap-2 text-white/60 lg:flex"
-        >
-          <span className="font-['IBM_Plex_Mono',monospace] text-[9px] uppercase tracking-[4px]">
-            Scroll
-          </span>
-
-          <motion.div
-            animate={
-              reduceMotion
-                ? undefined
-                : {
-                    y: [0, 8, 0],
-                  }
-            }
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-            }}
-          >
-            <ArrowDown size={18} />
-          </motion.div>
-        </motion.a>
+        {/* SLIDE INDICATORS */}
+        <div className="absolute bottom-6 right-5 z-20 flex gap-2 sm:bottom-8 sm:right-8 lg:right-16 xl:right-24">
+          {banners.map((banner, index) => (
+            <button
+              key={banner.alt}
+              type="button"
+              onClick={() => setCurrentSlide(index)}
+              aria-label={`Show facility management image ${index + 1}`}
+              aria-current={currentSlide === index ? "true" : undefined}
+              className={`h-2 rounded-full transition-all ${
+                currentSlide === index
+                  ? "w-8 bg-[#F5B754]"
+                  : "w-2 bg-white/40 hover:bg-white/60"
+              }`}
+            />
+          ))}
+        </div>
       </section>
-
       {/* =====================================================
           STAT DASHBOARD
       ====================================================== */}

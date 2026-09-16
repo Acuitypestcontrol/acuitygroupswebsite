@@ -715,7 +715,7 @@ const IntegratedFacilityManagementLandingPage = () => {
             className="absolute inset-0 w-full h-full object-cover blur-[3px] scale-105"
           />
 
-          <div className="absolute inset-0 bg-black/55" />
+          <div className="absolute inset-0 bg-black/40" />
 
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 text-white">
             <div className="max-w-3xl">

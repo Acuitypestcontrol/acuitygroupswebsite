@@ -312,7 +312,7 @@ const SecurityServices = () => {
         "@type": "ListItem",
         position: 3,
         name: "Security Services",
-        item: "https://www.acuitygroups.in/securityservice",
+        item: "https://www.acuitygroups.in/security-services",
       },
     ],
   };
@@ -362,9 +362,9 @@ const SecurityServices = () => {
         />
 
         <meta
-  property="og:url"
-  content="https://www.acuitygroups.in/security-services"
-/>
+          property="og:url"
+          content="https://www.acuitygroups.in/security-services"
+        />
 
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Acuity Groups" />
