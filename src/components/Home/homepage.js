@@ -866,10 +866,22 @@ export default function Homepage() {
       ====================================================== */}
       <section
         ref={heroRef}
-        className="relative flex min-h-[100dvh] w-full items-center overflow-hidden bg-[#56667c] sm:min-h-[92vh] lg:h-[calc(113vh-164px)] lg:min-h-0"
+        className="
+    relative
+    h-[calc(100svh-180px)]
+    min-h-[520px]
+    w-full
+    overflow-hidden
+    bg-[#07172C]
+
+    sm:min-h-[560px]
+    lg:min-h-[600px]
+  "
       >
-        {/* FULL SCREEN HERO IMAGE */}
-        <div className="absolute inset-0 h-full w-full">
+        {/* =========================================================
+      BACKGROUND IMAGE
+  ========================================================== */}
+        <div className="absolute inset-0 z-0 h-full w-full">
           <AnimatePresence mode="wait">
             <motion.img
               key={banners[currentSlide].alt}
@@ -877,7 +889,7 @@ export default function Homepage() {
               alt={banners[currentSlide].alt}
               initial={{
                 opacity: 0,
-                scale: 1.03,
+                scale: 1.025,
               }}
               animate={{
                 opacity: 1,
@@ -888,28 +900,87 @@ export default function Homepage() {
                 scale: 1.01,
               }}
               transition={{
-                duration: 1,
+                duration: 1.1,
                 ease: EASE,
               }}
-              className="absolute inset-0 h-full w-full"
+              className="
+          absolute
+          inset-0
+          h-full
+          w-full
+          object-cover
+          object-center
+        "
             />
           </AnimatePresence>
 
-          {/* LIGHT OVERLAY - lets the image breathe on desktop */}
-          <div className="absolute inset-0 bg-[#07172C]/25" />
+          {/* LIGHT OVERLAY */}
+          <div className="absolute inset-0 bg-[#07172C]/15" />
 
-          {/* MOBILE: soft full-height wash so text stays readable edge-to-edge */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#07172C]/55 via-[#07172C]/35 to-[#07172C]/70 lg:hidden" />
+          {/* DESKTOP TEXT GRADIENT */}
+          <div
+            className="
+        absolute
+        inset-0
+        hidden
+        bg-gradient-to-r
+        from-[#07172C]/80
+        via-[#07172C]/35
+        to-transparent
+        lg:block
+      "
+          />
 
-          {/* DESKTOP: gradient only behind the text column on the left */}
-          <div className="absolute inset-0 hidden bg-gradient-to-r from-[#07172C]/85 via-[#07172C]/35 to-transparent lg:block" />
+          {/* MOBILE TEXT GRADIENT */}
+          <div
+            className="
+        absolute
+        inset-0
+        bg-gradient-to-b
+        from-[#07172C]/65
+        via-[#07172C]/35
+        to-[#07172C]/75
 
-          {/* BOTTOM GRADIENT - anchors the section against whatever follows */}
-          <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#07172C]/70 to-transparent" />
+        lg:hidden
+      "
+          />
+
+          {/* BOTTOM FADE */}
+          <div
+            className="
+        absolute
+        inset-x-0
+        bottom-0
+        h-32
+        bg-gradient-to-t
+        from-[#07172C]/70
+        to-transparent
+      "
+          />
         </div>
 
-        {/* HERO TEXT */}
-        <div className="relative z-10 mx-auto flex h-full w-full max-w-[1500px] items-center px-5 py-24 sm:px-8 sm:py-28 lg:px-16 lg:py-0 xl:px-24">
+        {/* =========================================================
+      HERO CONTENT
+  ========================================================== */}
+        <div
+          className="
+      relative
+      z-10
+      mx-auto
+      flex
+      h-full
+      w-full
+      max-w-[1500px]
+      items-center
+
+      px-5
+
+      sm:px-8
+
+      lg:px-16
+      xl:px-24
+    "
+        >
           <motion.div
             style={
               reduceMotion
@@ -919,54 +990,162 @@ export default function Homepage() {
                     opacity: heroOpacity,
                   }
             }
-            className="max-w-4xl"
+            className="
+        w-full
+        max-w-3xl
+      "
           >
             <motion.div variants={stagger} initial="hidden" animate="show">
-              {/* LABEL */}
+              {/* =====================================================
+            TOP LABEL
+        ====================================================== */}
               <motion.div variants={fadeUp}>
-                <SectionLabel light>About Acuity Groups LLP</SectionLabel>
+                <div
+                  className="
+              mb-3
+              flex
+              items-center
+              gap-3
+              font-['IBM_Plex_Mono',monospace]
+              text-[9px]
+              font-medium
+              uppercase
+              tracking-[3px]
+              text-white/90
+
+              sm:mb-4
+              sm:text-[10px]
+              sm:tracking-[4px]
+            "
+                >
+                  <span
+                    className="
+                h-2
+                w-2
+                rotate-45
+                bg-[#F5B754]
+                shadow-[0_0_12px_rgba(245,183,84,0.5)]
+              "
+                  />
+
+                  <span>About Acuity Groups LLP</span>
+                </div>
               </motion.div>
 
-              {/* HEADING */}
+              {/* =====================================================
+            MAIN HEADING
+        ====================================================== */}
               <motion.h1
                 variants={fadeUp}
-                className="mt-5 font-['Archivo',system-ui,sans-serif] text-[36px] font-black leading-[1] tracking-[-1px] text-white sm:mt-6 sm:text-5xl sm:leading-[0.97] sm:tracking-[-1.5px] md:text-6xl lg:text-5xl xl:text-[72px] xl:tracking-[-2px]"
+                className="
+            font-['Archivo',system-ui,sans-serif]
+            text-[38px]
+            font-black
+            leading-[0.90]
+            tracking-[-1.5px]
+            text-white
+
+            sm:text-[50px]
+            sm:tracking-[-2px]
+
+            md:text-[58px]
+
+            lg:text-[60px]
+            xl:text-[68px]
+          "
               >
-                Facility
-                <br />
-                Management
-                <br />
-                <span className="relative inline-block text-[#F5B754]">
+                <span className="block">Facility</span>
+
+                <span className="block">Management</span>
+
+                <span className="relative block w-fit text-[#F5B754]">
                   Company
                   <motion.span
-                    initial={{ scaleX: 0 }}
-                    animate={{ scaleX: 1 }}
+                    initial={{
+                      scaleX: 0,
+                    }}
+                    animate={{
+                      scaleX: 1,
+                    }}
                     transition={{
                       delay: 0.9,
-                      duration: 0.9,
+                      duration: 0.8,
                       ease: EASE,
                     }}
-                    className="absolute -bottom-1 left-0 h-[3px] w-full origin-left bg-[#F5B754] sm:-bottom-2"
+                    className="
+                absolute
+                -bottom-1
+                left-0
+                h-[3px]
+                w-full
+                origin-left
+                bg-[#F5B754]
+
+                sm:-bottom-2
+                sm:h-[4px]
+              "
                   />
                 </span>
-                <br />
-                <span className="text-white/90">in Bangalore</span>
+
+                <span className="block text-white/95">in Bangalore</span>
               </motion.h1>
 
-              {/* SUBTITLE */}
+              {/* =====================================================
+            SUBTITLE
+        ====================================================== */}
               <motion.div
                 variants={fadeUp}
-                className="mt-6 max-w-2xl border-l-2 border-[#F5B754] pl-4 sm:mt-7 sm:pl-5"
+                className="
+            mt-4
+            max-w-xl
+            border-l-2
+            border-[#F5B754]
+            pl-3
+
+            sm:mt-5
+            sm:pl-4
+
+            lg:mt-5
+          "
               >
-                <SectionLabel light>
+                <p
+                  className="
+              font-['IBM_Plex_Mono',monospace]
+              text-[9px]
+              font-medium
+              uppercase
+              tracking-[1.5px]
+              text-white/90
+
+              sm:text-[10px]
+              sm:tracking-[2px]
+            "
+                >
                   Facility Management Company in Bangalore
-                </SectionLabel>
+                </p>
               </motion.div>
 
-              {/* DESCRIPTION */}
+              {/* =====================================================
+            DESCRIPTION
+        ====================================================== */}
               <motion.p
                 variants={fadeUp}
-                className="mt-5 max-w-2xl text-sm leading-7 text-white/85 sm:mt-6 sm:text-base sm:leading-8 lg:text-lg"
+                className="
+            mt-4
+            max-w-2xl
+            text-[13px]
+            leading-[1.55]
+            text-white/85
+
+            sm:mt-5
+            sm:text-sm
+            sm:leading-6
+
+            lg:text-[15px]
+            lg:leading-6
+
+            xl:text-base
+          "
               >
                 Acuity Groups LLP is a trusted facility management company in
                 Bangalore providing integrated facility management solutions for
@@ -976,57 +1155,26 @@ export default function Homepage() {
                 repair services.
               </motion.p>
 
-              {/* BUTTONS */}
+              {/* =====================================================
+            BUTTONS
+        ====================================================== */}
               <motion.div
                 variants={fadeUp}
-                className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4"
-              >
-                <MagneticButton>
-                  <Link
-                    to="/integrated-facility-management"
-                    className="group flex items-center justify-center gap-3 rounded-full bg-[#F5B754] px-6 py-3.5 text-center text-sm font-semibold text-[#07172C] shadow-[0_15px_40px_rgba(245,183,84,0.3)] transition hover:bg-[#ffc766] sm:px-7 sm:py-4 sm:text-base"
-                  >
-                    <span className="sm:hidden">Explore Our Services</span>
-                    <span className="hidden sm:inline">
-                      Explore Integrated Facility Management Services in
-                      Bangalore
-                    </span>
-                    <ChevronRight
-                      size={18}
-                      className="flex-shrink-0 transition-transform group-hover:translate-x-1"
-                    />
-                  </Link>
-                </MagneticButton>
+                className="
+            mt-5
+            flex
+            flex-col
+            gap-3
 
-                <MagneticButton>
-                  <Link
-                    to="/about"
-                    className="flex items-center justify-center rounded-full border border-white/40 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/20 sm:px-7 sm:py-4 sm:text-base"
-                  >
-                    About Acuity Groups LLP
-                  </Link>
-                </MagneticButton>
-              </motion.div>
+            sm:mt-6
+            sm:flex-row
+            sm:gap-3
+
+            lg:mt-6
+          "
+              ></motion.div>
             </motion.div>
           </motion.div>
-        </div>
-
-        {/* SLIDE INDICATORS */}
-        <div className="absolute bottom-6 right-5 z-20 flex gap-2 sm:bottom-8 sm:right-8 lg:right-16 xl:right-24">
-          {banners.map((banner, index) => (
-            <button
-              key={banner.alt}
-              type="button"
-              onClick={() => setCurrentSlide(index)}
-              aria-label={`Show facility management image ${index + 1}`}
-              aria-current={currentSlide === index ? "true" : undefined}
-              className={`h-2 rounded-full transition-all ${
-                currentSlide === index
-                  ? "w-8 bg-[#F5B754]"
-                  : "w-2 bg-white/40 hover:bg-white/60"
-              }`}
-            />
-          ))}
         </div>
       </section>
       {/* =====================================================
