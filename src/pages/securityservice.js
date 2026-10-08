@@ -258,7 +258,6 @@ const SecurityServices = () => {
       availableLanguage: ["English", "Kannada", "Hindi"],
       contactType: "customer service",
       areaServed: "IN",
-      availableLanguage: ["English", "Kannada", "Hindi"],
     },
   };
 
