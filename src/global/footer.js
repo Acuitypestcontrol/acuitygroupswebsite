@@ -247,8 +247,6 @@ import {
 import Logo from "../images/acuitylogo.jpeg";
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   const socialLinks = [
     {
       name: "Facebook",
@@ -481,7 +479,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-14 border-t border-white/10 pt-6">
           <div className="flex flex-col items-center justify-between gap-4 text-center text-xs text-white/45 md:flex-row md:text-left">
-            <p>© {currentYear} Acuity Groups. All rights reserved.</p>
+            <p>© 2027 Acuity Pest Controls. All Rights Reserved.</p>
 
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
               <Link
