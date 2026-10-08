@@ -32,8 +32,6 @@ import Pestcareer from "./components/career/pestcareer";
 import Acuitygroups from "./components/career/acuitygroup";
 
 import SocialSidebar from "./components/sidesocialbar";
-import WhatsAppButton from "./components/whatsappbutton";
-import LeadPopup from "./components/popup";
 
 /* =========================================================
    NEW LANDING PAGE

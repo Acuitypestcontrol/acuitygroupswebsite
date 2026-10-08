@@ -1,18 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import HomeHero from "../../images/banner1.avif";
 import {
   AnimatePresence,
   motion,
-  useMotionValue,
   useReducedMotion,
   useScroll,
-  useSpring,
   useTransform,
 } from "framer-motion";
 import {
-  ArrowDown,
   Award,
   Building,
   CheckCircle,
@@ -64,21 +60,6 @@ const fadeLeft = {
   hidden: {
     opacity: 0,
     x: -60,
-  },
-  show: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.8,
-      ease: EASE,
-    },
-  },
-};
-
-const fadeRight = {
-  hidden: {
-    opacity: 0,
-    x: 60,
   },
   show: {
     opacity: 1,
@@ -224,104 +205,6 @@ function AnimatedWallpaper({ dark = false }) {
         }`}
       />
     </div>
-  );
-}
-
-function MagneticButton({ children, className = "" }) {
-  const reduceMotion = useReducedMotion();
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-
-  const springX = useSpring(x, {
-    stiffness: 180,
-    damping: 14,
-  });
-
-  const springY = useSpring(y, {
-    stiffness: 180,
-    damping: 14,
-  });
-
-  const handleMove = (event) => {
-    if (reduceMotion) return;
-
-    const rect = event.currentTarget.getBoundingClientRect();
-    const offsetX = event.clientX - rect.left - rect.width / 2;
-    const offsetY = event.clientY - rect.top - rect.height / 2;
-
-    x.set(offsetX * 0.12);
-    y.set(offsetY * 0.12);
-  };
-
-  const reset = () => {
-    x.set(0);
-    y.set(0);
-  };
-
-  return (
-    <motion.div
-      style={
-        reduceMotion
-          ? undefined
-          : {
-              x: springX,
-              y: springY,
-            }
-      }
-      onMouseMove={handleMove}
-      onMouseLeave={reset}
-      whileTap={{
-        scale: 0.96,
-      }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-}
-
-function ImageTiltCard({ children, className = "" }) {
-  const reduceMotion = useReducedMotion();
-  const cardRef = useRef(null);
-
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-
-  const rotateX = useTransform(mouseY, [-0.5, 0.5], [7, -7]);
-  const rotateY = useTransform(mouseX, [-0.5, 0.5], [-7, 7]);
-
-  const handleMove = (event) => {
-    if (reduceMotion || !cardRef.current) return;
-
-    const rect = cardRef.current.getBoundingClientRect();
-
-    mouseX.set((event.clientX - rect.left) / rect.width - 0.5);
-    mouseY.set((event.clientY - rect.top) / rect.height - 0.5);
-  };
-
-  const resetCard = () => {
-    mouseX.set(0);
-    mouseY.set(0);
-  };
-
-  return (
-    <motion.div
-      ref={cardRef}
-      onMouseMove={handleMove}
-      onMouseLeave={resetCard}
-      style={
-        reduceMotion
-          ? undefined
-          : {
-              rotateX,
-              rotateY,
-              transformPerspective: 1100,
-            }
-      }
-      className={className}
-    >
-      {children}
-    </motion.div>
   );
 }
 
@@ -547,8 +430,6 @@ export default function Homepage() {
   const videoRef = useRef(null);
   const statsStarted = useRef(false);
 
-  const scrollRef = useRef(null);
-
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeService, setActiveService] = useState(0);
   const [openIndex, setOpenIndex] = useState(null);
@@ -566,8 +447,6 @@ export default function Homepage() {
   });
 
   const heroTextY = useTransform(heroProgress, [0, 1], [0, 130]);
-  const heroImageY = useTransform(heroProgress, [0, 1], [0, 190]);
-  const heroImageScale = useTransform(heroProgress, [0, 1], [1, 1.1]);
   const heroOpacity = useTransform(heroProgress, [0, 0.85], [1, 0]);
 
   useEffect(() => {

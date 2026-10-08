@@ -209,6 +209,15 @@ const ContactUs = () => {
         <meta name="robots" content="index, follow" />
 
         <link rel="canonical" href="https://www.acuitygroups.in/contact" />
+        <script type="application/ld+json">
+          {JSON.stringify(localBusinessSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
       </Helmet>
 
       <div className="bg-white text-gray-800 overflow-hidden font-['Poppins',system-ui,sans-serif]">
